@@ -6,14 +6,23 @@ import { ambient, AMBIANCES } from "@/lib/ambient";
 import { usePrefs, useProgress } from "@/lib/prefs";
 import { pickVoice, speakLine, voiceAvailable } from "@/lib/voice";
 import { Quiz } from "./Quiz";
+import { Ecritures, Formules } from "./Fiche";
 import styles from "./player.module.css";
 
-type Part = "scene" | "cours" | "flash";
-const PARTS: { id: Part; label: string; hint: string }[] = [
-  { id: "scene", label: "Scène", hint: "Le cas" },
-  { id: "cours", label: "Cours", hint: "La règle" },
-  { id: "flash", label: "Flash", hint: "3 questions" },
-];
+type Part = "scene" | "cours" | "fiche" | "flash";
+type AudioPart = "scene" | "cours";
+const isAudio = (p: Part): p is AudioPart => p === "scene" || p === "cours";
+
+function partsOf(e: Episode): { id: Part; label: string; hint: string }[] {
+  const list: { id: Part; label: string; hint: string }[] = [
+    { id: "scene", label: "Scène", hint: "Le cas" },
+    { id: "cours", label: "Cours", hint: e.format === "comptable" ? "Droit comptable" : "La règle" },
+  ];
+  if (e.formules?.length) list.push({ id: "fiche", label: "Formules", hint: "À retenir" });
+  if (e.ecritures?.length) list.push({ id: "fiche", label: "Écritures", hint: "Au journal" });
+  list.push({ id: "flash", label: "Flash", hint: "3 questions" });
+  return list;
+}
 const WHO: Record<string, string> = { dirigeant: "Dirigeant·e", expert: "Expert-comptable" };
 
 function Rich({ text }: { text: string }) {
@@ -27,12 +36,16 @@ export function Player({ episode }: { episode: Episode }) {
   const [idx, setIdx] = useState(0);
   const [playing, setPlaying] = useState(false);
   const [voiceName, setVoiceName] = useState<string>("");
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
   const token = useRef(0);
   const audioEl = useRef<HTMLAudioElement>(null);
   const lineRefs = useRef<(HTMLParagraphElement | null)[]>([]);
 
-  const mp3 = part !== "flash" ? episode.audio?.[part] : undefined;
-  const lines: Line[] = part === "flash" ? [] : episode[part];
+  const PARTS = partsOf(episode);
+  const hasFiche = PARTS.some((p) => p.id === "fiche");
+  const mp3 = isAudio(part) ? episode.audio?.[part] : undefined;
+  const lines: Line[] = isAudio(part) ? episode[part] : [];
 
   // Nom de la voix du téléphone utilisée
   useEffect(() => {
@@ -64,12 +77,12 @@ export function Player({ episode }: { episode: Episode }) {
 
   const nextPart = useCallback((from: Part) => {
     if (from === "scene") { setPart("cours"); setIdx(0); return true; }
-    setPart("flash"); setIdx(0); setPlaying(false); return false;
-  }, []);
+    setPart(hasFiche ? "fiche" : "flash"); setIdx(0); setPlaying(false); return false;
+  }, [hasFiche]);
 
   // Lecture ligne par ligne avec la voix du téléphone
   const speakFrom = useCallback((p: Part, i: number) => {
-    if (p === "flash") return;
+    if (!isAudio(p)) return;
     const ls = episode[p];
     if (i >= ls.length) { if (nextPart(p)) speakFrom("cours", 0); return; }
     const my = ++token.current;
@@ -82,11 +95,11 @@ export function Player({ episode }: { episode: Episode }) {
 
   const start = (from?: Part) => {
     let p = from ?? part;
-    if (p === "flash") { p = "scene"; setPart("scene"); setIdx(0); }
+    if (!isAudio(p)) { p = "scene"; setPart("scene"); setIdx(0); }
     setPlaying(true);
     ambient?.setVolume(prefs.ambVolume);
     ambient?.play(prefs.ambiance);
-    const file = episode.audio?.[p as "scene" | "cours"];
+    const file = episode.audio?.[p as AudioPart];
     if (file && audioEl.current) {
       audioEl.current.src = file;
       audioEl.current.playbackRate = prefs.speed;
@@ -123,11 +136,16 @@ export function Player({ episode }: { episode: Episode }) {
 
   const done = progress[episode.id]?.done;
   const pct = (p: Part) => {
-    const order: Part[] = ["scene", "cours", "flash"];
+    const order = PARTS.map((x) => x.id);
     if (done || order.indexOf(p) < order.indexOf(part)) return 100;
-    if (p === part && p !== "flash" && lines.length) return Math.round((idx / lines.length) * 100);
+    if (p === part && isAudio(p) && lines.length) return Math.round((idx / lines.length) * 100);
     return 0;
   };
+
+  const panelLabel =
+    part === "flash" ? "Flash · 3 questions"
+    : part === "fiche" ? (episode.formules?.length ? "Formules à retenir" : "Écritures à passer")
+    : `Transcription · ${part === "scene" ? "Scène" : "Cours"}`;
 
   return (
     <div className={styles.wrap}>
@@ -135,7 +153,7 @@ export function Player({ episode }: { episode: Episode }) {
 
       <section className={styles.player} aria-label="Lecteur">
         <div className={styles.head}>
-          <span className="label">{episode.ue.toUpperCase()} · {episode.minutes} min</span>
+          <span className="label">{episode.ue.toUpperCase()} · {episode.minutes} min · {episode.format === "comptable" ? "comptabilité" : episode.format === "technique" ? "technique" : "juridique"}</span>
           <h1>{episode.title}</h1>
           <span className={styles.ref}>{episode.ref}</span>
         </div>
@@ -172,7 +190,7 @@ export function Player({ episode }: { episode: Episode }) {
           </div>
         </div>
         <p className={styles.notice}>
-          {mp3 ? "Voix studio." : voiceAvailable()
+          {!mounted ? "" : mp3 ? "Voix studio." : voiceAvailable()
             ? `Voix du téléphone${voiceName ? ` : ${voiceName}` : ""}. La voix studio arrive avec les épisodes finaux.`
             : "Lecture audio indisponible sur ce navigateur. Le texte reste lisible ci-dessous."}
         </p>
@@ -180,9 +198,15 @@ export function Player({ episode }: { episode: Episode }) {
       </section>
 
       <section className={styles.panel} aria-live="polite">
-        <span className="label">{part === "flash" ? "Flash · 3 questions" : `Transcription · ${part === "scene" ? "Scène" : "Cours"}`}</span>
+        <span className="label">{panelLabel}</span>
         {part === "flash" ? (
           <Quiz key={episode.id} questions={episode.flash} onFinish={(s) => markDone(episode.id, s)} />
+        ) : part === "fiche" ? (
+          <>
+            {episode.formules && <Formules items={episode.formules} />}
+            {episode.ecritures && <Ecritures items={episode.ecritures} />}
+            <button className={styles.ghost} onClick={() => goPart("flash")}>Passer au flash →</button>
+          </>
         ) : (
           <div className={styles.lines}>
             {lines.map((l, i) => (

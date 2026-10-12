@@ -23,9 +23,38 @@ export interface FlashQuestion {
   why: string;
 }
 
+// Trois formats selon la matière :
+// - "juridique"  (UE1)          : scène, cours, flash
+// - "technique"  (UE2, UE3, UE5): scène, cours, formules à retenir, flash
+// - "comptable"  (UE4)          : scène, cours (droit comptable), écritures, flash
+export type Format = "juridique" | "technique" | "comptable";
+
+export interface Formule {
+  nom: string; // ex. "Coût moyen pondéré du capital"
+  formule: string; // ex. "CMPC = kcp × CP/(CP+D) + kd × (1 − t) × D/(CP+D)"
+  legende?: string[]; // définition de chaque terme
+  piege?: string; // l'erreur classique à éviter
+}
+
+export interface LigneEcriture {
+  compte: string; // ex. "6815"
+  intitule: string; // ex. "Dotations aux provisions d'exploitation"
+  debit?: number;
+  credit?: number;
+}
+
+export interface Ecriture {
+  titre: string; // ex. "31/12/N · Constitution de la provision"
+  lignes: LigneEcriture[];
+  regle?: string; // la règle comptable qui justifie l'écriture
+}
+
 export interface Episode {
   id: string;
   ue: UeId;
+  format: Format;
+  formules?: Formule[];
+  ecritures?: Ecriture[];
   title: string;
   ref: string; // référence principale, ex. "art. 145 et 216 CGI"
   minutes: number;

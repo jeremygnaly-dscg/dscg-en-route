@@ -5,7 +5,7 @@
 .head h1 { font-size: 26px; font-weight: 700; }
 .ref { font-family: var(--mono); font-size: 12.5px; background: var(--gold-soft); color: var(--gold); padding: 2px 8px; border-radius: 6px; align-self: flex-start; }
 
-.parts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.parts { display: grid; grid-template-columns: repeat(auto-fit, minmax(72px, 1fr)); gap: 6px; }
 .part { border: 0; background: var(--sunk); border-radius: 10px; padding: 8px 6px 10px; text-align: left; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
 .part b { font-size: 13px; }
 .part i { font-style: normal; font-size: 12px; color: var(--muted); }
@@ -48,3 +48,19 @@
 .foot { font-size: 13px; color: var(--muted); margin: 0; }
 
 @media (max-width: 380px) { .row { grid-template-columns: 1fr; } }
+
+.fiche { display: flex; flex-direction: column; gap: 12px; }
+.card { border: 1px solid var(--line); border-radius: 14px; padding: 14px; display: flex; flex-direction: column; gap: 10px; background: var(--bg); min-width: 0; }
+.formula { font-family: var(--mono); font-size: 15px; line-height: 1.5; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; white-space: normal; overflow-wrap: anywhere; }
+.legend { margin: 0; padding-left: 18px; font-size: 14px; color: var(--muted); }
+.trap { margin: 0; font-size: 14px; background: var(--bad-soft); color: var(--bad); border-radius: 8px; padding: 8px 10px; }
+.journalWrap { overflow-x: auto; }
+.journal { width: 100%; border-collapse: collapse; font-size: 14px; font-variant-numeric: tabular-nums; }
+.journal th { text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); border-bottom: 2px solid var(--fg); padding: 4px 6px; }
+.journal td { padding: 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.journal tfoot td { border-bottom: 0; border-top: 2px solid var(--fg); font-weight: 700; }
+.journal th:nth-child(3), .journal th:nth-child(4) { text-align: right; }
+.acct { font-family: var(--mono); color: var(--accent); }
+.indent { padding-left: 22px !important; }
+.num { text-align: right; white-space: nowrap; }
+.rule { margin: 0; font-size: 14px; color: var(--muted); }

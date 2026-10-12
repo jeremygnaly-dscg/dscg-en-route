@@ -7,6 +7,7 @@ import styles from "./landing.module.css";
 const STEPS = [
   { t: "La scène", d: "Un dirigeant expose son problème à son expert-comptable. C'est la situation de l'examen, jouée comme un podcast." },
   { t: "Le cours", d: "La règle, les articles à citer, la méthode de rédaction attendue par le correcteur. Voix douce, rythme posé." },
+  { t: "La fiche", d: "Selon la matière : les formules à retenir en finance et en contrôle de gestion, les écritures à passer en comptabilité." },
   { t: "Le flash", d: "Trois questions éclair pour vérifier que la notion est acquise, avant la station suivante." },
 ];
 
@@ -39,7 +40,7 @@ export function Landing() {
         <h1>Révise le DSCG <em>dans le RER.</em></h1>
         <p className={styles.lead}>
           Des épisodes audio de 10 minutes construits sur les vrais cas d&apos;examen.
-          Une scène, le cours, trois questions. Sans livre, sans écran.
+          Une scène, le cours, la fiche à retenir, trois questions.
         </p>
         <div className={styles.ctas}>
           <a href="#liste" className={styles.primary}>Rejoindre la liste d&apos;attente</a>
@@ -56,7 +57,7 @@ export function Landing() {
       <p className={styles.src}>Source : rapport du jury national du DSCG, session 2025.</p>
 
       <section className={styles.how}>
-        <h2>Un épisode, trois temps</h2>
+        <h2>Comment se passe un épisode</h2>
         <ol>
           {STEPS.map((s) => (
             <li key={s.t}><b>{s.t}</b><span>{s.d}</span></li>
