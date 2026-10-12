@@ -29,7 +29,7 @@ export function Home() {
       <div className={styles.ues} role="group" aria-label="Unités d'enseignement">
         {UES.map((u) => (
           <button key={u.id} className={styles.ue} aria-pressed={u.id === ue} disabled={!u.available}
-            onClick={() => { setUe(u.id); history.replaceState(null, "", `/?ue=${u.id}`); }}>
+            onClick={() => { setUe(u.id); history.replaceState(null, "", `/app?ue=${u.id}`); }}>
             {u.short} <small>{u.available ? u.name.split(" ")[0] : "bientôt"}</small>
           </button>
         ))}

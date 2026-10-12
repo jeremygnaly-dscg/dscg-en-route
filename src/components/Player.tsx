@@ -131,7 +131,7 @@ export function Player({ episode }: { episode: Episode }) {
 
   return (
     <div className={styles.wrap}>
-      <Link href={`/?ue=${episode.ue}`} className={styles.back}>← Épisodes {episode.ue.toUpperCase()}</Link>
+      <Link href={`/app?ue=${episode.ue}`} className={styles.back}>← Épisodes {episode.ue.toUpperCase()}</Link>
 
       <section className={styles.player} aria-label="Lecteur">
         <div className={styles.head}>

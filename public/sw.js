@@ -1,7 +1,7 @@
 // Service worker : garde l'appli et les épisodes déjà ouverts disponibles sans réseau
 // (tunnels du RER). Changer CACHE à chaque mise en ligne majeure.
-const CACHE = "der-v1";
-const CORE = ["/", "/manifest.webmanifest", "/icons/icon-192.png", "/icons/icon-512.png"];
+const CACHE = "der-v2";
+const CORE = ["/", "/app", "/manifest.webmanifest", "/icons/icon-192.png", "/icons/icon-512.png"];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(CORE)).then(() => self.skipWaiting()));
@@ -23,7 +23,7 @@ self.addEventListener("fetch", (e) => {
   e.respondWith(
     isPage
       ? fetch(req).then((res) => { const copy = res.clone(); caches.open(CACHE).then((c) => c.put(req, copy)); return res; })
-          .catch(() => caches.match(req).then((r) => r || caches.match("/")))
+          .catch(() => caches.match(req).then((r) => r || caches.match("/app")))
       : caches.match(req).then((hit) => hit || fetch(req).then((res) => {
           if (res.ok && !req.headers.has("range")) { const copy = res.clone(); caches.open(CACHE).then((c) => c.put(req, copy)); }
           return res;
