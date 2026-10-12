@@ -34,6 +34,7 @@ export function Landing() {
   return (
     <div className={styles.page}>
       <header className={styles.hero}>
+        <span className={styles.logo}>Révi<span>zen</span></span>
         <span className={styles.kicker}>DSCG · session 2027 · nouveau programme</span>
         <h1>Révise le DSCG <em>dans le RER.</em></h1>
         <p className={styles.lead}>
@@ -81,7 +82,10 @@ export function Landing() {
             <span>UE1 à UE5. Le bon choix si tu passes plusieurs épreuves dans l&apos;année.</span>
           </div>
         </div>
-        <p className={styles.note}>Les inscrits de la liste d&apos;attente auront le premier mois offert.</p>
+        <p className={styles.note}>
+          Ouverture quand les cinq UE écrites du DSCG seront couvertes. Les inscrits de la liste d&apos;attente
+          auront le premier mois offert. Le DCG, puis la licence et le master CCA, suivront.
+        </p>
       </section>
 
       <section id="liste" className={styles.waitlist}>
@@ -131,7 +135,7 @@ export function Landing() {
       </section>
 
       <footer className={styles.footer}>
-        <span>DSCG en route</span>
+        <span>Révizen</span>
         <nav className={styles.footLinks}>
           <Link href="/mentions-legales">Mentions légales</Link>
           <Link href="/confidentialite">Confidentialité</Link>

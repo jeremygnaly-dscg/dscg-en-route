@@ -47,7 +47,7 @@ export function Player({ episode }: { episode: Episode }) {
     if (!("mediaSession" in navigator)) return;
     navigator.mediaSession.metadata = new MediaMetadata({
       title: episode.title,
-      artist: "DSCG en route",
+      artist: "Révizen",
       album: episode.ref,
       artwork: [{ src: "/icons/icon-512.png", sizes: "512x512", type: "image/png" }],
     });

@@ -1,7 +1,7 @@
 {
-  "name": "DSCG en route",
-  "short_name": "DSCG en route",
-  "description": "Révise le DSCG en audio : un cas d'examen, le cours, trois questions.",
+  "name": "Révizen",
+  "short_name": "Révizen",
+  "description": "Révise l'expertise comptable en audio : un cas d'examen, le cours, trois questions.",
   "lang": "fr",
   "start_url": "/app",
   "display": "standalone",

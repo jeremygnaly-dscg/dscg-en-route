@@ -9,7 +9,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const e = findEpisode((await params).id);
-  return { title: e ? `${e.title} · DSCG en route` : "DSCG en route" };
+  return { title: e ? `${e.title} · Révizen` : "Révizen" };
 }
 
 export default async function EpisodePage({ params }: { params: Promise<{ id: string }> }) {

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { EDITEUR, MISE_A_JOUR } from "@/lib/legal";
 import styles from "@/components/legal.module.css";
 
-export const metadata: Metadata = { title: "Mentions légales · DSCG en route" };
+export const metadata: Metadata = { title: "Mentions légales · Révizen" };
 
 export default function MentionsLegales() {
   return (
@@ -37,7 +37,7 @@ export default function MentionsLegales() {
       <section>
         <h2>Propriété intellectuelle</h2>
         <p>
-          Les textes, scénarios, enregistrements et éléments graphiques de DSCG en route sont la propriété de
+          Les textes, scénarios, enregistrements et éléments graphiques de Révizen sont la propriété de
           leur éditeur. Toute reproduction sans autorisation est interdite. Les textes de loi cités sont issus
           de sources officielles (Légifrance) et restent librement réutilisables.
         </p>
@@ -47,8 +47,7 @@ export default function MentionsLegales() {
         <h2>Contenu pédagogique</h2>
         <p>
           Les épisodes sont des outils de révision. Ils ne remplacent ni un enseignement ni un conseil juridique,
-          fiscal ou social. DSCG en route n&apos;est affilié ni au ministère de l&apos;Enseignement supérieur ni au
-          jury du DSCG.
+          fiscal ou social. Révizen n&apos;est affilié ni au ministère de l&apos;Enseignement supérieur ni aux jurys des examens.
         </p>
       </section>
 

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { EDITEUR, MISE_A_JOUR } from "@/lib/legal";
 import styles from "@/components/legal.module.css";
 
-export const metadata: Metadata = { title: "Confidentialité · DSCG en route" };
+export const metadata: Metadata = { title: "Confidentialité · Révizen" };
 
 export default function Confidentialite() {
   return (
@@ -14,7 +14,7 @@ export default function Confidentialite() {
 
       <section>
         <h2>Qui est responsable de tes données</h2>
-        <p>{EDITEUR.nom}, éditeur de DSCG en route. Contact : {EDITEUR.email}.</p>
+        <p>{EDITEUR.nom}, éditeur de Révizen. Contact : {EDITEUR.email}.</p>
       </section>
 
       <section>
@@ -34,7 +34,7 @@ export default function Confidentialite() {
       <section>
         <h2>Pourquoi</h2>
         <p>
-          Uniquement pour te prévenir du lancement de DSCG en route et de l&apos;offre réservée aux inscrits,
+          Uniquement pour te prévenir du lancement de Révizen et de l&apos;offre réservée aux inscrits,
           et pour savoir quelles UE produire en priorité. Ton e-mail n&apos;est ni vendu ni transmis à des tiers.
         </p>
         <p>Base légale : ton consentement, donné en t&apos;inscrivant.</p>

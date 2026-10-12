@@ -1,4 +1,4 @@
-# DSCG en route
+# Révizen
 
 Appli web installable (PWA) pour réviser le DSCG en audio : une scène d'examen, le cours, trois questions flash.
 
