@@ -1,0 +1,9 @@
+.page { display: flex; flex-direction: column; gap: 22px; padding-top: 8px; max-width: 65ch; }
+.back { color: var(--muted); text-decoration: none; font-weight: 600; font-size: 14px; }
+.page h1 { font-size: 30px; font-weight: 800; }
+.page h2 { font-size: 19px; margin-bottom: 6px; }
+.page p, .page li { color: var(--fg); margin: 0; }
+.page ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 4px; }
+.page a { color: var(--accent); }
+.page section { display: flex; flex-direction: column; gap: 8px; }
+.meta { color: var(--muted); font-size: 14px; }

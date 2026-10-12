@@ -122,14 +122,21 @@ export function Landing() {
             </button>
             {state === "error" && <p className={styles.error}>L&apos;inscription n&apos;a pas abouti. Vérifie ta connexion et réessaie.</p>}
             {state === "offline" && <p className={styles.error}>La liste d&apos;attente ouvre très bientôt. Reviens dans quelques heures.</p>}
-            <p className={styles.legal}>Ton e-mail sert uniquement à te prévenir du lancement. Désinscription sur simple demande.</p>
+            <p className={styles.legal}>
+              Ton e-mail sert uniquement à te prévenir du lancement. Désinscription sur simple demande.{" "}
+              <Link href="/confidentialite">Confidentialité</Link>
+            </p>
           </form>
         )}
       </section>
 
       <footer className={styles.footer}>
         <span>DSCG en route</span>
-        <Link href="/app">Ouvrir l&apos;appli</Link>
+        <nav className={styles.footLinks}>
+          <Link href="/mentions-legales">Mentions légales</Link>
+          <Link href="/confidentialite">Confidentialité</Link>
+          <Link href="/app">Ouvrir l&apos;appli</Link>
+        </nav>
       </footer>
     </div>
   );
