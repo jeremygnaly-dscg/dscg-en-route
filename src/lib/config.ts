@@ -1,14 +1,16 @@
 // Connexion Supabase. L'URL et la clé « anon / publishable » sont publiques par nature :
 // la sécurité est assurée par les règles (RLS) définies dans supabase/schema.sql.
 // Ne JAMAIS mettre ici la clé service_role / secret.
-export const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL ?? "";
-export const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? "";
+export const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL ?? "https://bojfsddycahfovufrqvp.supabase.co";
+export const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? "sb_publishable_KoshWZFhCzeZ_H_gvXDARQ_wFYxvi8c";
 
 export const supabaseReady = () => !!SUPABASE_URL && !!SUPABASE_ANON_KEY;
 
-const headers = () => ({
+// Les clés « publishable » (sb_publishable_…) passent seulement dans `apikey` ;
+// les anciennes clés anon (JWT eyJ…) passent aussi dans Authorization.
+const headers = (): Record<string, string> => ({
   apikey: SUPABASE_ANON_KEY,
-  Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+  ...(SUPABASE_ANON_KEY.startsWith("eyJ") ? { Authorization: `Bearer ${SUPABASE_ANON_KEY}` } : {}),
   "Content-Type": "application/json",
 });
 
