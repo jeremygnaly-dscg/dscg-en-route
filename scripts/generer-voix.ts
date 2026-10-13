@@ -77,7 +77,10 @@ async function piste(id: string, kind: "scene" | "cours", lines: Line[]) {
     const l = lines[i];
     const voice = kind === "cours" ? V.cours : V[l.who as keyof typeof V] ?? V.narrateur;
     const f = path.join(TMP, `${id}-${kind}-${String(i).padStart(2, "0")}.mp3`);
-    await tts(oral(l.text), voice, kind === "cours" ? VOICE_SETTINGS.cours : VOICE_SETTINGS.scene, f);
+    const brut = f.replace(/\.mp3$/, "-brut.mp3");
+    await tts(oral(l.text), voice, kind === "cours" ? VOICE_SETTINGS.cours : VOICE_SETTINGS.scene, brut);
+    // Même volume pour toutes les voix (-16 LUFS), pour qu'aucun personnage ne paraisse plus bas
+    execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-i", brut, "-af", "loudnorm=I=-16:TP=-1.5:LRA=11", "-ar", "44100", "-ac", "1", "-c:a", "libmp3lame", "-b:a", "128k", f]);
     parts.push(f);
   }
   assembler(parts, kind === "cours" ? 0.8 : 0.45, out);
@@ -94,10 +97,15 @@ async function main() {
   const chars = cibles.reduce((n, e) => n + [...e.scene, ...e.cours].reduce((m, l) => m + oral(l.text).length, 0), 0);
   console.log(`${cibles.length} épisode(s), environ ${chars} caractères (≈ crédits ElevenLabs).`);
 
-  for (const e of cibles) {
-    console.log(`→ ${e.title}`);
-    await piste(e.id, "scene", e.scene);
-    await piste(e.id, "cours", e.cours);
+  let erreur: unknown = null;
+  try {
+    for (const e of cibles) {
+      console.log(`→ ${e.title}`);
+      await piste(e.id, "scene", e.scene);
+      await piste(e.id, "cours", e.cours);
+    }
+  } catch (e) {
+    erreur = e; // on enregistre quand même ce qui a été produit
   }
 
   // Déclare les épisodes dont les deux pistes existent
@@ -110,6 +118,7 @@ async function main() {
   );
   fs.rmSync(TMP, { recursive: true, force: true });
   console.log(`Voix studio disponibles pour ${dispo.length} épisode(s).`);
+  if (erreur) throw erreur;
 }
 
 main().catch((e) => { console.error(e.message ?? e); process.exit(1); });
