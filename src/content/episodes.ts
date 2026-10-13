@@ -1,6 +1,7 @@
 import type { Episode, Ue } from "./types";
 import { LOT1 } from "./lot1";
 import { LOT2 } from "./lot2";
+import { LOT3 } from "./lot3";
 
 export const UES: Ue[] = [
   { id: "ue1", short: "UE1", name: "Gestion juridique, fiscale et sociale", available: true },
@@ -204,12 +205,13 @@ export const EPISODES: Episode[] = [
   },
   ...LOT1,
   ...LOT2,
-  soon("ue4-ifrs16", "ue4", "IFRS 16 : les contrats de location", "IFRS 16"),
-  soon("ue4-cac-mission", "ue4", "Le commissaire aux comptes : nomination et mission", "C. com."),
-  soon("ue1-tva-territorialite", "ue1", "TVA : territorialité des prestations", "art. 259 et s. CGI"),
-  soon("ue1-sanctions-penales", "ue1", "Abus de biens sociaux et responsabilité pénale", "art. L. 241-3 C. com."),
-  soon("ue2-structure-financiere", "ue2", "Fonds propres et structure financière", "ROE · ROCE · levier"),
-  soon("ue5-alignement", "ue5", "Alignement stratégique et cloud", "Gouvernance SI"),
+  ...LOT3,
+  soon("ue4-consolidation-elim", "ue4", "Éliminations intragroupe", "Règlement ANC 2020-01"),
+  soon("ue4-scission-apa", "ue4", "Scission et apport partiel d'actif", "Règlement ANC 2014-03"),
+  soon("ue1-sauvegarde-plan", "ue1", "Le plan de sauvegarde et de cession", "C. com."),
+  soon("ue1-contrats-speciaux", "ue1", "Contrats de distribution et franchise", "C. com."),
+  soon("ue2-couverture-change", "ue2", "Couverture du risque de change", "Forward · options"),
+  soon("ue5-bi-donnees", "ue5", "BI, data et pilotage", "Gouvernance des données"),
   soon("ue3-pilotage", "ue3", "Pilotage de la performance", "UE3 · tes cours + sujet zéro"),
   soon("ue3-rse", "ue3", "Contrôle de gestion et RSE", "UE3 · tes cours + sujet zéro"),
 ];
