@@ -35,12 +35,28 @@ export function usePrefs() {
   return [prefs, update] as const;
 }
 
-export type Progress = Record<string, { done: boolean; score?: number }>;
+// date : AAAA-MM-JJ de la première écoute complète ; reviews : dates des révisions faites
+export type Progress = Record<string, { done: boolean; score?: number; date?: string; reviews?: string[] }>;
+
+export const todayIso = () => {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+};
 
 export function useProgress() {
   const [progress, setProgress] = useState<Progress>({});
   useEffect(() => setProgress(read<Progress>("der-progress", {})), []);
   const markDone = (id: string, score: number) =>
-    setProgress((p) => { const next = { ...p, [id]: { done: true, score } }; write("der-progress", next); return next; });
+    setProgress((p) => {
+      const prev = p[id];
+      const day = todayIso();
+      // Déjà écouté : c'est une révision (utile au Coach pour espacer les rappels)
+      const entry = prev?.done
+        ? { ...prev, score: Math.max(prev.score ?? 0, score), reviews: [...(prev.reviews ?? []), day] }
+        : { done: true, score, date: day, reviews: [] };
+      const next = { ...p, [id]: entry };
+      write("der-progress", next);
+      return next;
+    });
   return [progress, markDone] as const;
 }
