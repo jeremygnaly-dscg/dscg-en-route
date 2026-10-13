@@ -177,10 +177,12 @@ export function Player({ episode }: { episode: Episode }) {
         </div>
 
         <div className={styles.settings}>
-          <Seg label="Voix" value={prefs.gender} onChange={(v) => change({ gender: v as "f" | "m" })}
-            options={[["f", "Femme"], ["m", "Homme"]]} />
-          <Seg label="Ton" value={prefs.tone} onChange={(v) => change({ tone: v as "calm" | "lively" })}
-            options={[["calm", "Apaisant"], ["lively", "Dynamique"]]} />
+          {!episode.audio && (<>
+            <Seg label="Voix" value={prefs.gender} onChange={(v) => change({ gender: v as "f" | "m" })}
+              options={[["f", "Femme"], ["m", "Homme"]]} />
+            <Seg label="Ton" value={prefs.tone} onChange={(v) => change({ tone: v as "calm" | "lively" })}
+              options={[["calm", "Apaisant"], ["lively", "Dynamique"]]} />
+          </>)}
           <Seg label="Vitesse" value={String(prefs.speed)} onChange={(v) => change({ speed: Number(v) })}
             options={[["0.9", "×0,9"], ["1", "×1"], ["1.25", "×1,25"]]} />
           <Seg label="Ambiance" value={prefs.ambiance} onChange={(v) => change({ ambiance: v as typeof prefs.ambiance })}
@@ -192,7 +194,7 @@ export function Player({ episode }: { episode: Episode }) {
           </div>
         </div>
         <p className={styles.notice}>
-          {!mounted ? "" : mp3 ? "Voix studio." : voiceAvailable()
+          {!mounted ? "" : episode.audio ? "" : voiceAvailable()
             ? `Voix du téléphone${voiceName ? ` : ${voiceName}` : ""}. La voix studio arrive avec les épisodes finaux.`
             : "Lecture audio indisponible sur ce navigateur. Le texte reste lisible ci-dessous."}
         </p>

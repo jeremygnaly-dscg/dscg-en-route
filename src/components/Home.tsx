@@ -48,7 +48,7 @@ export function Home() {
               <>
                 <span className={styles.n}>{n}</span>
                 <span className={styles.t}><b>{e.title}</b><span>{e.ref}</span></span>
-                {e.status === "soon" ? <span className={styles.pill}>bientôt</span>
+                {e.status !== "live" ? <span className={styles.pill}>bientôt disponible</span>
                   : progress[e.id]?.done ? <span className={`${styles.pill} ${styles.done}`}>Écouté · {progress[e.id]?.score}/3</span>
                   : <span className={`${styles.pill} ${styles.free}`}>{e.minutes} min</span>}
               </>

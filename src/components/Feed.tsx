@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ACTUS } from "@/content/actus";
-import { EPISODES } from "@/content/episodes";
+import { EPISODES, findEpisode } from "@/content/episodes";
 import styles from "./feed.module.css";
 
 const MOIS = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."];
@@ -70,7 +70,7 @@ export function Feed() {
             <span className="label">Notions liées</span>
             <div className={styles.chips}>
               {a.notions.map((n) =>
-                n.episodeId ? (
+                n.episodeId && findEpisode(n.episodeId)?.status === "live" ? (
                   <Link key={n.label} href={`/episode/${n.episodeId}`} className={`${styles.chip} ${styles.chipLive}`}>
                     <i>{n.ue}</i>{n.label}<span aria-hidden="true">▸</span>
                   </Link>

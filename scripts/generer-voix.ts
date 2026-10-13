@@ -92,7 +92,8 @@ async function main() {
   fs.mkdirSync(TMP, { recursive: true });
   const demande = (process.env.EPISODES || "all").trim();
   const ids = demande === "all" ? null : demande.split(",").map((s) => s.trim()).filter(Boolean);
-  const cibles = EPISODES.filter((e) => e.status === "live" && (!ids || ids.includes(e.id)));
+  // Tout épisode rédigé (en voix studio ou non) peut être généré
+  const cibles = EPISODES.filter((e) => e.status !== "soon" && (!ids || ids.includes(e.id)) && (ids || !e.audio || FORCE));
   if (!cibles.length) throw new Error(`Aucun épisode trouvé pour : ${demande}`);
   const chars = cibles.reduce((n, e) => n + [...e.scene, ...e.cours].reduce((m, l) => m + oral(l.text).length, 0), 0);
   console.log(`${cibles.length} épisode(s), environ ${chars} caractères (≈ crédits ElevenLabs).`);

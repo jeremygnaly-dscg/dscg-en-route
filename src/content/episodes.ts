@@ -223,8 +223,10 @@ function soon(id: string, ue: Episode["ue"], title: string, ref: string): Episod
 }
 
 // Voix studio : branche automatiquement les MP3 déclarés dans audio.ts
+// Règle produit : un épisode n'est jouable qu'avec la voix studio. Sinon il reste « bientôt disponible ».
 for (const e of EPISODES) {
   if (AUDIO_DISPO.includes(e.id)) e.audio = { scene: `/audio/${e.id}-scene.mp3`, cours: `/audio/${e.id}-cours.mp3` };
+  else if (e.status === "live") e.status = "ecrit";
 }
 
 export const episodesOf = (ue: string) => EPISODES.filter((e) => e.ue === ue);

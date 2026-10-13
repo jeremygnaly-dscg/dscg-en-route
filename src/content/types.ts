@@ -58,7 +58,9 @@ export interface Episode {
   title: string;
   ref: string; // référence principale, ex. "art. 145 et 216 CGI"
   minutes: number;
-  status: "live" | "soon";
+  // live : écrit ET en voix studio (seul état visible et jouable dans l'appli)
+  // ecrit : rédigé, en attente de la voix studio · soon : pas encore rédigé
+  status: "live" | "ecrit" | "soon";
   source?: string; // d'où vient le cas (sujet officiel, sujet zéro, cours perso)
   reviewedBy?: string; // relecteur — obligatoire avant publication payante
   scene: Line[];
