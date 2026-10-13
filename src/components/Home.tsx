@@ -15,7 +15,7 @@ export function Home() {
   }, []);
 
   const current = UES.find((u) => u.id === ue)!;
-  const list = episodesOf(ue);
+  const list = [...episodesOf(ue)].sort((a, b) => (a.status === b.status ? 0 : a.status === "live" ? -1 : 1));
   const live = list.filter((e) => e.status === "live");
   const doneCount = live.filter((e) => progress[e.id]?.done).length;
 

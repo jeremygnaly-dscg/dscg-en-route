@@ -55,12 +55,12 @@
 .legend { margin: 0; padding-left: 18px; font-size: 14px; color: var(--muted); }
 .trap { margin: 0; font-size: 14px; background: var(--bad-soft); color: var(--bad); border-radius: 8px; padding: 8px 10px; }
 .journalWrap { overflow-x: auto; }
-.journal { width: 100%; border-collapse: collapse; font-size: 14px; font-variant-numeric: tabular-nums; }
+.journal { width: 100%; border-collapse: collapse; font-size: 13.5px; font-variant-numeric: tabular-nums; }
 .journal th { text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); border-bottom: 2px solid var(--fg); padding: 4px 6px; }
-.journal td { padding: 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.journal td { padding: 6px 4px; border-bottom: 1px solid var(--line); vertical-align: top; }
 .journal tfoot td { border-bottom: 0; border-top: 2px solid var(--fg); font-weight: 700; }
 .journal th:nth-child(3), .journal th:nth-child(4) { text-align: right; }
-.acct { font-family: var(--mono); color: var(--accent); }
-.indent { padding-left: 22px !important; }
+.acct { font-family: var(--mono); color: var(--accent); width: 1%; white-space: nowrap; }
+.indent { padding-left: 16px !important; }
 .num { text-align: right; white-space: nowrap; }
 .rule { margin: 0; font-size: 14px; color: var(--muted); }

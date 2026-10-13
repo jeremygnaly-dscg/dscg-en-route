@@ -37,8 +37,8 @@ export const ACTUS: Actu[] = [
     notions: [
       { label: "Plus-value de cession de titres et départ à la retraite", ue: "UE1" },
       { label: "Ouverture du capital des sociétés d'expertise comptable", ue: "UE1" },
-      { label: "LBO et holding de reprise", ue: "UE2" },
-      { label: "Goodwill et complément de prix en consolidation", ue: "UE4" },
+      { label: "LBO et holding de reprise", ue: "UE2", episodeId: "lbo-effet-levier" },
+      { label: "Goodwill et complément de prix en consolidation", ue: "UE4", episodeId: "ecart-acquisition" },
     ],
   },
   {
@@ -71,8 +71,8 @@ export const ACTUS: Actu[] = [
       "Le dirigeant cède soit à un groupe industriel, soit à une holding de trois salariés. Compare le coût fiscal pour le cédant dans les deux cas, en droit actuel puis selon le projet.",
     notions: [
       { label: "Abattement du dirigeant partant à la retraite (art. 150-0 D ter CGI)", ue: "UE1" },
-      { label: "Droits d'enregistrement sur cession de titres", ue: "UE1" },
-      { label: "Reprise par les salariés (LMBO)", ue: "UE2" },
+      { label: "Droits d'enregistrement sur cession de titres", ue: "UE1", episodeId: "cession-titres-agrement" },
+      { label: "Reprise par les salariés (LMBO)", ue: "UE2", episodeId: "lbo-effet-levier" },
     ],
     projet: true,
   },
@@ -107,7 +107,7 @@ export const ACTUS: Actu[] = [
       "Société de 2,2 Md€ de CA, bénéfice fiscal de 400 M€ : calcule l'IS, la contribution sociale, la contribution exceptionnelle et le taux effectif.",
     notions: [
       { label: "Calcul de l'impôt sur les sociétés", ue: "UE1" },
-      { label: "Impôts différés et changement de taux", ue: "UE4" },
+      { label: "Impôts différés et changement de taux", ue: "UE4", episodeId: "impots-differes" },
       { label: "Coût du capital après impôt", ue: "UE2", episodeId: "cmpc" },
     ],
     projet: true,
@@ -142,7 +142,7 @@ export const ACTUS: Actu[] = [
     question:
       "Une PME de 80 salariés doit émettre ses factures électroniques en septembre 2027. Propose la démarche projet et les risques que le commissaire aux comptes devra apprécier.",
     notions: [
-      { label: "Conduite de projet SI et intégration à l'ERP", ue: "UE5" },
+      { label: "Conduite de projet SI et intégration à l'ERP", ue: "UE5", episodeId: "projet-erp" },
       { label: "Obligations de facturation et TVA", ue: "UE1" },
       { label: "Contrôle interne du cycle ventes", ue: "UE4" },
     ],
@@ -161,7 +161,7 @@ export const ACTUS: Actu[] = [
     notions: [
       { label: "Notion de contrôle (art. L. 233-3 C. com.)", ue: "UE1" },
       { label: "Consultation du CSE avant une cession", ue: "UE1" },
-      { label: "Perte de contrôle et mise en équivalence", ue: "UE4" },
+      { label: "Perte de contrôle et mise en équivalence", ue: "UE4", episodeId: "pourcentages-methodes" },
     ],
   },
 ];

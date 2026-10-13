@@ -1,11 +1,12 @@
 import type { Episode, Ue } from "./types";
+import { LOT1 } from "./lot1";
 
 export const UES: Ue[] = [
   { id: "ue1", short: "UE1", name: "Gestion juridique, fiscale et sociale", available: true },
   { id: "ue3", short: "UE3", name: "Contrôle de gestion et stratégie", available: true },
   { id: "ue2", short: "UE2", name: "Finance", available: true },
   { id: "ue4", short: "UE4", name: "Comptabilité et audit", available: true },
-  { id: "ue5", short: "UE5", name: "Management des systèmes d'information", available: false },
+  { id: "ue5", short: "UE5", name: "Management des systèmes d'information", available: true },
 ];
 
 // Contenu démo rédigé à partir du CGI. À FAIRE RELIRE avant toute vente.
@@ -84,7 +85,6 @@ export const EPISODES: Episode[] = [
   },
   soon("fusion-regime-faveur", "ue1", "Fusion et régime de faveur", "art. 210 A CGI"),
   soon("pactes-associes", "ue1", "Pactes d'associés", "art. 1103 C. civ."),
-  soon("procedure-sauvegarde", "ue1", "La procédure de sauvegarde", "art. L620-1 C. com."),
   soon("transfert-contrats", "ue1", "Transfert des contrats de travail", "art. L1224-1 C. trav."),
   {
     id: "cmpc",
@@ -203,8 +203,11 @@ export const EPISODES: Episode[] = [
   },
   soon("ue2-van-tri", "ue2", "VAN, TRI et choix d'investissement", "Formules + cas d'examen"),
   soon("ue2-evaluation", "ue2", "Évaluation par les flux (DCF)", "Formules + cas d'examen"),
-  soon("ue4-consolidation", "ue4", "Consolidation : intégration globale", "Règlement ANC 2020-01"),
-  soon("ue4-fusion", "ue4", "Fusion : valeurs d'apport et mali", "Règlement ANC 2014-03"),
+  ...LOT1,
+  soon("ue4-mali-technique", "ue4", "Fusion : boni, mali et mali technique", "Règlement ANC 2014-03"),
+  soon("ue4-audit-demarche", "ue4", "Démarche d'audit et NEP", "NEP · C. com."),
+  soon("ue1-is-calcul", "ue1", "Calcul de l'IS et réintégrations", "art. 209 et s. CGI"),
+  soon("ue5-securite", "ue5", "Sécurité du SI et RGPD", "RGPD · NIS 2"),
   soon("ue3-pilotage", "ue3", "Pilotage de la performance", "UE3 · tes cours + sujet zéro"),
   soon("ue3-rse", "ue3", "Contrôle de gestion et RSE", "UE3 · tes cours + sujet zéro"),
 ];

@@ -18,8 +18,10 @@ function partsOf(e: Episode): { id: Part; label: string; hint: string }[] {
     { id: "scene", label: "Scène", hint: "Le cas" },
     { id: "cours", label: "Cours", hint: e.format === "comptable" ? "Droit comptable" : "La règle" },
   ];
-  if (e.formules?.length) list.push({ id: "fiche", label: "Formules", hint: "À retenir" });
-  if (e.ecritures?.length) list.push({ id: "fiche", label: "Écritures", hint: "Au journal" });
+  const f = !!e.formules?.length, w = !!e.ecritures?.length;
+  if (f && w) list.push({ id: "fiche", label: "Fiche", hint: "Formules + écritures" });
+  else if (f) list.push({ id: "fiche", label: "Formules", hint: "À retenir" });
+  else if (w) list.push({ id: "fiche", label: "Écritures", hint: "Au journal" });
   list.push({ id: "flash", label: "Flash", hint: "3 questions" });
   return list;
 }
@@ -144,7 +146,7 @@ export function Player({ episode }: { episode: Episode }) {
 
   const panelLabel =
     part === "flash" ? "Flash · 3 questions"
-    : part === "fiche" ? (episode.formules?.length ? "Formules à retenir" : "Écritures à passer")
+    : part === "fiche" ? (episode.formules?.length && episode.ecritures?.length ? "Fiche : formules et écritures" : episode.formules?.length ? "Formules à retenir" : "Écritures à passer")
     : `Transcription · ${part === "scene" ? "Scène" : "Cours"}`;
 
   return (
