@@ -46,14 +46,15 @@ export function Feed() {
         })}
       </div>
 
-      {ACTUS.map((a) => (
+      {[...ACTUS].sort((x, y) => y.date.localeCompare(x.date)).map((a) => (
         <article key={a.id} className={styles.post}>
           <div className={styles.postHead}>
-            <span className={styles.avatar} aria-hidden="true">{a.source.slice(0, 1)}</span>
+            <span className={styles.avatar} aria-hidden="true">{a.categorie.slice(0, 1)}</span>
             <div className={styles.who}>
-              <b>{a.source}</b>
-              <span>{a.categorie} · {dateFr(a.date)}</span>
+              <b>{a.categorie}</b>
+              <span>{a.source} · {dateFr(a.date)}</span>
             </div>
+            {a.projet && <span className={styles.badge}>Projet non voté</span>}
             {a.exemple && <span className={styles.badge}>Exemple</span>}
           </div>
 
