@@ -1,5 +1,6 @@
 import type { Episode, Ue } from "./types";
 import { LOT1 } from "./lot1";
+import { LOT2 } from "./lot2";
 
 export const UES: Ue[] = [
   { id: "ue1", short: "UE1", name: "Gestion juridique, fiscale et sociale", available: true },
@@ -201,13 +202,14 @@ export const EPISODES: Episode[] = [
       { q: "Comment évalue-t-on la provision ?", choices: ["Au montant maximal réclamé", "À la meilleure estimation de la sortie de ressources", "Au montant minimal"], answer: 1, why: "Meilleure estimation de la sortie de ressources nécessaire pour éteindre l'obligation." },
     ],
   },
-  soon("ue2-van-tri", "ue2", "VAN, TRI et choix d'investissement", "Formules + cas d'examen"),
-  soon("ue2-evaluation", "ue2", "Évaluation par les flux (DCF)", "Formules + cas d'examen"),
   ...LOT1,
-  soon("ue4-mali-technique", "ue4", "Fusion : boni, mali et mali technique", "Règlement ANC 2014-03"),
-  soon("ue4-audit-demarche", "ue4", "Démarche d'audit et NEP", "NEP · C. com."),
-  soon("ue1-is-calcul", "ue1", "Calcul de l'IS et réintégrations", "art. 209 et s. CGI"),
-  soon("ue5-securite", "ue5", "Sécurité du SI et RGPD", "RGPD · NIS 2"),
+  ...LOT2,
+  soon("ue4-ifrs16", "ue4", "IFRS 16 : les contrats de location", "IFRS 16"),
+  soon("ue4-cac-mission", "ue4", "Le commissaire aux comptes : nomination et mission", "C. com."),
+  soon("ue1-tva-territorialite", "ue1", "TVA : territorialité des prestations", "art. 259 et s. CGI"),
+  soon("ue1-sanctions-penales", "ue1", "Abus de biens sociaux et responsabilité pénale", "art. L. 241-3 C. com."),
+  soon("ue2-structure-financiere", "ue2", "Fonds propres et structure financière", "ROE · ROCE · levier"),
+  soon("ue5-alignement", "ue5", "Alignement stratégique et cloud", "Gouvernance SI"),
   soon("ue3-pilotage", "ue3", "Pilotage de la performance", "UE3 · tes cours + sujet zéro"),
   soon("ue3-rse", "ue3", "Contrôle de gestion et RSE", "UE3 · tes cours + sujet zéro"),
 ];
