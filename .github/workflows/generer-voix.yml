@@ -1,0 +1,61 @@
+name: Générer les voix
+
+# Lancement manuel : onglet Actions → « Générer les voix » → Run workflow
+on:
+  workflow_dispatch:
+    inputs:
+      episodes:
+        description: "Épisodes : all, ou des ids séparés par des virgules (ex. regime-mere-fille)"
+        required: true
+        default: "regime-mere-fille"
+      force:
+        description: "Régénérer même si le MP3 existe déjà"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generer-voix
+  cancel-in-progress: false
+
+jobs:
+  voix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Installer ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+
+      - name: Générer les MP3 avec ElevenLabs
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          VOICE_COURS: ${{ vars.VOICE_COURS }}
+          VOICE_NARRATRICE: ${{ vars.VOICE_NARRATRICE }}
+          VOICE_DIRIGEANT: ${{ vars.VOICE_DIRIGEANT }}
+          VOICE_EXPERT: ${{ vars.VOICE_EXPERT }}
+          EPISODES: ${{ inputs.episodes }}
+          FORCE: ${{ inputs.force }}
+        run: npx --yes tsx@4.19.2 scripts/generer-voix.ts
+
+      - name: Enregistrer les MP3 dans le dépôt
+        run: |
+          git config user.name "Révizen (voix)"
+          git config user.email "actions@users.noreply.github.com"
+          git add public/audio src/content/audio.ts
+          if git diff --cached --quiet; then
+            echo "Rien de nouveau à enregistrer."
+          else
+            git commit -m "Voix studio : ${{ inputs.episodes }}"
+            git push
+          fi
