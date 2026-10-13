@@ -1,7 +1,7 @@
 // Service worker : garde l'appli et les épisodes déjà ouverts disponibles sans réseau
 // (tunnels du RER). Changer CACHE à chaque mise en ligne majeure.
-const CACHE = "revizen-v1";
-const CORE = ["/", "/app", "/manifest.webmanifest", "/icons/icon-192.png", "/icons/icon-512.png"];
+const CACHE = "revizen-v2";
+const CORE = ["/", "/app", "/app/fil", "/manifest.webmanifest", "/icons/icon-192.png", "/icons/icon-512.png"];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(CORE)).then(() => self.skipWaiting()));

@@ -7,21 +7,29 @@
   --body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
   --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
 }
+/* Thème : "système" par défaut, ou choix explicite (data-theme sur <html>) dans Profil */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0e1420; --surface: #162032; --sunk: #1d2940; --fg: #e8edf6; --muted: #9aa6ba; --line: #2a3850;
-    --accent: #8c96ff; --accent-ink: #0e1420; --accent-soft: #232c55;
+  :root:not([data-theme="light"]) {
+    --bg: #0b0f17; --surface: #141b27; --sunk: #1c2433; --fg: #e8edf6; --muted: #98a3b6; --line: #263247;
+    --accent: #8c96ff; --accent-ink: #0b0f17; --accent-soft: #232c55;
     --gold: #e8b54f; --gold-soft: #3a2f17;
     --ok: #5bd08f; --ok-soft: #173527; --bad: #ff8a90; --bad-soft: #3e1c21;
     color-scheme: dark;
   }
+}
+:root[data-theme="dark"] {
+  --bg: #0b0f17; --surface: #141b27; --sunk: #1c2433; --fg: #e8edf6; --muted: #98a3b6; --line: #263247;
+    --accent: #8c96ff; --accent-ink: #0b0f17; --accent-soft: #232c55;
+    --gold: #e8b54f; --gold-soft: #3a2f17;
+    --ok: #5bd08f; --ok-soft: #173527; --bad: #ff8a90; --bad-soft: #3e1c21;
+    color-scheme: dark;
 }
 * { box-sizing: border-box; }
 html, body { margin: 0; }
 body {
   background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.5;
   padding-inline: 16px;
-  padding-block: calc(16px + env(safe-area-inset-top, 0px)) calc(40px + env(safe-area-inset-bottom, 0px));
+  padding-block: calc(16px + env(safe-area-inset-top, 0px)) calc(96px + env(safe-area-inset-bottom, 0px));
 }
 main { max-width: 560px; margin: 0 auto; }
 h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; line-height: 1.15; }

@@ -3,7 +3,7 @@
   "short_name": "Révizen",
   "description": "Révise l'expertise comptable en audio : un cas d'examen, le cours, trois questions.",
   "lang": "fr",
-  "start_url": "/app",
+  "start_url": "/app/fil",
   "display": "standalone",
   "background_color": "#eef1f6",
   "theme_color": "#3340c7",

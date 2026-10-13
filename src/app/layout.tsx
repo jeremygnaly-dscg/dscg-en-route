@@ -24,13 +24,17 @@ export const viewport: Viewport = {
   viewportFit: "cover",
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#eef1f6" },
-    { media: "(prefers-color-scheme: dark)", color: "#0e1420" },
+    { media: "(prefers-color-scheme: dark)", color: "#0b0f17" },
   ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr">
+    <html lang="fr" suppressHydrationWarning>
+      <head>
+        {/* Applique le thème choisi (clair/sombre) avant l'affichage, sans flash */}
+        <script dangerouslySetInnerHTML={{ __html: `try{var t=localStorage.getItem("revizen-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}` }} />
+      </head>
       <body>
         <main>{children}</main>
         <ServiceWorker />
