@@ -2,6 +2,7 @@ import type { Episode, Ue } from "./types";
 import { LOT1 } from "./lot1";
 import { LOT2 } from "./lot2";
 import { LOT3 } from "./lot3";
+import { LOT4 } from "./lot4";
 import { AUDIO_DISPO } from "./audio";
 
 export const UES: Ue[] = [
@@ -86,9 +87,7 @@ export const EPISODES: Episode[] = [
       { q: "Un déficit d'une filiale antérieur à son entrée dans le groupe s'impute…", choices: ["Sur le résultat d'ensemble", "Sur ses propres bénéfices", "Nulle part"], answer: 1, why: "Uniquement sur les bénéfices propres de la filiale." },
     ],
   },
-  soon("fusion-regime-faveur", "ue1", "Fusion et régime de faveur", "art. 210 A CGI"),
   soon("pactes-associes", "ue1", "Pactes d'associés", "art. 1103 C. civ."),
-  soon("transfert-contrats", "ue1", "Transfert des contrats de travail", "art. L1224-1 C. trav."),
   {
     id: "cmpc",
     ue: "ue2",
@@ -207,12 +206,10 @@ export const EPISODES: Episode[] = [
   ...LOT1,
   ...LOT2,
   ...LOT3,
-  soon("ue4-consolidation-elim", "ue4", "Éliminations intragroupe", "Règlement ANC 2020-01"),
+  ...LOT4,
   soon("ue4-scission-apa", "ue4", "Scission et apport partiel d'actif", "Règlement ANC 2014-03"),
   soon("ue1-sauvegarde-plan", "ue1", "Le plan de sauvegarde et de cession", "C. com."),
   soon("ue1-contrats-speciaux", "ue1", "Contrats de distribution et franchise", "C. com."),
-  soon("ue2-couverture-change", "ue2", "Couverture du risque de change", "Forward · options"),
-  soon("ue5-bi-donnees", "ue5", "BI, data et pilotage", "Gouvernance des données"),
   soon("ue3-pilotage", "ue3", "Pilotage de la performance", "UE3 · tes cours + sujet zéro"),
   soon("ue3-rse", "ue3", "Contrôle de gestion et RSE", "UE3 · tes cours + sujet zéro"),
 ];
