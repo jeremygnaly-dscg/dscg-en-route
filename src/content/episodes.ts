@@ -2,6 +2,7 @@ import type { Episode, Ue } from "./types";
 import { LOT1 } from "./lot1";
 import { LOT2 } from "./lot2";
 import { LOT3 } from "./lot3";
+import { AUDIO_DISPO } from "./audio";
 
 export const UES: Ue[] = [
   { id: "ue1", short: "UE1", name: "Gestion juridique, fiscale et sociale", available: true },
@@ -219,6 +220,11 @@ export const EPISODES: Episode[] = [
 function soon(id: string, ue: Episode["ue"], title: string, ref: string): Episode {
   const format = ue === "ue1" ? "juridique" : ue === "ue4" ? "comptable" : "technique";
   return { id, ue, format, title, ref, minutes: 0, status: "soon", scene: [], cours: [], flash: [] };
+}
+
+// Voix studio : branche automatiquement les MP3 déclarés dans audio.ts
+for (const e of EPISODES) {
+  if (AUDIO_DISPO.includes(e.id)) e.audio = { scene: `/audio/${e.id}-scene.mp3`, cours: `/audio/${e.id}-cours.mp3` };
 }
 
 export const episodesOf = (ue: string) => EPISODES.filter((e) => e.ue === ue);
