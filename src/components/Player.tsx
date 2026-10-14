@@ -7,6 +7,7 @@ import { ambient, AMBIANCES } from "@/lib/ambient";
 import { usePrefs, useProgress, useQuizAttente, type Progress } from "@/lib/prefs";
 import { Quiz } from "./Quiz";
 import { FicheRevision } from "./Fiche";
+import { Signaler } from "./Signaler";
 import styles from "./player.module.css";
 
 // Déroulé d'un épisode : on écoute (scène puis cours), on se teste, on relit la fiche.
@@ -222,6 +223,7 @@ export function Player({ episode }: { episode: Episode }) {
         )}
       </section>
 
+      <Signaler key={ep.id} episodeId={ep.id} partie={part} />
       <p className={styles.foot} data-noprint>
         {ep.reviewedBy ? `Relu par ${ep.reviewedBy}.` : "Contenu en cours de relecture."} {ep.source}
       </p>

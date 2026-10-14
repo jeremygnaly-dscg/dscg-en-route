@@ -79,3 +79,9 @@
   .panel { border: 0; padding: 0; }
   .card { break-inside: avoid; background: #fff; }
 }
+
+/* Signaler une erreur */
+.signalerLien { align-self: flex-start; border: 0; background: transparent; color: var(--muted); font-size: 13px; font-weight: 600; padding: 4px 0; text-decoration: underline; text-underline-offset: 3px; }
+.signaler { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+.signaler select, .signaler textarea { width: 100%; font: inherit; font-size: 16px; padding: 9px 11px; border-radius: 10px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); }
+.merci { margin: 0; color: var(--ok); font-weight: 600; }

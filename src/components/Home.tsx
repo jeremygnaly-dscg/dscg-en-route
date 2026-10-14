@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { UES, episodesOf, findEpisode } from "@/content/episodes";
 import { useProgress, useQuizAttente } from "@/lib/prefs";
+import { Installer } from "./Installer";
 import styles from "./home.module.css";
 
 export function Home() {
@@ -28,6 +29,8 @@ export function Home() {
         <h1>Révi<span>zen</span></h1>
         <p>Un cas d&apos;examen, le cours, trois questions. Dans le RER, sans livre.</p>
       </header>
+
+      <Installer />
 
       {quizAFaire.length > 0 && (
         <section className={styles.attente}>

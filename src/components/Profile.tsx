@@ -14,6 +14,10 @@ export function Profile() {
   const [theme, setTheme] = useTheme();
   const { session } = useSession();
   const [prenom, setPrenom] = useState("");
+  const [situation, setSituation] = useState("alternance");
+  const [infoEtat, setInfoEtat] = useState<"idle" | "envoi" | "ok" | "ko">("idle");
+  const [mdp, setMdp] = useState("");
+  const [mdpEtat, setMdpEtat] = useState<"idle" | "envoi" | "ok" | "ko" | "court">("idle");
   const [note, setNote] = useState<number | null>(null);
   const [avis, setAvis] = useState("");
   const [avisEtat, setAvisEtat] = useState<"idle" | "envoi" | "ok" | "ko">("idle");
@@ -21,7 +25,10 @@ export function Profile() {
 
   useEffect(() => {
     if (!uid) return;
-    void supabase.from("profils").select("prenom").eq("id", uid).maybeSingle().then(({ data }) => setPrenom(data?.prenom ?? ""));
+    void supabase.from("profils").select("prenom, situation").eq("id", uid).maybeSingle().then(({ data }) => {
+      setPrenom(data?.prenom ?? "");
+      if (data?.situation) setSituation(data.situation);
+    });
   }, [uid]);
 
   const envoyer = async (e: React.FormEvent) => {
@@ -31,6 +38,23 @@ export function Profile() {
     const ok = await envoyerAvis(note, avis.trim(), "profil");
     setAvisEtat(ok ? "ok" : "ko");
     if (ok) { setAvis(""); setNote(null); }
+  };
+
+  const enregistrerInfos = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!uid) return;
+    setInfoEtat("envoi");
+    const { error } = await supabase.from("profils").update({ prenom: prenom.trim().slice(0, 60), situation }).eq("id", uid);
+    setInfoEtat(error ? "ko" : "ok");
+  };
+
+  const changerMdp = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (mdp.length < 8) return setMdpEtat("court");
+    setMdpEtat("envoi");
+    const { error } = await supabase.auth.updateUser({ password: mdp });
+    setMdpEtat(error ? "ko" : "ok");
+    if (!error) setMdp("");
   };
 
   const supprimer = async () => {
@@ -104,6 +128,42 @@ export function Profile() {
           <li>Ton choix d&apos;être visible ou non des cabinets</li>
         </ul>
         <Link href="/app/quiz" className={styles.link}>Voir le quiz du mois →</Link>
+      </section>
+
+      <section className={styles.block}>
+        <h2>Tes informations</h2>
+        <form onSubmit={enregistrerInfos} className={styles.avis}>
+          <label className={styles.champ}>Prénom
+            <input value={prenom} maxLength={60} onChange={(e) => { setPrenom(e.target.value); setInfoEtat("idle"); }} autoComplete="given-name" />
+          </label>
+          <label className={styles.champ}>Tu prépares le DSCG
+            <select value={situation} onChange={(e) => { setSituation(e.target.value); setInfoEtat("idle"); }}>
+              <option value="alternance">En alternance</option>
+              <option value="initiale">En formation initiale</option>
+              <option value="libre">En candidat libre</option>
+              <option value="poste">En poste, à côté du travail</option>
+            </select>
+          </label>
+          <button type="submit" className={styles.btn} disabled={infoEtat === "envoi"}>
+            {infoEtat === "ok" ? "Enregistré ✓" : infoEtat === "envoi" ? "Enregistrement…" : "Enregistrer"}
+          </button>
+          {infoEtat === "ko" && <p className={styles.hint}>L&apos;enregistrement n&apos;a pas marché. Vérifie ta connexion.</p>}
+        </form>
+        <p className={styles.hint}>Tes épreuves et tes créneaux de révision se règlent dans l&apos;onglet <Link href="/app/coach">Coach</Link>.</p>
+      </section>
+
+      <section className={styles.block}>
+        <h2>Mot de passe</h2>
+        <form onSubmit={changerMdp} className={styles.avis}>
+          <label className={styles.champ}>Nouveau mot de passe
+            <input type="password" value={mdp} autoComplete="new-password" onChange={(e) => { setMdp(e.target.value); setMdpEtat("idle"); }} />
+          </label>
+          <button type="submit" className={styles.btn} disabled={mdpEtat === "envoi" || !mdp}>
+            {mdpEtat === "ok" ? "Mot de passe changé ✓" : mdpEtat === "envoi" ? "Un instant…" : "Changer mon mot de passe"}
+          </button>
+          {mdpEtat === "court" && <p className={styles.hint}>8 caractères minimum.</p>}
+          {mdpEtat === "ko" && <p className={styles.hint}>Le changement n&apos;a pas marché. Réessaie dans un instant.</p>}
+        </form>
       </section>
 
       <section className={styles.block}>
