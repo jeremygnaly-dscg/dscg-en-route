@@ -3,7 +3,7 @@ import { LOT1 } from "./lot1";
 import { LOT2 } from "./lot2";
 import { LOT3 } from "./lot3";
 import { LOT4 } from "./lot4";
-import { AUDIO_DISPO } from "./audio";
+import { AUDIO_DISPO, AUDIO_DUREE } from "./audio";
 import { FICHES } from "./fiches";
 
 export const UES: Ue[] = [
@@ -225,6 +225,8 @@ function soon(id: string, ue: Episode["ue"], title: string, ref: string): Episod
 for (const e of EPISODES) {
   if (!e.fiche && FICHES[e.id]) e.fiche = FICHES[e.id];
   if (AUDIO_DISPO.includes(e.id)) e.audio = { scene: `/audio/${e.id}-scene.mp3`, cours: `/audio/${e.id}-cours.mp3` };
+  // Durée affichée = durée réelle d'écoute, arrondie à la minute
+  if (AUDIO_DUREE[e.id]) e.minutes = Math.max(1, Math.round(AUDIO_DUREE[e.id] / 60));
   else if (e.status === "live") e.status = "ecrit";
 }
 

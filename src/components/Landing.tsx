@@ -39,7 +39,7 @@ export function Landing() {
         <span className={styles.kicker}>DSCG · session 2027 · nouveau programme</span>
         <h1>Révise le DSCG <em>dans le RER.</em></h1>
         <p className={styles.lead}>
-          Des épisodes audio de 10 minutes construits sur les vrais cas d&apos;examen.
+          Des épisodes audio de 2 à 3 minutes, suivis d&apos;un quiz et d&apos;une fiche, construits sur les vrais cas d&apos;examen.
           Une scène, le cours, la fiche à retenir, trois questions.
         </p>
         <div className={styles.ctas}>

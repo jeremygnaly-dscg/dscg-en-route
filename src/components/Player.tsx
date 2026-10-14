@@ -142,7 +142,7 @@ export function Player({ episode }: { episode: Episode }) {
 
       <section className={styles.player} aria-label="Lecteur" data-noprint>
         <div className={styles.head}>
-          <span className="label">{ep.ue.toUpperCase()} · {ep.minutes} min · {ep.format === "comptable" ? "comptabilité" : ep.format === "technique" ? "technique" : "juridique"}</span>
+          <span className="label">{ep.ue.toUpperCase()} · {ep.minutes} min d&apos;écoute · {ep.format === "comptable" ? "comptabilité" : ep.format === "technique" ? "technique" : "juridique"}</span>
           <h1>{ep.title}</h1>
           <span className={styles.ref}>{ep.ref}</span>
         </div>

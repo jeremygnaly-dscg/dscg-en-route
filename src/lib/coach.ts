@@ -52,8 +52,8 @@ export interface Seance {
 }
 
 export const JOURS = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"];
-export const MIN_NOUVEAU = 10; // durée d'un épisode complet
-export const MIN_REVISION = 4; // réécoute du cours en accéléré + flash
+export const MIN_NOUVEAU = 5; // épisode complet : environ 2 min d'écoute, puis quiz et fiche
+export const MIN_REVISION = 3; // révision : quiz, fiche, réécoute du cours si erreur
 const ESPACEMENT = [1, 7, 21]; // révisions à J+1, J+7, J+21
 const SPRINT_JOURS = 21; // les 3 dernières semaines : priorité aux révisions
 
@@ -206,9 +206,9 @@ export function messageCoach(config: CoachConfig, progress: Progress, today: str
   if (jours <= 7) return `${prenom}dernière ligne droite : ${jours} jour${jours > 1 ? "s" : ""}. Révisions et flashs uniquement, et dors bien.`;
   if (serie >= 7) return `${prenom}${serie} jours d'affilée. C'est exactement comme ça qu'on réussit le DSCG.`;
   if (serie >= 3) return `${prenom}${serie} jours de suite, tu tiens le rythme. Garde ce réflexe écouteurs.`;
-  if (dates.length === 0) return `${prenom}premier épisode aujourd'hui ? Dix minutes suffisent pour lancer la machine.`;
+  if (dates.length === 0) return `${prenom}premier épisode aujourd'hui ? Cinq minutes suffisent pour lancer la machine.`;
   if (!set.has(today) && !set.has(addDays(today, -1))) return `${prenom}on reprend doucement : un seul épisode aujourd'hui, et la série repart.`;
-  return `${prenom}J-${jours} avant ta prochaine épreuve. Chaque créneau compte, même dix minutes.`;
+  return `${prenom}J-${jours} avant ta prochaine épreuve. Chaque créneau compte, même cinq minutes.`;
 }
 
 /** Fichier calendrier : un rappel récurrent par créneau, jusqu'à la dernière épreuve. */

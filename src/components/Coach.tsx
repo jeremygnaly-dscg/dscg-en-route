@@ -95,7 +95,7 @@ function Dashboard({ config, progress, today, onEdit }: {
           <span className={styles.meta}>{minSem} min par semaine</span>
         </div>
         {aujourdhui.length === 0 ? (
-          <p className={styles.empty}>Pas de créneau prévu aujourd&apos;hui. Si tu as dix minutes, un flash de révision fait toujours du bien.</p>
+          <p className={styles.empty}>Pas de créneau prévu aujourd&apos;hui. Si tu as cinq minutes, un quiz de révision fait toujours du bien.</p>
         ) : aujourdhui.map((s, i) => <SeanceCard key={i} s={s} progress={progress} />)}
       </section>
 

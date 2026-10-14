@@ -37,3 +37,42 @@ export const AUDIO_DISPO: string[] = [
   "transfert-contrats-travail",
   "eliminations-intragroupe"
 ];
+
+// Durée d'écoute réelle (scène + cours), en secondes
+export const AUDIO_DUREE: Record<string, number> = {
+  "regime-mere-fille": 121,
+  "integration-fiscale": 128,
+  "cmpc": 134,
+  "provision-litige": 128,
+  "cautionnement": 153,
+  "procedures-collectives": 132,
+  "cession-titres-agrement": 147,
+  "pourcentages-methodes": 132,
+  "ecart-acquisition": 121,
+  "fusion-parite-prime": 120,
+  "impots-differes": 108,
+  "lbo-effet-levier": 116,
+  "projet-erp": 121,
+  "mali-technique": 118,
+  "demarche-audit": 122,
+  "calcul-is": 143,
+  "securite-si-rgpd": 127,
+  "van-tri": 125,
+  "evaluation-dcf": 125,
+  "ifrs-16": 127,
+  "cac-nomination-mission": 121,
+  "tva-territorialite": 105,
+  "abus-biens-sociaux": 116,
+  "roe-roce-structure": 119,
+  "alignement-cloud": 118,
+  "bi-donnees": 122,
+  "evaluation-projet-si": 120,
+  "conduite-changement": 103,
+  "processus-urbanisation": 107,
+  "couverture-change": 114,
+  "augmentation-capital-dps": 98,
+  "dividendes-rachat": 113,
+  "fusion-regime-faveur": 105,
+  "transfert-contrats-travail": 120,
+  "eliminations-intragroupe": 117
+};

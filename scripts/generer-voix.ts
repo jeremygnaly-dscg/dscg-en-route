@@ -152,11 +152,16 @@ async function main() {
 
   // Déclare les épisodes dont les deux pistes existent
   const dispo = EPISODES.filter((e) => ["scene", "cours"].every((k) => fs.existsSync(path.join(OUT, `${e.id}-${k}.mp3`)))).map((e) => e.id);
+  // Durée réelle d'écoute (scène + cours), en secondes : c'est elle que l'appli affiche
+  const duree = (f: string) => Number(execFileSync("ffprobe", ["-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", f]).toString().trim()) || 0;
+  const durees = Object.fromEntries(dispo.map((id) => [id, Math.round(duree(path.join(OUT, `${id}-scene.mp3`)) + duree(path.join(OUT, `${id}-cours.mp3`)))]));
   fs.writeFileSync(
     path.join(process.cwd(), "src", "content", "audio.ts"),
     `// Épisodes dont les MP3 ElevenLabs sont dans /public/audio/ (mis à jour par scripts/generer-voix.ts).\n` +
       `// Convention de nom : <id>-scene.mp3 et <id>-cours.mp3\n` +
-      `export const AUDIO_DISPO: string[] = ${JSON.stringify(dispo, null, 2)};\n`,
+      `export const AUDIO_DISPO: string[] = ${JSON.stringify(dispo, null, 2)};\n\n` +
+      `// Durée d'écoute réelle (scène + cours), en secondes\n` +
+      `export const AUDIO_DUREE: Record<string, number> = ${JSON.stringify(durees, null, 2)};\n`,
   );
   fs.rmSync(TMP, { recursive: true, force: true });
   console.log(`::notice title=Bilan::Récupérées depuis l'historique : ${recuperes} phrase(s). Crédits dépensés : environ ${payes}. Épisodes en voix studio : ${dispo.length}.`);
