@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { PORTAIL_STRIPE, useAbonnements, valide, venteActive } from "@/lib/vente";
 import { envoyerAvis, seDeconnecter, supabase, supprimerCompte, useSession } from "@/lib/compte";
 import { EPISODES } from "@/content/episodes";
 import { useProgress } from "@/lib/prefs";
@@ -22,6 +23,8 @@ export function Profile() {
   const [avis, setAvis] = useState("");
   const [avisEtat, setAvisEtat] = useState<"idle" | "envoi" | "ok" | "ko">("idle");
   const uid = session?.user.id;
+  const { abos } = useAbonnements();
+  const abosValides = abos.filter(valide);
 
   useEffect(() => {
     if (!uid) return;
@@ -58,6 +61,10 @@ export function Profile() {
   };
 
   const supprimer = async () => {
+    if (abosValides.some((a) => !a.resiliation_prevue)) {
+      window.alert("Résilie d'abord ton abonnement (section Abonnement), puis tu pourras supprimer ton compte.");
+      return;
+    }
     if (!window.confirm("Supprimer définitivement ton compte et ta progression ? Cette action est irréversible.")) return;
     if (await supprimerCompte()) window.location.replace("/");
     else window.alert("La suppression n'a pas abouti. Réessaie ou écris-nous.");
@@ -128,6 +135,22 @@ export function Profile() {
           <li>Ton choix d&apos;être visible ou non des cabinets</li>
         </ul>
         <Link href="/app/quiz" className={styles.link}>Voir le quiz du mois →</Link>
+      </section>
+
+      <section className={styles.block}>
+        <h2>Abonnement</h2>
+        {abosValides.length ? (
+          <p>
+            {abosValides.map((a) => (a.formule === "toutes" ? "Toutes les UE" : `UE ${a.ue?.slice(2)}`)).join(" · ")}
+            {abosValides.some((a) => a.resiliation_prevue) ? " · résiliation programmée" : " · actif"}
+          </p>
+        ) : (
+          <p className={styles.hint}>{venteActive() ? "Aucun abonnement : un épisode gratuit par UE." : "Bêta gratuite : tous les épisodes sont ouverts."}</p>
+        )}
+        <div className={styles.compte}>
+          <Link href="/app/abonnement" className={styles.btnGhost}>{abosValides.length ? "Voir mon abonnement" : "Voir les offres"}</Link>
+          {abosValides.length > 0 && PORTAIL_STRIPE && <a href={PORTAIL_STRIPE} className={styles.btnGhost}>Gérer ou résilier</a>}
+        </div>
       </section>
 
       <section className={styles.block}>

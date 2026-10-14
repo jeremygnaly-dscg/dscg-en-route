@@ -24,7 +24,9 @@ export default function Confidentialite() {
           <li>ton adresse e-mail, ton prénom et ta situation (alternance, formation initiale, candidat libre, en poste) ;</li>
           <li>ton mot de passe, conservé uniquement sous forme chiffrée (nous ne le connaissons pas) ;</li>
           <li>ta progression : épisodes écoutés, scores aux quiz, dates de révision, et le plan du Coach (épreuves, créneaux) ;</li>
-          <li>les avis que tu choisis de nous envoyer depuis ton profil.</li>
+          <li>les avis et signalements d&apos;erreur que tu choisis de nous envoyer ;</li>
+          <li>si tu t&apos;abonnes : ta formule, le statut et les dates de ton abonnement, et la preuve de ton acceptation des CGV.
+            Le paiement est traité par Stripe : nous ne voyons jamais ton numéro de carte.</li>
         </ul>
         <p>Quand tu t&apos;inscris sur la liste d&apos;attente : ton e-mail, l&apos;UE préparée, ton profil, la date et la page d&apos;origine.</p>
         <p>Tes réglages d&apos;écoute (vitesse, ambiance, thème) restent sur ton téléphone.</p>

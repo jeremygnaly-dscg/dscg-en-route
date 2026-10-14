@@ -32,3 +32,4 @@
 
 .champ { display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 700; }
 .champ input, .champ select { font: inherit; font-size: 16px; font-weight: 400; padding: 10px 12px; border-radius: 12px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); width: 100%; }
+a.btnGhost { text-decoration: none; display: inline-block; }

@@ -89,6 +89,7 @@ export function Landing() {
         <nav className={styles.footLinks}>
           <Link href="/mentions-legales">Mentions légales</Link>
           <Link href="/confidentialite">Confidentialité</Link>
+          <Link href="/cgv">CGV</Link>
           <Link href="/connexion?mode=connexion">Se connecter</Link>
         </nav>
       </footer>

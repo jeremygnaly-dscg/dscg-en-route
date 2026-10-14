@@ -70,7 +70,7 @@
 .fin b { font-family: var(--display); font-size: 17px; }
 .fin span { color: var(--fg); font-size: 14px; }
 .actions { display: flex; flex-wrap: wrap; gap: 8px; }
-.primary { border: 0; background: var(--accent); color: var(--accent-ink); border-radius: 10px; padding: 10px 14px; font-size: 14px; font-weight: 700; }
+.primary { border: 0; background: var(--accent); color: var(--accent-ink); border-radius: 10px; padding: 10px 14px; font-size: 14px; font-weight: 700; text-decoration: none; display: inline-block; }
 .ficheHead { display: flex; flex-direction: column; gap: 6px; }
 .ficheHead h2 { font-size: 21px; font-weight: 700; margin: 0; }
 .essentiel { margin: 0; font-family: var(--display); font-size: 18px; font-weight: 600; line-height: 1.35; border-left: 4px solid var(--accent); padding: 4px 0 4px 12px; }

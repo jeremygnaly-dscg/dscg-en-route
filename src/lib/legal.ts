@@ -9,3 +9,6 @@ export const EDITEUR = {
 };
 
 export const MISE_A_JOUR = "14 octobre 2026";
+
+// Médiateur de la consommation (obligatoire avant de vendre à des particuliers, art. L. 612-1 C. consom.)
+export const MEDIATEUR = { nom: "", site: "" };

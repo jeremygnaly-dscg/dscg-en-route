@@ -8,6 +8,7 @@ import { usePrefs, useProgress, useQuizAttente, type Progress } from "@/lib/pref
 import { Quiz } from "./Quiz";
 import { FicheRevision } from "./Fiche";
 import { Signaler } from "./Signaler";
+import { aAcces, useAbonnements } from "@/lib/vente";
 import styles from "./player.module.css";
 
 // Déroulé d'un épisode : on écoute (scène puis cours), on se teste, on relit la fiche.
@@ -28,8 +29,8 @@ function Rich({ text }: { text: string }) {
 }
 
 // Épisode suivant de la même UE : d'abord ceux pas encore écoutés
-function suivant(e: Episode, progress: Progress): Episode | null {
-  const all = EPISODES.filter((x) => x.ue === e.ue && x.status === "live");
+function suivant(e: Episode, progress: Progress, ouvert: (x: Episode) => boolean = () => true): Episode | null {
+  const all = EPISODES.filter((x) => x.ue === e.ue && x.status === "live" && (x.id === e.id || ouvert(x)));
   const i = all.findIndex((x) => x.id === e.id);
   const ordre = [...all.slice(i + 1), ...all.slice(0, Math.max(i, 0))];
   return ordre.find((x) => !progress[x.id]?.done) ?? ordre[0] ?? null;
@@ -40,6 +41,8 @@ export function Player({ episode }: { episode: Episode }) {
   const [progress, markDone] = useProgress();
   const [, addAttente, removeAttente] = useQuizAttente();
   const [ep, setEp] = useState(episode);
+  const { abos } = useAbonnements();
+  const ouvert = (x: Episode) => aAcces(x, abos);
   const [part, setPart] = useState<Part>("scene");
   const [playing, setPlaying] = useState(false);
   const [ratio, setRatio] = useState(0); // avancement de la piste en cours
@@ -96,7 +99,7 @@ export function Player({ episode }: { episode: Episode }) {
     if (part !== "cours") return;
     // Fin du cours
     addAttente(ep.id);
-    const next = suivant(ep, progress);
+    const next = suivant(ep, progress, ouvert);
     if (prefs.apres === "suite" && next) { allerA(next, true); return; }
     setPlaying(false);
     ambient?.fadeOut(4);
@@ -109,7 +112,7 @@ export function Player({ episode }: { episode: Episode }) {
     if (!("mediaSession" in navigator)) return;
     navigator.mediaSession.setActionHandler("play", play);
     navigator.mediaSession.setActionHandler("pause", pause);
-    const next = suivant(ep, progress);
+    const next = suivant(ep, progress, ouvert);
     navigator.mediaSession.setActionHandler("nexttrack", next ? () => allerA(next, true) : null);
   });
 
@@ -135,7 +138,29 @@ export function Player({ episode }: { episode: Episode }) {
     if (order.indexOf(p) < order.indexOf(part)) return 100;
     return done && p !== "fiche" ? 100 : 0;
   };
-  const next = suivant(ep, progress);
+  const next = suivant(ep, progress, ouvert);
+
+  if (!ouvert(ep)) {
+    return (
+      <div className={styles.wrap}>
+        <Link href={`/app?ue=${ep.ue}`} className={styles.back}>← Épisodes {ep.ue.toUpperCase()}</Link>
+        <section className={styles.player}>
+          <div className={styles.head}>
+            <span className="label">{ep.ue.toUpperCase()} · {ep.minutes} min d&apos;écoute</span>
+            <h1>{ep.title}</h1>
+            <span className={styles.ref}>{ep.ref}</span>
+          </div>
+          <div className={styles.fin}>
+            <b>🔒 Épisode réservé aux abonnés</b>
+            <span>Cet épisode, son quiz et sa fiche font partie de l&apos;abonnement {ep.ue.toUpperCase()} ou Toutes les UE. Le premier épisode de chaque UE reste gratuit.</span>
+          </div>
+          <div className={styles.actions}>
+            <Link href={`/app/abonnement?ue=${ep.ue}`} className={styles.primary}>Voir les abonnements</Link>
+          </div>
+        </section>
+      </div>
+    );
+  }
 
   return (
     <div className={styles.wrap}>

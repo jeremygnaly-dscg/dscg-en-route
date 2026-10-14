@@ -4,12 +4,14 @@ import Link from "next/link";
 import { UES, episodesOf, findEpisode } from "@/content/episodes";
 import { useProgress, useQuizAttente } from "@/lib/prefs";
 import { Installer } from "./Installer";
+import { aAcces, estGratuit, useAbonnements, venteActive } from "@/lib/vente";
 import styles from "./home.module.css";
 
 export function Home() {
   const [ue, setUe] = useState("ue1");
   const [progress] = useProgress();
   const [attente] = useQuizAttente();
+  const { abos } = useAbonnements();
   const quizAFaire = attente.map(findEpisode).filter((e) => e && e.status === "live" && !progress[e.id]?.done);
 
   useEffect(() => {
@@ -64,9 +66,11 @@ export function Home() {
             <Link key={e.id} href={`/episode/${e.id}`} className={styles.ep}>
               <span className={styles.n}>{String(i + 1).padStart(2, "0")}</span>
               <span className={styles.t}><b>{e.title}</b><span>{e.ref}</span></span>
-              {progress[e.id]?.done
+              {!aAcces(e, abos)
+                ? <span className={styles.pill}>🔒 Abonnés</span>
+                : progress[e.id]?.done
                 ? <span className={`${styles.pill} ${styles.done}`}>Écouté · {progress[e.id]?.score}/3</span>
-                : <span className={`${styles.pill} ${styles.free}`}>{e.minutes} min</span>}
+                : <span className={`${styles.pill} ${styles.free}`}>{venteActive() && estGratuit(e) ? "Gratuit · " : ""}{e.minutes} min</span>}
             </Link>
           ))}
         </div>
