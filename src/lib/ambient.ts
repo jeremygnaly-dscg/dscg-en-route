@@ -45,12 +45,25 @@ class AmbientEngine {
     this.nodes = [];
   }
 
+  // Fin d'épisode : le fond s'éteint doucement au lieu de tourner dans le vide
+  fadeOut(seconds = 4) {
+    if (!this.ctx || !this.master || !this.nodes.length) return;
+    const g = this.master.gain, t = this.ctx.currentTime;
+    g.cancelScheduledValues(t);
+    g.setValueAtTime(g.value, t);
+    g.linearRampToValueAtTime(0.0001, t + seconds);
+    this.timers.push(setTimeout(() => this.stop(), seconds * 1000 + 100));
+  }
+
   play(kind: Ambiance) {
     this.stop();
     if (kind === "none") return;
     const ctx = this.ensure();
     if (!ctx) return;
     if (ctx.state === "suspended") void ctx.resume();
+    // Rétablit le volume si un fondu de fin était en cours
+    this.master!.gain.cancelScheduledValues(ctx.currentTime);
+    this.master!.gain.setValueAtTime(this.volume * 0.6, ctx.currentTime);
     if (kind === "sea") this.waves(1);
     if (kind === "beach") { this.waves(0.75); this.birds(); }
     if (kind === "zen") { this.drone(); this.waves(0.35); }

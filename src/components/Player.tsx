@@ -1,163 +1,150 @@
 "use client";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import type { Episode, Line } from "@/content/types";
+import type { Episode } from "@/content/types";
+import { EPISODES } from "@/content/episodes";
 import { ambient, AMBIANCES } from "@/lib/ambient";
-import { usePrefs, useProgress } from "@/lib/prefs";
-import { pickVoice, speakLine, voiceAvailable } from "@/lib/voice";
+import { usePrefs, useProgress, useQuizAttente, type Progress } from "@/lib/prefs";
 import { Quiz } from "./Quiz";
-import { Ecritures, Formules } from "./Fiche";
+import { FicheRevision } from "./Fiche";
 import styles from "./player.module.css";
 
-type Part = "scene" | "cours" | "fiche" | "flash";
+// Déroulé d'un épisode : on écoute (scène puis cours), on se teste, on relit la fiche.
+type Part = "scene" | "cours" | "flash" | "fiche";
 type AudioPart = "scene" | "cours";
 const isAudio = (p: Part): p is AudioPart => p === "scene" || p === "cours";
 
-function partsOf(e: Episode): { id: Part; label: string; hint: string }[] {
-  const list: { id: Part; label: string; hint: string }[] = [
-    { id: "scene", label: "Scène", hint: "Le cas" },
-    { id: "cours", label: "Cours", hint: e.format === "comptable" ? "Droit comptable" : "La règle" },
-  ];
-  const f = !!e.formules?.length, w = !!e.ecritures?.length;
-  if (f && w) list.push({ id: "fiche", label: "Fiche", hint: "Formules + écritures" });
-  else if (f) list.push({ id: "fiche", label: "Formules", hint: "À retenir" });
-  else if (w) list.push({ id: "fiche", label: "Écritures", hint: "Au journal" });
-  list.push({ id: "flash", label: "Flash", hint: "3 questions" });
-  return list;
-}
+const PARTS: { id: Part; label: string; hint: string }[] = [
+  { id: "scene", label: "Scène", hint: "Le cas" },
+  { id: "cours", label: "Cours", hint: "La règle" },
+  { id: "flash", label: "Quiz", hint: "3 questions" },
+  { id: "fiche", label: "Fiche", hint: "À relire" },
+];
 const WHO: Record<string, string> = { dirigeant: "Dirigeant·e", expert: "Expert-comptable" };
 
 function Rich({ text }: { text: string }) {
   return <>{text.split(/(`[^`]+`)/).map((s, i) => (s.startsWith("`") ? <code key={i}>{s.slice(1, -1)}</code> : s))}</>;
 }
 
+// Épisode suivant de la même UE : d'abord ceux pas encore écoutés
+function suivant(e: Episode, progress: Progress): Episode | null {
+  const all = EPISODES.filter((x) => x.ue === e.ue && x.status === "live");
+  const i = all.findIndex((x) => x.id === e.id);
+  const ordre = [...all.slice(i + 1), ...all.slice(0, Math.max(i, 0))];
+  return ordre.find((x) => !progress[x.id]?.done) ?? ordre[0] ?? null;
+}
+
 export function Player({ episode }: { episode: Episode }) {
   const [prefs, setPrefs] = usePrefs();
   const [progress, markDone] = useProgress();
+  const [, addAttente, removeAttente] = useQuizAttente();
+  const [ep, setEp] = useState(episode);
   const [part, setPart] = useState<Part>("scene");
-  const [idx, setIdx] = useState(0);
   const [playing, setPlaying] = useState(false);
-  const [voiceName, setVoiceName] = useState<string>("");
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
-  const token = useRef(0);
+  const [ratio, setRatio] = useState(0); // avancement de la piste en cours
+  const [fini, setFini] = useState(false); // écoute terminée
+  const [quizFini, setQuizFini] = useState(false);
   const audioEl = useRef<HTMLAudioElement>(null);
-  const lineRefs = useRef<(HTMLParagraphElement | null)[]>([]);
 
-  const PARTS = partsOf(episode);
-  const hasFiche = PARTS.some((p) => p.id === "fiche");
-  const mp3 = isAudio(part) ? episode.audio?.[part] : undefined;
-  const lines: Line[] = isAudio(part) ? episode[part] : [];
-
-  // Nom de la voix du téléphone utilisée
+  // Lien direct vers le quiz (quiz en attente) : /episode/<id>?p=flash
   useEffect(() => {
-    if (!voiceAvailable()) return;
-    const refresh = () => setVoiceName(pickVoice(prefs.gender).voice?.name.replace(/\s*\(.*\)/, "") ?? "");
-    refresh();
-    window.speechSynthesis.onvoiceschanged = refresh;
-  }, [prefs.gender]);
+    const p = new URLSearchParams(window.location.search).get("p");
+    if (p === "flash" || p === "fiche") setPart(p);
+  }, []);
 
-  // Écran verrouillé / casque : titre et commandes
+  // Écran verrouillé / casque : titre de l'épisode
   useEffect(() => {
     if (!("mediaSession" in navigator)) return;
     navigator.mediaSession.metadata = new MediaMetadata({
-      title: episode.title,
-      artist: "Révizen",
-      album: episode.ref,
+      title: ep.title, artist: "Révizen", album: ep.ref,
       artwork: [{ src: "/icons/icon-512.png", sizes: "512x512", type: "image/png" }],
     });
-  }, [episode]);
+  }, [ep]);
 
-  const stopAll = useCallback(() => {
-    token.current++;
-    if (voiceAvailable()) window.speechSynthesis.cancel();
-    audioEl.current?.pause();
-    setPlaying(false);
-  }, []);
+  useEffect(() => () => { audioEl.current?.pause(); ambient?.stop(); }, []);
 
-  useEffect(() => () => { stopAll(); ambient?.stop(); }, [stopAll]);
-
-  const nextPart = useCallback((from: Part) => {
-    if (from === "scene") { setPart("cours"); setIdx(0); return true; }
-    setPart(hasFiche ? "fiche" : "flash"); setIdx(0); setPlaying(false); return false;
-  }, [hasFiche]);
-
-  // Lecture ligne par ligne avec la voix du téléphone
-  const speakFrom = useCallback((p: Part, i: number) => {
-    if (!isAudio(p)) return;
-    const ls = episode[p];
-    if (i >= ls.length) { if (nextPart(p)) speakFrom("cours", 0); return; }
-    const my = ++token.current;
-    setIdx(i);
-    lineRefs.current[i]?.scrollIntoView({ block: "nearest", behavior: "smooth" });
-    speakLine(ls[i].text, { ...prefs, speaker: ls[i].who },
-      () => { if (my === token.current) speakFrom(p, i + 1); },
-      () => { if (my === token.current) setPlaying(false); });
-  }, [episode, prefs, nextPart]);
-
-  const start = (from?: Part) => {
-    let p = from ?? part;
-    if (!isAudio(p)) { p = "scene"; setPart("scene"); setIdx(0); }
+  const lancer = (p: AudioPart, e: Episode = ep) => {
+    const a = audioEl.current, file = e.audio?.[p];
+    if (!a || !file) return;
+    if (!a.src.endsWith(file)) { a.src = file; setRatio(0); }
+    a.playbackRate = prefs.speed;
+    void a.play();
     setPlaying(true);
-    ambient?.setVolume(prefs.ambVolume);
-    ambient?.play(prefs.ambiance);
-    const file = episode.audio?.[p as AudioPart];
-    if (file && audioEl.current) {
-      audioEl.current.src = file;
-      audioEl.current.playbackRate = prefs.speed;
-      void audioEl.current.play();
-    } else if (voiceAvailable()) {
-      window.speechSynthesis.cancel();
-      speakFrom(p, !from && part === p ? idx : 0);
-    }
+    if (!playing) { ambient?.setVolume(prefs.ambVolume); ambient?.play(prefs.ambiance); }
   };
 
-  const toggle = () => { if (playing) { stopAll(); ambient?.stop(); } else start(); };
-  // (pour la lecture MP3, `idx` n'est pas suivi ligne à ligne : pas de minutage par ligne)
+  const pause = () => { audioEl.current?.pause(); setPlaying(false); ambient?.stop(); };
+
+  const play = () => {
+    setFini(false);
+    if (isAudio(part)) return lancer(part);
+    setPart("scene"); lancer("scene");
+  };
+
+  // Passe à un autre épisode sans changer de page : la lecture continue même écran verrouillé
+  const allerA = (e: Episode, autoplay: boolean) => {
+    setEp(e); setPart("scene"); setFini(false); setQuizFini(false); setRatio(0);
+    history.replaceState(null, "", `/episode/${e.id}`);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    if (autoplay) lancer("scene", e);
+    else { audioEl.current?.pause(); setPlaying(false); ambient?.stop(); }
+  };
+
+  const onEnded = () => {
+    if (part === "scene") { setPart("cours"); lancer("cours"); return; }
+    if (part !== "cours") return;
+    // Fin du cours
+    addAttente(ep.id);
+    const next = suivant(ep, progress);
+    if (prefs.apres === "suite" && next) { allerA(next, true); return; }
+    setPlaying(false);
+    ambient?.fadeOut(4);
+    if ("mediaSession" in navigator) navigator.mediaSession.playbackState = "none";
+    setFini(true);
+    setPart("flash");
+  };
 
   useEffect(() => {
     if (!("mediaSession" in navigator)) return;
-    navigator.mediaSession.setActionHandler("play", () => start());
-    navigator.mediaSession.setActionHandler("pause", () => { stopAll(); ambient?.stop(); });
+    navigator.mediaSession.setActionHandler("play", play);
+    navigator.mediaSession.setActionHandler("pause", pause);
+    const next = suivant(ep, progress);
+    navigator.mediaSession.setActionHandler("nexttrack", next ? () => allerA(next, true) : null);
   });
 
-  const goPart = (p: Part) => { stopAll(); setPart(p); setIdx(0); };
+  const goPart = (p: Part) => {
+    if (playing && isAudio(p) && p !== part) { setPart(p); lancer(p); return; }
+    if (playing && !isAudio(p)) pause();
+    setPart(p);
+  };
 
-  // Réglage modifié pendant la lecture : on reprend à la ligne en cours
   const change = (patch: Parameters<typeof setPrefs>[0]) => {
     setPrefs(patch);
     if (patch.ambVolume !== undefined) ambient?.setVolume(patch.ambVolume);
     if (patch.ambiance !== undefined && playing) ambient?.play(patch.ambiance);
-    if ((patch.gender || patch.tone || patch.speed) && playing && !mp3) {
-      token.current++;
-      window.speechSynthesis.cancel();
-      setTimeout(() => speakFrom(part, idx), 50);
-    }
     if (patch.speed && audioEl.current) audioEl.current.playbackRate = patch.speed;
   };
 
-  const done = progress[episode.id]?.done;
-  const pct = (p: Part) => {
-    const order = PARTS.map((x) => x.id);
-    if (done || order.indexOf(p) < order.indexOf(part)) return 100;
-    if (p === part && isAudio(p) && lines.length) return Math.round((idx / lines.length) * 100);
-    return 0;
-  };
+  const finirQuiz = (score: number) => { markDone(ep.id, score); removeAttente(ep.id); setQuizFini(true); };
 
-  const panelLabel =
-    part === "flash" ? "Flash · 3 questions"
-    : part === "fiche" ? (episode.formules?.length && episode.ecritures?.length ? "Fiche : formules et écritures" : episode.formules?.length ? "Formules à retenir" : "Écritures à passer")
-    : `Transcription · ${part === "scene" ? "Scène" : "Cours"}`;
+  const done = progress[ep.id]?.done;
+  const order = PARTS.map((x) => x.id);
+  const pct = (p: Part) => {
+    if (p === part) return isAudio(p) ? Math.round(ratio * 100) : quizFini || (p === "fiche") ? 100 : 0;
+    if (order.indexOf(p) < order.indexOf(part)) return 100;
+    return done && p !== "fiche" ? 100 : 0;
+  };
+  const next = suivant(ep, progress);
 
   return (
     <div className={styles.wrap}>
-      <Link href={`/app?ue=${episode.ue}`} className={styles.back}>← Épisodes {episode.ue.toUpperCase()}</Link>
+      <Link href={`/app?ue=${ep.ue}`} className={styles.back} data-noprint>← Épisodes {ep.ue.toUpperCase()}</Link>
 
-      <section className={styles.player} aria-label="Lecteur">
+      <section className={styles.player} aria-label="Lecteur" data-noprint>
         <div className={styles.head}>
-          <span className="label">{episode.ue.toUpperCase()} · {episode.minutes} min · {episode.format === "comptable" ? "comptabilité" : episode.format === "technique" ? "technique" : "juridique"}</span>
-          <h1>{episode.title}</h1>
-          <span className={styles.ref}>{episode.ref}</span>
+          <span className="label">{ep.ue.toUpperCase()} · {ep.minutes} min · {ep.format === "comptable" ? "comptabilité" : ep.format === "technique" ? "technique" : "juridique"}</span>
+          <h1>{ep.title}</h1>
+          <span className={styles.ref}>{ep.ref}</span>
         </div>
 
         <div className={styles.parts} role="tablist">
@@ -170,19 +157,16 @@ export function Player({ episode }: { episode: Episode }) {
         </div>
 
         <div className={styles.controls}>
-          <button className={styles.play} onClick={toggle} aria-label={playing ? "Pause" : "Lecture"}>
+          <button className={styles.play} onClick={playing ? pause : play} aria-label={playing ? "Pause" : "Lecture"}>
             <svg viewBox="0 0 24 24">{playing ? <path d="M6 4h4v16H6zM14 4h4v16h-4z" /> : <path d="M7 4.5v15l13-7.5z" />}</svg>
           </button>
-          <button className={styles.ghost} onClick={() => { stopAll(); setPart("scene"); setIdx(0); }}>↺ Reprendre au début</button>
+          <button className={styles.ghost} onClick={() => { if (audioEl.current) audioEl.current.currentTime = 0; setPart("scene"); if (playing) lancer("scene"); }}>↺ Reprendre au début</button>
+          {next && <button className={styles.ghost} onClick={() => allerA(next, playing)}>Épisode suivant ›</button>}
         </div>
 
         <div className={styles.settings}>
-          {!episode.audio && (<>
-            <Seg label="Voix" value={prefs.gender} onChange={(v) => change({ gender: v as "f" | "m" })}
-              options={[["f", "Femme"], ["m", "Homme"]]} />
-            <Seg label="Ton" value={prefs.tone} onChange={(v) => change({ tone: v as "calm" | "lively" })}
-              options={[["calm", "Apaisant"], ["lively", "Dynamique"]]} />
-          </>)}
+          <Seg label="Après" value={prefs.apres} onChange={(v) => change({ apres: v as "quiz" | "suite" })}
+            options={[["quiz", "Quiz et fiche"], ["suite", "Enchaîner"]]} />
           <Seg label="Vitesse" value={String(prefs.speed)} onChange={(v) => change({ speed: Number(v) })}
             options={[["0.9", "×0,9"], ["1", "×1"], ["1.25", "×1,25"]]} />
           <Seg label="Ambiance" value={prefs.ambiance} onChange={(v) => change({ ambiance: v as typeof prefs.ambiance })}
@@ -194,38 +178,52 @@ export function Player({ episode }: { episode: Episode }) {
           </div>
         </div>
         <p className={styles.notice}>
-          {!mounted ? "" : episode.audio ? "" : voiceAvailable()
-            ? `Voix du téléphone${voiceName ? ` : ${voiceName}` : ""}. La voix studio arrive avec les épisodes finaux.`
-            : "Lecture audio indisponible sur ce navigateur. Le texte reste lisible ci-dessous."}
+          {prefs.apres === "suite" ? "En voiture ou dans les transports : les épisodes s'enchaînent, les quiz t'attendent dans Réviser." : ""}
         </p>
-        <audio ref={audioEl} preload="none" onEnded={() => { if (nextPart(part)) start("cours"); }} />
+        <audio ref={audioEl} preload="none" onEnded={onEnded}
+          onTimeUpdate={(e) => { const a = e.currentTarget; if (a.duration) setRatio(a.currentTime / a.duration); }} />
       </section>
 
       <section className={styles.panel} aria-live="polite">
-        <span className="label">{panelLabel}</span>
         {part === "flash" ? (
-          <Quiz key={episode.id} questions={episode.flash} onFinish={(s) => markDone(episode.id, s)} />
+          <>
+            {fini && (
+              <div className={styles.fin}>
+                <b>Écoute terminée</b>
+                <span>Trois questions pour ancrer la notion, puis ta fiche de révision.</span>
+              </div>
+            )}
+            <span className="label">Quiz · 3 questions</span>
+            <Quiz key={ep.id} questions={ep.flash} onFinish={finirQuiz} />
+            <div className={styles.actions}>
+              <button className={quizFini ? styles.primary : styles.ghost} onClick={() => goPart("fiche")}>Voir la fiche de révision →</button>
+            </div>
+          </>
         ) : part === "fiche" ? (
           <>
-            {episode.formules && <Formules items={episode.formules} />}
-            {episode.ecritures && <Ecritures items={episode.ecritures} />}
-            <button className={styles.ghost} onClick={() => goPart("flash")}>Passer au flash →</button>
+            <FicheRevision episode={ep} />
+            <div className={styles.actions} data-noprint>
+              <button className={styles.ghost} onClick={() => window.print()}>Imprimer ou enregistrer en PDF</button>
+              {next && <button className={styles.primary} onClick={() => allerA(next, true)}>Épisode suivant : {next.title} ›</button>}
+            </div>
           </>
         ) : (
-          <div className={styles.lines}>
-            {lines.map((l, i) => (
-              <p key={i} ref={(el) => { lineRefs.current[i] = el; }}
-                className={[styles.line, styles[l.who], l.key ? styles.key : "", playing && i === idx && !mp3 ? styles.now : ""].join(" ")}>
-                {WHO[l.who] && <span className={styles.who}>{WHO[l.who]}</span>}
-                <Rich text={l.text} />
-              </p>
-            ))}
-          </div>
+          <>
+            <span className="label">Transcription · {part === "scene" ? "Scène" : "Cours"}</span>
+            <div className={styles.lines}>
+              {ep[part].map((l, i) => (
+                <p key={i} className={[styles.line, styles[l.who], l.key ? styles.key : ""].join(" ")}>
+                  {WHO[l.who] && <span className={styles.who}>{WHO[l.who]}</span>}
+                  <Rich text={l.text} />
+                </p>
+              ))}
+            </div>
+          </>
         )}
       </section>
 
-      <p className={styles.foot}>
-        {episode.reviewedBy ? `Relu par ${episode.reviewedBy}.` : "Contenu en cours de relecture."} {episode.source}
+      <p className={styles.foot} data-noprint>
+        {ep.reviewedBy ? `Relu par ${ep.reviewedBy}.` : "Contenu en cours de relecture."} {ep.source}
       </p>
     </div>
   );

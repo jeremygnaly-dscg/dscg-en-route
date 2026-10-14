@@ -4,6 +4,7 @@ import { LOT2 } from "./lot2";
 import { LOT3 } from "./lot3";
 import { LOT4 } from "./lot4";
 import { AUDIO_DISPO } from "./audio";
+import { FICHES } from "./fiches";
 
 export const UES: Ue[] = [
   { id: "ue1", short: "UE1", name: "Gestion juridique, fiscale et sociale", available: true },
@@ -222,6 +223,7 @@ function soon(id: string, ue: Episode["ue"], title: string, ref: string): Episod
 // Voix studio : branche automatiquement les MP3 déclarés dans audio.ts
 // Règle produit : un épisode n'est jouable qu'avec la voix studio. Sinon il reste « bientôt disponible ».
 for (const e of EPISODES) {
+  if (!e.fiche && FICHES[e.id]) e.fiche = FICHES[e.id];
   if (AUDIO_DISPO.includes(e.id)) e.audio = { scene: `/audio/${e.id}-scene.mp3`, cours: `/audio/${e.id}-cours.mp3` };
   else if (e.status === "live") e.status = "ecrit";
 }

@@ -49,12 +49,21 @@ export interface Ecriture {
   regle?: string; // la règle comptable qui justifie l'écriture
 }
 
+// Fiche de révision affichée après l'écoute et le quiz
+export interface FicheRevision {
+  essentiel: string; // la règle en une phrase
+  points: string[]; // ce qu'il faut savoir par cœur
+  methode?: string[]; // plan de réponse à l'examen
+  pieges?: string[]; // erreurs que les correcteurs sanctionnent
+}
+
 export interface Episode {
   id: string;
   ue: UeId;
   format: Format;
   formules?: Formule[];
   ecritures?: Ecriture[];
+  fiche?: FicheRevision;
   title: string;
   ref: string; // référence principale, ex. "art. 145 et 216 CGI"
   minutes: number;

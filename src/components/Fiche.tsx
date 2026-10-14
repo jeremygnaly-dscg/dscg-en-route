@@ -1,4 +1,4 @@
-import type { Ecriture, Formule } from "@/content/types";
+import type { Ecriture, Episode, Formule } from "@/content/types";
 import styles from "./player.module.css";
 
 // Formatage identique côté serveur et téléphone (évite les écarts d'espaces de toLocaleString)
@@ -56,6 +56,35 @@ export function Ecritures({ items }: { items: Ecriture[] }) {
           </div>
         );
       })}
+    </div>
+  );
+}
+
+// Fiche de révision complète : l'essentiel, à retenir, méthode, formules, écritures, pièges
+export function FicheRevision({ episode }: { episode: Episode }) {
+  const f = episode.fiche;
+  const keys = episode.cours.filter((l) => l.key).map((l) => l.text.replace(/`/g, ""));
+  return (
+    <div className={styles.fiche}>
+      <div className={styles.ficheHead}>
+        <span className="label">{episode.ue.toUpperCase()} · Fiche de révision</span>
+        <h2>{episode.title}</h2>
+        <span className={styles.ref}>{episode.ref}</span>
+      </div>
+      {f && <p className={styles.essentiel}>{f.essentiel}</p>}
+      <div className={styles.card}>
+        <span className="label">À retenir</span>
+        <ul className={styles.points}>{(f?.points ?? keys).map((p) => <li key={p}>{p}</li>)}</ul>
+      </div>
+      {f?.methode && (
+        <div className={styles.card}>
+          <span className="label">Méthode à l&apos;examen</span>
+          <ol className={styles.points}>{f.methode.map((m) => <li key={m}>{m}</li>)}</ol>
+        </div>
+      )}
+      {episode.formules && <Formules items={episode.formules} />}
+      {episode.ecritures && <Ecritures items={episode.ecritures} />}
+      {f?.pieges?.map((p) => <p key={p} className={styles.trap}><b>Piège :</b> {p}</p>)}
     </div>
   );
 }

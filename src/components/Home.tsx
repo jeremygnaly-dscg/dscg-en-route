@@ -1,13 +1,15 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { UES, episodesOf } from "@/content/episodes";
-import { useProgress } from "@/lib/prefs";
+import { UES, episodesOf, findEpisode } from "@/content/episodes";
+import { useProgress, useQuizAttente } from "@/lib/prefs";
 import styles from "./home.module.css";
 
 export function Home() {
   const [ue, setUe] = useState("ue1");
   const [progress] = useProgress();
+  const [attente] = useQuizAttente();
+  const quizAFaire = attente.map(findEpisode).filter((e) => e && e.status === "live" && !progress[e.id]?.done);
 
   useEffect(() => {
     const q = new URLSearchParams(window.location.search).get("ue");
@@ -25,6 +27,18 @@ export function Home() {
         <h1>Révi<span>zen</span></h1>
         <p>Un cas d&apos;examen, le cours, trois questions. Dans le RER, sans livre.</p>
       </header>
+
+      {quizAFaire.length > 0 && (
+        <section className={styles.attente}>
+          <b>{quizAFaire.length} quiz t&apos;attend{quizAFaire.length > 1 ? "ent" : ""}</b>
+          <span>Épisodes écoutés jusqu&apos;au bout : trois questions chacun pour ancrer la notion.</span>
+          <div>
+            {quizAFaire.map((e) => (
+              <Link key={e!.id} href={`/episode/${e!.id}?p=flash`}>{e!.title} ›</Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       <div className={styles.ues} role="group" aria-label="Unités d'enseignement">
         {UES.map((u) => (

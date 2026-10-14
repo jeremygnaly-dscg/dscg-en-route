@@ -37,3 +37,9 @@ button { font: inherit; color: inherit; cursor: pointer; }
 button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .label { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+
+/* Impression de la fiche de révision : seule la fiche sort sur papier ou en PDF */
+@media print {
+  nav, [data-noprint] { display: none !important; }
+  body { background: #fff !important; color: #000 !important; }
+}

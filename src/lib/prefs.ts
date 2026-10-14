@@ -11,9 +11,10 @@ export interface Prefs {
   speed: number;
   ambiance: Ambiance;
   ambVolume: number; // 0 à 1
+  apres: "quiz" | "suite"; // fin d'épisode : quiz et fiche, ou épisode suivant (voiture, transports)
 }
 
-export const DEFAULT_PREFS: Prefs = { gender: "f", tone: "calm", speed: 1, ambiance: "beach", ambVolume: 0.35 };
+export const DEFAULT_PREFS: Prefs = { gender: "f", tone: "calm", speed: 1, ambiance: "beach", ambVolume: 0.35, apres: "quiz" };
 
 function read<T>(key: string, fallback: T): T {
   try {
@@ -59,4 +60,17 @@ export function useProgress() {
       return next;
     });
   return [progress, markDone] as const;
+}
+
+// Épisodes écoutés jusqu'au bout dont le quiz n'est pas encore fait (ex. écoute en voiture)
+const ATTENTE = "revizen-quiz-attente";
+export function useQuizAttente() {
+  const [ids, setIds] = useState<string[]>([]);
+  useEffect(() => {
+    try { setIds(JSON.parse(localStorage.getItem(ATTENTE) ?? "[]")); } catch { /* vide */ }
+  }, []);
+  const save = (next: string[]) => { write(ATTENTE, next); return next; };
+  const add = (id: string) => setIds((p) => (p.includes(id) ? p : save([...p, id])));
+  const remove = (id: string) => setIds((p) => save(p.filter((x) => x !== id)));
+  return [ids, add, remove] as const;
 }
