@@ -1,11 +1,11 @@
 import type { Episode } from "./types";
 
 // LOT 1 — notions les plus fréquentes aux sujets DSCG 2014-2025 (analyse Compta Online).
-// Rédigé par Memoson à partir des textes officiels (C. civ., C. com., CGI, règlements ANC).
+// Rédigé par Zenvise à partir des textes officiels (C. civ., C. com., CGI, règlements ANC).
 // Les cours CNAM servent de plan de travail uniquement : aucun passage repris.
 // À FAIRE RELIRE avant publication payante (champ reviewedBy).
 
-const SRC = "Cas Memoson, inspiré des thèmes les plus fréquents aux sujets 2014-2025";
+const SRC = "Cas Zenvise, inspiré des thèmes les plus fréquents aux sujets 2014-2025";
 
 export const LOT1: Episode[] = [
   // ───────────────────────── UE1 ─────────────────────────

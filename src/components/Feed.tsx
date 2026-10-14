@@ -31,7 +31,7 @@ export function Feed() {
   return (
     <div className={styles.wrap}>
       <header className={styles.top}>
-        <span className={styles.logo}>Memo<span>son</span></span>
+        <span className={styles.logo}>Zen<span>vise</span></span>
       </header>
 
       <div className={styles.stories} aria-label="Unités d'enseignement">

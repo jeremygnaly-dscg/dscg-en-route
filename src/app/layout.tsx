@@ -11,10 +11,10 @@ import { ServiceWorker } from "@/components/ServiceWorker";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Memoson",
+  title: "Zenvise",
   description: "Réviser en écoutant, partout : un cas d'examen, le cours, un quiz et une fiche. DSCG d'abord, d'autres examens ensuite.",
   manifest: "/manifest.webmanifest",
-  appleWebApp: { capable: true, title: "Memoson", statusBarStyle: "default" },
+  appleWebApp: { capable: true, title: "Zenvise", statusBarStyle: "default" },
   icons: { icon: "/icons/icon-192.png", apple: "/icons/apple-touch-icon.png" },
 };
 

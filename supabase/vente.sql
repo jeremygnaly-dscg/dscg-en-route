@@ -1,4 +1,4 @@
--- Memoson · vente : abonnements Stripe et preuve du consentement avant paiement.
+-- Zenvise · vente : abonnements Stripe et preuve du consentement avant paiement.
 -- À exécuter une fois dans Supabase : SQL Editor → New query → coller → Run.
 -- Les abonnements sont écrits UNIQUEMENT par la fonction stripe-webhook (côté serveur).
 -- L'appli peut seulement lire ceux de l'utilisateur connecté.

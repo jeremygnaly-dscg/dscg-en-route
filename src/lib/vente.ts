@@ -13,7 +13,7 @@ export const VENTE_ACTIVE = false;
 // Offre unique pour l'instant : 9,99 €/mois, toutes les UE. (La formule « une UE » reste prévue dans le code, inactive.)
 export const LIENS_STRIPE = {
   ue: "", // non proposé pour l'instant
-  toutes: "", // abonnement Memoson, toutes les UE, 9,99 €/mois
+  toutes: "", // abonnement Zenvise, toutes les UE, 9,99 €/mois
 };
 export const PORTAIL_STRIPE = ""; // lien du portail client Stripe (gérer ou résilier son abonnement)
 

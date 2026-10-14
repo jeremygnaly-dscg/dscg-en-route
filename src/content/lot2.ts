@@ -1,10 +1,10 @@
 import type { Episode } from "./types";
 
 // LOT 2 — suite des notions les plus fréquentes aux sujets DSCG 2014-2025.
-// Rédigé par Memoson à partir des textes officiels (CGI, règlements ANC, NEP, RGPD).
+// Rédigé par Zenvise à partir des textes officiels (CGI, règlements ANC, NEP, RGPD).
 // Cours CNAM utilisés comme plan de travail uniquement. À FAIRE RELIRE avant vente.
 
-const SRC = "Cas Memoson, inspiré des thèmes les plus fréquents aux sujets 2014-2025";
+const SRC = "Cas Zenvise, inspiré des thèmes les plus fréquents aux sujets 2014-2025";
 
 export const LOT2: Episode[] = [
   // ───────────────────────── UE4 ─────────────────────────

@@ -100,14 +100,14 @@ export function Abonnement() {
       </div>
       <section className={styles.offres} style={{ gridTemplateColumns: "1fr" }}>
         <div className={`${styles.offre} ${styles.vedette}`}>
-          <span className={styles.nom}>Abonnement Memoson</span>
+          <span className={styles.nom}>Abonnement Zenvise</span>
           <b className={styles.prix}>{PRIX.toutes}<small>/mois</small></b>
           <span>Toutes les UE : épisodes, quiz, fiches de révision et Coach, et les nouveaux épisodes chaque semaine.</span>
           <button className={styles.principal} disabled={envoi || !actif} onClick={() => payer("toutes")}>M&apos;abonner</button>
         </div>
       </section>
 
-      <p className={styles.note}>Paiement sécurisé par Stripe. Memoson ne voit jamais ton numéro de carte. Un épisode par UE reste gratuit sans abonnement.</p>
+      <p className={styles.note}>Paiement sécurisé par Stripe. Zenvise ne voit jamais ton numéro de carte. Un épisode par UE reste gratuit sans abonnement.</p>
     </div>
   );
 }

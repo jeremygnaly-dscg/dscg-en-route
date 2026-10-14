@@ -60,7 +60,7 @@ export function Player({ episode }: { episode: Episode }) {
   useEffect(() => {
     if (!("mediaSession" in navigator)) return;
     navigator.mediaSession.metadata = new MediaMetadata({
-      title: ep.title, artist: "Memoson", album: ep.ref,
+      title: ep.title, artist: "Zenvise", album: ep.ref,
       artwork: [{ src: "/icons/icon-512.png", sizes: "512x512", type: "image/png" }],
     });
   }, [ep]);
@@ -152,7 +152,7 @@ export function Player({ episode }: { episode: Episode }) {
           </div>
           <div className={styles.fin}>
             <b>🔒 Épisode réservé aux abonnés</b>
-            <span>Cet épisode, son quiz et sa fiche font partie de l&apos;abonnement Memoson à 9,99 €/mois, toutes UE comprises. Le premier épisode de chaque UE reste gratuit.</span>
+            <span>Cet épisode, son quiz et sa fiche font partie de l&apos;abonnement Zenvise à 9,99 €/mois, toutes UE comprises. Le premier épisode de chaque UE reste gratuit.</span>
           </div>
           <div className={styles.actions}>
             <Link href={`/app/abonnement?ue=${ep.ue}`} className={styles.primary}>Voir les abonnements</Link>

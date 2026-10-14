@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { EDITEUR, MISE_A_JOUR } from "@/lib/legal";
 import styles from "@/components/legal.module.css";
 
-export const metadata: Metadata = { title: "Confidentialité · Memoson" };
+export const metadata: Metadata = { title: "Confidentialité · Zenvise" };
 
 export default function Confidentialite() {
   return (
@@ -14,7 +14,7 @@ export default function Confidentialite() {
 
       <section>
         <h2>Qui est responsable de tes données</h2>
-        <p>{EDITEUR.nom}, éditeur de Memoson. Contact : {EDITEUR.email}.</p>
+        <p>{EDITEUR.nom}, éditeur de Zenvise. Contact : {EDITEUR.email}.</p>
       </section>
 
       <section>

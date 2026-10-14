@@ -47,7 +47,7 @@ export function Connexion() {
 
   return (
     <div className={styles.page}>
-      <Link href="/" className={styles.logo}>Memo<span>son</span></Link>
+      <Link href="/" className={styles.logo}>Zen<span>vise</span></Link>
       <div className={styles.card}>
         <span className={styles.badge}>Bêta gratuite</span>
         <h1>{mode === "inscription" ? "Crée ton compte" : "Content de te revoir"}</h1>

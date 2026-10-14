@@ -1,4 +1,4 @@
--- Memoson · bêta : comptes, progression synchronisée, avis des testeurs.
+-- Zenvise · bêta : comptes, progression synchronisée, avis des testeurs.
 -- À exécuter une fois dans Supabase : SQL Editor → New query → coller → Run.
 -- Ré-exécutable sans risque (if not exists / or replace).
 
