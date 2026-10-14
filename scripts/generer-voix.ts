@@ -23,6 +23,8 @@ const V = {
 };
 const MODEL = process.env.ELEVENLABS_MODEL || "eleven_multilingual_v2";
 const FORCE = process.env.FORCE === "true";
+// true : n'utilise que l'historique ElevenLabs (aucun crédit dépensé)
+const SANS_CREDIT = process.env.SANS_CREDIT === "true";
 const OUT = path.join(process.cwd(), "public", "audio");
 const TMP = path.join(process.cwd(), ".voix-tmp");
 
@@ -42,7 +44,41 @@ const VOICE_SETTINGS = {
   scene: { stability: 0.45, similarity_boost: 0.75, style: 0.15, use_speaker_boost: true, speed: 1 },
 };
 
+// Historique ElevenLabs : tout ce qui a déjà été généré se retélécharge gratuitement.
+// On le consulte avant chaque appel payant, pour ne jamais payer deux fois la même phrase.
+const HISTO = new Map<string, string>(); // voix + texte → id d'historique
+async function chargerHistorique() {
+  let after: string | undefined;
+  for (let page = 0; page < 50; page++) {
+    const url = `https://api.elevenlabs.io/v1/history?page_size=1000${after ? `&start_after_history_item_id=${after}` : ""}`;
+    const res = await fetch(url, { headers: { "xi-api-key": KEY } });
+    if (!res.ok) throw new Error(`Historique ElevenLabs illisible (${res.status}) : ${(await res.text()).slice(0, 200)}`);
+    const data = (await res.json()) as { history: { history_item_id: string; voice_id: string; text: string; model_id?: string }[]; has_more: boolean; last_history_item_id?: string };
+    for (const h of data.history) {
+      const k = `${h.voice_id}|${h.text}`;
+      if (!HISTO.has(k)) HISTO.set(k, h.history_item_id); // le plus récent d'abord
+    }
+    if (!data.has_more || !data.last_history_item_id) break;
+    after = data.last_history_item_id;
+  }
+  console.log(`Historique ElevenLabs : ${HISTO.size} phrase(s) déjà générée(s).`);
+}
+
+async function depuisHistorique(text: string, voice: string, file: string) {
+  const id = HISTO.get(`${voice}|${text}`);
+  if (!id) return false;
+  const res = await fetch(`https://api.elevenlabs.io/v1/history/${id}/audio`, { headers: { "xi-api-key": KEY } });
+  if (!res.ok) return false;
+  fs.writeFileSync(file, Buffer.from(await res.arrayBuffer()));
+  recuperes++;
+  return true;
+}
+let recuperes = 0, payes = 0;
+
 async function tts(text: string, voice: string, settings: object, file: string) {
+  if (await depuisHistorique(text, voice, file)) return;
+  if (SANS_CREDIT) throw new Error(`Absent de l'historique (mode sans crédit) : « ${text.slice(0, 60)}… »`);
+  payes += text.length;
   for (let essai = 1; essai <= 4; essai++) {
     const res = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${voice}?output_format=mp3_44100_128`, {
       method: "POST",
@@ -90,6 +126,10 @@ async function piste(id: string, kind: "scene" | "cours", lines: Line[]) {
 async function main() {
   fs.mkdirSync(OUT, { recursive: true });
   fs.mkdirSync(TMP, { recursive: true });
+  try { await chargerHistorique(); } catch (e) {
+    if (SANS_CREDIT) throw e;
+    console.log(`(historique non consulté : ${(e as Error).message})`);
+  }
   const demande = (process.env.EPISODES || "all").trim();
   const ids = demande === "all" ? null : demande.split(",").map((s) => s.trim()).filter(Boolean);
   // Tout épisode rédigé (en voix studio ou non) peut être généré
@@ -118,6 +158,7 @@ async function main() {
       `export const AUDIO_DISPO: string[] = ${JSON.stringify(dispo, null, 2)};\n`,
   );
   fs.rmSync(TMP, { recursive: true, force: true });
+  console.log(`Récupérées depuis l'historique : ${recuperes} phrase(s). Crédits dépensés : environ ${payes}.`);
   console.log(`Voix studio disponibles pour ${dispo.length} épisode(s).`);
   if (erreur) throw erreur;
 }

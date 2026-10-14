@@ -12,6 +12,10 @@ on:
         description: "Régénérer même si le MP3 existe déjà"
         type: boolean
         default: false
+      sans_credit:
+        description: "N'utiliser que l'historique ElevenLabs (aucun crédit dépensé)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -46,7 +50,19 @@ jobs:
           VOICE_EXPERT: ${{ vars.VOICE_EXPERT }}
           EPISODES: ${{ inputs.episodes }}
           FORCE: ${{ inputs.force }}
+          SANS_CREDIT: ${{ inputs.sans_credit }}
         run: npx --yes tsx@4.19.2 scripts/generer-voix.ts
+
+      # Copie de secours : les MP3 restent téléchargeables 30 jours même si l'enregistrement échoue
+      - name: Copie de secours des MP3
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: voix-${{ github.run_id }}
+          path: |
+            public/audio/*.mp3
+            src/content/audio.ts
+          retention-days: 30
 
       - name: Enregistrer les MP3 dans le dépôt
         if: always()
@@ -58,5 +74,10 @@ jobs:
             echo "Rien de nouveau à enregistrer."
           else
             git commit -m "Voix studio : ${{ inputs.episodes }}"
-            git push
+            # D'autres modifications ont pu arriver sur main pendant la génération : on se remet à jour avant d'envoyer
+            for essai in 1 2 3 4 5; do
+              git pull --rebase -X theirs origin main && git push && exit 0
+              sleep $((essai * 5))
+            done
+            exit 1
           fi
