@@ -28,7 +28,7 @@ export function Home() {
   return (
     <div className={styles.wrap}>
       <header className={styles.brand}>
-        <h1>Révi<span>zen</span></h1>
+        <h1>Memo<span>son</span></h1>
         <p>Un cas d&apos;examen, le cours, trois questions. Dans le RER, sans livre.</p>
       </header>
 

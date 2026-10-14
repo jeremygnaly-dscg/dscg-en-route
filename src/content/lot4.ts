@@ -1,9 +1,9 @@
 import type { Episode } from "./types";
 
-// LOT 4 — rédigé par Révizen à partir des textes officiels. Cours CNAM = plan de travail uniquement.
+// LOT 4 — rédigé par Memoson à partir des textes officiels. Cours CNAM = plan de travail uniquement.
 // À FAIRE RELIRE avant génération des voix et vente.
 
-const SRC = "Cas Révizen, inspiré des thèmes fréquents aux sujets 2014-2025";
+const SRC = "Cas Memoson, inspiré des thèmes fréquents aux sujets 2014-2025";
 
 export const LOT4: Episode[] = [
   // ───────────────────────── UE5 ─────────────────────────

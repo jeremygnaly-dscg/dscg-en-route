@@ -11,10 +11,10 @@ import { ServiceWorker } from "@/components/ServiceWorker";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Révizen",
-  description: "Révise l'expertise comptable en audio, dans les transports. DSCG d'abord, puis DCG et master CCA.",
+  title: "Memoson",
+  description: "Réviser en écoutant, partout : un cas d'examen, le cours, un quiz et une fiche. DSCG d'abord, d'autres examens ensuite.",
   manifest: "/manifest.webmanifest",
-  appleWebApp: { capable: true, title: "Révizen", statusBarStyle: "default" },
+  appleWebApp: { capable: true, title: "Memoson", statusBarStyle: "default" },
   icons: { icon: "/icons/icon-192.png", apple: "/icons/apple-touch-icon.png" },
 };
 

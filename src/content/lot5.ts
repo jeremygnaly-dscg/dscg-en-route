@@ -1,10 +1,10 @@
 import type { Episode } from "./types";
 
-// LOT 5 — rédigé par Révizen à partir des textes officiels. Cours CNAM = plan de travail uniquement.
+// LOT 5 — rédigé par Memoson à partir des textes officiels. Cours CNAM = plan de travail uniquement.
 // Notions choisies dans le programme « zéro impasse » (src/content/programme.ts), priorité aux notions fréquentes.
 // À FAIRE RELIRE avant génération des voix et vente.
 
-const SRC = "Cas Révizen, programme zéro impasse";
+const SRC = "Cas Memoson, programme zéro impasse";
 
 export const LOT5: Episode[] = [
   // ───────────────────────── UE1 ─────────────────────────

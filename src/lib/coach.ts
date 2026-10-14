@@ -217,7 +217,7 @@ export function calendrierIcs(config: CoachConfig, appUrl: string, today: string
   const days = ["MO", "TU", "WE", "TH", "FR", "SA", "SU"];
   const stamp = new Date().toISOString().replace(/[-:]/g, "").replace(/\.\d+Z$/, "Z");
   const esc = (s: string) => s.replace(/[,;\\]/g, (m) => "\\" + m);
-  const lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Revizen//Coach//FR", "CALSCALE:GREGORIAN", "METHOD:PUBLISH", "X-WR-CALNAME:Révizen"];
+  const lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Memoson//Coach//FR", "CALSCALE:GREGORIAN", "METHOD:PUBLISH", "X-WR-CALNAME:Memoson"];
   for (const c of config.creneaux) {
     // premier jour concerné à partir d'aujourd'hui
     let start = today;
@@ -228,12 +228,12 @@ export function calendrierIcs(config: CoachConfig, appUrl: string, today: string
     const ctx = CONTEXTES.find((x) => x.id === c.contexte)?.label ?? "";
     lines.push(
       "BEGIN:VEVENT",
-      `UID:revizen-${c.id}@revizen`,
+      `UID:memoson-${c.id}@memoson`,
       `DTSTAMP:${stamp}`,
       `DTSTART;TZID=Europe/Paris:${start.replace(/-/g, "")}T${t(h * 60 + m)}`,
       `DTEND;TZID=Europe/Paris:${start.replace(/-/g, "")}T${t(endMin)}`,
       `RRULE:FREQ=WEEKLY;BYDAY=${c.jours.map((j) => days[j]).join(",")};UNTIL=${last.replace(/-/g, "")}T235959Z`,
-      `SUMMARY:${esc(`🎧 Révizen · ${c.minutes} min`)}`,
+      `SUMMARY:${esc(`🎧 Memoson · ${c.minutes} min`)}`,
       `DESCRIPTION:${esc(`${ctx}. Ta séance du jour t'attend : ${appUrl}/app/coach`)}`,
       `URL:${appUrl}/app/coach`,
       "BEGIN:VALARM",

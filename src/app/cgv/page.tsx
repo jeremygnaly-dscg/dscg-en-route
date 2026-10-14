@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { EDITEUR, MEDIATEUR } from "@/lib/legal";
 import styles from "@/components/legal.module.css";
 
-export const metadata: Metadata = { title: "Conditions générales de vente · Révizen" };
+export const metadata: Metadata = { title: "Conditions générales de vente · Memoson" };
 
 const VERSION = "14 octobre 2026";
 
@@ -17,7 +17,7 @@ export default function Cgv() {
       <section>
         <h2>1. Objet</h2>
         <p>
-          Les présentes conditions régissent la vente des abonnements à Révizen, service en ligne de révision du DSCG :
+          Les présentes conditions régissent la vente des abonnements à Memoson, service en ligne de révision du DSCG :
           épisodes audio, transcriptions, quiz, fiches de révision et outil de planification (Coach). Elles s&apos;appliquent
           à toute souscription faite sur le site ou l&apos;application.
         </p>
@@ -33,7 +33,7 @@ export default function Cgv() {
 
       <section>
         <h2>3. Offres et prix</h2>
-        <p>Abonnement Révizen : 9,99 € par mois, donnant accès à l&apos;ensemble des contenus, toutes unités d&apos;enseignement confondues.</p>
+        <p>Abonnement Memoson : 9,99 € par mois, donnant accès à l&apos;ensemble des contenus, toutes unités d&apos;enseignement confondues.</p>
         <p>
           Les prix sont indiqués en euros, toutes taxes comprises. TVA non applicable, article 293 B du Code général des impôts.
           Un épisode par unité d&apos;enseignement reste accessible gratuitement avec un compte.
@@ -48,7 +48,7 @@ export default function Cgv() {
         <h2>4. Souscription et paiement</h2>
         <p>
           La souscription nécessite un compte. Le paiement est effectué par carte bancaire via Stripe, prestataire de paiement
-          sécurisé : Révizen n&apos;a jamais accès aux données de carte. L&apos;abonnement est payé d&apos;avance, au jour de la
+          sécurisé : Memoson n&apos;a jamais accès aux données de carte. L&apos;abonnement est payé d&apos;avance, au jour de la
           souscription puis chaque mois à la même date. Un reçu est envoyé par e-mail après chaque paiement.
         </p>
         <p>En cas d&apos;échec de paiement, l&apos;accès peut être suspendu jusqu&apos;à régularisation.</p>
@@ -68,7 +68,7 @@ export default function Cgv() {
         <h2>6. Droit de rétractation</h2>
         <p>
           Le consommateur dispose en principe d&apos;un délai de 14 jours pour se rétracter (article L. 221-18 du Code de la
-          consommation). Toutefois, les contenus de Révizen sont des contenus numériques fournis sans support matériel et
+          consommation). Toutefois, les contenus de Memoson sont des contenus numériques fournis sans support matériel et
           accessibles immédiatement après le paiement.
         </p>
         <p>
@@ -91,7 +91,7 @@ export default function Cgv() {
         <h2>8. Utilisation et propriété intellectuelle</h2>
         <p>
           L&apos;abonnement est personnel. Le partage de compte, l&apos;enregistrement, la copie ou la diffusion des contenus
-          sont interdits. Les contenus, voix et marques de Révizen restent la propriété de leur éditeur. En cas de manquement,
+          sont interdits. Les contenus, voix et marques de Memoson restent la propriété de leur éditeur. En cas de manquement,
           le compte peut être suspendu après avertissement.
         </p>
       </section>
@@ -99,7 +99,7 @@ export default function Cgv() {
       <section>
         <h2>9. Disponibilité</h2>
         <p>
-          Révizen s&apos;efforce de rendre le service accessible en permanence, mais des interruptions peuvent survenir pour
+          Memoson s&apos;efforce de rendre le service accessible en permanence, mais des interruptions peuvent survenir pour
           maintenance ou en cas d&apos;incident technique. Une interruption de plus de 7 jours consécutifs ouvre droit, sur
           demande, au remboursement de la période concernée.
         </p>

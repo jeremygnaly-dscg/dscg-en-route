@@ -18,7 +18,7 @@ export function Landing() {
   return (
     <div className={styles.page}>
       <header className={styles.hero}>
-        <span className={styles.logo}>Révi<span>zen</span></span>
+        <span className={styles.logo}>Memo<span>son</span></span>
         <span className={styles.kicker}>DSCG · session 2027 · nouveau programme</span>
         <h1>Révise le DSCG <em>dans le RER.</em></h1>
         <p className={styles.lead}>
@@ -56,7 +56,7 @@ export function Landing() {
         <h2>Prix de lancement</h2>
         <div className={styles.plans} style={{ gridTemplateColumns: "1fr" }}>
           <div className={`${styles.plan} ${styles.featured}`}>
-            <span className={styles.planName}>Abonnement Révizen</span>
+            <span className={styles.planName}>Abonnement Memoson</span>
             <b>9,99 €<small>/mois</small></b>
             <span>Toutes les UE, tous les épisodes, quiz et fiches, et les nouveaux chaque semaine. Sans engagement.</span>
           </div>
@@ -80,7 +80,7 @@ export function Landing() {
       </section>
 
       <footer className={styles.footer}>
-        <span>Révizen</span>
+        <span>Memoson</span>
         <nav className={styles.footLinks}>
           <Link href="/mentions-legales">Mentions légales</Link>
           <Link href="/confidentialite">Confidentialité</Link>

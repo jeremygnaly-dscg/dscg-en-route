@@ -1,5 +1,5 @@
 "use client";
-// Invite à installer Révizen sur l'écran d'accueil : plein écran, icône, lecture plus fiable.
+// Invite à installer Memoson sur l'écran d'accueil : plein écran, icône, lecture plus fiable.
 import { useEffect, useState } from "react";
 import styles from "./home.module.css";
 
@@ -28,11 +28,11 @@ export function Installer() {
   if (mode === "rien") return null;
   return (
     <section className={styles.installer}>
-      <b>Installe Révizen sur ton téléphone</b>
+      <b>Installe Memoson sur ton téléphone</b>
       {mode === "ios" ? (
         <span>
           Dans Safari, touche le bouton <strong>Partager</strong> (le carré avec une flèche), puis
-          <strong> « Sur l&apos;écran d&apos;accueil »</strong>. Révizen s&apos;ouvrira en plein écran, comme une appli.
+          <strong> « Sur l&apos;écran d&apos;accueil »</strong>. Memoson s&apos;ouvrira en plein écran, comme une appli.
           Tu te reconnecteras une fois dans l&apos;appli installée.
         </span>
       ) : (

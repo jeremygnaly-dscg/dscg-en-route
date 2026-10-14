@@ -1,7 +1,7 @@
 {
-  "name": "Révizen",
-  "short_name": "Révizen",
-  "description": "Révise l'expertise comptable en audio : un cas d'examen, le cours, trois questions.",
+  "name": "Memoson",
+  "short_name": "Memoson",
+  "description": "Réviser en écoutant : un cas d'examen, le cours, un quiz et une fiche.",
   "lang": "fr",
   "start_url": "/app/fil",
   "display": "standalone",

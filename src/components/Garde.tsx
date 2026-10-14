@@ -28,7 +28,7 @@ export function Garde({ children }: { children: React.ReactNode }) {
   if (!ready || !session || !pret) {
     return (
       <div style={{ minHeight: "60vh", display: "grid", placeItems: "center", color: "var(--muted)", fontWeight: 600 }}>
-        Révizen…
+        Memoson…
       </div>
     );
   }

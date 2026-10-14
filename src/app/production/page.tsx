@@ -5,7 +5,7 @@ import { PROGRAMME, type Notion } from "@/content/programme";
 import styles from "@/components/coach.module.css";
 
 // Tableau de suivi de production (non lié depuis l'appli) : couverture du programme « zéro impasse ».
-export const metadata: Metadata = { title: "Production · Révizen", robots: { index: false, follow: false } };
+export const metadata: Metadata = { title: "Production · Memoson", robots: { index: false, follow: false } };
 
 const FREQ = { forte: "Tombe souvent", moyenne: "Tombe parfois", rare: "Tombe rarement" } as const;
 
