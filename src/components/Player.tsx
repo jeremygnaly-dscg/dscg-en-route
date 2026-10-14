@@ -152,7 +152,7 @@ export function Player({ episode }: { episode: Episode }) {
           </div>
           <div className={styles.fin}>
             <b>🔒 Épisode réservé aux abonnés</b>
-            <span>Cet épisode, son quiz et sa fiche font partie de l&apos;abonnement {ep.ue.toUpperCase()} ou Toutes les UE. Le premier épisode de chaque UE reste gratuit.</span>
+            <span>Cet épisode, son quiz et sa fiche font partie de l&apos;abonnement Révizen à 9,99 €/mois, toutes UE comprises. Le premier épisode de chaque UE reste gratuit.</span>
           </div>
           <div className={styles.actions}>
             <Link href={`/app/abonnement?ue=${ep.ue}`} className={styles.primary}>Voir les abonnements</Link>

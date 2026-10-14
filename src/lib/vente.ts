@@ -9,14 +9,15 @@ import { supabase, useSession } from "./compte";
 
 export const VENTE_ACTIVE = false;
 
-// Liens de paiement Stripe (Payment Links), à coller ici une fois créés dans Stripe
+// Lien de paiement Stripe (Payment Link), à coller ici une fois créé dans Stripe.
+// Offre unique pour l'instant : 9,99 €/mois, toutes les UE. (La formule « une UE » reste prévue dans le code, inactive.)
 export const LIENS_STRIPE = {
-  ue: "", // abonnement 1 UE à 9,99 €/mois
-  toutes: "", // abonnement toutes les UE à 19,99 €/mois
+  ue: "", // non proposé pour l'instant
+  toutes: "", // abonnement Révizen, toutes les UE, 9,99 €/mois
 };
 export const PORTAIL_STRIPE = ""; // lien du portail client Stripe (gérer ou résilier son abonnement)
 
-export const PRIX = { ue: "9,99 €", toutes: "19,99 €" };
+export const PRIX = { ue: "", toutes: "9,99 €" };
 
 export interface Abonnement {
   stripe_subscription: string;

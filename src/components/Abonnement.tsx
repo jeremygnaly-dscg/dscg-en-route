@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { EPISODES, UES } from "@/content/episodes";
 import type { UeId } from "@/content/types";
 import { useSession } from "@/lib/compte";
 import {
@@ -9,7 +8,6 @@ import {
 } from "@/lib/vente";
 import styles from "./abonnement.module.css";
 
-const UES_DISPO = UES.filter((u) => EPISODES.some((e) => e.ue === u.id && e.status === "live"));
 const date = (iso: string | null) => (iso ? new Date(iso).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }) : "");
 
 export function Abonnement() {
@@ -17,7 +15,7 @@ export function Abonnement() {
   const { abos, recharger } = useAbonnements();
   const [actif, setActif] = useState(false);
   const [merci, setMerci] = useState(false);
-  const [ue, setUe] = useState<UeId>(UES_DISPO[0]?.id ?? "ue1");
+  const ue: UeId | null = null; // offre unique : toutes les UE
   const [cgv, setCgv] = useState(false);
   const [renonce, setRenonce] = useState(false);
   const [erreur, setErreur] = useState("");
@@ -27,8 +25,6 @@ export function Abonnement() {
     const q = new URLSearchParams(window.location.search);
     if (q.get("test") === "1") modeTest(true);
     if (q.get("test") === "0") modeTest(false);
-    const u = q.get("ue");
-    if (u && UES_DISPO.some((x) => x.id === u)) setUe(u as UeId);
     setActif(venteActive());
     if (q.get("merci") === "1") {
       setMerci(true);
@@ -44,11 +40,11 @@ export function Abonnement() {
   const payer = async (formule: "ue" | "toutes") => {
     setErreur("");
     if (!cgv || !renonce) return setErreur("Coche les deux cases pour continuer.");
-    const lien = session && lienPaiement(formule, formule === "ue" ? ue : null, session.user.id, session.user.email);
+    const lien = session && lienPaiement(formule, ue, session.user.id, session.user.email);
     if (!lien) return setErreur("Le paiement en ligne n'est pas encore ouvert.");
     setEnvoi(true);
     await enregistrerConsentement(
-      `CGV acceptées et renonciation au droit de rétractation (accès immédiat) · formule ${formule}${formule === "ue" ? ` ${ue}` : ""} · ${new Date().toISOString()}`,
+      `CGV acceptées et renonciation au droit de rétractation (accès immédiat) · abonnement ${formule} ${PRIX.toutes}/mois · ${new Date().toISOString()}`,
     );
     window.location.href = lien;
   };
@@ -102,27 +98,16 @@ export function Abonnement() {
         <label><input type="checkbox" checked={renonce} onChange={(e) => setRenonce(e.target.checked)} /> <span>Je demande l&apos;accès immédiat aux contenus et je reconnais perdre mon droit de rétractation dès cet accès.</span></label>
         {erreur && <p className={styles.err}>{erreur}</p>}
       </div>
-      <section className={styles.offres}>
-        <div className={styles.offre}>
-          <span className={styles.nom}>Une UE</span>
-          <b className={styles.prix}>{PRIX.ue}<small>/mois</small></b>
-          <span>Tous les épisodes, quiz et fiches de l&apos;UE choisie, et les nouveaux à mesure qu&apos;ils sortent.</span>
-          <label className={styles.champ}>UE
-            <select value={ue} onChange={(e) => setUe(e.target.value as UeId)}>
-              {UES_DISPO.map((u) => <option key={u.id} value={u.id}>{u.short} · {u.name}</option>)}
-            </select>
-          </label>
-          <button className={styles.secondaire} disabled={envoi || !actif} onClick={() => payer("ue")}>Choisir {UES_DISPO.find((u) => u.id === ue)?.short}</button>
-        </div>
+      <section className={styles.offres} style={{ gridTemplateColumns: "1fr" }}>
         <div className={`${styles.offre} ${styles.vedette}`}>
-          <span className={styles.nom}>Toutes les UE</span>
+          <span className={styles.nom}>Abonnement Révizen</span>
           <b className={styles.prix}>{PRIX.toutes}<small>/mois</small></b>
-          <span>UE1 à UE5. Le bon choix si tu passes plusieurs épreuves dans l&apos;année.</span>
-          <button className={styles.principal} disabled={envoi || !actif} onClick={() => payer("toutes")}>Choisir toutes les UE</button>
+          <span>Toutes les UE : épisodes, quiz, fiches de révision et Coach, et les nouveaux épisodes chaque semaine.</span>
+          <button className={styles.principal} disabled={envoi || !actif} onClick={() => payer("toutes")}>M&apos;abonner</button>
         </div>
       </section>
 
-      <p className={styles.note}>Paiement sécurisé par Stripe. Révizen ne voit jamais ton numéro de carte. Un épisode par UE reste gratuit.</p>
+      <p className={styles.note}>Paiement sécurisé par Stripe. Révizen ne voit jamais ton numéro de carte. Un épisode par UE reste gratuit sans abonnement.</p>
     </div>
   );
 }

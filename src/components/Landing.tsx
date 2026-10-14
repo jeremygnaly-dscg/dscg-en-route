@@ -54,16 +54,11 @@ export function Landing() {
 
       <section className={styles.pricing}>
         <h2>Prix de lancement</h2>
-        <div className={styles.plans}>
-          <div className={styles.plan}>
-            <span className={styles.planName}>Une UE</span>
-            <b>9,99 €<small>/mois</small></b>
-            <span>Tous les épisodes de l&apos;UE choisie, mis à jour du programme 2027.</span>
-          </div>
+        <div className={styles.plans} style={{ gridTemplateColumns: "1fr" }}>
           <div className={`${styles.plan} ${styles.featured}`}>
-            <span className={styles.planName}>Toutes les UE</span>
-            <b>19,99 €<small>/mois</small></b>
-            <span>UE1 à UE5. Le bon choix si tu passes plusieurs épreuves dans l&apos;année.</span>
+            <span className={styles.planName}>Abonnement Révizen</span>
+            <b>9,99 €<small>/mois</small></b>
+            <span>Toutes les UE, tous les épisodes, quiz et fiches, et les nouveaux chaque semaine. Sans engagement.</span>
           </div>
         </div>
         <p className={styles.note}>

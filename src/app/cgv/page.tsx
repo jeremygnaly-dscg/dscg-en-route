@@ -33,10 +33,7 @@ export default function Cgv() {
 
       <section>
         <h2>3. Offres et prix</h2>
-        <ul>
-          <li>Abonnement « Une UE » : 9,99 € par mois, accès aux contenus de l&apos;unité d&apos;enseignement choisie.</li>
-          <li>Abonnement « Toutes les UE » : 19,99 € par mois, accès à l&apos;ensemble des contenus.</li>
-        </ul>
+        <p>Abonnement Révizen : 9,99 € par mois, donnant accès à l&apos;ensemble des contenus, toutes unités d&apos;enseignement confondues.</p>
         <p>
           Les prix sont indiqués en euros, toutes taxes comprises. TVA non applicable, article 293 B du Code général des impôts.
           Un épisode par unité d&apos;enseignement reste accessible gratuitement avec un compte.
