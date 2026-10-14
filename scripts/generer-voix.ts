@@ -62,6 +62,7 @@ async function chargerHistorique() {
     after = data.last_history_item_id;
   }
   console.log(`Historique ElevenLabs : ${HISTO.size} phrase(s) déjà générée(s).`);
+  console.log(`::notice title=Historique::${HISTO.size} phrase(s) dans l'historique ElevenLabs`);
 }
 
 async function depuisHistorique(text: string, voice: string, file: string) {
@@ -158,9 +159,14 @@ async function main() {
       `export const AUDIO_DISPO: string[] = ${JSON.stringify(dispo, null, 2)};\n`,
   );
   fs.rmSync(TMP, { recursive: true, force: true });
-  console.log(`Récupérées depuis l'historique : ${recuperes} phrase(s). Crédits dépensés : environ ${payes}.`);
+  console.log(`::notice title=Bilan::Récupérées depuis l'historique : ${recuperes} phrase(s). Crédits dépensés : environ ${payes}. Épisodes en voix studio : ${dispo.length}.`);
   console.log(`Voix studio disponibles pour ${dispo.length} épisode(s).`);
   if (erreur) throw erreur;
 }
 
-main().catch((e) => { console.error(e.message ?? e); process.exit(1); });
+main().catch((e) => {
+  const msg = String(e?.message ?? e).replace(/\r?\n/g, " ");
+  console.error(msg);
+  console.log(`::error title=Voix::${msg}`); // visible dans le résumé du run
+  process.exit(1);
+});
