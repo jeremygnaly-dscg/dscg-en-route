@@ -12,7 +12,10 @@ import styles from "./coach.module.css";
 
 const KEY = "revizen-coach";
 const load = (): CoachConfig | null => { try { const v = localStorage.getItem(KEY); return v ? JSON.parse(v) : null; } catch { return null; } };
-const save = (c: CoachConfig | null) => { try { if (c) localStorage.setItem(KEY, JSON.stringify(c)); else localStorage.removeItem(KEY); } catch { /* stockage indisponible */ } };
+const save = (c: CoachConfig | null) => {
+  try { if (c) localStorage.setItem(KEY, JSON.stringify(c)); else localStorage.removeItem(KEY); } catch { /* stockage indisponible */ }
+  void import("@/lib/compte").then((m) => m.pousser()); // sauvegarde dans le compte
+};
 
 const MOIS = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."];
 const JOURS_LONG = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"];

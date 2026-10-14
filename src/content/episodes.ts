@@ -5,6 +5,7 @@ import { LOT3 } from "./lot3";
 import { LOT4 } from "./lot4";
 import { AUDIO_DISPO, AUDIO_DUREE } from "./audio";
 import { FICHES } from "./fiches";
+import { PROGRAMME } from "./programme";
 
 export const UES: Ue[] = [
   { id: "ue1", short: "UE1", name: "Gestion juridique, fiscale et sociale", available: true },
@@ -88,7 +89,6 @@ export const EPISODES: Episode[] = [
       { q: "Un déficit d'une filiale antérieur à son entrée dans le groupe s'impute…", choices: ["Sur le résultat d'ensemble", "Sur ses propres bénéfices", "Nulle part"], answer: 1, why: "Uniquement sur les bénéfices propres de la filiale." },
     ],
   },
-  soon("pactes-associes", "ue1", "Pactes d'associés", "art. 1103 C. civ."),
   {
     id: "cmpc",
     ue: "ue2",
@@ -208,9 +208,6 @@ export const EPISODES: Episode[] = [
   ...LOT2,
   ...LOT3,
   ...LOT4,
-  soon("ue4-scission-apa", "ue4", "Scission et apport partiel d'actif", "Règlement ANC 2014-03"),
-  soon("ue1-sauvegarde-plan", "ue1", "Le plan de sauvegarde et de cession", "C. com."),
-  soon("ue1-contrats-speciaux", "ue1", "Contrats de distribution et franchise", "C. com."),
   soon("ue3-pilotage", "ue3", "Pilotage de la performance", "UE3 · tes cours + sujet zéro"),
   soon("ue3-rse", "ue3", "Contrôle de gestion et RSE", "UE3 · tes cours + sujet zéro"),
 ];
@@ -218,6 +215,14 @@ export const EPISODES: Episode[] = [
 function soon(id: string, ue: Episode["ue"], title: string, ref: string): Episode {
   const format = ue === "ue1" ? "juridique" : ue === "ue4" ? "comptable" : "technique";
   return { id, ue, format, title, ref, minutes: 0, status: "soon", scene: [], cours: [], flash: [] };
+}
+
+// Programme « zéro impasse » : chaque notion pas encore traitée apparaît comme épisode à venir
+for (const [ue, notions] of Object.entries(PROGRAMME)) {
+  for (const no of notions ?? []) {
+    const couvert = no.episodes?.some((id) => EPISODES.some((e) => e.id === id)) || EPISODES.some((e) => e.id === no.id);
+    if (!couvert) EPISODES.push(soon(no.id, ue as Episode["ue"], no.titre, no.partie));
+  }
 }
 
 // Voix studio : branche automatiquement les MP3 déclarés dans audio.ts

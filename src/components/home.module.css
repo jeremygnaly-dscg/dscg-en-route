@@ -29,3 +29,7 @@ a.ep:hover { background: var(--surface); }
 .attente span { font-size: 14px; color: var(--muted); }
 .attente div { display: flex; flex-direction: column; gap: 4px; }
 .attente a { color: var(--accent); font-weight: 700; text-decoration: none; font-size: 14px; }
+
+.avenir { margin-top: 14px; }
+.avenir summary { cursor: pointer; font-weight: 700; color: var(--muted); font-size: 14px; padding: 8px 0; }
+.avenir[open] summary { margin-bottom: 8px; }

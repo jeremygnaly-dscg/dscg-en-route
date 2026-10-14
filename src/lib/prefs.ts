@@ -57,6 +57,7 @@ export function useProgress() {
         : { done: true, score, date: day, reviews: [] };
       const next = { ...p, [id]: entry };
       write("der-progress", next);
+      void import("./compte").then((m) => m.pousser()); // sauvegarde dans le compte
       return next;
     });
   return [progress, markDone] as const;

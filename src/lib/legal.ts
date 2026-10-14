@@ -8,4 +8,4 @@ export const EDITEUR = {
   email: "jeremygnaly@gmail.com",
 };
 
-export const MISE_A_JOUR = "13 octobre 2026";
+export const MISE_A_JOUR = "14 octobre 2026";

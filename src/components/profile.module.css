@@ -20,3 +20,12 @@
 .link { color: var(--accent); font-weight: 700; text-decoration: none; }
 .legal { font-size: 13px; color: var(--muted); margin: 0; }
 .legal a { color: var(--accent); }
+
+.avis { display: flex; flex-direction: column; gap: 10px; }
+.avis textarea { width: 100%; font: inherit; font-size: 16px; padding: 10px 12px; border-radius: 12px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); resize: vertical; }
+.btn { align-self: flex-start; border: 0; background: var(--accent); color: var(--accent-ink); border-radius: 10px; padding: 10px 14px; font-weight: 700; }
+.btn:disabled { opacity: 0.5; }
+.merci { margin: 0; color: var(--ok); background: var(--ok-soft); border-radius: 10px; padding: 10px 12px; font-weight: 600; }
+.compte { display: flex; flex-wrap: wrap; gap: 8px; }
+.btnGhost, .btnDanger { border: 1px solid var(--line); background: transparent; border-radius: 10px; padding: 9px 12px; font-weight: 700; font-size: 14px; color: var(--fg); }
+.btnDanger { color: var(--bad); border-color: var(--bad-soft); }

@@ -19,6 +19,7 @@ export function Home() {
   const current = UES.find((u) => u.id === ue)!;
   const list = [...episodesOf(ue)].sort((a, b) => (a.status === b.status ? 0 : a.status === "live" ? -1 : 1));
   const live = list.filter((e) => e.status === "live");
+  const aVenir = list.filter((e) => e.status !== "live");
   const doneCount = live.filter((e) => progress[e.id]?.done).length;
 
   return (
@@ -56,22 +57,30 @@ export function Home() {
         </div>
         <p className={styles.sub}>Classés par fréquence à l&apos;examen. Programme de la session 2027.</p>
         <div className={styles.list}>
-          {list.map((e, i) => {
-            const n = String(i + 1).padStart(2, "0");
-            const inner = (
-              <>
-                <span className={styles.n}>{n}</span>
-                <span className={styles.t}><b>{e.title}</b><span>{e.ref}</span></span>
-                {e.status !== "live" ? <span className={styles.pill}>bientôt disponible</span>
-                  : progress[e.id]?.done ? <span className={`${styles.pill} ${styles.done}`}>Écouté · {progress[e.id]?.score}/3</span>
-                  : <span className={`${styles.pill} ${styles.free}`}>{e.minutes} min</span>}
-              </>
-            );
-            return e.status === "live"
-              ? <Link key={e.id} href={`/episode/${e.id}`} className={styles.ep}>{inner}</Link>
-              : <div key={e.id} className={`${styles.ep} ${styles.locked}`}>{inner}</div>;
-          })}
+          {live.map((e, i) => (
+            <Link key={e.id} href={`/episode/${e.id}`} className={styles.ep}>
+              <span className={styles.n}>{String(i + 1).padStart(2, "0")}</span>
+              <span className={styles.t}><b>{e.title}</b><span>{e.ref}</span></span>
+              {progress[e.id]?.done
+                ? <span className={`${styles.pill} ${styles.done}`}>Écouté · {progress[e.id]?.score}/3</span>
+                : <span className={`${styles.pill} ${styles.free}`}>{e.minutes} min</span>}
+            </Link>
+          ))}
         </div>
+        {aVenir.length > 0 && (
+          <details className={styles.avenir}>
+            <summary>{aVenir.length} notion{aVenir.length > 1 ? "s" : ""} en préparation · zéro impasse</summary>
+            <div className={styles.list}>
+              {aVenir.map((e) => (
+                <div key={e.id} className={`${styles.ep} ${styles.locked}`}>
+                  <span className={styles.n}>·</span>
+                  <span className={styles.t}><b>{e.title}</b><span>{e.ref}</span></span>
+                  <span className={styles.pill}>bientôt</span>
+                </div>
+              ))}
+            </div>
+          </details>
+        )}
       </section>
     </div>
   );

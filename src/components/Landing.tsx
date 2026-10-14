@@ -1,36 +1,19 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { joinWaitlist, waitlistCount, type JoinResult } from "@/lib/config";
+import { nbBeta } from "@/lib/compte";
 import styles from "./landing.module.css";
 
 const STEPS = [
   { t: "La scène", d: "Un dirigeant expose son problème à son expert-comptable. C'est la situation de l'examen, jouée comme un podcast." },
   { t: "Le cours", d: "La règle, les articles à citer, la méthode de rédaction attendue par le correcteur. Voix douce, rythme posé." },
-  { t: "La fiche", d: "Selon la matière : les formules à retenir en finance et en contrôle de gestion, les écritures à passer en comptabilité." },
-  { t: "Le flash", d: "Trois questions éclair pour vérifier que la notion est acquise, avant la station suivante." },
+  { t: "Le quiz", d: "Trois questions juste après l'écoute : se tester ancre la notion bien mieux que réécouter." },
+  { t: "La fiche", d: "L'essentiel en une phrase, les points à retenir, la méthode attendue, les pièges, et selon la matière les formules ou les écritures." },
 ];
 
 export function Landing() {
-  const [email, setEmail] = useState("");
-  const [ue, setUe] = useState("ue1");
-  const [profil, setProfil] = useState("alternant");
-  const [state, setState] = useState<"idle" | "sending" | JoinResult>("idle");
   const [count, setCount] = useState<number | null>(null);
-
-  useEffect(() => { void waitlistCount().then(setCount); }, []);
-
-  const submit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email.trim())) return;
-    setState("sending");
-    const source = new URLSearchParams(window.location.search).get("src") ?? "direct";
-    const r = await joinWaitlist({ email, ue, profil, source: source.slice(0, 100) });
-    setState(r);
-    if (r === "ok") setCount((c) => (c === null ? c : c + 1));
-  };
-
-  const done = state === "ok" || state === "already";
+  useEffect(() => { void nbBeta().then(setCount); }, []);
 
   return (
     <div className={styles.page}>
@@ -43,15 +26,15 @@ export function Landing() {
           Une scène, le cours, la fiche à retenir, trois questions.
         </p>
         <div className={styles.ctas}>
-          <a href="#liste" className={styles.primary}>Rejoindre la liste d&apos;attente</a>
-          <Link href="/episode/regime-mere-fille" className={styles.secondary}>Écouter un épisode gratuit</Link>
+          <Link href="/connexion?mode=inscription" className={styles.primary}>Rejoindre la bêta gratuite</Link>
+          <Link href="/connexion?mode=connexion" className={styles.secondary}>J&apos;ai déjà un compte</Link>
         </div>
-        {count !== null && count > 0 && <p className={styles.count}>{count} candidat{count > 1 ? "s" : ""} déjà inscrit{count > 1 ? "s" : ""}</p>}
+        {count !== null && count > 0 && <p className={styles.count}>{count} bêta-testeur{count > 1 ? "s" : ""} déjà inscrit{count > 1 ? "s" : ""}</p>}
       </header>
 
       <section className={styles.proof} aria-label="Chiffres">
         <div><b>17 281</b><span>candidats au DSCG en 2025</span></div>
-        <div><b>8 616</b><span>inscrits à l&apos;UE1, l&apos;épreuve que nous couvrons en premier</span></div>
+        <div><b>8 616</b><span>inscrits à l&apos;UE1, l&apos;épreuve la plus redoutée</span></div>
         <div><b>19 %</b><span>des présents à l&apos;UE1 ont eu la moyenne</span></div>
       </section>
       <p className={styles.src}>Source : rapport du jury national du DSCG, session 2025.</p>
@@ -64,8 +47,8 @@ export function Landing() {
           ))}
         </ol>
         <p className={styles.note}>
-          Voix féminine ou masculine, ton apaisant ou dynamique, fond sonore mer, plage ou méditation.
-          Les épisodes se téléchargent pour les tunnels.
+          Voix studio, fond sonore mer, plage ou méditation. En voiture ou dans les transports,
+          le mode « Enchaîner » lance l&apos;épisode suivant tout seul et garde les quiz pour plus tard.
         </p>
       </section>
 
@@ -84,55 +67,21 @@ export function Landing() {
           </div>
         </div>
         <p className={styles.note}>
-          Ouverture quand les cinq UE écrites du DSCG seront couvertes. Les inscrits de la liste d&apos;attente
-          auront le premier mois offert. Le DCG, puis la licence et le master CCA, suivront.
+          Gratuit pendant la bêta. Ouverture payante quand les cinq UE écrites du DSCG seront couvertes :
+          les bêta-testeurs et les inscrits de la liste d&apos;attente auront le premier mois offert.
+          Le DCG, puis la licence et le master CCA, suivront.
         </p>
       </section>
 
-      <section id="liste" className={styles.waitlist}>
-        <h2>Être prévenu du lancement</h2>
-        {done ? (
-          <p className={styles.success}>
-            {state === "ok" ? "C'est noté. Tu recevras un e-mail au lancement, avec ton mois offert." : "Tu es déjà sur la liste. On te prévient au lancement."}
-          </p>
-        ) : (
-          <form onSubmit={submit} className={styles.form}>
-            <label htmlFor="email">Ton e-mail</label>
-            <input id="email" type="email" required autoComplete="email" placeholder="prenom@exemple.fr"
-              value={email} onChange={(e) => setEmail(e.target.value)} />
-            <div className={styles.twoCols}>
-              <div>
-                <label htmlFor="ue">UE que tu prépares</label>
-                <select id="ue" value={ue} onChange={(e) => setUe(e.target.value)}>
-                  <option value="ue1">UE1 · Juridique, fiscal, social</option>
-                  <option value="ue2">UE2 · Finance</option>
-                  <option value="ue3">UE3 · Contrôle de gestion</option>
-                  <option value="ue4">UE4 · Comptabilité et audit</option>
-                  <option value="ue5">UE5 · Systèmes d&apos;information</option>
-                  <option value="toutes">Plusieurs UE</option>
-                </select>
-              </div>
-              <div>
-                <label htmlFor="profil">Tu es</label>
-                <select id="profil" value={profil} onChange={(e) => setProfil(e.target.value)}>
-                  <option value="alternant">En alternance</option>
-                  <option value="initial">En formation initiale</option>
-                  <option value="libre">Candidat libre</option>
-                  <option value="autre">Autre</option>
-                </select>
-              </div>
-            </div>
-            <button type="submit" disabled={state === "sending"}>
-              {state === "sending" ? "Inscription…" : "M'inscrire sur la liste"}
-            </button>
-            {state === "error" && <p className={styles.error}>L&apos;inscription n&apos;a pas abouti. Vérifie ta connexion et réessaie.</p>}
-            {state === "offline" && <p className={styles.error}>La liste d&apos;attente ouvre très bientôt. Reviens dans quelques heures.</p>}
-            <p className={styles.legal}>
-              Ton e-mail sert uniquement à te prévenir du lancement. Désinscription sur simple demande.{" "}
-              <Link href="/confidentialite">Confidentialité</Link>
-            </p>
-          </form>
-        )}
+      <section id="beta" className={styles.waitlist}>
+        <h2>La bêta est ouverte</h2>
+        <p className={styles.note}>
+          UE1, UE2, UE4 et UE5 déjà en ligne, de nouveaux épisodes chaque semaine jusqu&apos;à couvrir tout le programme,
+          même les notions qui tombent rarement. Accès complet et gratuit, il suffit d&apos;un compte.
+        </p>
+        <div className={styles.ctas} style={{ marginTop: 16 }}>
+          <Link href="/connexion?mode=inscription" className={styles.primary}>Créer mon compte gratuit</Link>
+        </div>
       </section>
 
       <footer className={styles.footer}>
@@ -140,7 +89,7 @@ export function Landing() {
         <nav className={styles.footLinks}>
           <Link href="/mentions-legales">Mentions légales</Link>
           <Link href="/confidentialite">Confidentialité</Link>
-          <Link href="/app">Ouvrir l&apos;appli</Link>
+          <Link href="/connexion?mode=connexion">Se connecter</Link>
         </nav>
       </footer>
     </div>
