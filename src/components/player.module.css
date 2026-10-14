@@ -51,7 +51,7 @@
 
 .fiche { display: flex; flex-direction: column; gap: 12px; }
 .card { border: 1px solid var(--line); border-radius: 14px; padding: 14px; display: flex; flex-direction: column; gap: 10px; background: var(--bg); min-width: 0; }
-.formula { font-family: var(--mono); font-size: 15px; line-height: 1.5; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; white-space: normal; overflow-wrap: anywhere; }
+.formula { font-family: var(--mono); font-size: 15px; line-height: 1.5; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; white-space: pre-line; overflow-wrap: anywhere; }
 .legend { margin: 0; padding-left: 18px; font-size: 14px; color: var(--muted); }
 .trap { margin: 0; font-size: 14px; background: var(--bad-soft); color: var(--bad); border-radius: 8px; padding: 8px 10px; }
 .journalWrap { overflow-x: auto; }
