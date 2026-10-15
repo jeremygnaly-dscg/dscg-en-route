@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import type { Episode } from "@/content/types";
-import { EPISODES } from "@/content/episodes";
+import { EPISODES, libelleUe } from "@/content/episodes";
 import { ambient, AMBIANCES } from "@/lib/ambient";
 import { usePrefs, useProgress, useQuizAttente, type Progress } from "@/lib/prefs";
 import { Quiz } from "./Quiz";
@@ -29,8 +29,9 @@ function Rich({ text }: { text: string }) {
 }
 
 // Épisode suivant de la même UE : d'abord ceux pas encore écoutés
-function suivant(e: Episode, progress: Progress, ouvert: (x: Episode) => boolean = () => true): Episode | null {
-  const all = EPISODES.filter((x) => x.ue === e.ue && x.status === "live" && (x.id === e.id || ouvert(x)));
+function suivant(e: Episode, progress: Progress, ouvert: (x: Episode) => boolean = () => true, ue: string = e.ue): Episode | null {
+  const dansUe = (x: Episode) => x.ue === ue || !!x.aussi?.includes(ue as Episode["ue"]);
+  const all = EPISODES.filter((x) => dansUe(x) && x.status === "live" && (x.id === e.id || ouvert(x)));
   const i = all.findIndex((x) => x.id === e.id);
   const ordre = [...all.slice(i + 1), ...all.slice(0, Math.max(i, 0))];
   return ordre.find((x) => !progress[x.id]?.done) ?? ordre[0] ?? null;
@@ -41,6 +42,8 @@ export function Player({ episode }: { episode: Episode }) {
   const [progress, markDone] = useProgress();
   const [, addAttente, removeAttente] = useQuizAttente();
   const [ep, setEp] = useState(episode);
+  // UE depuis laquelle l'élève est arrivé (un épisode peut servir à plusieurs UE, DSCG et DCG)
+  const [ueCtx, setUeCtx] = useState<string>(episode.ue);
   const { abos } = useAbonnements();
   const ouvert = (x: Episode) => aAcces(x, abos);
   const [part, setPart] = useState<Part>("scene");
@@ -54,6 +57,8 @@ export function Player({ episode }: { episode: Episode }) {
   useEffect(() => {
     const p = new URLSearchParams(window.location.search).get("p");
     if (p === "flash" || p === "fiche") setPart(p);
+    const u = new URLSearchParams(window.location.search).get("ue");
+    if (u && episode.aussi?.includes(u as Episode["ue"])) setUeCtx(u);
   }, []);
 
   // Écran verrouillé / casque : titre de l'épisode
@@ -99,7 +104,7 @@ export function Player({ episode }: { episode: Episode }) {
     if (part !== "cours") return;
     // Fin du cours
     addAttente(ep.id);
-    const next = suivant(ep, progress, ouvert);
+    const next = suivant(ep, progress, ouvert, ueCtx);
     if (prefs.apres === "suite" && next) { allerA(next, true); return; }
     setPlaying(false);
     ambient?.fadeOut(4);
@@ -112,7 +117,7 @@ export function Player({ episode }: { episode: Episode }) {
     if (!("mediaSession" in navigator)) return;
     navigator.mediaSession.setActionHandler("play", play);
     navigator.mediaSession.setActionHandler("pause", pause);
-    const next = suivant(ep, progress, ouvert);
+    const next = suivant(ep, progress, ouvert, ueCtx);
     navigator.mediaSession.setActionHandler("nexttrack", next ? () => allerA(next, true) : null);
   });
 
@@ -138,15 +143,15 @@ export function Player({ episode }: { episode: Episode }) {
     if (order.indexOf(p) < order.indexOf(part)) return 100;
     return done && p !== "fiche" ? 100 : 0;
   };
-  const next = suivant(ep, progress, ouvert);
+  const next = suivant(ep, progress, ouvert, ueCtx);
 
   if (!ouvert(ep)) {
     return (
       <div className={styles.wrap}>
-        <Link href={`/app?ue=${ep.ue}`} className={styles.back}>← Épisodes {ep.ue.toUpperCase()}</Link>
+        <Link href={`/app?ue=${ueCtx}`} className={styles.back}>← Épisodes {libelleUe(ueCtx)}</Link>
         <section className={styles.player}>
           <div className={styles.head}>
-            <span className="label">{ep.ue.toUpperCase()} · {ep.minutes} min d&apos;écoute</span>
+            <span className="label">{libelleUe(ueCtx)} · {ep.minutes} min d&apos;écoute</span>
             <h1>{ep.title}</h1>
             <span className={styles.ref}>{ep.ref}</span>
           </div>
@@ -155,7 +160,7 @@ export function Player({ episode }: { episode: Episode }) {
             <span>Cet épisode, son quiz et sa fiche font partie de l&apos;abonnement Zenvise à 9,99 €/mois, toutes UE comprises. Le premier épisode de chaque UE reste gratuit.</span>
           </div>
           <div className={styles.actions}>
-            <Link href={`/app/abonnement?ue=${ep.ue}`} className={styles.primary}>Voir les abonnements</Link>
+            <Link href={`/app/abonnement`} className={styles.primary}>Voir les abonnements</Link>
           </div>
         </section>
       </div>
@@ -164,11 +169,11 @@ export function Player({ episode }: { episode: Episode }) {
 
   return (
     <div className={styles.wrap}>
-      <Link href={`/app?ue=${ep.ue}`} className={styles.back} data-noprint>← Épisodes {ep.ue.toUpperCase()}</Link>
+      <Link href={`/app?ue=${ueCtx}`} className={styles.back} data-noprint>← Épisodes {libelleUe(ueCtx)}</Link>
 
       <section className={styles.player} aria-label="Lecteur" data-noprint>
         <div className={styles.head}>
-          <span className="label">{ep.ue.toUpperCase()} · {ep.minutes} min d&apos;écoute · {ep.format === "comptable" ? "comptabilité" : ep.format === "technique" ? "technique" : "juridique"}</span>
+          <span className="label">{libelleUe(ueCtx)} · {ep.minutes} min d&apos;écoute · {ep.format === "comptable" ? "comptabilité" : ep.format === "technique" ? "technique" : "juridique"}</span>
           <h1>{ep.title}</h1>
           <span className={styles.ref}>{ep.ref}</span>
         </div>

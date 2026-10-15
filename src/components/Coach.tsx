@@ -1,7 +1,8 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { EPISODES, UES, findEpisode } from "@/content/episodes";
+import { EPISODES, UES, findEpisode, libelleUe, uesDe } from "@/content/episodes";
+import { useDiplome } from "@/lib/diplome";
 import type { UeId } from "@/content/types";
 import { todayIso, useProgress } from "@/lib/prefs";
 import {
@@ -158,7 +159,7 @@ function SeanceCard({ s, progress, compact }: { s: ReturnType<typeof buildPlan>[
                 <Link href={`/episode/${it.episodeId}`} className={styles.item}>
                   <i className={it.type === "nouveau" ? styles.tagNew : styles.tagRev}>{it.type === "nouveau" ? "Nouveau" : "Révision"}</i>
                   <span>{ep?.title}</span>
-                  <small>{it.ue.toUpperCase()} · {it.minutes} min{fait ? " · fait" : ""}</small>
+                  <small>{libelleUe(it.ue)} · {it.minutes} min{fait ? " · fait" : ""}</small>
                 </Link>
               </li>
             );
@@ -176,6 +177,7 @@ function Setup({ initial, onSave, onCancel }: { initial: CoachConfig | null; onS
   const [etape, setEtape] = useState(0);
   const [prenom, setPrenom] = useState(initial?.prenom ?? "");
   const [epreuves, setEpreuves] = useState<Epreuve[]>(initial?.epreuves ?? []);
+  const [diplome] = useDiplome();
   const [creneaux, setCreneaux] = useState<Creneau[]>(initial?.creneaux ?? []);
 
   const toggleUe = (ue: UeId) =>
@@ -208,7 +210,7 @@ function Setup({ initial, onSave, onCancel }: { initial: CoachConfig | null; onS
             <input id="prenom" value={prenom} onChange={(e) => setPrenom(e.target.value.slice(0, 30))} placeholder="Prénom" autoComplete="given-name" />
           </label>
           <div className={styles.ueList}>
-            {UES.map((u) => {
+            {UES.filter((u) => u.diplome === diplome || epreuves.some((x) => x.ue === u.id)).map((u) => {
               const e = epreuves.find((x) => x.ue === u.id);
               return (
                 <div key={u.id} className={`${styles.ueRow} ${e ? styles.ueOn : ""}`}>
@@ -272,7 +274,7 @@ function Setup({ initial, onSave, onCancel }: { initial: CoachConfig | null; onS
         <section className={styles.block}>
           <ul className={styles.recap}>
             {[...epreuves].sort((a, b) => a.date.localeCompare(b.date)).map((e) => (
-              <li key={e.ue}><b>{e.ue.toUpperCase()}</b> le {dateFr(e.date)} · J-{daysBetween(todayIso(), e.date)}</li>
+              <li key={e.ue}><b>{libelleUe(e.ue)}</b> le {dateFr(e.date)} · J-{daysBetween(todayIso(), e.date)}</li>
             ))}
           </ul>
           <p>{creneaux.length} créneau{creneaux.length > 1 ? "x" : ""} par semaine, {minSem} minutes d&apos;écoute au total.</p>

@@ -1,13 +1,15 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { UES, episodesOf, findEpisode } from "@/content/episodes";
+import { DIPLOMES, UES, diplomeDe, episodesOf, findEpisode, uesDe } from "@/content/episodes";
+import { useDiplome } from "@/lib/diplome";
 import { useProgress, useQuizAttente } from "@/lib/prefs";
 import { Installer } from "./Installer";
 import { aAcces, estGratuit, useAbonnements, venteActive } from "@/lib/vente";
 import styles from "./home.module.css";
 
 export function Home() {
+  const [diplome, setDiplome] = useDiplome();
   const [ue, setUe] = useState("ue1");
   const [progress] = useProgress();
   const [attente] = useQuizAttente();
@@ -16,8 +18,13 @@ export function Home() {
 
   useEffect(() => {
     const q = new URLSearchParams(window.location.search).get("ue");
-    if (q && UES.some((u) => u.id === q && u.available)) setUe(q);
-  }, []);
+    if (q && UES.some((u) => u.id === q && u.available)) { setUe(q); if (diplomeDe(q) !== diplome) setDiplome(diplomeDe(q)); }
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Changement de diplôme : on affiche sa première UE
+  useEffect(() => {
+    if (diplomeDe(ue) !== diplome) setUe(uesDe(diplome)[0].id);
+  }, [diplome]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const current = UES.find((u) => u.id === ue)!;
   const list = [...episodesOf(ue)].sort((a, b) => (a.status === b.status ? 0 : a.status === "live" ? -1 : 1));
@@ -46,8 +53,14 @@ export function Home() {
         </section>
       )}
 
+      <div className={styles.diplomes} role="group" aria-label="Diplôme">
+        {DIPLOMES.map((d) => (
+          <button key={d.id} aria-pressed={diplome === d.id} onClick={() => setDiplome(d.id)}>{d.nom}</button>
+        ))}
+      </div>
+
       <div className={styles.ues} role="group" aria-label="Unités d'enseignement">
-        {UES.map((u) => (
+        {uesDe(diplome).map((u) => (
           <button key={u.id} className={styles.ue} aria-pressed={u.id === ue} disabled={!u.available}
             onClick={() => { setUe(u.id); history.replaceState(null, "", `/app?ue=${u.id}`); }}>
             {u.short} <small>{u.available ? u.name.split(" ")[0] : "bientôt"}</small>
@@ -63,7 +76,7 @@ export function Home() {
         <p className={styles.sub}>Classés par fréquence à l&apos;examen. Programme de la session 2027.</p>
         <div className={styles.list}>
           {live.map((e, i) => (
-            <Link key={e.id} href={`/episode/${e.id}`} className={styles.ep}>
+            <Link key={e.id} href={e.ue === ue ? `/episode/${e.id}` : `/episode/${e.id}?ue=${ue}`} className={styles.ep}>
               <span className={styles.n}>{String(i + 1).padStart(2, "0")}</span>
               <span className={styles.t}><b>{e.title}</b><span>{e.ref}</span></span>
               {!aAcces(e, abos)

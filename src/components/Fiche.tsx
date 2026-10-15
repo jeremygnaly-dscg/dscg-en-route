@@ -1,4 +1,5 @@
 import type { Ecriture, Episode, Formule } from "@/content/types";
+import { libelleUe } from "@/content/episodes";
 import styles from "./player.module.css";
 
 // Formatage identique côté serveur et téléphone (évite les écarts d'espaces de toLocaleString)
@@ -67,7 +68,7 @@ export function FicheRevision({ episode }: { episode: Episode }) {
   return (
     <div className={styles.fiche}>
       <div className={styles.ficheHead}>
-        <span className="label">{episode.ue.toUpperCase()} · Fiche de révision</span>
+        <span className="label">{libelleUe(episode.ue)} · Fiche de révision</span>
         <h2>{episode.title}</h2>
         <span className={styles.ref}>{episode.ref}</span>
       </div>

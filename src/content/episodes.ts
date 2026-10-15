@@ -10,12 +10,50 @@ import { FICHES } from "./fiches";
 import { PROGRAMME } from "./programme";
 
 export const UES: Ue[] = [
-  { id: "ue1", short: "UE1", name: "Gestion juridique, fiscale et sociale", available: true },
-  { id: "ue3", short: "UE3", name: "Contrôle de gestion et stratégie", available: true },
-  { id: "ue2", short: "UE2", name: "Finance", available: true },
-  { id: "ue4", short: "UE4", name: "Comptabilité et audit", available: true },
-  { id: "ue5", short: "UE5", name: "Management des systèmes d'information", available: true },
+  { id: "ue1", diplome: "dscg", short: "UE1", name: "Gestion juridique, fiscale et sociale", available: true },
+  { id: "ue2", diplome: "dscg", short: "UE2", name: "Finance", available: true },
+  { id: "ue3", diplome: "dscg", short: "UE3", name: "Contrôle de gestion et stratégie", available: true },
+  { id: "ue4", diplome: "dscg", short: "UE4", name: "Comptabilité et audit", available: true },
+  { id: "ue5", diplome: "dscg", short: "UE5", name: "Management des systèmes d'information", available: true },
+  { id: "dcg1", diplome: "dcg", short: "UE1", name: "Fondamentaux du droit", available: true },
+  { id: "dcg2", diplome: "dcg", short: "UE2", name: "Droit des sociétés et des groupements d'affaires", available: true },
+  { id: "dcg3", diplome: "dcg", short: "UE3", name: "Droit social", available: true },
+  { id: "dcg4", diplome: "dcg", short: "UE4", name: "Droit fiscal", available: true },
+  { id: "dcg5", diplome: "dcg", short: "UE5", name: "Économie contemporaine", available: true },
+  { id: "dcg6", diplome: "dcg", short: "UE6", name: "Finance d'entreprise", available: true },
+  { id: "dcg7", diplome: "dcg", short: "UE7", name: "Management", available: true },
+  { id: "dcg8", diplome: "dcg", short: "UE8", name: "Systèmes d'information de gestion", available: true },
+  { id: "dcg9", diplome: "dcg", short: "UE9", name: "Comptabilité", available: true },
+  { id: "dcg10", diplome: "dcg", short: "UE10", name: "Comptabilité approfondie", available: true },
+  { id: "dcg11", diplome: "dcg", short: "UE11", name: "Contrôle de gestion", available: true },
 ];
+
+export const DIPLOMES = [
+  { id: "dscg" as const, nom: "DSCG" },
+  { id: "dcg" as const, nom: "DCG" },
+];
+export const uesDe = (d: string) => UES.filter((u) => u.diplome === d);
+export const diplomeDe = (ue: string) => UES.find((u) => u.id === ue)?.diplome ?? "dscg";
+// Libellé lisible : « DSCG UE1 », « DCG UE4 »
+export const libelleUe = (ue: string) => {
+  const u = UES.find((x) => x.id === ue);
+  return u ? `${u.diplome.toUpperCase()} ${u.short}` : ue.toUpperCase();
+};
+
+// Épisodes DSCG qui couvrent aussi une notion du DCG : ils apparaissent dans les deux listes
+const AUSSI: Record<string, Episode["ue"][]> = {
+  "calcul-is": ["dcg4"], "regime-mere-fille": ["dcg4"], "tva-territorialite": ["dcg4"], "tva-intracom-biens": ["dcg4"],
+  "controle-fiscal": ["dcg4"], "procedure-rectification": ["dcg4"],
+  "cautionnement": ["dcg1"], "concurrence-deloyale": ["dcg1"],
+  "procedures-collectives": ["dcg2"], "prevention-difficultes": ["dcg2"], "abus-biens-sociaux": ["dcg2"],
+  "cession-titres-agrement": ["dcg2"], "sa-conseil-administration": ["dcg2"], "pactes-associes": ["dcg2"],
+  "transfert-contrats-travail": ["dcg3"],
+  "van-tri": ["dcg6"], "roe-roce-structure": ["dcg6"], "tableau-flux": ["dcg6"], "cout-financements": ["dcg6"], "cmpc": ["dcg6"],
+  "conduite-changement": ["dcg7"],
+  "bases-de-donnees": ["dcg8"], "processus-urbanisation": ["dcg8"], "projet-erp": ["dcg8"], "securite-si-rgpd": ["dcg8"],
+  "bi-donnees": ["dcg8"], "gestion-projet-agile": ["dcg8"],
+  "provision-litige": ["dcg9"], "cac-nomination-mission": ["dcg10"], "fusion-parite-prime": ["dcg10"],
+};
 
 // Contenu démo rédigé à partir du CGI. À FAIRE RELIRE avant toute vente.
 export const EPISODES: Episode[] = [
@@ -217,7 +255,8 @@ export const EPISODES: Episode[] = [
 ];
 
 function soon(id: string, ue: Episode["ue"], title: string, ref: string): Episode {
-  const format = ue === "ue1" ? "juridique" : ue === "ue4" ? "comptable" : "technique";
+  const format = ["ue1", "dcg1", "dcg2", "dcg3", "dcg4"].includes(ue) ? "juridique"
+    : ["ue4", "dcg9", "dcg10"].includes(ue) ? "comptable" : "technique";
   return { id, ue, format, title, ref, minutes: 0, status: "soon", scene: [], cours: [], flash: [] };
 }
 
@@ -233,11 +272,12 @@ for (const [ue, notions] of Object.entries(PROGRAMME)) {
 // Règle produit : un épisode n'est jouable qu'avec la voix studio. Sinon il reste « bientôt disponible ».
 for (const e of EPISODES) {
   if (!e.fiche && FICHES[e.id]) e.fiche = FICHES[e.id];
+  if (AUSSI[e.id]) e.aussi = [...new Set([...(e.aussi ?? []), ...AUSSI[e.id]])];
   if (AUDIO_DISPO.includes(e.id)) e.audio = { scene: `/audio/${e.id}-scene.mp3`, cours: `/audio/${e.id}-cours.mp3` };
   // Durée affichée = durée réelle d'écoute, arrondie à la minute
   if (AUDIO_DUREE[e.id]) e.minutes = Math.max(1, Math.round(AUDIO_DUREE[e.id] / 60));
   else if (e.status === "live") e.status = "ecrit";
 }
 
-export const episodesOf = (ue: string) => EPISODES.filter((e) => e.ue === ue);
+export const episodesOf = (ue: string) => EPISODES.filter((e) => e.ue === ue || e.aussi?.includes(ue as Episode["ue"]));
 export const findEpisode = (id: string) => EPISODES.find((e) => e.id === id);

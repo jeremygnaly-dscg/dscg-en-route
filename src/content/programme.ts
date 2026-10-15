@@ -3,13 +3,14 @@
 // Chaque notion pointe vers le ou les épisodes qui la traitent ; l'id d'une notion non traitée
 // sert d'id au futur épisode. La page /production en tire le taux de couverture.
 import type { UeId } from "./types";
+import { PROGRAMME_DCG } from "./programme-dcg";
 
 export type Frequence = "forte" | "moyenne" | "rare";
 export interface Notion { id: string; titre: string; partie: string; freq: Frequence; episodes?: string[] }
 
 const n = (partie: string, freq: Frequence, id: string, titre: string, episodes?: string[]): Notion => ({ id, titre, partie, freq, episodes });
 
-export const PROGRAMME: Partial<Record<UeId, Notion[]>> = {
+const PROGRAMME_DSCG: Partial<Record<UeId, Notion[]>> = {
   ue1: [
     n("Contrats", "moyenne", "contrat-formation", "Formation du contrat : négociation, offre, consentement"),
     n("Contrats", "moyenne", "contrat-inexecution", "Effets du contrat, inexécution et imprévision"),
@@ -182,3 +183,5 @@ export const PROGRAMME: Partial<Record<UeId, Notion[]>> = {
     n("Audit du SI", "moyenne", "blockchain", "La blockchain"),
   ],
 };
+
+export const PROGRAMME: Partial<Record<UeId, Notion[]>> = { ...PROGRAMME_DSCG, ...PROGRAMME_DCG };

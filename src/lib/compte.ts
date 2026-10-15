@@ -58,6 +58,12 @@ export function fusionner(a: Progress, b: Progress): Progress {
 
 // À la connexion : récupère la progression du compte et la fusionne avec celle du téléphone
 export async function synchroniser(userId: string) {
+  const { data: u } = await supabase.auth.getUser();
+  const dip = u.user?.user_metadata?.diplome;
+  if (dip === "dcg" || dip === "dscg") {
+    const { diplomeConnu, enregistrerDiplome } = await import("./diplome");
+    if (!diplomeConnu()) enregistrerDiplome(dip);
+  }
   const { data, error } = await supabase.from("profils").select("progression, coach").eq("id", userId).maybeSingle();
   if (error) return;
   const locale = lire<Progress>("der-progress", {});

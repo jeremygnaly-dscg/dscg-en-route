@@ -19,6 +19,7 @@ export function Connexion() {
   const [email, setEmail] = useState("");
   const [mdp, setMdp] = useState("");
   const [situation, setSituation] = useState("alternance");
+  const [diplome, setDiplome] = useState<"dscg" | "dcg">("dscg");
   const [accord, setAccord] = useState(false);
   const [etat, setEtat] = useState<"idle" | "envoi" | "verifier">("idle");
   const [erreur, setErreur] = useState("");
@@ -38,9 +39,13 @@ export function Connexion() {
     setEtat("envoi");
     const mail = email.trim().toLowerCase();
     const res = mode === "inscription"
-      ? await supabase.auth.signUp({ email: mail, password: mdp, options: { data: { prenom: prenom.trim().slice(0, 60), situation } } })
+      ? await supabase.auth.signUp({ email: mail, password: mdp, options: { data: { prenom: prenom.trim().slice(0, 60), situation, diplome } } })
       : await supabase.auth.signInWithPassword({ email: mail, password: mdp });
     if (res.error) { setEtat("idle"); return setErreur(messageErreur(res.error.message)); }
+    if (mode === "inscription") {
+      const { enregistrerDiplome } = await import("@/lib/diplome");
+      enregistrerDiplome(diplome);
+    }
     if (!res.data.session) return setEtat("verifier"); // confirmation par email activée dans Supabase
     window.location.replace(destination());
   };
@@ -83,7 +88,12 @@ export function Connexion() {
             {mode === "inscription" && (
               <>
                 <span className={styles.hint}>8 caractères minimum.</span>
-                <label htmlFor="situation">Tu prépares le DSCG</label>
+                <label htmlFor="diplome">Tu prépares</label>
+                <select id="diplome" value={diplome} onChange={(e) => setDiplome(e.target.value as "dscg" | "dcg")}>
+                  <option value="dscg">Le DSCG</option>
+                  <option value="dcg">Le DCG</option>
+                </select>
+                <label htmlFor="situation">Ta situation</label>
                 <select id="situation" value={situation} onChange={(e) => setSituation(e.target.value)}>
                   <option value="alternance">En alternance</option>
                   <option value="initiale">En formation initiale</option>

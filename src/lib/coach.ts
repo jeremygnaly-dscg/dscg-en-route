@@ -74,17 +74,21 @@ export function minutesParSemaine(c: CoachConfig) {
  * - Chaque épisode écouté revient en révision à J+1, J+7 et J+21.
  * - Dans les 3 dernières semaines d'une UE, les révisions de cette UE passent en premier.
  */
+const dans = (x: Episode, ue: UeId) => x.ue === ue || !!x.aussi?.includes(ue);
+
 export function buildPlan(config: CoachConfig, episodes: Episode[], progress: Progress, today: string, maxDays = 400): Seance[] {
   const epreuves = config.epreuves.filter((e) => daysBetween(today, e.date) >= 0);
   if (!epreuves.length || !config.creneaux.length) return [];
   const examOf = new Map(epreuves.map((e) => [e.ue, e.date]));
+  // Un épisode peut servir à plusieurs UE (DSCG et DCG) : on retient celle que l'élève prépare
+  const ueDe = (ep: Episode): UeId => [ep.ue, ...(ep.aussi ?? [])].find((u) => examOf.has(u)) ?? ep.ue;
   const last = epreuves.map((e) => e.date).sort().at(-1)!;
   const horizon = Math.min(daysBetween(today, last), maxDays);
 
   // File des nouveaux épisodes par UE (ordre du catalogue = ordre de fréquence)
   const queues = new Map<UeId, Episode[]>();
   for (const e of epreuves) {
-    queues.set(e.ue, episodes.filter((x) => x.ue === e.ue && x.status === "live" && !progress[x.id]?.done));
+    queues.set(e.ue, episodes.filter((x) => dans(x, e.ue) && x.status === "live" && !progress[x.id]?.done));
   }
   // Révisions à venir : épisode → dates dues
   type Due = { episodeId: string; ue: UeId; date: string };
@@ -92,7 +96,7 @@ export function buildPlan(config: CoachConfig, episodes: Episode[], progress: Pr
   const ecouteLe = new Map<string, string>(); // épisode → jour de première écoute dans le plan
   const pushReviews = (ep: Episode, from: string) => {
     ecouteLe.set(ep.id, from);
-    due.push({ episodeId: ep.id, ue: ep.ue, date: addDays(from, ESPACEMENT[0]) });
+    due.push({ episodeId: ep.id, ue: ueDe(ep), date: addDays(from, ESPACEMENT[0]) });
   };
   // Après une révision : la suivante selon l'espacement, puis entretien tous les 30 jours (7 en sprint)
   const nbRev = new Map<string, number>();
@@ -107,12 +111,12 @@ export function buildPlan(config: CoachConfig, episodes: Episode[], progress: Pr
   };
   for (const ep of episodes) {
     const p = progress[ep.id];
-    if (!p?.done || !examOf.has(ep.ue)) continue;
+    if (!p?.done || !examOf.has(ueDe(ep))) continue;
     const start = p.date ?? today;
     const doneCount = Math.min(p.reviews?.length ?? 0, ESPACEMENT.length - 1);
     nbRev.set(ep.id, doneCount);
     const d = addDays(p.reviews?.at(-1) ?? start, doneCount === 0 ? ESPACEMENT[0] : ESPACEMENT[doneCount] - ESPACEMENT[doneCount - 1]);
-    due.push({ episodeId: ep.id, ue: ep.ue, date: daysBetween(today, d) < 0 ? today : d });
+    due.push({ episodeId: ep.id, ue: ueDe(ep), date: daysBetween(today, d) < 0 ? today : d });
   }
 
   const seances: Seance[] = [];
@@ -184,10 +188,10 @@ export function buildPlan(config: CoachConfig, episodes: Episode[], progress: Pr
 /** Combien de nouveaux épisodes par UE seront écoutés avant l'épreuve, à ce rythme. */
 export function couverture(plan: Seance[], config: CoachConfig, episodes: Episode[], progress: Progress) {
   return config.epreuves.map((e) => {
-    const live = episodes.filter((x) => x.ue === e.ue && x.status === "live");
+    const live = episodes.filter((x) => dans(x, e.ue) && x.status === "live");
     const deja = live.filter((x) => progress[x.id]?.done).length;
     const prevus = plan.flatMap((s) => s.items).filter((i) => i.ue === e.ue && i.type === "nouveau").length;
-    const total = episodes.filter((x) => x.ue === e.ue).length;
+    const total = episodes.filter((x) => dans(x, e.ue)).length;
     return { ue: e.ue, date: e.date, deja, prevus, disponibles: live.length, prevusAuCatalogue: total };
   });
 }

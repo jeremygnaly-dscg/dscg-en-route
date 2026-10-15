@@ -2,7 +2,11 @@
 // src/content/episodes.ts. Quand les MP3 ElevenLabs existent, renseigner `audio`
 // (fichiers dans /public/audio/) : l'appli les lira à la place de la voix du téléphone.
 
-export type UeId = "ue1" | "ue2" | "ue3" | "ue4" | "ue5";
+export type Diplome = "dscg" | "dcg";
+// DSCG : ue1 à ue5 · DCG : dcg1 à dcg11 (épreuves écrites hors anglais)
+export type UeId =
+  | "ue1" | "ue2" | "ue3" | "ue4" | "ue5"
+  | "dcg1" | "dcg2" | "dcg3" | "dcg4" | "dcg5" | "dcg6" | "dcg7" | "dcg8" | "dcg9" | "dcg10" | "dcg11";
 
 export type Speaker =
   | "narrateur" // voix off, en italique
@@ -60,6 +64,7 @@ export interface FicheRevision {
 export interface Episode {
   id: string;
   ue: UeId;
+  aussi?: UeId[]; // autres UE où l'épisode sert aussi (ex. un épisode DSCG utile au DCG)
   format: Format;
   formules?: Formule[];
   ecritures?: Ecriture[];
@@ -80,6 +85,7 @@ export interface Episode {
 
 export interface Ue {
   id: UeId;
+  diplome: Diplome;
   short: string;
   name: string;
   available: boolean;

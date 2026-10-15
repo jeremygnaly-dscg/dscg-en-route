@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useDiplome } from "@/lib/diplome";
 import { PORTAIL_STRIPE, useAbonnements, valide, venteActive } from "@/lib/vente";
 import { envoyerAvis, seDeconnecter, supabase, supprimerCompte, useSession } from "@/lib/compte";
 import { EPISODES } from "@/content/episodes";
@@ -24,6 +25,7 @@ export function Profile() {
   const [avisEtat, setAvisEtat] = useState<"idle" | "envoi" | "ok" | "ko">("idle");
   const uid = session?.user.id;
   const { abos } = useAbonnements();
+  const [diplome, setDiplome] = useDiplome();
   const abosValides = abos.filter(valide);
 
   useEffect(() => {
@@ -159,7 +161,13 @@ export function Profile() {
           <label className={styles.champ}>Prénom
             <input value={prenom} maxLength={60} onChange={(e) => { setPrenom(e.target.value); setInfoEtat("idle"); }} autoComplete="given-name" />
           </label>
-          <label className={styles.champ}>Tu prépares le DSCG
+          <label className={styles.champ}>Tu prépares
+            <select value={diplome} onChange={(e) => setDiplome(e.target.value as "dscg" | "dcg")}>
+              <option value="dscg">Le DSCG</option>
+              <option value="dcg">Le DCG</option>
+            </select>
+          </label>
+          <label className={styles.champ}>Ta situation
             <select value={situation} onChange={(e) => { setSituation(e.target.value); setInfoEtat("idle"); }}>
               <option value="alternance">En alternance</option>
               <option value="initiale">En formation initiale</option>

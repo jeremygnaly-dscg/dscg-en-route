@@ -25,7 +25,7 @@ export default function Production() {
         <span className="label">Suivi de production</span>
         <h1>Programme zéro impasse</h1>
         <p className={styles.lead}>
-          {toutes.length} notions au programme (UE1, UE2, UE4, UE5) · {nb("live")} en ligne · {nb("ecrit")} écrites, voix à générer · {nb("soon")} à écrire.
+          {toutes.length} notions au programme (DSCG et DCG) · {nb("live")} en ligne · {nb("ecrit")} écrites, voix à générer · {nb("soon")} à écrire.
           L&apos;UE3 sera ajoutée avec les nouveaux cours.
         </p>
       </header>
@@ -37,7 +37,7 @@ export default function Production() {
         return (
           <section key={u.id} className={styles.block}>
             <div className={styles.blockHead}>
-              <h2>{u.short} · {u.name}</h2>
+              <h2>{u.diplome.toUpperCase()} {u.short} · {u.name}</h2>
               <span className={styles.meta}>{live + ecrit}/{notions.length} notions traitées</span>
             </div>
             <div className={styles.cov}>

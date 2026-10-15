@@ -100,9 +100,9 @@ export function Landing() {
       <section className={styles.bloc}>
         <h2>Pour qui</h2>
         <p>
-          Les candidats au DSCG, en formation initiale, en alternance ou en candidat libre. Toutes les notions du
-          programme y passent, même celles qui tombent rarement : zéro impasse quand tu as le temps de réviser.
-          D&apos;autres examens suivront.
+          Les candidats au DCG et au DSCG, en formation initiale, en alternance ou en candidat libre. Toutes les
+          notions du programme y passent, même celles qui tombent rarement : zéro impasse quand tu as le temps de
+          réviser. D&apos;autres examens suivront.
         </p>
       </section>
 
