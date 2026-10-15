@@ -1,82 +1,128 @@
-"use client";
-import { useEffect, useState } from "react";
 import Link from "next/link";
-import { nbBeta } from "@/lib/compte";
 import styles from "./landing.module.css";
 
-const STEPS = [
-  { t: "La scène", d: "Un dirigeant expose son problème à son expert-comptable. C'est la situation de l'examen, jouée comme un podcast." },
-  { t: "Le cours", d: "La règle, les articles à citer, la méthode de rédaction attendue par le correcteur. Voix douce, rythme posé." },
-  { t: "Le quiz", d: "Trois questions juste après l'écoute : se tester ancre la notion bien mieux que réécouter." },
-  { t: "La fiche", d: "L'essentiel en une phrase, les points à retenir, la méthode attendue, les pièges, et selon la matière les formules ou les écritures." },
+// Page de présentation : pourquoi Zenvise existe et à quoi il sert.
+// Le fil conducteur est une journée d'étudiant : on révise dans les moments qui existent déjà.
+
+const JOURNEE = [
+  { heure: "07:42", lieu: "Dans le RER", quoi: "Un épisode : le régime mère-fille, en 2 minutes", enCours: true },
+  { heure: "12:50", lieu: "À la pause", quoi: "Trois questions sur ce que tu as écouté le matin" },
+  { heure: "19:30", lieu: "En cuisinant", quoi: "Trois épisodes enchaînés, sans toucher au téléphone" },
+  { heure: "22:15", lieu: "Avant de dormir", quoi: "La fiche de révision, l'essentiel à relire" },
+];
+
+const EPISODE = [
+  { t: "La scène", d: "Un dirigeant expose son problème à son expert-comptable. C'est le cas d'examen, joué comme un podcast." },
+  { t: "Le cours", d: "La règle, les articles à citer, la méthode attendue par le correcteur. Une voix posée, un fond sonore calme." },
+  { t: "Le quiz", d: "Trois questions juste après l'écoute. Se tester ancre la notion bien mieux que réécouter." },
+  { t: "La fiche", d: "L'essentiel en une phrase, les points à retenir, les pièges, et selon la matière les formules ou les écritures." },
+];
+
+const RAPPELS = [
+  { j: "Jour 1", d: "Première écoute" },
+  { j: "J+1", d: "Quiz" },
+  { j: "J+7", d: "Révision" },
+  { j: "J+21", d: "Révision" },
+  { j: "Examen", d: "C'est resté" },
 ];
 
 export function Landing() {
-  const [count, setCount] = useState<number | null>(null);
-  useEffect(() => { void nbBeta().then(setCount); }, []);
-
   return (
     <div className={styles.page}>
-      <header className={styles.hero}>
+      <header className={styles.top}>
         <span className={styles.logo}>Zen<span>vise</span></span>
-        <span className={styles.kicker}>DSCG · session 2027 · nouveau programme</span>
-        <h1>Révise le DSCG <em>dans le RER.</em></h1>
-        <p className={styles.lead}>
-          Des épisodes audio de 2 à 3 minutes, suivis d&apos;un quiz et d&apos;une fiche, construits sur les vrais cas d&apos;examen.
-          Une scène, le cours, la fiche à retenir, trois questions.
-        </p>
-        <div className={styles.ctas}>
-          <Link href="/connexion?mode=inscription" className={styles.primary}>Rejoindre la bêta gratuite</Link>
-          <Link href="/connexion?mode=connexion" className={styles.secondary}>J&apos;ai déjà un compte</Link>
-        </div>
-        {count !== null && count > 0 && <p className={styles.count}>{count} bêta-testeur{count > 1 ? "s" : ""} déjà inscrit{count > 1 ? "s" : ""}</p>}
+        <Link href="/connexion?mode=connexion" className={styles.login}>Se connecter</Link>
       </header>
 
-      <section className={styles.proof} aria-label="Chiffres">
-        <div><b>17 281</b><span>candidats au DSCG en 2025</span></div>
-        <div><b>8 616</b><span>inscrits à l&apos;UE1, l&apos;épreuve la plus redoutée</span></div>
-        <div><b>19 %</b><span>des présents à l&apos;UE1 ont eu la moyenne</span></div>
-      </section>
-      <p className={styles.src}>Source : rapport du jury national du DSCG, session 2025.</p>
+      <section className={styles.hero}>
+        <h1>Réviser dans les moments qui existent déjà.</h1>
+        <p className={styles.lead}>
+          Le trajet du matin, la cuisine du soir, la marche jusqu&apos;au bureau. Zenvise transforme ces minutes en
+          révisions : des épisodes audio courts, construits sur des cas d&apos;examen, à écouter attentivement quand tu
+          peux te poser, ou en fond quand tes mains sont occupées.
+        </p>
+        <Link href="/connexion?mode=inscription" className={styles.cta}>Rejoindre la bêta gratuite</Link>
 
-      <section className={styles.how}>
-        <h2>Comment se passe un épisode</h2>
-        <ol>
-          {STEPS.map((s) => (
+        <ol className={styles.journee} aria-label="Une journée avec Zenvise">
+          {JOURNEE.map((m) => (
+            <li key={m.heure} className={m.enCours ? styles.enCours : undefined}>
+              <time className={styles.heure}>{m.heure}</time>
+              <div className={styles.moment}>
+                <b>{m.lieu}</b>
+                <span>{m.quoi}</span>
+                {m.enCours && (
+                  <span className={styles.onde} aria-hidden="true">
+                    {Array.from({ length: 22 }, (_, i) => <i key={i} style={{ animationDelay: `${((i * 7) % 11) * 0.09}s` }} />)}
+                  </span>
+                )}
+              </div>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section className={styles.bloc}>
+        <h2>Pourquoi Zenvise existe</h2>
+        <p>
+          Préparer un examen à côté d&apos;un travail, d&apos;une alternance ou en candidat libre, c&apos;est réviser avec des
+          journées déjà pleines. Les grosses sessions du week-end ne suffisent pas, et les livres restent souvent fermés.
+        </p>
+        <p>
+          Pourtant, on retient mieux en petites doses répétées sur plusieurs semaines qu&apos;en une seule longue séance.
+          Zenvise est construit sur cette idée : un peu à la fois, souvent, longtemps. Et dans des moments que tu ne
+          comptais pas utiliser.
+        </p>
+      </section>
+
+      <section className={styles.bloc}>
+        <h2>Deux façons d&apos;écouter</h2>
+        <div className={styles.deux}>
+          <div className={styles.actif}>
+            <h3>Quand tu peux te poser</h3>
+            <p>Tu écoutes l&apos;épisode, tu réponds aux trois questions, tu relis la fiche. Cinq minutes, et la notion est vraiment travaillée.</p>
+          </div>
+          <div className={styles.passif}>
+            <h3>Quand tes mains sont occupées</h3>
+            <p>En voiture, en cuisinant, en marchant : les épisodes s&apos;enchaînent, écran verrouillé. Les quiz t&apos;attendent pour plus tard.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.bloc}>
+        <h2>Sur la durée, pas la veille</h2>
+        <p>
+          Tu indiques tes épreuves et tes disponibilités. Le Coach te dit chaque jour quoi écouter : les nouvelles notions,
+          et les révisions au bon moment, pour que ce que tu écoutes aujourd&apos;hui soit encore là le jour de l&apos;examen.
+        </p>
+        <ol className={styles.rappels} aria-label="Exemple de révisions espacées">
+          {RAPPELS.map((r) => (
+            <li key={r.j}><b>{r.j}</b><span>{r.d}</span></li>
+          ))}
+        </ol>
+      </section>
+
+      <section className={styles.bloc}>
+        <h2>Un épisode, en quatre temps</h2>
+        <ol className={styles.etapes}>
+          {EPISODE.map((s) => (
             <li key={s.t}><b>{s.t}</b><span>{s.d}</span></li>
           ))}
         </ol>
-        <p className={styles.note}>
-          Voix studio, fond sonore mer, plage ou méditation. En voiture ou dans les transports,
-          le mode « Enchaîner » lance l&apos;épisode suivant tout seul et garde les quiz pour plus tard.
+      </section>
+
+      <section className={styles.bloc}>
+        <h2>Pour qui</h2>
+        <p>
+          Les candidats au DSCG, en formation initiale, en alternance ou en candidat libre. Toutes les notions du
+          programme y passent, même celles qui tombent rarement : zéro impasse quand tu as le temps de réviser.
+          D&apos;autres examens suivront.
         </p>
       </section>
 
-      <section className={styles.pricing}>
-        <h2>Prix de lancement</h2>
-        <div className={styles.plans} style={{ gridTemplateColumns: "1fr" }}>
-          <div className={`${styles.plan} ${styles.featured}`}>
-            <span className={styles.planName}>Abonnement Zenvise</span>
-            <b>9,99 €<small>/mois</small></b>
-            <span>Toutes les UE, tous les épisodes, quiz et fiches, et les nouveaux chaque semaine. Sans engagement.</span>
-          </div>
-        </div>
-        <p className={styles.note}>
-          Gratuit pendant la bêta. Ouverture payante quand les cinq UE écrites du DSCG seront couvertes :
-          les bêta-testeurs et les inscrits de la liste d&apos;attente auront le premier mois offert.
-          Le DCG, puis la licence et le master CCA, suivront.
-        </p>
-      </section>
-
-      <section id="beta" className={styles.waitlist}>
-        <h2>La bêta est ouverte</h2>
-        <p className={styles.note}>
-          UE1, UE2, UE4 et UE5 déjà en ligne, de nouveaux épisodes chaque semaine jusqu&apos;à couvrir tout le programme,
-          même les notions qui tombent rarement. Accès complet et gratuit, il suffit d&apos;un compte.
-        </p>
-        <div className={styles.ctas} style={{ marginTop: 16 }}>
-          <Link href="/connexion?mode=inscription" className={styles.primary}>Créer mon compte gratuit</Link>
-        </div>
+      <section className={styles.fin}>
+        <h2>Gratuit pendant la bêta</h2>
+        <p>Crée ton compte et accède à tous les épisodes. Ensuite, l&apos;abonnement sera à 9,99 € par mois, sans engagement.</p>
+        <Link href="/connexion?mode=inscription" className={styles.cta}>Rejoindre la bêta gratuite</Link>
       </section>
 
       <footer className={styles.footer}>
@@ -85,7 +131,6 @@ export function Landing() {
           <Link href="/mentions-legales">Mentions légales</Link>
           <Link href="/confidentialite">Confidentialité</Link>
           <Link href="/cgv">CGV</Link>
-          <Link href="/connexion?mode=connexion">Se connecter</Link>
         </nav>
       </footer>
     </div>
