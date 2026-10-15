@@ -78,7 +78,7 @@ export function Home() {
           {live.map((e, i) => (
             <Link key={e.id} href={e.ue === ue ? `/episode/${e.id}` : `/episode/${e.id}?ue=${ue}`} className={styles.ep}>
               <span className={styles.n}>{String(i + 1).padStart(2, "0")}</span>
-              <span className={styles.t}><b>{e.title}</b><span>{e.ref}</span></span>
+              <span className={styles.t}><b>{e.title}</b><span>{e.cas2027 && <em className={styles.z27}>Format 2027</em>}{e.ref}</span></span>
               {!aAcces(e, abos)
                 ? <span className={styles.pill}>🔒 Abonnés</span>
                 : progress[e.id]?.done
@@ -94,7 +94,7 @@ export function Home() {
               {aVenir.map((e) => (
                 <div key={e.id} className={`${styles.ep} ${styles.locked}`}>
                   <span className={styles.n}>·</span>
-                  <span className={styles.t}><b>{e.title}</b><span>{e.ref}</span></span>
+                  <span className={styles.t}><b>{e.title}</b><span>{e.cas2027 && <em className={styles.z27}>Format 2027</em>}{e.ref}</span></span>
                   <span className={styles.pill}>bientôt</span>
                 </div>
               ))}

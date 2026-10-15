@@ -6,7 +6,7 @@ export type Diplome = "dscg" | "dcg";
 // DSCG : ue1 à ue5 · DCG : dcg1 à dcg11 (épreuves écrites hors anglais)
 export type UeId =
   | "ue1" | "ue2" | "ue3" | "ue4" | "ue5"
-  | "dcg1" | "dcg2" | "dcg3" | "dcg4" | "dcg5" | "dcg6" | "dcg7" | "dcg8" | "dcg9" | "dcg10" | "dcg11";
+  | "dcg1" | "dcg2" | "dcg3" | "dcg4" | "dcg5" | "dcg6" | "dcg7" | "dcg8" | "dcg9" | "dcg10" | "dcg11" | "dcg12" | "dcg13";
 
 export type Speaker =
   | "narrateur" // voix off, en italique
@@ -69,6 +69,7 @@ export interface Episode {
   formules?: Formule[];
   ecritures?: Ecriture[];
   fiche?: FicheRevision;
+  cas2027?: string; // cas construit sur le modèle d'un sujet zéro du référentiel 2027 (ex. « Sujet zéro DSCG UE2, dossier 1 »)
   title: string;
   ref: string; // référence principale, ex. "art. 145 et 216 CGI"
   minutes: number;

@@ -176,6 +176,7 @@ export function Player({ episode }: { episode: Episode }) {
           <span className="label">{libelleUe(ueCtx)} · {ep.minutes} min d&apos;écoute · {ep.format === "comptable" ? "comptabilité" : ep.format === "technique" ? "technique" : "juridique"}</span>
           <h1>{ep.title}</h1>
           <span className={styles.ref}>{ep.ref}</span>
+          {ep.cas2027 && <span className={styles.z27}>Format 2027 · sur le modèle du {ep.cas2027.charAt(0).toLowerCase() + ep.cas2027.slice(1)}</span>}
         </div>
 
         <div className={styles.parts} role="tablist">

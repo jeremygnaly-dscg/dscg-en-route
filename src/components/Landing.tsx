@@ -98,6 +98,19 @@ export function Landing() {
       </section>
 
       <section className={styles.bloc}>
+        <h2>Prêt pour la réforme 2027</h2>
+        <p>
+          Le DCG et le DSCG changent à la session 2027 : nouveaux programmes, et des sujets qui demandent davantage
+          d&apos;analyser, de justifier et de conseiller. Zenvise suit le nouveau référentiel, UE par UE.
+        </p>
+        <p>
+          Les cas marqués « Format 2027 » reprennent la construction des sujets zéro officiels : une situation de cabinet,
+          des documents à exploiter, une réponse argumentée. Avec d&apos;autres entreprises et d&apos;autres chiffres, pour
+          s&apos;entraîner sur la méthode plutôt que sur un corrigé appris par cœur.
+        </p>
+      </section>
+
+      <section className={styles.bloc}>
         <h2>Pour qui</h2>
         <p>
           Les candidats au DCG et au DSCG, en formation initiale, en alternance ou en candidat libre. Toutes les

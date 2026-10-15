@@ -6,6 +6,7 @@ import { LOT4 } from "./lot4";
 import { LOT5 } from "./lot5";
 import { LOT6 } from "./lot6";
 import { LOT_DCG1 } from "./lot-dcg1";
+import { LOT_2027 } from "./lot-2027";
 import { AUDIO_DISPO, AUDIO_DUREE } from "./audio";
 import { FICHES } from "./fiches";
 import { PROGRAMME } from "./programme";
@@ -17,16 +18,18 @@ export const UES: Ue[] = [
   { id: "ue4", diplome: "dscg", short: "UE4", name: "Comptabilité et audit", available: true },
   { id: "ue5", diplome: "dscg", short: "UE5", name: "Management des systèmes d'information", available: true },
   { id: "dcg1", diplome: "dcg", short: "UE1", name: "Fondamentaux du droit", available: true },
-  { id: "dcg2", diplome: "dcg", short: "UE2", name: "Droit des sociétés et des groupements d'affaires", available: true },
+  { id: "dcg2", diplome: "dcg", short: "UE2", name: "Droit des affaires", available: true },
   { id: "dcg3", diplome: "dcg", short: "UE3", name: "Droit social", available: true },
   { id: "dcg4", diplome: "dcg", short: "UE4", name: "Droit fiscal", available: true },
   { id: "dcg5", diplome: "dcg", short: "UE5", name: "Économie contemporaine", available: true },
   { id: "dcg6", diplome: "dcg", short: "UE6", name: "Finance d'entreprise", available: true },
-  { id: "dcg7", diplome: "dcg", short: "UE7", name: "Management", available: true },
+  { id: "dcg7", diplome: "dcg", short: "UE7", name: "Management des organisations", available: true },
   { id: "dcg8", diplome: "dcg", short: "UE8", name: "Systèmes d'information de gestion", available: true },
   { id: "dcg9", diplome: "dcg", short: "UE9", name: "Comptabilité", available: true },
   { id: "dcg10", diplome: "dcg", short: "UE10", name: "Comptabilité approfondie", available: true },
   { id: "dcg11", diplome: "dcg", short: "UE11", name: "Contrôle de gestion", available: true },
+  { id: "dcg12", diplome: "dcg", short: "UE12", name: "Anglais des affaires", available: true },
+  { id: "dcg13", diplome: "dcg", short: "UE13", name: "Communication professionnelle", available: true },
 ];
 
 export const DIPLOMES = [
@@ -46,14 +49,14 @@ const AUSSI: Record<string, Episode["ue"][]> = {
   "calcul-is": ["dcg4"], "regime-mere-fille": ["dcg4"], "tva-territorialite": ["dcg4"], "tva-intracom-biens": ["dcg4"],
   "controle-fiscal": ["dcg4"], "procedure-rectification": ["dcg4"],
   "cautionnement": ["dcg1"], "concurrence-deloyale": ["dcg1"],
-  "procedures-collectives": ["dcg2"], "prevention-difficultes": ["dcg2"], "abus-biens-sociaux": ["dcg2"],
+  "abus-biens-sociaux": ["dcg2"], "augmentation-capital-dps": ["dcg2"],
   "cession-titres-agrement": ["dcg2"], "sa-conseil-administration": ["dcg2"], "pactes-associes": ["dcg2"],
   "transfert-contrats-travail": ["dcg3"],
   "van-tri": ["dcg6"], "roe-roce-structure": ["dcg6"], "tableau-flux": ["dcg6"], "cout-financements": ["dcg6"], "cmpc": ["dcg6"],
   "conduite-changement": ["dcg7"],
   "bases-de-donnees": ["dcg8"], "processus-urbanisation": ["dcg8"], "projet-erp": ["dcg8"], "securite-si-rgpd": ["dcg8"],
   "bi-donnees": ["dcg8"], "gestion-projet-agile": ["dcg8"],
-  "provision-litige": ["dcg9"], "cac-nomination-mission": ["dcg10"], "fusion-parite-prime": ["dcg10"],
+  "provision-litige": ["dcg9"], "dcg-budget-tresorerie": ["ue3"], "dcg-ecarts": ["ue3"], "cac-nomination-mission": ["dcg10"], "fusion-parite-prime": ["dcg10"],
 };
 
 // Contenu démo rédigé à partir du CGI. À FAIRE RELIRE avant toute vente.
@@ -252,8 +255,7 @@ export const EPISODES: Episode[] = [
   ...LOT5,
   ...LOT6,
   ...LOT_DCG1,
-  soon("ue3-pilotage", "ue3", "Pilotage de la performance", "UE3 · tes cours + sujet zéro"),
-  soon("ue3-rse", "ue3", "Contrôle de gestion et RSE", "UE3 · tes cours + sujet zéro"),
+  ...LOT_2027,
 ];
 
 function soon(id: string, ue: Episode["ue"], title: string, ref: string): Episode {
