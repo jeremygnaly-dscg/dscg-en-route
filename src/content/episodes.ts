@@ -7,6 +7,8 @@ import { LOT5 } from "./lot5";
 import { LOT6 } from "./lot6";
 import { LOT_DCG1 } from "./lot-dcg1";
 import { LOT_2027 } from "./lot-2027";
+import { LOT_2027_DCG_A } from "./lot-2027-dcg-a";
+import { LOT_2027_DCG_B } from "./lot-2027-dcg-b";
 import { AUDIO_DISPO, AUDIO_DUREE } from "./audio";
 import { FICHES } from "./fiches";
 import { PROGRAMME } from "./programme";
@@ -256,6 +258,8 @@ export const EPISODES: Episode[] = [
   ...LOT6,
   ...LOT_DCG1,
   ...LOT_2027,
+  ...LOT_2027_DCG_A,
+  ...LOT_2027_DCG_B,
 ];
 
 function soon(id: string, ue: Episode["ue"], title: string, ref: string): Episode {

@@ -131,6 +131,7 @@ export const PROGRAMME_DCG: Partial<Record<UeId, Notion[]>> = {
     n("Trésorerie", "forte", "dcg-budget-tresorerie", "Le budget de trésorerie"),
     n("Trésorerie", "moyenne", "dcg-financement-ct", "Financements et placements à court terme"),
     n("Marchés", "moyenne", "dcg-marches-financiers", "Marchés financiers : actions et obligations"),
+    n("Investissement", "forte", "dcg-investissement-durable", "Investissement durable : VAN, carbone, taxonomie"),
   ],
   dcg7: [
     n("Organisations", "moyenne", "dcg-theories-organisations", "Grandes théories des organisations"),
@@ -148,6 +149,7 @@ export const PROGRAMME_DCG: Partial<Record<UeId, Notion[]>> = {
     n("Management des hommes", "moyenne", "dcg-decision", "Processus de décision"),
     n("Management des hommes", "rare", "dcg-entrepreneuriat", "Entrepreneuriat et PME"),
     n("Méthode", "forte", "dcg-methode-management", "Méthode : analyse managériale et question problématisée"),
+    n("Management opérationnel", "moyenne", "dcg-conflits-resilience", "Conflits, crises et résilience"),
   ],
   dcg8: [
     n("SI et organisation", "moyenne", "dcg-si-organisation", "Le système d'information dans l'organisation"),
@@ -156,9 +158,9 @@ export const PROGRAMME_DCG: Partial<Record<UeId, Notion[]>> = {
     n("Données", "forte", "dcg-tableur", "Tableur : fonctions et tableaux croisés"),
     n("Données", "moyenne", "dcg-donnees-bi", "Données, BI et big data", ["bi-donnees"]),
     n("Traitements", "moyenne", "dcg-algorithmique", "Algorithmique"),
-    n("Traitements", "forte", "dcg-processus", "Processus et modélisation BPMN", ["processus-urbanisation"]),
+    n("Traitements", "forte", "dcg-processus", "Processus et modélisation BPMN 2.0", ["processus-urbanisation"]),
     n("Traitements", "moyenne", "dcg-pgi", "Le progiciel de gestion intégré", ["projet-erp"]),
-    n("Sécurité et infrastructures", "moyenne", "dcg-securite", "Sécurité du SI et RGPD", ["securite-si-rgpd"]),
+    n("Sécurité et infrastructures", "moyenne", "dcg-securite", "Sécurité, RGPD, règlement IA et sobriété numérique", ["securite-si-rgpd"]),
     n("Sécurité et infrastructures", "rare", "dcg-reseaux-cloud", "Réseaux, cloud et architectures"),
     n("Sécurité et infrastructures", "moyenne", "dcg-dematerialisation", "Dématérialisation et facture électronique"),
     n("Projets", "rare", "dcg-gestion-projet", "Gestion de projet SI", ["gestion-projet-agile"]),
@@ -183,6 +185,9 @@ export const PROGRAMME_DCG: Partial<Record<UeId, Notion[]>> = {
     n("Inventaire", "forte", "dcg-creances-douteuses", "Créances douteuses et irrécouvrables"),
     n("Synthèse", "moyenne", "dcg-documents-synthese", "Bilan, compte de résultat et annexe"),
     n("Synthèse", "rare", "dcg-environnement-numerique", "Environnement numérique de la comptabilité"),
+    n("Contrôle et trésorerie", "forte", "dcg-rapprochement-lettrage", "Rapprochement bancaire et lettrage"),
+    n("Immobilisations", "forte", "dcg-vehicule-tourisme", "Véhicule de tourisme : coût TTC et amortissement"),
+    n("Profession", "moyenne", "dcg-professions-comptables", "Métiers du chiffre, CAC et dématérialisation"),
   ],
   dcg10: [
     n("Cadre", "moyenne", "dcg-cadre-profession", "Normalisation et profession comptable", ["cac-nomination-mission"]),
@@ -202,6 +207,8 @@ export const PROGRAMME_DCG: Partial<Record<UeId, Notion[]>> = {
     n("Résultat", "rare", "dcg-portefeuille-titres", "Portefeuille de titres"),
     n("Résultat", "rare", "dcg-changements-methode", "Changements de méthode et événements post-clôture"),
     n("Opérations", "rare", "dcg-fusion-simple", "Fusion simple", ["fusion-parite-prime"]),
+    n("Passif", "forte", "dcg-devises-hors-bilan", "Devises à la clôture et engagements hors bilan"),
+    n("Entités spécifiques", "moyenne", "dcg-associations", "Comptabilité des associations"),
   ],
   dcg11: [
     n("Coûts", "moyenne", "dcg-couts-complets", "Coûts complets et centres d'analyse"),
@@ -214,12 +221,14 @@ export const PROGRAMME_DCG: Partial<Record<UeId, Notion[]>> = {
     n("Prévision", "moyenne", "dcg-wilson", "Gestion des stocks : Wilson et stock de sécurité"),
     n("Prévision", "moyenne", "dcg-budgets", "Construction des budgets"),
     n("Prévision", "moyenne", "dcg-fonction-production", "Fonction de production et productivité"),
-    n("Prévision", "moyenne", "dcg-planification", "Planification de projet : PERT et Gantt"),
+    n("Prévision", "moyenne", "dcg-planification", "Ordonnancement de projet : méthode MPM"),
     n("Contrôle", "forte", "dcg-ecarts", "Coûts préétablis et analyse des écarts"),
     n("Contrôle", "moyenne", "dcg-ecarts-ventes", "Écarts sur chiffre d'affaires et sur marge"),
     n("Contrôle", "moyenne", "dcg-masse-salariale", "Analyse de la masse salariale"),
     n("Performance", "moyenne", "dcg-tableaux-bord", "Tableaux de bord et indicateurs"),
     n("Performance", "moyenne", "dcg-qualite", "Gestion de la qualité et coûts de la qualité"),
+    n("Prix", "forte", "dcg-elasticite-prix", "Élasticité prix de la demande"),
+    n("Performance", "forte", "dcg-prix-cession-interne", "Prix de cession interne"),
   ],
   // UE12 et UE13 : nouvelles au référentiel 2027 (pas de sujet zéro publié pour l'UE12)
   dcg12: [
