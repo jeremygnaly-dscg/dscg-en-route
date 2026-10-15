@@ -3,7 +3,11 @@ import { libelleUe } from "@/content/episodes";
 import styles from "./player.module.css";
 
 // Formatage identique côté serveur et téléphone (évite les écarts d'espaces de toLocaleString)
-const eur = (n?: number) => (n === undefined ? "" : String(n).replace(/\B(?=(\d{3})+(?!\d))/g, "\u00a0"));
+const eur = (n?: number) => {
+  if (n === undefined) return "";
+  const [ent, dec] = (Number.isInteger(n) ? String(n) : n.toFixed(2)).split(".");
+  return ent.replace(/\B(?=(\d{3})+(?!\d))/g, "\u00a0") + (dec ? "," + dec : "");
+};
 
 export function Formules({ items }: { items: Formule[] }) {
   return (
