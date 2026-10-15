@@ -5,6 +5,7 @@ import { LOT3 } from "./lot3";
 import { LOT4 } from "./lot4";
 import { LOT5 } from "./lot5";
 import { LOT6 } from "./lot6";
+import { LOT_DCG1 } from "./lot-dcg1";
 import { AUDIO_DISPO, AUDIO_DUREE } from "./audio";
 import { FICHES } from "./fiches";
 import { PROGRAMME } from "./programme";
@@ -250,6 +251,7 @@ export const EPISODES: Episode[] = [
   ...LOT4,
   ...LOT5,
   ...LOT6,
+  ...LOT_DCG1,
   soon("ue3-pilotage", "ue3", "Pilotage de la performance", "UE3 · tes cours + sujet zéro"),
   soon("ue3-rse", "ue3", "Contrôle de gestion et RSE", "UE3 · tes cours + sujet zéro"),
 ];
