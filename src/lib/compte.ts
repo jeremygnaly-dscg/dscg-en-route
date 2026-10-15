@@ -52,6 +52,9 @@ export function fusionner(a: Progress, b: Progress): Progress {
       date: dates[0],
       reviews: [...new Set([...(l.reviews ?? []), ...(r.reviews ?? [])])].sort(),
     };
+    const essais = [...new Map([...(l.essais ?? []), ...(r.essais ?? [])].map((e) => [`${e.d}|${e.ko.join(",")}`, e])).values()]
+      .sort((x, y) => x.d.localeCompare(y.d)).slice(-6);
+    if (essais.length) out[id].essais = essais;
   }
   return out;
 }

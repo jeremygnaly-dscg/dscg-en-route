@@ -5,6 +5,7 @@ import { EPISODES, UES, findEpisode, libelleUe, uesDe } from "@/content/episodes
 import { useDiplome } from "@/lib/diplome";
 import type { UeId } from "@/content/types";
 import { todayIso, useProgress } from "@/lib/prefs";
+import { aDeQuoiFaireUnBilan, contexteBilan, useBilan } from "@/lib/bilan";
 import {
   CONTEXTES, JOURS, buildPlan, calendrierIcs, couverture, daysBetween, messageCoach, minutesParSemaine,
   type CoachConfig, type Contexte, type Creneau, type Epreuve,
@@ -79,13 +80,14 @@ function Dashboard({ config, progress, today, onEdit }: {
         <p className={styles.bubble}>{messageCoach(config, progress, today)}</p>
       </header>
 
+      <BilanSemaine config={config} progress={progress} today={today} />
+
       <div className={styles.countdowns}>
         {epreuves.map((e) => {
           const j = daysBetween(today, e.date);
-          const u = UES.find((x) => x.id === e.ue);
           return (
             <div key={e.ue} className={`${styles.count} ${j <= 21 && j >= 0 ? styles.hot : ""}`}>
-              <span>{u?.short}</span>
+              <span>{libelleUe(e.ue)}</span>
               <b>{j >= 0 ? `J-${j}` : "Passée"}</b>
               <small>{dateFr(e.date)}</small>
             </div>
@@ -113,11 +115,10 @@ function Dashboard({ config, progress, today, onEdit }: {
       <section className={styles.block}>
         <h2>Où tu en seras le jour J</h2>
         {cov.map((c) => {
-          const u = UES.find((x) => x.id === c.ue);
           const pct = c.disponibles ? Math.round(((c.deja + c.prevus) / c.disponibles) * 100) : 0;
           return (
             <div key={c.ue} className={styles.cov}>
-              <div className={styles.covHead}><b>{u?.short}</b><span>{c.deja + c.prevus}/{c.disponibles} épisodes disponibles</span></div>
+              <div className={styles.covHead}><b>{libelleUe(c.ue)}</b><span>{c.deja + c.prevus}/{c.disponibles} épisodes disponibles</span></div>
               <div className={styles.bar}><span style={{ width: `${Math.min(100, pct)}%` }} /></div>
             </div>
           );
@@ -134,6 +135,36 @@ function Dashboard({ config, progress, today, onEdit }: {
 
       <button className={styles.ghost} onClick={onEdit}>Modifier mes épreuves et mes créneaux</button>
     </div>
+  );
+}
+
+function BilanSemaine({ config, progress, today }: { config: CoachConfig; progress: ReturnType<typeof useProgress>[0]; today: string }) {
+  const { etat, demander } = useBilan(today);
+  const contexte = useMemo(() => contexteBilan(config, progress, EPISODES, today), [config, progress, today]);
+  if (etat.etat === "chargement") return null;
+  return (
+    <section className={`${styles.block} ${styles.bilan}`}>
+      <div className={styles.blockHead}>
+        <h2>Ton bilan de la semaine</h2>
+        <span className={styles.meta}>{contexte.plan.joursActifs} jour{contexte.plan.joursActifs > 1 ? "s" : ""} actif{contexte.plan.joursActifs > 1 ? "s" : ""} sur 7</span>
+      </div>
+      {etat.etat === "pret" ? (
+        <div className={styles.bilanTexte}>
+          {etat.bilan.texte.split(/\n{2,}/).map((p, i) => <p key={i}>{p}</p>)}
+          <p className={styles.meta}>Rédigé par l&apos;IA à partir de tes quiz et de ton programme. Prochain bilan lundi.</p>
+        </div>
+      ) : etat.etat === "envoi" ? (
+        <p className={styles.empty}>Ton coach relit ta semaine…</p>
+      ) : (
+        <>
+          <p>Un retour personnalisé sur tes quiz et sur le respect de ton programme, avec les notions à retravailler. Un bilan par semaine.</p>
+          {etat.etat === "erreur" && <p className={styles.meta}>{etat.message}</p>}
+          <button className={styles.primary} disabled={!aDeQuoiFaireUnBilan(contexte)} onClick={() => demander(contexte)}>
+            {aDeQuoiFaireUnBilan(contexte) ? "Recevoir mon bilan" : "Écoute un épisode pour débloquer ton bilan"}
+          </button>
+        </>
+      )}
+    </section>
   );
 }
 

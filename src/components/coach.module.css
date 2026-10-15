@@ -68,3 +68,6 @@
 .recap { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; }
 .nav { display: flex; justify-content: space-between; gap: 10px; }
 .nav .primary { flex: 1; }
+.bilan { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+.bilanTexte { display: flex; flex-direction: column; gap: 10px; line-height: 1.55; }
+.bilanTexte p { margin: 0; }

@@ -3,7 +3,7 @@ import { useState } from "react";
 import type { FlashQuestion } from "@/content/types";
 import styles from "./player.module.css";
 
-export function Quiz({ questions, onFinish }: { questions: FlashQuestion[]; onFinish: (score: number) => void }) {
+export function Quiz({ questions, onFinish }: { questions: FlashQuestion[]; onFinish: (score: number, ko: number[]) => void }) {
   const [picked, setPicked] = useState<(number | null)[]>(() => questions.map(() => null));
   const answered = picked.filter((p) => p !== null).length;
   const score = picked.filter((p, i) => p === questions[i].answer).length;
@@ -12,7 +12,10 @@ export function Quiz({ questions, onFinish }: { questions: FlashQuestion[]; onFi
     if (picked[qi] !== null) return;
     const next = picked.map((p, i) => (i === qi ? ci : p));
     setPicked(next);
-    if (next.every((p) => p !== null)) onFinish(next.filter((p, i) => p === questions[i].answer).length);
+    if (next.every((p) => p !== null)) {
+      const ko = next.flatMap((p, i) => (p === questions[i].answer ? [] : [i]));
+      onFinish(questions.length - ko.length, ko);
+    }
   };
 
   return (

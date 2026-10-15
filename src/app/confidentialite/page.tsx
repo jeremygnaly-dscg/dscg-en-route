@@ -25,6 +25,7 @@ export default function Confidentialite() {
           <li>ton mot de passe, conservé uniquement sous forme chiffrée (nous ne le connaissons pas) ;</li>
           <li>ta progression : épisodes écoutés, scores aux quiz, dates de révision, et le plan du Coach (épreuves, créneaux) ;</li>
           <li>les avis et signalements d&apos;erreur que tu choisis de nous envoyer ;</li>
+          <li>si tu demandes un bilan au Coach : le bilan rédigé, la semaine concernée et sa date ;</li>
           <li>si tu t&apos;abonnes : ta formule, le statut et les dates de ton abonnement, et la preuve de ton acceptation des CGV.
             Le paiement est traité par Stripe : nous ne voyons jamais ton numéro de carte.</li>
         </ul>
@@ -37,7 +38,7 @@ export default function Confidentialite() {
         <p>
           Pour faire fonctionner ton compte : te connecter, sauvegarder ta progression et la retrouver sur tous tes appareils,
           construire ton plan de révision. Tes avis servent à corriger et améliorer les contenus. Pour la liste d&apos;attente :
-          te prévenir du lancement. Rien n&apos;est vendu ni transmis à des tiers.
+          te prévenir du lancement. Rien n&apos;est vendu ni transmis à des tiers, en dehors des prestataires techniques cités ici.
         </p>
         <p>Base légale : l&apos;exécution du service que tu demandes en créant ton compte, et ton consentement pour la liste d&apos;attente.</p>
       </section>
@@ -49,6 +50,19 @@ export default function Confidentialite() {
           tant que le compte existe, et supprimés après 2 ans sans connexion. La liste d&apos;attente : jusqu&apos;à ta
           désinscription, et au plus 3 ans après notre dernier contact.
         </p>
+      </section>
+
+      <section>
+        <h2>Le bilan du Coach et l&apos;IA</h2>
+        <p>
+          Quand tu demandes ton bilan de la semaine, un résumé de ton activité est envoyé à Anthropic, qui fournit
+          l&apos;IA Claude : ton prénom s&apos;il est renseigné dans le Coach, tes épreuves et le nombre de jours restants, les
+          épisodes écoutés et tes scores, les questions ratées, et le respect de ton programme. Ni ton e-mail ni ton nom
+          de famille ne sont transmis. Anthropic traite ces données uniquement pour rédiger le bilan et ne les utilise pas
+          pour entraîner ses modèles. Anthropic est situé aux États-Unis : ce transfert est encadré par les garanties
+          prévues par le RGPD (clauses contractuelles types de la Commission européenne).
+        </p>
+        <p>Le bilan n&apos;est préparé que si tu le demandes. Il est conservé avec ton compte et supprimé avec lui.</p>
       </section>
 
       <section>

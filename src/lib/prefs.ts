@@ -37,7 +37,10 @@ export function usePrefs() {
 }
 
 // date : AAAA-MM-JJ de la première écoute complète ; reviews : dates des révisions faites
-export type Progress = Record<string, { done: boolean; score?: number; date?: string; reviews?: string[] }>;
+// essais : dernières tentatives au quiz (date + numéros des questions ratées), pour le bilan du Coach
+export type Essai = { d: string; ko: number[] };
+export type Progress = Record<string, { done: boolean; score?: number; date?: string; reviews?: string[]; essais?: Essai[] }>;
+const MAX_ESSAIS = 6;
 
 export const todayIso = () => {
   const d = new Date();
@@ -47,7 +50,7 @@ export const todayIso = () => {
 export function useProgress() {
   const [progress, setProgress] = useState<Progress>({});
   useEffect(() => setProgress(read<Progress>("der-progress", {})), []);
-  const markDone = (id: string, score: number) =>
+  const markDone = (id: string, score: number, ko: number[] = []) =>
     setProgress((p) => {
       const prev = p[id];
       const day = todayIso();
@@ -55,6 +58,7 @@ export function useProgress() {
       const entry = prev?.done
         ? { ...prev, score: Math.max(prev.score ?? 0, score), reviews: [...(prev.reviews ?? []), day] }
         : { done: true, score, date: day, reviews: [] };
+      (entry as Progress[string]).essais = [...(prev?.essais ?? []), { d: day, ko }].slice(-MAX_ESSAIS);
       const next = { ...p, [id]: entry };
       write("der-progress", next);
       void import("./compte").then((m) => m.pousser()); // sauvegarde dans le compte

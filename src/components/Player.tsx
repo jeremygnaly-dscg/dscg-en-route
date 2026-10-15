@@ -134,7 +134,7 @@ export function Player({ episode }: { episode: Episode }) {
     if (patch.speed && audioEl.current) audioEl.current.playbackRate = patch.speed;
   };
 
-  const finirQuiz = (score: number) => { markDone(ep.id, score); removeAttente(ep.id); setQuizFini(true); };
+  const finirQuiz = (score: number, ko: number[]) => { markDone(ep.id, score, ko); removeAttente(ep.id); setQuizFini(true); };
 
   const done = progress[ep.id]?.done;
   const order = PARTS.map((x) => x.id);
