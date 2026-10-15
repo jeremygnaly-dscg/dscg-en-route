@@ -48,15 +48,6 @@
 .passif { background: #1d2470; color: #e8eaff; }
 .passif p { color: #c4c9f5; }
 
-/* Révisions espacées */
-.rappels { list-style: none; margin: 6px 0 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); position: relative; }
-.rappels::before { content: ""; position: absolute; left: 10%; right: 10%; top: 9px; height: 2px; background: var(--line); }
-.rappels li { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px; position: relative; min-width: 0; }
-.rappels li::before { content: ""; width: 14px; height: 14px; border-radius: 50%; background: var(--accent); border: 3px solid var(--bg); margin-bottom: 4px; }
-.rappels li:last-child::before { background: var(--gold); }
-.rappels b { font-family: var(--display); font-size: 14px; }
-.rappels span { font-size: 12px; color: var(--muted); line-height: 1.3; }
-
 /* Un épisode : vraie séquence, donc numérotée */
 .etapes { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 16px; counter-reset: etape; }
 .etapes li { display: grid; grid-template-columns: 34px 1fr; gap: 2px 14px; counter-increment: etape; }

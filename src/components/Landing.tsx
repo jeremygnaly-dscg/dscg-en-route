@@ -18,14 +18,6 @@ const EPISODE = [
   { t: "La fiche", d: "L'essentiel en une phrase, les points à retenir, les pièges, et selon la matière les formules ou les écritures." },
 ];
 
-const RAPPELS = [
-  { j: "Jour 1", d: "Première écoute" },
-  { j: "J+1", d: "Quiz" },
-  { j: "J+7", d: "Révision" },
-  { j: "J+21", d: "Révision" },
-  { j: "Examen", d: "C'est resté" },
-];
-
 export function Landing() {
   return (
     <div className={styles.page}>
@@ -94,11 +86,6 @@ export function Landing() {
           Tu indiques tes épreuves et tes disponibilités. Le Coach te dit chaque jour quoi écouter : les nouvelles notions,
           et les révisions au bon moment, pour que ce que tu écoutes aujourd&apos;hui soit encore là le jour de l&apos;examen.
         </p>
-        <ol className={styles.rappels} aria-label="Exemple de révisions espacées">
-          {RAPPELS.map((r) => (
-            <li key={r.j}><b>{r.j}</b><span>{r.d}</span></li>
-          ))}
-        </ol>
       </section>
 
       <section className={styles.bloc}>
