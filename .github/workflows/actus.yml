@@ -1,0 +1,47 @@
+name: Fil d'actualité
+
+# Trois passages par jour (heure de Paris ≈ 7 h, 13 h, 19 h) + lancement manuel depuis l'onglet Actions.
+on:
+  schedule:
+    - cron: "12 5,11,17 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: actus
+  cancel-in-progress: false
+
+jobs:
+  actus:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Lire les sources et préparer le fil
+        env:
+          # Facultatif : sans clé, tri par mots-clés et titres seuls
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: npx --yes tsx@4.19.2 scripts/actus.ts
+
+      - name: Publier si le fil a changé
+        run: |
+          git config user.name "Zenvise (actus)"
+          git config user.email "actus@zenvise.local"
+          git add public/actus.json
+          if git diff --cached --quiet; then echo "Rien de neuf"; exit 0; fi
+          git commit -qm "Fil d'actualité : mise à jour automatique"
+          for i in 1 2 3 4 5; do
+            git pull -q --rebase -X theirs && git push -q && exit 0
+            sleep $((i * 10))
+          done
+          echo "::error::Impossible d'enregistrer le fil" && exit 1
