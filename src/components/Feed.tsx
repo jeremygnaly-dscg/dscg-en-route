@@ -85,7 +85,10 @@ export function Feed() {
     : filtre === "decryptages" ? c.kind === "decryptage" || !!c.question
     : filtre === "enregistres" ? saved.includes(c.id)
     : c.categorie === filtre);
-  const [une, ...reste] = visibles;
+  // À la une : la plus récente parmi les 6 premières qui a une image (sinon la plus récente)
+  const iUne = Math.max(0, visibles.slice(0, 6).findIndex((c) => !!c.image));
+  const une = visibles[iUne];
+  const reste = visibles.filter((_, i) => i !== iUne);
   const nouveaux = cartes.filter((c) => derniereVisite && new Date(c.date).getTime() > derniereVisite).length;
 
   // Cartes à jouer, tirées du programme du diplôme choisi (changent chaque jour)
