@@ -10,3 +10,5 @@
 .tab svg { width: 26px; height: 26px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .tab[aria-current="page"] { color: var(--fg); }
 .tab[aria-current="page"] svg { stroke-width: 2.4; color: var(--accent); }
+.tab { position: relative; }
+.badge { position: absolute; top: 2px; left: calc(50% + 6px); min-width: 17px; height: 17px; border-radius: 9px; background: #e11d48; color: #fff; font-style: normal; font-size: 10px; font-weight: 800; display: grid; place-items: center; padding: 0 4px; }

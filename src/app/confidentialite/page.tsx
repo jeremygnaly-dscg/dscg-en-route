@@ -26,6 +26,9 @@ export default function Confidentialite() {
           <li>ta progression : épisodes écoutés, scores aux quiz, dates de révision, et le plan du Coach (épreuves, créneaux) ;</li>
           <li>les avis et signalements d&apos;erreur que tu choisis de nous envoyer ;</li>
           <li>si tu demandes un bilan au Coach : le bilan rédigé, la semaine concernée et sa date ;</li>
+          <li>si tu rejoins la communauté : ton profil public (pseudo, diplôme, UE, situation, école, présentation), tes questions,
+            réponses, commentaires et réactions, les membres que tu suis ou bloques, tes points de défi par jour, tes messages
+            privés et tes signalements ;</li>
           <li>si tu t&apos;abonnes : ta formule, le statut et les dates de ton abonnement, et la preuve de ton acceptation des CGV.
             Le paiement est traité par Stripe : nous ne voyons jamais ton numéro de carte.</li>
         </ul>
@@ -63,6 +66,18 @@ export default function Confidentialite() {
           prévues par le RGPD (clauses contractuelles types de la Commission européenne).
         </p>
         <p>Le bilan n&apos;est préparé que si tu le demandes. Il est conservé avec ton compte et supprimé avec lui.</p>
+      </section>
+
+      <section>
+        <h2>La communauté</h2>
+        <p>
+          Rejoindre la communauté est facultatif. Ton profil public, tes publications et tes points de la semaine sont visibles
+          des membres connectés, jamais des visiteurs non inscrits. Ta progression détaillée et ton e-mail restent privés.
+          Les messages privés ne sont accessibles qu&apos;aux deux participants ; un message signalé peut être consulté par
+          l&apos;équipe pour traiter le signalement. Les publications sont conservées tant que ton compte existe et supprimées
+          avec lui. Base légale : l&apos;exécution du service que tu demandes en rejoignant la communauté.
+          Voir les <Link href="/communaute-regles">règles de la communauté</Link>.
+        </p>
       </section>
 
       <section>

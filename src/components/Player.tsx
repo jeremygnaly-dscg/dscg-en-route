@@ -9,6 +9,7 @@ import { Quiz } from "./Quiz";
 import { FicheRevision } from "./Fiche";
 import { Signaler } from "./Signaler";
 import { aAcces, useAbonnements } from "@/lib/vente";
+import { gagnerPoints } from "@/lib/reseau";
 import styles from "./player.module.css";
 
 // Déroulé d'un épisode : on écoute (scène puis cours), on se teste, on relit la fiche.
@@ -51,6 +52,7 @@ export function Player({ episode }: { episode: Episode }) {
   const [ratio, setRatio] = useState(0); // avancement de la piste en cours
   const [fini, setFini] = useState(false); // écoute terminée
   const [quizFini, setQuizFini] = useState(false);
+  const [gain, setGain] = useState<{ pts: number; serie: number } | null>(null);
   const audioEl = useRef<HTMLAudioElement>(null);
 
   // Lien direct vers le quiz (quiz en attente) : /episode/<id>?p=flash
@@ -92,7 +94,7 @@ export function Player({ episode }: { episode: Episode }) {
 
   // Passe à un autre épisode sans changer de page : la lecture continue même écran verrouillé
   const allerA = (e: Episode, autoplay: boolean) => {
-    setEp(e); setPart("scene"); setFini(false); setQuizFini(false); setRatio(0);
+    setEp(e); setPart("scene"); setFini(false); setQuizFini(false); setGain(null); setRatio(0);
     history.replaceState(null, "", `/episode/${e.id}`);
     window.scrollTo({ top: 0, behavior: "smooth" });
     if (autoplay) lancer("scene", e);
@@ -134,7 +136,11 @@ export function Player({ episode }: { episode: Episode }) {
     if (patch.speed && audioEl.current) audioEl.current.playbackRate = patch.speed;
   };
 
-  const finirQuiz = (score: number, ko: number[]) => { markDone(ep.id, score, ko); removeAttente(ep.id); setQuizFini(true); };
+  const finirQuiz = (score: number, ko: number[]) => {
+    markDone(ep.id, score, ko); removeAttente(ep.id); setQuizFini(true);
+    // Défi de la semaine (Communauté) : silencieux si l'élève n'a pas de profil réseau
+    void gagnerPoints(score, ep.flash.length).then((r) => r && setGain({ pts: 10 + 5 * score, serie: r.serie }));
+  };
 
   const done = progress[ep.id]?.done;
   const order = PARTS.map((x) => x.id);
@@ -227,6 +233,7 @@ export function Player({ episode }: { episode: Episode }) {
             )}
             <span className="label">Quiz · 3 questions</span>
             <Quiz key={ep.id} questions={ep.flash} onFinish={finirQuiz} />
+            {gain && <p className={styles.gain}>+{gain.pts} points pour le défi de la semaine{gain.serie > 1 ? ` · ${gain.serie} jours d'affilée 🔥` : ""} · <Link href="/app/communaute?t=defis">Classement</Link></p>}
             <div className={styles.actions}>
               <button className={quizFini ? styles.primary : styles.ghost} onClick={() => goPart("fiche")}>Voir la fiche de révision →</button>
             </div>

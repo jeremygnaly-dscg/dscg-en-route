@@ -6,7 +6,12 @@ import { EPISODES, findEpisode, libelleUe, uesDe } from "@/content/episodes";
 import type { Episode } from "@/content/types";
 import { useDiplome } from "@/lib/diplome";
 import { useProgress } from "@/lib/prefs";
+import { supabase } from "@/lib/compte";
+import { erreurReseau, ilYa as depuis, signaler, useMoi, type Auteur, type Membre } from "@/lib/reseau";
+import { Avatar } from "./Communaute";
 import styles from "./feed.module.css";
+
+interface Compteur { utiles: number; commentaires: number; moi: boolean }
 
 // Fil d'actualité vivant : articles collectés automatiquement (public/actus.json, 3 fois par jour)
 // + décryptages Zenvise rédigés à la main, entrecoupés de cartes à jouer (quiz flash, épisode du jour).
@@ -52,6 +57,8 @@ export function Feed() {
   const [nb, setNb] = useState(14);
   const [derniereVisite, setDerniereVisite] = useState(0);
   const [maintenant, setMaintenant] = useState(() => Date.now());
+  const { moi } = useMoi();
+  const [compteurs, setCompteurs] = useState<Record<string, Compteur>>({});
 
   useEffect(() => {
     setSaved(lire("revizen-saved", []));
@@ -89,6 +96,21 @@ export function Feed() {
   const iUne = Math.max(0, visibles.slice(0, 6).findIndex((c) => !!c.image));
   const une = visibles[iUne];
   const reste = visibles.filter((_, i) => i !== iUne);
+  const idsVisibles = [une, ...reste.slice(0, nb)].filter(Boolean).map((c) => c!.id).join("|");
+  useEffect(() => {
+    if (!idsVisibles) return;
+    void supabase.rpc("compteurs_actus", { ids: idsVisibles.split("|") }).then(({ data }) => {
+      if (!Array.isArray(data)) return;
+      setCompteurs((prev) => ({ ...prev, ...Object.fromEntries((data as ({ actu_id: string } & Compteur)[]).map((x) => [x.actu_id, { utiles: Number(x.utiles), commentaires: Number(x.commentaires), moi: x.moi }])) }));
+    });
+  }, [idsVisibles]);
+  const reagir = async (id: string) => {
+    if (!moi) { window.location.href = "/app/communaute"; return; }
+    const c = compteurs[id] ?? { utiles: 0, commentaires: 0, moi: false };
+    setCompteurs({ ...compteurs, [id]: { ...c, moi: !c.moi, utiles: c.utiles + (c.moi ? -1 : 1) } });
+    if (c.moi) await supabase.from("reactions").delete().match({ cible_type: "actu", cible_id: id, auteur: moi.id });
+    else await supabase.from("reactions").insert({ cible_type: "actu", cible_id: id });
+  };
   const nouveaux = cartes.filter((c) => derniereVisite && new Date(c.date).getTime() > derniereVisite).length;
 
   // Cartes à jouer, tirées du programme du diplôme choisi (changent chaque jour)
@@ -133,6 +155,8 @@ export function Feed() {
       {reste.slice(0, nb).map((c, i) => (
         <div key={c.id} className={styles.bloc}>
           <Article c={c} maintenant={maintenant} saved={saved.includes(c.id)} onSave={() => toggleSave(c.id)} onShare={() => partager(c)}
+            compteur={compteurs[c.id]} onUtile={() => reagir(c.id)} moi={moi}
+            onCommente={(n) => setCompteurs((p) => ({ ...p, [c.id]: { ...(p[c.id] ?? { utiles: 0, moi: false, commentaires: 0 }), commentaires: n } }))}
             neuf={!!derniereVisite && new Date(c.date).getTime() > derniereVisite} />
           {i === 1 && quizEp && <QuizFlash ep={quizEp} graine={graine} />}
           {i === 5 && epJour && <EpisodeDuJour ep={epJour} />}
@@ -176,8 +200,12 @@ function ALaUne({ c, maintenant, neuf }: { c: Carte; maintenant: number; neuf: b
     : <article className={styles.une}>{contenu}</article>;
 }
 
-function Article({ c, maintenant, saved, onSave, onShare, neuf }: { c: Carte; maintenant: number; saved: boolean; onSave: () => void; onShare: () => void; neuf: boolean }) {
+function Article({ c, maintenant, saved, onSave, onShare, neuf, compteur, onUtile, moi, onCommente }: {
+  c: Carte; maintenant: number; saved: boolean; onSave: () => void; onShare: () => void; neuf: boolean;
+  compteur?: Compteur; onUtile: () => void; moi: Membre | null; onCommente: (n: number) => void;
+}) {
   const ep = c.episodeId ? findEpisode(c.episodeId) : undefined;
+  const [ouvert, setOuvert] = useState(false);
   return (
     <article className={styles.post}>
       {c.url ? <a href={c.url} target="_blank" rel="noreferrer" tabIndex={-1} aria-hidden="true"><Couverture c={c} /></a> : <Couverture c={c} />}
@@ -213,14 +241,21 @@ function Article({ c, maintenant, saved, onSave, onShare, neuf }: { c: Carte; ma
         ) : null}
 
         <div className={styles.actions}>
-          <button onClick={onSave} aria-pressed={saved} className={styles.act}>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z" /></svg>{saved ? "Enregistré" : "Enregistrer"}
+          <button onClick={onUtile} aria-pressed={!!compteur?.moi} className={styles.act} aria-label="Utile">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 11v9H4v-9zM7 11l4-8a2 2 0 0 1 3 2l-1 5h6a2 2 0 0 1 2 2l-2 7a2 2 0 0 1-2 1H7" /></svg>{compteur?.utiles || ""}
           </button>
-          <button onClick={onShare} className={styles.act}>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 14v6h14v-6" /></svg>Partager
+          <button onClick={() => setOuvert(!ouvert)} aria-expanded={ouvert} className={styles.act} aria-label="Commentaires">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z" /></svg>{compteur?.commentaires || ""}
+          </button>
+          <button onClick={onSave} aria-pressed={saved} className={styles.act} aria-label={saved ? "Enregistré" : "Enregistrer"}>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z" /></svg>
+          </button>
+          <button onClick={onShare} className={styles.act} aria-label="Partager">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 8l5-5 5 5M5 14v6h14v-6" /></svg>
           </button>
           {c.url && <a href={c.url} target="_blank" rel="noreferrer" className={styles.src}>Lire</a>}
         </div>
+        {ouvert && <Commentaires actuId={c.id} moi={moi} onCompte={onCommente} />}
       </div>
     </article>
   );
@@ -261,5 +296,49 @@ function EpisodeDuJour({ ep }: { ep: Episode }) {
         <small>{ep.ref}</small>
       </span>
     </Link>
+  );
+}
+
+interface Comm { id: number; corps: string; cree_le: string; auteur: string; masque: boolean; membres: Auteur | null }
+
+function Commentaires({ actuId, moi, onCompte }: { actuId: string; moi: Membre | null; onCompte: (n: number) => void }) {
+  const [liste, setListe] = useState<Comm[] | null>(null);
+  const [texte, setTexte] = useState("");
+  const [err, setErr] = useState("");
+  const charger = async () => {
+    const { data } = await supabase.from("commentaires").select("id, corps, cree_le, auteur, masque, membres(pseudo, couleur, diplome)").eq("actu_id", actuId).order("cree_le").limit(100);
+    const l = (data as unknown as Comm[]) ?? [];
+    setListe(l); onCompte(l.filter((x) => !x.masque).length);
+  };
+  useEffect(() => { void charger(); }, [actuId]); // eslint-disable-line react-hooks/exhaustive-deps
+  const envoyer = async () => {
+    setErr("");
+    const { error } = await supabase.from("commentaires").insert({ actu_id: actuId, corps: texte.trim() });
+    if (error) setErr(erreurReseau(error)); else { setTexte(""); await charger(); }
+  };
+  return (
+    <div className={styles.comms}>
+      {liste?.length === 0 && <p className={styles.commVide}>Aucun commentaire. Lance la discussion : qu&apos;est-ce que ça change pour l&apos;examen ?</p>}
+      {liste?.map((c) => (
+        <div key={c.id} className={styles.comm}>
+          <Avatar m={c.membres} />
+          <div>
+            <b>{c.membres?.pseudo ?? "Membre"}</b> <small>{depuis(c.cree_le)}</small>
+            <p>{c.masque ? <i>Masqué après signalements</i> : c.corps}</p>
+            {moi && (c.auteur === moi.id
+              ? <button className={styles.petit} onClick={async () => { await supabase.from("commentaires").delete().eq("id", c.id); await charger(); }}>Supprimer</button>
+              : <button className={styles.petit} onClick={() => signaler("commentaire", c.id)}>Signaler</button>)}
+          </div>
+        </div>
+      ))}
+      {moi ? (
+        <div className={styles.commSaisie}>
+          <input value={texte} maxLength={1000} onChange={(e) => setTexte(e.target.value)} placeholder="Ajouter un commentaire…"
+            onKeyDown={(e) => { if (e.key === "Enter" && texte.trim()) void envoyer(); }} />
+          <button disabled={!texte.trim()} onClick={envoyer}>Publier</button>
+        </div>
+      ) : <Link href="/app/communaute" className={styles.src}>Rejoins la communauté pour commenter</Link>}
+      {err && <p className={styles.commVide} style={{ color: "var(--bad)" }}>{err}</p>}
+    </div>
   );
 }

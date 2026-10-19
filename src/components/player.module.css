@@ -86,3 +86,5 @@
 .signaler select, .signaler textarea { width: 100%; font: inherit; font-size: 16px; padding: 9px 11px; border-radius: 10px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); }
 .merci { margin: 0; color: var(--ok); font-weight: 600; }
 .z27 { align-self: flex-start; font-size: 12px; font-weight: 700; color: var(--accent); background: var(--accent-soft); border-radius: 8px; padding: 3px 9px; margin-top: 6px; }
+.gain { margin: 0; font-weight: 700; color: var(--accent); background: var(--accent-soft); border-radius: 12px; padding: 10px 12px; }
+.gain a { color: inherit; }
