@@ -17,10 +17,11 @@ interface Source { nom: string; urls: string[]; theme?: Categorie; officiel?: bo
 const SOURCES: Source[] = [
   { nom: "economie.gouv.fr", urls: ["https://www.economie.gouv.fr/rss/toutesactualites"], theme: "Économie", officiel: true },
   { nom: "Entreprendre Service-Public", urls: ["https://entreprendre.service-public.gouv.fr/actualites.rss", "https://entreprendre.service-public.fr/actualites.rss", "https://www.service-public.fr/abonnements/rss/actu-actu-pro.rss"], theme: "Droit des affaires", officiel: true },
-  { nom: "Compta Online", urls: ["https://www.compta-online.com/rss.xml", "https://www.compta-online.com/rss", "https://www.compta-online.com/rss/actualites.xml"], theme: "Profession" },
+  { nom: "Compta Online", urls: ["https://www.compta-online.com/rss.xml", "https://www.compta-online.com/rss", "https://www.compta-online.com/rss/actualites.xml", "https://www.compta-online.com/feed"], theme: "Profession" },
   { nom: "Village de la Justice", urls: ["https://www.village-justice.com/articles/spip.php?page=backend"], theme: "Droit des affaires" },
   { nom: "Le Monde du Droit", urls: ["https://www.lemondedudroit.fr/?format=feed&type=rss"], theme: "Droit des affaires" },
-  { nom: "Les Echos", urls: ["https://syndication.lesechos.fr/rss/rss_finance-marches.xml", "https://syndication.lesechos.fr/rss/rss_economie.xml", "https://syndication.lesechos.fr/rss/rss_une.xml"], theme: "Finance" },
+  { nom: "Les Echos", urls: ["https://services.lesechos.fr/rss/les-echos-economie.xml", "https://services.lesechos.fr/rss/les-echos-finance-marches.xml", "https://syndication.lesechos.fr/rss/rss_economie.xml", "https://syndication.lesechos.fr/rss/rss_une.xml"], theme: "Finance" },
+  { nom: "CNIL", urls: ["https://www.cnil.fr/fr/rss.xml"], theme: "Numérique", officiel: true },
   { nom: "Le Monde Économie", urls: ["https://www.lemonde.fr/economie/rss_full.xml"], theme: "Économie" },
   { nom: "Le Figaro Économie", urls: ["https://www.lefigaro.fr/rss/figaro_economie.xml"], theme: "Économie" },
   { nom: "franceinfo Économie", urls: ["https://www.francetvinfo.fr/economie.rss"], theme: "Économie" },
@@ -30,16 +31,16 @@ const SOURCES: Source[] = [
 // Mots-clés et leur poids (tri sans IA, et pré-filtre avant l'IA)
 const MOTS: [RegExp, number, Categorie][] = [
   [/expert[- ]comptable|cabinets? (d'expertise|comptables?)|ordre des experts|profession comptable|dcg|dscg|cca\b/i, 4, "Profession"],
-  [/commissaire aux comptes|audit|certification des comptes|cncc|h3c|haut conseil/i, 3, "Comptabilité & audit"],
-  [/comptab|bilan|liasse|ifrs|normes? comptables?|anc\b|plan comptable|consolidation|csrd|reporting de durabilit|esrs/i, 3, "Comptabilité & audit"],
-  [/fiscal|imp[oô]ts?|tva|cgi\b|bofip|dgfip|loi de finances|plf|niche fiscale|taxe|contr[oô]le fiscal|redressement fiscal/i, 3, "Fiscalité"],
+  [/commissaires? aux comptes|audit l[ée]gal|auditeurs?|certification des comptes|\bcncc\b|\bh3c\b|haut conseil du commissariat/i, 3, "Comptabilité & audit"],
+  [/comptab|comptes annuels|bilan comptable|liasse fiscale|\bifrs\b|normes? comptables?|plan comptable|consolidation des comptes|\bcsrd\b|reporting de durabilit|\besrs\b/i, 3, "Comptabilité & audit"],
+  [/fiscal|imp[oô]t sur le revenu|imp[oô]t sur les soci[ée]t[ée]s|\btva\b|\bcgi\b|bofip|dgfip|loi de finances|\bplf\b|niche fiscale|taxe sur|contr[oô]le fiscal|redressement fiscal|droits de succession|plus-values?/i, 3, "Fiscalité"],
   [/urssaf|cotisations?|salari[ée]s?|licenci|smic|rupture conventionnelle|code du travail|cse\b|prud'?hom|ch[oô]mage|retraites?|int[ée]ressement|participation|partage de la valeur/i, 2, "Social"],
   [/soci[ée]t[ée]s?|sas\b|sarl|assembl[ée]e g[ée]n[ée]rale|dirigeants?|faillite|redressement judiciaire|liquidation|proc[ée]dures? collectives?|sauvegarde|bail commercial|fonds de commerce|cession/i, 2, "Droit des affaires"],
   [/lbo|fusion|acquisition|rachat|lev[ée]e de fonds|capital[- ]investissement|private equity|introduction en bourse|ipo|dividendes?|obligations?|bce|taux directeurs?/i, 2, "Finance"],
   [/inflation|croissance|pib|d[ée]ficit|dette publique|ch[oô]mage|commerce ext[ée]rieur|droits de douane|politique mon[ée]taire/i, 1, "Économie"],
   [/facture? [ée]lectronique|facturation [ée]lectronique|cybers[ée]curit|cyberattaque|rgpd|cnil|intelligence artificielle|\bia\b|donn[ée]es personnelles|blockchain|crypto/i, 2, "Numérique"],
 ];
-const EXCLUS = /football|ligue 1|people|météo|recette|horoscope|immobilier de luxe|bourse en direct|cours de l'or en direct/i;
+const EXCLUS = /football|ligue 1|people|météo|recette|horoscope|immobilier de luxe|bourse en direct|cours de l'or|consultation du public|permis (exclusif )?de recherches?|pillages?|saccages?|cagnotte|concerts?|faits? divers/i;
 
 export interface ItemActu {
   id: string; titre: string; url: string; source: string; officiel?: boolean; date: string; image?: string;
@@ -93,11 +94,12 @@ function lireFlux(xml: string, source: Source): Omit<ItemActu, "categorie" | "sc
   }).filter((x) => x.titre && x.url.startsWith("http"));
 }
 
-function noter(titre: string, desc: string, theme?: Categorie): { score: number; categorie: Categorie } {
+function noter(titre: string, desc: string, theme?: Categorie, officiel?: boolean): { score: number; categorie: Categorie } {
   const t = `${titre} ${desc}`;
   if (EXCLUS.test(t)) return { score: 0, categorie: theme ?? "Économie" };
-  let score = 0; const parCat = new Map<Categorie, number>();
-  for (const [re, poids, cat] of MOTS) if (re.test(t)) { score += poids; parCat.set(cat, (parCat.get(cat) ?? 0) + poids); }
+  let score = 0, fort = false; const parCat = new Map<Categorie, number>();
+  for (const [re, poids, cat] of MOTS) if (re.test(t)) { score += poids; if (poids >= 3) fort = true; parCat.set(cat, (parCat.get(cat) ?? 0) + poids); }
+  if (!fort && !officiel) score = Math.min(score, 2); // presse généraliste : il faut au moins un mot-clé fort
   const categorie = [...parCat.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] ?? theme ?? "Économie";
   return { score, categorie };
 }
@@ -183,8 +185,8 @@ async function main() {
     for (const x of lus) {
       if (new Date(x.date).getTime() < limite || deja.has(x.id) || ecartes.has(x.id)) continue;
       const desc = (x as { _desc?: string })._desc ?? "";
-      const { score, categorie } = noter(x.titre, desc, s.theme);
-      const seuil = s.officiel ? 1 : 2;
+      const { score, categorie } = noter(x.titre, desc, s.theme, s.officiel);
+      const seuil = s.officiel ? 2 : 3;
       if (score < seuil) continue;
       nouveaux.push({ ...x, categorie, score, _desc: desc });
       gardes++;
