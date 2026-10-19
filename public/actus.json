@@ -1,17 +1,17 @@
 {
- "majLe": "2026-10-19T08:38:56.299Z",
+ "majLe": "2026-10-19T11:42:10.368Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
    "url": "https://www.economie.gouv.fr/rss/toutesactualites",
    "ok": true,
-   "articles": 3
+   "articles": 0
   },
   {
    "nom": "Entreprendre Service-Public",
    "url": "https://www.service-public.fr/abonnements/rss/actu-actu-pro.rss",
    "ok": true,
-   "articles": 5
+   "articles": 0
   },
   {
    "nom": "Compta Online",
@@ -22,7 +22,7 @@
    "nom": "Village de la Justice",
    "url": "https://www.village-justice.com/articles/spip.php?page=backend",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "Le Monde du Droit",
@@ -38,7 +38,7 @@
    "nom": "CNIL",
    "url": "https://www.cnil.fr/fr/rss.xml",
    "ok": true,
-   "articles": 7
+   "articles": 1
   },
   {
    "nom": "Le Monde Économie",
@@ -50,7 +50,7 @@
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 2
+   "articles": 0
   },
   {
    "nom": "franceinfo Économie",
@@ -62,7 +62,7 @@
    "nom": "Capital",
    "url": "https://feed.prismamediadigital.com/v1/cap/rss?sources=capital",
    "ok": true,
-   "articles": 2
+   "articles": 0
   }
  ],
  "images": {
