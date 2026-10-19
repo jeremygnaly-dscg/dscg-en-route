@@ -33,8 +33,9 @@ const MOTS: [RegExp, number, Categorie][] = [
   [/expert[- ]comptable|cabinets? (d'expertise|comptables?)|ordre des experts|profession comptable|dcg|dscg|cca\b/i, 4, "Profession"],
   [/commissaires? aux comptes|audit l[ée]gal|auditeurs?|certification des comptes|\bcncc\b|\bh3c\b|haut conseil du commissariat/i, 3, "Comptabilité & audit"],
   [/comptab|comptes annuels|bilan comptable|liasse fiscale|\bifrs\b|normes? comptables?|plan comptable|consolidation des comptes|\bcsrd\b|reporting de durabilit|\besrs\b/i, 3, "Comptabilité & audit"],
-  [/fiscal|imp[oô]t sur le revenu|imp[oô]t sur les soci[ée]t[ée]s|\btva\b|\bcgi\b|bofip|dgfip|loi de finances|\bplf\b|niche fiscale|taxe sur|contr[oô]le fiscal|redressement fiscal|droits de succession|plus-values?/i, 3, "Fiscalité"],
-  [/urssaf|cotisations?|salari[ée]s?|licenci|smic|rupture conventionnelle|code du travail|cse\b|prud'?hom|ch[oô]mage|retraites?|int[ée]ressement|participation|partage de la valeur/i, 2, "Social"],
+  [/fiscal|imp[oô]t sur le revenu|imp[oô]t sur les soci[ée]t[ée]s|\btva\b|\bcgi\b|bofip|dgfip|loi de finances|\bplf\b|niche fiscale|taxe|imp[oô]ts?\b|imposition|budget 2027|contr[oô]le fiscal|redressement fiscal|droits de succession|plus-values?/i, 3, "Fiscalité"],
+  [/urssaf|cotisations? sociales|licenci|rupture conventionnelle|code du travail|\bcse\b|prud'?hom|int[ée]ressement|partage de la valeur|contrat de travail|arr[êe]t de travail|t[ée]l[ée]travail/i, 3, "Social"],
+  [/salari[ée]s?|smic|ch[oô]mage|retraites?|s[ée]curit[ée] sociale/i, 1, "Social"],
   [/soci[ée]t[ée]s?|sas\b|sarl|assembl[ée]e g[ée]n[ée]rale|dirigeants?|faillite|redressement judiciaire|liquidation|proc[ée]dures? collectives?|sauvegarde|bail commercial|fonds de commerce|cession/i, 2, "Droit des affaires"],
   [/lbo|fusion|acquisition|rachat|lev[ée]e de fonds|capital[- ]investissement|private equity|introduction en bourse|ipo|dividendes?|obligations?|bce|taux directeurs?/i, 2, "Finance"],
   [/inflation|croissance|pib|d[ée]ficit|dette publique|ch[oô]mage|commerce ext[ée]rieur|droits de douane|politique mon[ée]taire/i, 1, "Économie"],
@@ -202,7 +203,13 @@ async function main() {
   }).slice(0, 40);
 
   await enrichir(retenus);
-  const finaux = retenus.filter((x) => x.score >= 0);
+  const vus = new Set([...deja.values()].map((x) => x.titre.toLowerCase().replace(/[^a-z]/g, "").slice(0, 40)));
+  const finaux = retenus.filter((x) => {
+    if (x.score < 0) return false;
+    const cle = x.titre.toLowerCase().replace(/[^a-z]/g, "").slice(0, 40);
+    if (vus.has(cle)) return false; // doublon (même article relayé deux fois)
+    vus.add(cle); return true;
+  });
   for (const x of retenus) if (x.score < 0) ecartes.add(x.id);
 
   // Images manquantes : balise og:image de l'article
