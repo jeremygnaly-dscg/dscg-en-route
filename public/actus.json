@@ -1,5 +1,5 @@
 {
- "majLe": "2026-10-19T11:42:10.368Z",
+ "majLe": "2026-10-19T17:40:38.160Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -62,7 +62,7 @@
    "nom": "Capital",
    "url": "https://feed.prismamediadigital.com/v1/cap/rss?sources=capital",
    "ok": true,
-   "articles": 0
+   "articles": 1
   }
  ],
  "images": {
@@ -72,9 +72,20 @@
   "plf-2027-apport-cession": "https://www.editions-jfa.com/wp-content/themes/twentysixteen-child/images/LOGO_EDITION_JFA_bleu_v3.jpg",
   "plf-2027-surtaxe-is": "https://www.legifiscal.fr/static/site_media/uploads/illustrations/actualite/4660.jpg",
   "facture-electronique-bilan": "https://economie-gouv.epresspack.me/storage/clients/125/min-macp_1791561854.jpg",
-  "lapeyre-mutares": "https://www.cfnews.net/var/cfnews/storage/images/1/0/9/1/32471901-2-fre-FR/2a8073d8f0f5-Lapeyre-UNE.jpg"
+  "lapeyre-mutares": "https://www.cfnews.net/var/cfnews/storage/images/1/0/9/1/32471901-2-fre-FR/2a8073d8f0f5-Lapeyre-UNE.jpg",
+  "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "capital-https-www-capital-fr-votre-carriere-prescription-horaires-interessement-voici-ce-qu-il-faut-savoir-sur-le-temps-",
+   "titre": "Prescription, horaires, intéressement : voici ce qu'il faut savoir sur le temps partiel thérapeutique",
+   "url": "https://www.capital.fr/votre-carriere/prescription-horaires-interessement-voici-ce-qu-il-faut-savoir-sur-le-temps-partiel-therapeutique-1531100",
+   "source": "Capital",
+   "date": "2026-10-19T15:37:31.000Z",
+   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~10~19~054f1a46-430d-42ad-b543-4ecb7d3a78bf.jpg/1200x900/focus-point/329%2C186/prescription-horaires-interessement-voici-ce-qu-il-faut-savoir-sur-le-temps-partiel-therapeutique.jpg",
+   "categorie": "Social",
+   "score": 4
+  },
   {
    "id": "cnil-https-www-cnil-fr-fr-webinaire-demarchage-telephonique",
    "titre": "Revoir le webinaire - Nouveau régime de la prospection téléphonique : comment et quand recueillir le consentement de la personne concernée ?",
