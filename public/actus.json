@@ -1,5 +1,5 @@
 {
- "majLe": "2026-10-20T11:41:26.353Z",
+ "majLe": "2026-10-20T17:42:11.510Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -38,7 +38,7 @@
    "nom": "CNIL",
    "url": "https://www.cnil.fr/fr/rss.xml",
    "ok": true,
-   "articles": 2
+   "articles": 1
   },
   {
    "nom": "Le Monde Économie",
@@ -76,6 +76,16 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-en-corse-l-alignement-des-prix-du-tabac-sur-ceux-du-continent-fait-b",
+   "titre": "En Corse, l’alignement des prix du tabac sur ceux du continent fait baisser les ventes et souffrir les buralistes",
+   "url": "https://www.lefigaro.fr/conjoncture/en-corse-l-alignement-des-prix-du-tabac-sur-ceux-du-continent-fait-baisser-les-ventes-et-souffrir-les-buralistes-20261020",
+   "source": "Le Figaro Économie",
+   "date": "2026-10-20T16:14:39.000Z",
+   "image": "https://i.f1g.fr/media/cms/3000x2003_crop/2026/10/20/9ab7200bb15f165510088aa8ba2b47b807fa49295e95415158fbe2ea72cb0031.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
   {
    "id": "cnil-https-www-cnil-fr-fr-journee-rgpd-2026-poitiers",
    "titre": "Journée RGPD à Poitiers : cybersécurité, IA et conformité au cœur des enjeux de protection des données",
