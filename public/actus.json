@@ -1,5 +1,5 @@
 {
- "majLe": "2026-10-20T05:40:31.875Z",
+ "majLe": "2026-10-20T11:41:26.353Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -38,7 +38,7 @@
    "nom": "CNIL",
    "url": "https://www.cnil.fr/fr/rss.xml",
    "ok": true,
-   "articles": 1
+   "articles": 2
   },
   {
    "nom": "Le Monde Économie",
@@ -56,7 +56,7 @@
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "Capital",
@@ -76,6 +76,26 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "cnil-https-www-cnil-fr-fr-journee-rgpd-2026-poitiers",
+   "titre": "Journée RGPD à Poitiers : cybersécurité, IA et conformité au cœur des enjeux de protection des données",
+   "url": "https://www.cnil.fr/fr/journee-rgpd-2026-poitiers",
+   "source": "CNIL",
+   "officiel": true,
+   "date": "2026-10-20T12:00:00.000Z",
+   "categorie": "Numérique",
+   "score": 2
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-conso-bonbons-biscuits-viennoiseries-industrielles-quels-produits-seraient-vises",
+   "titre": "Bonbons, biscuits, viennoiseries industrielles… Quels produits sont visés par la «taxe sucre» du budget 2027 ?",
+   "url": "https://www.lefigaro.fr/conso/bonbons-biscuits-viennoiseries-industrielles-quels-produits-seraient-vises-par-la-taxe-sucre-du-budget-2027-20261002",
+   "source": "Le Figaro Économie",
+   "date": "2026-10-20T08:00:36.000Z",
+   "image": "https://i.f1g.fr/media/cms/3000x2003_crop/2026/10/20/e6f8cd472432f10f3120aab9747ce6f62a5247d84f27d5ee1a78edfd0e62de9d.jpg",
+   "categorie": "Fiscalité",
+   "score": 4
+  },
   {
    "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-budget-du-matraquage-fiscal-la-filiere-sucriere-s-insurge-contre-un-",
    "titre": "\"Du matraquage fiscal\" : la filière sucrière s'insurge contre un projet d'extension de la taxation des aliments sucrés",
