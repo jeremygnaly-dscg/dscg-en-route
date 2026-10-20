@@ -1,5 +1,5 @@
 {
- "majLe": "2026-10-19T17:40:38.160Z",
+ "majLe": "2026-10-20T05:40:31.875Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -50,19 +50,19 @@
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Capital",
    "url": "https://feed.prismamediadigital.com/v1/cap/rss?sources=capital",
    "ok": true,
-   "articles": 1
+   "articles": 0
   }
  ],
  "images": {
@@ -76,6 +76,26 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-budget-du-matraquage-fiscal-la-filiere-sucriere-s-insurge-contre-un-",
+   "titre": "\"Du matraquage fiscal\" : la filière sucrière s'insurge contre un projet d'extension de la taxation des aliments sucrés",
+   "url": "https://www.franceinfo.fr/economie/budget/du-matraquage-fiscal-la-filiere-sucriere-s-insurge-contre-un-projet-d-extension-de-la-taxation-des-aliments-sucres_8244565.html#xtor=RSS-3-%5Bgeneral%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-10-20T04:32:58.000Z",
+   "image": "https://www.franceinfo.fr/pictures/nePokQ5IE5jUX3QLvLHJ9BBXaEA/0x43:8030x4560/432x243/filters:format(jpg)/2026/10/20/6ad6eed60f682061750272.jpg",
+   "categorie": "Fiscalité",
+   "score": 4
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-budget-2027-l-assemblee-nationale-multiplie-les-cadeaux-fiscaux-non-",
+   "titre": "Budget 2027 : l’Assemblée nationale multiplie les cadeaux fiscaux non chiffrés",
+   "url": "https://www.lefigaro.fr/conjoncture/budget-2027-l-assemblee-nationale-multiplie-les-cadeaux-fiscaux-non-chiffres-20261019",
+   "source": "Le Figaro Économie",
+   "date": "2026-10-19T17:30:00.000Z",
+   "image": "https://i.f1g.fr/media/cms/3000x1687_crop/2026/10/19/536f8a0c25415e4ccc838caf42b127dae67782ef620e7d34fb8985f3276835e1.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
   {
    "id": "capital-https-www-capital-fr-votre-carriere-prescription-horaires-interessement-voici-ce-qu-il-faut-savoir-sur-le-temps-",
    "titre": "Prescription, horaires, intéressement : voici ce qu'il faut savoir sur le temps partiel thérapeutique",
