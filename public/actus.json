@@ -1,5 +1,5 @@
 {
- "majLe": "2026-10-20T17:42:11.510Z",
+ "majLe": "2026-10-21T05:40:26.410Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -44,13 +44,13 @@
    "nom": "Le Monde Économie",
    "url": "https://www.lemonde.fr/economie/rss_full.xml",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 1
+   "articles": 2
   },
   {
    "nom": "franceinfo Économie",
@@ -76,6 +76,36 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-societes-licenciements-publicite-en-retrait-croissance-ralentie-netflix-ne-parvi",
+   "titre": "Licenciements, publicité en retrait, croissance ralentie : Netflix ne parvient pas à rassurer Wall Street au troisième trimestre",
+   "url": "https://www.lefigaro.fr/societes/licenciements-publicite-en-retrait-croissance-ralentie-netflix-ne-parvient-pas-a-rassurer-wall-street-au-troisieme-trimestre-20261020",
+   "source": "Le Figaro Économie",
+   "date": "2026-10-20T20:41:06.000Z",
+   "image": "https://i.f1g.fr/media/cms/3000x2128_crop/2026/10/20/5c596c1d051069e7dea883123d83fc61ab621016a6fb1b13399de14072f6254c.jpg",
+   "categorie": "Social",
+   "score": 4
+  },
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-international-article-2026-10-20-droits-de-douane-une-plainte-deposee-aux-etats-un",
+   "titre": "Droits de douane : une plainte déposée aux Etats-Unis contre la surtaxe des produits canadiens",
+   "url": "https://www.lemonde.fr/international/article/2026/10/20/droits-de-douane-une-plainte-deposee-aux-etats-unis-contre-la-surtaxe-des-produits-canadiens_6797973_3210.html",
+   "source": "Le Monde Économie",
+   "date": "2026-10-20T17:58:38.000Z",
+   "image": "https://img.lemde.fr/2026/10/20/416/0/5000/2500/644/322/60/0/632f818_upload-1-kgenxqks915f-2026-09-02t014614z-1416189631-rc2janabcmlf-rtrmadp-3-usa-trump-canada-tariffs.JPG",
+   "categorie": "Fiscalité",
+   "score": 4
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-budget-2027-pourquoi-l-examen-prend-deja-du-retard-a-l-assemblee-nat",
+   "titre": "Budget 2027 : pourquoi l’examen prend déjà du retard à l’Assemblée nationale",
+   "url": "https://www.lefigaro.fr/conjoncture/budget-2027-pourquoi-l-examen-prend-deja-du-retard-a-l-assemblee-nationale-20261020",
+   "source": "Le Figaro Économie",
+   "date": "2026-10-20T17:05:00.000Z",
+   "image": "https://i.f1g.fr/media/cms/2688x1792_crop/2026/10/20/0a539255c94e2dfb84aff7ed4960e52d7e0ab9e64faa145efdbcfdc4d94f084c.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
   {
    "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-en-corse-l-alignement-des-prix-du-tabac-sur-ceux-du-continent-fait-b",
    "titre": "En Corse, l’alignement des prix du tabac sur ceux du continent fait baisser les ventes et souffrir les buralistes",
