@@ -1,5 +1,5 @@
 {
- "majLe": "2026-10-21T11:42:14.308Z",
+ "majLe": "2026-10-21T17:39:17.099Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -49,7 +49,7 @@
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 2
+   "articles": 0
   },
   {
    "nom": "franceinfo Économie",
@@ -75,6 +75,16 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "capital-https-www-capital-fr-economie-politique-presidentielle-2027-le-rapporteur-du-budget-somme-les-candidats-de-chiff",
+   "titre": "Présidentielle 2027 : le rapporteur du budget somme les candidats de chiffrer leurs promesses, Édouard Philippe répond",
+   "url": "https://www.capital.fr/economie-politique/presidentielle-2027-le-rapporteur-du-budget-somme-les-candidats-de-chiffrer-leurs-promesses-edouard-philippe-repond-1531167",
+   "source": "Capital",
+   "date": "2026-10-21T15:31:55.000Z",
+   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~10~21~e6b868fc-d145-40fb-b9d8-dbfba31d7e44.jpg/1200x900/focus-point/579%2C332/presidentielle-2027-le-rapporteur-du-budget-somme-les-candidats-de-chiffrer-leurs-promesses-edouard-philippe-repond.jpg",
+   "categorie": "Fiscalité",
+   "score": 4
+  },
   {
    "id": "le-figaro-conomie-https-www-lefigaro-fr-conso-le-patron-de-ryanair-prevoit-la-plus-grosse-augmentation-de-prix-de-l-hist",
    "titre": "Le patron de Ryanair prévoit «la plus grosse augmentation de prix de l’histoire» pour les billets d’avion en Europe en 2027",
