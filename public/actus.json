@@ -1,5 +1,5 @@
 {
- "majLe": "2026-10-22T05:39:40.462Z",
+ "majLe": "2026-10-22T11:42:06.435Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -43,19 +43,19 @@
    "nom": "Le Monde Économie",
    "url": "https://www.lemonde.fr/economie/rss_full.xml",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 3
+   "articles": 0
   },
   {
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Capital",
@@ -75,6 +75,26 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-culture-jeux-video-electronic-arts-va-licencier-400-salaries-et-fermer-le-stu",
+   "titre": "Electronic Arts va licencier 400 salariés et fermer le studio canadien BioWare",
+   "url": "https://www.franceinfo.fr/culture/jeux-video/electronic-arts-va-licencier-400-salaries-et-fermer-le-studio-canadien-bioware_8248951.html#xtor=RSS-3-%5Bgeneral%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-10-22T11:27:44.000Z",
+   "image": "https://www.franceinfo.fr/pictures/mzYZEBxYGqfZNZqaTZRmVnIfZKs/0x0:1024x576/432x243/filters:format(jpg)/2026/10/22/6ad9f2b95bbea058075086.jpg",
+   "categorie": "Social",
+   "score": 4
+  },
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-idees-article-2026-10-22-taux-d-interet-au-dela-des-5-une-hausse-qui-sanctionne-un",
+   "titre": "Taux d’intérêt au-delà des 5 % : une hausse qui sanctionne un débat budgétaire enlisé",
+   "url": "https://www.lemonde.fr/idees/article/2026/10/22/taux-d-interet-au-dela-des-5-une-hausse-qui-sanctionne-un-debat-budgetaire-enlise_6798598_3232.html",
+   "source": "Le Monde Économie",
+   "date": "2026-10-22T09:30:09.000Z",
+   "image": "https://img.lemde.fr/2026/10/21/507/0/6000/3000/644/322/60/0/ba4ce07_upload-1-6siteu3s360j-cbi1348003.JPG",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
   {
    "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-budget-2027-les-propositions-chocs-de-la-deputee-olivia-gregoire-pou",
    "titre": "Budget 2027 : les propositions chocs de la députée Olivia Grégoire « pour que la fiscalité soutienne enfin les repreneurs » de TPE-PME",
