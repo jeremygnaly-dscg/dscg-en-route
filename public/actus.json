@@ -1,5 +1,5 @@
 {
- "majLe": "2026-10-21T17:39:17.099Z",
+ "majLe": "2026-10-22T05:39:40.462Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -49,7 +49,7 @@
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 0
+   "articles": 3
   },
   {
    "nom": "franceinfo Économie",
@@ -61,7 +61,7 @@
    "nom": "Capital",
    "url": "https://feed.prismamediadigital.com/v1/cap/rss?sources=capital",
    "ok": true,
-   "articles": 1
+   "articles": 0
   }
  ],
  "images": {
@@ -75,6 +75,36 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-budget-2027-les-propositions-chocs-de-la-deputee-olivia-gregoire-pou",
+   "titre": "Budget 2027 : les propositions chocs de la députée Olivia Grégoire « pour que la fiscalité soutienne enfin les repreneurs » de TPE-PME",
+   "url": "https://www.lefigaro.fr/conjoncture/budget-2027-les-propositions-chocs-de-la-deputee-olivia-gregoire-pour-que-la-fiscalite-soutienne-enfin-les-repreneurs-de-tpe-pme-20261022",
+   "source": "Le Figaro Économie",
+   "date": "2026-10-22T04:00:00.000Z",
+   "image": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/21/05694fbceac9ded45d8ea380fa14739a6d61f50307eb5a4f3d21357f0a1b0d91.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-ce-serait-la-crise-quasi-immediate-ce-que-les-milieux-economiques-pe",
+   "titre": "« Ce serait la crise quasi immédiate » : ce que les milieux économiques pensent du programme de Jean-Luc Mélenchon",
+   "url": "https://www.lefigaro.fr/conjoncture/ce-serait-la-crise-quasi-immediate-ce-que-les-milieux-economiques-pensent-du-programme-de-jean-luc-melenchon-20261021",
+   "source": "Le Figaro Économie",
+   "date": "2026-10-21T20:11:51.000Z",
+   "image": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/21/ed76adc89dbd0a68510d5879957c99afb2c2bd0f2ae3e8162b60d27ccad3291b.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-taxe-sur-les-billets-d-avion-la-france-paie-t-elle-le-prix-de-ses-ch",
+   "titre": "Taxe sur les billets d’avion : la France paie-t-elle le prix de ses choix fiscaux dans l’aérien ?",
+   "url": "https://www.lefigaro.fr/conjoncture/taxe-sur-les-billets-d-avion-la-france-paie-t-elle-le-prix-de-ses-choix-fiscaux-dans-l-aerien-20261021",
+   "source": "Le Figaro Économie",
+   "date": "2026-10-21T17:20:54.000Z",
+   "image": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/21/8b30e7e7879c4161947b60be9ba5b705cbcfaad83a01d5f93f76dfc8837a8871.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
   {
    "id": "capital-https-www-capital-fr-economie-politique-presidentielle-2027-le-rapporteur-du-budget-somme-les-candidats-de-chiff",
    "titre": "Présidentielle 2027 : le rapporteur du budget somme les candidats de chiffrer leurs promesses, Édouard Philippe répond",
