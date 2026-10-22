@@ -1,11 +1,11 @@
 {
- "majLe": "2026-10-22T11:42:06.435Z",
+ "majLe": "2026-10-22T17:38:51.167Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
    "url": "https://www.economie.gouv.fr/rss/toutesactualites",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Entreprendre Service-Public",
@@ -36,20 +36,21 @@
   },
   {
    "nom": "CNIL",
-   "ok": false,
-   "articles": 0
+   "url": "https://www.cnil.fr/fr/rss.xml",
+   "ok": true,
+   "articles": 1
   },
   {
    "nom": "Le Monde Économie",
    "url": "https://www.lemonde.fr/economie/rss_full.xml",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "franceinfo Économie",
@@ -75,6 +76,36 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "economie-gouv-fr-https-www-economie-gouv-fr-actualites-revision-du-reglement-mica-les-autorites-francaises-publient-leur",
+   "titre": "Révision du règlement MICA : Les autorités françaises publient leurs propositions",
+   "url": "https://www.economie.gouv.fr/actualites/revision-du-reglement-mica-les-autorites-francaises-publient-leurs-propositions",
+   "source": "economie.gouv.fr",
+   "officiel": true,
+   "date": "2026-10-22T17:21:59.000Z",
+   "categorie": "Numérique",
+   "score": 2
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-societes-etalement-des-cotisations-coup-de-pouce-financier-les-aides-a-la-tresor",
+   "titre": "Étalement des cotisations, coup de pouce financier… Les aides à la trésorerie pour les commerces pillés détaillées",
+   "url": "https://www.lefigaro.fr/societes/etalement-des-cotisations-coup-de-pouce-financier-les-aides-a-la-tresorerie-pour-les-commerces-pilles-detaillees-20261022",
+   "source": "Le Figaro Économie",
+   "date": "2026-10-22T14:15:52.000Z",
+   "image": "https://i.f1g.fr/media/cms/2850x1603_crop/2026/10/22/77780640e4df41f11aa2ea049f19655c4b841892b9a7381c713aa22ac31424fb.jpg",
+   "categorie": "Social",
+   "score": 3
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-societe-mobilisation-du-17-octobre-report-de-paiement-soutien-financier-l-urs",
+   "titre": "Report de paiement, soutien financier… L'Urssaf détaille les modalités des aides à la trésorerie pour les commerces pillés le 17 octobre",
+   "url": "https://www.franceinfo.fr/societe/mobilisation-du-17-octobre/report-de-paiement-soutien-financier-l-urssaf-detaille-les-modalites-des-aides-a-la-tresorerie-pour-les-commerces-pilles_8248969.html#xtor=RSS-3-%5Bgeneral%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-10-22T12:48:49.000Z",
+   "image": "https://www.franceinfo.fr/pictures/Q7nOpfRWl3QokY9mmLjm3gWCon8/0x67:1024x643/432x243/filters:format(jpg)/2026/10/22/6ada052c23d64281528564.jpg",
+   "categorie": "Social",
+   "score": 3
+  },
   {
    "id": "franceinfo-conomie-https-www-franceinfo-fr-culture-jeux-video-electronic-arts-va-licencier-400-salaries-et-fermer-le-stu",
    "titre": "Electronic Arts va licencier 400 salariés et fermer le studio canadien BioWare",
