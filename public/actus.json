@@ -1,11 +1,11 @@
 {
- "majLe": "2026-10-22T17:38:51.167Z",
+ "majLe": "2026-10-23T05:40:11.217Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
    "url": "https://www.economie.gouv.fr/rss/toutesactualites",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "Entreprendre Service-Public",
@@ -44,13 +44,13 @@
    "nom": "Le Monde Économie",
    "url": "https://www.lemonde.fr/economie/rss_full.xml",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "franceinfo Économie",
@@ -76,6 +76,26 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-economie-article-2026-10-23-mark-zuckerberg-restera-en-californie-meme-en-cas-d-im",
+   "titre": "Mark Zuckerberg restera en Californie même en cas d’impôt sur la fortune",
+   "url": "https://www.lemonde.fr/economie/article/2026/10/23/mark-zuckerberg-restera-en-californie-meme-en-cas-d-impot-sur-la-fortune_6798940_3234.html",
+   "source": "Le Monde Économie",
+   "date": "2026-10-23T03:15:00.000Z",
+   "image": "https://img.lemde.fr/2026/09/23/451/0/5417/2708/644/322/60/0/e006c9c_ftp-1-cggudtxfdabg-9aa55ccd74b14adb838469ddcc792a12-0-09d74d4a8fcb45e8a5c0b9acad405aba.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-impots-budget-la-taxe-holding-pourrait-rapporter-dix-fois-moins-que-",
+   "titre": "Budget : la taxe holding pourrait rapporter dix fois moins que prévu",
+   "url": "https://www.franceinfo.fr/economie/impots/budget-la-taxe-holding-pourrait-rapporter-dix-fois-moins-que-prevu_8249581.html#xtor=RSS-3-%5Bgeneral%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-10-22T21:40:30.000Z",
+   "image": "https://www.franceinfo.fr/pictures/QZs4ko8Qp-UuWxe1HGmIJ8UU4HM/40x0:2073x1144/432x243/filters:format(jpg)/2026/10/22/6ada5fd05bcca263002132.png",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
   {
    "id": "economie-gouv-fr-https-www-economie-gouv-fr-actualites-revision-du-reglement-mica-les-autorites-francaises-publient-leur",
    "titre": "Révision du règlement MICA : Les autorités françaises publient leurs propositions",
@@ -469,17 +489,6 @@
    "image": "https://www.service-public.gouv.fr/resources/v-354f300000/assets/img/sp-share.png",
    "categorie": "Social",
    "score": 3
-  },
-  {
-   "id": "entreprendre-service-public-https-entreprendre-service-public-gouv-fr-actualites-a19079-xtor-rss-112",
-   "titre": "Les résultats du Baromètre 2026 de France Num sont publiés",
-   "url": "https://entreprendre.service-public.gouv.fr/actualites/A19079?xtor=RSS-112",
-   "source": "Entreprendre Service-Public",
-   "officiel": true,
-   "date": "2026-10-01T22:00:00.000Z",
-   "image": "https://www.service-public.gouv.fr/webapp/images/actu/extralarge/I5776_Num%C3%A9risation.jpg",
-   "categorie": "Numérique",
-   "score": 2
   }
  ],
  "ecartes": []
