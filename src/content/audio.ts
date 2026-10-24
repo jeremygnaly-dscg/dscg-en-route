@@ -55,7 +55,7 @@ export const AUDIO_DUREE: Record<string, number> = {
   "projet-erp": 121,
   "mali-technique": 118,
   "demarche-audit": 122,
-  "calcul-is": 143,
+  "calcul-is": 148,
   "securite-si-rgpd": 127,
   "van-tri": 125,
   "evaluation-dcf": 125,
