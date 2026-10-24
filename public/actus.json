@@ -1,5 +1,5 @@
 {
- "majLe": "2026-10-23T17:39:25.728Z",
+ "majLe": "2026-10-24T05:40:18.579Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -44,7 +44,7 @@
    "nom": "Le Monde Économie",
    "url": "https://www.lemonde.fr/economie/rss_full.xml",
    "ok": true,
-   "articles": 2
+   "articles": 0
   },
   {
    "nom": "Le Figaro Économie",
@@ -56,13 +56,13 @@
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "Capital",
    "url": "https://feed.prismamediadigital.com/v1/cap/rss?sources=capital",
    "ok": true,
-   "articles": 1
+   "articles": 0
   }
  ],
  "images": {
