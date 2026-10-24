@@ -1,5 +1,5 @@
 {
- "majLe": "2026-10-24T11:38:59.761Z",
+ "majLe": "2026-10-24T17:37:21.056Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -22,7 +22,7 @@
    "nom": "Village de la Justice",
    "url": "https://www.village-justice.com/articles/spip.php?page=backend",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Le Monde du Droit",
@@ -50,7 +50,7 @@
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 3
+   "articles": 0
   },
   {
    "nom": "franceinfo Économie",
@@ -62,7 +62,7 @@
    "nom": "Capital",
    "url": "https://feed.prismamediadigital.com/v1/cap/rss?sources=capital",
    "ok": true,
-   "articles": 0
+   "articles": 1
   }
  ],
  "images": {
@@ -76,6 +76,26 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "village-de-la-justice-https-www-village-justice-com-articles-conge-supplementaire-naissance-apres-conge-maternite-patern",
+   "titre": "Le congé supplémentaire de naissance après un congé de maternité ou de paternité : quelle articulation des protections contre le licenciement ? Par Estelle Minatchy, Juriste.",
+   "url": "https://www.village-justice.com/articles/conge-supplementaire-naissance-apres-conge-maternite-paternite-quelle,59637.html?utm_source=backend&utm_medium=RSS&utm_campaign=RSS_Reseaux",
+   "source": "Village de la Justice",
+   "date": "2026-10-24T14:00:00.000Z",
+   "image": "https://www.village-justice.com/articles/local/cache-gd2/3a/ffeca90125fe7840748b6a419ab31c.jpg?1792843202",
+   "categorie": "Social",
+   "score": 3
+  },
+  {
+   "id": "capital-https-www-capital-fr-votre-argent-assurance-vie-les-deputes-ont-rejete-les-hausses-dimpots-une-association-veut-",
+   "titre": "Assurance-vie : les députés ont rejeté les hausses d’impôts, une association veut empêcher leur retour au budget 2027",
+   "url": "https://www.capital.fr/votre-argent/assurance-vie-les-deputes-ont-rejete-les-hausses-dimpots-une-association-veut-empecher-leur-retour-au-budget-2027-1531226",
+   "source": "Capital",
+   "date": "2026-10-24T12:00:00.000Z",
+   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~10~23~25980aa9-6e20-4793-8122-369606fba787.jpeg/1200x900/focus-point/2362%2C872/assurance-vie-les-deputes-ont-rejete-les-hausses-d-impots-une-association-veut-empecher-leur-retour-au-budget-2027.jpg",
+   "categorie": "Fiscalité",
+   "score": 5
+  },
   {
    "id": "le-figaro-conomie-https-www-lefigaro-fr-secteur-high-tech-mark-zuckerberg-s-engage-a-rester-huit-ans-en-californie-meme-",
    "titre": "Mark Zuckerberg s’engage à rester huit ans en Californie, même si l’État adopte l’impôt sur la fortune",
