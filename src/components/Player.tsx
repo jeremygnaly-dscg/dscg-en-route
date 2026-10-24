@@ -10,6 +10,8 @@ import { FicheRevision } from "./Fiche";
 import { Signaler } from "./Signaler";
 import { aAcces, useAbonnements } from "@/lib/vente";
 import { gagnerPoints } from "@/lib/reseau";
+import { PlanMotsCles } from "./Methode";
+import { notionDeEpisode } from "@/content/methode";
 import styles from "./player.module.css";
 
 // Déroulé d'un épisode : on écoute (scène puis cours), on se teste, on relit la fiche.
@@ -150,6 +152,8 @@ export function Player({ episode }: { episode: Episode }) {
     return done && p !== "fiche" ? 100 : 0;
   };
   const next = suivant(ep, progress, ouvert, ueCtx);
+  const planN = notionDeEpisode(ueCtx, ep.id);
+  const plan = planN && { ...planN, ue: ueCtx };
 
   if (!ouvert(ep)) {
     return (
@@ -184,6 +188,8 @@ export function Player({ episode }: { episode: Episode }) {
           <span className={styles.ref}>{ep.ref}</span>
           {ep.cas2027 && <span className={styles.z27}>Format 2027 · sur le modèle du {ep.cas2027.charAt(0).toLowerCase() + ep.cas2027.slice(1)}</span>}
         </div>
+
+        {plan && <PlanMotsCles ue={plan.ue} motsCles={plan.motsCles} bloc={plan.bloc.titre} numero={plan.bloc.numero} blocId={plan.bloc.id} />}
 
         <div className={styles.parts} role="tablist">
           {PARTS.map((p) => (

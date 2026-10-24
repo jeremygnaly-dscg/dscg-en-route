@@ -10,6 +10,7 @@ import {
   CONTEXTES, JOURS, buildPlan, calendrierIcs, couverture, daysBetween, messageCoach, minutesParSemaine,
   type CoachConfig, type Contexte, type Creneau, type Epreuve,
 } from "@/lib/coach";
+import { EncartRappels } from "./Methode";
 import styles from "./coach.module.css";
 
 const KEY = "revizen-coach";
@@ -79,6 +80,8 @@ function Dashboard({ config, progress, today, onEdit }: {
         <h1>{config.prenom ? `Salut ${config.prenom}` : "Ton programme"}</h1>
         <p className={styles.bubble}>{messageCoach(config, progress, today)}</p>
       </header>
+
+      <EncartRappels />
 
       <BilanSemaine config={config} progress={progress} today={today} />
 

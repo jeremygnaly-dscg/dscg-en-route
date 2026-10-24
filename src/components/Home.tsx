@@ -5,6 +5,7 @@ import { DIPLOMES, UES, diplomeDe, episodesOf, findEpisode, uesDe } from "@/cont
 import { useDiplome } from "@/lib/diplome";
 import { useProgress, useQuizAttente } from "@/lib/prefs";
 import { Installer } from "./Installer";
+import { carteDe } from "@/content/methode";
 import { aAcces, estGratuit, useAbonnements, venteActive } from "@/lib/vente";
 import styles from "./home.module.css";
 
@@ -74,6 +75,12 @@ export function Home() {
           {live.length > 0 && <span className={styles.count}>{doneCount}/{live.length} écoutés</span>}
         </div>
         <p className={styles.sub}>Classés par fréquence à l&apos;examen. Programme de la session 2027.</p>
+        {carteDe(ue) && (
+          <Link href={`/app/carte?ue=${ue}`} className={styles.carte}>
+            <b>Carte de l&apos;UE · méthode entonnoir</b>
+            <span>Vue d&apos;ensemble, parties, mots-clés : révise du général au détail.</span>
+          </Link>
+        )}
         <div className={styles.list}>
           {live.map((e, i) => (
             <Link key={e.id} href={e.ue === ue ? `/episode/${e.id}` : `/episode/${e.id}?ue=${ue}`} className={styles.ep}>
