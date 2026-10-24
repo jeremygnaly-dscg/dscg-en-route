@@ -11,6 +11,7 @@ import {
   type CoachConfig, type Contexte, type Creneau, type Epreuve,
 } from "@/lib/coach";
 import { EncartRappels } from "./Methode";
+import { usePrenom } from "@/lib/compte";
 import styles from "./coach.module.css";
 
 const KEY = "revizen-coach";
@@ -39,6 +40,7 @@ export function Coach() {
   const [editing, setEditing] = useState(false);
   const [ready, setReady] = useState(false);
   const [progress] = useProgress();
+  const prenomProfil = usePrenom();
   const today = todayIso();
 
   useEffect(() => { const c = load(); setConfig(c); setEditing(!c); setReady(true); }, []);
@@ -48,7 +50,7 @@ export function Coach() {
     return <Setup initial={config} onCancel={config ? () => setEditing(false) : undefined}
       onSave={(c) => { save(c); setConfig(c); setEditing(false); window.scrollTo({ top: 0 }); }} />;
   }
-  return <Dashboard config={config} progress={progress} today={today} onEdit={() => setEditing(true)} />;
+  return <Dashboard config={{ ...config, prenom: prenomProfil || config.prenom }} progress={progress} today={today} onEdit={() => setEditing(true)} />;
 }
 
 /* ───────────────────────── Tableau de bord ───────────────────────── */
@@ -209,7 +211,6 @@ function SeanceCard({ s, progress, compact }: { s: ReturnType<typeof buildPlan>[
 
 function Setup({ initial, onSave, onCancel }: { initial: CoachConfig | null; onSave: (c: CoachConfig) => void; onCancel?: () => void }) {
   const [etape, setEtape] = useState(0);
-  const [prenom, setPrenom] = useState(initial?.prenom ?? "");
   const [epreuves, setEpreuves] = useState<Epreuve[]>(initial?.epreuves ?? []);
   const [diplome] = useDiplome();
   const [creneaux, setCreneaux] = useState<Creneau[]>(initial?.creneaux ?? []);
@@ -239,10 +240,6 @@ function Setup({ initial, onSave, onCancel }: { initial: CoachConfig | null; onS
 
       {etape === 0 && (
         <section className={styles.block}>
-          <label className={styles.field}>
-            <span>Ton prénom (facultatif)</span>
-            <input id="prenom" value={prenom} onChange={(e) => setPrenom(e.target.value.slice(0, 30))} placeholder="Prénom" autoComplete="given-name" />
-          </label>
           <div className={styles.ueList}>
             {UES.filter((u) => u.diplome === diplome || epreuves.some((x) => x.ue === u.id)).map((u) => {
               const e = epreuves.find((x) => x.ue === u.id);
@@ -323,7 +320,7 @@ function Setup({ initial, onSave, onCancel }: { initial: CoachConfig | null; onS
           <button className={styles.primary} disabled={etape === 0 ? !datesOk : creneaux.length === 0 || creneaux.some((c) => !c.jours.length)}
             onClick={() => setEtape(etape + 1)}>Continuer</button>
         ) : (
-          <button className={styles.primary} onClick={() => onSave({ prenom: prenom.trim() || undefined, epreuves, creneaux, creeLe: todayIso() })}>Créer mon programme</button>
+          <button className={styles.primary} onClick={() => onSave({ prenom: initial?.prenom, epreuves, creneaux, creeLe: initial?.creeLe ?? todayIso() })}>Créer mon programme</button>
         )}
       </div>
       {etape === 0 && !datesOk && epreuves.length > 0 && <p className={styles.meta}>Indique une date à venir pour chaque UE choisie.</p>}

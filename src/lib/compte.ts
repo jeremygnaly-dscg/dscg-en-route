@@ -107,7 +107,7 @@ export async function nbBeta(): Promise<number | null> {
 export async function seDeconnecter() {
   await supabase.auth.signOut();
   // La progression est sauvegardée dans le compte : on la retire du téléphone (appareil partagé)
-  try { ["der-progress", "revizen-coach", "revizen-quiz-attente"].forEach((k) => localStorage.removeItem(k)); } catch { /* rien */ }
+  try { ["der-progress", "revizen-coach", "revizen-quiz-attente", "zenvise-prenom"].forEach((k) => localStorage.removeItem(k)); } catch { /* rien */ }
 }
 
 export async function supprimerCompte() {
@@ -115,4 +115,22 @@ export async function supprimerCompte() {
   if (error) return false;
   await seDeconnecter();
   return true;
+}
+
+// Prénom saisi dans le Profil : source unique, reprise par le Coach et le bilan.
+// Copie locale pour l'afficher tout de suite, même hors ligne.
+const CLE_PRENOM = "zenvise-prenom";
+export function retenirPrenom(p: string) { try { localStorage.setItem(CLE_PRENOM, p); } catch { /* stockage indisponible */ } }
+export function usePrenom() {
+  const { session } = useSession();
+  const [prenom, setPrenom] = useState("");
+  useEffect(() => { try { setPrenom(localStorage.getItem(CLE_PRENOM) ?? ""); } catch { /* rien */ } }, []);
+  useEffect(() => {
+    const uid = session?.user.id;
+    if (!uid) return;
+    void supabase.from("profils").select("prenom").eq("id", uid).maybeSingle().then(({ data }) => {
+      if (data?.prenom !== undefined && data?.prenom !== null) { setPrenom(data.prenom); retenirPrenom(data.prenom); }
+    });
+  }, [session?.user.id]);
+  return prenom;
 }

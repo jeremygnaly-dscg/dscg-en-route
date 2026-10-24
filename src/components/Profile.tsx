@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useDiplome } from "@/lib/diplome";
 import { PORTAIL_STRIPE, useAbonnements, valide, venteActive } from "@/lib/vente";
-import { envoyerAvis, seDeconnecter, supabase, supprimerCompte, useSession } from "@/lib/compte";
+import { envoyerAvis, retenirPrenom, seDeconnecter, supabase, supprimerCompte, useSession } from "@/lib/compte";
 import { EPISODES } from "@/content/episodes";
 import { usePrefs, useProgress } from "@/lib/prefs";
 import { AMBIANCES, ambient, type Ambiance } from "@/lib/ambient";
@@ -61,6 +61,7 @@ export function Profile() {
     if (!uid) return;
     setInfoEtat("envoi");
     const { error } = await supabase.from("profils").update({ prenom: prenom.trim().slice(0, 60), situation }).eq("id", uid);
+    if (!error) retenirPrenom(prenom.trim().slice(0, 60));
     setInfoEtat(error ? "ko" : "ok");
   };
 
