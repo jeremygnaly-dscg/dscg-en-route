@@ -201,29 +201,32 @@ export function Player({ episode }: { episode: Episode }) {
         </div>
 
         <div className={styles.controls}>
+          <button className={styles.rond} aria-label="Reprendre au début"
+            onClick={() => { if (audioEl.current) audioEl.current.currentTime = 0; setPart("scene"); if (playing) lancer("scene"); }}>
+            <svg viewBox="0 0 24 24"><path d="M12 5V2L7 6l5 4V7a6 6 0 1 1-6 6H4a8 8 0 1 0 8-8z" /></svg>
+          </button>
           <button className={styles.play} onClick={playing ? pause : play} aria-label={playing ? "Pause" : "Lecture"}>
             <svg viewBox="0 0 24 24">{playing ? <path d="M6 4h4v16H6zM14 4h4v16h-4z" /> : <path d="M7 4.5v15l13-7.5z" />}</svg>
           </button>
-          <button className={styles.ghost} onClick={() => { if (audioEl.current) audioEl.current.currentTime = 0; setPart("scene"); if (playing) lancer("scene"); }}>↺ Reprendre au début</button>
-          {next && <button className={styles.ghost} onClick={() => allerA(next, playing)}>Épisode suivant ›</button>}
+          <button className={styles.rond} aria-label="Épisode suivant" disabled={!next} onClick={() => next && allerA(next, playing)}>
+            <svg viewBox="0 0 24 24"><path d="M6 5v14l9-7zM16 5h2v14h-2z" /></svg>
+          </button>
         </div>
 
-        <div className={styles.settings}>
-          <Seg label="Après" value={prefs.apres} onChange={(v) => change({ apres: v as "quiz" | "suite" })}
-            options={[["quiz", "Quiz et fiche"], ["suite", "Enchaîner"]]} />
-          <Seg label="Vitesse" value={String(prefs.speed)} onChange={(v) => change({ speed: Number(v) })}
-            options={[["0.9", "×0,9"], ["1", "×1"], ["1.25", "×1,25"]]} />
-          <Seg label="Ambiance" value={prefs.ambiance} onChange={(v) => change({ ambiance: v as typeof prefs.ambiance })}
-            options={AMBIANCES.map((a) => [a.id, a.label])} />
-          <div className={styles.row}>
-            <label className="label" htmlFor="ambVol">Volume du fond</label>
-            <input id="ambVol" type="range" min={0} max={100} value={Math.round(prefs.ambVolume * 100)}
-              onChange={(e) => change({ ambVolume: Number(e.target.value) / 100 })} />
-          </div>
+        <div className={styles.chips}>
+          <button className={styles.chip} aria-label="Vitesse de lecture"
+            onClick={() => { const v = [0.9, 1, 1.25]; change({ speed: v[(v.indexOf(prefs.speed) + 1) % v.length] ?? 1 }); }}>
+            ×{String(prefs.speed).replace(".", ",")}
+          </button>
+          <Link href="/app/profil#ecoute" className={styles.chip}>
+            {prefs.ambiance === "none" ? "Sans ambiance" : `Ambiance · ${AMBIANCES.find((a) => a.id === prefs.ambiance)?.label}`}
+          </Link>
+          <Link href="/app/profil#ecoute" className={styles.chip} aria-label="Réglages d'écoute">
+            <svg viewBox="0 0 24 24" aria-hidden><path d="M4 7h10M18 7h2M4 17h4M12 17h8" /><circle cx="16" cy="7" r="2" /><circle cx="10" cy="17" r="2" /></svg>
+            Réglages
+          </Link>
         </div>
-        <p className={styles.notice}>
-          {prefs.apres === "suite" ? "En voiture ou dans les transports : les épisodes s'enchaînent, les quiz t'attendent dans Réviser." : ""}
-        </p>
+        {prefs.apres === "suite" && <p className={styles.notice}>Mode enchaînement : les quiz t&apos;attendent dans Réviser.</p>}
         <audio ref={audioEl} preload="none" onEnded={onEnded}
           onTimeUpdate={(e) => { const a = e.currentTarget; if (a.duration) setRatio(a.currentTime / a.duration); }} />
       </section>
@@ -271,19 +274,6 @@ export function Player({ episode }: { episode: Episode }) {
       <p className={styles.foot} data-noprint>
         {ep.reviewedBy ? `Relu par ${ep.reviewedBy}.` : "Contenu en cours de relecture."} {ep.source}
       </p>
-    </div>
-  );
-}
-
-function Seg({ label, value, options, onChange }: { label: string; value: string; options: string[][]; onChange: (v: string) => void }) {
-  return (
-    <div className={styles.row}>
-      <span className="label">{label}</span>
-      <div className={styles.seg} role="group" aria-label={label}>
-        {options.map(([v, l]) => (
-          <button key={v} aria-pressed={value === v} onClick={() => onChange(v)}>{l}</button>
-        ))}
-      </div>
     </div>
   );
 }

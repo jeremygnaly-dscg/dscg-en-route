@@ -33,3 +33,13 @@
 .champ { display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 700; }
 .champ input, .champ select { font: inherit; font-size: 16px; font-weight: 400; padding: 10px 12px; border-radius: 12px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); width: 100%; }
 a.btnGhost { text-decoration: none; display: inline-block; }
+
+.reglage { display: flex; flex-direction: column; gap: 8px; padding: 6px 0; }
+.reglage + .reglage { border-top: 1px solid var(--line); padding-top: 12px; }
+.reglage > span { font-weight: 700; font-size: 15px; }
+.ambiances { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.ambiances button { border: 1px solid var(--line); background: var(--bg); color: var(--fg); border-radius: 12px; padding: 12px 10px; font-weight: 700; font-size: 14px; cursor: pointer; }
+.ambiances button[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
+.volume { display: flex; align-items: center; gap: 12px; }
+.volume input { flex: 1; accent-color: var(--accent); }
+.apercu { border: 0; background: var(--accent); color: var(--accent-ink); border-radius: 999px; padding: 8px 14px; font-weight: 700; font-size: 13px; cursor: pointer; }

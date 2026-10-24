@@ -3,6 +3,8 @@
 // Les cartes regroupent les « parties » du programme (programme.ts) en grandes parties d'UE.
 import type { UeId } from "./types";
 import { PROGRAMME, type Notion } from "./programme";
+import { episodesOf } from "./episodes";
+import type { Episode } from "./types";
 import { CARTES_DSCG, MOTS_CLES_DSCG } from "./methode-dscg";
 import { CARTES_DCG, MOTS_CLES_DCG } from "./methode-dcg";
 
@@ -140,4 +142,31 @@ export function notionDeEpisode(ue: string, episodeId: string) {
     if (n) return { notion: n, bloc: b, motsCles: MOTS_CLES[n.id] ?? [] };
   }
   return null;
+}
+
+// Les épisodes d'une UE classés dans l'arborescence du programme : grande partie, puis sous-partie,
+// dans l'ordre du programme. Les épisodes venus d'une autre UE et sans notion ici vont en « Compléments ».
+export interface BrancheEpisodes { id: string; numero: number; titre: string; resume?: string; episodes: { e: Episode }[]; groupes: { nom: string; episodes: { e: Episode }[] }[] }
+
+export function arborescence(ue: string): BrancheEpisodes[] | null {
+  const carte = carteDe(ue);
+  if (!carte) return null;
+  const eps = episodesOf(ue);
+  const place = new Set<string>();
+  const branches: BrancheEpisodes[] = carte.blocs.map((b) => {
+    const groupes = b.groupes.map((g) => {
+      const episodes: { e: Episode }[] = [];
+      for (const n of g.notions) {
+        for (const e of eps) {
+          if (place.has(e.id)) continue;
+          if (n.episodes?.includes(e.id) || n.id === e.id) { episodes.push({ e }); place.add(e.id); }
+        }
+      }
+      return { nom: g.nom, episodes };
+    }).filter((g) => g.episodes.length > 0);
+    return { id: b.id, numero: b.numero, titre: b.titre, resume: b.resume, groupes, episodes: groupes.flatMap((g) => g.episodes) };
+  });
+  const reste = eps.filter((e) => !place.has(e.id)).map((e) => ({ e }));
+  if (reste.length) branches.push({ id: "complements", numero: 0, titre: "Compléments d'autres UE", resume: "Des épisodes d'une autre UE, utiles aussi pour celle-ci.", episodes: reste, groupes: [{ nom: "Compléments", episodes: reste }] });
+  return branches.filter((b) => b.episodes.length > 0);
 }

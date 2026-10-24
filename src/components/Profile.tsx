@@ -5,7 +5,8 @@ import { useDiplome } from "@/lib/diplome";
 import { PORTAIL_STRIPE, useAbonnements, valide, venteActive } from "@/lib/vente";
 import { envoyerAvis, seDeconnecter, supabase, supprimerCompte, useSession } from "@/lib/compte";
 import { EPISODES } from "@/content/episodes";
-import { useProgress } from "@/lib/prefs";
+import { usePrefs, useProgress } from "@/lib/prefs";
+import { AMBIANCES, ambient, type Ambiance } from "@/lib/ambient";
 import { useTheme, type Theme } from "@/lib/theme";
 import styles from "./profile.module.css";
 
@@ -13,6 +14,16 @@ const THEMES: [Theme, string][] = [["system", "Auto"], ["light", "Clair"], ["dar
 
 export function Profile() {
   const [progress] = useProgress();
+  const [prefs, setPrefs] = usePrefs();
+  const [apercu, setApercu] = useState(false);
+  useEffect(() => () => ambient?.stop(), []);
+  useEffect(() => { if (window.location.hash === "#ecoute") setTimeout(() => document.getElementById("ecoute")?.scrollIntoView({ block: "start" }), 80); }, []);
+  const choisirAmbiance = (a: Ambiance) => { setPrefs({ ambiance: a }); if (apercu) { if (a === "none") { ambient?.stop(); setApercu(false); } else ambient?.play(a); } };
+  const basculerApercu = () => {
+    if (apercu) { ambient?.stop(); setApercu(false); return; }
+    if (prefs.ambiance === "none") return;
+    ambient?.setVolume(prefs.ambVolume); ambient?.play(prefs.ambiance); setApercu(true);
+  };
   const [theme, setTheme] = useTheme();
   const { session } = useSession();
   const [prenom, setPrenom] = useState("");
@@ -100,6 +111,44 @@ export function Profile() {
           ))}
         </div>
         <p className={styles.hint}>« Auto » suit le réglage de ton téléphone.</p>
+      </section>
+
+      <section className={styles.block} id="ecoute">
+        <h2>Écoute</h2>
+        <div className={styles.reglage}>
+          <span>Vitesse de lecture</span>
+          <div className={styles.seg} role="group" aria-label="Vitesse">
+            {[[0.9, "×0,9"], [1, "×1"], [1.25, "×1,25"]].map(([v, l]) => (
+              <button key={v} aria-pressed={prefs.speed === v} onClick={() => setPrefs({ speed: v as number })}>{l}</button>
+            ))}
+          </div>
+        </div>
+        <div className={styles.reglage}>
+          <span>À la fin d&apos;un épisode</span>
+          <div className={styles.seg} role="group" aria-label="Fin d'épisode">
+            <button aria-pressed={prefs.apres === "quiz"} onClick={() => setPrefs({ apres: "quiz" })}>Quiz et fiche</button>
+            <button aria-pressed={prefs.apres === "suite"} onClick={() => setPrefs({ apres: "suite" })}>Enchaîner</button>
+          </div>
+          <p className={styles.hint}>« Enchaîner » est fait pour la voiture et les transports : les quiz t&apos;attendent ensuite dans Réviser.</p>
+        </div>
+        <div className={styles.reglage}>
+          <span>Ambiance sonore</span>
+          <div className={styles.ambiances}>
+            {AMBIANCES.map((a) => (
+              <button key={a.id} aria-pressed={prefs.ambiance === a.id} onClick={() => choisirAmbiance(a.id)}>{a.label}</button>
+            ))}
+          </div>
+        </div>
+        {prefs.ambiance !== "none" && (
+          <div className={styles.reglage}>
+            <span>Volume de l&apos;ambiance</span>
+            <div className={styles.volume}>
+              <input type="range" min={0} max={100} value={Math.round(prefs.ambVolume * 100)} aria-label="Volume de l'ambiance"
+                onChange={(e) => { const v = Number(e.target.value) / 100; setPrefs({ ambVolume: v }); ambient?.setVolume(v); }} />
+              <button className={styles.apercu} onClick={basculerApercu}>{apercu ? "Arrêter" : "Écouter"}</button>
+            </div>
+          </div>
+        )}
       </section>
 
       <section className={styles.block}>
