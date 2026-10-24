@@ -5,6 +5,7 @@ import { UES, findEpisode } from "@/content/episodes";
 import { MOTS_CLES, carteDe } from "@/content/methode";
 import { todayIso, useProgress } from "@/lib/prefs";
 import { useParam } from "@/lib/reseau";
+import { useDiplome } from "@/lib/diplome";
 import {
   dus, elementsDe, idBloc, idCarte, maitrise, useRappels,
   type ElementRappel, type Note, type Suivi,
@@ -92,8 +93,8 @@ export function CarteUe() {
       <div className={styles.wrap}>
         <Link href="/app" className={styles.back}>← Épisodes</Link>
         <h1>Carte bientôt disponible</h1>
-        <p className={styles.lead}>La méthode entonnoir arrive d&apos;abord sur l&apos;UE1 du DSCG, puis sur les autres UE.</p>
-        <Link className={styles.primaire} href="/app/carte?ue=ue1">Voir la carte de l&apos;UE1</Link>
+        <p className={styles.lead}>Cette UE n&apos;a pas encore sa carte.</p>
+        <Link className={styles.primaire} href="/app">Retour aux épisodes</Link>
       </div>
     );
   }
@@ -142,7 +143,7 @@ export function CarteUe() {
                 <span className={styles.num}>{b.numero}</span>
                 <span className={styles.partieTitre}>
                   <b>{b.titre}</b>
-                  <span>{b.notions.length} notions · {ecoutes} écoutée{ecoutes > 1 ? "s" : ""}</span>
+                  <span>{b.notions.length} notion{b.notions.length > 1 ? "s" : ""} · {ecoutes} écoutée{ecoutes > 1 ? "s" : ""}</span>
                 </span>
                 <span className={styles.chev} aria-hidden>{open ? "−" : "+"}</span>
               </button>
@@ -157,12 +158,11 @@ export function CarteUe() {
                     : <button className={styles.secondaire} onClick={() => setExo(idb)}>Teste-toi sur cette partie</button>}
 
                   <h3 className={styles.niv3}>Niveau 3 · les notions</h3>
-                  {b.parties.map((p) => {
-                    const ns = b.notions.filter((n) => n.partie === p);
+                  {b.groupes.map(({ nom: p, notions: ns }) => {
                     if (!ns.length) return null;
                     return (
                       <div key={p} className={styles.sous}>
-                        {b.parties.length > 1 && <span className={styles.sousTitre}>{p}</span>}
+                        {b.groupes.length > 1 && <span className={styles.sousTitre}>{p}</span>}
                         <ul className={styles.notions}>
                           {ns.map((n) => {
                             const ep = n.episodes?.map(findEpisode).find((e) => e && e.status === "live");
@@ -201,6 +201,7 @@ export function CarteUe() {
 /* ───────────── File des rappels du jour ───────────── */
 
 export function RappelsDuJour() {
+  const [diplome] = useDiplome();
   const [progress] = useProgress();
   const { rappels, noter, pret } = useRappels();
   const today = todayIso();
@@ -228,7 +229,7 @@ export function RappelsDuJour() {
       {file.length === 0 && (
         <section className={styles.bloc1}>
           <p>Tes rappels arrivent le lendemain de chaque épisode écouté, ou dès que tu te testes sur une carte d&apos;UE.</p>
-          <Link className={styles.primaire} href="/app/carte?ue=ue1">Ouvrir la carte de l&apos;UE1</Link>
+          <Link className={styles.primaire} href={`/app/carte?ue=${diplome === "dcg" ? "dcg1" : "ue1"}`}>Ouvrir une carte d&apos;UE</Link>
         </section>
       )}
 
@@ -258,6 +259,7 @@ export function RappelsDuJour() {
 /* ───────────── Encarts : Coach et lecteur ───────────── */
 
 export function EncartRappels() {
+  const [diplome] = useDiplome();
   const [progress] = useProgress();
   const { rappels, pret } = useRappels();
   if (!pret) return null;
@@ -268,7 +270,7 @@ export function EncartRappels() {
         <b>{n > 0 ? `${n} rappel${n > 1 ? "s" : ""} aujourd'hui` : "Méthode entonnoir"}</b>
         <span>{n > 0 ? "Deux minutes de tête : la carte, les parties, les mots-clés." : "Vue d'ensemble, partie, notion : révise du général au détail."}</span>
       </div>
-      <Link href={n > 0 ? "/app/rappels" : "/app/carte?ue=ue1"} className={styles.primaire}>{n > 0 ? "Commencer" : "Voir la carte"}</Link>
+      <Link href={n > 0 ? "/app/rappels" : `/app/carte?ue=${diplome === "dcg" ? "dcg1" : "ue1"}`} className={styles.primaire}>{n > 0 ? "Commencer" : "Voir la carte"}</Link>
     </section>
   );
 }

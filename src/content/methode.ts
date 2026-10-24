@@ -3,16 +3,19 @@
 // Les cartes regroupent les « parties » du programme (programme.ts) en grandes parties d'UE.
 import type { UeId } from "./types";
 import { PROGRAMME, type Notion } from "./programme";
+import { CARTES_DSCG, MOTS_CLES_DSCG } from "./methode-dscg";
+import { CARTES_DCG, MOTS_CLES_DCG } from "./methode-dcg";
 
 export interface Bloc {
   id: string;
   titre: string;
   resume: string;      // une phrase simple qui résume la partie
   parties: string[];   // valeurs de Notion.partie regroupées dans ce bloc
+  ids?: string[];      // ou liste explicite de notions, quand une partie du programme doit être découpée
 }
 export interface Carte { phrase: string; blocs: Bloc[] }
 
-export const CARTES: Partial<Record<UeId, Carte>> = {
+const CARTES_UE1: Partial<Record<UeId, Carte>> = {
   ue1: {
     phrase: "D'abord le cadre, puis la croissance, la frontière, le groupe, la crise, la sortie, et enfin le non-lucratif.",
     blocs: [
@@ -35,7 +38,7 @@ export const CARTES: Partial<Record<UeId, Carte>> = {
 };
 
 // 3 à 5 mots-clés par notion : ce qu'il faut savoir retrouver et expliquer, pas réciter.
-export const MOTS_CLES: Record<string, string[]> = {
+const MOTS_CLES_UE1: Record<string, string[]> = {
   // UE1 · L'entreprise et son environnement
   "contrat-formation": ["Pourparlers et rupture fautive", "Offre et acceptation", "Vices du consentement", "Devoir d'information"],
   "contrat-inexecution": ["Force obligatoire", "Exception d'inexécution", "Résolution", "Imprévision"],
@@ -108,7 +111,10 @@ export const MOTS_CLES: Record<string, string[]> = {
   "fondations-fonds-dotation": ["Utilité publique", "Fonds de dotation", "Fonds de pérennité", "Mécénat"],
 };
 
-export interface BlocDetaille extends Bloc { numero: number; notions: Notion[] }
+export const CARTES: Partial<Record<UeId, Carte>> = { ...CARTES_UE1, ...CARTES_DSCG, ...CARTES_DCG };
+export const MOTS_CLES: Record<string, string[]> = { ...MOTS_CLES_UE1, ...MOTS_CLES_DSCG, ...MOTS_CLES_DCG };
+
+export interface BlocDetaille extends Bloc { numero: number; notions: Notion[]; groupes: { nom: string; notions: Notion[] }[] }
 
 export function carteDe(ue: string): (Omit<Carte, "blocs"> & { blocs: BlocDetaille[] }) | null {
   const c = CARTES[ue as UeId];
@@ -116,10 +122,12 @@ export function carteDe(ue: string): (Omit<Carte, "blocs"> & { blocs: BlocDetail
   const notions = PROGRAMME[ue as UeId] ?? [];
   return {
     ...c,
-    blocs: c.blocs.map((b, i) => ({
-      ...b, numero: i + 1,
-      notions: b.parties.flatMap((p) => notions.filter((n) => n.partie === p)),
-    })),
+    blocs: c.blocs.map((b, i) => {
+      const groupes = b.ids
+        ? [{ nom: b.titre, notions: b.ids.map((id) => notions.find((n) => n.id === id)).filter((n): n is Notion => !!n) }]
+        : b.parties.map((p) => ({ nom: p, notions: notions.filter((n) => n.partie === p) }));
+      return { ...b, numero: i + 1, groupes, notions: groupes.flatMap((g) => g.notions) };
+    }),
   };
 }
 
