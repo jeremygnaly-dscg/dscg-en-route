@@ -1,5 +1,5 @@
 {
- "majLe": "2026-10-24T05:40:18.579Z",
+ "majLe": "2026-10-24T11:38:59.761Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -50,7 +50,7 @@
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 0
+   "articles": 3
   },
   {
    "nom": "franceinfo Économie",
@@ -77,6 +77,16 @@
  },
  "items": [
   {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-secteur-high-tech-mark-zuckerberg-s-engage-a-rester-huit-ans-en-californie-meme-",
+   "titre": "Mark Zuckerberg s’engage à rester huit ans en Californie, même si l’État adopte l’impôt sur la fortune",
+   "url": "https://www.lefigaro.fr/secteur/high-tech/mark-zuckerberg-s-engage-a-rester-huit-ans-en-californie-meme-si-l-etat-adopte-l-impot-sur-la-fortune-20261024",
+   "source": "Le Figaro Économie",
+   "date": "2026-10-23T23:36:21.000Z",
+   "image": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/24/c354086db79851fba4ec65bdf3a19e6531dd088049dd070a58e29bac5268b4ff.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
    "id": "capital-https-www-capital-fr-economie-politique-budget-2027-on-va-arreter-de-faire-semblant-les-deputes-nattendent-plus-",
    "titre": "Budget 2027 : «On va arrêter de faire semblant», les députés n’attendent plus que le 49.3 ou les ordonnances",
    "url": "https://www.capital.fr/economie-politique/budget-2027-on-va-arreter-de-faire-semblant-les-deputes-nattendent-plus-que-le-493-ou-les-ordonnances-1531230",
@@ -95,6 +105,26 @@
    "image": "https://img.lemde.fr/2026/10/23/531/0/3794/1897/644/322/60/0/00af45f_upload-1-8e04kiyevyjr-hl-qtop-3041821.jpg",
    "categorie": "Social",
    "score": 6
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-gel-des-tarifs-des-mutuelles-en-2026-le-conseil-constitutionnel-reto",
+   "titre": "Gel des tarifs des mutuelles en 2026 : le Conseil constitutionnel retoque la mesure votée par les députés",
+   "url": "https://www.lefigaro.fr/conjoncture/gel-des-tarifs-des-mutuelles-en-2026-le-conseil-constitutionnel-retoque-la-mesure-votee-par-les-deputes-20261023",
+   "source": "Le Figaro Économie",
+   "date": "2026-10-23T15:51:24.000Z",
+   "image": "https://i.f1g.fr/media/cms/3000x1869_crop/2026/10/23/7c20fdcc4aaebc55f2ced69e749eb2b8d06154f99d5aa0ee514a06d0d48f9238.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-sous-indexation-des-pensions-abattement-fiscal-les-retraites-pied-de",
+   "titre": "Sous-indexation des pensions, abattement fiscal… Les retraites, pied de nez permanent des députés au gouvernement",
+   "url": "https://www.lefigaro.fr/conjoncture/sous-indexation-des-pensions-abattement-fiscal-les-retraites-pied-de-nez-permanent-des-deputes-au-gouvernement-20261023",
+   "source": "Le Figaro Économie",
+   "date": "2026-10-23T15:50:45.000Z",
+   "image": "https://i.f1g.fr/media/cms/2743x1542_crop/2026/10/23/8d992ee4a8007a63585f216d3e0b6f6e26551683892a8e09f9ed1f88bcc5c821.jpg",
+   "categorie": "Fiscalité",
+   "score": 4
   },
   {
    "id": "village-de-la-justice-https-www-village-justice-com-articles-spfpl-holding-fait-pas-ecran-aux-cotisations-sociales-58847",
