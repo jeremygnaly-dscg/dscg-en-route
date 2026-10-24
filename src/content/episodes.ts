@@ -6,6 +6,11 @@ import { LOT4 } from "./lot4";
 import { LOT5 } from "./lot5";
 import { LOT6 } from "./lot6";
 import { LOT_DCG1 } from "./lot-dcg1";
+import { LOT_DCG_AFFAIRES } from "./lot-dcg-affaires";
+import { LOT_DCG_SOCIAL } from "./lot-dcg-social";
+import { LOT_DCG_FISCAL } from "./lot-dcg-fiscal";
+import { LOT_AUTEURS_MANAGEMENT } from "./lot-auteurs-management";
+import { LOT_AUTEURS_ECONOMIE } from "./lot-auteurs-economie";
 import { LOT_2027 } from "./lot-2027";
 import { LOT_2027_DCG_A } from "./lot-2027-dcg-a";
 import { LOT_2027_DCG_B } from "./lot-2027-dcg-b";
@@ -260,6 +265,11 @@ export const EPISODES: Episode[] = [
   ...LOT_2027,
   ...LOT_2027_DCG_A,
   ...LOT_2027_DCG_B,
+  ...LOT_DCG_AFFAIRES,
+  ...LOT_DCG_SOCIAL,
+  ...LOT_DCG_FISCAL,
+  ...LOT_AUTEURS_MANAGEMENT,
+  ...LOT_AUTEURS_ECONOMIE,
 ];
 
 function soon(id: string, ue: Episode["ue"], title: string, ref: string): Episode {
@@ -271,7 +281,7 @@ function soon(id: string, ue: Episode["ue"], title: string, ref: string): Episod
 // Programme « zéro impasse » : chaque notion pas encore traitée apparaît comme épisode à venir
 for (const [ue, notions] of Object.entries(PROGRAMME)) {
   for (const no of notions ?? []) {
-    const couvert = no.episodes?.some((id) => EPISODES.some((e) => e.id === id)) || EPISODES.some((e) => e.id === no.id);
+    const couvert = no.episodes?.some((id) => EPISODES.some((e) => e.id === id)) || EPISODES.some((e) => e.id === no.id || e.notion === no.id);
     if (!couvert) EPISODES.push(soon(no.id, ue as Episode["ue"], no.titre, no.partie));
   }
 }

@@ -183,7 +183,7 @@ export function Player({ episode }: { episode: Episode }) {
 
       <section className={styles.player} aria-label="Lecteur" data-noprint>
         <div className={styles.head}>
-          <span className="label">{libelleUe(ueCtx)} · {ep.minutes} min d&apos;écoute · {ep.format === "comptable" ? "comptabilité" : ep.format === "technique" ? "technique" : "juridique"}</span>
+          <span className="label">{libelleUe(ueCtx)} · {ep.minutes} min d&apos;écoute · {ep.format === "comptable" ? "comptabilité" : ep.format === "technique" ? "technique" : ep.format === "auteur" ? "auteur clé" : "juridique"}</span>
           <h1>{ep.title}</h1>
           <span className={styles.ref}>{ep.ref}</span>
           {ep.cas2027 && <span className={styles.z27}>Format 2027 · sur le modèle du {ep.cas2027.charAt(0).toLowerCase() + ep.cas2027.slice(1)}</span>}

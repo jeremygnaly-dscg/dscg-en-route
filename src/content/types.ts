@@ -31,7 +31,8 @@ export interface FlashQuestion {
 // - "juridique"  (UE1)          : scène, cours, flash
 // - "technique"  (UE2, UE3, UE5): scène, cours, formules à retenir, flash
 // - "comptable"  (UE4)          : scène, cours (droit comptable), écritures, flash
-export type Format = "juridique" | "technique" | "comptable";
+// - "auteur"     (DCG5, DCG7)   : carte auteur d'une minute : situation, idée, mot-clé, exemple, limite
+export type Format = "juridique" | "technique" | "comptable" | "auteur";
 
 export interface Formule {
   nom: string; // ex. "Coût moyen pondéré du capital"
@@ -65,6 +66,7 @@ export interface Episode {
   id: string;
   ue: UeId;
   aussi?: UeId[]; // autres UE où l'épisode sert aussi (ex. un épisode DSCG utile au DCG)
+  notion?: string; // notion du programme à laquelle l'épisode se rattache, quand son id diffère (cartes auteurs)
   format: Format;
   formules?: Formule[];
   ecritures?: Ecriture[];

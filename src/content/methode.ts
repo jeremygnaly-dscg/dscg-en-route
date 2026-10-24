@@ -3,7 +3,7 @@
 // Les cartes regroupent les « parties » du programme (programme.ts) en grandes parties d'UE.
 import type { UeId } from "./types";
 import { PROGRAMME, type Notion } from "./programme";
-import { episodesOf } from "./episodes";
+import { EPISODES, episodesOf } from "./episodes";
 import type { Episode } from "./types";
 import { CARTES_DSCG, MOTS_CLES_DSCG } from "./methode-dscg";
 import { CARTES_DCG, MOTS_CLES_DCG } from "./methode-dcg";
@@ -116,6 +116,9 @@ const MOTS_CLES_UE1: Record<string, string[]> = {
 export const CARTES: Partial<Record<UeId, Carte>> = { ...CARTES_UE1, ...CARTES_DSCG, ...CARTES_DCG };
 export const MOTS_CLES: Record<string, string[]> = { ...MOTS_CLES_UE1, ...MOTS_CLES_DSCG, ...MOTS_CLES_DCG };
 
+let index: Map<string, Episode> | null = null;
+const EPISODES_PAR_ID = () => (index ??= new Map(EPISODES.map((e) => [e.id, e])));
+
 export interface BlocDetaille extends Bloc { numero: number; notions: Notion[]; groupes: { nom: string; notions: Notion[] }[] }
 
 export function carteDe(ue: string): (Omit<Carte, "blocs"> & { blocs: BlocDetaille[] }) | null {
@@ -138,7 +141,8 @@ export function notionDeEpisode(ue: string, episodeId: string) {
   const carte = carteDe(ue);
   if (!carte) return null;
   for (const b of carte.blocs) {
-    const n = b.notions.find((x) => x.episodes?.includes(episodeId) || x.id === episodeId);
+    const notionLiee = EPISODES_PAR_ID().get(episodeId)?.notion;
+    const n = b.notions.find((x) => x.episodes?.includes(episodeId) || x.id === episodeId || x.id === notionLiee);
     if (n) return { notion: n, bloc: b, motsCles: MOTS_CLES[n.id] ?? [] };
   }
   return null;
@@ -159,7 +163,7 @@ export function arborescence(ue: string): BrancheEpisodes[] | null {
       for (const n of g.notions) {
         for (const e of eps) {
           if (place.has(e.id)) continue;
-          if (n.episodes?.includes(e.id) || n.id === e.id) { episodes.push({ e }); place.add(e.id); }
+          if (n.episodes?.includes(e.id) || n.id === e.id || e.notion === n.id) { episodes.push({ e }); place.add(e.id); }
         }
       }
       return { nom: g.nom, episodes };
