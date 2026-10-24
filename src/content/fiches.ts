@@ -72,7 +72,8 @@ export const FICHES: Record<string, FicheRevision> = {
   "calcul-is": {
     essentiel: "Résultat fiscal = résultat comptable + réintégrations − déductions, puis application des taux de l'art. 219 CGI.",
     points: [
-      "Réintégrations : IS comptabilisé, amendes et pénalités (art. 39-2), certaines dépenses somptuaires, taxe annuelle sur les véhicules.",
+      "On part du résultat comptable avant impôt. Réintégrations : amendes et pénalités (art. 39-2), certaines dépenses somptuaires, taxe annuelle sur les véhicules.",
+      "Si l'énoncé donne un résultat après impôt, on réintègre d'abord l'IS comptabilisé (non déductible).",
       "Déductions : dividendes du régime mère-fille, avec réintégration de la quote-part de 5 %.",
       "Taux normal 25 %. Taux réduit de 15 % jusqu'à 42 500 € pour les PME éligibles.",
       "PME éligible : CA < 10 M€, capital entièrement libéré et détenu à au moins 75 % par des personnes physiques.",
@@ -80,7 +81,7 @@ export const FICHES: Record<string, FicheRevision> = {
       "Grandes entreprises : contribution sociale de 3,3 % et, le cas échéant, contribution exceptionnelle.",
     ],
     methode: ["Tableau ligne par ligne avec le texte de chaque retraitement", "Résultat fiscal", "IS par tranche"],
-    pieges: ["Oublier de réintégrer l'IS lui-même.", "Appliquer le taux de 15 % sans vérifier les conditions de la PME."],
+    pieges: ["Partir d'un résultat après impôt sans réintégrer l'IS comptabilisé.", "Appliquer le taux de 15 % sans vérifier les conditions de la PME."],
   },
   "tva-territorialite": {
     essentiel: "Une prestation de services B2B est taxée chez le preneur, une prestation B2C chez le prestataire, sauf règles particulières.",
