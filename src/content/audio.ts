@@ -182,7 +182,19 @@ export const AUDIO_DISPO: string[] = [
   "dcg-tva-declaration",
   "dcg-taxes-salaires",
   "dcg-cfe-cvae",
-  "dcg-enregistrement"
+  "dcg-enregistrement",
+  "augmentation-capital-juridique",
+  "dividendes-fictifs",
+  "fusion-procedure",
+  "scission-apa-juridique",
+  "tup",
+  "cession-fonds-commerce",
+  "transformation-societe",
+  "transmission-gratuite",
+  "dissolution-liquidation",
+  "prix-transfert-fiscal",
+  "contentieux-fiscal",
+  "conformite-sapin-lcb"
 ];
 
 // Durée d'écoute réelle (scène + cours), en secondes
@@ -368,5 +380,17 @@ export const AUDIO_DUREE: Record<string, number> = {
   "dcg-tva-declaration": 89,
   "dcg-taxes-salaires": 73,
   "dcg-cfe-cvae": 76,
-  "dcg-enregistrement": 77
+  "dcg-enregistrement": 77,
+  "augmentation-capital-juridique": 87,
+  "dividendes-fictifs": 78,
+  "fusion-procedure": 80,
+  "scission-apa-juridique": 83,
+  "tup": 72,
+  "cession-fonds-commerce": 79,
+  "transformation-societe": 82,
+  "transmission-gratuite": 77,
+  "dissolution-liquidation": 73,
+  "prix-transfert-fiscal": 80,
+  "contentieux-fiscal": 78,
+  "conformite-sapin-lcb": 90
 };
