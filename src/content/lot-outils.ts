@@ -1,6 +1,6 @@
 // Petits outils d'écriture des lots : lignes de scène et de cours, épisode « écrit » par défaut.
 // Un épisode écrit passe automatiquement en ligne quand sa voix studio existe (voir episodes.ts).
-import type { Episode, FicheRevision, FlashQuestion, Format, Line, UeId } from "./types";
+import type { Ecriture, Episode, FicheRevision, FlashQuestion, Format, Formule, Line, UeId } from "./types";
 
 export const N = (text: string): Line => ({ who: "narrateur", text });
 export const D = (text: string): Line => ({ who: "dirigeant", text });
@@ -26,6 +26,8 @@ export interface Brouillon {
   cours: Line[];
   flash: FlashQuestion[];
   fiche: FicheRevision;
+  ecritures?: Ecriture[];
+  formules?: Formule[];
 }
 
 export const ecrit = (format: Format, source: string, minutes = 2) => (b: Brouillon): Episode => ({

@@ -15,6 +15,8 @@ import { LOT_DCG_FISCAL } from "./lot-dcg-fiscal";
 import { LOT_AUTEURS_MANAGEMENT } from "./lot-auteurs-management";
 import { LOT_AUTEURS_ECONOMIE } from "./lot-auteurs-economie";
 import { LOT_2027 } from "./lot-2027";
+import { LOT_DSCG_UE1_A } from "./lot-dscg-ue1-a";
+import { LOT_DSCG_UE4_A } from "./lot-dscg-ue4-a";
 import { LOT_2027_DCG_A } from "./lot-2027-dcg-a";
 import { LOT_2027_DCG_B } from "./lot-2027-dcg-b";
 import { AUDIO_DISPO, AUDIO_DUREE } from "./audio";
@@ -275,6 +277,8 @@ export const EPISODES: Episode[] = [
   ...LOT_DCG_FISCAL,
   ...LOT_AUTEURS_MANAGEMENT,
   ...LOT_AUTEURS_ECONOMIE,
+  ...LOT_DSCG_UE1_A,
+  ...LOT_DSCG_UE4_A,
 ];
 
 function soon(id: string, ue: Episode["ue"], title: string, ref: string): Episode {
