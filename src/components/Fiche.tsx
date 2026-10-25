@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import type { Ecriture, Episode, Formule } from "@/content/types";
 import { libelleUe } from "@/content/episodes";
 import styles from "./player.module.css";
@@ -37,6 +38,7 @@ export function Ecritures({ items }: { items: Ecriture[] }) {
         return (
           <div key={e.titre} className={styles.card}>
             <span className="label">{e.titre}</span>
+            {e.droit && <p className={styles.droit}><b>La règle :</b> {e.droit}</p>}
             <div className={styles.journalWrap}>
               <table className={styles.journal}>
                 <thead>
@@ -44,12 +46,20 @@ export function Ecritures({ items }: { items: Ecriture[] }) {
                 </thead>
                 <tbody>
                   {e.lignes.map((l, i) => (
-                    <tr key={i}>
-                      <td className={styles.acct}>{l.compte}</td>
-                      <td className={l.credit !== undefined ? styles.indent : ""}>{l.intitule}</td>
-                      <td className={styles.num}>{eur(l.debit)}</td>
-                      <td className={styles.num}>{eur(l.credit)}</td>
-                    </tr>
+                    <Fragment key={i}>
+                      <tr className={l.pourquoi ? styles.avecPourquoi : ""}>
+                        <td className={styles.acct}>{l.compte}</td>
+                        <td className={l.credit !== undefined ? styles.indent : ""}>{l.intitule}</td>
+                        <td className={styles.num}>{eur(l.debit)}</td>
+                        <td className={styles.num}>{eur(l.credit)}</td>
+                      </tr>
+                      {l.pourquoi && (
+                        <tr className={styles.pourquoi}>
+                          <td></td>
+                          <td colSpan={3}><span className={l.debit !== undefined ? styles.sensD : styles.sensC}>{l.debit !== undefined ? "Débit" : "Crédit"}</span> {l.pourquoi}</td>
+                        </tr>
+                      )}
+                    </Fragment>
                   ))}
                 </tbody>
                 <tfoot>

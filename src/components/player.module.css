@@ -87,3 +87,10 @@
 .z27 { align-self: flex-start; font-size: 12px; font-weight: 700; color: var(--accent); background: var(--accent-soft); border-radius: 8px; padding: 3px 9px; margin-top: 6px; }
 .gain { margin: 0; font-weight: 700; color: var(--accent); background: var(--accent-soft); border-radius: 12px; padding: 10px 12px; }
 .gain a { color: inherit; }
+
+.droit { margin: 0; font-size: 14px; line-height: 1.45; background: var(--gold-soft); border-left: 3px solid var(--gold); border-radius: 4px 10px 10px 4px; padding: 8px 10px; }
+.journal tr.avecPourquoi td { border-bottom: 0; }
+.journal tr.pourquoi td { padding-top: 0; font-size: 12.5px; line-height: 1.4; color: var(--muted); }
+.sensD, .sensC { display: inline-block; font-size: 10.5px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; padding: 1px 6px; border-radius: 6px; margin-right: 4px; }
+.sensD { background: var(--accent-soft); color: var(--accent); }
+.sensC { background: var(--ok-soft); color: var(--ok); }

@@ -402,16 +402,16 @@ export const LOT_2027_DCG_B: Episode[] = [
       {
         titre: "Virement client non comptabilisé",
         lignes: [
-          { compte: "512", intitule: "Banque", debit: 900 },
-          { compte: "411", intitule: "Clients", credit: 900 },
+          { compte: "512", intitule: "Banque", debit: 900, pourquoi: "L'argent du client est arrivé en banque : l'actif trésorerie augmente." },
+          { compte: "411", intitule: "Clients", credit: 900, pourquoi: "Le client a payé : sa dette envers nous, notre créance, diminue." },
         ],
       },
       {
         titre: "Frais bancaires et prélèvement d'assurance",
         lignes: [
-          { compte: "627", intitule: "Services bancaires et assimilés", debit: 80 },
-          { compte: "616", intitule: "Primes d'assurance", debit: 450 },
-          { compte: "512", intitule: "Banque", credit: 530 },
+          { compte: "627", intitule: "Services bancaires et assimilés", debit: 80, pourquoi: "Les frais bancaires sont une charge." },
+          { compte: "616", intitule: "Primes d'assurance", debit: 450, pourquoi: "L'assurance prélevée est une charge." },
+          { compte: "512", intitule: "Banque", credit: 530, pourquoi: "L'argent est sorti : la trésorerie diminue." },
         ],
       },
     ],
@@ -467,16 +467,16 @@ export const LOT_2027_DCG_B: Episode[] = [
         titre: "1er octobre · Acquisition",
         regle: "TVA non récupérable incluse dans le coût.",
         lignes: [
-          { compte: "2182", intitule: "Matériel de transport", debit: 38400 },
-          { compte: "404", intitule: "Fournisseurs d'immobilisations", credit: 38400 },
+          { compte: "2182", intitule: "Matériel de transport", debit: 38400, pourquoi: "Bien durable contrôlé : actif immobilisé, pour son coût TTC car la TVA n'est pas récupérable." },
+          { compte: "404", intitule: "Fournisseurs d'immobilisations", credit: 38400, pourquoi: "Nous devons le prix du véhicule : dette liée à un investissement." },
         ],
       },
       {
         titre: "31 décembre · Dotation corrigée",
         regle: "38 400 / 5 × 3/12.",
         lignes: [
-          { compte: "6811", intitule: "Dotations aux amortissements des immobilisations", debit: 1920 },
-          { compte: "28182", intitule: "Amortissements du matériel de transport", credit: 1920 },
+          { compte: "6811", intitule: "Dotations aux amortissements des immobilisations", debit: 1920, pourquoi: "L'usure de l'exercice est une charge." },
+          { compte: "28182", intitule: "Amortissements du matériel de transport", credit: 1920, pourquoi: "Correcteur d'actif : il constate l'usure du véhicule." },
         ],
       },
     ],

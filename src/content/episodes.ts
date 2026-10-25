@@ -6,6 +6,8 @@ import { LOT4 } from "./lot4";
 import { LOT5 } from "./lot5";
 import { LOT6 } from "./lot6";
 import { LOT_DCG1 } from "./lot-dcg1";
+import { LOT_DCG9 } from "./lot-dcg9";
+import { LOGIQUE } from "./compta-logique";
 import { LOT_DCG_AFFAIRES } from "./lot-dcg-affaires";
 import { LOT_DCG_SOCIAL } from "./lot-dcg-social";
 import { LOT_DCG_FISCAL } from "./lot-dcg-fiscal";
@@ -262,6 +264,7 @@ export const EPISODES: Episode[] = [
   ...LOT5,
   ...LOT6,
   ...LOT_DCG1,
+  ...LOT_DCG9,
   ...LOT_2027,
   ...LOT_2027_DCG_A,
   ...LOT_2027_DCG_B,
@@ -290,6 +293,13 @@ for (const [ue, notions] of Object.entries(PROGRAMME)) {
 // Règle produit : un épisode n'est jouable qu'avec la voix studio. Sinon il reste « bientôt disponible ».
 for (const e of EPISODES) {
   if (!e.fiche && FICHES[e.id]) e.fiche = FICHES[e.id];
+  // Compta approfondie : règle de droit comptable avant l'écriture, et pourquoi de chaque ligne
+  LOGIQUE[e.id]?.forEach((x, i) => {
+    const w = e.ecritures?.[i];
+    if (!w) return;
+    w.droit ??= x.droit;
+    w.lignes.forEach((l, j) => { l.pourquoi ??= x.pourquoi[j]; });
+  });
   if (AUSSI[e.id]) e.aussi = [...new Set([...(e.aussi ?? []), ...AUSSI[e.id]])];
   if (AUDIO_DISPO.includes(e.id)) e.audio = { scene: `/audio/${e.id}-scene.mp3`, cours: `/audio/${e.id}-cours.mp3` };
   // Durée affichée = durée réelle d'écoute, arrondie à la minute

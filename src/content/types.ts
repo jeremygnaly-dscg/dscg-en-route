@@ -46,12 +46,14 @@ export interface LigneEcriture {
   intitule: string; // ex. "Dotations aux provisions d'exploitation"
   debit?: number;
   credit?: number;
+  pourquoi?: string; // pourquoi ce compte, et pourquoi au débit ou au crédit (logique comptable)
 }
 
 export interface Ecriture {
   titre: string; // ex. "31/12/N · Constitution de la provision"
   lignes: LigneEcriture[];
   regle?: string; // la règle comptable qui justifie l'écriture
+  droit?: string; // compta approfondie : la règle de droit comptable qui autorise (ou interdit) l'écriture, rappelée avant elle
 }
 
 // Fiche de révision affichée après l'écoute et le quiz
