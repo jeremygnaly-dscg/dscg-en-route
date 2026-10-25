@@ -1,5 +1,5 @@
 {
- "majLe": "2026-10-25T11:38:44.093Z",
+ "majLe": "2026-10-25T17:38:08.483Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -50,13 +50,13 @@
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "Capital",
