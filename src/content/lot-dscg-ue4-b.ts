@@ -293,4 +293,51 @@ export const LOT_DSCG_UE4_B: Episode[] = [
       pieges: ["Imposer un comité d'audit à toute société."],
     },
   }),
+  K({
+    id: "fusion-fiscal-comptable", ue: "ue4",
+    title: "Fusion : traitement comptable et fiscal du boni et du mali", ref: "PCG art. 745-1 et s., art. 210 A CGI",
+    scene: [
+      N("Dijon. Bourgogne Holding absorbe sa filiale à 100 %, Côte Vins, à la valeur comptable. Les titres annulés valaient 500 000 euros ; l'actif net reçu, 700 000."),
+      D("On gagne 200 000 euros sur la fusion. C'est un produit imposable ?"),
+      X("Comptablement, une partie va en résultat, l'autre en capitaux propres. Fiscalement, sous le régime de faveur, le boni n'est pas imposé."),
+      N("À l'examen : découper le boni, puis traiter le mali, en comptabilité et en fiscalité."),
+    ],
+    cours: [
+      C("Le boni de fusion est l'excédent de l'actif net reçu sur la valeur des titres de l'absorbée annulés. Ici, 700 000 moins 500 000 : `200 000 €`.", true),
+      C("Comptablement, la part du boni qui correspond aux résultats accumulés par l'absorbée depuis l'acquisition, et non distribués, va en résultat financier. Le reste va en capitaux propres. Ici, 120 000 en produits, 80 000 en prime.", true),
+      C("Fiscalement, sous le régime de faveur de l'article 210 A, le boni n'est pas imposable : la part comptabilisée en produit est déduite extra-comptablement."),
+      C("Le mali technique, lié aux plus-values latentes des actifs de l'absorbée, est inscrit à l'actif. Il n'est pas déductible immédiatement ; il est pris en compte fiscalement lors de la cession de l'actif auquel il est affecté.", true),
+      C("Le vrai mali, qui ne correspond à aucune plus-value latente, est une charge financière en comptabilité, mais il n'est pas déductible fiscalement : on le réintègre."),
+    ],
+    ecritures: [
+      {
+        titre: "Chez l'absorbante · Annulation des titres et boni",
+        droit: "PCG, titre VII : à la valeur comptable, l'écart positif entre l'actif net reçu et les titres annulés est un boni ; la part correspondant aux résultats accumulés depuis l'acquisition et non distribués est un produit financier, le surplus va en capitaux propres.",
+        lignes: [
+          { compte: "2 à 5", intitule: "Actifs reçus, nets des dettes reprises", debit: 700000, pourquoi: "L'absorbante reçoit le patrimoine de sa filiale : l'actif augmente." },
+          { compte: "261", intitule: "Titres de participation Côte Vins", credit: 500000, pourquoi: "Les titres de la filiale sont annulés : l'actif disparaît, au crédit." },
+          { compte: "76", intitule: "Produits financiers (boni sur résultats accumulés)", credit: 120000, pourquoi: "Ces bénéfices auraient pu être distribués en dividendes : un produit financier." },
+          { compte: "1042", intitule: "Prime de fusion (boni restant)", credit: 80000, pourquoi: "Le surplus du boni n'est pas un revenu : il va en capitaux propres." },
+        ],
+      },
+    ],
+    flash: [
+      Q("Part du boni correspondant aux résultats accumulés non distribués :", ["En capitaux propres", "En résultat financier", "En provision"], 1, "Le surplus en capitaux propres."),
+      Q("Fiscalement, sous le régime de faveur, le boni est :", ["Imposable", "Non imposable", "Imposé à 15 %"], 1, "Déduction extra-comptable de la part en produit."),
+      Q("Le vrai mali de fusion est fiscalement :", ["Déductible", "Non déductible", "Amortissable"], 1, "On le réintègre."),
+    ],
+    fiche: {
+      essentiel: "Boni : résultats accumulés en produit financier, surplus en capitaux propres, non imposable sous 210 A ; mali technique à l'actif ; vrai mali en charge, non déductible.",
+      points: [
+        "Boni = actif net reçu − titres annulés.",
+        "Part des résultats accumulés depuis l'acquisition : résultat financier.",
+        "Surplus : capitaux propres.",
+        "Régime de faveur : boni non imposable (déduction extra-comptable).",
+        "Mali technique : actif, pris en compte à la cession du bien.",
+        "Vrai mali : charge financière, réintégrée fiscalement.",
+      ],
+      methode: ["Calcul du boni ou du mali", "Ventilation comptable", "Écriture", "Retraitements fiscaux"],
+      pieges: ["Imposer la part du boni comptabilisée en produit."],
+    },
+  }),
 ];
