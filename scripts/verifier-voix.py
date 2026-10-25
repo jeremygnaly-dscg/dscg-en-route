@@ -1,12 +1,15 @@
 # Transcrit chaque phrase des vidéos TikTok (Whisper) et la compare au texte prévu,
 # pour repérer les bégaiements ou mots déformés de la synthèse vocale.
-import json, os, re, difflib, glob
-from faster_whisper import WhisperModel
+import json, os, re, difflib, glob, traceback, sys
 
 D = "media/tiktok"
 FIN = "Zenvaïze. Bientôt sur vos écrans."
 vids = json.load(open(f"{D}/videos.json"))
-model = WhisperModel("medium", device="cpu", compute_type="int8")
+try:
+    from faster_whisper import WhisperModel
+    model = WhisperModel("medium", device="cpu", compute_type="int8")
+except Exception:
+    json.dump({"erreur": traceback.format_exc()}, open(f"{D}/verification.json", "w"), ensure_ascii=False, indent=2); sys.exit(0)
 norm = lambda s: re.sub(r"[^a-z0-9àâäéèêëîïôöùûüç ]", " ", s.lower()).split()
 rapport = []
 for v in vids:
