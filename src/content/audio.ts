@@ -217,7 +217,9 @@ export const AUDIO_DISPO: string[] = [
   "contrat-formation",
   "contrat-inexecution",
   "contrat-vente",
+  "contrat-entreprise",
   "distribution-franchise",
+  "assurance-transaction",
   "penal-responsabilite",
   "procedure-penale",
   "infractions-affaires",
@@ -228,6 +230,9 @@ export const AUDIO_DISPO: string[] = [
   "fiscalite-apports",
   "sa-directoire",
   "societes-cotees",
+  "information-durabilite",
+  "appels-offres",
+  "vigilance-mission",
   "territorialite-is",
   "emprunt-obligataire",
   "financement-bancaire",
@@ -235,7 +240,10 @@ export const AUDIO_DISPO: string[] = [
   "participations-seuils",
   "droit-travail-groupe",
   "gie-location-gerance",
-  "plans-sauvegarde-cession"
+  "plans-sauvegarde-cession",
+  "insolvabilite-europe",
+  "associations",
+  "fondations-fonds-dotation"
 ];
 
 // Durée d'écoute réelle (scène + cours), en secondes
@@ -456,7 +464,9 @@ export const AUDIO_DUREE: Record<string, number> = {
   "contrat-formation": 91,
   "contrat-inexecution": 89,
   "contrat-vente": 76,
+  "contrat-entreprise": 87,
   "distribution-franchise": 81,
+  "assurance-transaction": 68,
   "penal-responsabilite": 77,
   "procedure-penale": 75,
   "infractions-affaires": 88,
@@ -467,6 +477,9 @@ export const AUDIO_DUREE: Record<string, number> = {
   "fiscalite-apports": 72,
   "sa-directoire": 70,
   "societes-cotees": 82,
+  "information-durabilite": 76,
+  "appels-offres": 75,
+  "vigilance-mission": 81,
   "territorialite-is": 80,
   "emprunt-obligataire": 79,
   "financement-bancaire": 89,
@@ -474,5 +487,8 @@ export const AUDIO_DUREE: Record<string, number> = {
   "participations-seuils": 81,
   "droit-travail-groupe": 82,
   "gie-location-gerance": 76,
-  "plans-sauvegarde-cession": 78
+  "plans-sauvegarde-cession": 78,
+  "insolvabilite-europe": 77,
+  "associations": 85,
+  "fondations-fonds-dotation": 81
 };
