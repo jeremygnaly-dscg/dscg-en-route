@@ -15,7 +15,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: python -m pip install faster-whisper==1.1.1 requests && python -c "import requests, faster_whisper; print('ok')"
+      - run: python -m pip install faster-whisper==1.1.1 "av<14" requests && python -c "import requests, faster_whisper; print('ok')"
       - run: python scripts/verifier-voix.py
         continue-on-error: true
       - name: Enregistrer le rapport
