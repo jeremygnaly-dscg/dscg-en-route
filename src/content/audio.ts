@@ -38,6 +38,9 @@ export const AUDIO_DISPO: string[] = [
   "eliminations-intragroupe",
   "dcg-dirigeants",
   "dcg-autres-groupements",
+  "dcg-bic-resultat",
+  "dcg-tva-deduction",
+  "dcg-ir-calcul",
   "dcg-contrat-societe",
   "dcg-constitution",
   "dcg-capital-apports",
@@ -50,7 +53,21 @@ export const AUDIO_DISPO: string[] = [
   "dcg-ess",
   "dcg-fonds-commerce",
   "dcg-bail-commercial",
-  "dcg-responsabilite-penale"
+  "dcg-responsabilite-penale",
+  "dcg-ir-champ",
+  "dcg-ir-categories",
+  "dcg-prelevements-sociaux",
+  "dcg-charges-deductibles",
+  "dcg-plus-values-pro",
+  "dcg-regimes-imposition",
+  "dcg-societes-personnes",
+  "dcg-credits-impot",
+  "dcg-tva-champ",
+  "dcg-tva-exigibilite",
+  "dcg-tva-declaration",
+  "dcg-taxes-salaires",
+  "dcg-cfe-cvae",
+  "dcg-enregistrement"
 ];
 
 // Durée d'écoute réelle (scène + cours), en secondes
@@ -92,6 +109,9 @@ export const AUDIO_DUREE: Record<string, number> = {
   "eliminations-intragroupe": 117,
   "dcg-dirigeants": 133,
   "dcg-autres-groupements": 117,
+  "dcg-bic-resultat": 103,
+  "dcg-tva-deduction": 103,
+  "dcg-ir-calcul": 114,
   "dcg-contrat-societe": 93,
   "dcg-constitution": 95,
   "dcg-capital-apports": 91,
@@ -104,5 +124,19 @@ export const AUDIO_DUREE: Record<string, number> = {
   "dcg-ess": 91,
   "dcg-fonds-commerce": 74,
   "dcg-bail-commercial": 79,
-  "dcg-responsabilite-penale": 86
+  "dcg-responsabilite-penale": 86,
+  "dcg-ir-champ": 79,
+  "dcg-ir-categories": 86,
+  "dcg-prelevements-sociaux": 89,
+  "dcg-charges-deductibles": 84,
+  "dcg-plus-values-pro": 75,
+  "dcg-regimes-imposition": 85,
+  "dcg-societes-personnes": 79,
+  "dcg-credits-impot": 82,
+  "dcg-tva-champ": 81,
+  "dcg-tva-exigibilite": 75,
+  "dcg-tva-declaration": 89,
+  "dcg-taxes-salaires": 73,
+  "dcg-cfe-cvae": 76,
+  "dcg-enregistrement": 77
 };
