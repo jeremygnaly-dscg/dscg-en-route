@@ -12,7 +12,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: generer-voix
+  group: voix-tiktok
   cancel-in-progress: false
 
 jobs:

@@ -11,7 +11,8 @@ const MODEL = process.env.ELEVENLABS_MODEL || "eleven_multilingual_v2";
 const DEMANDE = (process.env.VIDEOS || "all").split(",").map((s) => s.trim()).filter(Boolean);
 if (!KEY || !VOIX) throw new Error("ELEVENLABS_API_KEY ou VOICE_EXPERT manquant.");
 
-export const FIN = "Zenvise. Bientôt sur vos écrans.";
+// « Zenvise » se prononce à l'anglaise : on l'écrit phonétiquement pour la voix
+export const FIN = "Zenvaïze. Bientôt sur vos écrans.";
 const REGLAGES = { stability: 0.45, similarity_boost: 0.75, style: 0.2, use_speaker_boost: true, speed: 1.03 };
 const DOSSIER = path.join(process.cwd(), "media", "tiktok");
 const videos = JSON.parse(fs.readFileSync(path.join(DOSSIER, "videos.json"), "utf8")) as { id: string; segments: { voix: string }[] }[];
