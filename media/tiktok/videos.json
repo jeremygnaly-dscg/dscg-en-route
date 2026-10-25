@@ -11,7 +11,7 @@
         "titre": "Vente de 1 000 € HT, TVA 20 %"
       },
       {
-        "voix": "Ton client te doit mille deux cents euros. C'est une créance, donc un actif. Un actif qui augmente, ça va au débit.",
+        "voix": "Ton client te doit mille deux cents euros. C'est une créance, donc un actif. Et un actif qui augmente, ça va au débit.",
         "ligne": {
           "compte": "411",
           "intitule": "Clients",
@@ -27,7 +27,7 @@
         }
       },
       {
-        "voix": "Et la TVA ? Tu l'encaisses pour l'État. Ce n'est pas ton argent, c'est une dette. Elle va au crédit.",
+        "voix": "Et la TVA ? Tu l'encaisses pour le compte de l'État. Ce n'est pas ton argent : c'est une dette, au crédit.",
         "ligne": {
           "compte": "44571",
           "intitule": "TVA collectée",
@@ -35,7 +35,7 @@
         }
       },
       {
-        "voix": "Débit égale crédit. Et surtout, maintenant, tu sais pourquoi.",
+        "voix": "Débit égale crédit. Et maintenant, tu sais pourquoi.",
         "balance": true
       }
     ]
@@ -122,7 +122,7 @@
         "voix": "La banque te prête cent mille euros. Tu t'es enrichi ? Non."
       },
       {
-        "voix": "L'argent arrive sur ton compte. Ta trésorerie, un actif, augmente : au débit.",
+        "voix": "L'argent arrive sur ton compte : ta trésorerie augmente. C'est un actif, donc au débit.",
         "titre": "Emprunt de 100 000 €",
         "ligne": {
           "compte": "512",
@@ -182,7 +182,7 @@
         }
       },
       {
-        "voix": "Et ta banque baisse : un actif qui diminue, au crédit.",
+        "voix": "Et ta banque baisse : c'est un actif qui diminue, au crédit.",
         "ligne": {
           "compte": "512",
           "intitule": "Banque",
