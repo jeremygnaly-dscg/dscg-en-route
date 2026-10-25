@@ -17,7 +17,7 @@ on:
         type: boolean
         default: false
       nombres:
-        description: "Nombres en toutes lettres : all, ou des ids (vide = seulement les numéros de compte)"
+        description: "Nombres en lettres : all ou ids (tous), cible:all ou cible:ids (montants à espaces et décimales) ; vide = seulement les comptes"
         required: false
         default: ""
 

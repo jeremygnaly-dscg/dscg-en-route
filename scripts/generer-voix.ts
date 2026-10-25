@@ -37,9 +37,12 @@ const COMPTES = new Set<string>(["1688"]);
 for (const e of EPISODES) for (const w of e.ecritures ?? []) for (const l of w.lignes) if (/^\d{4,6}$/.test(l.compte)) COMPTES.add(l.compte);
 // Nombres en toutes lettres pour les épisodes demandés (NOMBRES = "all" ou liste d'ids) ;
 // sinon seuls les numéros de compte changent, et les autres phrases restent identiques à l'historique (gratuites).
-const NOMBRES = (process.env.NOMBRES ?? "").trim();
+// NOMBRES = "all" ou "id1,id2" : tous les nombres en lettres ; "cible:all" ou "cible:id1,id2" : seulement montants à espaces et décimales
+const NOMBRES_BRUT = (process.env.NOMBRES ?? "").trim();
+const CIBLE = NOMBRES_BRUT.startsWith("cible:");
+const NOMBRES = CIBLE ? NOMBRES_BRUT.slice(6) : NOMBRES_BRUT;
 const oralComptes = creerOral(COMPTES, { nombres: false });
-const oralPlein = creerOral(COMPTES, { nombres: true });
+const oralPlein = creerOral(COMPTES, { nombres: CIBLE ? "cible" : true });
 const enLettresPour = (id: string) => NOMBRES === "all" || NOMBRES.split(",").map((x) => x.trim()).includes(id);
 let EPISODE_COURANT = "";
 const oral = (t: string) => (enLettresPour(EPISODE_COURANT) ? oralPlein : oralComptes)(t);

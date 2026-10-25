@@ -64,7 +64,7 @@ const ORDINAUX: Record<string, string> = { "1er": "premier", "1re": "première",
 // Contextes où un nombre de 4 ou 5 chiffres n'est PAS un compte
 const PAS_COMPTE = /(article|articles|art\.|L\.|R\.|NEP|IAS|IFRS|ISO|ANC|CRC|n°|loi|décret|ordonnance|règl\.|règlement|SQL|COSO|en|depuis|année|exercice|janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre)\s*$/i;
 
-export function creerOral(comptesConnus: Set<string>, opts: { nombres?: boolean } = {}) {
+export function creerOral(comptesConnus: Set<string>, opts: { nombres?: boolean | "cible" } = {}) {
   const nombres = opts.nombres ?? true;
   return (t: string): string => {
     let s = t.replace(/`/g, "");
@@ -82,7 +82,19 @@ export function creerOral(comptesConnus: Set<string>, opts: { nombres?: boolean 
       if (annee || PAS_COMPTE.test(avant)) return n;
       return compteOral(n);
     });
-    if (!nombres) return s.replace(/\b1\s?M€/g, "1 million d'euros").replace(/(\d)\s?M€/g, "$1 millions d'euros").replace(/(\d)\s?k€/g, "$1 mille euros").replace(/(\d)\s?€/g, "$1 euros").replace(/×/g, " fois ").replace(/\s+/g, " ").trim();
+    if (nombres === "cible") {
+      // Seulement les montants à espaces de milliers et les décimales (et leur unité), le reste comme avant
+      const N = "(\\d{1,3}(?:[\\s ]\\d{3})+(?:,\\d+)?|\\d+,\\d+)";
+      const ent = (x: string) => x.split(",");
+      s = s.replace(new RegExp(N + "\\s?Md€", "g"), (_, x) => `${nombre(...(ent(x) as [string, string?]))} milliards d'euros`)
+        .replace(new RegExp(N + "\\s?M€", "g"), (_, x) => `${nombre(...(ent(x) as [string, string?]))} millions d'euros`)
+        .replace(new RegExp(N + "\\s?k€", "g"), (_, x) => `${nombre(...(ent(x) as [string, string?]))} mille euros`)
+        .replace(/(\d{1,3}(?:[\s ]\d{3})*|\d+),(\d{2})\s?€/g, (_, e, d) => `${nombre(e)} euros ${enLettres(Number(d))}`)
+        .replace(new RegExp(N + "\\s?€", "g"), (_, x) => `${nombre(...(ent(x) as [string, string?]))} euros`)
+        .replace(new RegExp(N + "\\s?%", "g"), (_, x) => `${nombre(...(ent(x) as [string, string?]))} pour cent`)
+        .replace(new RegExp(N, "g"), (x) => nombre(...(ent(x) as [string, string?])));
+    }
+    if (nombres !== true) return s.replace(/\b1\s?M€/g, "1 million d'euros").replace(/(\d)\s?M€/g, "$1 millions d'euros").replace(/(\d)\s?k€/g, "$1 mille euros").replace(/(\d)\s?€/g, "$1 euros").replace(/×/g, " fois ").replace(/\s+/g, " ").trim();
     // Montants et unités
     s = s.replace(/(\d[\d\s ]*)(?:,(\d+))?\s?Md€/g, (_, e, d) => `${nombre(e, d)} milliard${Number(e.replace(/\s/g, "")) > 1 || d ? "s" : ""} d'euros`)
       .replace(/(\d[\d\s ]*)(?:,(\d+))?\s?M€/g, (_, e, d) => `${nombre(e, d)} million${Number(e.replace(/\s/g, "")) > 1 || d ? "s" : ""} d'euros`)
