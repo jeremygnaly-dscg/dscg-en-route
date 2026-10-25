@@ -213,7 +213,13 @@ export const AUDIO_DISPO: string[] = [
   "ias2-stocks",
   "ifrs2-paiements-actions",
   "ias20-ias23",
-  "gouvernance-risques"
+  "gouvernance-risques",
+  "contrat-inexecution",
+  "penal-responsabilite",
+  "infractions-affaires",
+  "sa-directoire",
+  "societes-cotees",
+  "plans-sauvegarde-cession"
 ];
 
 // Durée d'écoute réelle (scène + cours), en secondes
@@ -430,5 +436,11 @@ export const AUDIO_DUREE: Record<string, number> = {
   "ias2-stocks": 72,
   "ifrs2-paiements-actions": 72,
   "ias20-ias23": 74,
-  "gouvernance-risques": 83
+  "gouvernance-risques": 83,
+  "contrat-inexecution": 89,
+  "penal-responsabilite": 77,
+  "infractions-affaires": 88,
+  "sa-directoire": 70,
+  "societes-cotees": 82,
+  "plans-sauvegarde-cession": 78
 };
