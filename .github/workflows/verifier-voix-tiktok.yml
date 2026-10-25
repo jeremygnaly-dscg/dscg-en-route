@@ -1,0 +1,27 @@
+name: Vérifier les voix TikTok
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  verifier:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q faster-whisper==1.1.1
+      - run: python scripts/verifier-voix.py
+      - name: Enregistrer le rapport
+        run: |
+          git config user.name "Zenvise (vérification)"
+          git config user.email "actions@users.noreply.github.com"
+          git add media/tiktok/verification.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Vérification des voix TikTok"
+          for essai in 1 2 3; do git pull --rebase origin main && git push && exit 0; sleep 5; done
