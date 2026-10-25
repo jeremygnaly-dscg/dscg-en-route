@@ -194,7 +194,19 @@ export const AUDIO_DISPO: string[] = [
   "dissolution-liquidation",
   "prix-transfert-fiscal",
   "contentieux-fiscal",
-  "conformite-sapin-lcb"
+  "conformite-sapin-lcb",
+  "methodes-preferentielles",
+  "variation-pourcentage",
+  "conversion-comptes",
+  "documents-consolides",
+  "fusion-retroactivite",
+  "fusion-renonciation",
+  "commissaire-fusion",
+  "responsabilite-cac",
+  "ias19-avantages",
+  "ias38-incorporelles",
+  "cadre-conceptuel-ifrs",
+  "autres-missions-cac"
 ];
 
 // Durée d'écoute réelle (scène + cours), en secondes
@@ -392,5 +404,17 @@ export const AUDIO_DUREE: Record<string, number> = {
   "dissolution-liquidation": 73,
   "prix-transfert-fiscal": 80,
   "contentieux-fiscal": 78,
-  "conformite-sapin-lcb": 90
+  "conformite-sapin-lcb": 90,
+  "methodes-preferentielles": 79,
+  "variation-pourcentage": 84,
+  "conversion-comptes": 90,
+  "documents-consolides": 76,
+  "fusion-retroactivite": 84,
+  "fusion-renonciation": 97,
+  "commissaire-fusion": 77,
+  "responsabilite-cac": 95,
+  "ias19-avantages": 83,
+  "ias38-incorporelles": 79,
+  "cadre-conceptuel-ifrs": 87,
+  "autres-missions-cac": 75
 };
