@@ -7,6 +7,7 @@ import { LOT5 } from "./lot5";
 import { LOT6 } from "./lot6";
 import { LOT_DCG1 } from "./lot-dcg1";
 import { LOT_DCG9 } from "./lot-dcg9";
+import { LOT_DCG9_B } from "./lot-dcg9-b";
 import { LOGIQUE } from "./compta-logique";
 import { LOT_DCG_AFFAIRES } from "./lot-dcg-affaires";
 import { LOT_DCG_SOCIAL } from "./lot-dcg-social";
@@ -34,7 +35,7 @@ export const UES: Ue[] = [
   { id: "dcg6", diplome: "dcg", short: "UE6", name: "Finance d'entreprise", available: true },
   { id: "dcg7", diplome: "dcg", short: "UE7", name: "Management des organisations", available: true },
   { id: "dcg8", diplome: "dcg", short: "UE8", name: "Systèmes d'information de gestion", available: true },
-  { id: "dcg9", diplome: "dcg", short: "UE9", name: "Comptabilité", available: true },
+  { id: "dcg9", diplome: "dcg", short: "UE9", name: "Introduction à la comptabilité", available: true },
   { id: "dcg10", diplome: "dcg", short: "UE10", name: "Comptabilité approfondie", available: true },
   { id: "dcg11", diplome: "dcg", short: "UE11", name: "Contrôle de gestion", available: true },
   { id: "dcg12", diplome: "dcg", short: "UE12", name: "Anglais des affaires", available: true },
@@ -265,6 +266,7 @@ export const EPISODES: Episode[] = [
   ...LOT6,
   ...LOT_DCG1,
   ...LOT_DCG9,
+  ...LOT_DCG9_B,
   ...LOT_2027,
   ...LOT_2027_DCG_A,
   ...LOT_2027_DCG_B,

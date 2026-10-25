@@ -372,7 +372,7 @@ export const LOT_2027_DCG_B: Episode[] = [
     },
   },
 
-  // ───────────────────────── DCG UE9 · Comptabilité ─────────────────────────
+  // ───────────────────────── DCG UE9 · Introduction à la comptabilité ─────────────────────────
   {
     id: "dcg-rapprochement-lettrage",
     ue: "dcg9",

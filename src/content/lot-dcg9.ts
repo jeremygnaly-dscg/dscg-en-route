@@ -1,4 +1,4 @@
-// DCG UE9 · Comptabilité — épisodes « logique comptable ».
+// DCG UE9 · Introduction à la comptabilité — épisodes « logique comptable ».
 // Chaque écriture s'explique : l'opération, les comptes et leur nature (actif, passif, charge, produit),
 // puis le sens de chaque ligne et pourquoi. Le candidat comprend au lieu de réciter.
 // PCG à jour du règlement ANC 2022-06 (exercices ouverts depuis le 1er janvier 2025).
