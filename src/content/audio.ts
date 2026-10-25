@@ -35,7 +35,22 @@ export const AUDIO_DISPO: string[] = [
   "dividendes-rachat",
   "fusion-regime-faveur",
   "transfert-contrats-travail",
-  "eliminations-intragroupe"
+  "eliminations-intragroupe",
+  "dcg-dirigeants",
+  "dcg-autres-groupements",
+  "dcg-contrat-societe",
+  "dcg-constitution",
+  "dcg-capital-apports",
+  "dcg-assemblees",
+  "dcg-variation-capital",
+  "dcg-dissolution",
+  "dcg-societe-participation",
+  "dcg-sarl",
+  "dcg-snc-sc",
+  "dcg-ess",
+  "dcg-fonds-commerce",
+  "dcg-bail-commercial",
+  "dcg-responsabilite-penale"
 ];
 
 // Durée d'écoute réelle (scène + cours), en secondes
@@ -74,5 +89,20 @@ export const AUDIO_DUREE: Record<string, number> = {
   "dividendes-rachat": 113,
   "fusion-regime-faveur": 105,
   "transfert-contrats-travail": 120,
-  "eliminations-intragroupe": 117
+  "eliminations-intragroupe": 117,
+  "dcg-dirigeants": 133,
+  "dcg-autres-groupements": 117,
+  "dcg-contrat-societe": 93,
+  "dcg-constitution": 95,
+  "dcg-capital-apports": 91,
+  "dcg-assemblees": 95,
+  "dcg-variation-capital": 93,
+  "dcg-dissolution": 90,
+  "dcg-societe-participation": 90,
+  "dcg-sarl": 86,
+  "dcg-snc-sc": 79,
+  "dcg-ess": 91,
+  "dcg-fonds-commerce": 74,
+  "dcg-bail-commercial": 79,
+  "dcg-responsabilite-penale": 86
 };
