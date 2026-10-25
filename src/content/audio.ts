@@ -206,7 +206,14 @@ export const AUDIO_DISPO: string[] = [
   "ias19-avantages",
   "ias38-incorporelles",
   "cadre-conceptuel-ifrs",
-  "autres-missions-cac"
+  "autres-missions-cac",
+  "ias1-etats-financiers",
+  "ifrs8-ifrs1",
+  "ias40-immeubles",
+  "ias2-stocks",
+  "ifrs2-paiements-actions",
+  "ias20-ias23",
+  "gouvernance-risques"
 ];
 
 // Durée d'écoute réelle (scène + cours), en secondes
@@ -416,5 +423,12 @@ export const AUDIO_DUREE: Record<string, number> = {
   "ias19-avantages": 83,
   "ias38-incorporelles": 79,
   "cadre-conceptuel-ifrs": 87,
-  "autres-missions-cac": 75
+  "autres-missions-cac": 75,
+  "ias1-etats-financiers": 77,
+  "ifrs8-ifrs1": 82,
+  "ias40-immeubles": 68,
+  "ias2-stocks": 72,
+  "ifrs2-paiements-actions": 72,
+  "ias20-ias23": 74,
+  "gouvernance-risques": 83
 };
