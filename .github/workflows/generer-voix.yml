@@ -16,6 +16,10 @@ on:
         description: "N'utiliser que l'historique ElevenLabs (aucun crédit dépensé)"
         type: boolean
         default: false
+      nombres:
+        description: "Nombres en toutes lettres : all, ou des ids (vide = seulement les numéros de compte)"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -51,6 +55,7 @@ jobs:
           EPISODES: ${{ inputs.episodes }}
           FORCE: ${{ inputs.force }}
           SANS_CREDIT: ${{ inputs.sans_credit }}
+          NOMBRES: ${{ inputs.nombres }}
         run: npx --yes tsx@4.19.2 scripts/generer-voix.ts
 
       # Copie de secours : les MP3 restent téléchargeables 30 jours même si l'enregistrement échoue

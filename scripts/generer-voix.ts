@@ -13,6 +13,7 @@ import path from "node:path";
 import { execFileSync } from "node:child_process";
 import { EPISODES } from "../src/content/episodes";
 import type { Line } from "../src/content/types";
+import { creerOral } from "./oral";
 
 const KEY = process.env.ELEVENLABS_API_KEY ?? "";
 const V = {
@@ -31,13 +32,17 @@ const TMP = path.join(process.cwd(), ".voix-tmp");
 if (!KEY) throw new Error("Secret ELEVENLABS_API_KEY manquant (Settings → Secrets and variables → Actions).");
 for (const [k, v] of Object.entries(V)) if (!v) throw new Error(`Variable de voix manquante : ${k === "cours" ? "VOICE_COURS" : "VOICE_" + k.toUpperCase()}`);
 
-// Texte adapté à la lecture à voix haute
-const oral = (t: string) => t
-  .replace(/`/g, "")
-  .replace(/\b1\s?M€/g, "1 million d'euros")
-  .replace(/(\d)\s?M€/g, "$1 millions d'euros").replace(/(\d)\s?k€/g, "$1 mille euros").replace(/(\d)\s?€/g, "$1 euros")
-  .replace(/\bart\.\s?/g, "article ").replace(/\bC\. com\./g, "Code de commerce").replace(/\bC\. civ\./g, "Code civil")
-  .replace(/×/g, " fois ").replace(/\s+/g, " ").trim();
+// Texte adapté à la lecture à voix haute : comptes dits « 215, 4 », nombres en toutes lettres (voir oral.ts)
+const COMPTES = new Set<string>(["1688"]);
+for (const e of EPISODES) for (const w of e.ecritures ?? []) for (const l of w.lignes) if (/^\d{4,6}$/.test(l.compte)) COMPTES.add(l.compte);
+// Nombres en toutes lettres pour les épisodes demandés (NOMBRES = "all" ou liste d'ids) ;
+// sinon seuls les numéros de compte changent, et les autres phrases restent identiques à l'historique (gratuites).
+const NOMBRES = (process.env.NOMBRES ?? "").trim();
+const oralComptes = creerOral(COMPTES, { nombres: false });
+const oralPlein = creerOral(COMPTES, { nombres: true });
+const enLettresPour = (id: string) => NOMBRES === "all" || NOMBRES.split(",").map((x) => x.trim()).includes(id);
+let EPISODE_COURANT = "";
+const oral = (t: string) => (enLettresPour(EPISODE_COURANT) ? oralPlein : oralComptes)(t);
 
 const VOICE_SETTINGS = {
   cours: { stability: 0.6, similarity_boost: 0.75, style: 0, use_speaker_boost: true, speed: 0.95 },
@@ -107,6 +112,7 @@ function assembler(parts: string[], silence: number, out: string) {
 }
 
 async function piste(id: string, kind: "scene" | "cours", lines: Line[]) {
+  EPISODE_COURANT = id;
   const out = path.join(OUT, `${id}-${kind}.mp3`);
   if (fs.existsSync(out) && !FORCE) { console.log(`  = ${id}-${kind}.mp3 existe déjà`); return; }
   const parts: string[] = [];
