@@ -1,5 +1,266 @@
 [
   {
-    "erreur": "Traceback (most recent call last):\n  File \"/home/runner/work/dscg-en-route/dscg-en-route/scripts/verifier-voix.py\", line 17, in <module>\n    segs, _ = model.transcribe(f, language=\"fr\", beam_size=5)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/faster_whisper/transcribe.py\", line 834, in transcribe\n    audio = decode_audio(audio, sampling_rate=sampling_rate)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/faster_whisper/audio.py\", line 46, in decode_audio\n    with av.open(input_file, mode=\"r\", metadata_errors=\"ignore\") as container:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"av/container/core.py\", line 479, in av.container.core.open\n    def open(\nTypeError: open() got an unexpected keyword argument 'metadata_errors'\n"
+    "video": "client-debit",
+    "phrase": 0,
+    "prevu": "Pourquoi le client se met au débit ?",
+    "entendu": "Pourquoi le client se met au débit ?",
+    "ressemblance": 1.0,
+    "repetitions": []
+  },
+  {
+    "video": "client-debit",
+    "phrase": 1,
+    "prevu": "Tu vends pour mille euros hors taxes, TVA à vingt pour cent.",
+    "entendu": "Tu vends pour mille euros hors taxe, TVA à 20%.",
+    "ressemblance": 0.727,
+    "repetitions": []
+  },
+  {
+    "video": "client-debit",
+    "phrase": 2,
+    "prevu": "Ton client te doit mille deux cents euros. C'est une créance, donc un actif. Un actif qui augmente, ça va au débit.",
+    "entendu": "Ton client te doit 1200 euros. C'est une créance, donc un actif. Un actif qui augmente, ça va au débit.",
+    "ressemblance": 0.909,
+    "repetitions": []
+  },
+  {
+    "video": "client-debit",
+    "phrase": 3,
+    "prevu": "La vente, elle, t'enrichit : c'est un produit. Un produit, ça va au crédit.",
+    "entendu": "La vente, elle t'enrichit. C'est un produit. Un produit, ça va au crédit.",
+    "ressemblance": 1.0,
+    "repetitions": []
+  },
+  {
+    "video": "client-debit",
+    "phrase": 4,
+    "prevu": "Et la TVA ? Tu l'encaisses pour l'État. Ce n'est pas ton argent, c'est une dette. Elle va au crédit.",
+    "entendu": "Et la TVA, tu l'encaisses pour l'État. Ce n'est pas ton argent, c'est une dette, elle va au crédit.",
+    "ressemblance": 1.0,
+    "repetitions": []
+  },
+  {
+    "video": "client-debit",
+    "phrase": 5,
+    "prevu": "Débit égale crédit. Et surtout, maintenant, tu sais pourquoi.",
+    "entendu": "Débit égale crédit, et surtout de maintenant, tu sais pourquoi.",
+    "ressemblance": 0.947,
+    "repetitions": []
+  },
+  {
+    "video": "client-debit",
+    "phrase": 6,
+    "prevu": "Zenvaïze. Bientôt sur vos écrans.",
+    "entendu": "Zenvise, bientôt sur vos écrans.",
+    "ressemblance": 0.8,
+    "repetitions": []
+  },
+  {
+    "video": "compte-709",
+    "phrase": 0,
+    "prevu": "Le sept cent neuf est un compte de produits. Pourtant, il va au débit.",
+    "entendu": "Le 709 est un compte de produit. Pourtant, il va au débit.",
+    "ressemblance": 0.769,
+    "repetitions": []
+  },
+  {
+    "video": "compte-709",
+    "phrase": 1,
+    "prevu": "Ton client obtient un rabais de cent euros hors taxes : tu fais un avoir.",
+    "entendu": "Ton client obtient un rabais de 100 euros hors taxe. Tu fais un avoir.",
+    "ressemblance": 0.857,
+    "repetitions": []
+  },
+  {
+    "video": "compte-709",
+    "phrase": 2,
+    "prevu": "Le sept cent neuf vient corriger tes ventes. Il réduit un produit, donc il marche à l'envers : il va au débit.",
+    "entendu": "Le 709 vient corriger tes ventes, il réduit un produit donc il marche à l'envers, il va au débit.",
+    "ressemblance": 0.905,
+    "repetitions": []
+  },
+  {
+    "video": "compte-709",
+    "phrase": 3,
+    "prevu": "Ta dette de TVA envers l'État baisse aussi. Un passif qui diminue, c'est au débit.",
+    "entendu": "Ta dette de TVA envers l'État baisse aussi. Un passif qui diminue, c'est au débit.",
+    "ressemblance": 1.0,
+    "repetitions": []
+  },
+  {
+    "video": "compte-709",
+    "phrase": 4,
+    "prevu": "Et ton client te doit cent vingt euros de moins. Ton actif diminue : au crédit.",
+    "entendu": "et ton client te doit 120 euros de moins, ton actif diminue. Au crédit.",
+    "ressemblance": 0.897,
+    "repetitions": []
+  },
+  {
+    "video": "compte-709",
+    "phrase": 5,
+    "prevu": "Retiens ce repère : un neuf en troisième position, c'est un compte qui en corrige un autre. Il se passe dans le sens inverse.",
+    "entendu": "Retiens ce repère. Un 9 en 3e position, c'est un compte qui en corrige un autre. Il se passe dans le sens inverse.",
+    "ressemblance": 0.917,
+    "repetitions": []
+  },
+  {
+    "video": "compte-709",
+    "phrase": 6,
+    "prevu": "Zenvaïze. Bientôt sur vos écrans.",
+    "entendu": "Zenvise, bientôt sur vos écrans.",
+    "ressemblance": 0.8,
+    "repetitions": []
+  },
+  {
+    "video": "amortissement",
+    "phrase": 0,
+    "prevu": "L'amortissement fait baisser ton résultat, sans sortie d'argent. Comment ?",
+    "entendu": "L'amortissement fait baisser ton résultat, sans sortie d'argent. Comment ?",
+    "ressemblance": 1.0,
+    "repetitions": []
+  },
+  {
+    "video": "amortissement",
+    "phrase": 1,
+    "prevu": "Ta machine a coûté cinquante mille euros, pour cinq ans.",
+    "entendu": "ta machine a coûté 50 000 euros pour 5 ans.",
+    "ressemblance": 0.7,
+    "repetitions": []
+  },
+  {
+    "video": "amortissement",
+    "phrase": 2,
+    "prevu": "Chaque année, elle s'use : dix mille euros. Cette usure, c'est une charge. Elle va au débit.",
+    "entendu": "Chaque année, elle s'use 10 000 euros. Cette usure, c'est une charge. Elle va au débit.",
+    "ressemblance": 0.889,
+    "repetitions": []
+  },
+  {
+    "video": "amortissement",
+    "phrase": 3,
+    "prevu": "En face, on ne touche pas au compte de la machine. On crédite un compte d'amortissement, qui vient diminuer l'actif.",
+    "entendu": "En face, on ne touche pas au compte de la machine. On crédite un compte d'amortissement qui vient diminuer l'actif.",
+    "ressemblance": 1.0,
+    "repetitions": []
+  },
+  {
+    "video": "amortissement",
+    "phrase": 4,
+    "prevu": "Et la banque ? Rien n'a bougé. Ton résultat baisse, ta trésorerie non. C'est une charge calculée.",
+    "entendu": "Et la banque, rien n'a bougé. Ton résultat baisse, ta trésorerie non. C'est une charge calculée.",
+    "ressemblance": 1.0,
+    "repetitions": []
+  },
+  {
+    "video": "amortissement",
+    "phrase": 5,
+    "prevu": "Zenvaïze. Bientôt sur vos écrans.",
+    "entendu": "Zenvise, bientôt sur vos écrans.",
+    "ressemblance": 0.8,
+    "repetitions": []
+  },
+  {
+    "video": "emprunt",
+    "phrase": 0,
+    "prevu": "La banque te prête cent mille euros. Tu t'es enrichi ? Non.",
+    "entendu": "La banque te prête 100 000 euros. Tu t'es enrichi ? Non.",
+    "ressemblance": 0.833,
+    "repetitions": []
+  },
+  {
+    "video": "emprunt",
+    "phrase": 1,
+    "prevu": "L'argent arrive sur ton compte. Ta trésorerie, un actif, augmente : au débit.",
+    "entendu": "L'argent arrive sur ton compte. Ta trésorerie inactif augmente, au débit.",
+    "ressemblance": 0.88,
+    "repetitions": []
+  },
+  {
+    "video": "emprunt",
+    "phrase": 2,
+    "prevu": "Mais tu devras le rendre. C'est une dette : un passif qui augmente, au crédit.",
+    "entendu": "Mais tu devras le rendre, c'est une dette. Un passif qui augmente au crédit.",
+    "ressemblance": 1.0,
+    "repetitions": []
+  },
+  {
+    "video": "emprunt",
+    "phrase": 3,
+    "prevu": "Ton bilan grossit des deux côtés. Ton compte de résultat, lui, ne bouge pas.",
+    "entendu": "Ton bilan grossit des deux côtés. Ton compte de résultat, lui, ne bouge pas.",
+    "ressemblance": 1.0,
+    "repetitions": []
+  },
+  {
+    "video": "emprunt",
+    "phrase": 4,
+    "prevu": "Ce qui te coûte vraiment, ce sont les intérêts. Eux, ce seront des charges.",
+    "entendu": "Ceux qui te coûtent vraiment, ce sont les intérêts, eux ce seront des charges.",
+    "ressemblance": 0.857,
+    "repetitions": []
+  },
+  {
+    "video": "emprunt",
+    "phrase": 5,
+    "prevu": "Zenvaïze. Bientôt sur vos écrans.",
+    "entendu": "Zenvise, bientôt sur vos écrans.",
+    "ressemblance": 0.8,
+    "repetitions": []
+  },
+  {
+    "video": "payer-fournisseur",
+    "phrase": 0,
+    "prevu": "Payer ton fournisseur fait-il baisser ton résultat ? Non.",
+    "entendu": "Payer ton fournisseur fait-il baisser ton résultat ? Non.",
+    "ressemblance": 1.0,
+    "repetitions": []
+  },
+  {
+    "video": "payer-fournisseur",
+    "phrase": 1,
+    "prevu": "Le jour de la facture, l'achat est une charge : au débit.",
+    "entendu": "Le jour de la facture, l'achat est une charge, au débit.",
+    "ressemblance": 1.0,
+    "repetitions": []
+  },
+  {
+    "video": "payer-fournisseur",
+    "phrase": 2,
+    "prevu": "Et tu dois l'argent : c'est une dette fournisseur, au crédit.",
+    "entendu": "Et tu dois l'argent, c'est une dette fournisseure au crédit.",
+    "ressemblance": 0.917,
+    "repetitions": []
+  },
+  {
+    "video": "payer-fournisseur",
+    "phrase": 3,
+    "prevu": "Le jour du paiement, ta dette disparaît : un passif qui diminue, au débit.",
+    "entendu": "Le jour du paiement, ta dette disparaît, un passif qui diminue au débit.",
+    "ressemblance": 1.0,
+    "repetitions": []
+  },
+  {
+    "video": "payer-fournisseur",
+    "phrase": 4,
+    "prevu": "Et ta banque baisse : un actif qui diminue, au crédit.",
+    "entendu": "et ta banque baisse, un actif qui diminue au crédit.",
+    "ressemblance": 1.0,
+    "repetitions": []
+  },
+  {
+    "video": "payer-fournisseur",
+    "phrase": 5,
+    "prevu": "Le paiement ne touche que le bilan. La charge, elle, était déjà là depuis la facture.",
+    "entendu": "Le paiement ne touche que le bilan, la charge, elle, était déjà là depuis la facture.",
+    "ressemblance": 1.0,
+    "repetitions": []
+  },
+  {
+    "video": "payer-fournisseur",
+    "phrase": 6,
+    "prevu": "Zenvaïze. Bientôt sur vos écrans.",
+    "entendu": "Zenvise, bientôt sur vos écrans.",
+    "ressemblance": 0.8,
+    "repetitions": []
   }
 ]
