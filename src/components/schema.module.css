@@ -1,13 +1,9 @@
 /* « Dessine-moi la compta » : tableau blanc, cases dessinées, post-it, écriture manuscrite */
 .tableau {
-  --papier: #fbf8f1; --encre: #1d2433; --vert: #2f8f5b; --rouge: #c2413b; --bleu: #3340c7; --jaune: #fff1b8; --rose: #ffd9d4; --menthe: #d9f2e2;
+  --papier: var(--surface); --encre: var(--fg); --vert: var(--ok); --rouge: var(--bad); --bleu: var(--accent); --jaune: var(--accent-soft); --rose: var(--bad-soft); --menthe: var(--ok-soft);
   background: var(--papier); color: var(--encre); border-radius: 18px; padding: 14px; display: flex; flex-direction: column; gap: 12px;
-  border: 1px solid #e7e1d2; font-family: var(--body);
+  border: 1px solid var(--line); font-family: var(--body);
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .tableau { --papier: #1b2130; --encre: #eef1f7; --jaune: #4a4220; --rose: #4a2626; --menthe: #1f3d2c; border-color: #2c3548; }
-}
-:root[data-theme="dark"] .tableau { --papier: #1b2130; --encre: #eef1f7; --jaune: #4a4220; --rose: #4a2626; --menthe: #1f3d2c; border-color: #2c3548; }
 
 .entete { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
 .titreMain, .nomPlanche, .nomZone, .bulle p, .note b { font-family: "Caveat", "Segoe Print", cursive; }
@@ -38,11 +34,21 @@
 .bulle { display: flex; gap: 8px; align-items: flex-start; min-height: 54px; }
 .bulle p { margin: 0; font-size: 21px; line-height: 1.2; font-weight: 600; }
 .d, .c { flex: 0 0 auto; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; padding: 3px 7px; border-radius: 6px; margin-top: 3px; }
-.d { background: #e2e5fb; color: var(--bleu); }
-.c { background: #ddf3e6; color: var(--vert); }
+.d { background: var(--accent-soft); color: var(--bleu); }
+.c { background: var(--ok-soft); color: var(--vert); }
 
 .balance { display: flex; justify-content: center; align-items: baseline; gap: 12px; font-size: 13px; border-top: 2px dashed rgba(127, 127, 127, 0.35); padding-top: 8px; font-variant-numeric: tabular-nums; }
 .balance > span:nth-child(2) { font-family: "Caveat", cursive; font-size: 26px; font-weight: 700; color: var(--rouge); }
 .balance > span.egal { color: var(--vert); }
 
 @media (prefers-reduced-motion: reduce) { .neuve, .cadre path { animation: none; stroke-dashoffset: 0; } }
+
+/* Le crayon qui écrit : la phrase se dévoile de gauche à droite, le crayon suit */
+.ecriture { position: relative; display: inline; }
+.trace { display: block; animation: ecrit 1.6s steps(28, end) both; clip-path: inset(0 100% 0 0); }
+@keyframes ecrit { to { clip-path: inset(0 0 0 0); } }
+.crayon { position: absolute; top: -6px; width: 26px; height: 26px; animation: suit 1.6s steps(28, end) both, disparait 0.3s 1.7s forwards; pointer-events: none; }
+@keyframes suit { from { left: 0; } to { left: calc(100% - 8px); } }
+@keyframes disparait { to { opacity: 0; } }
+.bulle .texte { position: relative; flex: 1; min-width: 0; }
+@media (prefers-reduced-motion: reduce) { .trace { animation: none; clip-path: none; } .crayon { display: none; } }

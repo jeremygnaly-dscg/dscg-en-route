@@ -63,6 +63,15 @@ function Cadre({ graine, className }: { graine: number; className?: string }) {
   );
 }
 
+function Crayon() {
+  return (
+    <svg className={styles.crayon} viewBox="0 0 24 24" aria-hidden>
+      <path d="M3 21l1.2-4.6L16.6 4a2 2 0 0 1 2.8 0l.6.6a2 2 0 0 1 0 2.8L7.6 19.8z" fill="#f5c451" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
+      <path d="M3 21l1.2-4.6 3.4 3.4z" fill="currentColor" />
+    </svg>
+  );
+}
+
 interface Etape { e: number; l: number; ligne: LigneEcriture; zone: Zone; signe: string }
 
 export function SchemaCompta({ ecritures, progression, auto = false, pas = 2600 }: {
@@ -158,7 +167,10 @@ export function SchemaCompta({ ecritures, progression, auto = false, pas = 2600 
         {courante ? (
           <>
             <span className={courante.ligne.debit !== undefined ? styles.d : styles.c}>{courante.ligne.debit !== undefined ? "Débit" : "Crédit"}</span>
-            <p>{courante.ligne.pourquoi ?? `${courante.ligne.intitule} : ${NOMS[courante.zone].toLowerCase()} ${courante.signe === "+" ? "qui augmente" : "qui diminue"}.`}</p>
+            <div className={styles.texte} key={`${courante.e}-${courante.l}`}>
+              <p className={styles.trace}>{courante.ligne.pourquoi ?? `${courante.ligne.intitule} : ${NOMS[courante.zone].toLowerCase()} ${courante.signe === "+" ? "qui augmente" : "qui diminue"}.`}</p>
+              <Crayon />
+            </div>
           </>
         ) : <p>Chaque ligne va venir se coller dans la bonne case. Regarde où, et pourquoi.</p>}
       </div>

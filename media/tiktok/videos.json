@@ -1,0 +1,60 @@
+[
+  {
+    "id": "client-debit",
+    "accroche": "Pourquoi le client se met au débit ?",
+    "segments": [
+      { "voix": "Pourquoi le compte client se met au débit ? Si tu ne sais pas répondre, c'est que tu apprends par cœur." },
+      { "voix": "Tu vends pour mille euros hors taxes, avec vingt pour cent de TVA.", "titre": "Vente de 1 000 € HT, TVA 20 %" },
+      { "voix": "Ton client te doit mille deux cents euros. C'est une créance, donc un actif. Un actif qui augmente, ça va au débit.", "ligne": { "compte": "411", "intitule": "Clients", "debit": 1200 } },
+      { "voix": "La vente, elle, t'enrichit : c'est un produit. Un produit, ça va au crédit.", "ligne": { "compte": "707", "intitule": "Ventes de marchandises", "credit": 1000 } },
+      { "voix": "Et la TVA ? Tu l'encaisses pour l'État. Ce n'est pas ton argent, c'est une dette. Elle va au crédit.", "ligne": { "compte": "44571", "intitule": "TVA collectée", "credit": 200 } },
+      { "voix": "Débit égale crédit. Et surtout, maintenant, tu sais pourquoi.", "balance": true }
+    ]
+  },
+  {
+    "id": "compte-709",
+    "accroche": "Le compte de produits qui se passe au débit",
+    "segments": [
+      { "voix": "Le compte sept cent neuf est un compte de produits. Et pourtant, il se passe au débit. Pourquoi ?" },
+      { "voix": "Ton client obtient un rabais de cent euros hors taxes, après la facture. Tu lui fais un avoir.", "titre": "Avoir : rabais de 100 € HT" },
+      { "voix": "Le sept cent neuf vient corriger tes ventes. Il réduit un produit, donc il marche à l'envers : il va au débit.", "ligne": { "compte": "709", "intitule": "Rabais accordés", "debit": 100 } },
+      { "voix": "Ta dette de TVA envers l'État baisse aussi. Un passif qui diminue, c'est au débit.", "ligne": { "compte": "44571", "intitule": "TVA collectée", "debit": 20 } },
+      { "voix": "Et ton client te doit cent vingt euros de moins. Ton actif diminue : au crédit.", "ligne": { "compte": "411", "intitule": "Clients", "credit": 120 } },
+      { "voix": "Retiens ce repère : un neuf en troisième position, c'est un compte qui en corrige un autre. Il se passe dans le sens inverse.", "balance": true }
+    ]
+  },
+  {
+    "id": "amortissement",
+    "accroche": "Une charge sans sortie d'argent",
+    "segments": [
+      { "voix": "L'amortissement fait baisser ton résultat, sans qu'un seul euro sorte de ta banque. Comment c'est possible ?" },
+      { "voix": "Ta machine a coûté cinquante mille euros. Elle va te servir cinq ans.", "titre": "Machine de 50 000 €, 5 ans" },
+      { "voix": "Chaque année, elle s'use : dix mille euros. Cette usure, c'est une charge. Elle va au débit.", "ligne": { "compte": "6811", "intitule": "Dotations aux amortissements", "debit": 10000 } },
+      { "voix": "En face, on ne touche pas au compte de la machine. On crédite un compte d'amortissement, qui vient diminuer l'actif.", "ligne": { "compte": "28154", "intitule": "Amortissements du matériel", "credit": 10000 } },
+      { "voix": "Et la banque ? Rien n'a bougé. Ton résultat baisse, ta trésorerie non. C'est une charge calculée.", "balance": true }
+    ]
+  },
+  {
+    "id": "emprunt",
+    "accroche": "La banque te prête 100 000 € : tu t'es enrichi ?",
+    "segments": [
+      { "voix": "La banque te prête cent mille euros. Tu viens de gagner de l'argent ? Non. Regarde." },
+      { "voix": "L'argent arrive sur ton compte. Ta trésorerie, un actif, augmente : au débit.", "titre": "Emprunt de 100 000 €", "ligne": { "compte": "512", "intitule": "Banque", "debit": 100000 } },
+      { "voix": "Mais tu devras le rendre. C'est une dette : un passif qui augmente, au crédit.", "ligne": { "compte": "164", "intitule": "Emprunts", "credit": 100000 } },
+      { "voix": "Ton bilan grossit des deux côtés. Ton compte de résultat, lui, ne bouge pas.", "balance": true },
+      { "voix": "Ce qui te coûte vraiment, ce sont les intérêts. Eux, ce seront des charges." }
+    ]
+  },
+  {
+    "id": "payer-fournisseur",
+    "accroche": "Payer ton fournisseur fait-il baisser ton résultat ?",
+    "segments": [
+      { "voix": "Tu paies ton fournisseur cinq mille euros. Ton résultat baisse ? Non. Voilà pourquoi." },
+      { "voix": "Le jour de la facture, l'achat est une charge : au débit.", "titre": "Facture d'achat de 5 000 € (HT, pour simplifier)", "ligne": { "compte": "607", "intitule": "Achats de marchandises", "debit": 5000 } },
+      { "voix": "Et tu dois l'argent : c'est une dette fournisseur, au crédit.", "ligne": { "compte": "401", "intitule": "Fournisseurs", "credit": 5000 } },
+      { "voix": "Le jour du paiement, ta dette disparaît : un passif qui diminue, au débit.", "titre": "Paiement du fournisseur", "nouvelle": true, "ligne": { "compte": "401", "intitule": "Fournisseurs", "debit": 5000 } },
+      { "voix": "Et ta banque baisse : un actif qui diminue, au crédit.", "ligne": { "compte": "512", "intitule": "Banque", "credit": 5000 } },
+      { "voix": "Le paiement ne touche que le bilan. La charge, elle, était déjà là depuis la facture.", "balance": true }
+    ]
+  }
+]
