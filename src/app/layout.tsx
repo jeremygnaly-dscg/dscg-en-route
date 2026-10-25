@@ -7,6 +7,8 @@ import "@fontsource/source-sans-3/latin-400.css";
 import "@fontsource/source-sans-3/latin-600.css";
 import "@fontsource/source-sans-3/latin-700.css";
 import "@fontsource/jetbrains-mono/latin-500.css";
+import "@fontsource/caveat/latin-600.css";
+import "@fontsource/caveat/latin-700.css";
 import { ServiceWorker } from "@/components/ServiceWorker";
 import "./globals.css";
 

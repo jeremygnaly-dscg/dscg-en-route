@@ -94,3 +94,4 @@
 .sensD, .sensC { display: inline-block; font-size: 10.5px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; padding: 1px 6px; border-radius: 6px; margin-right: 4px; }
 .sensD { background: var(--accent-soft); color: var(--accent); }
 .sensC { background: var(--ok-soft); color: var(--ok); }
+.dessin { align-self: flex-start; border: 2px dashed var(--line); background: transparent; color: var(--fg); border-radius: 12px; padding: 8px 12px; font-weight: 700; font-size: 14px; cursor: pointer; }

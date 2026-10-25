@@ -1,0 +1,48 @@
+/* « Dessine-moi la compta » : tableau blanc, cases dessinées, post-it, écriture manuscrite */
+.tableau {
+  --papier: #fbf8f1; --encre: #1d2433; --vert: #2f8f5b; --rouge: #c2413b; --bleu: #3340c7; --jaune: #fff1b8; --rose: #ffd9d4; --menthe: #d9f2e2;
+  background: var(--papier); color: var(--encre); border-radius: 18px; padding: 14px; display: flex; flex-direction: column; gap: 12px;
+  border: 1px solid #e7e1d2; font-family: var(--body);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .tableau { --papier: #1b2130; --encre: #eef1f7; --jaune: #4a4220; --rose: #4a2626; --menthe: #1f3d2c; border-color: #2c3548; }
+}
+:root[data-theme="dark"] .tableau { --papier: #1b2130; --encre: #eef1f7; --jaune: #4a4220; --rose: #4a2626; --menthe: #1f3d2c; border-color: #2c3548; }
+
+.entete { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.titreMain, .nomPlanche, .nomZone, .bulle p, .note b { font-family: "Caveat", "Segoe Print", cursive; }
+.titreMain { font-size: 21px; font-weight: 600; line-height: 1.1; }
+.rejouer { flex: 0 0 auto; border: 2px solid var(--encre); background: transparent; color: var(--encre); border-radius: 999px; padding: 5px 12px; font-weight: 700; font-size: 13px; cursor: pointer; }
+
+.planches { display: flex; flex-direction: column; gap: 10px; }
+.planche { display: flex; flex-direction: column; gap: 4px; }
+.nomPlanche { font-size: 20px; font-weight: 600; }
+.colonnes { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.colonne { position: relative; min-height: 92px; padding: 30px 8px 8px; display: flex; flex-direction: column; gap: 6px; }
+.cadre { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.cadre path { fill: none; stroke: var(--encre); stroke-width: 1.6; vector-effect: non-scaling-stroke; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 1; animation: trace 0.9s ease-out forwards; }
+@keyframes trace { to { stroke-dashoffset: 0; } }
+.nomZone { position: absolute; top: 4px; left: 10px; font-size: 20px; font-weight: 600; }
+.regle { position: absolute; top: 9px; right: 8px; font-size: 10.5px; font-weight: 700; opacity: 0.6; }
+
+.note { position: relative; z-index: 1; border-radius: 4px; padding: 5px 7px 6px; background: var(--jaune); box-shadow: 0 2px 0 rgba(0, 0, 0, 0.08); display: flex; flex-direction: column; line-height: 1.15; }
+.note b { font-size: 19px; font-weight: 600; }
+.note span { font-size: 11.5px; opacity: 0.85; }
+.plus { background: var(--menthe); }
+.plus b { color: var(--vert); }
+.moins { background: var(--rose); }
+.moins b { color: var(--rouge); }
+.neuve { animation: colle 0.55s cubic-bezier(.2, 1.4, .4, 1) both; outline: 2px solid var(--encre); }
+@keyframes colle { from { opacity: 0; translate: 0 -24px; scale: 1.15; } to { opacity: 1; translate: 0 0; scale: 1; } }
+
+.bulle { display: flex; gap: 8px; align-items: flex-start; min-height: 54px; }
+.bulle p { margin: 0; font-size: 21px; line-height: 1.2; font-weight: 600; }
+.d, .c { flex: 0 0 auto; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; padding: 3px 7px; border-radius: 6px; margin-top: 3px; }
+.d { background: #e2e5fb; color: var(--bleu); }
+.c { background: #ddf3e6; color: var(--vert); }
+
+.balance { display: flex; justify-content: center; align-items: baseline; gap: 12px; font-size: 13px; border-top: 2px dashed rgba(127, 127, 127, 0.35); padding-top: 8px; font-variant-numeric: tabular-nums; }
+.balance > span:nth-child(2) { font-family: "Caveat", cursive; font-size: 26px; font-weight: 700; color: var(--rouge); }
+.balance > span.egal { color: var(--vert); }
+
+@media (prefers-reduced-motion: reduce) { .neuve, .cadre path { animation: none; stroke-dashoffset: 0; } }

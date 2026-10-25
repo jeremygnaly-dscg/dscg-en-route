@@ -11,6 +11,7 @@ import { Signaler } from "./Signaler";
 import { aAcces, useAbonnements } from "@/lib/vente";
 import { gagnerPoints } from "@/lib/reseau";
 import { PlanMotsCles } from "./Methode";
+import { SchemaCompta } from "./SchemaCompta";
 import { notionDeEpisode } from "@/content/methode";
 import styles from "./player.module.css";
 
@@ -257,6 +258,13 @@ export function Player({ episode }: { episode: Episode }) {
           </>
         ) : (
           <>
+            {part === "cours" && ep.ecritures?.length ? (
+              <>
+                <span className="label">Dessine-moi l&apos;écriture</span>
+                {/* Les post-it se collent au fil du cours : la première ligne arrive au premier tiers de l'écoute */}
+                <SchemaCompta ecritures={ep.ecritures} progression={Math.max(0, (ratio - 0.3) / 0.65)} />
+              </>
+            ) : null}
             <span className="label">Transcription · {part === "scene" ? "Scène" : "Cours"}</span>
             <div className={styles.lines}>
               {ep[part].map((l, i) => (

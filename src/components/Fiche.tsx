@@ -1,4 +1,6 @@
-import { Fragment } from "react";
+"use client";
+import { Fragment, useState } from "react";
+import { SchemaCompta } from "./SchemaCompta";
 import type { Ecriture, Episode, Formule } from "@/content/types";
 import { libelleUe } from "@/content/episodes";
 import styles from "./player.module.css";
@@ -27,6 +29,13 @@ export function Formules({ items }: { items: Formule[] }) {
       ))}
     </div>
   );
+}
+
+function Dessin({ ecriture }: { ecriture: Ecriture }) {
+  const [ouvert, setOuvert] = useState(false);
+  return ouvert
+    ? <SchemaCompta ecritures={[ecriture]} auto pas={2200} />
+    : <button className={styles.dessin} data-noprint onClick={() => setOuvert(true)}>✎ Dessine-moi cette écriture</button>;
 }
 
 export function Ecritures({ items }: { items: Ecriture[] }) {
@@ -68,6 +77,7 @@ export function Ecritures({ items }: { items: Ecriture[] }) {
               </table>
             </div>
             {e.regle && <p className={styles.rule}>{e.regle}</p>}
+            <Dessin ecriture={e} />
           </div>
         );
       })}
