@@ -257,32 +257,32 @@ export const LOT_DCG9: Episode[] = [
       scene: [
         N("Saint-Étienne. L'imprimerie Lamy achète une presse numérique."),
         D("Cinquante mille euros, cinq pour cent de remise, douze cents de transport, deux mille trois cents d'installation, et mille euros pour former mes opérateurs."),
-        X("Tout ce qui sert à mettre la presse en état de fonctionner entre dans son coût. La formation, non : c'est une charge."),
+        X("Tout ce qui sert à mettre la presse en état de fonctionner entre dans son coût. Pour la formation, le plan comptable vous laisse le choix : ici, on la passe en charges."),
         N("À l'examen : trier les coûts, calculer le coût d'acquisition, et justifier l'écriture."),
       ],
       cours: [
         C("L'opération : un achat qui va servir plusieurs années. Ce n'est pas une charge de l'exercice, c'est un actif durable, une immobilisation, en classe 2. Il est contrôlé et procurera des avantages économiques sur plusieurs exercices.", true),
         C("Son coût d'acquisition : le prix net de remises, plus les coûts directement attribuables pour le mettre en état de fonctionner. Ici : quarante-sept mille cinq cents, plus le transport, plus l'installation : `51 000 €`.", true),
-        C("La formation est exclue : elle ne rend pas la machine opérationnelle, elle forme les salariés. C'est une charge, en classe 6."),
+        C("La formation des opérateurs est un cas à part : le PCG permet, sur option, de l'inclure dans le coût, ou de la passer en charges. L'entreprise retient ici les charges, en classe 6. Article 213-8 du PCG."),
         C("L'écriture : `2154` Matériel industriel au débit, un actif qui augmente. TVA déductible sur immobilisations, `44562`, au débit, une créance sur l'État. Et `404` Fournisseurs d'immobilisations au crédit, une dette qui augmente.", true),
         C("On utilise le `404` et non le `401` : on distingue les dettes liées aux investissements de celles liées à l'exploitation. L'amortissement commencera à la mise en service."),
       ],
       flash: [
         Q("Pourquoi la presse va-t-elle à l'actif et non en charges ?", ["Elle servira plusieurs exercices", "Elle est chère", "Elle est payée à crédit"], 0, "Ressource durable : immobilisation."),
-        Q("Les frais de formation des opérateurs :", ["Sont une charge", "S'ajoutent au coût de la presse", "Sont un actif séparé"], 0, "Ils ne servent pas à mettre le bien en état de fonctionner."),
+        Q("Les frais externes de formation nécessaires à la mise en service :", ["Sont toujours une charge", "Peuvent, sur option, s'ajouter au coût ou aller en charges", "Sont un actif séparé"], 1, "PCG, art. 213-8."),
         Q("Dette envers le vendeur de la presse :", ["404", "401", "411"], 0, "Fournisseurs d'immobilisations."),
       ],
       fiche: {
         essentiel: "Un bien durable est un actif ; il entre au coût d'acquisition : prix net + coûts directement attribuables à sa mise en état de fonctionner.",
         points: [
           "Inclus : transport, installation, montage, essais, honoraires techniques.",
-          "Exclus : formation, frais administratifs, coûts de démarrage.",
+          "Exclus : frais administratifs, coûts de démarrage. Formation nécessaire à la mise en service : option coût ou charges (art. 213-8).",
           "Frais d'acquisition (droits, honoraires, commissions) : option incorporation ou charges.",
           "2154 au débit (actif), 44562 au débit (créance), 404 au crédit (dette).",
           "Amortissement à partir de la mise en service.",
         ],
         methode: ["Actif ou charge ?", "Coût d'acquisition", "Écriture justifiée"],
-        pieges: ["Utiliser 401 au lieu de 404.", "Incorporer la formation."],
+        pieges: ["Utiliser 401 au lieu de 404.", "Oublier de justifier l'option retenue pour la formation."],
       },
     }),
     ecritures: [
@@ -290,7 +290,7 @@ export const LOT_DCG9: Episode[] = [
         d("2154", "Matériel industriel", 51000, "Ressource durable contrôlée : l'actif immobilisé augmente."),
         d("44562", "TVA déductible sur immobilisations", 10200, "Créance sur l'État, récupérable : actif."),
         c("404", "Fournisseurs d'immobilisations", 61200, "Nous devons le prix TTC : dette liée à un investissement."),
-      ], "47 500 + 1 200 + 2 300 = 51 000 ; la formation (1 000) va en charges."),
+      ], "47 500 + 1 200 + 2 300 = 51 000 ; la formation (1 000) va en charges, selon l'option retenue."),
     ],
   },
   {

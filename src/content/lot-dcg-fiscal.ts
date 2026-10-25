@@ -187,7 +187,7 @@ export const LOT_DCG_FISCAL: Episode[] = [
       N("À l'examen : déterminer le régime selon le chiffre d'affaires et la nature de l'activité."),
     ],
     cours: [
-      C("Le régime micro s'applique sous des seuils de chiffre d'affaires révisés tous les trois ans : `188 700 €` pour les ventes et `77 700 €` pour les prestations de services, sur la période 2023 à 2025. Vérifie les seuils en vigueur l'année du sujet.", true),
+      C("Le régime micro s'applique sous des seuils de chiffre d'affaires révisés tous les trois ans : `203 100 €` pour les ventes et `83 600 €` pour les prestations de services, sur la période 2026 à 2028.", true),
       C("En micro, le bénéfice est calculé forfaitairement : abattement de `71 %` sur les ventes, `50 %` sur les prestations de services commerciales, `34 %` pour les bénéfices non commerciaux. Pas de déduction des charges réelles.", true),
       C("Au-delà, le réel simplifié s'applique jusqu'à un second seuil, puis le réel normal. Le réel détermine le bénéfice à partir de la comptabilité, avec toutes les charges déductibles."),
       C("On peut opter pour le réel même sous les seuils : c'est intéressant quand les charges réelles dépassent l'abattement forfaitaire.", true),
@@ -201,7 +201,7 @@ export const LOT_DCG_FISCAL: Episode[] = [
     fiche: {
       essentiel: "Le régime dépend du chiffre d'affaires et de l'activité : micro avec abattement forfaitaire sous les seuils, réel au-delà ou sur option.",
       points: [
-        "Seuils micro révisés tous les 3 ans (188 700 € / 77 700 € pour 2023-2025).",
+        "Seuils micro révisés tous les 3 ans (203 100 € / 83 600 € pour 2026-2028).",
         "Abattements : 71 % ventes, 50 % services BIC, 34 % BNC.",
         "Réel simplifié puis réel normal au-delà.",
         "Option pour le réel possible.",
@@ -462,21 +462,21 @@ export const LOT_DCG_FISCAL: Episode[] = [
       C("Cession de fonds de commerce : `0 %` jusqu'à 23 000 euros, `3 %` de 23 000 à 200 000 euros, `5 %` au-delà. Article `719`.", true),
       C("Cession de parts sociales : `3 %` après un abattement de 23 000 euros, calculé au prorata des parts cédées. Cession d'actions : `0,1 %`.", true),
       C("Pour le fonds de Marc : 3 % de 177 000, soit 5 310 euros, plus 5 % de 100 000, soit 5 000 euros. Total : 10 310 euros."),
-      C("Apports purs et simples, rémunérés par des titres, à la constitution : droit fixe de `375 €`, porté à 500 euros si le capital atteint au moins 225 000 euros.", true),
+      C("Apports purs et simples, rémunérés par des titres, à la constitution : exonérés de droit d'enregistrement. Lors d'une augmentation de capital, droit fixe de `375 €`, porté à 500 euros si le capital atteint au moins 225 000 euros.", true),
       C("L'apport à titre onéreux, rémunéré autrement que par des titres, par exemple par la prise en charge d'une dette, est taxé comme une vente."),
     ],
     flash: [
       Q("Taux sur la tranche d'un fonds entre 23 000 et 200 000 € :", ["2 %", "3 %", "5 %"], 1, "Art. 719 CGI."),
       Q("Cession d'actions de SA :", ["0,1 %", "3 %", "5 %"], 0, "Art. 726 CGI."),
-      Q("Apport pur et simple à la constitution :", ["Droit fixe", "Droit proportionnel de 5 %", "Exonéré"], 0, "375 € ou 500 €."),
+      Q("Apport pur et simple à la constitution :", ["Droit fixe", "Droit proportionnel de 5 %", "Exonéré"], 2, "Art. 810 bis CGI ; 375 € ou 500 € en augmentation de capital."),
     ],
     fiche: {
-      essentiel: "Fonds de commerce : 0 / 3 / 5 % par tranches ; parts sociales : 3 % après abattement ; actions : 0,1 % ; apport pur et simple : droit fixe.",
+      essentiel: "Fonds de commerce : 0 / 3 / 5 % par tranches ; parts sociales : 3 % après abattement ; actions : 0,1 % ; apport pur et simple : exonéré à la constitution, droit fixe en augmentation de capital.",
       points: [
         "Fonds : 0 % ≤ 23 000 €, 3 % jusqu'à 200 000 €, 5 % au-delà.",
         "Parts sociales : 3 % après abattement de 23 000 € au prorata.",
         "Actions : 0,1 %.",
-        "Apport pur et simple : 375 € (500 € si capital ≥ 225 000 €).",
+        "Apport pur et simple : exonéré à la constitution ; 375 € (500 € si capital ≥ 225 000 €) en augmentation de capital.",
         "Apport à titre onéreux : taxé comme une vente.",
       ],
       methode: ["Nature du bien", "Barème", "Calcul par tranches"],

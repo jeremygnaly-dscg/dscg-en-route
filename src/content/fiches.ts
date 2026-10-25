@@ -614,10 +614,10 @@ export const FICHES: Record<string, FicheRevision> = {
     essentiel: "L'opinion du commissaire aux comptes dépend de la nature du problème (désaccord ou limitation) et de son étendue.",
     points: [
       "Sans réserve : pas d'anomalie significative, pas de limitation.",
-      "Désaccord : limité → réserve ; généralisé → refus (NEP 705).",
+      "Désaccord : limité → réserve ; généralisé → refus de certifier (NEP 700).",
       "Limitation : limitée → réserve ; généralisée → impossibilité de certifier.",
-      "Justification des appréciations (art. L. 823-9) ; points clés de l'audit pour les EIP.",
-      "Observation (NEP 706) : sans effet sur l'opinion.",
+      "Justification des appréciations (NEP 702) ; points clés de l'audit pour les EIP (NEP 701).",
+      "Observation : sans effet sur l'opinion (NEP 700).",
       "Incertitude significative sur la continuité, bien décrite : partie spécifique, sans réserve.",
     ],
     methode: ["Nature : désaccord ou limitation", "Caractère significatif", "Étendue : limitée ou généralisée", "Opinion motivée"],
