@@ -11,16 +11,16 @@
     "video": "client-debit",
     "phrase": 1,
     "prevu": "Tu vends pour mille euros hors taxes, TVA à vingt pour cent.",
-    "entendu": "Tu vends pour mille euros hors taxe, TVA à 20%.",
-    "ressemblance": 0.727,
+    "entendu": "Tu vends pour 1 000 € hors taxe, TVA à 20 %.",
+    "ressemblance": 0.545,
     "repetitions": []
   },
   {
     "video": "client-debit",
     "phrase": 2,
-    "prevu": "Ton client te doit mille deux cents euros. C'est une créance, donc un actif. Un actif qui augmente, ça va au débit.",
-    "entendu": "Ton client te doit 1200 euros. C'est une créance, donc un actif. Un actif qui augmente, ça va au débit.",
-    "ressemblance": 0.909,
+    "prevu": "Ton client te doit mille deux cents euros. C'est une créance, donc un actif. Et un actif qui augmente, ça va au débit.",
+    "entendu": "Ton client te doit 1200 euros, c'est une créance, donc un actif, et un actif qui augmente, ça va au débit.",
+    "ressemblance": 0.913,
     "repetitions": []
   },
   {
@@ -34,17 +34,17 @@
   {
     "video": "client-debit",
     "phrase": 4,
-    "prevu": "Et la TVA ? Tu l'encaisses pour l'État. Ce n'est pas ton argent, c'est une dette. Elle va au crédit.",
-    "entendu": "Et la TVA, tu l'encaisses pour l'État. Ce n'est pas ton argent, c'est une dette, elle va au crédit.",
-    "ressemblance": 1.0,
+    "prevu": "Et la TVA ? Tu l'encaisses pour le compte de l'État. Ce n'est pas ton argent : c'est une dette, au crédit.",
+    "entendu": "Et la TVA, tu l'encaisses pour le compte de l'Etat. Ce n'est pas ton argent, c'est une dette au crédit.",
+    "ressemblance": 0.958,
     "repetitions": []
   },
   {
     "video": "client-debit",
     "phrase": 5,
-    "prevu": "Débit égale crédit. Et surtout, maintenant, tu sais pourquoi.",
-    "entendu": "Débit égale crédit, et surtout de maintenant, tu sais pourquoi.",
-    "ressemblance": 0.947,
+    "prevu": "Débit égale crédit. Et maintenant, tu sais pourquoi.",
+    "entendu": "Débit égale crédit. Et maintenant, tu sais pourquoi.",
+    "ressemblance": 1.0,
     "repetitions": []
   },
   {
@@ -75,7 +75,7 @@
     "video": "compte-709",
     "phrase": 2,
     "prevu": "Le sept cent neuf vient corriger tes ventes. Il réduit un produit, donc il marche à l'envers : il va au débit.",
-    "entendu": "Le 709 vient corriger tes ventes, il réduit un produit donc il marche à l'envers, il va au débit.",
+    "entendu": "Le 709 vient corriger tes ventes, il réduit un produit, donc il marche à l'envers, il va au débit.",
     "ressemblance": 0.905,
     "repetitions": []
   },
@@ -83,7 +83,7 @@
     "video": "compte-709",
     "phrase": 3,
     "prevu": "Ta dette de TVA envers l'État baisse aussi. Un passif qui diminue, c'est au débit.",
-    "entendu": "Ta dette de TVA envers l'État baisse aussi. Un passif qui diminue, c'est au débit.",
+    "entendu": "Ta dette de TVA envers l'état baisse aussi. Un passif qui diminue, c'est au débit.",
     "ressemblance": 1.0,
     "repetitions": []
   },
@@ -170,9 +170,9 @@
   {
     "video": "emprunt",
     "phrase": 1,
-    "prevu": "L'argent arrive sur ton compte. Ta trésorerie, un actif, augmente : au débit.",
-    "entendu": "L'argent arrive sur ton compte. Ta trésorerie inactif augmente, au débit.",
-    "ressemblance": 0.88,
+    "prevu": "L'argent arrive sur ton compte : ta trésorerie augmente. C'est un actif, donc au débit.",
+    "entendu": "L'argent arrive sur ton compte. Ta trésorerie augmente. C'est un actif donc au débit.",
+    "ressemblance": 1.0,
     "repetitions": []
   },
   {
@@ -195,7 +195,7 @@
     "video": "emprunt",
     "phrase": 4,
     "prevu": "Ce qui te coûte vraiment, ce sont les intérêts. Eux, ce seront des charges.",
-    "entendu": "Ceux qui te coûtent vraiment, ce sont les intérêts, eux ce seront des charges.",
+    "entendu": "Ceux qui te coûtent vraiment, ce sont les intérêts. Eux, ce seront des charges.",
     "ressemblance": 0.857,
     "repetitions": []
   },
@@ -242,8 +242,8 @@
   {
     "video": "payer-fournisseur",
     "phrase": 4,
-    "prevu": "Et ta banque baisse : un actif qui diminue, au crédit.",
-    "entendu": "et ta banque baisse, un actif qui diminue au crédit.",
+    "prevu": "Et ta banque baisse : c'est un actif qui diminue, au crédit.",
+    "entendu": "Et ta banque baisse. C'est un actif qui diminue. Au crédit.",
     "ressemblance": 1.0,
     "repetitions": []
   },
