@@ -305,9 +305,9 @@ export const LOT_DSCG_UE4_B: Episode[] = [
     cours: [
       C("Le boni de fusion est l'excédent de l'actif net reçu sur la valeur des titres de l'absorbée annulés. Ici, 700 000 moins 500 000 : `200 000 €`.", true),
       C("Comptablement, la part du boni qui correspond aux résultats accumulés par l'absorbée depuis l'acquisition, et non distribués, va en résultat financier. Le reste va en capitaux propres. Ici, 120 000 en produits, 80 000 en prime.", true),
-      C("Fiscalement, sous le régime de faveur de l'article 210 A, le boni n'est pas imposable : la part comptabilisée en produit est déduite extra-comptablement."),
-      C("Le mali technique, lié aux plus-values latentes des actifs de l'absorbée, est inscrit à l'actif. Il n'est pas déductible immédiatement ; il est pris en compte fiscalement lors de la cession de l'actif auquel il est affecté.", true),
-      C("Le vrai mali, qui ne correspond à aucune plus-value latente, est une charge financière en comptabilité, mais il n'est pas déductible fiscalement : on le réintègre."),
+      C("Fiscalement, sous le régime de faveur de l'article 210 A, le boni n'est pas imposable : la part comptabilisée en produit est déduite extra-comptablement. Sous le régime de droit commun, au contraire, tout le boni est imposable."),
+      C("Le mali technique correspond aux plus-values latentes des actifs de l'absorbée. Il est inscrit à l'actif. Sous le régime de faveur, il ne donne lieu à aucune déduction fiscale, ni immédiate, ni ultérieure : ces plus-values n'ont pas été imposées chez l'absorbée.", true),
+      C("Le vrai mali, au-delà du mali technique, traduit une dépréciation de la participation. C'est une charge financière, déductible, calculée à partir de la valeur nette comptable des titres."),
     ],
     ecritures: [
       {
@@ -316,7 +316,7 @@ export const LOT_DSCG_UE4_B: Episode[] = [
         lignes: [
           { compte: "2 à 5", intitule: "Actifs reçus, nets des dettes reprises", debit: 700000, pourquoi: "L'absorbante reçoit le patrimoine de sa filiale : l'actif augmente." },
           { compte: "261", intitule: "Titres de participation Côte Vins", credit: 500000, pourquoi: "Les titres de la filiale sont annulés : l'actif disparaît, au crédit." },
-          { compte: "76", intitule: "Produits financiers (boni sur résultats accumulés)", credit: 120000, pourquoi: "Ces bénéfices auraient pu être distribués en dividendes : un produit financier." },
+          { compte: "761", intitule: "Revenus de participation (boni sur résultats accumulés)", credit: 120000, pourquoi: "Ces bénéfices auraient pu être distribués en dividendes : un produit financier." },
           { compte: "1042", intitule: "Prime de fusion (boni restant)", credit: 80000, pourquoi: "Le surplus du boni n'est pas un revenu : il va en capitaux propres." },
         ],
       },
@@ -324,20 +324,21 @@ export const LOT_DSCG_UE4_B: Episode[] = [
     flash: [
       Q("Part du boni correspondant aux résultats accumulés non distribués :", ["En capitaux propres", "En résultat financier", "En provision"], 1, "Le surplus en capitaux propres."),
       Q("Fiscalement, sous le régime de faveur, le boni est :", ["Imposable", "Non imposable", "Imposé à 15 %"], 1, "Déduction extra-comptable de la part en produit."),
-      Q("Le vrai mali de fusion est fiscalement :", ["Déductible", "Non déductible", "Amortissable"], 1, "On le réintègre."),
+      Q("Sous le régime de faveur, le mali technique est fiscalement :", ["Déductible immédiatement", "Déductible à la cession de l'actif", "Jamais déductible"], 2, "Ni immédiatement, ni ultérieurement."),
     ],
     fiche: {
-      essentiel: "Boni : résultats accumulés en produit financier, surplus en capitaux propres, non imposable sous 210 A ; mali technique à l'actif ; vrai mali en charge, non déductible.",
+      essentiel: "Boni : résultats accumulés en produit financier, surplus en capitaux propres, non imposable sous 210 A ; mali technique à l'actif, jamais déductible sous 210 A ; vrai mali déductible.",
       points: [
         "Boni = actif net reçu − titres annulés.",
         "Part des résultats accumulés depuis l'acquisition : résultat financier.",
         "Surplus : capitaux propres.",
         "Régime de faveur : boni non imposable (déduction extra-comptable).",
-        "Mali technique : actif, pris en compte à la cession du bien.",
-        "Vrai mali : charge financière, réintégrée fiscalement.",
+        "Mali technique : actif, aucune déduction fiscale sous le régime de faveur.",
+        "Régime de droit commun : boni entièrement imposable.",
+        "Vrai mali : dépréciation de la participation, charge financière déductible (sur la VNC des titres).",
       ],
       methode: ["Calcul du boni ou du mali", "Ventilation comptable", "Écriture", "Retraitements fiscaux"],
-      pieges: ["Imposer la part du boni comptabilisée en produit."],
+      pieges: ["Imposer la part du boni comptabilisée en produit, sous le régime de faveur.", "Déduire le mali technique."],
     },
   }),
 ];
