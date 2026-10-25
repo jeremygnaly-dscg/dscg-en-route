@@ -1,5 +1,5 @@
 {
- "majLe": "2026-10-25T05:38:48.618Z",
+ "majLe": "2026-10-25T11:38:44.093Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -50,13 +50,13 @@
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Capital",
@@ -76,6 +76,26 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-societe-manifestations-direct-manifestations-du-24-octobre-142-personnes-ont-",
+   "titre": "DIRECT. Manifestations du 24 octobre : plus de 1 300 interpellations en France, et 53 membres des forces de l'ordre blessés, annonce le ministère de l'Intérieur",
+   "url": "https://www.franceinfo.fr/societe/manifestations/direct-manifestations-du-24-octobre-142-personnes-ont-ete-interpellees-a-paris-dont-120-ont-ete-placees-en-garde-a-vue-selon-la-prefecture-de-police_8252812.html#xtor=RSS-3-%5Bgeneral%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-10-25T11:36:04.000Z",
+   "image": "https://www.franceinfo.fr/pictures/5eNMonJjsmPA3YuCVtgsL-c1cLM/0x86:1024x662/432x243/filters:format(jpg)/2026/10/25/6addaccee3055549186708.jpg",
+   "categorie": "Comptabilité & audit",
+   "score": 3
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-leur-modele-est-fonde-en-partie-sur-la-securite-sociale-l-eternelle-",
+   "titre": "«Leur modèle est fondé en partie sur la sécurité sociale» : l’éternelle angoisse des villes thermales, suspendues aux coupes budgétaires",
+   "url": "https://www.lefigaro.fr/conjoncture/leur-modele-est-fonde-en-partie-sur-la-securite-sociale-l-eternelle-angoisse-des-villes-thermales-suspendues-aux-coupes-budgetaires-20261025",
+   "source": "Le Figaro Économie",
+   "date": "2026-10-25T08:30:00.000Z",
+   "image": "https://i.f1g.fr/media/cms/2728x1535_crop/2026/10/22/540c6b4808c642f7095903467e31bb0741cc6930c0a34f385f9965ce748ec634.jpg",
+   "categorie": "Fiscalité",
+   "score": 4
+  },
   {
    "id": "village-de-la-justice-https-www-village-justice-com-articles-conge-supplementaire-naissance-apres-conge-maternite-patern",
    "titre": "Le congé supplémentaire de naissance après un congé de maternité ou de paternité : quelle articulation des protections contre le licenciement ? Par Estelle Minatchy, Juriste.",
