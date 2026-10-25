@@ -1,5 +1,5 @@
 {
- "majLe": "2026-10-24T17:37:21.056Z",
+ "majLe": "2026-10-25T05:38:48.618Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -22,7 +22,7 @@
    "nom": "Village de la Justice",
    "url": "https://www.village-justice.com/articles/spip.php?page=backend",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "Le Monde du Droit",
@@ -62,7 +62,7 @@
    "nom": "Capital",
    "url": "https://feed.prismamediadigital.com/v1/cap/rss?sources=capital",
    "ok": true,
-   "articles": 1
+   "articles": 0
   }
  ],
  "images": {
