@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Dessine-moi la compta</title>
+<style>
+@font-face{font-family:Brico;src:url(brico800.woff2) format("woff2");font-weight:800}
+@font-face{font-family:Src;src:url(source-sans-3-latin-400-normal.woff2) format("woff2");font-weight:400}
+@font-face{font-family:Src;src:url(source-sans-3-latin-700-normal.woff2) format("woff2");font-weight:700}
+@font-face{font-family:Caveat;src:url(caveat-latin-600-normal.woff2) format("woff2");font-weight:600}
+@font-face{font-family:Caveat;src:url(caveat-latin-700-normal.woff2) format("woff2");font-weight:700}
+:root{--fg:#121b2b;--muted:#5a6577;--line:#d3dae5;--accent:#3340c7;--accent-soft:#e2e5fb;--ok:#17804a;--ok-soft:#ddf3e6;--bad:#b4232c;--bad-soft:#fbe3e4;--gold:#f5c451}
+*{box-sizing:border-box}
+html,body{margin:0;width:1080px;height:1920px;overflow:hidden;background:#fff}
+#stage{position:relative;width:1080px;height:1920px;background:#fff;color:var(--fg);font-family:Src,sans-serif;overflow:hidden}
+.hand{font-family:Caveat,cursive;font-weight:600}
+#top{position:absolute;left:70px;right:150px;top:110px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:Brico,sans-serif;font-weight:800;letter-spacing:-0.02em;font-size:52px}
+.logo span{color:var(--accent)}
+.tag{font-family:Caveat,cursive;font-weight:700;font-size:44px;color:var(--accent)}
+#hook{position:absolute;left:70px;right:150px;top:640px;font-family:Brico,sans-serif;font-weight:800;font-size:104px;line-height:1.02;letter-spacing:-0.03em}
+#hook svg{display:block;width:620px;height:40px;margin-top:22px}
+#hook path{fill:none;stroke:var(--accent);stroke-width:9;stroke-linecap:round}
+#titre{position:absolute;left:70px;right:150px;top:195px;font-size:56px;line-height:1.05}
+#journal{position:absolute;left:60px;width:870px;top:268px}
+#journal table{width:100%;border-collapse:collapse;font-size:30px}
+#journal th{font-size:22px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-align:left;padding:4px 8px;border-bottom:3px solid var(--fg)}
+#journal th.n,#journal td.n{text-align:right;width:170px}
+#journal td{padding:2px 8px;border-bottom:1px solid var(--line);height:52px;font-weight:700}
+#journal td.cpt{font-family:Caveat,cursive;font-size:44px;color:var(--accent);width:130px}
+#journal td.ind{padding-left:48px}
+#journal td.n b{font-family:Caveat,cursive;font-size:46px}
+#journal td.dd b{color:var(--accent)}#journal td.cc b{color:var(--ok)}
+#journal tr.cour td{background:var(--accent-soft)}
+#journal .jnom{font-family:Caveat,cursive;font-weight:700;font-size:38px;margin:0 0 0 4px;line-height:1}
+#planches{position:absolute;left:60px;width:870px;top:548px}
+.pl-nom{font-size:46px;margin:0 0 2px 6px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:14px}
+.col{position:relative;height:262px;padding:70px 16px 12px;display:flex;flex-direction:column;gap:14px}
+.col svg.cadre{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.col svg.cadre path{fill:none;stroke:var(--fg);stroke-width:3.2;stroke-linecap:round}
+.zone{position:absolute;left:20px;top:8px;font-size:48px}
+.regle{position:absolute;right:16px;top:22px;font-size:24px;font-weight:700;color:var(--muted)}
+.vide{position:absolute;left:0;right:0;top:130px;text-align:center;font-size:48px;color:var(--muted)}
+.note{border-radius:10px;padding:6px 12px 8px;display:flex;flex-direction:column;line-height:1.05;transform-origin:center}
+.note b{font-family:Caveat,cursive;font-weight:700;font-size:52px}
+.note span{font-size:23px;font-weight:700;opacity:.85;margin-top:2px}
+.plus{background:var(--ok-soft)}.plus b{color:var(--ok)}
+.moins{background:var(--bad-soft)}.moins b{color:var(--bad)}
+.neuve{outline:4px solid var(--fg)}
+#bulle{position:absolute;left:70px;right:150px;top:1300px;display:flex;gap:18px;align-items:flex-start}
+.chip{flex:0 0 auto;font-size:28px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:8px 14px;border-radius:12px;margin-top:10px}
+.chipD{background:var(--accent-soft);color:var(--accent)}.chipC{background:var(--ok-soft);color:var(--ok)}
+#texte{font-size:56px;line-height:1.12;position:relative}
+#crayon{display:inline-block;width:54px;height:54px;vertical-align:-6px;margin-left:2px}
+#balance{position:absolute;left:70px;right:150px;top:1215px;display:flex;justify-content:center;align-items:baseline;gap:26px;font-size:36px;font-weight:700;border-top:4px dashed rgba(0,0,0,.15);padding-top:12px;display:none}
+#balance .eq{font-family:Caveat,cursive;font-size:76px;color:var(--ok)}
+#fin{position:absolute;inset:0;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:40px;opacity:0}
+#fin .logo{font-size:190px}
+#fin .bientot{font-family:Caveat,cursive;font-weight:700;font-size:96px;color:var(--fg)}
+#fin svg{width:560px;height:40px}
+#fin path{fill:none;stroke:var(--accent);stroke-width:9;stroke-linecap:round}
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="top"><div class="logo">Zen<span>vise</span></div><div class="tag">Dessine-moi la compta</div></div>
+  <div id="hook"><div id="hookTxt"></div><svg viewBox="0 0 620 40"><path id="hookTrait" d="M6 26 C 120 10, 260 34, 380 18 S 560 14, 612 22" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg></div>
+  <div id="titre" class="hand"></div>
+  <div id="journal"><div class="jnom">Journal</div><table><thead><tr><th>Compte</th><th>Intitulé</th><th class="n">Débit</th><th class="n">Crédit</th></tr></thead><tbody id="jlignes"></tbody></table></div>
+  <div id="planches">
+    <div class="pl-nom hand">Bilan</div>
+    <div class="cols">
+      <div class="col" id="c-actif"><svg class="cadre" viewBox="0 0 100 100" preserveAspectRatio="none"><path pathLength="1"/></svg><span class="zone hand">Actif</span><span class="regle">+ au débit</span><div class="vide hand"></div></div>
+      <div class="col" id="c-passif"><svg class="cadre" viewBox="0 0 100 100" preserveAspectRatio="none"><path pathLength="1"/></svg><span class="zone hand">Passif</span><span class="regle">+ au crédit</span><div class="vide hand"></div></div>
+    </div>
+    <div class="pl-nom hand">Compte de résultat</div>
+    <div class="cols">
+      <div class="col" id="c-charges"><svg class="cadre" viewBox="0 0 100 100" preserveAspectRatio="none"><path pathLength="1"/></svg><span class="zone hand">Charges</span><span class="regle">+ au débit</span><div class="vide hand"></div></div>
+      <div class="col" id="c-produits"><svg class="cadre" viewBox="0 0 100 100" preserveAspectRatio="none"><path pathLength="1"/></svg><span class="zone hand">Produits</span><span class="regle">+ au crédit</span><div class="vide hand"></div></div>
+    </div>
+  </div>
+  <div id="balance"><span>Débit <span id="bd"></span></span><span class="eq">=</span><span>Crédit <span id="bc"></span></span></div>
+  <div id="bulle"><span id="chip" class="chip"></span><div id="texte" class="hand"></div></div>
+  <div id="fin"><div class="logo">Zen<span>vise</span></div><div class="bientot">Bientôt sur vos écrans</div><svg viewBox="0 0 560 40"><path id="finTrait" d="M6 24 C 110 8, 240 34, 340 18 S 510 14, 552 22" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg></div>
+</div>
+<script>
+const V = {{video}};       // { id, accroche, segments: [{voix, titre?, ligne?, balance?}] }
+const DUR = {{durees}};    // durées des phrases (s), puis celle de la fin
+const GAP = 0.35, FIN_PAUSE = 0.4;
+const clamp = (x, a = 0, b = 1) => Math.max(a, Math.min(b, x));
+const lin = (t, a, b) => clamp((t - a) / (b - a));
+const eo = (x) => 1 - Math.pow(1 - x, 3);
+const back = (x) => { const c = 1.9; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const $ = (id) => document.getElementById(id);
+const eur = (n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " €";
+
+// Calendrier : début et fin de chaque phrase
+const SEG = []; let t = 0.1;
+V.segments.forEach((s, i) => { SEG.push({ ...s, a: t, b: t + DUR[i] }); t += DUR[i] + GAP; });
+const T_FIN = t + FIN_PAUSE; const DUREE = T_FIN + DUR[DUR.length - 1] + 1.2;
+window.DUREE = DUREE; window.T_FIN = T_FIN; window.SEG = SEG.map((s) => [s.a, s.b]);
+
+function zone(c) {
+  if (/^(28|29|39|49|59)/.test(c)) return "actif";
+  if (c[0] === "1") return "passif";
+  if ("235".includes(c[0])) return "actif";
+  if (c[0] === "6") return "charges";
+  if (c[0] === "7") return "produits";
+  if (/^409/.test(c)) return "actif"; if (/^40/.test(c)) return "passif";
+  if (/^41/.test(c)) return "actif"; if (/^4(2|3)/.test(c)) return "passif";
+  if (/^(4456|44567|44586|441)/.test(c)) return "actif"; if (/^44/.test(c)) return "passif";
+  return "passif";
+}
+const signe = (z, l) => ((z === "actif" || z === "charges") === (l.debit !== undefined) ? "+" : "−");
+
+// Cadres tremblés, stables
+document.querySelectorAll("svg.cadre path").forEach((p, k) => {
+  let s = (k + 1) * 9301 + 49297; const r = () => { s = (s * 9301 + 49297) % 233280; return s / 233280 - 0.5; };
+  const q = (x, y) => `${(x + r() * 1.4).toFixed(1)} ${(y + r() * 1.4).toFixed(1)}`;
+  p.setAttribute("d", `M${q(1, 1)} Q${q(50, 0)} ${q(99, 1)} Q${q(100, 50)} ${q(99, 99)} Q${q(50, 100)} ${q(1, 99)} Q${q(0, 50)} ${q(1, 1)}`);
+  p.setAttribute("stroke-dasharray", "1");
+});
+
+const CRAYON = '<svg id="crayon" viewBox="0 0 24 24"><path d="M3 21l1.2-4.6L16.6 4a2 2 0 0 1 2.8 0l.6.6a2 2 0 0 1 0 2.8L7.6 19.8z" fill="#f5c451" stroke="#121b2b" stroke-width="1.3" stroke-linejoin="round"/><path d="M3 21l1.2-4.6 3.4 3.4z" fill="#121b2b"/></svg>';
+
+function render(t) {
+  const hook = SEG[0];
+  const hookFin = hook.b + 0.15;
+  // Accroche
+  const h = $("hook");
+  const vu = t < hookFin;
+  h.style.opacity = vu ? eo(lin(t, 0, 0.35)) : 0;
+  $("hookTxt").textContent = V.accroche;
+  h.style.transform = `translateY(${(1 - eo(lin(t, 0, 0.4))) * 40}px)`;
+  $("hookTrait").setAttribute("stroke-dashoffset", String(1 - eo(lin(t, 0.4, 1.4))));
+
+  // Planches
+  const tp = hookFin;
+  const pl = $("planches");
+  pl.style.opacity = t >= tp && t < T_FIN ? 1 : 0;
+  document.querySelectorAll("svg.cadre path").forEach((p, k) => p.setAttribute("stroke-dashoffset", String(1 - eo(lin(t, tp + k * 0.15, tp + 0.9 + k * 0.15)))));
+
+  // Titre de contexte : le dernier titre rencontré
+  let titre = ""; for (const s of SEG) if (s.titre && t >= s.a) titre = s.titre;
+  $("titre").textContent = t >= tp && t < T_FIN ? titre : "";
+
+  // Post-it
+  ["actif", "passif", "charges", "produits"].forEach((z) => $("c-" + z).querySelectorAll(".note").forEach((n) => n.remove()));
+  let courante = null, totD = 0, totC = 0;
+  SEG.forEach((s, i) => {
+    if (!s.ligne || t < s.a + 0.25 || t >= T_FIN) return;
+    const z = zone(s.ligne.compte), sg = signe(z, s.ligne), m = s.ligne.debit ?? s.ligne.credit;
+    const n = document.createElement("div");
+    n.className = `note ${sg === "+" ? "plus" : "moins"}`;
+    n.innerHTML = `<b>${sg} ${eur(m)}</b><span>${s.ligne.compte} · ${s.ligne.intitule}</span>`;
+    const k = lin(t, s.a + 0.25, s.a + 0.8);
+    n.style.opacity = k > 0 ? 1 : 0;
+    n.style.transform = `translateY(${(1 - eo(k)) * -50}px) scale(${1 + 0.18 * (1 - back(k))}) rotate(${((i * 7) % 5) - 2}deg)`;
+    if (t < s.b + GAP) { n.classList.add("neuve"); courante = s; }
+    $("c-" + z).appendChild(n);
+    totD += s.ligne.debit ?? 0; totC += s.ligne.credit ?? 0;
+  });
+
+  // Journal : l'écriture en cours, ligne par ligne
+  let groupe = 0; const gr = SEG.map((s) => (s.nouvelle ? ++groupe : groupe));
+  const actifs = SEG.map((s, i) => [s, i]).filter(([s]) => s.ligne && t >= s.a + 0.25 && t < T_FIN);
+  const gCour = actifs.length ? gr[actifs[actifs.length - 1][1]] : 0;
+  $("journal").style.opacity = t >= tp && t < T_FIN ? 1 : 0;
+  $("jlignes").innerHTML = actifs.filter(([, i]) => gr[i] === gCour).map(([s]) => {
+    const L = s.ligne, deb = L.debit !== undefined;
+    return `<tr class="${s === courante ? "cour" : ""}"><td class="cpt">${L.compte}</td><td class="${deb ? "" : "ind"}">${L.intitule}</td><td class="n dd">${deb ? `<b>${eur(L.debit)}</b>` : ""}</td><td class="n cc">${deb ? "" : `<b>${eur(L.credit)}</b>`}</td></tr>`;
+  }).join("");
+
+  // Bulle manuscrite + crayon
+  const seg = SEG.find((s, i) => i > 0 && t >= s.a && t < (SEG[i + 1]?.a ?? T_FIN)) ;
+  if (seg && t < T_FIN) {
+    const k = lin(t, seg.a, seg.a + (seg.b - seg.a) * 0.92);
+    const txt = seg.voix; const nb = Math.round(txt.length * k);
+    $("texte").innerHTML = txt.slice(0, nb).replace(/</g, "&lt;") + (k < 1 ? CRAYON : "");
+    const chip = $("chip");
+    if (seg.ligne) { chip.style.display = "inline-block"; chip.className = "chip " + (seg.ligne.debit !== undefined ? "chipD" : "chipC"); chip.textContent = seg.ligne.debit !== undefined ? "Débit" : "Crédit"; }
+    else chip.style.display = "none";
+    $("bulle").style.opacity = 1;
+  } else $("bulle").style.opacity = 0;
+
+  // Équilibre et cases vides
+  const bal = seg && seg.balance && t < T_FIN;
+  $("balance").style.display = bal ? "flex" : "none";
+  if (bal) { $("bd").textContent = eur(totD); $("bc").textContent = eur(totC); $("balance").style.opacity = eo(lin(t, seg.a, seg.a + 0.4)); }
+  ["actif", "passif", "charges", "produits"].forEach((z) => {
+    const c = $("c-" + z); const v = c.querySelector(".vide");
+    v.textContent = bal && !c.querySelector(".note") ? "rien ne bouge" : "";
+  });
+  if (bal) $("bulle").style.top = "1340px"; else $("bulle").style.top = "1290px";
+
+  // Fin : Zenvise, bientôt sur vos écrans
+  const f = $("fin");
+  f.style.opacity = eo(lin(t, T_FIN - 0.1, T_FIN + 0.35));
+  f.querySelector(".logo").style.transform = `scale(${0.8 + 0.2 * back(lin(t, T_FIN, T_FIN + 0.5))})`;
+  $("finTrait").setAttribute("stroke-dashoffset", String(1 - eo(lin(t, T_FIN + 0.5, T_FIN + 1.4))));
+  $("top").style.opacity = t >= T_FIN ? 0 : 1;
+}
+if (V.tag) document.querySelector('.tag').textContent = V.tag;
+window.render = render;
+render(0);
+</script>
+</body>
+</html>
