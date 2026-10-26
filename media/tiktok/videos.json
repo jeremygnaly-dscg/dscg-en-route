@@ -194,5 +194,300 @@
         "balance": true
       }
     ]
+  },
+  {
+    "id": "fin-sig-ebitda",
+    "modele": "finance",
+    "accroche": "Ton premier mot en M&A ? EBITDA. Et tu l'apprends en DCG.",
+    "segments": [
+      {
+        "voix": "Ton premier mot en M&A ? EBITDA. Et tu l'apprends en DCG.",
+        "dit": "Ton premier mot en M and A ? Ébitda. Et tu l'apprends en DCG."
+      },
+      {
+        "voix": "Les soldes intermédiaires de gestion découpent le résultat, étape par étape.",
+        "titre": "Les SIG, en k€",
+        "rangs": [
+          {
+            "lib": "Marge commerciale",
+            "val": "200"
+          },
+          {
+            "op": "+",
+            "lib": "Production de l'exercice",
+            "val": "800"
+          },
+          {
+            "op": "−",
+            "lib": "Consommations externes",
+            "val": "450"
+          },
+          {
+            "op": "=",
+            "lib": "Valeur ajoutée",
+            "val": "550",
+            "style": "fort"
+          }
+        ]
+      },
+      {
+        "voix": "De la valeur ajoutée, on ajoute les subventions, on retire les impôts et taxes et les salaires. On obtient l'excédent brut d'exploitation.",
+        "rangs": [
+          {
+            "lib": "Valeur ajoutée",
+            "val": "550",
+            "style": "fort"
+          },
+          {
+            "op": "+",
+            "lib": "Subventions d'exploitation",
+            "val": "20"
+          },
+          {
+            "op": "−",
+            "lib": "Impôts et taxes",
+            "val": "30"
+          },
+          {
+            "op": "−",
+            "lib": "Charges de personnel",
+            "val": "340"
+          },
+          {
+            "op": "=",
+            "lib": "EBE",
+            "val": "200",
+            "style": "fort"
+          }
+        ],
+        "efface": true
+      },
+      {
+        "voix": "L'EBE, c'est la performance de l'activité : avant les amortissements, avant le financement, avant l'impôt.",
+        "dit": "L'E.B.E, c'est la performance de l'activité : avant les amortissements, avant le financement, avant l'impôt."
+      },
+      {
+        "voix": "En M&A, on parle d'EBITDA. C'est quasiment l'EBE, avec un ajustement fréquent : la participation des salariés, traitée comme une charge de personnel.",
+        "rangs": [
+          {
+            "lib": "EBE",
+            "val": "200",
+            "style": "fort"
+          },
+          {
+            "op": "−",
+            "lib": "Participation des salariés",
+            "val": "15"
+          },
+          {
+            "op": "=",
+            "lib": "EBITDA",
+            "val": "185",
+            "style": "ok"
+          }
+        ],
+        "dit": "En M and A, on parle d'Ébitda. C'est quasiment l'E.B.E, avec un ajustement fréquent : la participation des salariés, traitée comme une charge de personnel.",
+        "efface": true,
+        "titre": "De l'EBE à l'EBITDA, en k€"
+      },
+      {
+        "voix": "Pourquoi c'est clé ? Une entreprise se valorise souvent en multiple d'EBITDA. 6 × 185 k€ : 1,11 million d'euros.",
+        "rangs": [
+          {
+            "op": "×",
+            "lib": "Multiple du secteur",
+            "val": "6"
+          },
+          {
+            "op": "=",
+            "lib": "Valeur d'entreprise",
+            "val": "1 110",
+            "style": "ok"
+          }
+        ],
+        "dit": "Pourquoi c'est clé ? Une entreprise se valorise souvent en multiple d'Ébitda. Six fois cent quatre-vingt-cinq mille euros : un million cent dix mille euros."
+      },
+      {
+        "voix": "Maîtrise tes SIG en DCG. En M&A, c'est ton quotidien.",
+        "dit": "Maîtrise tes SIG en DCG. En M and A, c'est ton quotidien."
+      }
+    ]
+  },
+  {
+    "id": "fin-van-actualisation",
+    "modele": "finance",
+    "accroche": "Mille euros dans un an valent moins que mille euros aujourd'hui.",
+    "segments": [
+      {
+        "voix": "Mille euros dans un an valent moins que mille euros aujourd'hui. Pourquoi ?"
+      },
+      {
+        "voix": "Parce que l'argent d'aujourd'hui peut être placé. À 8 %, 1 000 € deviennent 1 080 € dans un an.",
+        "titre": "La valeur du temps",
+        "rangs": [
+          {
+            "lib": "Aujourd'hui",
+            "val": "1 000 €"
+          },
+          {
+            "op": "×",
+            "lib": "1,08 (un an à 8 %)",
+            "val": ""
+          },
+          {
+            "op": "=",
+            "lib": "Dans un an",
+            "val": "1 080 €",
+            "style": "fort"
+          }
+        ],
+        "dit": "Parce que l'argent d'aujourd'hui peut être placé. À huit pour cent, mille euros deviennent mille quatre-vingts euros dans un an."
+      },
+      {
+        "voix": "Actualiser, c'est le chemin inverse : on divise par (1 + taux), autant de fois qu'il y a d'années. 1 000 € dans un an valent 926 € aujourd'hui.",
+        "rangs": [
+          {
+            "lib": "1 000 € dans un an",
+            "val": ""
+          },
+          {
+            "op": "÷",
+            "lib": "1,08",
+            "val": ""
+          },
+          {
+            "op": "=",
+            "lib": "Valeur actuelle",
+            "val": "926 €",
+            "style": "fort"
+          }
+        ],
+        "dit": "Actualiser, c'est faire le chemin inverse : on divise par un plus le taux, autant de fois qu'il y a d'années. Mille euros dans un an valent aujourd'hui neuf cent vingt-six euros."
+      },
+      {
+        "voix": "Un projet coûte 100 000 €, et rapporte 30 000 € par an pendant 5 ans.",
+        "efface": true,
+        "titre": "Le projet",
+        "rangs": [
+          {
+            "op": "−",
+            "lib": "Investissement",
+            "val": "100 000"
+          },
+          {
+            "op": "+",
+            "lib": "Flux : 30 000 par an, 5 ans",
+            "val": ""
+          }
+        ],
+        "dit": "Un projet coûte cent mille euros, et rapporte trente mille euros par an pendant cinq ans."
+      },
+      {
+        "voix": "On actualise chaque flux à 8 %. Au total, ils valent aujourd'hui 119 781 €.",
+        "rangs": [
+          {
+            "op": "+",
+            "lib": "Flux actualisés à 8 %",
+            "val": "119 781"
+          }
+        ],
+        "dit": "On actualise chaque flux à huit pour cent. Au total, ils valent aujourd'hui cent dix-neuf mille sept cent quatre-vingt-un euros."
+      },
+      {
+        "voix": "VAN = 119 781 − 100 000 = 19 781 €.",
+        "rangs": [
+          {
+            "op": "=",
+            "lib": "VAN",
+            "val": "+ 19 781",
+            "style": "ok"
+          }
+        ],
+        "dit": "Valeur actuelle nette : cent dix-neuf mille sept cent quatre-vingt-un, moins cent mille. Dix-neuf mille sept cent quatre-vingt-un euros."
+      },
+      {
+        "voix": "VAN positive : le projet rapporte plus que le taux exigé. On investit."
+      }
+    ]
+  },
+  {
+    "id": "fin-tableau-flux",
+    "modele": "finance",
+    "accroche": "Tableau des flux : les points les plus rapides de l'épreuve.",
+    "segments": [
+      {
+        "voix": "Tableau des flux : les points les plus rapides de l'épreuve. À condition d'aller vite au bon moment."
+      },
+      {
+        "voix": "On part du résultat net, et on rajoute ce qui n'a fait sortir aucun euro : les dotations aux amortissements.",
+        "titre": "Flux de trésorerie, en k€",
+        "rangs": [
+          {
+            "lib": "Résultat net",
+            "val": "500"
+          },
+          {
+            "op": "+",
+            "lib": "Dotations aux amortissements",
+            "val": "300"
+          }
+        ]
+      },
+      {
+        "voix": "Puis on retire la hausse du besoin en fonds de roulement : des stocks et des créances qui bloquent du cash.",
+        "rangs": [
+          {
+            "op": "−",
+            "lib": "Hausse du BFR",
+            "val": "100"
+          },
+          {
+            "op": "=",
+            "lib": "Flux d'activité",
+            "val": "700",
+            "style": "fort"
+          }
+        ]
+      },
+      {
+        "voix": "Ensuite, les investissements : − 600.",
+        "rangs": [
+          {
+            "op": "−",
+            "lib": "Flux d'investissement",
+            "val": "600",
+            "style": "fort"
+          }
+        ],
+        "dit": "Ensuite, les investissements : moins six cents."
+      },
+      {
+        "voix": "Enfin, le financement : + 200 d'emprunt, − 100 de remboursement, − 150 de dividendes. Soit − 50.",
+        "rangs": [
+          {
+            "op": "−",
+            "lib": "Flux de financement",
+            "val": "50",
+            "style": "fort"
+          }
+        ],
+        "dit": "Enfin, le financement : plus deux cents d'emprunt, moins cent de remboursement, moins cent cinquante de dividendes. Moins cinquante."
+      },
+      {
+        "voix": "Variation de trésorerie : + 50. Elle doit tomber pile sur l'écart entre la trésorerie d'ouverture et celle de clôture.",
+        "rangs": [
+          {
+            "op": "=",
+            "lib": "Variation de trésorerie",
+            "val": "+ 50",
+            "style": "ok"
+          }
+        ],
+        "dit": "Variation de trésorerie : plus cinquante. Elle doit tomber pile sur l'écart entre la trésorerie d'ouverture et celle de clôture."
+      },
+      {
+        "voix": "Le jour de l'épreuve : pose la trame, remplis les trois blocs, puis vérifie avec la trésorerie. Si ça tombe juste, passe à la suite."
+      }
+    ]
   }
 ]

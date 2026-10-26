@@ -15,7 +15,7 @@ if (!KEY || !VOIX) throw new Error("ELEVENLABS_API_KEY ou VOICE_EXPERT manquant.
 export const FIN = "Zenvaïze. Bientôt sur vos écrans.";
 const REGLAGES = { stability: 0.45, similarity_boost: 0.75, style: 0.2, use_speaker_boost: true, speed: 1.03 };
 const DOSSIER = path.join(process.cwd(), "media", "tiktok");
-const videos = JSON.parse(fs.readFileSync(path.join(DOSSIER, "videos.json"), "utf8")) as { id: string; segments: { voix: string }[] }[];
+const videos = JSON.parse(fs.readFileSync(path.join(DOSSIER, "videos.json"), "utf8")) as { id: string; segments: { voix: string; dit?: string }[] }[];
 
 const histo = new Map<string, string>();
 async function historique() {
@@ -61,7 +61,7 @@ async function main() {
     if (!DEMANDE.includes("all") && !DEMANDE.includes(v.id)) continue;
     const dir = path.join(DOSSIER, v.id);
     fs.mkdirSync(dir, { recursive: true });
-    for (let i = 0; i < v.segments.length; i++) await phrase(v.segments[i].voix, path.join(dir, `${String(i).padStart(2, "0")}.mp3`));
+    for (let i = 0; i < v.segments.length; i++) await phrase(v.segments[i].dit ?? v.segments[i].voix, path.join(dir, `${String(i).padStart(2, "0")}.mp3`));
     await phrase(FIN, path.join(dir, "fin.mp3"));
     console.log(`✓ ${v.id}`);
   }
