@@ -1,5 +1,5 @@
 {
- "majLe": "2026-10-26T05:43:56.710Z",
+ "majLe": "2026-10-26T12:22:51.341Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -50,13 +50,13 @@
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Capital",
@@ -76,6 +76,26 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-replay-radio-le-brief-eco-le-secteur-bancaire-directement-touche-par-l-intell",
+   "titre": "Le secteur bancaire directement touché par l’intelligence artificielle",
+   "url": "https://www.franceinfo.fr/replay-radio/le-brief-eco/le-secteur-bancaire-directement-touche-par-l-intelligence-artificielle_8233156.html#xtor=RSS-3-%5Bgeneral%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-10-26T08:42:57.000Z",
+   "image": "https://www.franceinfo.fr/pictures/Ea_PW9A8tB7biG33BYtzqe2zBno/0x53:1024x629/432x243/filters:format(jpg)/2026/10/26/6adf11ef61bb9965735318.jpg",
+   "categorie": "Social",
+   "score": 5
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-quel-est-cet-impot-sur-la-fortune-des-milliardaires-inspire-de-la-ta",
+   "titre": "Quel est cet impôt sur la fortune des milliardaires, inspiré de la taxe Zucman, qui pourrait être adopté en Californie ?",
+   "url": "https://www.lefigaro.fr/conjoncture/quel-est-cet-impot-sur-la-fortune-des-milliardaires-inspire-de-la-taxe-zucman-qui-pourrait-etre-adopte-en-californie-20261025",
+   "source": "Le Figaro Économie",
+   "date": "2026-10-25T17:38:50.000Z",
+   "image": "https://i.f1g.fr/media/cms/1920x1080_crop/2026/10/25/2418400561b08354922b0f1775f5747b9a1470304cb885ad5495ecbd71da3198.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
   {
    "id": "franceinfo-conomie-https-www-franceinfo-fr-societe-manifestations-direct-manifestations-du-24-octobre-142-personnes-ont-",
    "titre": "DIRECT. Manifestations du 24 octobre : plus de 1 300 interpellations en France, et 53 membres des forces de l'ordre blessés, annonce le ministère de l'Intérieur",
