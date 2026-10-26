@@ -1,0 +1,56 @@
+name: Voix libre TikTok (sans crédit)
+
+on:
+  workflow_dispatch:
+    inputs:
+      videos:
+        description: "Vidéos : all, ou des ids séparés par des virgules"
+        required: true
+        default: "fin-sig-ebitda,fin-van-actualisation,fin-tableau-flux"
+      modeles:
+        description: "Voix Piper, séparées par des virgules (ex. fr_FR-tom-medium,fr_FR-gilles-low)"
+        required: true
+        default: "fr_FR-tom-medium"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: voix-libre
+  cancel-in-progress: false
+
+jobs:
+  voix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Installer Piper et ffmpeg
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          pip install -q "piper-tts==1.2.0"
+      - name: Télécharger les modèles de voix
+        run: |
+          mkdir -p modeles
+          for m in $(echo "${{ inputs.modeles }}" | tr ',' ' '); do
+            loc=$(echo $m | cut -d- -f1); lang=$(echo $loc | cut -d_ -f1); nom=$(echo $m | cut -d- -f2); q=$(echo $m | cut -d- -f3)
+            base="https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/$lang/$loc/$nom/$q/$m"
+            curl -sfL "$base.onnx" -o "modeles/$m.onnx"
+            curl -sfL "$base.onnx.json" -o "modeles/$m.onnx.json"
+          done
+          ls -la modeles
+      - name: Générer les voix
+        env:
+          VIDEOS: ${{ inputs.videos }}
+        run: python scripts/voix-libre.py "${{ inputs.modeles }}"
+      - name: Enregistrer les MP3
+        run: |
+          git config user.name "Zenvise (voix libre)"
+          git config user.email "actions@users.noreply.github.com"
+          git add media/tiktok-libre
+          if git diff --cached --quiet; then echo "Rien de nouveau."; exit 0; fi
+          git commit -m "Voix libre TikTok : ${{ inputs.videos }}"
+          git pull --rebase && git push

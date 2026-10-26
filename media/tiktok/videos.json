@@ -202,7 +202,8 @@
     "segments": [
       {
         "voix": "Ton premier mot en M&A ? EBITDA. Et tu l'apprends en DCG.",
-        "dit": "Ton premier mot en M and A ? Ébitda. Et tu l'apprends en DCG."
+        "dit": "Ton premier mot en M and A ? Ébitda. Et tu l'apprends en DCG.",
+        "libre": "Ton premier mot en fusions-acquisitions ? ibitda. Et tu l'apprends en DCG."
       },
       {
         "voix": "Les soldes intermédiaires de gestion découpent le résultat, étape par étape.",
@@ -228,7 +229,8 @@
             "val": "550",
             "style": "fort"
           }
-        ]
+        ],
+        "libre": "Les soldes intermédiaires de gestion découpent le résultat, étape par étape."
       },
       {
         "voix": "De la valeur ajoutée, on ajoute les subventions, on retire les impôts et taxes et les salaires. On obtient l'excédent brut d'exploitation.",
@@ -260,11 +262,13 @@
             "style": "fort"
           }
         ],
-        "efface": true
+        "efface": true,
+        "libre": "De la valeur ajoutée, on ajoute les subventions, on retire les impôts et taxes et les salaires. On obtient l'excédent brut d'exploitation."
       },
       {
         "voix": "L'EBE, c'est la performance de l'activité : avant les amortissements, avant le financement, avant l'impôt.",
-        "dit": "L'E.B.E, c'est la performance de l'activité : avant les amortissements, avant le financement, avant l'impôt."
+        "dit": "L'E.B.E, c'est la performance de l'activité : avant les amortissements, avant le financement, avant l'impôt.",
+        "libre": "L'é bé e, c'est la performance de l'activité : avant les amortissements, avant le financement, avant l'impôt."
       },
       {
         "voix": "En M&A, on parle d'EBITDA. C'est quasiment l'EBE, avec un ajustement fréquent : la participation des salariés, traitée comme une charge de personnel.",
@@ -288,7 +292,8 @@
         ],
         "dit": "En M and A, on parle d'Ébitda. C'est quasiment l'E.B.E, avec un ajustement fréquent : la participation des salariés, traitée comme une charge de personnel.",
         "efface": true,
-        "titre": "De l'EBE à l'EBITDA, en k€"
+        "titre": "De l'EBE à l'EBITDA, en k€",
+        "libre": "En fusions-acquisitions, on parle d'ibitda. C'est quasiment l'é bé e, avec un ajustement fréquent : la participation des salariés, traitée comme une charge de personnel."
       },
       {
         "voix": "Pourquoi c'est clé ? Une entreprise se valorise souvent en multiple d'EBITDA. 6 × 185 k€ : 1,11 million d'euros.",
@@ -305,11 +310,13 @@
             "style": "ok"
           }
         ],
-        "dit": "Pourquoi c'est clé ? Une entreprise se valorise souvent en multiple d'Ébitda. Six fois cent quatre-vingt-cinq mille euros : un million cent dix mille euros."
+        "dit": "Pourquoi c'est clé ? Une entreprise se valorise souvent en multiple d'Ébitda. Six fois cent quatre-vingt-cinq mille euros : un million cent dix mille euros.",
+        "libre": "Pourquoi c'est clé ? Une entreprise se valorise souvent en multiple d'ibitda. Six fois cent quatre-vingt-cinq mille euros : un million cent dix mille euros."
       },
       {
         "voix": "Maîtrise tes SIG en DCG. En M&A, c'est ton quotidien.",
-        "dit": "Maîtrise tes SIG en DCG. En M and A, c'est ton quotidien."
+        "dit": "Maîtrise tes SIG en DCG. En M and A, c'est ton quotidien.",
+        "libre": "Maîtrise tes SIG en DCG. En fusions-acquisitions, c'est ton quotidien."
       }
     ]
   },
@@ -319,7 +326,8 @@
     "accroche": "Mille euros dans un an valent moins que mille euros aujourd'hui.",
     "segments": [
       {
-        "voix": "Mille euros dans un an valent moins que mille euros aujourd'hui. Pourquoi ?"
+        "voix": "Mille euros dans un an valent moins que mille euros aujourd'hui. Pourquoi ?",
+        "libre": "Mille euros dans un an valent moins que mille euros aujourd'hui. Pourquoi ?"
       },
       {
         "voix": "Parce que l'argent d'aujourd'hui peut être placé. À 8 %, 1 000 € deviennent 1 080 € dans un an.",
@@ -341,7 +349,8 @@
             "style": "fort"
           }
         ],
-        "dit": "Parce que l'argent d'aujourd'hui peut être placé. À huit pour cent, mille euros deviennent mille quatre-vingts euros dans un an."
+        "dit": "Parce que l'argent d'aujourd'hui peut être placé. À huit pour cent, mille euros deviennent mille quatre-vingts euros dans un an.",
+        "libre": "Parce que l'argent d'aujourd'hui peut être placé. À huit pour cent, mille euros deviennent mille quatre-vingts euros dans un an."
       },
       {
         "voix": "Actualiser, c'est le chemin inverse : on divise par (1 + taux), autant de fois qu'il y a d'années. 1 000 € dans un an valent 926 € aujourd'hui.",
@@ -362,7 +371,8 @@
             "style": "fort"
           }
         ],
-        "dit": "Actualiser, c'est faire le chemin inverse : on divise par un plus le taux, autant de fois qu'il y a d'années. Mille euros dans un an valent aujourd'hui neuf cent vingt-six euros."
+        "dit": "Actualiser, c'est faire le chemin inverse : on divise par un plus le taux, autant de fois qu'il y a d'années. Mille euros dans un an valent aujourd'hui neuf cent vingt-six euros.",
+        "libre": "Actualiser, c'est faire le chemin inverse : on divise par un plus le taux, autant de fois qu'il y a d'années. Mille euros dans un an valent aujourd'hui neuf cent vingt-six euros."
       },
       {
         "voix": "Un projet coûte 100 000 €, et rapporte 30 000 € par an pendant 5 ans.",
@@ -380,7 +390,8 @@
             "val": ""
           }
         ],
-        "dit": "Un projet coûte cent mille euros, et rapporte trente mille euros par an pendant cinq ans."
+        "dit": "Un projet coûte cent mille euros, et rapporte trente mille euros par an pendant cinq ans.",
+        "libre": "Un projet coûte cent mille euros, et rapporte trente mille euros par an pendant cinq ans."
       },
       {
         "voix": "On actualise chaque flux à 8 %. Au total, ils valent aujourd'hui 119 781 €.",
@@ -391,7 +402,8 @@
             "val": "119 781"
           }
         ],
-        "dit": "On actualise chaque flux à huit pour cent. Au total, ils valent aujourd'hui cent dix-neuf mille sept cent quatre-vingt-un euros."
+        "dit": "On actualise chaque flux à huit pour cent. Au total, ils valent aujourd'hui cent dix-neuf mille sept cent quatre-vingt-un euros.",
+        "libre": "On actualise chaque flux à huit pour cent. Au total, ils valent aujourd'hui cent dix-neuf mille sept cent quatre-vingt-un euros."
       },
       {
         "voix": "VAN = 119 781 − 100 000 = 19 781 €.",
@@ -403,10 +415,12 @@
             "style": "ok"
           }
         ],
-        "dit": "Valeur actuelle nette : cent dix-neuf mille sept cent quatre-vingt-un, moins cent mille. Dix-neuf mille sept cent quatre-vingt-un euros."
+        "dit": "Valeur actuelle nette : cent dix-neuf mille sept cent quatre-vingt-un, moins cent mille. Dix-neuf mille sept cent quatre-vingt-un euros.",
+        "libre": "Valeur actuelle nette : cent dix-neuf mille sept cent quatre-vingt-un, moins cent mille. Dix-neuf mille sept cent quatre-vingt-un euros."
       },
       {
-        "voix": "VAN positive : le projet rapporte plus que le taux exigé. On investit."
+        "voix": "VAN positive : le projet rapporte plus que le taux exigé. On investit.",
+        "libre": "VAN positive : le projet rapporte plus que le taux exigé. On investit."
       }
     ]
   },
@@ -416,7 +430,8 @@
     "accroche": "Tableau des flux : les points les plus rapides de l'épreuve.",
     "segments": [
       {
-        "voix": "Tableau des flux : les points les plus rapides de l'épreuve. À condition d'aller vite au bon moment."
+        "voix": "Tableau des flux : les points les plus rapides de l'épreuve. À condition d'aller vite au bon moment.",
+        "libre": "Tableau des flux : les points les plus rapides de l'épreuve. À condition d'aller vite au bon moment."
       },
       {
         "voix": "On part du résultat net, et on rajoute ce qui n'a fait sortir aucun euro : les dotations aux amortissements.",
@@ -431,7 +446,8 @@
             "lib": "Dotations aux amortissements",
             "val": "300"
           }
-        ]
+        ],
+        "libre": "On part du résultat net, et on rajoute ce qui n'a fait sortir aucun euro : les dotations aux amortissements."
       },
       {
         "voix": "Puis on retire la hausse du besoin en fonds de roulement : des stocks et des créances qui bloquent du cash.",
@@ -447,7 +463,8 @@
             "val": "700",
             "style": "fort"
           }
-        ]
+        ],
+        "libre": "Puis on retire la hausse du besoin en fonds de roulement : des stocks et des créances qui bloquent du cash."
       },
       {
         "voix": "Ensuite, les investissements : − 600.",
@@ -459,7 +476,8 @@
             "style": "fort"
           }
         ],
-        "dit": "Ensuite, les investissements : moins six cents."
+        "dit": "Ensuite, les investissements : moins six cents.",
+        "libre": "Ensuite, les investissements : moins six cents."
       },
       {
         "voix": "Enfin, le financement : + 200 d'emprunt, − 100 de remboursement, − 150 de dividendes. Soit − 50.",
@@ -471,7 +489,8 @@
             "style": "fort"
           }
         ],
-        "dit": "Enfin, le financement : plus deux cents d'emprunt, moins cent de remboursement, moins cent cinquante de dividendes. Moins cinquante."
+        "dit": "Enfin, le financement : plus deux cents d'emprunt, moins cent de remboursement, moins cent cinquante de dividendes. Moins cinquante.",
+        "libre": "Enfin, le financement : plus deux cents d'emprunt, moins cent de remboursement, moins cent cinquante de dividendes. Moins cinquante."
       },
       {
         "voix": "Variation de trésorerie : + 50. Elle doit tomber pile sur l'écart entre la trésorerie d'ouverture et celle de clôture.",
@@ -483,10 +502,12 @@
             "style": "ok"
           }
         ],
-        "dit": "Variation de trésorerie : plus cinquante. Elle doit tomber pile sur l'écart entre la trésorerie d'ouverture et celle de clôture."
+        "dit": "Variation de trésorerie : plus cinquante. Elle doit tomber pile sur l'écart entre la trésorerie d'ouverture et celle de clôture.",
+        "libre": "Variation de trésorerie : plus cinquante. Elle doit tomber pile sur l'écart entre la trésorerie d'ouverture et celle de clôture."
       },
       {
-        "voix": "Le jour de l'épreuve : pose la trame, remplis les trois blocs, puis vérifie avec la trésorerie. Si ça tombe juste, passe à la suite."
+        "voix": "Le jour de l'épreuve : pose la trame, remplis les trois blocs, puis vérifie avec la trésorerie. Si ça tombe juste, passe à la suite.",
+        "libre": "Le jour de l'épreuve : pose la trame, remplis les trois blocs, puis vérifie avec la trésorerie. Si ça tombe juste, passe à la suite."
       }
     ]
   }
