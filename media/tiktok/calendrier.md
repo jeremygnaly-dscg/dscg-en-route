@@ -1,5 +1,7 @@
 # Calendrier TikTok — 5 vidéos par jour à partir du mercredi 28 octobre 2026
 
+
+**Statut de la bêta : pas encore en ligne** → appel à l'action « Commente BÊTA ». Quand Jérémy annonce la bêta en ligne, remplacer par « en ligne » → « Lien en bio ».
 Format : « Dessine-moi » (voix de l'expert-comptable ElevenLabs, tableau dessiné, crayon, fin « Zenvaïze. Bientôt sur vos écrans. »).
 - `modele: "compta"` pour une écriture (journal + bilan / compte de résultat).
 - `modele: "finance"` pour un calcul, une cascade ou une liste de conditions (droit) ; `tag` personnalisable : « Dessine-moi la finance », « Dessine-moi le droit », « Dessine-moi le DSCG ».
