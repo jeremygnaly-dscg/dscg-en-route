@@ -1,5 +1,5 @@
 {
- "majLe": "2026-10-26T12:22:51.341Z",
+ "majLe": "2026-10-26T17:46:29.208Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -76,6 +76,26 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-conso-colis-que-vont-changer-les-frais-de-traitement-imposes-par-l-ue-des-ce-1er",
+   "titre": "Colis importés : que vont changer les «frais de traitement» imposés par l’UE dès ce 1er novembre, en plus de la taxe «petits colis» ?",
+   "url": "https://www.lefigaro.fr/conso/colis-que-vont-changer-les-frais-de-traitement-imposes-par-l-ue-des-ce-1er-novembre-en-plus-de-la-taxe-petits-colis-20261026",
+   "source": "Le Figaro Économie",
+   "date": "2026-10-26T16:55:36.000Z",
+   "image": "https://i.f1g.fr/media/cms/orig/2026/10/26/ce7f47bb9ee917645612841cd21e42cc00a07ce492b9ca4d1c9a57ae9939bd22.JPG",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-a-partir-du-1er-novembre-les-petits-colis-importes-seront-davantage-",
+   "titre": "À partir du 1er novembre, les petits colis importés seront davantage taxés",
+   "url": "https://www.franceinfo.fr/economie/a-partir-du-1er-novembre-les-petits-colis-importes-seront-davantage-taxes_8254318.html#xtor=RSS-3-%5Bgeneral%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-10-26T14:04:48.000Z",
+   "image": "https://www.franceinfo.fr/pictures/VQYjbz38uMcnRvTCgm8Z-WCAlbI/23x0:1580x876/432x243/filters:format(jpg)/2026/10/26/6adf5d6d627b6705513155.png",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
   {
    "id": "franceinfo-conomie-https-www-franceinfo-fr-replay-radio-le-brief-eco-le-secteur-bancaire-directement-touche-par-l-intell",
    "titre": "Le secteur bancaire directement touché par l’intelligence artificielle",
