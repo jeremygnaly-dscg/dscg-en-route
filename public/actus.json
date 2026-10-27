@@ -1,11 +1,11 @@
 {
- "majLe": "2026-10-27T11:44:58.227Z",
+ "majLe": "2026-10-27T17:52:15.360Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
    "url": "https://www.economie.gouv.fr/rss/toutesactualites",
    "ok": true,
-   "articles": 0
+   "articles": 2
   },
   {
    "nom": "Entreprendre Service-Public",
@@ -22,7 +22,7 @@
    "nom": "Village de la Justice",
    "url": "https://www.village-justice.com/articles/spip.php?page=backend",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "Le Monde du Droit",
@@ -50,13 +50,13 @@
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "Capital",
@@ -87,12 +87,32 @@
    "score": 4
   },
   {
+   "id": "economie-gouv-fr-https-www-economie-gouv-fr-entreprises-gerer-sa-fiscalite-et-ses-impots-limpot-sur-les-benefices-ir-et-",
+   "titre": "Entreprises : vos principales échéances du mois",
+   "url": "https://www.economie.gouv.fr/entreprises/gerer-sa-fiscalite-et-ses-impots/limpot-sur-les-benefices-ir-et/entreprises-vos-principales-echeances-du-mois",
+   "source": "economie.gouv.fr",
+   "officiel": true,
+   "date": "2026-10-27T10:58:18.000Z",
+   "categorie": "Fiscalité",
+   "score": 5
+  },
+  {
    "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-budget-la-lutte-contre-l-optimisation-fiscale-possible-piste-pour-fi",
    "titre": "Le gouvernement envisage de renforcer la lutte contre l'optimisation fiscale pour financer les mesures sur les lycées",
    "url": "https://www.franceinfo.fr/economie/budget/la-lutte-contre-l-optimisation-fiscale-possible-piste-pour-financer-les-mesures-sur-les-lycees-selon-le-ministre-de-l-action-et-des-comptes-publics_8255356.html#xtor=RSS-3-%5Bgeneral%5D",
    "source": "franceinfo Économie",
    "date": "2026-10-27T09:52:27.000Z",
    "image": "https://www.franceinfo.fr/pictures/CIPrZt8ihqSOhuEmhE4nvSQpGJw/0x0:7600x4275/432x243/filters:format(jpg)/2026/10/27/6ae06903b99c9874456090.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "economie-gouv-fr-https-www-economie-gouv-fr-particuliers-impots-et-fiscalite-gerer-mon-impot-sur-le-revenu-impot-vos-ech",
+   "titre": "Impôt : vos échéances du mois",
+   "url": "https://www.economie.gouv.fr/particuliers/impots-et-fiscalite/gerer-mon-impot-sur-le-revenu/impot-vos-echeances-du-mois",
+   "source": "economie.gouv.fr",
+   "officiel": true,
+   "date": "2026-10-27T09:48:00.000Z",
    "categorie": "Fiscalité",
    "score": 3
   },
