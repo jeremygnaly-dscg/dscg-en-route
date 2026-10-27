@@ -1,5 +1,5 @@
 {
- "majLe": "2026-10-27T05:41:36.045Z",
+ "majLe": "2026-10-27T11:44:58.227Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -22,7 +22,7 @@
    "nom": "Village de la Justice",
    "url": "https://www.village-justice.com/articles/spip.php?page=backend",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Le Monde du Droit",
@@ -50,13 +50,13 @@
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 2
+   "articles": 1
   },
   {
    "nom": "Capital",
@@ -76,6 +76,36 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "village-de-la-justice-https-www-village-justice-com-articles-joueurs-esport-salaries-malgre-contrat-prestation-absence-a",
+   "titre": "Joueurs d'esport : salariés malgré le contrat de prestation et l'absence d'agrément. Par Alban Bennacer, Avocat.",
+   "url": "https://www.village-justice.com/articles/joueurs-esport-salaries-malgre-contrat-prestation-absence-agrement,59671.html?utm_source=backend&utm_medium=RSS&utm_campaign=RSS_Reseaux",
+   "source": "Village de la Justice",
+   "date": "2026-10-27T11:30:00.000Z",
+   "image": "https://www.village-justice.com/articles/local/cache-gd2/51/d1936c08ffcde30d9484f677d2f61a.jpg?1793098560",
+   "categorie": "Social",
+   "score": 4
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-budget-la-lutte-contre-l-optimisation-fiscale-possible-piste-pour-fi",
+   "titre": "Le gouvernement envisage de renforcer la lutte contre l'optimisation fiscale pour financer les mesures sur les lycées",
+   "url": "https://www.franceinfo.fr/economie/budget/la-lutte-contre-l-optimisation-fiscale-possible-piste-pour-financer-les-mesures-sur-les-lycees-selon-le-ministre-de-l-action-et-des-comptes-publics_8255356.html#xtor=RSS-3-%5Bgeneral%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-10-27T09:52:27.000Z",
+   "image": "https://www.franceinfo.fr/pictures/CIPrZt8ihqSOhuEmhE4nvSQpGJw/0x0:7600x4275/432x243/filters:format(jpg)/2026/10/27/6ae06903b99c9874456090.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-politique-budget-2027-decouvrez-les-amendements-votes-par-les-deputes-20261027",
+   "titre": "Budget 2027 : découvrez les amendements votés par les députés",
+   "url": "https://www.lefigaro.fr/politique/budget-2027-decouvrez-les-amendements-votes-par-les-deputes-20261027",
+   "source": "Le Figaro Économie",
+   "date": "2026-10-27T09:40:45.000Z",
+   "image": "https://i.f1g.fr/media/cms/1920x1080_crop/2026/10/19/3818cf2a396a9ce2325e35b28718560cd7082a116fb3a0cb9a8e5351f4c15e09.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
   {
    "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-budget-ou-en-sont-les-debats-sur-le-plf-et-le-plfss-2027-suivez-les-",
    "titre": "Où en sont les débats sur le PLF et le PLFSS 2027 ? Suivez les étapes de l'examen du budget à l'Assemblée et au Sénat",
