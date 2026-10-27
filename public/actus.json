@@ -1,5 +1,5 @@
 {
- "majLe": "2026-10-26T17:46:29.208Z",
+ "majLe": "2026-10-27T05:41:36.045Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -50,13 +50,13 @@
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 1
+   "articles": 2
   },
   {
    "nom": "Capital",
@@ -76,6 +76,26 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-budget-ou-en-sont-les-debats-sur-le-plf-et-le-plfss-2027-suivez-les-",
+   "titre": "Où en sont les débats sur le PLF et le PLFSS 2027 ? Suivez les étapes de l'examen du budget à l'Assemblée et au Sénat",
+   "url": "https://www.franceinfo.fr/economie/budget/ou-en-sont-les-debats-sur-le-plf-et-le-plfss-2027-suivez-les-etapes-de-l-examen-du-budget-a-l-assemblee-et-au-senat_8254234.html#xtor=RSS-3-%5Bgeneral%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-10-27T04:46:06.000Z",
+   "image": "https://www.franceinfo.fr/pictures/lhHg4-1c5Q3DzsKaHjh-MbThdO0/0x0:1024x576/432x243/filters:format(jpg)/2026/10/26/6adf788357b56874871890.jpg",
+   "categorie": "Fiscalité",
+   "score": 4
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-replay-jt-france-2-20-heures-vers-une-taxe-emeutes-sur-vos-assurances-8254831",
+   "titre": "Vers une \"taxe émeutes\" sur vos assurances ?",
+   "url": "https://www.franceinfo.fr/replay-jt/france-2/20-heures/vers-une-taxe-emeutes-sur-vos-assurances_8254831.html#xtor=RSS-3-%5Bgeneral%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-10-26T20:27:25.000Z",
+   "image": "https://www.franceinfo.fr/pictures/1sYdhDt7bZeDaY60KIeSx1sM89g/0x0:1920x1080/432x243/filters:format(jpg)/2026/10/26/6adfb650f18c5093113266.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
   {
    "id": "le-figaro-conomie-https-www-lefigaro-fr-conso-colis-que-vont-changer-les-frais-de-traitement-imposes-par-l-ue-des-ce-1er",
    "titre": "Colis importés : que vont changer les «frais de traitement» imposés par l’UE dès ce 1er novembre, en plus de la taxe «petits colis» ?",
