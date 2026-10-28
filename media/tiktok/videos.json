@@ -203,7 +203,7 @@
   "segments": [
    {
     "voix": "Ton premier mot en M&A ? EBITDA. Et tu l'apprends en DCG.",
-    "dit": "Ton premier mot en M-and-A ? Ébitda. Et tu l'apprends en D.C.G."
+    "dit": "Ton premier mot en {MA} ? Ébitda. Et tu l'apprends en {DCG}."
    },
    {
     "voix": "Les SIG découpent le résultat. De la valeur ajoutée, on retire impôts, taxes et salaires : c'est l'EBE.",
@@ -260,7 +260,7 @@
     ],
     "titre": "De l'EBE à l'EBITDA, en k€",
     "efface": true,
-    "dit": "En M-and-A, l'Ébitda, c'est quasiment l'E.B.E, avec la participation des salariés traitée en charge de personnel."
+    "dit": "En {MA}, l'Ébitda, c'est quasiment l'E.B.E, avec la participation des salariés traitée en charge de personnel."
    },
    {
     "voix": "Et une PME se valorise souvent en multiple d'EBITDA : 6 × 185 k€, soit 1,11 M€.",
@@ -281,7 +281,7 @@
    },
    {
     "voix": "Maîtrise tes SIG en DCG : en M&A, c'est ton quotidien.",
-    "dit": "Maîtrise tes S.I.G en D.C.G : en M-and-A, c'est ton quotidien."
+    "dit": "Maîtrise tes S.I.G en {DCG} : en {MA}, c'est ton quotidien."
    }
   ]
  },
@@ -463,7 +463,7 @@
      }
     ],
     "titre": "Du multiple au prix",
-    "dit": "En M-and-A, on valorise d'abord toute l'entreprise : Ébitda de deux millions d'euros, multiple de sept. Valeur d'entreprise : quatorze millions d'euros."
+    "dit": "En {MA}, on valorise d'abord toute l'entreprise : Ébitda de deux millions d'euros, multiple de sept. Valeur d'entreprise : quatorze millions d'euros."
    },
    {
     "voix": "Mais l'acheteur reprend aussi la dette. On retire la dette nette : 4 M€.",
@@ -618,7 +618,7 @@
    },
    {
     "voix": "En M&A, on teste toujours la marge de sécurité sur ce ratio.",
-    "dit": "En M-and-A, on teste toujours la marge de sécurité sur ce ratio."
+    "dit": "En {MA}, on teste toujours la marge de sécurité sur ce ratio."
    }
   ]
  },
@@ -843,7 +843,7 @@
    },
    {
     "voix": "En M&A, demande toujours : EBITDA avant ou après IFRS 16 ?",
-    "dit": "En M-and-A, demande toujours : Ébitda avant ou après I.F.R.S seize ?"
+    "dit": "En {MA}, demande toujours : Ébitda avant ou après I.F.R.S seize ?"
    }
   ]
  },
@@ -1895,7 +1895,7 @@
    },
    {
     "voix": "En M&A, c'est la première question de la check-list.",
-    "dit": "En M-and-A, c'est la première question de la check-list."
+    "dit": "En {MA}, c'est la première question de la check-list."
    }
   ]
  },

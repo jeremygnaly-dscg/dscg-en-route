@@ -55,13 +55,51 @@ async function phrase(texte: string, fichier: string) {
   fs.rmSync(brut);
 }
 
+// Mots que la voix déforme au milieu d'une phrase : on les enregistre seuls (prononciation validée
+// par Jérémy), puis on les colle dans la phrase. Dans `dit`, écrire {MA} ou {DCG}.
+const MOTS: Record<string, string> = { MA: "M-and-A.", DCG: "D, C, G." };
+const SONS = path.join(DOSSIER, "_sons");
+async function mot(cle: string): Promise<string> {
+  const f = path.join(SONS, `${cle.toLowerCase()}.mp3`);
+  if (!fs.existsSync(f)) {
+    fs.mkdirSync(SONS, { recursive: true });
+    const tmp = path.join(SONS, `${cle.toLowerCase()}-plein.mp3`);
+    await phrase(MOTS[cle], tmp);
+    // Retire les silences de début et de fin
+    execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-i", tmp, "-af", "silenceremove=start_periods=1:start_threshold=-45dB,areverse,silenceremove=start_periods=1:start_threshold=-45dB,areverse", "-c:a", "libmp3lame", "-b:a", "160k", f]);
+    fs.rmSync(tmp);
+  }
+  return f;
+}
+
+async function phraseCollee(texte: string, fichier: string) {
+  if (!/\{(MA|DCG)\}/.test(texte)) return phrase(texte, fichier);
+  const morceaux = texte.split(/\{(MA|DCG)\}/);
+  const parts: string[] = [];
+  for (let k = 0; k < morceaux.length; k++) {
+    if (k % 2 === 1) { parts.push(await mot(morceaux[k])); continue; }
+    const t = morceaux[k].replace(/^[\s,.:;?!]+/, "").trim();
+    if (!/[A-Za-zÀ-ÿ0-9]/.test(t)) continue;
+    const f = fichier.replace(/\.mp3$/, `-m${k}.mp3`);
+    await phrase(t, f);
+    // Coupe le silence en fin de morceau quand un mot collé suit
+    if (k + 1 < morceaux.length) execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-i", f, "-af", "areverse,silenceremove=start_periods=1:start_threshold=-45dB,areverse", "-c:a", "libmp3lame", "-b:a", "160k", f + ".mp3"]), fs.renameSync(f + ".mp3", f);
+    parts.push(f);
+  }
+  const args = ["-y", "-loglevel", "error"];
+  for (const p of parts) args.push("-i", p);
+  const filt = parts.map((_, i) => `[${i}]apad=pad_dur=0.12[p${i}];`).join("") + parts.map((_, i) => `[p${i}]`).join("") + `concat=n=${parts.length}:v=0:a=1[a]`;
+  execFileSync("ffmpeg", [...args, "-filter_complex", filt, "-map", "[a]", "-ar", "44100", "-ac", "1", "-c:a", "libmp3lame", "-b:a", "160k", fichier]);
+  for (const p of parts) if (!p.startsWith(SONS)) fs.rmSync(p);
+}
+
 async function main() {
   await historique();
   for (const v of videos) {
     if (!DEMANDE.includes("all") && !DEMANDE.includes(v.id)) continue;
     const dir = path.join(DOSSIER, v.id);
     fs.mkdirSync(dir, { recursive: true });
-    for (let i = 0; i < v.segments.length; i++) await phrase(v.segments[i].dit ?? v.segments[i].voix, path.join(dir, `${String(i).padStart(2, "0")}.mp3`));
+    for (let i = 0; i < v.segments.length; i++) await phraseCollee(v.segments[i].dit ?? v.segments[i].voix, path.join(dir, `${String(i).padStart(2, "0")}.mp3`));
     await phrase(FIN, path.join(dir, "fin.mp3"));
     console.log(`✓ ${v.id}`);
   }
