@@ -2123,5 +2123,27 @@
     "dit": "En S.A.S, tout dépend des statuts : une cession contraire à l'agrément est nulle."
    }
   ]
+ },
+ {
+  "id": "test-ma",
+  "modele": "finance",
+  "accroche": "test",
+  "segments": [
+   {
+    "voix": "Èm ènde éï."
+   },
+   {
+    "voix": "M-and-A."
+   },
+   {
+    "voix": "Em-and-Ay."
+   },
+   {
+    "voix": "Ème-ènde-Eï."
+   },
+   {
+    "voix": "èmm and èï."
+   }
+  ]
  }
 ]
