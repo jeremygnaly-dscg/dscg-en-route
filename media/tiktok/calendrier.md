@@ -25,3 +25,8 @@ Après J10 : repartir des épisodes de l'appli non encore utilisés (UE1, UE4, D
 
 ## Suivi
 Noter ici chaque jour les ids produits (`jNN-...`) et les éventuels problèmes.
+
+- 28/10 : lot de 33 vidéos finance / M&A / conso / droit (modèle finance, 27 à 35 s), livré avec les descriptions, à publier 5 par jour jusqu'au 4/11 environ :
+  fin-sig-ebitda, fin-van-actualisation, fin-tableau-flux, m-ve-titres, m-dette-nette, m-covenant, m-per, m-lbo-leviers, m-lbo-couverture, m-ifrs16-ebitda, c-goodwill, c-controle-interet, c-mise-equivalence, c-fusion-parite, c-mali-technique, c-impots-differes, m-cmpc, m-medaf, m-dcf, m-levier, m-seuil, m-frng-bfr, m-dps, m-rachat-actions, m-rente, m-duration, d-mere-fille, d-integration, d-concentrations, d-seuils-opa, d-fusion-procedure, d-abs, d-cession-sarl.
+  M&A prononcé « M-and-A » (choix de Jérémy). Les sujets du tableau ci-dessus déjà couverts par ce lot ne sont pas à refaire.
+- À partir du 5/11 : 5 vidéos par jour via la tâche planifiée.
