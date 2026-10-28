@@ -1,11 +1,11 @@
 {
- "majLe": "2026-10-27T17:52:15.360Z",
+ "majLe": "2026-10-28T05:50:44.848Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
    "url": "https://www.economie.gouv.fr/rss/toutesactualites",
    "ok": true,
-   "articles": 2
+   "articles": 0
   },
   {
    "nom": "Entreprendre Service-Public",
@@ -20,8 +20,7 @@
   },
   {
    "nom": "Village de la Justice",
-   "url": "https://www.village-justice.com/articles/spip.php?page=backend",
-   "ok": true,
+   "ok": false,
    "articles": 0
   },
   {
@@ -44,13 +43,13 @@
    "nom": "Le Monde Économie",
    "url": "https://www.lemonde.fr/economie/rss_full.xml",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 0
+   "articles": 2
   },
   {
    "nom": "franceinfo Économie",
@@ -76,6 +75,36 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-vie-au-travail-article-2026-10-28-quand-leurs-publications-sur-les-reseaux-sociaux",
+   "titre": "Quand leurs publications sur les réseaux sociaux se retournent contre les salariés",
+   "url": "https://www.lemonde.fr/vie-au-travail/article/2026/10/28/quand-leurs-publications-sur-les-reseaux-sociaux-se-retournent-contre-les-salaries_6801534_6768900.html",
+   "source": "Le Monde Économie",
+   "date": "2026-10-28T05:00:09.000Z",
+   "image": "https://img.lemde.fr/2025/09/19/125/0/1500/750/644/322/60/0/64fd3c0_upload-1-g6mrvogvy216-mei-dia-41.png",
+   "categorie": "Social",
+   "score": 4
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-medias-ce-consensus-historique-ne-rassemble-plus-l-ensemble-de-la-classe-politiq",
+   "titre": "«Ce consensus historique ne rassemble plus l’ensemble de la classe politique» : le financement du Centre national du cinéma sous pression",
+   "url": "https://www.lefigaro.fr/medias/ce-consensus-historique-ne-rassemble-plus-l-ensemble-de-la-classe-politique-le-financement-du-centre-national-du-cinema-sous-pression-20261027",
+   "source": "Le Figaro Économie",
+   "date": "2026-10-27T20:00:00.000Z",
+   "image": "https://i.f1g.fr/media/cms/3000x1687_crop/2026/10/27/ed711eeaac2e67ee453b4dd257db5d153b7ca68ef962ed738379aeb4971abe82.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-societes-depuis-trois-ans-nous-avons-perdu-45-000-emplois-l-appel-au-secours-des",
+   "titre": "«Depuis trois ans, nous avons perdu 45 000 emplois !» : l’appel au secours des artisans du bâtiment",
+   "url": "https://www.lefigaro.fr/societes/depuis-trois-ans-nous-avons-perdu-45-000-emplois-l-appel-au-secours-des-artisans-du-batiment-20261027",
+   "source": "Le Figaro Économie",
+   "date": "2026-10-27T17:55:00.000Z",
+   "image": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/27/86e5ce6a4fa760a7f7bd1309afec3c0880144d3564507a48be81283f56e5925c.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
   {
    "id": "village-de-la-justice-https-www-village-justice-com-articles-joueurs-esport-salaries-malgre-contrat-prestation-absence-a",
    "titre": "Joueurs d'esport : salariés malgré le contrat de prestation et l'absence d'agrément. Par Alban Bennacer, Avocat.",
