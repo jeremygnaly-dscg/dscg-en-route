@@ -1,5 +1,5 @@
 {
- "majLe": "2026-10-28T05:50:44.848Z",
+ "majLe": "2026-10-28T11:51:32.322Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -20,7 +20,8 @@
   },
   {
    "nom": "Village de la Justice",
-   "ok": false,
+   "url": "https://www.village-justice.com/articles/spip.php?page=backend",
+   "ok": true,
    "articles": 0
   },
   {
@@ -43,7 +44,7 @@
    "nom": "Le Monde Économie",
    "url": "https://www.lemonde.fr/economie/rss_full.xml",
    "ok": true,
-   "articles": 1
+   "articles": 2
   },
   {
    "nom": "Le Figaro Économie",
@@ -55,7 +56,7 @@
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 0
+   "articles": 2
   },
   {
    "nom": "Capital",
@@ -76,6 +77,56 @@
  },
  "items": [
   {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-entrepreneur-facturation-electronique-pourquoi-cette-reforme-a-fait-basculer-les",
+   "titre": "Facturation électronique : pourquoi cette réforme a fait basculer les comptabilités dans un nouveau monde",
+   "url": "https://www.lefigaro.fr/entrepreneur/facturation-electronique-pourquoi-cette-reforme-a-fait-basculer-les-comptabilites-dans-un-nouveau-monde-20261028",
+   "source": "Le Figaro Économie",
+   "date": "2026-10-28T11:00:00.000Z",
+   "image": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/15/dbfcd4c4526ef817563ef01905ebb254130fddf1a3bfa46a09733329cd226a0c.jpg",
+   "categorie": "Comptabilité & audit",
+   "score": 8
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-immobilier-renovation-laissez-nous-travailler-lance-la-capeb-qui-dem",
+   "titre": "Rénovation : \"Laissez-nous travailler\", lance la Capeb qui demande au gouvernement une baisse de la TVA pour les particuliers souhaitant entreprendre des travaux",
+   "url": "https://www.franceinfo.fr/economie/immobilier/renovation-laissez-nous-travailler-lance-la-capeb-qui-demande-au-gouvernement-une-baisse-de-la-tva-pour-les-particuliers-souhaitant-entreprendre-des-travaux_8257144.html#xtor=RSS-3-%5Bgeneral%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-10-28T10:43:31.000Z",
+   "image": "https://www.franceinfo.fr/pictures/YBJB_oIDItMl5Y9JQThJEloNqqE/0x0:4022x2260/432x243/filters:format(jpg)/2022/10/15/phpiHO0a7.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-economie-article-2026-10-28-safran-investit-au-royaume-uni-ou-l-engagement-de-l-et",
+   "titre": "Safran investit au Royaume-Uni, où l’engagement de l’Etat en faveur de l’aéronautique est « plus clair et plus net » qu’en France",
+   "url": "https://www.lemonde.fr/economie/article/2026/10/28/safran-investit-au-royaume-uni-ou-l-engagement-de-l-etat-en-faveur-de-l-aeronautique-est-plus-clair-et-plus-net-qu-en-france_6801544_3234.html",
+   "source": "Le Monde Économie",
+   "date": "2026-10-28T08:52:19.000Z",
+   "image": "https://img.lemde.fr/2026/10/27/179/0/3126/1563/644/322/60/0/0088c68_upload-1-jslzbwdx4or4-2016-03-15t120000z-386130989-d1aessqvvjaa-rtrmadp-3-turkey-airport.JPG",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-idees-article-2026-10-28-ia-et-travail-les-precedentes-revolutions-industrielles-o",
+   "titre": "IA et travail : « Les précédentes révolutions industrielles ont, sur le long terme, toujours créé plus d’emplois qu’elles n’en ont détruits »",
+   "url": "https://www.lemonde.fr/idees/article/2026/10/28/ia-et-travail-les-precedentes-revolutions-industrielles-ont-sur-le-long-terme-toujours-cree-plus-d-emplois-qu-elles-n-en-ont-detruits_6801542_3232.html",
+   "source": "Le Monde Économie",
+   "date": "2026-10-28T08:00:07.000Z",
+   "image": "https://img.lemde.fr/2026/02/25/125/0/1500/750/644/322/60/0/5f6ad1d_upload-1-ryifecdlpm8k-frame-1069.jpg",
+   "categorie": "Fiscalité",
+   "score": 5
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-replay-radio-le-decryptage-eco-l-etat-va-mettre-en-place-une-taxe-emeutes-pou",
+   "titre": "L'État va mettre en place une taxe \"émeutes\" pour payer les dégâts liés aux violences lors des mobilisations sociales",
+   "url": "https://www.franceinfo.fr/replay-radio/le-decryptage-eco/l-etat-va-mettre-en-place-une-taxe-emeutes-pour-payer-les-degats-lies-aux-violences-lors-des-mobilisations-sociales_8236306.html#xtor=RSS-3-%5Bgeneral%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-10-28T07:15:30.000Z",
+   "image": "https://www.franceinfo.fr/pictures/PM1TDUMyZiiRTv_IMDPGzBTZ5g0/0x361:6952x4272/432x243/filters:format(jpg)/2026/10/28/6ae196c95ac07482308438.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
    "id": "le-monde-conomie-https-www-lemonde-fr-vie-au-travail-article-2026-10-28-quand-leurs-publications-sur-les-reseaux-sociaux",
    "titre": "Quand leurs publications sur les réseaux sociaux se retournent contre les salariés",
    "url": "https://www.lemonde.fr/vie-au-travail/article/2026/10/28/quand-leurs-publications-sur-les-reseaux-sociaux-se-retournent-contre-les-salaries_6801534_6768900.html",
@@ -84,6 +135,16 @@
    "image": "https://img.lemde.fr/2025/09/19/125/0/1500/750/644/322/60/0/64fd3c0_upload-1-g6mrvogvy216-mei-dia-41.png",
    "categorie": "Social",
    "score": 4
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-budget-2027-les-deputes-suppriment-la-surtaxe-des-grandes-entreprise",
+   "titre": "Budget 2027: les députés suppriment la surtaxe des grandes entreprises, contre l’avis du gouvernement",
+   "url": "https://www.lefigaro.fr/conjoncture/budget-2027-les-deputes-suppriment-la-surtaxe-des-grandes-entreprises-contre-l-avis-du-gouvernement-20261027",
+   "source": "Le Figaro Économie",
+   "date": "2026-10-27T21:13:06.000Z",
+   "image": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/27/9e83a20531eb049e15b14bf3ea7cc0ad5f7378272a433923874e69e5d90b9432.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
   },
   {
    "id": "le-figaro-conomie-https-www-lefigaro-fr-medias-ce-consensus-historique-ne-rassemble-plus-l-ensemble-de-la-classe-politiq",
