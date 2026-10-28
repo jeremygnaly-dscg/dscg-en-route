@@ -1,514 +1,2127 @@
 [
-  {
-    "id": "client-debit",
-    "accroche": "Pourquoi le client se met au débit ?",
-    "segments": [
-      {
-        "voix": "Pourquoi le client se met au débit ?"
-      },
-      {
-        "voix": "Tu vends pour mille euros hors taxes, TVA à vingt pour cent.",
-        "titre": "Vente de 1 000 € HT, TVA 20 %"
-      },
-      {
-        "voix": "Ton client te doit mille deux cents euros. C'est une créance, donc un actif. Et un actif qui augmente, ça va au débit.",
-        "ligne": {
-          "compte": "411",
-          "intitule": "Clients",
-          "debit": 1200
-        }
-      },
-      {
-        "voix": "La vente, elle, t'enrichit : c'est un produit. Un produit, ça va au crédit.",
-        "ligne": {
-          "compte": "707",
-          "intitule": "Ventes de marchandises",
-          "credit": 1000
-        }
-      },
-      {
-        "voix": "Et la TVA ? Tu l'encaisses pour le compte de l'État. Ce n'est pas ton argent : c'est une dette, au crédit.",
-        "ligne": {
-          "compte": "44571",
-          "intitule": "TVA collectée",
-          "credit": 200
-        }
-      },
-      {
-        "voix": "Débit égale crédit. Et maintenant, tu sais pourquoi.",
-        "balance": true
-      }
-    ]
-  },
-  {
-    "id": "compte-709",
-    "accroche": "Le compte de produits qui se passe au débit",
-    "segments": [
-      {
-        "voix": "Le sept cent neuf est un compte de produits. Pourtant, il va au débit."
-      },
-      {
-        "voix": "Ton client obtient un rabais de cent euros hors taxes : tu fais un avoir.",
-        "titre": "Avoir : rabais de 100 € HT"
-      },
-      {
-        "voix": "Le sept cent neuf vient corriger tes ventes. Il réduit un produit, donc il marche à l'envers : il va au débit.",
-        "ligne": {
-          "compte": "709",
-          "intitule": "Rabais accordés",
-          "debit": 100
-        }
-      },
-      {
-        "voix": "Ta dette de TVA envers l'État baisse aussi. Un passif qui diminue, c'est au débit.",
-        "ligne": {
-          "compte": "44571",
-          "intitule": "TVA collectée",
-          "debit": 20
-        }
-      },
-      {
-        "voix": "Et ton client te doit cent vingt euros de moins. Ton actif diminue : au crédit.",
-        "ligne": {
-          "compte": "411",
-          "intitule": "Clients",
-          "credit": 120
-        }
-      },
-      {
-        "voix": "Retiens ce repère : un neuf en troisième position, c'est un compte qui en corrige un autre. Il se passe dans le sens inverse.",
-        "balance": true
-      }
-    ]
-  },
-  {
-    "id": "amortissement",
-    "accroche": "Une charge sans sortie d'argent",
-    "segments": [
-      {
-        "voix": "L'amortissement fait baisser ton résultat, sans sortie d'argent. Comment ?"
-      },
-      {
-        "voix": "Ta machine a coûté cinquante mille euros, pour cinq ans.",
-        "titre": "Machine de 50 000 €, 5 ans"
-      },
-      {
-        "voix": "Chaque année, elle s'use : dix mille euros. Cette usure, c'est une charge. Elle va au débit.",
-        "ligne": {
-          "compte": "6811",
-          "intitule": "Dotations aux amortissements",
-          "debit": 10000
-        }
-      },
-      {
-        "voix": "En face, on ne touche pas au compte de la machine. On crédite un compte d'amortissement, qui vient diminuer l'actif.",
-        "ligne": {
-          "compte": "28154",
-          "intitule": "Amortissements du matériel",
-          "credit": 10000
-        }
-      },
-      {
-        "voix": "Et la banque ? Rien n'a bougé. Ton résultat baisse, ta trésorerie non. C'est une charge calculée.",
-        "balance": true
-      }
-    ]
-  },
-  {
-    "id": "emprunt",
-    "accroche": "La banque te prête 100 000 € : tu t'es enrichi ?",
-    "segments": [
-      {
-        "voix": "La banque te prête cent mille euros. Tu t'es enrichi ? Non."
-      },
-      {
-        "voix": "L'argent arrive sur ton compte : ta trésorerie augmente. C'est un actif, donc au débit.",
-        "titre": "Emprunt de 100 000 €",
-        "ligne": {
-          "compte": "512",
-          "intitule": "Banque",
-          "debit": 100000
-        }
-      },
-      {
-        "voix": "Mais tu devras le rendre. C'est une dette : un passif qui augmente, au crédit.",
-        "ligne": {
-          "compte": "164",
-          "intitule": "Emprunts",
-          "credit": 100000
-        }
-      },
-      {
-        "voix": "Ton bilan grossit des deux côtés. Ton compte de résultat, lui, ne bouge pas.",
-        "balance": true
-      },
-      {
-        "voix": "Ce qui te coûte vraiment, ce sont les intérêts. Eux, ce seront des charges."
-      }
-    ]
-  },
-  {
-    "id": "payer-fournisseur",
-    "accroche": "Payer ton fournisseur fait-il baisser ton résultat ?",
-    "segments": [
-      {
-        "voix": "Payer ton fournisseur fait-il baisser ton résultat ? Non."
-      },
-      {
-        "voix": "Le jour de la facture, l'achat est une charge : au débit.",
-        "titre": "Facture d'achat de 5 000 € (HT, pour simplifier)",
-        "ligne": {
-          "compte": "607",
-          "intitule": "Achats de marchandises",
-          "debit": 5000
-        }
-      },
-      {
-        "voix": "Et tu dois l'argent : c'est une dette fournisseur, au crédit.",
-        "ligne": {
-          "compte": "401",
-          "intitule": "Fournisseurs",
-          "credit": 5000
-        }
-      },
-      {
-        "voix": "Le jour du paiement, ta dette disparaît : un passif qui diminue, au débit.",
-        "titre": "Paiement du fournisseur",
-        "nouvelle": true,
-        "ligne": {
-          "compte": "401",
-          "intitule": "Fournisseurs",
-          "debit": 5000
-        }
-      },
-      {
-        "voix": "Et ta banque baisse : c'est un actif qui diminue, au crédit.",
-        "ligne": {
-          "compte": "512",
-          "intitule": "Banque",
-          "credit": 5000
-        }
-      },
-      {
-        "voix": "Le paiement ne touche que le bilan. La charge, elle, était déjà là depuis la facture.",
-        "balance": true
-      }
-    ]
-  },
-  {
-    "id": "fin-sig-ebitda",
-    "modele": "finance",
-    "accroche": "Ton premier mot en M&A ? EBITDA. Et tu l'apprends en DCG.",
-    "segments": [
-      {
-        "voix": "Ton premier mot en M&A ? EBITDA. Et tu l'apprends en DCG.",
-        "dit": "Ton premier mot en M and A ? Ébitda. Et tu l'apprends en DCG.",
-        "libre": "Ton premier mot en fusions-acquisitions ? ibitda. Et tu l'apprends en DCG."
-      },
-      {
-        "voix": "Les soldes intermédiaires de gestion découpent le résultat, étape par étape.",
-        "titre": "Les SIG, en k€",
-        "rangs": [
-          {
-            "lib": "Marge commerciale",
-            "val": "200"
-          },
-          {
-            "op": "+",
-            "lib": "Production de l'exercice",
-            "val": "800"
-          },
-          {
-            "op": "−",
-            "lib": "Consommations externes",
-            "val": "450"
-          },
-          {
-            "op": "=",
-            "lib": "Valeur ajoutée",
-            "val": "550",
-            "style": "fort"
-          }
-        ],
-        "libre": "Les soldes intermédiaires de gestion découpent le résultat, étape par étape."
-      },
-      {
-        "voix": "De la valeur ajoutée, on ajoute les subventions, on retire les impôts et taxes et les salaires. On obtient l'excédent brut d'exploitation.",
-        "rangs": [
-          {
-            "lib": "Valeur ajoutée",
-            "val": "550",
-            "style": "fort"
-          },
-          {
-            "op": "+",
-            "lib": "Subventions d'exploitation",
-            "val": "20"
-          },
-          {
-            "op": "−",
-            "lib": "Impôts et taxes",
-            "val": "30"
-          },
-          {
-            "op": "−",
-            "lib": "Charges de personnel",
-            "val": "340"
-          },
-          {
-            "op": "=",
-            "lib": "EBE",
-            "val": "200",
-            "style": "fort"
-          }
-        ],
-        "efface": true,
-        "libre": "De la valeur ajoutée, on ajoute les subventions, on retire les impôts et taxes et les salaires. On obtient l'excédent brut d'exploitation."
-      },
-      {
-        "voix": "L'EBE, c'est la performance de l'activité : avant les amortissements, avant le financement, avant l'impôt.",
-        "dit": "L'E.B.E, c'est la performance de l'activité : avant les amortissements, avant le financement, avant l'impôt.",
-        "libre": "L'é bé e, c'est la performance de l'activité : avant les amortissements, avant le financement, avant l'impôt."
-      },
-      {
-        "voix": "En M&A, on parle d'EBITDA. C'est quasiment l'EBE, avec un ajustement fréquent : la participation des salariés, traitée comme une charge de personnel.",
-        "rangs": [
-          {
-            "lib": "EBE",
-            "val": "200",
-            "style": "fort"
-          },
-          {
-            "op": "−",
-            "lib": "Participation des salariés",
-            "val": "15"
-          },
-          {
-            "op": "=",
-            "lib": "EBITDA",
-            "val": "185",
-            "style": "ok"
-          }
-        ],
-        "dit": "En M and A, on parle d'Ébitda. C'est quasiment l'E.B.E, avec un ajustement fréquent : la participation des salariés, traitée comme une charge de personnel.",
-        "efface": true,
-        "titre": "De l'EBE à l'EBITDA, en k€",
-        "libre": "En fusions-acquisitions, on parle d'ibitda. C'est quasiment l'é bé e, avec un ajustement fréquent : la participation des salariés, traitée comme une charge de personnel."
-      },
-      {
-        "voix": "Pourquoi c'est clé ? Une entreprise se valorise souvent en multiple d'EBITDA. 6 × 185 k€ : 1,11 million d'euros.",
-        "rangs": [
-          {
-            "op": "×",
-            "lib": "Multiple du secteur",
-            "val": "6"
-          },
-          {
-            "op": "=",
-            "lib": "Valeur d'entreprise",
-            "val": "1 110",
-            "style": "ok"
-          }
-        ],
-        "dit": "Pourquoi c'est clé ? Une entreprise se valorise souvent en multiple d'Ébitda. Six fois cent quatre-vingt-cinq mille euros : un million cent dix mille euros.",
-        "libre": "Pourquoi c'est clé ? Une entreprise se valorise souvent en multiple d'ibitda. Six fois cent quatre-vingt-cinq mille euros : un million cent dix mille euros."
-      },
-      {
-        "voix": "Maîtrise tes SIG en DCG. En M&A, c'est ton quotidien.",
-        "dit": "Maîtrise tes SIG en DCG. En M and A, c'est ton quotidien.",
-        "libre": "Maîtrise tes SIG en DCG. En fusions-acquisitions, c'est ton quotidien."
-      }
-    ]
-  },
-  {
-    "id": "fin-van-actualisation",
-    "modele": "finance",
-    "accroche": "Mille euros dans un an valent moins que mille euros aujourd'hui.",
-    "segments": [
-      {
-        "voix": "Mille euros dans un an valent moins que mille euros aujourd'hui. Pourquoi ?",
-        "libre": "Mille euros dans un an valent moins que mille euros aujourd'hui. Pourquoi ?"
-      },
-      {
-        "voix": "Parce que l'argent d'aujourd'hui peut être placé. À 8 %, 1 000 € deviennent 1 080 € dans un an.",
-        "titre": "La valeur du temps",
-        "rangs": [
-          {
-            "lib": "Aujourd'hui",
-            "val": "1 000 €"
-          },
-          {
-            "op": "×",
-            "lib": "1,08 (un an à 8 %)",
-            "val": ""
-          },
-          {
-            "op": "=",
-            "lib": "Dans un an",
-            "val": "1 080 €",
-            "style": "fort"
-          }
-        ],
-        "dit": "Parce que l'argent d'aujourd'hui peut être placé. À huit pour cent, mille euros deviennent mille quatre-vingts euros dans un an.",
-        "libre": "Parce que l'argent d'aujourd'hui peut être placé. À huit pour cent, mille euros deviennent mille quatre-vingts euros dans un an."
-      },
-      {
-        "voix": "Actualiser, c'est le chemin inverse : on divise par (1 + taux), autant de fois qu'il y a d'années. 1 000 € dans un an valent 926 € aujourd'hui.",
-        "rangs": [
-          {
-            "lib": "1 000 € dans un an",
-            "val": ""
-          },
-          {
-            "op": "÷",
-            "lib": "1,08",
-            "val": ""
-          },
-          {
-            "op": "=",
-            "lib": "Valeur actuelle",
-            "val": "926 €",
-            "style": "fort"
-          }
-        ],
-        "dit": "Actualiser, c'est faire le chemin inverse : on divise par un plus le taux, autant de fois qu'il y a d'années. Mille euros dans un an valent aujourd'hui neuf cent vingt-six euros.",
-        "libre": "Actualiser, c'est faire le chemin inverse : on divise par un plus le taux, autant de fois qu'il y a d'années. Mille euros dans un an valent aujourd'hui neuf cent vingt-six euros."
-      },
-      {
-        "voix": "Un projet coûte 100 000 €, et rapporte 30 000 € par an pendant 5 ans.",
-        "efface": true,
-        "titre": "Le projet",
-        "rangs": [
-          {
-            "op": "−",
-            "lib": "Investissement",
-            "val": "100 000"
-          },
-          {
-            "op": "+",
-            "lib": "Flux : 30 000 par an, 5 ans",
-            "val": ""
-          }
-        ],
-        "dit": "Un projet coûte cent mille euros, et rapporte trente mille euros par an pendant cinq ans.",
-        "libre": "Un projet coûte cent mille euros, et rapporte trente mille euros par an pendant cinq ans."
-      },
-      {
-        "voix": "On actualise chaque flux à 8 %. Au total, ils valent aujourd'hui 119 781 €.",
-        "rangs": [
-          {
-            "op": "+",
-            "lib": "Flux actualisés à 8 %",
-            "val": "119 781"
-          }
-        ],
-        "dit": "On actualise chaque flux à huit pour cent. Au total, ils valent aujourd'hui cent dix-neuf mille sept cent quatre-vingt-un euros.",
-        "libre": "On actualise chaque flux à huit pour cent. Au total, ils valent aujourd'hui cent dix-neuf mille sept cent quatre-vingt-un euros."
-      },
-      {
-        "voix": "VAN = 119 781 − 100 000 = 19 781 €.",
-        "rangs": [
-          {
-            "op": "=",
-            "lib": "VAN",
-            "val": "+ 19 781",
-            "style": "ok"
-          }
-        ],
-        "dit": "Valeur actuelle nette : cent dix-neuf mille sept cent quatre-vingt-un, moins cent mille. Dix-neuf mille sept cent quatre-vingt-un euros.",
-        "libre": "Valeur actuelle nette : cent dix-neuf mille sept cent quatre-vingt-un, moins cent mille. Dix-neuf mille sept cent quatre-vingt-un euros."
-      },
-      {
-        "voix": "VAN positive : le projet rapporte plus que le taux exigé. On investit.",
-        "libre": "VAN positive : le projet rapporte plus que le taux exigé. On investit."
-      }
-    ]
-  },
-  {
-    "id": "fin-tableau-flux",
-    "modele": "finance",
-    "accroche": "Tableau des flux : les points les plus rapides de l'épreuve.",
-    "segments": [
-      {
-        "voix": "Tableau des flux : les points les plus rapides de l'épreuve. À condition d'aller vite au bon moment.",
-        "libre": "Tableau des flux : les points les plus rapides de l'épreuve. À condition d'aller vite au bon moment."
-      },
-      {
-        "voix": "On part du résultat net, et on rajoute ce qui n'a fait sortir aucun euro : les dotations aux amortissements.",
-        "titre": "Flux de trésorerie, en k€",
-        "rangs": [
-          {
-            "lib": "Résultat net",
-            "val": "500"
-          },
-          {
-            "op": "+",
-            "lib": "Dotations aux amortissements",
-            "val": "300"
-          }
-        ],
-        "libre": "On part du résultat net, et on rajoute ce qui n'a fait sortir aucun euro : les dotations aux amortissements."
-      },
-      {
-        "voix": "Puis on retire la hausse du besoin en fonds de roulement : des stocks et des créances qui bloquent du cash.",
-        "rangs": [
-          {
-            "op": "−",
-            "lib": "Hausse du BFR",
-            "val": "100"
-          },
-          {
-            "op": "=",
-            "lib": "Flux d'activité",
-            "val": "700",
-            "style": "fort"
-          }
-        ],
-        "libre": "Puis on retire la hausse du besoin en fonds de roulement : des stocks et des créances qui bloquent du cash."
-      },
-      {
-        "voix": "Ensuite, les investissements : − 600.",
-        "rangs": [
-          {
-            "op": "−",
-            "lib": "Flux d'investissement",
-            "val": "600",
-            "style": "fort"
-          }
-        ],
-        "dit": "Ensuite, les investissements : moins six cents.",
-        "libre": "Ensuite, les investissements : moins six cents."
-      },
-      {
-        "voix": "Enfin, le financement : + 200 d'emprunt, − 100 de remboursement, − 150 de dividendes. Soit − 50.",
-        "rangs": [
-          {
-            "op": "−",
-            "lib": "Flux de financement",
-            "val": "50",
-            "style": "fort"
-          }
-        ],
-        "dit": "Enfin, le financement : plus deux cents d'emprunt, moins cent de remboursement, moins cent cinquante de dividendes. Moins cinquante.",
-        "libre": "Enfin, le financement : plus deux cents d'emprunt, moins cent de remboursement, moins cent cinquante de dividendes. Moins cinquante."
-      },
-      {
-        "voix": "Variation de trésorerie : + 50. Elle doit tomber pile sur l'écart entre la trésorerie d'ouverture et celle de clôture.",
-        "rangs": [
-          {
-            "op": "=",
-            "lib": "Variation de trésorerie",
-            "val": "+ 50",
-            "style": "ok"
-          }
-        ],
-        "dit": "Variation de trésorerie : plus cinquante. Elle doit tomber pile sur l'écart entre la trésorerie d'ouverture et celle de clôture.",
-        "libre": "Variation de trésorerie : plus cinquante. Elle doit tomber pile sur l'écart entre la trésorerie d'ouverture et celle de clôture."
-      },
-      {
-        "voix": "Le jour de l'épreuve : pose la trame, remplis les trois blocs, puis vérifie avec la trésorerie. Si ça tombe juste, passe à la suite.",
-        "libre": "Le jour de l'épreuve : pose la trame, remplis les trois blocs, puis vérifie avec la trésorerie. Si ça tombe juste, passe à la suite."
-      }
-    ]
-  }
+ {
+  "id": "client-debit",
+  "accroche": "Pourquoi le client se met au débit ?",
+  "segments": [
+   {
+    "voix": "Pourquoi le client se met au débit ?"
+   },
+   {
+    "voix": "Tu vends pour mille euros hors taxes, TVA à vingt pour cent.",
+    "titre": "Vente de 1 000 € HT, TVA 20 %"
+   },
+   {
+    "voix": "Ton client te doit mille deux cents euros. C'est une créance, donc un actif. Et un actif qui augmente, ça va au débit.",
+    "ligne": {
+     "compte": "411",
+     "intitule": "Clients",
+     "debit": 1200
+    }
+   },
+   {
+    "voix": "La vente, elle, t'enrichit : c'est un produit. Un produit, ça va au crédit.",
+    "ligne": {
+     "compte": "707",
+     "intitule": "Ventes de marchandises",
+     "credit": 1000
+    }
+   },
+   {
+    "voix": "Et la TVA ? Tu l'encaisses pour le compte de l'État. Ce n'est pas ton argent : c'est une dette, au crédit.",
+    "ligne": {
+     "compte": "44571",
+     "intitule": "TVA collectée",
+     "credit": 200
+    }
+   },
+   {
+    "voix": "Débit égale crédit. Et maintenant, tu sais pourquoi.",
+    "balance": true
+   }
+  ]
+ },
+ {
+  "id": "compte-709",
+  "accroche": "Le compte de produits qui se passe au débit",
+  "segments": [
+   {
+    "voix": "Le sept cent neuf est un compte de produits. Pourtant, il va au débit."
+   },
+   {
+    "voix": "Ton client obtient un rabais de cent euros hors taxes : tu fais un avoir.",
+    "titre": "Avoir : rabais de 100 € HT"
+   },
+   {
+    "voix": "Le sept cent neuf vient corriger tes ventes. Il réduit un produit, donc il marche à l'envers : il va au débit.",
+    "ligne": {
+     "compte": "709",
+     "intitule": "Rabais accordés",
+     "debit": 100
+    }
+   },
+   {
+    "voix": "Ta dette de TVA envers l'État baisse aussi. Un passif qui diminue, c'est au débit.",
+    "ligne": {
+     "compte": "44571",
+     "intitule": "TVA collectée",
+     "debit": 20
+    }
+   },
+   {
+    "voix": "Et ton client te doit cent vingt euros de moins. Ton actif diminue : au crédit.",
+    "ligne": {
+     "compte": "411",
+     "intitule": "Clients",
+     "credit": 120
+    }
+   },
+   {
+    "voix": "Retiens ce repère : un neuf en troisième position, c'est un compte qui en corrige un autre. Il se passe dans le sens inverse.",
+    "balance": true
+   }
+  ]
+ },
+ {
+  "id": "amortissement",
+  "accroche": "Une charge sans sortie d'argent",
+  "segments": [
+   {
+    "voix": "L'amortissement fait baisser ton résultat, sans sortie d'argent. Comment ?"
+   },
+   {
+    "voix": "Ta machine a coûté cinquante mille euros, pour cinq ans.",
+    "titre": "Machine de 50 000 €, 5 ans"
+   },
+   {
+    "voix": "Chaque année, elle s'use : dix mille euros. Cette usure, c'est une charge. Elle va au débit.",
+    "ligne": {
+     "compte": "6811",
+     "intitule": "Dotations aux amortissements",
+     "debit": 10000
+    }
+   },
+   {
+    "voix": "En face, on ne touche pas au compte de la machine. On crédite un compte d'amortissement, qui vient diminuer l'actif.",
+    "ligne": {
+     "compte": "28154",
+     "intitule": "Amortissements du matériel",
+     "credit": 10000
+    }
+   },
+   {
+    "voix": "Et la banque ? Rien n'a bougé. Ton résultat baisse, ta trésorerie non. C'est une charge calculée.",
+    "balance": true
+   }
+  ]
+ },
+ {
+  "id": "emprunt",
+  "accroche": "La banque te prête 100 000 € : tu t'es enrichi ?",
+  "segments": [
+   {
+    "voix": "La banque te prête cent mille euros. Tu t'es enrichi ? Non."
+   },
+   {
+    "voix": "L'argent arrive sur ton compte : ta trésorerie augmente. C'est un actif, donc au débit.",
+    "titre": "Emprunt de 100 000 €",
+    "ligne": {
+     "compte": "512",
+     "intitule": "Banque",
+     "debit": 100000
+    }
+   },
+   {
+    "voix": "Mais tu devras le rendre. C'est une dette : un passif qui augmente, au crédit.",
+    "ligne": {
+     "compte": "164",
+     "intitule": "Emprunts",
+     "credit": 100000
+    }
+   },
+   {
+    "voix": "Ton bilan grossit des deux côtés. Ton compte de résultat, lui, ne bouge pas.",
+    "balance": true
+   },
+   {
+    "voix": "Ce qui te coûte vraiment, ce sont les intérêts. Eux, ce seront des charges."
+   }
+  ]
+ },
+ {
+  "id": "payer-fournisseur",
+  "accroche": "Payer ton fournisseur fait-il baisser ton résultat ?",
+  "segments": [
+   {
+    "voix": "Payer ton fournisseur fait-il baisser ton résultat ? Non."
+   },
+   {
+    "voix": "Le jour de la facture, l'achat est une charge : au débit.",
+    "titre": "Facture d'achat de 5 000 € (HT, pour simplifier)",
+    "ligne": {
+     "compte": "607",
+     "intitule": "Achats de marchandises",
+     "debit": 5000
+    }
+   },
+   {
+    "voix": "Et tu dois l'argent : c'est une dette fournisseur, au crédit.",
+    "ligne": {
+     "compte": "401",
+     "intitule": "Fournisseurs",
+     "credit": 5000
+    }
+   },
+   {
+    "voix": "Le jour du paiement, ta dette disparaît : un passif qui diminue, au débit.",
+    "titre": "Paiement du fournisseur",
+    "nouvelle": true,
+    "ligne": {
+     "compte": "401",
+     "intitule": "Fournisseurs",
+     "debit": 5000
+    }
+   },
+   {
+    "voix": "Et ta banque baisse : c'est un actif qui diminue, au crédit.",
+    "ligne": {
+     "compte": "512",
+     "intitule": "Banque",
+     "credit": 5000
+    }
+   },
+   {
+    "voix": "Le paiement ne touche que le bilan. La charge, elle, était déjà là depuis la facture.",
+    "balance": true
+   }
+  ]
+ },
+ {
+  "id": "fin-sig-ebitda",
+  "modele": "finance",
+  "tag": "Dessine-moi le M&A",
+  "accroche": "Ton premier mot en M&A ? EBITDA. Et tu l'apprends en DCG.",
+  "segments": [
+   {
+    "voix": "Ton premier mot en M&A ? EBITDA. Et tu l'apprends en DCG.",
+    "dit": "Ton premier mot en M and A ? Ébitda. Et tu l'apprends en D.C.G."
+   },
+   {
+    "voix": "Les SIG découpent le résultat. De la valeur ajoutée, on retire impôts, taxes et salaires : c'est l'EBE.",
+    "rangs": [
+     {
+      "lib": "Valeur ajoutée",
+      "val": "550",
+      "style": "fort"
+     },
+     {
+      "lib": "Subventions d'exploitation",
+      "val": "20",
+      "op": "+"
+     },
+     {
+      "lib": "Impôts et taxes",
+      "val": "30",
+      "op": "−"
+     },
+     {
+      "lib": "Charges de personnel",
+      "val": "340",
+      "op": "−"
+     },
+     {
+      "lib": "EBE",
+      "val": "200",
+      "op": "=",
+      "style": "fort"
+     }
+    ],
+    "titre": "Les SIG, en k€",
+    "dit": "Les S.I.G découpent le résultat. De la valeur ajoutée, on retire impôts, taxes et salaires : c'est l'E.B.E."
+   },
+   {
+    "voix": "En M&A, l'EBITDA, c'est quasiment l'EBE, avec la participation des salariés traitée en charge de personnel.",
+    "rangs": [
+     {
+      "lib": "EBE",
+      "val": "200",
+      "style": "fort"
+     },
+     {
+      "lib": "Participation des salariés",
+      "val": "15",
+      "op": "−"
+     },
+     {
+      "lib": "EBITDA",
+      "val": "185",
+      "op": "=",
+      "style": "ok"
+     }
+    ],
+    "titre": "De l'EBE à l'EBITDA, en k€",
+    "efface": true,
+    "dit": "En M and A, l'Ébitda, c'est quasiment l'E.B.E, avec la participation des salariés traitée en charge de personnel."
+   },
+   {
+    "voix": "Et une PME se valorise souvent en multiple d'EBITDA : 6 × 185 k€, soit 1,11 M€.",
+    "rangs": [
+     {
+      "lib": "Multiple du secteur",
+      "val": "6",
+      "op": "×"
+     },
+     {
+      "lib": "Valeur d'entreprise",
+      "val": "1 110",
+      "op": "=",
+      "style": "ok"
+     }
+    ],
+    "dit": "Et une P.M.E se valorise souvent en multiple d'Ébitda : six fois cent quatre-vingt-cinq mille euros, soit un virgule onze million d'euros."
+   },
+   {
+    "voix": "Maîtrise tes SIG en DCG : en M&A, c'est ton quotidien.",
+    "dit": "Maîtrise tes S.I.G en D.C.G : en M and A, c'est ton quotidien."
+   }
+  ]
+ },
+ {
+  "id": "fin-van-actualisation",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "accroche": "1 000 € dans un an valent moins que 1 000 € aujourd'hui.",
+  "segments": [
+   {
+    "voix": "1 000 € dans un an valent moins que 1 000 € aujourd'hui.",
+    "dit": "mille euros dans un an valent moins que mille euros aujourd'hui."
+   },
+   {
+    "voix": "À 8 %, 1 000 € deviennent 1 080 € dans un an. Actualiser, c'est l'inverse : 1 000 € dans un an valent 926 € aujourd'hui.",
+    "rangs": [
+     {
+      "lib": "Dans un an",
+      "val": "1 000 €"
+     },
+     {
+      "lib": "1,08",
+      "val": "",
+      "op": "÷"
+     },
+     {
+      "lib": "Valeur actuelle",
+      "val": "926 €",
+      "op": "=",
+      "style": "fort"
+     }
+    ],
+    "titre": "Actualiser",
+    "dit": "À huit pour cent, mille euros deviennent mille quatre-vingts euros dans un an. Actualiser, c'est l'inverse : mille euros dans un an valent neuf cent vingt-six euros aujourd'hui."
+   },
+   {
+    "voix": "Un projet coûte 100 000 € et rapporte 30 000 € par an pendant 5 ans.",
+    "rangs": [
+     {
+      "lib": "Investissement",
+      "val": "100 000",
+      "op": "−"
+     },
+     {
+      "lib": "30 000 € par an, 5 ans",
+      "val": "",
+      "op": "+"
+     }
+    ],
+    "titre": "Le projet",
+    "efface": true,
+    "dit": "Un projet coûte cent mille euros et rapporte trente mille euros par an pendant cinq ans."
+   },
+   {
+    "voix": "Actualisés à 8 %, ces flux valent 119 781 €.",
+    "rangs": [
+     {
+      "lib": "Flux actualisés à 8 %",
+      "val": "119 781",
+      "op": "+"
+     }
+    ],
+    "dit": "Actualisés à huit pour cent, ces flux valent cent dix-neuf mille sept cent quatre-vingt-un euros."
+   },
+   {
+    "voix": "VAN : 119 781 − 100 000 = 19 781 €. Positive : on investit.",
+    "rangs": [
+     {
+      "lib": "VAN",
+      "val": "+ 19 781",
+      "op": "=",
+      "style": "ok"
+     }
+    ],
+    "dit": "VAN : cent dix-neuf mille sept cent quatre-vingt-un moins cent mille égale dix-neuf mille sept cent quatre-vingt-un euros. Positive : on investit."
+   }
+  ]
+ },
+ {
+  "id": "fin-tableau-flux",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "accroche": "Tableau des flux : les points les plus rapides de l'épreuve.",
+  "segments": [
+   {
+    "voix": "Tableau des flux : les points les plus rapides de l'épreuve.",
+    "dit": "Tableau des flux : les points les plus rapides de l'épreuve."
+   },
+   {
+    "voix": "Résultat net, plus les dotations, moins la hausse du BFR : c'est le flux d'activité.",
+    "rangs": [
+     {
+      "lib": "Résultat net",
+      "val": "500"
+     },
+     {
+      "lib": "Dotations aux amortissements",
+      "val": "300",
+      "op": "+"
+     },
+     {
+      "lib": "Hausse du BFR",
+      "val": "100",
+      "op": "−"
+     },
+     {
+      "lib": "Flux d'activité",
+      "val": "700",
+      "op": "=",
+      "style": "fort"
+     }
+    ],
+    "titre": "Flux de trésorerie, en k€",
+    "dit": "Résultat net, plus les dotations, moins la hausse du B.F.R : c'est le flux d'activité."
+   },
+   {
+    "voix": "Puis les investissements, − 600, et le financement, − 50.",
+    "rangs": [
+     {
+      "lib": "Flux d'investissement",
+      "val": "600",
+      "op": "−",
+      "style": "fort"
+     },
+     {
+      "lib": "Flux de financement",
+      "val": "50",
+      "op": "−",
+      "style": "fort"
+     }
+    ],
+    "dit": "Puis les investissements, moins six cents, et le financement, moins cinquante."
+   },
+   {
+    "voix": "Variation de trésorerie : + 50. Elle doit tomber pile sur l'écart de trésorerie du bilan.",
+    "rangs": [
+     {
+      "lib": "Variation de trésorerie",
+      "val": "+ 50",
+      "op": "=",
+      "style": "ok"
+     }
+    ],
+    "dit": "Variation de trésorerie : plus cinquante. Elle doit tomber pile sur l'écart de trésorerie du bilan."
+   },
+   {
+    "voix": "Le jour J : pose la trame, remplis les trois blocs, vérifie avec la trésorerie, et passe à la suite.",
+    "dit": "Le jour J : pose la trame, remplis les trois blocs, vérifie avec la trésorerie, et passe à la suite."
+   }
+  ]
+ },
+ {
+  "id": "m-ve-titres",
+  "modele": "finance",
+  "tag": "Dessine-moi le M&A",
+  "accroche": "Une boîte vaut 14 M€… mais le vendeur n'en touche que 10. Pourquoi ?",
+  "segments": [
+   {
+    "voix": "Une boîte vaut 14 M€… mais le vendeur n'en touche que 10. Pourquoi ?",
+    "dit": "Une boîte vaut quatorze millions d'euros… mais le vendeur n'en touche que dix. Pourquoi ?"
+   },
+   {
+    "voix": "En M&A, on valorise d'abord toute l'entreprise : EBITDA de 2 M€, multiple de 7. Valeur d'entreprise : 14 M€.",
+    "rangs": [
+     {
+      "lib": "EBITDA",
+      "val": "2 M€"
+     },
+     {
+      "lib": "Multiple",
+      "val": "7",
+      "op": "×"
+     },
+     {
+      "lib": "Valeur d'entreprise",
+      "val": "14 M€",
+      "op": "=",
+      "style": "fort"
+     }
+    ],
+    "titre": "Du multiple au prix",
+    "dit": "En M and A, on valorise d'abord toute l'entreprise : Ébitda de deux millions d'euros, multiple de sept. Valeur d'entreprise : quatorze millions d'euros."
+   },
+   {
+    "voix": "Mais l'acheteur reprend aussi la dette. On retire la dette nette : 4 M€.",
+    "rangs": [
+     {
+      "lib": "Dette nette",
+      "val": "4 M€",
+      "op": "−"
+     }
+    ],
+    "dit": "Mais l'acheteur reprend aussi la dette. On retire la dette nette : quatre millions d'euros."
+   },
+   {
+    "voix": "Valeur des titres : 10 M€. C'est le prix des actions.",
+    "rangs": [
+     {
+      "lib": "Valeur des titres",
+      "val": "10 M€",
+      "op": "=",
+      "style": "ok"
+     }
+    ],
+    "dit": "Valeur des titres : dix millions d'euros. C'est le prix des actions."
+   },
+   {
+    "voix": "Retiens le pont : valeur d'entreprise, moins dette nette, égale valeur des capitaux propres.",
+    "dit": "Retiens le pont : valeur d'entreprise, moins dette nette, égale valeur des capitaux propres."
+   }
+  ]
+ },
+ {
+  "id": "m-dette-nette",
+  "modele": "finance",
+  "tag": "Dessine-moi le M&A",
+  "accroche": "La dette nette : le chiffre qui fait bouger le prix d'une boîte.",
+  "segments": [
+   {
+    "voix": "La dette nette : le chiffre qui fait bouger le prix d'une boîte.",
+    "dit": "La dette nette : le chiffre qui fait bouger le prix d'une boîte."
+   },
+   {
+    "voix": "Dette nette : les dettes financières, moins la trésorerie disponible.",
+    "rangs": [
+     {
+      "lib": "Emprunts bancaires",
+      "val": "5 000"
+     },
+     {
+      "lib": "Trésorerie",
+      "val": "1 000",
+      "op": "−"
+     },
+     {
+      "lib": "Dette nette",
+      "val": "4 000",
+      "op": "=",
+      "style": "fort"
+     }
+    ],
+    "titre": "Dette nette, en k€",
+    "dit": "Dette nette : les dettes financières, moins la trésorerie disponible."
+   },
+   {
+    "voix": "Les dettes fournisseurs n'y sont pas : elles font partie du BFR.",
+    "dit": "Les dettes fournisseurs n'y sont pas : elles font partie du B.F.R."
+   },
+   {
+    "voix": "Chaque euro de dette nette en plus, c'est un euro de moins pour le vendeur.",
+    "dit": "Chaque euro de dette nette en plus, c'est un euro de moins pour le vendeur."
+   },
+   {
+    "voix": "Et la banque la surveille avec un ratio : dette nette sur EBITDA. 40 sur 15 : 2,67 fois.",
+    "rangs": [
+     {
+      "lib": "Dette nette",
+      "val": "40 M€"
+     },
+     {
+      "lib": "EBITDA",
+      "val": "15 M€",
+      "op": "÷"
+     },
+     {
+      "lib": "Levier",
+      "val": "2,67 x",
+      "op": "=",
+      "style": "ok"
+     }
+    ],
+    "titre": "Le ratio des banques",
+    "efface": true,
+    "dit": "Et la banque la surveille avec un ratio : dette nette sur Ébitda. quarante sur quinze : deux virgule soixante-sept fois."
+   }
+  ]
+ },
+ {
+  "id": "m-covenant",
+  "modele": "finance",
+  "tag": "Dessine-moi le M&A",
+  "accroche": "Une cyberattaque peut rendre ton prêt exigible. Voilà comment.",
+  "segments": [
+   {
+    "voix": "Une cyberattaque peut rendre ton prêt exigible. Voilà comment.",
+    "dit": "Une cyberattaque peut rendre ton prêt exigible. Voilà comment."
+   },
+   {
+    "voix": "Le prêt impose une dette nette inférieure à 3 fois l'EBITDA. Avant : 40 sur 15, soit 2,67.",
+    "rangs": [
+     {
+      "lib": "Dette nette",
+      "val": "40 M€"
+     },
+     {
+      "lib": "EBITDA",
+      "val": "15 M€",
+      "op": "÷"
+     },
+     {
+      "lib": "Ratio",
+      "val": "2,67",
+      "op": "=",
+      "style": "ok"
+     }
+    ],
+    "titre": "Covenant : dette nette / EBITDA",
+    "dit": "Le prêt impose une dette nette inférieure à trois fois l'Ébitda. Avant : quarante sur quinze, soit deux virgule soixante-sept."
+   },
+   {
+    "voix": "L'attaque laisse 1,5 M€ à charge : l'EBITDA tombe à 13,5, la dette monte à 41,5.",
+    "rangs": [
+     {
+      "lib": "Dette nette après",
+      "val": "41,5 M€"
+     },
+     {
+      "lib": "EBITDA après",
+      "val": "13,5 M€",
+      "op": "÷"
+     },
+     {
+      "lib": "Ratio",
+      "val": "3,07",
+      "op": "=",
+      "style": "fort"
+     }
+    ],
+    "dit": "L'attaque laisse un virgule cinq millions d'euros à charge : l'Ébitda tombe à treize virgule cinq, la dette monte à quarante et un virgule cinq."
+   },
+   {
+    "voix": "3,07 : le covenant est rompu. La banque peut exiger le remboursement, ou renégocier.",
+    "dit": "trois virgule zéro sept : le covenant est rompu. La banque peut exiger le remboursement, ou renégocier."
+   },
+   {
+    "voix": "En M&A, on teste toujours la marge de sécurité sur ce ratio.",
+    "dit": "En M and A, on teste toujours la marge de sécurité sur ce ratio."
+   }
+  ]
+ },
+ {
+  "id": "m-per",
+  "modele": "finance",
+  "tag": "Dessine-moi le M&A",
+  "accroche": "Deux multiples pour valoriser une boîte. Ne les mélange jamais.",
+  "segments": [
+   {
+    "voix": "Deux multiples pour valoriser une boîte. Ne les mélange jamais.",
+    "dit": "Deux multiples pour valoriser une boîte. Ne les mélange jamais."
+   },
+   {
+    "voix": "Le multiple d'EBITDA donne la valeur d'entreprise : on retire ensuite la dette nette.",
+    "rangs": [
+     {
+      "lib": "VE / EBITDA → valeur d'entreprise",
+      "val": ""
+     }
+    ],
+    "titre": "Les multiples",
+    "dit": "Le multiple d'Ébitda donne la valeur d'entreprise : on retire ensuite la dette nette."
+   },
+   {
+    "voix": "Le PER s'applique au résultat net, et donne directement la valeur des titres : 1,2 M€ × 9 = 10,8 M€.",
+    "rangs": [
+     {
+      "lib": "Résultat net",
+      "val": "1,2 M€"
+     },
+     {
+      "lib": "PER",
+      "val": "9",
+      "op": "×"
+     },
+     {
+      "lib": "Valeur des titres",
+      "val": "10,8 M€",
+      "op": "=",
+      "style": "ok"
+     }
+    ],
+    "dit": "Le P.E.R s'applique au résultat net, et donne directement la valeur des titres : un virgule deux millions d'euros fois neuf égale dix virgule huit millions d'euros."
+   },
+   {
+    "voix": "Attention : les multiples de transactions incluent une prime de contrôle. Pas les multiples boursiers.",
+    "dit": "Attention : les multiples de transactions incluent une prime de contrôle. Pas les multiples boursiers."
+   },
+   {
+    "voix": "Croise toujours avec une autre méthode, et justifie l'écart.",
+    "dit": "Croise toujours avec une autre méthode, et justifie l'écart."
+   }
+  ]
+ },
+ {
+  "id": "m-lbo-leviers",
+  "modele": "finance",
+  "tag": "Dessine-moi le M&A",
+  "accroche": "LBO : racheter une boîte avec l'argent… de la boîte.",
+  "segments": [
+   {
+    "voix": "LBO : racheter une boîte avec l'argent… de la boîte.",
+    "dit": "L.B.O : racheter une boîte avec l'argent… de la boîte."
+   },
+   {
+    "voix": "Une holding emprunte pour racheter la cible. La dette est remboursée par les dividendes de la cible.",
+    "titre": "Les leviers du LBO",
+    "dit": "Une holding emprunte pour racheter la cible. La dette est remboursée par les dividendes de la cible."
+   },
+   {
+    "voix": "Levier financier : tant que la rentabilité dépasse le coût de la dette, la dette booste la rentabilité des fonds propres.",
+    "rangs": [
+     {
+      "lib": "Levier financier",
+      "val": "✓"
+     }
+    ],
+    "dit": "Levier financier : tant que la rentabilité dépasse le coût de la dette, la dette booste la rentabilité des fonds propres."
+   },
+   {
+    "voix": "Levier fiscal : à 95 %, l'intégration fiscale impute les intérêts de la holding sur les bénéfices de la cible.",
+    "rangs": [
+     {
+      "lib": "Levier fiscal",
+      "val": "✓"
+     }
+    ],
+    "dit": "Levier fiscal : à quatre-vingt-quinze pour cent, l'intégration fiscale impute les intérêts de la holding sur les bénéfices de la cible."
+   },
+   {
+    "voix": "Levier juridique : une petite mise pour contrôler toute la cible.",
+    "rangs": [
+     {
+      "lib": "Levier juridique",
+      "val": "✓"
+     }
+    ],
+    "dit": "Levier juridique : une petite mise pour contrôler toute la cible."
+   },
+   {
+    "voix": "Le risque : si les dividendes baissent, la holding ne rembourse plus.",
+    "dit": "Le risque : si les dividendes baissent, la holding ne rembourse plus."
+   }
+  ]
+ },
+ {
+  "id": "m-lbo-couverture",
+  "modele": "finance",
+  "tag": "Dessine-moi le M&A",
+  "accroche": "LBO : la holding peut-elle payer sa dette ? Le test qui tue.",
+  "segments": [
+   {
+    "voix": "LBO : la holding peut-elle payer sa dette ? Le test qui tue.",
+    "dit": "L.B.O : la holding peut-elle payer sa dette ? Le test qui tue."
+   },
+   {
+    "voix": "Dette senior : 7 M€ sur 5 ans à 5 %, soit 1 616 825 € par an. Plus 376 000 € d'intérêts junior.",
+    "rangs": [
+     {
+      "lib": "Annuité senior",
+      "val": "1 616 825"
+     },
+     {
+      "lib": "Intérêts junior",
+      "val": "376 000",
+      "op": "+"
+     },
+     {
+      "lib": "Service de la dette",
+      "val": "1 992 825",
+      "op": "=",
+      "style": "fort"
+     }
+    ],
+    "titre": "Service de la dette, en €",
+    "dit": "Dette senior : sept millions d'euros sur cinq ans à cinq pour cent, soit un million six cent seize mille huit cent vingt-cinq euros par an. Plus trois cent soixante-seize mille euros d'intérêts junior."
+   },
+   {
+    "voix": "La cible gagne 9 M€ et distribue 75 %. La holding, à 30 %, reçoit 2 025 000 €.",
+    "rangs": [
+     {
+      "lib": "Dividendes reçus",
+      "val": "2 025 000"
+     }
+    ],
+    "dit": "La cible gagne neuf millions d'euros et distribue soixante-quinze pour cent. La holding, à trente pour cent, reçoit deux millions vingt-cinq mille euros."
+   },
+   {
+    "voix": "Couverture : 1,02. C'est extrêmement tendu.",
+    "rangs": [
+     {
+      "lib": "Couverture",
+      "val": "1,02",
+      "op": "=",
+      "style": "fort"
+     }
+    ],
+    "dit": "Couverture : un virgule zéro deux. C'est extrêmement tendu."
+   },
+   {
+    "voix": "À l'examen, fais ce test année par année, et commente le risque.",
+    "dit": "À l'examen, fais ce test année par année, et commente le risque."
+   }
+  ]
+ },
+ {
+  "id": "m-ifrs16-ebitda",
+  "modele": "finance",
+  "tag": "Dessine-moi le M&A",
+  "accroche": "IFRS 16 fait monter l'EBITDA… sans rien changer à l'activité.",
+  "segments": [
+   {
+    "voix": "IFRS 16 fait monter l'EBITDA… sans rien changer à l'activité.",
+    "dit": "I.F.R.S seize fait monter l'Ébitda… sans rien changer à l'activité."
+   },
+   {
+    "voix": "Avant, un loyer de 10 000 € par an était une charge : il réduisait l'EBITDA.",
+    "rangs": [
+     {
+      "lib": "Loyer annuel",
+      "val": "10 000 €"
+     },
+     {
+      "lib": "→ charge, EBITDA en baisse",
+      "val": ""
+     }
+    ],
+    "titre": "IFRS 16 chez le preneur",
+    "dit": "Avant, un loyer de dix mille euros par an était une charge : il réduisait l'Ébitda."
+   },
+   {
+    "voix": "Avec IFRS 16, le loyer disparaît. À sa place : un amortissement et des intérêts, sous l'EBITDA.",
+    "rangs": [
+     {
+      "lib": "Amortissement",
+      "val": "8 659"
+     },
+     {
+      "lib": "Intérêts",
+      "val": "2 165",
+      "op": "+"
+     }
+    ],
+    "dit": "Avec I.F.R.S seize, le loyer disparaît. À sa place : un amortissement et des intérêts, sous l'Ébitda."
+   },
+   {
+    "voix": "L'EBITDA monte de 10 000 €. Mais la dette locative, 43 295 €, entre dans l'endettement.",
+    "rangs": [
+     {
+      "lib": "EBITDA",
+      "val": "+ 10 000",
+      "style": "ok"
+     },
+     {
+      "lib": "Dette locative",
+      "val": "43 295",
+      "style": "fort"
+     }
+    ],
+    "dit": "L'Ébitda monte de dix mille euros. Mais la dette locative, quarante-trois mille deux cent quatre-vingt-quinze euros, entre dans l'endettement."
+   },
+   {
+    "voix": "En M&A, demande toujours : EBITDA avant ou après IFRS 16 ?",
+    "dit": "En M and A, demande toujours : Ébitda avant ou après I.F.R.S seize ?"
+   }
+  ]
+ },
+ {
+  "id": "c-goodwill",
+  "modele": "finance",
+  "tag": "Dessine-moi la conso",
+  "accroche": "Payer une boîte plus cher que ses capitaux propres : ça s'appelle le goodwill.",
+  "segments": [
+   {
+    "voix": "Payer une boîte plus cher que ses capitaux propres : ça s'appelle le goodwill.",
+    "dit": "Payer une boîte plus cher que ses capitaux propres : ça s'appelle le goodwill."
+   },
+   {
+    "voix": "Le groupe achète 80 % de Château Lune pour 4 M€.",
+    "rangs": [
+     {
+      "lib": "Prix des titres (80 %)",
+      "val": "4 M€"
+     }
+    ],
+    "titre": "Écart d'acquisition",
+    "dit": "Le groupe achète quatre-vingts pour cent de Château Lune pour quatre millions d'euros."
+   },
+   {
+    "voix": "Capitaux propres réévalués : 3 M€, plus 1 M€ de plus-value, moins 250 000 € d'impôt différé : 3,75 M€.",
+    "rangs": [
+     {
+      "lib": "Capitaux propres réévalués",
+      "val": "3,75 M€"
+     }
+    ],
+    "dit": "Capitaux propres réévalués : trois millions d'euros, plus un million d'euros de plus-value, moins deux cent cinquante mille euros d'impôt différé : trois virgule soixante-quinze millions d'euros."
+   },
+   {
+    "voix": "Quote-part du groupe : 80 %, soit 3 M€. Goodwill : 4 − 3 = 1 M€.",
+    "rangs": [
+     {
+      "lib": "Quote-part du groupe",
+      "val": "3 M€",
+      "op": "−"
+     },
+     {
+      "lib": "Écart d'acquisition",
+      "val": "1 M€",
+      "op": "=",
+      "style": "ok"
+     }
+    ],
+    "dit": "Quote-part du groupe : quatre-vingts pour cent, soit trois millions d'euros. Goodwill : quatre moins trois égale un million d'euros."
+   },
+   {
+    "voix": "En IFRS 3, il n'est jamais amorti : on le teste chaque année.",
+    "dit": "En I.F.R.S trois, il n'est jamais amorti : on le teste chaque année."
+   }
+  ]
+ },
+ {
+  "id": "c-controle-interet",
+  "modele": "finance",
+  "tag": "Dessine-moi la conso",
+  "accroche": "Contrôler une société sans détenir la moitié de son capital ? C'est possible.",
+  "segments": [
+   {
+    "voix": "Contrôler une société sans détenir la moitié de son capital ? C'est possible.",
+    "dit": "Contrôler une société sans détenir la moitié de son capital ? C'est possible."
+   },
+   {
+    "voix": "Holdis détient 25 % de Logis en direct, et 80 % de Fabrik, qui détient 30 % de Logis.",
+    "rangs": [
+     {
+      "lib": "Direct",
+      "val": "25 %"
+     },
+     {
+      "lib": "Via Fabrik",
+      "val": "80 % × 30 %"
+     }
+    ],
+    "titre": "Holdis → Logis",
+    "dit": "Holdis détient vingt-cinq pour cent de Logis en direct, et quatre-vingts pour cent de Fabrik, qui détient trente pour cent de Logis."
+   },
+   {
+    "voix": "Contrôle : on additionne les votes des sociétés contrôlées. 25 + 30 = 55 %. Contrôle exclusif.",
+    "rangs": [
+     {
+      "lib": "% de contrôle",
+      "val": "55 %",
+      "op": "=",
+      "style": "fort"
+     }
+    ],
+    "dit": "Contrôle : on additionne les votes des sociétés contrôlées. vingt-cinq plus trente égale cinquante-cinq pour cent. Contrôle exclusif."
+   },
+   {
+    "voix": "Intérêt : on multiplie le long de la chaîne. 25 + 80 % × 30 % = 49 %.",
+    "rangs": [
+     {
+      "lib": "% d'intérêt",
+      "val": "49 %",
+      "op": "=",
+      "style": "ok"
+     }
+    ],
+    "dit": "Intérêt : on multiplie le long de la chaîne. vingt-cinq plus quatre-vingts pour cent fois trente pour cent égale quarante-neuf pour cent."
+   },
+   {
+    "voix": "Le contrôle choisit la méthode. L'intérêt partage le résultat.",
+    "dit": "Le contrôle choisit la méthode. L'intérêt partage le résultat."
+   }
+  ]
+ },
+ {
+  "id": "c-mise-equivalence",
+  "modele": "finance",
+  "tag": "Dessine-moi la conso",
+  "accroche": "Mise en équivalence : toute une société sur une seule ligne.",
+  "segments": [
+   {
+    "voix": "Mise en équivalence : toute une société sur une seule ligne.",
+    "dit": "Mise en équivalence : toute une société sur une seule ligne."
+   },
+   {
+    "voix": "Le groupe achète 30 % d'Occitanie Solaire pour 900 000 €. Influence notable : mise en équivalence.",
+    "titre": "Titres mis en équivalence",
+    "dit": "Le groupe achète trente pour cent d'Occitanie Solaire pour neuf cent mille euros. Influence notable : mise en équivalence."
+   },
+   {
+    "voix": "Capitaux propres en fin d'année : 2,8 M€. 30 %, c'est 840 000 €, plus 150 000 € d'écart d'acquisition.",
+    "rangs": [
+     {
+      "lib": "30 % × 2,8 M€",
+      "val": "840 000"
+     },
+     {
+      "lib": "Écart d'acquisition",
+      "val": "150 000",
+      "op": "+"
+     },
+     {
+      "lib": "Titres MEE",
+      "val": "990 000",
+      "op": "=",
+      "style": "ok"
+     }
+    ],
+    "dit": "Capitaux propres en fin d'année : deux virgule huit millions d'euros. trente pour cent, c'est huit cent quarante mille euros, plus cent cinquante mille euros d'écart d'acquisition."
+   },
+   {
+    "voix": "Aucun actif, aucune dette n'est repris. Juste la quote-part de résultat : 90 000 €.",
+    "rangs": [
+     {
+      "lib": "Quote-part de résultat",
+      "val": "90 000"
+     }
+    ],
+    "dit": "Aucun actif, aucune dette n'est repris. Juste la quote-part de résultat : quatre-vingt-dix mille euros."
+   },
+   {
+    "voix": "Influence notable : présumée dès 20 % des droits de vote.",
+    "dit": "Influence notable : présumée dès vingt pour cent des droits de vote."
+   }
+  ]
+ },
+ {
+  "id": "c-fusion-parite",
+  "modele": "finance",
+  "tag": "Dessine-moi la conso",
+  "accroche": "Fusion : combien d'actions donner aux actionnaires de l'absorbée ?",
+  "segments": [
+   {
+    "voix": "Fusion : combien d'actions donner aux actionnaires de l'absorbée ?",
+    "dit": "Fusion : combien d'actions donner aux actionnaires de l'absorbée ?"
+   },
+   {
+    "voix": "L'action Bêta vaut 120 €, l'action Alpha 200 €. Parité : 3 Alpha pour 5 Bêta.",
+    "rangs": [
+     {
+      "lib": "Valeur Bêta",
+      "val": "120 €"
+     },
+     {
+      "lib": "Valeur Alpha",
+      "val": "200 €"
+     },
+     {
+      "lib": "Parité",
+      "val": "3 pour 5",
+      "op": "=",
+      "style": "fort"
+     }
+    ],
+    "titre": "Alpha absorbe Bêta",
+    "dit": "L'action Bêta vaut cent vingt euros, l'action Alpha deux cents euros. Parité : trois Alpha pour cinq Bêta."
+   },
+   {
+    "voix": "50 000 Bêta × 3/5 = 30 000 Alpha à créer. Nominal 50 € : 1,5 M€ de capital.",
+    "rangs": [
+     {
+      "lib": "Actions créées",
+      "val": "30 000"
+     },
+     {
+      "lib": "Augmentation de capital",
+      "val": "1,5 M€"
+     }
+    ],
+    "dit": "cinquante mille Bêta fois trois sur cinq égale trente mille Alpha à créer. Nominal cinquante euros : un virgule cinq millions d'euros de capital."
+   },
+   {
+    "voix": "Apports de 6 M€ : la prime de fusion vaut 4,5 M€.",
+    "rangs": [
+     {
+      "lib": "Prime de fusion",
+      "val": "4,5 M€",
+      "op": "=",
+      "style": "ok"
+     }
+    ],
+    "dit": "Apports de six millions d'euros : la prime de fusion vaut quatre virgule cinq millions d'euros."
+   },
+   {
+    "voix": "Retiens : parité sur les valeurs réelles, capital au nominal, le reste en prime.",
+    "dit": "Retiens : parité sur les valeurs réelles, capital au nominal, le reste en prime."
+   }
+  ]
+ },
+ {
+  "id": "c-mali-technique",
+  "modele": "finance",
+  "tag": "Dessine-moi la conso",
+  "accroche": "Mali de fusion : tout n'est pas une perte.",
+  "segments": [
+   {
+    "voix": "Mali de fusion : tout n'est pas une perte.",
+    "dit": "Mali de fusion : tout n'est pas une perte."
+   },
+   {
+    "voix": "Titres de la filiale : 900 000 €. Actif net reçu : 600 000 €. Mali : 300 000 €.",
+    "rangs": [
+     {
+      "lib": "Titres annulés",
+      "val": "900 000"
+     },
+     {
+      "lib": "Actif net reçu",
+      "val": "600 000",
+      "op": "−"
+     },
+     {
+      "lib": "Mali",
+      "val": "300 000",
+      "op": "=",
+      "style": "fort"
+     }
+    ],
+    "titre": "Mali de fusion",
+    "dit": "Titres de la filiale : neuf cent mille euros. Actif net reçu : six cent mille euros. Mali : trois cent mille euros."
+   },
+   {
+    "voix": "200 000 € viennent d'une plus-value latente sur le terrain : c'est le mali technique, inscrit à l'actif.",
+    "rangs": [
+     {
+      "lib": "Mali technique (actif)",
+      "val": "200 000",
+      "style": "ok"
+     }
+    ],
+    "dit": "deux cent mille euros viennent d'une plus-value latente sur le terrain : c'est le mali technique, inscrit à l'actif."
+   },
+   {
+    "voix": "Le reste, 100 000 €, est un vrai mali : une charge financière.",
+    "rangs": [
+     {
+      "lib": "Vrai mali (charge)",
+      "val": "100 000"
+     }
+    ],
+    "dit": "Le reste, cent mille euros, est un vrai mali : une charge financière."
+   },
+   {
+    "voix": "Le mali technique suit le terrain : s'il est vendu, il sort avec lui.",
+    "dit": "Le mali technique suit le terrain : s'il est vendu, il sort avec lui."
+   }
+  ]
+ },
+ {
+  "id": "c-impots-differes",
+  "modele": "finance",
+  "tag": "Dessine-moi la conso",
+  "accroche": "En consolidation, on constate un impôt… qui n'existe pas encore.",
+  "segments": [
+   {
+    "voix": "En consolidation, on constate un impôt… qui n'existe pas encore.",
+    "dit": "En consolidation, on constate un impôt… qui n'existe pas encore."
+   },
+   {
+    "voix": "On élimine 40 000 € d'amortissements dérogatoires : ils sont purement fiscaux.",
+    "rangs": [
+     {
+      "lib": "Dérogatoires éliminés",
+      "val": "40 000"
+     }
+    ],
+    "titre": "Impôt différé",
+    "dit": "On élimine quarante mille euros d'amortissements dérogatoires : ils sont purement fiscaux."
+   },
+   {
+    "voix": "L'impôt reviendra quand le dérogatoire se reprendra : 40 000 × 25 %, impôt différé passif de 10 000 €.",
+    "rangs": [
+     {
+      "lib": "Impôt différé passif",
+      "val": "10 000",
+      "op": "−"
+     }
+    ],
+    "dit": "L'impôt reviendra quand le dérogatoire se reprendra : quarante mille fois vingt-cinq pour cent, impôt différé passif de dix mille euros."
+   },
+   {
+    "voix": "Réserves consolidées : + 30 000 € seulement.",
+    "rangs": [
+     {
+      "lib": "Réserves consolidées",
+      "val": "+ 30 000",
+      "op": "=",
+      "style": "ok"
+     }
+    ],
+    "dit": "Réserves consolidées : plus trente mille euros seulement."
+   },
+   {
+    "voix": "Et un impôt différé ne s'actualise jamais.",
+    "dit": "Et un impôt différé ne s'actualise jamais."
+   }
+  ]
+ },
+ {
+  "id": "m-cmpc",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "accroche": "Le taux qui dit si un rachat crée de la valeur : le CMPC.",
+  "segments": [
+   {
+    "voix": "Le taux qui dit si un rachat crée de la valeur : le CMPC.",
+    "dit": "Le taux qui dit si un rachat crée de la valeur : le C.M.P.C."
+   },
+   {
+    "voix": "Coût des capitaux propres, avec le MEDAF : 3 % + 1,2 × 6 % = 10,2 %.",
+    "rangs": [
+     {
+      "lib": "Capitaux propres (60 %)",
+      "val": "10,2 %"
+     }
+    ],
+    "titre": "CMPC",
+    "dit": "Coût des capitaux propres, avec le Médaf : trois pour cent plus un virgule deux fois six pour cent égale dix virgule deux pour cent."
+   },
+   {
+    "voix": "Coût de la dette après impôt : 5 % × 0,75 = 3,75 %.",
+    "rangs": [
+     {
+      "lib": "Dette après impôt (40 %)",
+      "val": "3,75 %"
+     }
+    ],
+    "dit": "Coût de la dette après impôt : cinq pour cent fois zéro virgule soixante-quinze égale trois virgule soixante-quinze pour cent."
+   },
+   {
+    "voix": "Pondérés en valeurs de marché, 60 / 40 : CMPC de 7,62 %.",
+    "rangs": [
+     {
+      "lib": "CMPC",
+      "val": "7,62 %",
+      "op": "=",
+      "style": "ok"
+     }
+    ],
+    "dit": "Pondérés en valeurs de marché, soixante sur quarante : C.M.P.C de sept virgule soixante-deux pour cent."
+   },
+   {
+    "voix": "Le piège : oublier l'économie d'impôt, ou pondérer en valeurs comptables.",
+    "dit": "Le piège : oublier l'économie d'impôt, ou pondérer en valeurs comptables."
+   }
+  ]
+ },
+ {
+  "id": "m-medaf",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "accroche": "Pourquoi les actionnaires exigent plus de 10 % ?",
+  "segments": [
+   {
+    "voix": "Pourquoi les actionnaires exigent plus de 10 % ?",
+    "dit": "Pourquoi les actionnaires exigent plus de dix pour cent ?"
+   },
+   {
+    "voix": "Le MEDAF : taux sans risque, plus bêta fois prime de marché. 3 % + 1,3 × 6 % = 10,8 %.",
+    "rangs": [
+     {
+      "lib": "Taux sans risque",
+      "val": "3 %"
+     },
+     {
+      "lib": "Bêta × prime",
+      "val": "1,3 × 6 %",
+      "op": "+"
+     },
+     {
+      "lib": "Rentabilité exigée",
+      "val": "10,8 %",
+      "op": "=",
+      "style": "ok"
+     }
+    ],
+    "titre": "MEDAF",
+    "dit": "Le Médaf : taux sans risque, plus bêta fois prime de marché. trois pour cent plus un virgule trois fois six pour cent égale dix virgule huit pour cent."
+   },
+   {
+    "voix": "Le bêta mesure la sensibilité au marché : 1,3, c'est 30 % plus nerveux que le marché.",
+    "dit": "Le bêta mesure la sensibilité au marché : un virgule trois, c'est trente pour cent plus nerveux que le marché."
+   },
+   {
+    "voix": "Plus la boîte est endettée, plus son bêta monte. D'où le bêta réendetté des comparables.",
+    "dit": "Plus la boîte est endettée, plus son bêta monte. D'où le bêta réendetté des comparables."
+   },
+   {
+    "voix": "Seul le risque de marché est payé : le risque spécifique, la diversification l'élimine.",
+    "dit": "Seul le risque de marché est payé : le risque spécifique, la diversification l'élimine."
+   }
+  ]
+ },
+ {
+  "id": "m-dcf",
+  "modele": "finance",
+  "tag": "Dessine-moi le M&A",
+  "accroche": "Évaluer une boîte par ses flux : le DCF en 40 secondes.",
+  "segments": [
+   {
+    "voix": "Évaluer une boîte par ses flux : le DCF en 40 secondes.",
+    "dit": "Évaluer une boîte par ses flux : le D.C.F en quarante secondes."
+   },
+   {
+    "voix": "On actualise 3 ans de flux au CMPC de 8 % : 2 822 k€.",
+    "rangs": [
+     {
+      "lib": "Flux actualisés (3 ans)",
+      "val": "2 822"
+     }
+    ],
+    "titre": "DCF, en k€",
+    "dit": "On actualise trois ans de flux au C.M.P.C de huit pour cent : deux millions huit cent vingt-deux mille euros."
+   },
+   {
+    "voix": "Puis la valeur terminale, avec Gordon-Shapiro : 20 400, soit 16 194 actualisés.",
+    "rangs": [
+     {
+      "lib": "Valeur terminale actualisée",
+      "val": "16 194",
+      "op": "+"
+     },
+     {
+      "lib": "Valeur d'entreprise",
+      "val": "19 016",
+      "op": "=",
+      "style": "fort"
+     }
+    ],
+    "dit": "Puis la valeur terminale, avec Gordon-Shapiro : vingt mille quatre cents, soit seize mille cent quatre-vingt-quatorze actualisés."
+   },
+   {
+    "voix": "Moins la dette nette, 4 000 : valeur des titres, 15 016 k€.",
+    "rangs": [
+     {
+      "lib": "Dette nette",
+      "val": "4 000",
+      "op": "−"
+     },
+     {
+      "lib": "Valeur des titres",
+      "val": "15 016",
+      "op": "=",
+      "style": "ok"
+     }
+    ],
+    "dit": "Moins la dette nette, quatre mille : valeur des titres, quinze millions seize mille euros."
+   },
+   {
+    "voix": "La valeur terminale pèse plus de 80 % : commente toujours sa sensibilité.",
+    "dit": "La valeur terminale pèse plus de quatre-vingts pour cent : commente toujours sa sensibilité."
+   }
+  ]
+ },
+ {
+  "id": "m-levier",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "accroche": "S'endetter augmente la rentabilité des actionnaires. Jusqu'à quand ?",
+  "segments": [
+   {
+    "voix": "S'endetter augmente la rentabilité des actionnaires. Jusqu'à quand ?",
+    "dit": "S'endetter augmente la rentabilité des actionnaires. Jusqu'à quand ?"
+   },
+   {
+    "voix": "ROCE : 9 %. Coût de la dette après impôt : 3,75 %. Dette sur capitaux propres : 4 / 6.",
+    "rangs": [
+     {
+      "lib": "ROCE",
+      "val": "9 %"
+     },
+     {
+      "lib": "Coût de la dette net",
+      "val": "3,75 %"
+     },
+     {
+      "lib": "Dette / capitaux propres",
+      "val": "4 / 6"
+     }
+    ],
+    "titre": "Effet de levier",
+    "dit": "R.O.C.E : neuf pour cent. Coût de la dette après impôt : trois virgule soixante-quinze pour cent. Dette sur capitaux propres : quatre sur six."
+   },
+   {
+    "voix": "ROE = 9 % + (9 − 3,75) × 4/6 = 12,5 %.",
+    "rangs": [
+     {
+      "lib": "ROE",
+      "val": "12,5 %",
+      "op": "=",
+      "style": "ok"
+     }
+    ],
+    "dit": "R.O.E : neuf pour cent, plus l'écart de cinq virgule vingt-cinq points, multiplié par quatre sixièmes. Soit douze virgule cinq pour cent."
+   },
+   {
+    "voix": "Tant que le ROCE dépasse le coût de la dette, la dette booste le ROE.",
+    "dit": "Tant que le R.O.C.E dépasse le coût de la dette, la dette booste le R.O.E."
+   },
+   {
+    "voix": "Mais elle augmente aussi le risque. C'est tout l'enjeu du LBO.",
+    "dit": "Mais elle augmente aussi le risque. C'est tout l'enjeu du L.B.O."
+   }
+  ]
+ },
+ {
+  "id": "m-seuil",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "accroche": "À partir de quel chiffre d'affaires ta boîte gagne-t-elle de l'argent ?",
+  "segments": [
+   {
+    "voix": "À partir de quel chiffre d'affaires ta boîte gagne-t-elle de l'argent ?",
+    "dit": "À partir de quel chiffre d'affaires ta boîte gagne-t-elle de l'argent ?"
+   },
+   {
+    "voix": "Chiffre d'affaires : 800 k€. Charges variables : 480 k€. Marge sur coût variable : 320 k€, soit 40 %.",
+    "rangs": [
+     {
+      "lib": "Chiffre d'affaires",
+      "val": "800"
+     },
+     {
+      "lib": "Charges variables",
+      "val": "480",
+      "op": "−"
+     },
+     {
+      "lib": "Marge sur coût variable",
+      "val": "320 (40 %)",
+      "op": "=",
+      "style": "fort"
+     }
+    ],
+    "titre": "Seuil de rentabilité, en k€",
+    "dit": "Chiffre d'affaires : huit cent mille euros. Charges variables : quatre cent quatre-vingts mille euros. Marge sur coût variable : trois cent vingt mille euros, soit quarante pour cent."
+   },
+   {
+    "voix": "Seuil : charges fixes divisées par le taux de marge. 240 ÷ 40 % = 600 k€.",
+    "rangs": [
+     {
+      "lib": "Charges fixes",
+      "val": "240"
+     },
+     {
+      "lib": "Seuil de rentabilité",
+      "val": "600",
+      "op": "=",
+      "style": "ok"
+     }
+    ],
+    "dit": "Seuil : charges fixes divisées par le taux de marge. deux cent quarante divisé par quarante pour cent égale six cent mille euros."
+   },
+   {
+    "voix": "Activité régulière : seuil atteint au bout de 9 mois, fin septembre.",
+    "dit": "Activité régulière : seuil atteint au bout de neuf mois, fin septembre."
+   },
+   {
+    "voix": "Au-delà, chaque euro de marge est du bénéfice.",
+    "dit": "Au-delà, chaque euro de marge est du bénéfice."
+   }
+  ]
+ },
+ {
+  "id": "m-frng-bfr",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "accroche": "FRNG, BFR, trésorerie : une seule équation à retenir.",
+  "segments": [
+   {
+    "voix": "FRNG, BFR, trésorerie : une seule équation à retenir.",
+    "dit": "F.R.N.G, B.F.R, trésorerie : une seule équation à retenir."
+   },
+   {
+    "voix": "Ressources stables 900, emplois stables 700 : fonds de roulement de 200 k€.",
+    "rangs": [
+     {
+      "lib": "Ressources stables",
+      "val": "900"
+     },
+     {
+      "lib": "Emplois stables",
+      "val": "700",
+      "op": "−"
+     },
+     {
+      "lib": "FRNG",
+      "val": "200",
+      "op": "=",
+      "style": "fort"
+     }
+    ],
+    "titre": "Bilan fonctionnel, en k€",
+    "dit": "Ressources stables neuf cents, emplois stables sept cents : fonds de roulement de deux cent mille euros."
+   },
+   {
+    "voix": "Besoin en fonds de roulement : 140 k€.",
+    "rangs": [
+     {
+      "lib": "BFR",
+      "val": "140",
+      "op": "−"
+     }
+    ],
+    "dit": "Besoin en fonds de roulement : cent quarante mille euros."
+   },
+   {
+    "voix": "Trésorerie nette : 200 − 140 = 60 k€.",
+    "rangs": [
+     {
+      "lib": "Trésorerie nette",
+      "val": "60",
+      "op": "=",
+      "style": "ok"
+     }
+    ],
+    "dit": "Trésorerie nette : deux cents moins cent quarante égale soixante mille euros."
+   },
+   {
+    "voix": "Si le BFR dépasse le fonds de roulement, c'est la banque qui finance.",
+    "dit": "Si le B.F.R dépasse le fonds de roulement, c'est la banque qui finance."
+   }
+  ]
+ },
+ {
+  "id": "m-dps",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "accroche": "Augmentation de capital : l'actionnaire perd-il de l'argent ? Non, grâce au DPS.",
+  "segments": [
+   {
+    "voix": "Augmentation de capital : l'actionnaire perd-il de l'argent ? Non, grâce au DPS.",
+    "dit": "Augmentation de capital : l'actionnaire perd-il de l'argent ? Non, grâce au D.P.S."
+   },
+   {
+    "voix": "Action à 50 €. On émet 1 action nouvelle à 40 € pour 4 anciennes.",
+    "rangs": [
+     {
+      "lib": "4 actions à 50 €",
+      "val": "200 €"
+     },
+     {
+      "lib": "1 action à 40 €",
+      "val": "40 €",
+      "op": "+"
+     }
+    ],
+    "titre": "Droit préférentiel",
+    "dit": "Action à cinquante euros. On émet un action nouvelle à quarante euros pour quatre anciennes."
+   },
+   {
+    "voix": "Cours théorique : 240 ÷ 5 = 48 €. Valeur du droit : 2 €.",
+    "rangs": [
+     {
+      "lib": "Cours après émission",
+      "val": "48 €",
+      "op": "=",
+      "style": "fort"
+     },
+     {
+      "lib": "Valeur du DPS",
+      "val": "2 €",
+      "style": "ok"
+     }
+    ],
+    "dit": "Cours théorique : deux cent quarante divisé par cinq égale quarante-huit euros. Valeur du droit : deux euros."
+   },
+   {
+    "voix": "Celui qui vend ses 4 droits garde 4 × 48 = 192 €, plus 8 € : 200 €. Comme avant.",
+    "dit": "Celui qui vend ses quatre droits garde quatre fois quarante-huit égale cent quatre-vingt-douze euros, plus huit euros : deux cents euros. Comme avant."
+   },
+   {
+    "voix": "Le droit préférentiel protège l'actionnaire de la dilution.",
+    "dit": "Le droit préférentiel protège l'actionnaire de la dilution."
+   }
+  ]
+ },
+ {
+  "id": "m-rachat-actions",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "accroche": "Racheter ses propres actions fait monter le BPA. Mais attention.",
+  "segments": [
+   {
+    "voix": "Racheter ses propres actions fait monter le BPA. Mais attention.",
+    "dit": "Racheter ses propres actions fait monter le B.P.A. Mais attention."
+   },
+   {
+    "voix": "10 M€ de résultat, 10 millions d'actions : BPA de 1 €.",
+    "rangs": [
+     {
+      "lib": "Résultat net",
+      "val": "10 M€"
+     },
+     {
+      "lib": "Actions",
+      "val": "10 millions",
+      "op": "÷"
+     },
+     {
+      "lib": "BPA",
+      "val": "1 €",
+      "op": "=",
+      "style": "fort"
+     }
+    ],
+    "titre": "Rachat d'actions",
+    "dit": "dix millions d'euros de résultat, dix millions d'actions : B.P.A de un euros."
+   },
+   {
+    "voix": "On rachète et annule 1 million d'actions : le BPA passe à 1,11 €.",
+    "rangs": [
+     {
+      "lib": "Actions après rachat",
+      "val": "9 millions",
+      "op": "÷"
+     },
+     {
+      "lib": "BPA",
+      "val": "1,11 €",
+      "op": "=",
+      "style": "ok"
+     }
+    ],
+    "dit": "On rachète et annule un million d'actions : le B.P.A passe à un euros onze."
+   },
+   {
+    "voix": "Mais la trésorerie utilisée ne rapporte plus d'intérêts : le vrai gain est plus faible.",
+    "dit": "Mais la trésorerie utilisée ne rapporte plus d'intérêts : le vrai gain est plus faible."
+   },
+   {
+    "voix": "En société cotée, le rachat est plafonné à 10 % du capital.",
+    "dit": "En société cotée, le rachat est plafonné à dix pour cent du capital."
+   }
+  ]
+ },
+ {
+  "id": "m-rente",
+  "modele": "finance",
+  "tag": "Dessine-moi le M&A",
+  "accroche": "Le goodwill d'une PME, ça se calcule : la méthode de la rente.",
+  "segments": [
+   {
+    "voix": "Le goodwill d'une PME, ça se calcule : la méthode de la rente.",
+    "dit": "Le goodwill d'une P.M.E, ça se calcule : la méthode de la rente."
+   },
+   {
+    "voix": "ANCC : 4 M€ de capitaux propres, plus 1 M€ de plus-value nette : 5 M€.",
+    "rangs": [
+     {
+      "lib": "ANCC",
+      "val": "5 M€",
+      "style": "fort"
+     }
+    ],
+    "titre": "Méthode mixte",
+    "dit": "A.N.C.C : quatre millions d'euros de capitaux propres, plus un million d'euros de plus-value nette : cinq millions d'euros."
+   },
+   {
+    "voix": "Superbénéfice : 900 000 € de bénéfice, moins 8 % de 6 M€ engagés. 420 000 € par an.",
+    "rangs": [
+     {
+      "lib": "Superbénéfice par an",
+      "val": "420 000 €"
+     }
+    ],
+    "dit": "Superbénéfice : neuf cent mille euros de bénéfice, moins huit pour cent de six millions d'euros engagés. quatre cent vingt mille euros par an."
+   },
+   {
+    "voix": "Actualisé sur 5 ans à 10 % : goodwill de 1,59 M€. Valeur : 6,59 M€.",
+    "rangs": [
+     {
+      "lib": "Goodwill (rente)",
+      "val": "1,59 M€",
+      "op": "+"
+     },
+     {
+      "lib": "Valeur",
+      "val": "6,59 M€",
+      "op": "=",
+      "style": "ok"
+     }
+    ],
+    "dit": "Actualisé sur cinq ans à dix pour cent : goodwill de un virgule cinquante-neuf millions d'euros. Valeur : six virgule cinquante-neuf millions d'euros."
+   },
+   {
+    "voix": "Idéal pour les sociétés à forts actifs. Pour la croissance, on préfère les flux.",
+    "dit": "Idéal pour les sociétés à forts actifs. Pour la croissance, on préfère les flux."
+   }
+  ]
+ },
+ {
+  "id": "m-duration",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "accroche": "Les taux montent : ton obligation perd de la valeur. De combien ?",
+  "segments": [
+   {
+    "voix": "Les taux montent : ton obligation perd de la valeur. De combien ?",
+    "dit": "Les taux montent : ton obligation perd de la valeur. De combien ?"
+   },
+   {
+    "voix": "Obligation de 1 000 €, coupon 5 %, 3 ans. Duration : 2,86 ans.",
+    "rangs": [
+     {
+      "lib": "Duration",
+      "val": "2,86 ans"
+     }
+    ],
+    "titre": "Risque de taux",
+    "dit": "Obligation de mille euros, coupon cinq pour cent, trois ans. Duration : deux virgule quatre-vingt-six ans."
+   },
+   {
+    "voix": "Sensibilité : 2,86 ÷ 1,05 = 2,72.",
+    "rangs": [
+     {
+      "lib": "Sensibilité",
+      "val": "2,72",
+      "op": "=",
+      "style": "fort"
+     }
+    ],
+    "dit": "Sensibilité : deux virgule quatre-vingt-six divisé par un virgule zéro cinq égale deux virgule soixante-douze."
+   },
+   {
+    "voix": "Les taux montent d'un point ? Le prix baisse d'environ 2,72 %.",
+    "rangs": [
+     {
+      "lib": "Taux + 1 point → prix",
+      "val": "− 2,72 %",
+      "style": "ok"
+     }
+    ],
+    "dit": "Les taux montent d'un point ? Le prix baisse d'environ deux virgule soixante-douze pour cent."
+   },
+   {
+    "voix": "Plus la maturité est longue et le coupon faible, plus le risque est fort.",
+    "dit": "Plus la maturité est longue et le coupon faible, plus le risque est fort."
+   }
+  ]
+ },
+ {
+  "id": "d-mere-fille",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "accroche": "Faire remonter 200 000 € de dividendes dans ta holding, sans presque payer d'impôt.",
+  "segments": [
+   {
+    "voix": "Faire remonter 200 000 € de dividendes dans ta holding, sans presque payer d'impôt.",
+    "dit": "Faire remonter deux cent mille euros de dividendes dans ta holding, sans presque payer d'impôt."
+   },
+   {
+    "voix": "Régime mère-fille : au moins 5 % du capital, titres gardés 2 ans, mère à l'IS.",
+    "rangs": [
+     {
+      "lib": "Au moins 5 % du capital",
+      "val": "✓"
+     },
+     {
+      "lib": "Titres conservés 2 ans",
+      "val": "✓"
+     },
+     {
+      "lib": "Mère soumise à l'IS",
+      "val": "✓"
+     }
+    ],
+    "titre": "Régime mère-fille",
+    "dit": "Régime mère-fille : au moins cinq pour cent du capital, titres gardés deux ans, mère à l'I.S."
+   },
+   {
+    "voix": "Le dividende sort du résultat fiscal, mais on réintègre 5 % de frais et charges.",
+    "rangs": [
+     {
+      "lib": "Dividende déduit",
+      "val": "200 000",
+      "op": "−"
+     },
+     {
+      "lib": "Quote-part réintégrée",
+      "val": "10 000",
+      "op": "+"
+     }
+    ],
+    "dit": "Le dividende sort du résultat fiscal, mais on réintègre cinq pour cent de frais et charges."
+   },
+   {
+    "voix": "Seuls 10 000 € sont imposés. Et 1 % dans un groupe intégré.",
+    "rangs": [
+     {
+      "lib": "Base imposable",
+      "val": "10 000",
+      "op": "=",
+      "style": "ok"
+     }
+    ],
+    "dit": "Seuls dix mille euros sont imposés. Et un pour cent dans un groupe intégré."
+   },
+   {
+    "voix": "C'est la base de tous les montages de holding.",
+    "dit": "C'est la base de tous les montages de holding."
+   }
+  ]
+ },
+ {
+  "id": "d-integration",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "accroche": "Compenser les pertes d'une filiale avec les bénéfices d'une autre ? C'est l'intégration fiscale.",
+  "segments": [
+   {
+    "voix": "Compenser les pertes d'une filiale avec les bénéfices d'une autre ? C'est l'intégration fiscale.",
+    "dit": "Compenser les pertes d'une filiale avec les bénéfices d'une autre ? C'est l'intégration fiscale."
+   },
+   {
+    "voix": "Condition clé : la mère détient au moins 95 % de chaque filiale. Option pour 5 exercices.",
+    "rangs": [
+     {
+      "lib": "95 % du capital",
+      "val": "✓"
+     },
+     {
+      "lib": "Option pour 5 exercices",
+      "val": "✓"
+     }
+    ],
+    "titre": "Intégration fiscale",
+    "dit": "Condition clé : la mère détient au moins quatre-vingt-quinze pour cent de chaque filiale. Option pour cinq exercices."
+   },
+   {
+    "voix": "Logifret gagne 300 000 €, Atelier Nord perd 120 000 €.",
+    "rangs": [
+     {
+      "lib": "Logifret",
+      "val": "+ 300 000"
+     },
+     {
+      "lib": "Atelier Nord",
+      "val": "− 120 000"
+     }
+    ],
+    "dit": "Logifret gagne trois cent mille euros, Atelier Nord perd cent vingt mille euros."
+   },
+   {
+    "voix": "Résultat d'ensemble : 180 000 €, au lieu de 300 000 € imposés.",
+    "rangs": [
+     {
+      "lib": "Résultat d'ensemble",
+      "val": "180 000",
+      "op": "=",
+      "style": "ok"
+     }
+    ],
+    "dit": "Résultat d'ensemble : cent quatre-vingts mille euros, au lieu de trois cent mille euros imposés."
+   },
+   {
+    "voix": "C'est pour ça qu'un LBO vise 95 % : les intérêts de la holding s'imputent sur la cible.",
+    "dit": "C'est pour ça qu'un L.B.O vise quatre-vingt-quinze pour cent : les intérêts de la holding s'imputent sur la cible."
+   }
+  ]
+ },
+ {
+  "id": "d-concentrations",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "accroche": "Racheter un concurrent sans feu vert ? Interdit au-dessus des seuils.",
+  "segments": [
+   {
+    "voix": "Racheter un concurrent sans feu vert ? Interdit au-dessus des seuils.",
+    "dit": "Racheter un concurrent sans feu vert ? Interdit au-dessus des seuils."
+   },
+   {
+    "voix": "Contrôle en France : plus de 150 M€ de chiffre d'affaires mondial cumulé, et deux parties à plus de 50 M€ en France.",
+    "rangs": [
+     {
+      "lib": "CA mondial total",
+      "val": "> 150 M€"
+     },
+     {
+      "lib": "2 parties, en France",
+      "val": "> 50 M€"
+     }
+    ],
+    "titre": "Contrôle des concentrations",
+    "dit": "Contrôle en France : plus de cent cinquante millions d'euros de chiffre d'affaires mondial cumulé, et deux parties à plus de cinquante millions d'euros en France."
+   },
+   {
+    "voix": "Notification avant l'opération. Phase 1 : 25 jours ouvrés. Phase 2 : 65.",
+    "rangs": [
+     {
+      "lib": "Phase 1",
+      "val": "25 jours ouvrés"
+     },
+     {
+      "lib": "Phase 2",
+      "val": "65 jours ouvrés"
+     }
+    ],
+    "dit": "Notification avant l'opération. Phase un : vingt-cinq jours ouvrés. Phase deux : soixante-cinq."
+   },
+   {
+    "voix": "Réaliser l'opération trop tôt : jusqu'à 5 % du chiffre d'affaires en France.",
+    "rangs": [
+     {
+      "lib": "Sanction",
+      "val": "≤ 5 % CA",
+      "style": "fort"
+     }
+    ],
+    "dit": "Réaliser l'opération trop tôt : jusqu'à cinq pour cent du chiffre d'affaires en France."
+   },
+   {
+    "voix": "En M&A, c'est la première question de la check-list.",
+    "dit": "En M and A, c'est la première question de la check-list."
+   }
+  ]
+ },
+ {
+  "id": "d-seuils-opa",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "accroche": "Tu passes 5 % d'une société cotée. Tu as 4 jours pour le dire.",
+  "segments": [
+   {
+    "voix": "Tu passes 5 % d'une société cotée. Tu as 4 jours pour le dire.",
+    "dit": "Tu passes cinq pour cent d'une société cotée. Tu as quatre jours pour le dire."
+   },
+   {
+    "voix": "Seuils à déclarer : 5, 10, 15, 20, 25, 30 %, un tiers, la moitié, deux tiers, 90 et 95 %.",
+    "rangs": [
+     {
+      "lib": "5 · 10 · 15 · 20 · 25 · 30 %",
+      "val": ""
+     },
+     {
+      "lib": "1/3 · 1/2 · 2/3 · 90 · 95 %",
+      "val": ""
+     }
+    ],
+    "titre": "Franchissements de seuils",
+    "dit": "Seuils à déclarer : cinq, dix, quinze, vingt, vingt-cinq, trente pour cent, un tiers, la moitié, deux tiers, quatre-vingt-dix et quatre-vingt-quinze pour cent."
+   },
+   {
+    "voix": "Déclaration à la société et à l'AMF sous 4 jours de bourse. Sinon : droits de vote suspendus 2 ans.",
+    "rangs": [
+     {
+      "lib": "Délai",
+      "val": "4 jours de bourse"
+     },
+     {
+      "lib": "Sanction",
+      "val": "2 ans sans vote",
+      "style": "fort"
+     }
+    ],
+    "dit": "Déclaration à la société et à l'A.M.F sous quatre jours de bourse. Sinon : droits de vote suspendus deux ans."
+   },
+   {
+    "voix": "Et à 30 %, offre publique obligatoire sur tout le capital.",
+    "rangs": [
+     {
+      "lib": "Offre publique obligatoire",
+      "val": "30 %",
+      "style": "ok"
+     }
+    ],
+    "dit": "Et à trente pour cent, offre publique obligatoire sur tout le capital."
+   },
+   {
+    "voix": "La Bourse, c'est la transparence avant tout.",
+    "dit": "La Bourse, c'est la transparence avant tout."
+   }
+  ]
+ },
+ {
+  "id": "d-fusion-procedure",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "accroche": "Une fusion, ça ne se signe pas en un jour.",
+  "segments": [
+   {
+    "voix": "Une fusion, ça ne se signe pas en un jour.",
+    "dit": "Une fusion, ça ne se signe pas en un jour."
+   },
+   {
+    "voix": "Le projet de fusion est publié au moins 30 jours avant les assemblées.",
+    "rangs": [
+     {
+      "lib": "1. Projet publié",
+      "val": "J − 30"
+     }
+    ],
+    "titre": "Procédure de fusion",
+    "dit": "Le projet de fusion est publié au moins trente jours avant les assemblées."
+   },
+   {
+    "voix": "Un commissaire à la fusion vérifie la parité. Le CSE est consulté.",
+    "rangs": [
+     {
+      "lib": "2. Commissaire et CSE",
+      "val": "✓"
+     }
+    ],
+    "dit": "Un commissaire à la fusion vérifie la parité. Le C.S.E est consulté."
+   },
+   {
+    "voix": "Les assemblées approuvent. Les créanciers ont 30 jours pour faire opposition.",
+    "rangs": [
+     {
+      "lib": "3. Assemblées extraordinaires",
+      "val": "✓"
+     },
+     {
+      "lib": "4. Opposition des créanciers",
+      "val": "30 jours"
+     }
+    ],
+    "dit": "Les assemblées approuvent. Les créanciers ont trente jours pour faire opposition."
+   },
+   {
+    "voix": "L'absorbée disparaît sans liquidation : tout son patrimoine passe à l'absorbante.",
+    "rangs": [
+     {
+      "lib": "Transmission universelle",
+      "val": "✓",
+      "op": "=",
+      "style": "ok"
+     }
+    ],
+    "dit": "L'absorbée disparaît sans liquidation : tout son patrimoine passe à l'absorbante."
+   }
+  ]
+ },
+ {
+  "id": "d-abs",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "accroche": "Payer ses vacances avec la carte de la société : jusqu'à 5 ans de prison.",
+  "segments": [
+   {
+    "voix": "Payer ses vacances avec la carte de la société : jusqu'à 5 ans de prison.",
+    "dit": "Payer ses vacances avec la carte de la société : jusqu'à cinq ans de prison."
+   },
+   {
+    "voix": "Abus de biens sociaux : le dirigeant utilise les biens de la société contre son intérêt, pour lui, de mauvaise foi.",
+    "rangs": [
+     {
+      "lib": "Usage des biens ou du crédit",
+      "val": "✓"
+     },
+     {
+      "lib": "Contraire à l'intérêt social",
+      "val": "✓"
+     },
+     {
+      "lib": "Intérêt personnel, mauvaise foi",
+      "val": "✓"
+     }
+    ],
+    "titre": "Abus de biens sociaux",
+    "dit": "Abus de biens sociaux : le dirigeant utilise les biens de la société contre son intérêt, pour lui, de mauvaise foi."
+   },
+   {
+    "voix": "L'accord des associés n'efface rien. L'intention de rembourser non plus.",
+    "dit": "L'accord des associés n'efface rien. L'intention de rembourser non plus."
+   },
+   {
+    "voix": "Peine : 5 ans et 375 000 €. Prescription : 6 ans après la découverte, 12 ans maximum.",
+    "rangs": [
+     {
+      "lib": "Peine (+ 375 000 €)",
+      "val": "5 ans",
+      "style": "fort"
+     },
+     {
+      "lib": "Prescription",
+      "val": "6 ans (12 max)"
+     }
+    ],
+    "dit": "Peine : cinq ans et trois cent soixante-quinze mille euros. Prescription : six ans après la découverte, douze ans maximum."
+   },
+   {
+    "voix": "En audit d'acquisition, on le cherche dans les comptes courants.",
+    "dit": "En audit d'acquisition, on le cherche dans les comptes courants."
+   }
+  ]
+ },
+ {
+  "id": "d-cession-sarl",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "accroche": "Vendre tes parts de SARL à un tiers ? Pas sans l'accord des autres.",
+  "segments": [
+   {
+    "voix": "Vendre tes parts de SARL à un tiers ? Pas sans l'accord des autres.",
+    "dit": "Vendre tes parts de SARL à un tiers ? Pas sans l'accord des autres."
+   },
+   {
+    "voix": "Agrément : majorité des associés représentant au moins la moitié des parts.",
+    "rangs": [
+     {
+      "lib": "Majorité des associés",
+      "val": "✓"
+     },
+     {
+      "lib": "Au moins 50 % des parts",
+      "val": "✓"
+     }
+    ],
+    "titre": "Cession de parts de SARL",
+    "dit": "Agrément : majorité des associés représentant au moins la moitié des parts."
+   },
+   {
+    "voix": "Refus ? Les associés doivent racheter, ou faire racheter, dans les 3 mois.",
+    "rangs": [
+     {
+      "lib": "Refus",
+      "val": "rachat 3 mois"
+     }
+    ],
+    "dit": "Refus ? Les associés doivent racheter, ou faire racheter, dans les trois mois."
+   },
+   {
+    "voix": "Droits d'enregistrement : 3 % après un abattement de 23 000 €. Pour des actions : 0,1 %.",
+    "rangs": [
+     {
+      "lib": "Parts sociales",
+      "val": "3 %"
+     },
+     {
+      "lib": "Actions",
+      "val": "0,1 %"
+     }
+    ],
+    "dit": "Droits d'enregistrement : trois pour cent après un abattement de vingt-trois mille euros. Pour des actions : zéro virgule un pour cent."
+   },
+   {
+    "voix": "En SAS, tout dépend des statuts : une cession contraire à l'agrément est nulle.",
+    "dit": "En S.A.S, tout dépend des statuts : une cession contraire à l'agrément est nulle."
+   }
+  ]
+ }
 ]
