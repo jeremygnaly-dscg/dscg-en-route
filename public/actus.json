@@ -1,5 +1,5 @@
 {
- "majLe": "2026-10-29T05:52:23.656Z",
+ "majLe": "2026-10-29T11:52:18.671Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -20,9 +20,8 @@
   },
   {
    "nom": "Village de la Justice",
-   "url": "https://www.village-justice.com/articles/spip.php?page=backend",
-   "ok": true,
-   "articles": 1
+   "ok": false,
+   "articles": 0
   },
   {
    "nom": "Le Monde du Droit",
@@ -38,25 +37,25 @@
    "nom": "CNIL",
    "url": "https://www.cnil.fr/fr/rss.xml",
    "ok": true,
-   "articles": 1
+   "articles": 2
   },
   {
    "nom": "Le Monde Économie",
    "url": "https://www.lemonde.fr/economie/rss_full.xml",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Capital",
@@ -76,6 +75,36 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "cnil-https-www-cnil-fr-fr-sanction-cookies-app-fnac",
+   "titre": "Cookies et application mobile : sanctions de 7 millions d’euros à l’encontre des sociétés FNAC DARTY PARTICIPATIONS ET SERVICES et FNAC DIRECT",
+   "url": "https://www.cnil.fr/fr/sanction-cookies-app-fnac",
+   "source": "CNIL",
+   "officiel": true,
+   "date": "2026-10-29T12:00:00.000Z",
+   "categorie": "Droit des affaires",
+   "score": 4
+  },
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-les-decodeurs-article-2026-10-29-superprofits-de-totalenergies-est-il-vraiment-pos",
+   "titre": "Superprofits de TotalEnergies : est-il vraiment possible de taxer les bénéfices exceptionnels des pétroliers ?",
+   "url": "https://www.lemonde.fr/les-decodeurs/article/2026/10/29/superprofits-de-totalenergies-est-il-vraiment-possible-de-taxer-les-benefices-exceptionnels-des-petroliers_6686551_4355771.html",
+   "source": "Le Monde Économie",
+   "date": "2026-10-29T09:39:51.000Z",
+   "image": "https://img.lemde.fr/2026/05/07/0/0/3852/1926/644/322/60/0/03af0fb_upload-1-v5jrqydc1k1y-000-36ne2vv.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-entreprises-shein-petits-colis-le-patron-du-pret-a-porter-feminin-se",
+   "titre": "Petits colis : le patron du prêt-à-porter féminin se réjouit de la chute des envois mais estime que \"la guerre contre Shein n'est absolument pas gagnée\"",
+   "url": "https://www.franceinfo.fr/economie/entreprises/shein/petits-colis-le-patron-du-pret-a-porter-feminin-se-rejouit-de-la-chute-des-envois-mais-estime-que-la-guerre-contre-shein-n-est-absolument-pas-gagnee_8258429.html#xtor=RSS-3-%5Bgeneral%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-10-29T07:01:37.000Z",
+   "image": "https://www.franceinfo.fr/pictures/3tGfXSIS9Ks836gTx65KOb6NuF0/0x290:5568x3422/432x243/filters:format(jpg)/2025/11/06/maxnewsspecialtwo365465-690c3a838e096491158396.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
   {
    "id": "village-de-la-justice-https-www-village-justice-com-articles-nouvelle-parution-travail-ombre-ombre-travail-59528-html-ut",
    "titre": "[Nouvelle parution] Le travail de l'ombre, et l'ombre du travail.",
@@ -847,37 +876,6 @@
    "image": "https://www.service-public.gouv.fr/webapp/images/actu/extralarge/homme_bureau_tasse.jpeg",
    "categorie": "Fiscalité",
    "score": 3
-  },
-  {
-   "id": "cnil-https-www-cnil-fr-fr-ril-2026",
-   "titre": "Rencontres Informatique & Libertés 2026 : voir la rediffusion de l'évènement",
-   "url": "https://www.cnil.fr/fr/ril-2026",
-   "source": "CNIL",
-   "officiel": true,
-   "date": "2026-10-09T12:00:00.000Z",
-   "categorie": "Finance",
-   "score": 4
-  },
-  {
-   "id": "entreprendre-service-public-https-entreprendre-service-public-gouv-fr-actualites-a19090-xtor-rss-112",
-   "titre": "Les travailleurs indépendants ne peuvent pas payer l’Urssaf par carte bancaire au-delà de 1 000 euros",
-   "url": "https://entreprendre.service-public.gouv.fr/actualites/A19090?xtor=RSS-112",
-   "source": "Entreprendre Service-Public",
-   "officiel": true,
-   "date": "2026-10-08T22:00:00.000Z",
-   "image": "https://www.service-public.gouv.fr/resources/v-354f300000/assets/img/sp-share.png",
-   "categorie": "Social",
-   "score": 3
-  },
-  {
-   "id": "cnil-https-www-cnil-fr-fr-cloture-injonction-france-travail",
-   "titre": "Clôture de l’injonction prononcée à l’encontre de FRANCE TRAVAIL",
-   "url": "https://www.cnil.fr/fr/cloture-injonction-france-travail",
-   "source": "CNIL",
-   "officiel": true,
-   "date": "2026-10-08T12:00:00.000Z",
-   "categorie": "Numérique",
-   "score": 2
   }
  ],
  "ecartes": []
