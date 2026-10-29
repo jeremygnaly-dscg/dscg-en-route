@@ -203,7 +203,7 @@
   "segments": [
    {
     "voix": "Ton premier mot en M&A ? EBITDA. Et tu l'apprends en DCG.",
-    "dit": "Ton premier mot en {MA} ? Ébitda. Et tu l'apprends en {DCG}."
+    "dit": "Ton premier mot en fusions-acquisitions ? Ébitda. Et tu l'apprends en dé-cé-gé."
    },
    {
     "voix": "Les SIG découpent le résultat. De la valeur ajoutée, on retire impôts, taxes et salaires : c'est l'EBE.",
@@ -260,7 +260,7 @@
     ],
     "titre": "De l'EBE à l'EBITDA, en k€",
     "efface": true,
-    "dit": "En {MA}, l'Ébitda, c'est quasiment l'E.B.E, avec la participation des salariés traitée en charge de personnel."
+    "dit": "En fusions-acquisitions, l'Ébitda, c'est quasiment l'E.B.E, avec la participation des salariés traitée en charge de personnel."
    },
    {
     "voix": "Et une PME se valorise souvent en multiple d'EBITDA : 6 × 185 k€, soit 1,11 M€.",
@@ -277,11 +277,11 @@
       "style": "ok"
      }
     ],
-    "dit": "Et une P.M.E se valorise souvent en multiple d'Ébitda : six fois cent quatre-vingt-cinq mille euros, soit un virgule onze million d'euros."
+    "dit": "Et une P.M.E se valorise souvent en multiple d'Ébitda : six fois cent quatre-vingt-cinq mille euros, soit un virgule onze millions d'euros."
    },
    {
     "voix": "Maîtrise tes SIG en DCG : en M&A, c'est ton quotidien.",
-    "dit": "Maîtrise tes S.I.G en {DCG} : en {MA}, c'est ton quotidien."
+    "dit": "Maîtrise tes S.I.G en dé-cé-gé : en fusions-acquisitions, c'est ton quotidien."
    }
   ]
  },
@@ -463,7 +463,7 @@
      }
     ],
     "titre": "Du multiple au prix",
-    "dit": "En {MA}, on valorise d'abord toute l'entreprise : Ébitda de deux millions d'euros, multiple de sept. Valeur d'entreprise : quatorze millions d'euros."
+    "dit": "En fusions-acquisitions, on valorise d'abord toute l'entreprise : Ébitda de deux millions d'euros, multiple de sept. Valeur d'entreprise : quatorze millions d'euros."
    },
    {
     "voix": "Mais l'acheteur reprend aussi la dette. On retire la dette nette : 4 M€.",
@@ -618,7 +618,7 @@
    },
    {
     "voix": "En M&A, on teste toujours la marge de sécurité sur ce ratio.",
-    "dit": "En {MA}, on teste toujours la marge de sécurité sur ce ratio."
+    "dit": "En fusions-acquisitions, on teste toujours la marge de sécurité sur ce ratio."
    }
   ]
  },
@@ -843,7 +843,7 @@
    },
    {
     "voix": "En M&A, demande toujours : EBITDA avant ou après IFRS 16 ?",
-    "dit": "En {MA}, demande toujours : Ébitda avant ou après I.F.R.S seize ?"
+    "dit": "En fusions-acquisitions, demande toujours : Ébitda avant ou après I.F.R.S seize ?"
    }
   ]
  },
@@ -1297,7 +1297,7 @@
     "dit": "On actualise trois ans de flux au C.M.P.C de huit pour cent : deux millions huit cent vingt-deux mille euros."
    },
    {
-    "voix": "Puis la valeur terminale, avec Gordon-Shapiro : 20 400, soit 16 194 actualisés.",
+    "voix": "Puis la valeur terminale, avec Gordon-Shapiro : 20 400 k€, soit 16 194 k€ actualisés.",
     "rangs": [
      {
       "lib": "Valeur terminale actualisée",
@@ -1311,10 +1311,10 @@
       "style": "fort"
      }
     ],
-    "dit": "Puis la valeur terminale, avec Gordon-Shapiro : vingt mille quatre cents, soit seize mille cent quatre-vingt-quatorze actualisés."
+    "dit": "Puis la valeur terminale, avec Gordon-Shapiro : vingt millions quatre cent mille euros, soit seize millions cent quatre-vingt-quatorze mille euros actualisés."
    },
    {
-    "voix": "Moins la dette nette, 4 000 : valeur des titres, 15 016 k€.",
+    "voix": "Moins la dette nette, 4 000 k€ : valeur des titres, 15 016 k€.",
     "rangs": [
      {
       "lib": "Dette nette",
@@ -1328,7 +1328,7 @@
       "style": "ok"
      }
     ],
-    "dit": "Moins la dette nette, quatre mille : valeur des titres, quinze millions seize mille euros."
+    "dit": "Moins la dette nette, quatre millions d'euros : valeur des titres, quinze millions seize mille euros."
    },
    {
     "voix": "La valeur terminale pèse plus de 80 % : commente toujours sa sensibilité.",
@@ -1530,7 +1530,7 @@
      }
     ],
     "titre": "Droit préférentiel",
-    "dit": "Action à cinquante euros. On émet un action nouvelle à quarante euros pour quatre anciennes."
+    "dit": "Action à cinquante euros. On émet une action nouvelle à quarante euros pour quatre anciennes."
    },
    {
     "voix": "Cours théorique : 240 ÷ 5 = 48 €. Valeur du droit : 2 €.",
@@ -1589,7 +1589,7 @@
      }
     ],
     "titre": "Rachat d'actions",
-    "dit": "dix millions d'euros de résultat, dix millions d'actions : B.P.A de un euros."
+    "dit": "dix millions d'euros de résultat, dix millions d'actions : B.P.A de un euro."
    },
    {
     "voix": "On rachète et annule 1 million d'actions : le BPA passe à 1,11 €.",
@@ -1606,7 +1606,7 @@
       "style": "ok"
      }
     ],
-    "dit": "On rachète et annule un million d'actions : le B.P.A passe à un euros onze."
+    "dit": "On rachète et annule un million d'actions : le B.P.A passe à un euro onze."
    },
    {
     "voix": "Mais la trésorerie utilisée ne rapporte plus d'intérêts : le vrai gain est plus faible.",
@@ -1895,7 +1895,7 @@
    },
    {
     "voix": "En M&A, c'est la première question de la check-list.",
-    "dit": "En {MA}, c'est la première question de la check-list."
+    "dit": "En fusions-acquisitions, c'est la première question de la check-list."
    }
   ]
  },
@@ -2121,28 +2121,6 @@
    {
     "voix": "En SAS, tout dépend des statuts : une cession contraire à l'agrément est nulle.",
     "dit": "En S.A.S, tout dépend des statuts : une cession contraire à l'agrément est nulle."
-   }
-  ]
- },
- {
-  "id": "test-dcg",
-  "modele": "finance",
-  "accroche": "test",
-  "segments": [
-   {
-    "voix": "Dé-Cé-Gé."
-   },
-   {
-    "voix": "dé, cé, gé."
-   },
-   {
-    "voix": "Le Dé Cé Gé."
-   },
-   {
-    "voix": "Et tu l'apprends en Dé-Cé-Gé."
-   },
-   {
-    "voix": "Maîtrise tes S.I.G en dé, cé, gé : c'est ton quotidien."
    }
   ]
  }
