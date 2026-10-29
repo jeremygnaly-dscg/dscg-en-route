@@ -236,7 +236,7 @@
      }
     ],
     "titre": "Les SIG, en k€",
-    "dit": "Les S.I.G découpent le résultat. De la valeur ajoutée, on retire impôts, taxes et salaires : c'est l'E.B.E."
+    "dit": "Les S.I.G découpent le résultat. De la valeur ajoutée, on retire impôts, taxes et salaires : c'est l'excédent brut d'exploitation."
    },
    {
     "voix": "En M&A, l'EBITDA, c'est quasiment l'EBE, avec la participation des salariés traitée en charge de personnel.",
@@ -260,7 +260,7 @@
     ],
     "titre": "De l'EBE à l'EBITDA, en k€",
     "efface": true,
-    "dit": "En fusions-acquisitions, l'Ébitda, c'est quasiment l'E.B.E, avec la participation des salariés traitée en charge de personnel."
+    "dit": "En fusions-acquisitions, l'Ébitda, c'est quasiment l'excédent brut d'exploitation, avec la participation des salariés traitée en charge de personnel."
    },
    {
     "voix": "Et une PME se valorise souvent en multiple d'EBITDA : 6 × 185 k€, soit 1,11 M€.",
