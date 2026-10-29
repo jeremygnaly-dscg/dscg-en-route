@@ -2123,5 +2123,27 @@
     "dit": "En S.A.S, tout dépend des statuts : une cession contraire à l'agrément est nulle."
    }
   ]
+ },
+ {
+  "id": "test-dcg",
+  "modele": "finance",
+  "accroche": "test",
+  "segments": [
+   {
+    "voix": "Dé-Cé-Gé."
+   },
+   {
+    "voix": "dé, cé, gé."
+   },
+   {
+    "voix": "Le Dé Cé Gé."
+   },
+   {
+    "voix": "Et tu l'apprends en Dé-Cé-Gé."
+   },
+   {
+    "voix": "Maîtrise tes S.I.G en dé, cé, gé : c'est ton quotidien."
+   }
+  ]
  }
 ]
