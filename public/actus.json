@@ -1,5 +1,5 @@
 {
- "majLe": "2026-10-29T11:52:18.671Z",
+ "majLe": "2026-10-29T17:56:00.910Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -11,7 +11,7 @@
    "nom": "Entreprendre Service-Public",
    "url": "https://www.service-public.fr/abonnements/rss/actu-actu-pro.rss",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Compta Online",
@@ -20,7 +20,8 @@
   },
   {
    "nom": "Village de la Justice",
-   "ok": false,
+   "url": "https://www.village-justice.com/articles/spip.php?page=backend",
+   "ok": true,
    "articles": 0
   },
   {
@@ -37,31 +38,31 @@
    "nom": "CNIL",
    "url": "https://www.cnil.fr/fr/rss.xml",
    "ok": true,
-   "articles": 2
+   "articles": 1
   },
   {
    "nom": "Le Monde Économie",
    "url": "https://www.lemonde.fr/economie/rss_full.xml",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 0
+   "articles": 2
   },
   {
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 1
+   "articles": 2
   },
   {
    "nom": "Capital",
    "url": "https://feed.prismamediadigital.com/v1/cap/rss?sources=capital",
    "ok": true,
-   "articles": 0
+   "articles": 2
   }
  ],
  "images": {
@@ -75,6 +76,66 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "capital-https-www-capital-fr-economie-politique-carburants-les-18-centimes-qui-peuvent-couter-cher-au-gouvernement-15314",
+   "titre": "Carburants : les 18 centimes qui peuvent coûter cher au gouvernement",
+   "url": "https://www.capital.fr/economie-politique/carburants-les-18-centimes-qui-peuvent-couter-cher-au-gouvernement-1531406",
+   "source": "Capital",
+   "date": "2026-10-29T17:00:00.000Z",
+   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~10~29~3c6dd9f6-67b4-4fec-b3a7-cccee015bbb9.jpg/1200x900/focus-point/1000%2C1500/carburants-les-18-centimes-qui-peuvent-couter-cher-au-gouvernement.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-vie-professionnelle-sollicitee-279-fois-par-son-employeur-pendant-ses-arrets-mal",
+   "titre": "Sollicitée 279 fois par son employeur pendant ses arrêts maladie et ses congés, elle conteste son licenciement",
+   "url": "https://www.lefigaro.fr/vie-professionnelle/sollicitee-279-fois-par-son-employeur-pendant-ses-arrets-maladie-et-ses-conges-elle-conteste-son-licenciement-20261029",
+   "source": "Le Figaro Économie",
+   "date": "2026-10-29T16:19:19.000Z",
+   "image": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/29/88f6d75ffbab9774439a522e151af010cd782e288f8bb84bf963913bb66dbf47.jpg",
+   "categorie": "Social",
+   "score": 3
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-quelle-est-cette-taxe-emeutes-qui-pourrait-faire-augmenter-les-prix-",
+   "titre": "Quelle est cette «taxe émeutes» qui pourrait faire augmenter les prix des contrats d’assurance ?",
+   "url": "https://www.lefigaro.fr/conjoncture/quelle-est-cette-taxe-emeutes-qui-pourrait-faire-augmenter-les-prix-des-contrats-d-assurance-20261029",
+   "source": "Le Figaro Économie",
+   "date": "2026-10-29T16:07:07.000Z",
+   "image": "https://i.f1g.fr/media/cms/3000x1688_crop/2026/10/29/e3f9ce04c71f29e03c276b51c5d305b9d8e7866958bd33a6d98bf099906ae2a7.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-impots-la-france-retrouve-la-tete-du-classement-des-pays-d-europe-ou",
+   "titre": "La France retrouve la tête du classement des pays d'Europe où l'on a payé le plus de taxes en 2025, selon Eurostat",
+   "url": "https://www.franceinfo.fr/economie/impots/la-france-retrouve-la-tete-du-classement-des-pays-d-europe-ou-l-on-a-paye-le-plus-de-taxes-en-2025-selon-eurostat_8258984.html#xtor=RSS-3-%5Bgeneral%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-10-29T14:51:39.000Z",
+   "image": "https://www.franceinfo.fr/pictures/HQAm_MqNSYemPJIczYZbLEvaxOo/0x0:4299x2418/432x243/filters:format(jpg)/2023/06/10/64844973f1bb0_impo.jpg",
+   "categorie": "Fiscalité",
+   "score": 4
+  },
+  {
+   "id": "capital-https-www-capital-fr-economie-politique-heritage-generationlibre-veut-supprimer-la-reserve-hereditaire-et-taxer-",
+   "titre": "Héritage : GenerationLibre veut supprimer la réserve héréditaire et taxer à 20%",
+   "url": "https://www.capital.fr/economie-politique/heritage-generationlibre-veut-supprimer-la-reserve-hereditaire-et-taxer-a-20-1531395",
+   "source": "Capital",
+   "date": "2026-10-29T14:43:11.000Z",
+   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~10~29~e7e5f543-b9cf-44b8-99d0-4a45612ff72c.jpg/1200x900/focus-point/1012%2C1392/heritage-generationlibre-veut-supprimer-la-reserve-hereditaire-et-taxer-a-20.jpg",
+   "categorie": "Fiscalité",
+   "score": 5
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-transports-prix-des-carburants-quand-on-voit-les-dividendes-qu-ils-g",
+   "titre": "\"Quand on voit les dividendes qu'ils génèrent\" : pourquoi TotalEnergies maintient ses prix plafonnés malgré 500 millions d'euros de pertes annoncées",
+   "url": "https://www.franceinfo.fr/economie/transports/prix-des-carburants/quand-on-voit-les-dividendes-qu-ils-generent-pourquoi-totalenergies-maintient-ses-prix-plafonnes-malgre-500-millions-d-euros-de-pertes-annoncees_8258840.html#xtor=RSS-3-%5Bgeneral%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-10-29T13:06:17.000Z",
+   "image": "https://www.franceinfo.fr/pictures/8APU7sOGNKkTB0oT6lgVRy1slp8/0x0:1920x1080/432x243/filters:format(jpg)/2026/10/29/6ae344a5d8089750139995.jpg",
+   "categorie": "Fiscalité",
+   "score": 5
+  },
   {
    "id": "cnil-https-www-cnil-fr-fr-sanction-cookies-app-fnac",
    "titre": "Cookies et application mobile : sanctions de 7 millions d’euros à l’encontre des sociétés FNAC DARTY PARTICIPATIONS ET SERVICES et FNAC DIRECT",
@@ -814,68 +875,6 @@
    "date": "2026-10-16T12:00:00.000Z",
    "categorie": "Numérique",
    "score": 2
-  },
-  {
-   "id": "economie-gouv-fr-https-www-economie-gouv-fr-actualites-carburant-laide-pour-les-travailleurs-grands-rouleurs",
-   "titre": "Carburant : l'aide pour les travailleurs « grands rouleurs »",
-   "url": "https://www.economie.gouv.fr/actualites/carburant-laide-pour-les-travailleurs-grands-rouleurs",
-   "source": "economie.gouv.fr",
-   "officiel": true,
-   "date": "2026-10-16T09:48:40.000Z",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "entreprendre-service-public-https-entreprendre-service-public-gouv-fr-actualites-a17731-xtor-rss-112",
-   "titre": "Du 1er au 31 octobre, devenez « cyber-responsable » avec le Cybermois !",
-   "url": "https://entreprendre.service-public.gouv.fr/actualites/A17731?xtor=RSS-112",
-   "source": "Entreprendre Service-Public",
-   "officiel": true,
-   "date": "2026-10-15T22:00:00.000Z",
-   "image": "https://www.service-public.gouv.fr/webapp/images/actu/extralarge/homme_ordi_lunettes.jpeg",
-   "categorie": "Numérique",
-   "score": 2
-  },
-  {
-   "id": "cnil-https-www-cnil-fr-fr-cloture-injonction-google",
-   "titre": "Clôture de l’injonction prononcée à l’encontre de GOOGLE",
-   "url": "https://www.cnil.fr/fr/cloture-injonction-google",
-   "source": "CNIL",
-   "officiel": true,
-   "date": "2026-10-14T12:00:00.000Z",
-   "categorie": "Droit des affaires",
-   "score": 4
-  },
-  {
-   "id": "economie-gouv-fr-https-www-economie-gouv-fr-particuliers-preparer-ma-retraite-et-ma-succession-tout-savoir-sur-le-dememb",
-   "titre": "Tout savoir sur le démembrement de propriété",
-   "url": "https://www.economie.gouv.fr/particuliers/preparer-ma-retraite-et-ma-succession/tout-savoir-sur-le-demembrement-de-propriete",
-   "source": "economie.gouv.fr",
-   "officiel": true,
-   "date": "2026-10-14T09:44:38.000Z",
-   "categorie": "Droit des affaires",
-   "score": 4
-  },
-  {
-   "id": "economie-gouv-fr-https-www-economie-gouv-fr-entreprises-gerer-ses-ressources-humaines-et-ses-salaries-employeurs-quels-s",
-   "titre": "Employeurs : quels sont vos droits et obligations lors de l’arrêt de travail d’un salarié ?",
-   "url": "https://www.economie.gouv.fr/entreprises/gerer-ses-ressources-humaines-et-ses-salaries/employeurs-quels-sont-vos-droits-et-obligations-lors-de-larret-de-travail-dun-salarie",
-   "source": "economie.gouv.fr",
-   "officiel": true,
-   "date": "2026-10-13T14:26:10.000Z",
-   "categorie": "Social",
-   "score": 6
-  },
-  {
-   "id": "entreprendre-service-public-https-entreprendre-service-public-gouv-fr-actualites-a17480-xtor-rss-112",
-   "titre": "Versement trimestriel de la taxe sur les salaires : prochaine échéance au 15 octobre",
-   "url": "https://entreprendre.service-public.gouv.fr/actualites/A17480?xtor=RSS-112",
-   "source": "Entreprendre Service-Public",
-   "officiel": true,
-   "date": "2026-10-11T22:00:00.000Z",
-   "image": "https://www.service-public.gouv.fr/webapp/images/actu/extralarge/homme_bureau_tasse.jpeg",
-   "categorie": "Fiscalité",
-   "score": 3
   }
  ],
  "ecartes": []
