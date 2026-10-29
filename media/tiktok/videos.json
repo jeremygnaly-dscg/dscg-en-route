@@ -296,7 +296,7 @@
     "dit": "mille euros dans un an valent moins que mille euros aujourd'hui."
    },
    {
-    "voix": "À 8 %, 1 000 € deviennent 1 080 € dans un an. Actualiser, c'est l'inverse : 1 000 € dans un an valent 926 € aujourd'hui.",
+    "voix": "À 8 %, 1 000 € deviennent 1 080 € dans un an. L'actualisation, c'est l'inverse : 1 000 € dans un an valent 926 € aujourd'hui.",
     "rangs": [
      {
       "lib": "Dans un an",
@@ -314,8 +314,8 @@
       "style": "fort"
      }
     ],
-    "titre": "Actualiser",
-    "dit": "À huit pour cent, mille euros deviennent mille quatre-vingts euros dans un an. Actualiser, c'est l'inverse : mille euros dans un an valent neuf cent vingt-six euros aujourd'hui."
+    "titre": "Actualisation",
+    "dit": "À huit pour cent, mille euros deviennent mille quatre-vingts euros dans un an. L'actualisation, c'est l'inverse : mille euros dans un an valent neuf cent vingt-six euros aujourd'hui."
    },
    {
     "voix": "Un projet coûte 100 000 € et rapporte 30 000 € par an pendant 5 ans.",
@@ -489,8 +489,8 @@
     "dit": "Valeur des titres : dix millions d'euros. C'est le prix des actions."
    },
    {
-    "voix": "Retiens le pont : valeur d'entreprise, moins dette nette, égale valeur des capitaux propres.",
-    "dit": "Retiens le pont : valeur d'entreprise, moins dette nette, égale valeur des capitaux propres."
+    "voix": "Retiens le pont : valeur d'entreprise, moins dette nette, égale valeur des titres.",
+    "dit": "Retiens le pont : valeur d'entreprise, moins dette nette, égale valeur des titres."
    }
   ]
  },
