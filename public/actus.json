@@ -1,5 +1,5 @@
 {
- "majLe": "2026-10-30T11:49:11.194Z",
+ "majLe": "2026-10-30T17:49:41.963Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -38,13 +38,13 @@
    "nom": "CNIL",
    "url": "https://www.cnil.fr/fr/rss.xml",
    "ok": true,
-   "articles": 3
+   "articles": 4
   },
   {
    "nom": "Le Monde Économie",
    "url": "https://www.lemonde.fr/economie/rss_full.xml",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Le Figaro Économie",
@@ -56,13 +56,13 @@
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 2
+   "articles": 0
   },
   {
    "nom": "Capital",
    "url": "https://feed.prismamediadigital.com/v1/cap/rss?sources=capital",
    "ok": true,
-   "articles": 0
+   "articles": 1
   }
  ],
  "images": {
@@ -76,6 +76,36 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "village-de-la-justice-https-www-village-justice-com-articles-harcelement-travail-prescritpion-cas-defaut-prevention-lice",
+   "titre": "Harcèlement moral au travail : prescriptions et délais pour agir. Par M.Kebir, Avocat.",
+   "url": "https://www.village-justice.com/articles/harcelement-travail-prescritpion-cas-defaut-prevention-licenciement-nul,59676.html?utm_source=backend&utm_medium=RSS&utm_campaign=RSS_Reseaux",
+   "source": "Village de la Justice",
+   "date": "2026-10-30T16:00:00.000Z",
+   "image": "https://www.village-justice.com/articles/local/cache-gd2/25/af1913e7168d713ca34bb9f20e86d3.jpg?1792674019",
+   "categorie": "Social",
+   "score": 4
+  },
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-politique-article-2026-10-30-budget-2027-les-deputes-votent-de-nouvelles-taxes-sur",
+   "titre": "Budget 2027 : les députés votent de nouvelles taxes sur les grandes entreprises et adoptent le « pacte Papin »",
+   "url": "https://www.lemonde.fr/politique/article/2026/10/30/budget-2027-les-deputes-votent-de-nouvelles-taxes-sur-les-grandes-entreprises-et-adoptent-le-pacte-papin_6803105_823448.html",
+   "source": "Le Monde Économie",
+   "date": "2026-10-30T15:16:42.000Z",
+   "image": "https://img.lemde.fr/2026/10/30/973/0/5833/2916/644/322/60/0/70f8815_upload-1-q5e2jjczswwe-000-d4kx72w.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "capital-https-www-capital-fr-votre-argent-avoirs-oublies-letat-veut-en-prelever-17-ce-que-les-heritiers-doivent-savoir-1",
+   "titre": "Avoirs oubliés : l’État veut en prélever 17%, ce que les héritiers doivent savoir",
+   "url": "https://www.capital.fr/votre-argent/avoirs-oublies-letat-veut-en-prelever-17-ce-que-les-heritiers-doivent-savoir-1531315",
+   "source": "Capital",
+   "date": "2026-10-30T13:00:00.000Z",
+   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~10~27~962cead8-0dc1-4a73-b356-ee41e20b6841.jpg/1200x900/quality/80/avoirs-oublies-l-etat-veut-en-prelever-17-ce-que-les-heritiers-doivent-savoir.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
   {
    "id": "village-de-la-justice-https-www-village-justice-com-articles-sci-divorce-logement-familial-pris-piege-59732-html-utm-sou",
    "titre": "SCI à l'impôt sur les sociétés et divorce : le logement familial pris au piège. Par Aurélia Compère, Avocat.",
@@ -845,36 +875,6 @@
    "date": "2026-10-19T12:00:00.000Z",
    "categorie": "Numérique",
    "score": 2
-  },
-  {
-   "id": "village-de-la-justice-https-www-village-justice-com-articles-remuneration-associe-sel-apres-annulation-forfait-comment-d",
-   "titre": "Rémunération de l'associé de SEL : après l'annulation du forfait de 5%, comment documenter la ventilation. Par Yassine El Jouaidi, Expert-comptable.",
-   "url": "https://www.village-justice.com/articles/remuneration-associe-sel-apres-annulation-forfait-comment-documenter,58837.html?utm_source=backend&utm_medium=RSS&utm_campaign=RSS_Reseaux",
-   "source": "Village de la Justice",
-   "date": "2026-10-19T08:30:00.000Z",
-   "image": "https://www.village-justice.com/articles/local/cache-gd2/49/dd5f4848833e76ec5dddd96ea58f50.jpg?1792159648",
-   "categorie": "Profession",
-   "score": 12
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-pour-jean-marc-daniel-la-dette-publique-penalisera-en-premier-les-pa",
-   "titre": "Pour Jean-Marc Daniel, la dette publique pénalisera en premier les pauvres",
-   "url": "https://www.lefigaro.fr/conjoncture/pour-jean-marc-daniel-la-dette-publique-penalisera-en-premier-les-pauvres-20261018",
-   "source": "Le Figaro Économie",
-   "date": "2026-10-18T18:18:01.000Z",
-   "image": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/18/d244680e3c78d9491e547aee971192006e0917f76695f737c229ea8ff1157ce5.jpg",
-   "categorie": "Fiscalité",
-   "score": 4
-  },
-  {
-   "id": "capital-https-www-capital-fr-votre-argent-assurance-vie-pourquoi-la-tentation-de-taxer-ses-avantages-revient-avant-la-pr",
-   "titre": "Assurance-vie, pourquoi la tentation de taxer ses avantages revient avant la présidentielle",
-   "url": "https://www.capital.fr/votre-argent/assurance-vie-pourquoi-la-tentation-de-taxer-ses-avantages-revient-avant-la-presidentielle-1531054",
-   "source": "Capital",
-   "date": "2026-10-17T14:00:00.000Z",
-   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~10~16~195bb71c-dca0-4856-9e14-e2744468c124.jpg/1200x900/focus-point/2533%2C1473/assurance-vie-pourquoi-la-tentation-de-taxer-ses-avantages-revient-avant-la-presidentielle.jpg",
-   "categorie": "Fiscalité",
-   "score": 4
   }
  ],
  "ecartes": []
