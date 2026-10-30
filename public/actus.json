@@ -1,5 +1,5 @@
 {
- "majLe": "2026-10-29T17:56:00.910Z",
+ "majLe": "2026-10-30T05:53:04.851Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -11,7 +11,7 @@
    "nom": "Entreprendre Service-Public",
    "url": "https://www.service-public.fr/abonnements/rss/actu-actu-pro.rss",
    "ok": true,
-   "articles": 1
+   "articles": 2
   },
   {
    "nom": "Compta Online",
@@ -38,7 +38,7 @@
    "nom": "CNIL",
    "url": "https://www.cnil.fr/fr/rss.xml",
    "ok": true,
-   "articles": 1
+   "articles": 2
   },
   {
    "nom": "Le Monde Économie",
@@ -50,19 +50,19 @@
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 2
+   "articles": 1
   },
   {
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 2
+   "articles": 0
   },
   {
    "nom": "Capital",
    "url": "https://feed.prismamediadigital.com/v1/cap/rss?sources=capital",
    "ok": true,
-   "articles": 2
+   "articles": 0
   }
  ],
  "images": {
@@ -76,6 +76,16 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-budget-2027-les-deputes-votent-28-milliards-d-euros-de-depenses-supp",
+   "titre": "Budget 2027 : les députés votent 28 milliards d’euros de dépenses supplémentaires",
+   "url": "https://www.lefigaro.fr/conjoncture/budget-2027-les-deputes-votent-28-milliards-d-euros-de-depenses-supplementaires-20261029",
+   "source": "Le Figaro Économie",
+   "date": "2026-10-29T18:15:00.000Z",
+   "image": "https://i.f1g.fr/media/cms/3000x1687_crop/2026/10/29/d1b1576e7fc304d548c2f8fee4cb1db251b07e889b25dbb51d6117ca74c389ac.jpg",
+   "categorie": "Fiscalité",
+   "score": 4
+  },
   {
    "id": "capital-https-www-capital-fr-economie-politique-carburants-les-18-centimes-qui-peuvent-couter-cher-au-gouvernement-15314",
    "titre": "Carburants : les 18 centimes qui peuvent coûter cher au gouvernement",
@@ -865,16 +875,6 @@
    "date": "2026-10-16T12:00:00.000Z",
    "categorie": "Comptabilité & audit",
    "score": 7
-  },
-  {
-   "id": "cnil-https-www-cnil-fr-fr-reconstitution-adresses-professionnelles-quel-cadre",
-   "titre": "Reconstitution d’adresses électroniques professionnelles : dans quel cadre est-ce autorisé ?",
-   "url": "https://www.cnil.fr/fr/reconstitution-adresses-professionnelles-quel-cadre",
-   "source": "CNIL",
-   "officiel": true,
-   "date": "2026-10-16T12:00:00.000Z",
-   "categorie": "Numérique",
-   "score": 2
   }
  ],
  "ecartes": []
