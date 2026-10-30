@@ -1,5 +1,5 @@
 {
- "majLe": "2026-10-30T05:53:04.851Z",
+ "majLe": "2026-10-30T11:49:11.194Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -22,7 +22,7 @@
    "nom": "Village de la Justice",
    "url": "https://www.village-justice.com/articles/spip.php?page=backend",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Le Monde du Droit",
@@ -38,7 +38,7 @@
    "nom": "CNIL",
    "url": "https://www.cnil.fr/fr/rss.xml",
    "ok": true,
-   "articles": 2
+   "articles": 3
   },
   {
    "nom": "Le Monde Économie",
@@ -50,13 +50,13 @@
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 0
+   "articles": 2
   },
   {
    "nom": "Capital",
@@ -76,6 +76,36 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "village-de-la-justice-https-www-village-justice-com-articles-sci-divorce-logement-familial-pris-piege-59732-html-utm-sou",
+   "titre": "SCI à l'impôt sur les sociétés et divorce : le logement familial pris au piège. Par Aurélia Compère, Avocat.",
+   "url": "https://www.village-justice.com/articles/sci-divorce-logement-familial-pris-piege,59732.html?utm_source=backend&utm_medium=RSS&utm_campaign=RSS_Reseaux",
+   "source": "Village de la Justice",
+   "date": "2026-10-30T12:00:00.000Z",
+   "image": "https://www.village-justice.com/articles/local/cache-gd2/fa/47384586cc5a95bb3e5fa3ac79e2dc.jpg?1793358002",
+   "categorie": "Fiscalité",
+   "score": 5
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-replay-radio-le-brief-eco-l-etat-veut-augmenter-le-plafond-du-livret-a-pour-f",
+   "titre": "L'État veut augmenter le plafond du Livret A pour financer la rénovation des lycées",
+   "url": "https://www.franceinfo.fr/replay-radio/le-brief-eco/l-etat-veut-augmenter-le-plafond-du-livret-a-pour-financer-la-renovation-des-lycees_8239492.html#xtor=RSS-3-%5Bgeneral%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-10-30T07:44:47.000Z",
+   "image": "https://www.franceinfo.fr/pictures/iDbG_gu4gM92jfsyHnPwBcIrmfo/0x47:5007x2864/432x243/filters:format(jpg)/2023/08/01/64c8ad5643c51_000-par8254513.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-politique-budget-2027-il-faut-savoir-prendre-des-risques-estime-michel-barnie",
+   "titre": "Budget 2027 : \"Il faut savoir prendre des risques\", estime Michel Barnier qui plaide pour un 49.3 du Premier ministre Sébastien Lecornu",
+   "url": "https://www.franceinfo.fr/politique/budget-2027-il-faut-savoir-prendre-des-risques-estime-michel-barnier-qui-plaide-pour-un-49-3-du-premier-ministre-sebastien-lecornu_8260058.html#xtor=RSS-3-%5Bgeneral%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-10-30T07:43:33.000Z",
+   "image": "https://www.franceinfo.fr/pictures/Lu8srvaDFMWuQni6x4umKX69e7k/0x0:1920x1080/432x243/filters:format(jpg)/2026/10/30/6ae44a9a5c6dd501842750.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
   {
    "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-budget-2027-les-deputes-votent-28-milliards-d-euros-de-depenses-supp",
    "titre": "Budget 2027 : les députés votent 28 milliards d’euros de dépenses supplémentaires",
@@ -845,36 +875,6 @@
    "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~10~16~195bb71c-dca0-4856-9e14-e2744468c124.jpg/1200x900/focus-point/2533%2C1473/assurance-vie-pourquoi-la-tentation-de-taxer-ses-avantages-revient-avant-la-presidentielle.jpg",
    "categorie": "Fiscalité",
    "score": 4
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-budget-2027-les-deputes-votent-une-mesure-limitant-l-optimisation-fi",
-   "titre": "Budget 2027 : les députés votent une mesure limitant l'optimisation fiscale des plus fortunés",
-   "url": "https://www.lefigaro.fr/conjoncture/budget-2027-les-deputes-votent-une-mesure-limitant-l-optimisation-fiscale-des-plus-fortunes-20261017",
-   "source": "Le Figaro Économie",
-   "date": "2026-10-17T12:47:39.000Z",
-   "image": "https://i.f1g.fr/media/cms/orig/2026/10/17/b455dcd7be94d0e7928feb88865ca09df5666a119766a7ca68c5ebeccab7da1d.JPG",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "capital-https-www-capital-fr-economie-politique-rupture-conventionnelle-et-licenciement-ce-que-le-budget-2027-change-pou",
-   "titre": "Rupture conventionnelle et licenciement, ce que le budget 2027 change pour l’impôt sur les indemnités",
-   "url": "https://www.capital.fr/economie-politique/rupture-conventionnelle-et-licenciement-ce-que-le-budget-2027-change-pour-limpot-sur-les-indemnites-1531051",
-   "source": "Capital",
-   "date": "2026-10-16T16:00:00.000Z",
-   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~10~16~0a14d9fc-1aa4-4a08-bec4-313f3518760e.jpg/1200x900/focus-point/1728%2C542/rupture-conventionnelle-et-licenciement-ce-que-le-budget-2027-change-pour-l-impot-sur-les-indemnites.jpg",
-   "categorie": "Social",
-   "score": 7
-  },
-  {
-   "id": "cnil-https-www-cnil-fr-fr-protection-donnees-valeur-finance-etude-autorites-europeennes",
-   "titre": "De la protection des données à la création de valeur en finance : des autorités européennes publient une étude et des bonnes pratiques",
-   "url": "https://www.cnil.fr/fr/protection-donnees-valeur-finance-etude-autorites-europeennes",
-   "source": "CNIL",
-   "officiel": true,
-   "date": "2026-10-16T12:00:00.000Z",
-   "categorie": "Comptabilité & audit",
-   "score": 7
   }
  ],
  "ecartes": []
