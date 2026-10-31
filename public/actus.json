@@ -1,5 +1,5 @@
 {
- "majLe": "2026-10-30T17:49:41.963Z",
+ "majLe": "2026-10-31T05:48:24.050Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -22,7 +22,7 @@
    "nom": "Village de la Justice",
    "url": "https://www.village-justice.com/articles/spip.php?page=backend",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "Le Monde du Droit",
@@ -44,7 +44,7 @@
    "nom": "Le Monde Économie",
    "url": "https://www.lemonde.fr/economie/rss_full.xml",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "Le Figaro Économie",
@@ -62,7 +62,7 @@
    "nom": "Capital",
    "url": "https://feed.prismamediadigital.com/v1/cap/rss?sources=capital",
    "ok": true,
-   "articles": 1
+   "articles": 0
   }
  ],
  "images": {
