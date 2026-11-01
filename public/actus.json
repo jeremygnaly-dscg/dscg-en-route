@@ -1,5 +1,5 @@
 {
- "majLe": "2026-10-31T17:40:13.948Z",
+ "majLe": "2026-11-01T05:52:21.406Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -44,7 +44,7 @@
    "nom": "Le Monde Économie",
    "url": "https://www.lemonde.fr/economie/rss_full.xml",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Le Figaro Économie",
@@ -56,7 +56,7 @@
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Capital",
@@ -76,6 +76,26 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-argent-article-2026-11-01-ce-qui-change-le-1-novembre-gaz-credit-a-la-consommation",
+   "titre": "Ce qui change le 1ᵉʳ novembre : gaz, crédit à la consommation, expulsions locatives, petits colis, retraites complémentaires",
+   "url": "https://www.lemonde.fr/argent/article/2026/11/01/ce-qui-change-le-1-novembre-gaz-credit-a-la-consommation-expulsions-locatives-petits-colis-retraites-complementaires_6803973_1657007.html",
+   "source": "Le Monde Économie",
+   "date": "2026-11-01T04:00:35.000Z",
+   "image": "https://img.lemde.fr/2025/09/19/125/0/1500/750/644/322/60/0/f5e5ad5_upload-1-6kuga3xwpni1-mei-dia-25.png",
+   "categorie": "Fiscalité",
+   "score": 4
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-votre-argent-livret-a-livret-a-une-hausse-du-plafond-a-30-000-euros-",
+   "titre": "Livret A : une hausse du plafond à 30 000 euros envisagée pour financer les travaux dans les lycées",
+   "url": "https://www.franceinfo.fr/economie/votre-argent/livret-a/livret-a-une-hausse-du-plafond-a-30-000-euros-envisagee-pour-financer-les-travaux-dans-les-lycees_8262188.html#xtor=RSS-3-%5Bgeneral%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-10-31T20:10:19.000Z",
+   "image": "https://www.franceinfo.fr/pictures/LZOLQz3XUw-aWN4T6MIj2q4q1PU/0x0:1920x1080/432x243/filters:format(jpg)/2026/10/31/6ae64b22820f7315588047.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
   {
    "id": "village-de-la-justice-https-www-village-justice-com-articles-harcelement-travail-prescritpion-cas-defaut-prevention-lice",
    "titre": "Harcèlement moral au travail : prescriptions et délais pour agir. Par M.Kebir, Avocat.",
@@ -855,26 +875,6 @@
    "image": "https://i.f1g.fr/media/cms/3000x1687_crop/2026/10/19/536f8a0c25415e4ccc838caf42b127dae67782ef620e7d34fb8985f3276835e1.jpg",
    "categorie": "Fiscalité",
    "score": 3
-  },
-  {
-   "id": "capital-https-www-capital-fr-votre-carriere-prescription-horaires-interessement-voici-ce-qu-il-faut-savoir-sur-le-temps-",
-   "titre": "Prescription, horaires, intéressement : voici ce qu'il faut savoir sur le temps partiel thérapeutique",
-   "url": "https://www.capital.fr/votre-carriere/prescription-horaires-interessement-voici-ce-qu-il-faut-savoir-sur-le-temps-partiel-therapeutique-1531100",
-   "source": "Capital",
-   "date": "2026-10-19T15:37:31.000Z",
-   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~10~19~054f1a46-430d-42ad-b543-4ecb7d3a78bf.jpg/1200x900/focus-point/329%2C186/prescription-horaires-interessement-voici-ce-qu-il-faut-savoir-sur-le-temps-partiel-therapeutique.jpg",
-   "categorie": "Social",
-   "score": 4
-  },
-  {
-   "id": "cnil-https-www-cnil-fr-fr-webinaire-demarchage-telephonique",
-   "titre": "Revoir le webinaire - Nouveau régime de la prospection téléphonique : comment et quand recueillir le consentement de la personne concernée ?",
-   "url": "https://www.cnil.fr/fr/webinaire-demarchage-telephonique",
-   "source": "CNIL",
-   "officiel": true,
-   "date": "2026-10-19T12:00:00.000Z",
-   "categorie": "Numérique",
-   "score": 2
   }
  ],
  "ecartes": []
