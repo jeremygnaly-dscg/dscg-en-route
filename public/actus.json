@@ -1,5 +1,5 @@
 {
- "majLe": "2026-11-01T11:42:52.777Z",
+ "majLe": "2026-11-01T17:40:40.809Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -56,13 +56,13 @@
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 2
+   "articles": 0
   },
   {
    "nom": "Capital",
    "url": "https://feed.prismamediadigital.com/v1/cap/rss?sources=capital",
    "ok": true,
-   "articles": 0
+   "articles": 1
   }
  ],
  "images": {
@@ -76,6 +76,16 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "capital-https-www-capital-fr-votre-carriere-chatgpt-en-cachette-au-travail-quels-risques-pour-le-salarie-1531412",
+   "titre": "ChatGPT en cachette au travail : quels risques pour le salarié ?",
+   "url": "https://www.capital.fr/votre-carriere/chatgpt-en-cachette-au-travail-quels-risques-pour-le-salarie-1531412",
+   "source": "Capital",
+   "date": "2026-11-01T17:00:00.000Z",
+   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~10~29~cb2ee99f-1600-48fd-b389-f30e15a85072.jpg/1200x900/focus-point/1063%2C1017/chatgpt-en-cachette-au-travail-quels-risques-pour-le-salarie.jpg",
+   "categorie": "Social",
+   "score": 6
+  },
   {
    "id": "franceinfo-conomie-https-www-franceinfo-fr-replay-radio-8h30-fauvelle-dely-crise-sociale-mouvement-des-lyceens-budget-20",
    "titre": "Crise sociale, mouvement des lycéens, budget 2027... Le \"8h30 franceinfo\" de Philippe Juvin",
@@ -865,16 +875,6 @@
    "date": "2026-10-20T12:00:00.000Z",
    "categorie": "Numérique",
    "score": 2
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-conso-bonbons-biscuits-viennoiseries-industrielles-quels-produits-seraient-vises",
-   "titre": "Bonbons, biscuits, viennoiseries industrielles… Quels produits sont visés par la «taxe sucre» du budget 2027 ?",
-   "url": "https://www.lefigaro.fr/conso/bonbons-biscuits-viennoiseries-industrielles-quels-produits-seraient-vises-par-la-taxe-sucre-du-budget-2027-20261002",
-   "source": "Le Figaro Économie",
-   "date": "2026-10-20T08:00:36.000Z",
-   "image": "https://i.f1g.fr/media/cms/3000x2003_crop/2026/10/20/e6f8cd472432f10f3120aab9747ce6f62a5247d84f27d5ee1a78edfd0e62de9d.jpg",
-   "categorie": "Fiscalité",
-   "score": 4
   }
  ],
  "ecartes": []
