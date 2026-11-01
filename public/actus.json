@@ -1,5 +1,5 @@
 {
- "majLe": "2026-11-01T05:52:21.406Z",
+ "majLe": "2026-11-01T11:42:52.777Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -38,13 +38,13 @@
    "nom": "CNIL",
    "url": "https://www.cnil.fr/fr/rss.xml",
    "ok": true,
-   "articles": 4
+   "articles": 5
   },
   {
    "nom": "Le Monde Économie",
    "url": "https://www.lemonde.fr/economie/rss_full.xml",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "Le Figaro Économie",
@@ -56,7 +56,7 @@
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 1
+   "articles": 2
   },
   {
    "nom": "Capital",
@@ -76,6 +76,26 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-replay-radio-8h30-fauvelle-dely-crise-sociale-mouvement-des-lyceens-budget-20",
+   "titre": "Crise sociale, mouvement des lycéens, budget 2027... Le \"8h30 franceinfo\" de Philippe Juvin",
+   "url": "https://www.franceinfo.fr/replay-radio/8h30-fauvelle-dely/crise-sociale-mouvement-des-lyceens-budget-2027-le-8h30-franceinfo-de-philippe-juvin_8221660.html#xtor=RSS-3-%5Bgeneral%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-11-01T09:47:07.000Z",
+   "image": "https://www.franceinfo.fr/pictures/n66SE4ibvYU-KuszBsG8xC0RjOE/0x0:1600x900/432x243/filters:format(jpg)/2026/11/01/6ae70786f249a863020870.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-budget-le-budget-sera-refuse-par-le-parlement-prevoit-philippe-juvin",
+   "titre": "\"Le budget sera refusé par le Parlement\", prévoit Philippe Juvin, rapporteur général du projet de loi de finances, qui plaide pour un recours au 49.3",
+   "url": "https://www.franceinfo.fr/economie/budget/le-budget-sera-refuse-par-le-parlement-prevoit-philippe-juvin-rapporteur-general-du-projet-de-loi-de-finances-qui-plaide-pour-un-recours-au-49-3_8262554.html#xtor=RSS-3-%5Bgeneral%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-11-01T09:34:04.000Z",
+   "image": "https://www.franceinfo.fr/pictures/n66SE4ibvYU-KuszBsG8xC0RjOE/0x0:1600x900/432x243/filters:format(jpg)/2026/11/01/6ae70786f249a863020870.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
   {
    "id": "le-monde-conomie-https-www-lemonde-fr-argent-article-2026-11-01-ce-qui-change-le-1-novembre-gaz-credit-a-la-consommation",
    "titre": "Ce qui change le 1ᵉʳ novembre : gaz, crédit à la consommation, expulsions locatives, petits colis, retraites complémentaires",
@@ -855,26 +875,6 @@
    "image": "https://i.f1g.fr/media/cms/3000x2003_crop/2026/10/20/e6f8cd472432f10f3120aab9747ce6f62a5247d84f27d5ee1a78edfd0e62de9d.jpg",
    "categorie": "Fiscalité",
    "score": 4
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-budget-du-matraquage-fiscal-la-filiere-sucriere-s-insurge-contre-un-",
-   "titre": "\"Du matraquage fiscal\" : la filière sucrière s'insurge contre un projet d'extension de la taxation des aliments sucrés",
-   "url": "https://www.franceinfo.fr/economie/budget/du-matraquage-fiscal-la-filiere-sucriere-s-insurge-contre-un-projet-d-extension-de-la-taxation-des-aliments-sucres_8244565.html#xtor=RSS-3-%5Bgeneral%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-10-20T04:32:58.000Z",
-   "image": "https://www.franceinfo.fr/pictures/nePokQ5IE5jUX3QLvLHJ9BBXaEA/0x43:8030x4560/432x243/filters:format(jpg)/2026/10/20/6ad6eed60f682061750272.jpg",
-   "categorie": "Fiscalité",
-   "score": 4
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-budget-2027-l-assemblee-nationale-multiplie-les-cadeaux-fiscaux-non-",
-   "titre": "Budget 2027 : l’Assemblée nationale multiplie les cadeaux fiscaux non chiffrés",
-   "url": "https://www.lefigaro.fr/conjoncture/budget-2027-l-assemblee-nationale-multiplie-les-cadeaux-fiscaux-non-chiffres-20261019",
-   "source": "Le Figaro Économie",
-   "date": "2026-10-19T17:30:00.000Z",
-   "image": "https://i.f1g.fr/media/cms/3000x1687_crop/2026/10/19/536f8a0c25415e4ccc838caf42b127dae67782ef620e7d34fb8985f3276835e1.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
   }
  ],
  "ecartes": []
