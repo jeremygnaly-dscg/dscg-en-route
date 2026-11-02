@@ -1,5 +1,5 @@
 {
- "majLe": "2026-11-01T17:40:40.809Z",
+ "majLe": "2026-11-02T06:09:36.642Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -11,7 +11,7 @@
    "nom": "Entreprendre Service-Public",
    "url": "https://www.service-public.fr/abonnements/rss/actu-actu-pro.rss",
    "ok": true,
-   "articles": 2
+   "articles": 1
   },
   {
    "nom": "Compta Online",
@@ -44,13 +44,13 @@
    "nom": "Le Monde Économie",
    "url": "https://www.lemonde.fr/economie/rss_full.xml",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 0
+   "articles": 2
   },
   {
    "nom": "franceinfo Économie",
@@ -62,7 +62,7 @@
    "nom": "Capital",
    "url": "https://feed.prismamediadigital.com/v1/cap/rss?sources=capital",
    "ok": true,
-   "articles": 1
+   "articles": 0
   }
  ],
  "images": {
@@ -76,6 +76,36 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-secteur-high-tech-on-se-demande-comment-les-gens-ne-finissent-pas-a-la-rue-en-ca",
+   "titre": "« On se demande comment les gens ne finissent pas à la rue » : en Californie, ces naufragés de la tech qui cherchent désespérément un emploi",
+   "url": "https://www.lefigaro.fr/secteur/high-tech/on-se-demande-comment-les-gens-ne-finissent-pas-a-la-rue-en-californie-ces-naufrages-de-la-tech-qui-cherchent-desesperement-un-emploi-20261102",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-02T05:30:00.000Z",
+   "image": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/01/09bfbb827e14ecc1ea59c5adaee8d1d29c0ae4fc397bdf0ca2656ae56c017a78.jpg",
+   "categorie": "Social",
+   "score": 5
+  },
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-les-decodeurs-article-2026-11-02-dubai-papers-l-heure-du-proces-pour-une-officine-",
+   "titre": "« Dubaï Papers » : l’heure du procès pour une « officine de fraude fiscale à grande échelle »",
+   "url": "https://www.lemonde.fr/les-decodeurs/article/2026/11/02/dubai-papers-l-heure-du-proces-pour-une-officine-de-fraude-fiscale-a-grande-echelle_6804884_4355770.html",
+   "source": "Le Monde Économie",
+   "date": "2026-11-02T05:00:44.000Z",
+   "image": "https://img.lemde.fr/2025/04/10/188/0/3000/1500/644/322/60/0/aabf3d8_sirius-fs-upload-1-rtewzxvvtv9y-1744297403460-frame-12.jpg",
+   "categorie": "Profession",
+   "score": 10
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-secteur-high-tech-plans-de-departs-et-licenciements-massifs-derriere-l-annus-hor",
+   "titre": "Plans de départs et licenciements massifs : derrière l’« annus horribilis » pour l’emploi dans la tech américaine, l’ombre de l’IA",
+   "url": "https://www.lefigaro.fr/secteur/high-tech/plans-de-departs-et-licenciements-massifs-derriere-l-annus-horribilis-pour-l-emploi-dans-la-tech-americaine-l-ombre-de-l-ia-20261101",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-01T17:00:00.000Z",
+   "image": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/01/57f90f6e5a76e5375af014dfa9c3d27cd3f3333345a283ce40230ff290be9066.jpg",
+   "categorie": "Social",
+   "score": 5
+  },
   {
    "id": "capital-https-www-capital-fr-votre-carriere-chatgpt-en-cachette-au-travail-quels-risques-pour-le-salarie-1531412",
    "titre": "ChatGPT en cachette au travail : quels risques pour le salarié ?",
@@ -845,36 +875,6 @@
    "image": "https://img.lemde.fr/2026/10/20/416/0/5000/2500/644/322/60/0/632f818_upload-1-kgenxqks915f-2026-09-02t014614z-1416189631-rc2janabcmlf-rtrmadp-3-usa-trump-canada-tariffs.JPG",
    "categorie": "Fiscalité",
    "score": 4
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-budget-2027-pourquoi-l-examen-prend-deja-du-retard-a-l-assemblee-nat",
-   "titre": "Budget 2027 : pourquoi l’examen prend déjà du retard à l’Assemblée nationale",
-   "url": "https://www.lefigaro.fr/conjoncture/budget-2027-pourquoi-l-examen-prend-deja-du-retard-a-l-assemblee-nationale-20261020",
-   "source": "Le Figaro Économie",
-   "date": "2026-10-20T17:05:00.000Z",
-   "image": "https://i.f1g.fr/media/cms/2688x1792_crop/2026/10/20/0a539255c94e2dfb84aff7ed4960e52d7e0ab9e64faa145efdbcfdc4d94f084c.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-en-corse-l-alignement-des-prix-du-tabac-sur-ceux-du-continent-fait-b",
-   "titre": "En Corse, l’alignement des prix du tabac sur ceux du continent fait baisser les ventes et souffrir les buralistes",
-   "url": "https://www.lefigaro.fr/conjoncture/en-corse-l-alignement-des-prix-du-tabac-sur-ceux-du-continent-fait-baisser-les-ventes-et-souffrir-les-buralistes-20261020",
-   "source": "Le Figaro Économie",
-   "date": "2026-10-20T16:14:39.000Z",
-   "image": "https://i.f1g.fr/media/cms/3000x2003_crop/2026/10/20/9ab7200bb15f165510088aa8ba2b47b807fa49295e95415158fbe2ea72cb0031.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "cnil-https-www-cnil-fr-fr-journee-rgpd-2026-poitiers",
-   "titre": "Journée RGPD à Poitiers : cybersécurité, IA et conformité au cœur des enjeux de protection des données",
-   "url": "https://www.cnil.fr/fr/journee-rgpd-2026-poitiers",
-   "source": "CNIL",
-   "officiel": true,
-   "date": "2026-10-20T12:00:00.000Z",
-   "categorie": "Numérique",
-   "score": 2
   }
  ],
  "ecartes": []
