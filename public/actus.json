@@ -1,5 +1,5 @@
 {
- "majLe": "2026-11-02T06:09:36.642Z",
+ "majLe": "2026-11-02T11:59:49.988Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -38,25 +38,25 @@
    "nom": "CNIL",
    "url": "https://www.cnil.fr/fr/rss.xml",
    "ok": true,
-   "articles": 5
+   "articles": 6
   },
   {
    "nom": "Le Monde Économie",
    "url": "https://www.lemonde.fr/economie/rss_full.xml",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 2
+   "articles": 1
   },
   {
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Capital",
@@ -76,6 +76,26 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-actualite-france-le-proces-des-dubai-papers-immense-systeme-de-fraude-fiscale-in",
+   "titre": "Le procès des «Dubaï Papers», immense système de fraude fiscale internationale, s’ouvre ce lundi à Paris",
+   "url": "https://www.lefigaro.fr/actualite-france/le-proces-des-dubai-papers-immense-systeme-de-fraude-fiscale-internationale-s-ouvre-ce-lundi-a-paris-20261102",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-02T09:28:19.000Z",
+   "image": "https://i.f1g.fr/media/cms/orig/2026/11/02/2ced0c38ad6d0fbe2e5836ef0e51653a8b4f5385c0966c60e79cf52a0d8eb8aa.JPG",
+   "categorie": "Fiscalité",
+   "score": 5
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-replay-radio-le-decryptage-eco-alors-que-les-previsions-macroeconomiques-ne-t",
+   "titre": "Alors que les prévisions macroéconomiques ne tiennent plus, à quoi servent les discussions dans l'hémicycle sur le budget ?",
+   "url": "https://www.franceinfo.fr/replay-radio/le-decryptage-eco/alors-que-les-previsions-macroeconomiques-ne-tiennent-plus-a-quoi-servent-les-discussions-dans-l-hemicycle-sur-le-budget_8243353.html#xtor=RSS-3-%5Bgeneral%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-11-02T08:30:57.000Z",
+   "image": "https://www.franceinfo.fr/pictures/bZSA-2SzQRoP_sGHgmcX6KrCOXU/0x224:4300x2642/432x243/filters:format(jpg)/2026/11/02/6ae839b592907884435000.jpg",
+   "categorie": "Fiscalité",
+   "score": 4
+  },
   {
    "id": "le-figaro-conomie-https-www-lefigaro-fr-secteur-high-tech-on-se-demande-comment-les-gens-ne-finissent-pas-a-la-rue-en-ca",
    "titre": "« On se demande comment les gens ne finissent pas à la rue » : en Californie, ces naufragés de la tech qui cherchent désespérément un emploi",
@@ -855,26 +875,6 @@
    "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~10~20~fc4d2813-17ba-4cea-b83b-958fdb78f4ef.jpeg/1200x900/quality/80/dispositif-jeanbrun-pourquoi-la-nouvelle-niche-fiscale-de-l-immobilier-peine-a-convaincre.jpg",
    "categorie": "Fiscalité",
    "score": 3
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-societes-licenciements-publicite-en-retrait-croissance-ralentie-netflix-ne-parvi",
-   "titre": "Licenciements, publicité en retrait, croissance ralentie : Netflix ne parvient pas à rassurer Wall Street au troisième trimestre",
-   "url": "https://www.lefigaro.fr/societes/licenciements-publicite-en-retrait-croissance-ralentie-netflix-ne-parvient-pas-a-rassurer-wall-street-au-troisieme-trimestre-20261020",
-   "source": "Le Figaro Économie",
-   "date": "2026-10-20T20:41:06.000Z",
-   "image": "https://i.f1g.fr/media/cms/3000x2128_crop/2026/10/20/5c596c1d051069e7dea883123d83fc61ab621016a6fb1b13399de14072f6254c.jpg",
-   "categorie": "Social",
-   "score": 4
-  },
-  {
-   "id": "le-monde-conomie-https-www-lemonde-fr-international-article-2026-10-20-droits-de-douane-une-plainte-deposee-aux-etats-un",
-   "titre": "Droits de douane : une plainte déposée aux Etats-Unis contre la surtaxe des produits canadiens",
-   "url": "https://www.lemonde.fr/international/article/2026/10/20/droits-de-douane-une-plainte-deposee-aux-etats-unis-contre-la-surtaxe-des-produits-canadiens_6797973_3210.html",
-   "source": "Le Monde Économie",
-   "date": "2026-10-20T17:58:38.000Z",
-   "image": "https://img.lemde.fr/2026/10/20/416/0/5000/2500/644/322/60/0/632f818_upload-1-kgenxqks915f-2026-09-02t014614z-1416189631-rc2janabcmlf-rtrmadp-3-usa-trump-canada-tariffs.JPG",
-   "categorie": "Fiscalité",
-   "score": 4
   }
  ],
  "ecartes": []
