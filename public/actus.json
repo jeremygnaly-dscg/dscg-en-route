@@ -1,11 +1,11 @@
 {
- "majLe": "2026-11-02T18:01:24.307Z",
+ "majLe": "2026-11-03T06:00:05.110Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
    "url": "https://www.economie.gouv.fr/rss/toutesactualites",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "Entreprendre Service-Public",
@@ -44,13 +44,13 @@
    "nom": "Le Monde Économie",
    "url": "https://www.lemonde.fr/economie/rss_full.xml",
    "ok": true,
-   "articles": 2
+   "articles": 0
   },
   {
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 1
+   "articles": 2
   },
   {
    "nom": "franceinfo Économie",
@@ -77,6 +77,16 @@
  },
  "items": [
   {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-transports-prix-des-carburants-benefices-de-total-l-etat-doit-etre-c",
+   "titre": "Bénéfices de Total : \"L'État doit être capable d'obtenir de Total qu'il y ait des gestes en faveur des gros rouleurs\", estime Guilhem Carayon, vice-président délégué de l'UDR",
+   "url": "https://www.franceinfo.fr/economie/transports/prix-des-carburants/benefices-de-total-l-etat-doit-etre-capable-d-obtenir-de-total-qu-il-y-ait-des-gestes-en-faveur-des-gros-rouleurs-estime-guilhem-carayon-vice-president-delegue-de-l-udr_8264684.html#xtor=RSS-3-%5Bgeneral%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-11-02T19:05:25.000Z",
+   "image": "https://www.franceinfo.fr/pictures/_ThuG8TON9RJ0NCwjNSwaeSRtL8/0x58:1065x657/432x243/filters:format(jpg)/2026/11/02/6ae8dee3ca5b0839518357.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
    "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-automobile-essence-emmanuel-macron-se-felicite-de-la-baisse-des-prix",
    "titre": "Emmanuel Macron se félicite de la baisse des prix du gazole, \"sans toucher aux taxes\" et \"sans démagogie\"",
    "url": "https://www.franceinfo.fr/economie/automobile/essence/emmanuel-macron-se-felicite-de-la-baisse-des-prix-du-gazole-sans-toucher-aux-taxes-et-sans-demagogie_8264579.html#xtor=RSS-3-%5Bgeneral%5D",
@@ -97,12 +107,32 @@
    "score": 3
   },
   {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-conso-cognac-l-assemblee-vote-un-soulagement-specifique-de-tva-avec-l-appui-du-g",
+   "titre": "Cognac : l'Assemblée vote un soulagement spécifique de TVA, avec l’appui du gouvernement",
+   "url": "https://www.lefigaro.fr/conso/cognac-l-assemblee-vote-un-soulagement-specifique-de-tva-avec-l-appui-du-gouvernement-20261102",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-02T17:11:39.000Z",
+   "image": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/02/1619036d022a32ac6d7126d343ad3eb80ea617fbd4f5119cb5410e37de768852.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
    "id": "le-monde-conomie-https-www-lemonde-fr-economie-article-2026-11-02-baisse-des-prix-du-gazole-emmanuel-macron-se-felicite-",
    "titre": "Baisse des prix du gazole : Emmanuel Macron se félicite de « solutions concrètes qui portent leurs fruits », « sans toucher aux taxes »",
    "url": "https://www.lemonde.fr/economie/article/2026/11/02/baisse-des-prix-du-gazole-emmanuel-macron-se-felicite-de-solutions-concretes-qui-portent-leurs-fruits-sans-toucher-aux-taxes_6805242_3235.html",
    "source": "Le Monde Économie",
    "date": "2026-11-02T17:05:03.000Z",
    "image": "https://img.lemde.fr/2026/11/02/502/0/6000/3000/644/322/60/0/eab8430_upload-1-8s2ppcs03hbn-000-c9698a6.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-medias-budget-2027-les-deputes-ecartent-la-hausse-de-tva-pour-canal-20261102",
+   "titre": "Budget 2027 : les députés écartent la hausse de TVA pour Canal+",
+   "url": "https://www.lefigaro.fr/medias/budget-2027-les-deputes-ecartent-la-hausse-de-tva-pour-canal-20261102",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-02T16:54:44.000Z",
+   "image": "https://i.f1g.fr/media/cms/2850x1604_crop/2026/11/02/ab33b0d9429e1bc52ef41cb04d4a47af4e047e8c8b0aaa68f43e6e6e8b2e425e.jpg",
    "categorie": "Fiscalité",
    "score": 3
   },
@@ -845,36 +875,6 @@
    "image": "https://www.franceinfo.fr/pictures/mzYZEBxYGqfZNZqaTZRmVnIfZKs/0x0:1024x576/432x243/filters:format(jpg)/2026/10/22/6ad9f2b95bbea058075086.jpg",
    "categorie": "Social",
    "score": 4
-  },
-  {
-   "id": "le-monde-conomie-https-www-lemonde-fr-idees-article-2026-10-22-taux-d-interet-au-dela-des-5-une-hausse-qui-sanctionne-un",
-   "titre": "Taux d’intérêt au-delà des 5 % : une hausse qui sanctionne un débat budgétaire enlisé",
-   "url": "https://www.lemonde.fr/idees/article/2026/10/22/taux-d-interet-au-dela-des-5-une-hausse-qui-sanctionne-un-debat-budgetaire-enlise_6798598_3232.html",
-   "source": "Le Monde Économie",
-   "date": "2026-10-22T09:30:09.000Z",
-   "image": "https://img.lemde.fr/2026/10/21/507/0/6000/3000/644/322/60/0/ba4ce07_upload-1-6siteu3s360j-cbi1348003.JPG",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-budget-2027-les-propositions-chocs-de-la-deputee-olivia-gregoire-pou",
-   "titre": "Budget 2027 : les propositions chocs de la députée Olivia Grégoire « pour que la fiscalité soutienne enfin les repreneurs » de TPE-PME",
-   "url": "https://www.lefigaro.fr/conjoncture/budget-2027-les-propositions-chocs-de-la-deputee-olivia-gregoire-pour-que-la-fiscalite-soutienne-enfin-les-repreneurs-de-tpe-pme-20261022",
-   "source": "Le Figaro Économie",
-   "date": "2026-10-22T04:00:00.000Z",
-   "image": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/21/05694fbceac9ded45d8ea380fa14739a6d61f50307eb5a4f3d21357f0a1b0d91.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-ce-serait-la-crise-quasi-immediate-ce-que-les-milieux-economiques-pe",
-   "titre": "« Ce serait la crise quasi immédiate » : ce que les milieux économiques pensent du programme de Jean-Luc Mélenchon",
-   "url": "https://www.lefigaro.fr/conjoncture/ce-serait-la-crise-quasi-immediate-ce-que-les-milieux-economiques-pensent-du-programme-de-jean-luc-melenchon-20261021",
-   "source": "Le Figaro Économie",
-   "date": "2026-10-21T20:11:51.000Z",
-   "image": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/21/ed76adc89dbd0a68510d5879957c99afb2c2bd0f2ae3e8162b60d27ccad3291b.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
   }
  ],
  "ecartes": []
