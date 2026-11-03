@@ -1,5 +1,5 @@
 {
- "majLe": "2026-11-03T11:54:55.731Z",
+ "majLe": "2026-11-03T17:59:55.153Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -22,7 +22,7 @@
    "nom": "Village de la Justice",
    "url": "https://www.village-justice.com/articles/spip.php?page=backend",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Le Monde du Droit",
@@ -44,25 +44,25 @@
    "nom": "Le Monde Économie",
    "url": "https://www.lemonde.fr/economie/rss_full.xml",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Capital",
    "url": "https://feed.prismamediadigital.com/v1/cap/rss?sources=capital",
    "ok": true,
-   "articles": 1
+   "articles": 0
   }
  ],
  "images": {
@@ -76,6 +76,36 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "village-de-la-justice-https-www-village-justice-com-articles-designation-des-membres-cssct-procedure-par-requete-note-so",
+   "titre": "Désignation des membres de la CSSCT et la procédure par requête : consolidation de la jurisprudence. Par Williams Ahite, Docteur en droit.",
+   "url": "https://www.village-justice.com/articles/designation-des-membres-cssct-procedure-par-requete-note-sous-arret-cour,59796.html?utm_source=backend&utm_medium=RSS&utm_campaign=RSS_Reseaux",
+   "source": "Village de la Justice",
+   "date": "2026-11-03T17:30:00.000Z",
+   "image": "https://www.village-justice.com/articles/local/cache-gd2/71/c00ad75af9a79080dc003d26b16380.jpg?1793723401",
+   "categorie": "Social",
+   "score": 3
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-internet-netflix-amazon-meta-une-nouvelle-taxe-sur-les-gigaoctets-pourrait-el",
+   "titre": "Netflix, Amazon, Meta… Une nouvelle taxe sur les gigaoctets pourrait-elle faire grimper vos factures ?",
+   "url": "https://www.franceinfo.fr/internet/netflix-amazon-meta-une-nouvelle-taxe-sur-les-gigaoctets-pourrait-elle-faire-grimper-vos-factures_8265908.html#xtor=RSS-3-%5Bgeneral%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-11-03T15:29:59.000Z",
+   "image": "https://www.franceinfo.fr/pictures/RJSCQfluPZNGgENXy-yMl0ErOHE/0x269:4593x2853/432x243/filters:format(jpg)/2026/11/03/6ae9e7b722f2e474522080.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-international-article-2026-11-03-le-referendum-en-californie-sur-la-taxation-des-m",
+   "titre": "Le référendum en Californie sur la taxation des milliardaires, un rendez-vous attendu, sur fond de montée des inégalités",
+   "url": "https://www.lemonde.fr/international/article/2026/11/03/le-referendum-en-californie-sur-la-taxation-des-milliardaires-un-rendez-vous-attendu-sur-fond-de-montee-des-inegalites_6805581_3210.html",
+   "source": "Le Monde Économie",
+   "date": "2026-11-03T13:00:08.000Z",
+   "image": "https://img.lemde.fr/2026/10/06/466/0/5500/2750/644/322/60/0/a5a2b4f_ftp-1-2emy9t6ilocv-2026-10-06t035512z-1382997658-rc2fxnain2jm-rtrmadp-3-usa-election-california.JPG",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
   {
    "id": "capital-https-www-capital-fr-immobilier-taxe-sur-les-logements-vacants-2027-qui-paie-qui-peut-y-echapper-1531505",
    "titre": "Taxe sur les logements vacants 2027 : qui paie, qui peut y échapper",
@@ -844,36 +874,6 @@
    "date": "2026-10-23T03:15:00.000Z",
    "image": "https://img.lemde.fr/2026/09/23/451/0/5417/2708/644/322/60/0/e006c9c_ftp-1-cggudtxfdabg-9aa55ccd74b14adb838469ddcc792a12-0-09d74d4a8fcb45e8a5c0b9acad405aba.jpg",
    "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-impots-budget-la-taxe-holding-pourrait-rapporter-dix-fois-moins-que-",
-   "titre": "Budget : la taxe holding pourrait rapporter dix fois moins que prévu",
-   "url": "https://www.franceinfo.fr/economie/impots/budget-la-taxe-holding-pourrait-rapporter-dix-fois-moins-que-prevu_8249581.html#xtor=RSS-3-%5Bgeneral%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-10-22T21:40:30.000Z",
-   "image": "https://www.franceinfo.fr/pictures/QZs4ko8Qp-UuWxe1HGmIJ8UU4HM/40x0:2073x1144/432x243/filters:format(jpg)/2026/10/22/6ada5fd05bcca263002132.png",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "economie-gouv-fr-https-www-economie-gouv-fr-actualites-revision-du-reglement-mica-les-autorites-francaises-publient-leur",
-   "titre": "Révision du règlement MICA : Les autorités françaises publient leurs propositions",
-   "url": "https://www.economie.gouv.fr/actualites/revision-du-reglement-mica-les-autorites-francaises-publient-leurs-propositions",
-   "source": "economie.gouv.fr",
-   "officiel": true,
-   "date": "2026-10-22T17:21:59.000Z",
-   "categorie": "Numérique",
-   "score": 2
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-societes-etalement-des-cotisations-coup-de-pouce-financier-les-aides-a-la-tresor",
-   "titre": "Étalement des cotisations, coup de pouce financier… Les aides à la trésorerie pour les commerces pillés détaillées",
-   "url": "https://www.lefigaro.fr/societes/etalement-des-cotisations-coup-de-pouce-financier-les-aides-a-la-tresorerie-pour-les-commerces-pilles-detaillees-20261022",
-   "source": "Le Figaro Économie",
-   "date": "2026-10-22T14:15:52.000Z",
-   "image": "https://i.f1g.fr/media/cms/2850x1603_crop/2026/10/22/77780640e4df41f11aa2ea049f19655c4b841892b9a7381c713aa22ac31424fb.jpg",
-   "categorie": "Social",
    "score": 3
   }
  ],
