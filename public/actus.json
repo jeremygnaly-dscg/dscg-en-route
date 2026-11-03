@@ -1,5 +1,5 @@
 {
- "majLe": "2026-11-03T06:00:05.110Z",
+ "majLe": "2026-11-03T11:54:55.731Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -50,19 +50,19 @@
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 2
+   "articles": 1
   },
   {
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "Capital",
    "url": "https://feed.prismamediadigital.com/v1/cap/rss?sources=capital",
    "ok": true,
-   "articles": 0
+   "articles": 1
   }
  ],
  "images": {
@@ -76,6 +76,26 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "capital-https-www-capital-fr-immobilier-taxe-sur-les-logements-vacants-2027-qui-paie-qui-peut-y-echapper-1531505",
+   "titre": "Taxe sur les logements vacants 2027 : qui paie, qui peut y échapper",
+   "url": "https://www.capital.fr/immobilier/taxe-sur-les-logements-vacants-2027-qui-paie-qui-peut-y-echapper-1531505",
+   "source": "Capital",
+   "date": "2026-11-03T11:00:00.000Z",
+   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~11~02~30035d3f-9e37-4daa-a81d-18fee87fded9.jpg/1200x900/quality/80/taxe-sur-les-logements-vacants-2027-qui-paie-qui-peut-y-echapper.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-conso-jusqu-a-40-centimes-pour-une-heure-de-film-en-4k-combien-pourrait-vous-cou",
+   "titre": "Jusqu’à 40 centimes pour une heure de film en 4K : combien pourrait vous coûter la taxe au gigaoctet ?",
+   "url": "https://www.lefigaro.fr/conso/jusqu-a-40-centimes-pour-une-heure-de-film-en-4k-combien-pourrait-vous-couter-la-taxe-au-gigaoctet-20261103",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-03T09:46:06.000Z",
+   "image": "https://i.f1g.fr/media/cms/1920x1080_crop/2026/11/03/391bec19e2d2f78b74b48acb1819d88f2df09663d27fa8b5f9af1cb30803dc51.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
   {
    "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-transports-prix-des-carburants-benefices-de-total-l-etat-doit-etre-c",
    "titre": "Bénéfices de Total : \"L'État doit être capable d'obtenir de Total qu'il y ait des gestes en faveur des gros rouleurs\", estime Guilhem Carayon, vice-président délégué de l'UDR",
@@ -855,26 +875,6 @@
    "image": "https://i.f1g.fr/media/cms/2850x1603_crop/2026/10/22/77780640e4df41f11aa2ea049f19655c4b841892b9a7381c713aa22ac31424fb.jpg",
    "categorie": "Social",
    "score": 3
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-societe-mobilisation-du-17-octobre-report-de-paiement-soutien-financier-l-urs",
-   "titre": "Report de paiement, soutien financier… L'Urssaf détaille les modalités des aides à la trésorerie pour les commerces pillés le 17 octobre",
-   "url": "https://www.franceinfo.fr/societe/mobilisation-du-17-octobre/report-de-paiement-soutien-financier-l-urssaf-detaille-les-modalites-des-aides-a-la-tresorerie-pour-les-commerces-pilles_8248969.html#xtor=RSS-3-%5Bgeneral%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-10-22T12:48:49.000Z",
-   "image": "https://www.franceinfo.fr/pictures/Q7nOpfRWl3QokY9mmLjm3gWCon8/0x67:1024x643/432x243/filters:format(jpg)/2026/10/22/6ada052c23d64281528564.jpg",
-   "categorie": "Social",
-   "score": 3
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-culture-jeux-video-electronic-arts-va-licencier-400-salaries-et-fermer-le-stu",
-   "titre": "Electronic Arts va licencier 400 salariés et fermer le studio canadien BioWare",
-   "url": "https://www.franceinfo.fr/culture/jeux-video/electronic-arts-va-licencier-400-salaries-et-fermer-le-studio-canadien-bioware_8248951.html#xtor=RSS-3-%5Bgeneral%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-10-22T11:27:44.000Z",
-   "image": "https://www.franceinfo.fr/pictures/mzYZEBxYGqfZNZqaTZRmVnIfZKs/0x0:1024x576/432x243/filters:format(jpg)/2026/10/22/6ad9f2b95bbea058075086.jpg",
-   "categorie": "Social",
-   "score": 4
   }
  ],
  "ecartes": []
