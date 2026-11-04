@@ -1,5 +1,5 @@
 {
- "majLe": "2026-11-04T11:59:52.714Z",
+ "majLe": "2026-11-04T17:58:13.644Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -22,7 +22,7 @@
    "nom": "Village de la Justice",
    "url": "https://www.village-justice.com/articles/spip.php?page=backend",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "Le Monde du Droit",
@@ -44,7 +44,7 @@
    "nom": "Le Monde Économie",
    "url": "https://www.lemonde.fr/economie/rss_full.xml",
    "ok": true,
-   "articles": 0
+   "articles": 3
   },
   {
    "nom": "Le Figaro Économie",
@@ -76,6 +76,76 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-californie-la-taxe-de-5-sur-les-milliardaires-soutenue-par-zucman-en",
+   "titre": "Californie : la taxe de 5% sur les milliardaires, soutenue par Zucman, en passe d’être rejetée",
+   "url": "https://www.lefigaro.fr/conjoncture/californie-la-taxe-de-5-sur-les-milliardaires-soutenue-par-zucman-en-passe-d-etre-rejetee-20261104",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-04T15:52:04.000Z",
+   "image": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/04/4fb1e902cadeeea7ce3ecdd62536138860e60875c6ba15bb76731bf12aa5300d.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "capital-https-www-capital-fr-economie-politique-budget-2027-avant-la-bataille-letat-annule-38-milliards-de-credits-pour-",
+   "titre": "Budget 2027 : avant la bataille, l’État annule 3,8 milliards de crédits pour 2026",
+   "url": "https://www.capital.fr/economie-politique/budget-2027-avant-la-bataille-letat-annule-38-milliards-de-credits-pour-2026-1531567",
+   "source": "Capital",
+   "date": "2026-11-04T15:51:10.000Z",
+   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~11~04~924e68eb-399d-43cc-b555-57152c7c704c.jpg/1200x900/focus-point/538%2C288/budget-2027-avant-la-bataille-l-etat-annule-3-8-milliards-de-credits-pour-2026.jpg",
+   "categorie": "Fiscalité",
+   "score": 4
+  },
+  {
+   "id": "economie-gouv-fr-https-www-economie-gouv-fr-entreprises-gerer-son-entreprise-au-quotidien-assurer-sa-cybersecurite-et-la",
+   "titre": "Cybersécurité : des dispositifs publics gratuits pour vous accompagner",
+   "url": "https://www.economie.gouv.fr/entreprises/gerer-son-entreprise-au-quotidien/assurer-sa-cybersecurite-et-la-protection-de-ses-donnees/cybersecurite-des-dispositifs-publics-gratuits",
+   "source": "economie.gouv.fr",
+   "officiel": true,
+   "date": "2026-11-04T14:57:57.000Z",
+   "categorie": "Numérique",
+   "score": 2
+  },
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-economie-article-2026-11-04-une-croissance-de-0-5-en-2026-est-difficilement-atteig",
+   "titre": "Une croissance de 0,5 % en 2026 est « difficilement atteignable », selon le Haut Conseil des finances publiques",
+   "url": "https://www.lemonde.fr/economie/article/2026/11/04/une-croissance-de-0-5-en-2026-est-difficilement-atteignable-selon-le-haut-conseil-des-finances-publiques_6806233_3234.html",
+   "source": "Le Monde Économie",
+   "date": "2026-11-04T13:42:37.000Z",
+   "image": "https://img.lemde.fr/2026/11/04/408/0/4898/2449/644/322/60/0/65551a3_ftp-1-8dxrpegkbuvt-afp-d6dr8q7.jpg",
+   "categorie": "Fiscalité",
+   "score": 4
+  },
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-idees-article-2026-11-04-la-taxe-carbone-principale-recommandation-de-william-nord",
+   "titre": "« La taxe carbone, principale recommandation de William Nordhaus, est devenue la martingale des économistes contre le réchauffement climatique »",
+   "url": "https://www.lemonde.fr/idees/article/2026/11/04/la-taxe-carbone-principale-recommandation-de-william-nordhaus-est-devenue-la-martingale-des-economistes-contre-le-rechauffement-climatique_6806230_3232.html",
+   "source": "Le Monde Économie",
+   "date": "2026-11-04T13:33:16.000Z",
+   "image": "https://img.lemde.fr/2026/11/02/219/0/5760/2880/644/322/60/0/b7894ef_upload-1-v15f0nk20fle-2018-10-08t140913z-754191553-rc143af1ca50-rtrmadp-3-nobel-prizes-economics.JPG",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-politique-article-2026-11-04-finances-publiques-le-derapage-du-deficit-en-2026-off",
+   "titre": "Le dérapage du déficit public français à 5,4 % du PIB en 2026 officialisé",
+   "url": "https://www.lemonde.fr/politique/article/2026/11/04/finances-publiques-le-derapage-du-deficit-en-2026-officialise_6806225_823448.html",
+   "source": "Le Monde Économie",
+   "date": "2026-11-04T13:09:21.000Z",
+   "image": "https://img.lemde.fr/2026/11/03/666/0/8000/4000/644/322/60/0/7871622_upload-1-l1a40zukewt6-jmug261103076.jpg",
+   "categorie": "Fiscalité",
+   "score": 4
+  },
+  {
+   "id": "cnil-https-www-cnil-fr-fr-cepd-privacy-for-kids",
+   "titre": "Privacy for Kids : le CEPD lance une plateforme dédiée à la vie privée des enfants",
+   "url": "https://www.cnil.fr/fr/cepd-privacy-for-kids",
+   "source": "CNIL",
+   "officiel": true,
+   "date": "2026-11-04T12:00:00.000Z",
+   "categorie": "Numérique",
+   "score": 2
+  },
   {
    "id": "village-de-la-justice-https-www-village-justice-com-articles-directeur-couple-avec-deux-subordonnees-leurs-craintes-peuv",
    "titre": "Directeur en couple avec deux subordonnées : leurs craintes peuvent-elles justifier son licenciement (Cass. soc., 21 oct. 2026) ? Par Laurent Béziau, Avocat.",
@@ -805,76 +875,6 @@
    "image": "https://www.franceinfo.fr/pictures/Ea_PW9A8tB7biG33BYtzqe2zBno/0x53:1024x629/432x243/filters:format(jpg)/2026/10/26/6adf11ef61bb9965735318.jpg",
    "categorie": "Social",
    "score": 5
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-quel-est-cet-impot-sur-la-fortune-des-milliardaires-inspire-de-la-ta",
-   "titre": "Quel est cet impôt sur la fortune des milliardaires, inspiré de la taxe Zucman, qui pourrait être adopté en Californie ?",
-   "url": "https://www.lefigaro.fr/conjoncture/quel-est-cet-impot-sur-la-fortune-des-milliardaires-inspire-de-la-taxe-zucman-qui-pourrait-etre-adopte-en-californie-20261025",
-   "source": "Le Figaro Économie",
-   "date": "2026-10-25T17:38:50.000Z",
-   "image": "https://i.f1g.fr/media/cms/1920x1080_crop/2026/10/25/2418400561b08354922b0f1775f5747b9a1470304cb885ad5495ecbd71da3198.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-societe-manifestations-direct-manifestations-du-24-octobre-142-personnes-ont-",
-   "titre": "DIRECT. Manifestations du 24 octobre : plus de 1 300 interpellations en France, et 53 membres des forces de l'ordre blessés, annonce le ministère de l'Intérieur",
-   "url": "https://www.franceinfo.fr/societe/manifestations/direct-manifestations-du-24-octobre-142-personnes-ont-ete-interpellees-a-paris-dont-120-ont-ete-placees-en-garde-a-vue-selon-la-prefecture-de-police_8252812.html#xtor=RSS-3-%5Bgeneral%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-10-25T11:36:04.000Z",
-   "image": "https://www.franceinfo.fr/pictures/5eNMonJjsmPA3YuCVtgsL-c1cLM/0x86:1024x662/432x243/filters:format(jpg)/2026/10/25/6addaccee3055549186708.jpg",
-   "categorie": "Comptabilité & audit",
-   "score": 3
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-leur-modele-est-fonde-en-partie-sur-la-securite-sociale-l-eternelle-",
-   "titre": "«Leur modèle est fondé en partie sur la sécurité sociale» : l’éternelle angoisse des villes thermales, suspendues aux coupes budgétaires",
-   "url": "https://www.lefigaro.fr/conjoncture/leur-modele-est-fonde-en-partie-sur-la-securite-sociale-l-eternelle-angoisse-des-villes-thermales-suspendues-aux-coupes-budgetaires-20261025",
-   "source": "Le Figaro Économie",
-   "date": "2026-10-25T08:30:00.000Z",
-   "image": "https://i.f1g.fr/media/cms/2728x1535_crop/2026/10/22/540c6b4808c642f7095903467e31bb0741cc6930c0a34f385f9965ce748ec634.jpg",
-   "categorie": "Fiscalité",
-   "score": 4
-  },
-  {
-   "id": "village-de-la-justice-https-www-village-justice-com-articles-conge-supplementaire-naissance-apres-conge-maternite-patern",
-   "titre": "Le congé supplémentaire de naissance après un congé de maternité ou de paternité : quelle articulation des protections contre le licenciement ? Par Estelle Minatchy, Juriste.",
-   "url": "https://www.village-justice.com/articles/conge-supplementaire-naissance-apres-conge-maternite-paternite-quelle,59637.html?utm_source=backend&utm_medium=RSS&utm_campaign=RSS_Reseaux",
-   "source": "Village de la Justice",
-   "date": "2026-10-24T14:00:00.000Z",
-   "image": "https://www.village-justice.com/articles/local/cache-gd2/3a/ffeca90125fe7840748b6a419ab31c.jpg?1792843202",
-   "categorie": "Social",
-   "score": 3
-  },
-  {
-   "id": "capital-https-www-capital-fr-votre-argent-assurance-vie-les-deputes-ont-rejete-les-hausses-dimpots-une-association-veut-",
-   "titre": "Assurance-vie : les députés ont rejeté les hausses d’impôts, une association veut empêcher leur retour au budget 2027",
-   "url": "https://www.capital.fr/votre-argent/assurance-vie-les-deputes-ont-rejete-les-hausses-dimpots-une-association-veut-empecher-leur-retour-au-budget-2027-1531226",
-   "source": "Capital",
-   "date": "2026-10-24T12:00:00.000Z",
-   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~10~23~25980aa9-6e20-4793-8122-369606fba787.jpeg/1200x900/focus-point/2362%2C872/assurance-vie-les-deputes-ont-rejete-les-hausses-d-impots-une-association-veut-empecher-leur-retour-au-budget-2027.jpg",
-   "categorie": "Fiscalité",
-   "score": 5
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-secteur-high-tech-mark-zuckerberg-s-engage-a-rester-huit-ans-en-californie-meme-",
-   "titre": "Mark Zuckerberg s’engage à rester huit ans en Californie, même si l’État adopte l’impôt sur la fortune",
-   "url": "https://www.lefigaro.fr/secteur/high-tech/mark-zuckerberg-s-engage-a-rester-huit-ans-en-californie-meme-si-l-etat-adopte-l-impot-sur-la-fortune-20261024",
-   "source": "Le Figaro Économie",
-   "date": "2026-10-23T23:36:21.000Z",
-   "image": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/24/c354086db79851fba4ec65bdf3a19e6531dd088049dd070a58e29bac5268b4ff.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "capital-https-www-capital-fr-economie-politique-budget-2027-on-va-arreter-de-faire-semblant-les-deputes-nattendent-plus-",
-   "titre": "Budget 2027 : «On va arrêter de faire semblant», les députés n’attendent plus que le 49.3 ou les ordonnances",
-   "url": "https://www.capital.fr/economie-politique/budget-2027-on-va-arreter-de-faire-semblant-les-deputes-nattendent-plus-que-le-493-ou-les-ordonnances-1531230",
-   "source": "Capital",
-   "date": "2026-10-23T17:30:00.000Z",
-   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~10~23~b9b239a3-f7e2-4682-afda-d21f8a8aa28a.jpeg/1200x900/quality/80/budget-2027-on-va-arreter-de-faire-semblant-les-deputes-n-attendent-plus-que-le-49-3-ou-les-ordonnances.jpg",
-   "categorie": "Fiscalité",
-   "score": 4
   }
  ],
  "ecartes": []
