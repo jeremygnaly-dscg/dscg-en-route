@@ -2123,5 +2123,302 @@
     "dit": "En S.A.S, tout dépend des statuts : une cession contraire à l'agrément est nulle."
    }
   ]
+ },
+ {
+  "id": "m-couverture-change",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "accroche": "Tu vends pour 1 M$, payables dans 3 mois : tu peux perdre de l'argent sans rien faire.",
+  "segments": [
+   {
+    "voix": "Tu vends pour 1 M$, payables dans 3 mois : tu peux perdre de l'argent sans rien faire.",
+    "dit": "Tu vends pour un million de dollars, payables dans trois mois : tu peux perdre de l'argent sans rien faire."
+   },
+   {
+    "voix": "Aujourd'hui, 1 € vaut 1,10 $. Si le dollar baisse d'ici là, tu touches moins d'euros.",
+    "titre": "Risque de change",
+    "rangs": [
+     {
+      "lib": "Vente à encaisser",
+      "val": "1 M$"
+     },
+     {
+      "lib": "Cours au comptant",
+      "val": "1,10 $/€"
+     }
+    ],
+    "dit": "Aujourd'hui, un euro vaut un dollar dix. Si le dollar baisse d'ici là, tu touches moins d'euros."
+   },
+   {
+    "voix": "Parade : vendre tes dollars à terme. Taux dollar 4 %, taux euro 2 % : le cours à terme passe à 1,1055 $.",
+    "rangs": [
+     {
+      "op": "→",
+      "lib": "Cours à terme (3 mois)",
+      "val": "1,1055 $",
+      "style": "fort"
+     }
+    ],
+    "dit": "Parade : vendre tes dollars à terme. Taux dollar quatre pour cent, taux euro deux pour cent : le cours à terme passe à un virgule un zéro cinq cinq dollar."
+   },
+   {
+    "voix": "Tu encaisses environ 904 590 €, quoi qu'il arrive.",
+    "rangs": [
+     {
+      "op": "=",
+      "lib": "Montant garanti",
+      "val": "904 590 €",
+      "style": "ok"
+     }
+    ],
+    "dit": "Tu encaisses environ neuf cent quatre mille cinq cent quatre-vingt-dix euros, quoi qu'il arrive."
+   },
+   {
+    "voix": "L'option protège aussi, et te laisse le gain si le dollar monte, mais contre une prime.",
+    "dit": "L'option protège aussi, et te laisse le gain si le dollar monte, mais contre une prime."
+   }
+  ]
+ },
+ {
+  "id": "m-cout-credit-bail",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "accroche": "Un emprunt à 5 % ne te coûte pas 5 %.",
+  "segments": [
+   {
+    "voix": "Un emprunt à 5 % ne te coûte pas 5 %.",
+    "dit": "Un emprunt à cinq pour cent ne te coûte pas cinq pour cent."
+   },
+   {
+    "voix": "Les intérêts sont déductibles : avec un IS à 25 %, l'impôt baisse d'autant.",
+    "titre": "Coût d'un financement",
+    "rangs": [
+     {
+      "lib": "Taux de l'emprunt",
+      "val": "5 %"
+     },
+     {
+      "op": "×",
+      "lib": "1 − taux d'IS",
+      "val": "0,75"
+     }
+    ],
+    "dit": "Les intérêts sont déductibles : avec un impôt sur les sociétés à vingt-cinq pour cent, l'impôt baisse d'autant."
+   },
+   {
+    "voix": "Coût après impôt : 5 % × 0,75 = 3,75 %.",
+    "rangs": [
+     {
+      "op": "=",
+      "lib": "Coût après impôt",
+      "val": "3,75 %",
+      "style": "fort"
+     }
+    ],
+    "dit": "Coût après impôt : cinq pour cent fois zéro virgule soixante-quinze, égale trois virgule soixante-quinze pour cent."
+   },
+   {
+    "voix": "Le crédit-bail ? Les loyers sont déductibles, mais tu perds l'économie d'impôt sur les amortissements.",
+    "efface": true,
+    "titre": "Et le crédit-bail ?",
+    "rangs": [
+     {
+      "lib": "Loyers déductibles",
+      "val": "✓"
+     },
+     {
+      "lib": "Amortissements déductibles",
+      "val": "✗",
+      "style": "fort"
+     }
+    ],
+    "dit": "Le crédit-bail ? Les loyers sont déductibles, mais tu perds l'économie d'impôt sur les amortissements."
+   },
+   {
+    "voix": "Compare toujours les coûts actuariels après impôt, jamais les taux affichés par la banque.",
+    "dit": "Compare toujours les coûts actuariels après impôt, jamais les taux affichés par la banque."
+   }
+  ]
+ },
+ {
+  "id": "c-marge-interne",
+  "modele": "finance",
+  "tag": "Dessine-moi la conso",
+  "accroche": "Un groupe qui se vend à lui-même ne gagne pas un centime.",
+  "segments": [
+   {
+    "voix": "Un groupe qui se vend à lui-même ne gagne pas un centime.",
+    "dit": "Un groupe qui se vend à lui-même ne gagne pas un centime."
+   },
+   {
+    "voix": "La mère vend à sa filiale pour 100 000 € de tissus, qui lui ont coûté 70 000 €.",
+    "titre": "Marge interne en stock",
+    "rangs": [
+     {
+      "lib": "Vente interne",
+      "val": "100 000"
+     },
+     {
+      "op": "−",
+      "lib": "Coût",
+      "val": "70 000"
+     }
+    ],
+    "dit": "La mère vend à sa filiale pour cent mille euros de tissus, qui lui ont coûté soixante-dix mille euros."
+   },
+   {
+    "voix": "40 % sont encore en stock : on élimine 30 000 × 40 %, soit 12 000 € de marge.",
+    "rangs": [
+     {
+      "op": "=",
+      "lib": "Marge en stock (40 %)",
+      "val": "12 000",
+      "style": "fort"
+     }
+    ],
+    "dit": "Quarante pour cent sont encore en stock : on élimine trente mille euros fois quarante pour cent, soit douze mille euros de marge."
+   },
+   {
+    "voix": "Avec 3 000 € d'impôt différé actif, le résultat consolidé baisse de 9 000 €.",
+    "rangs": [
+     {
+      "op": "+",
+      "lib": "Impôt différé actif",
+      "val": "3 000"
+     },
+     {
+      "op": "=",
+      "lib": "Effet sur le résultat",
+      "val": "− 9 000",
+      "style": "ok"
+     }
+    ],
+    "dit": "Avec trois mille euros d'impôt différé actif, le résultat consolidé baisse de neuf mille euros."
+   },
+   {
+    "voix": "La marge réapparaîtra quand le stock sera vendu hors du groupe.",
+    "dit": "La marge réapparaîtra quand le stock sera vendu hors du groupe."
+   }
+  ]
+ },
+ {
+  "id": "d-fusion-faveur",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "accroche": "Absorber une boîte avec 2 M€ de plus-value latente, sans impôt immédiat ? C'est légal.",
+  "segments": [
+   {
+    "voix": "Absorber une boîte avec 2 M€ de plus-value latente, sans impôt immédiat ? C'est légal.",
+    "dit": "Absorber une boîte avec deux millions d'euros de plus-value latente, sans impôt immédiat ? C'est légal."
+   },
+   {
+    "voix": "Régime de faveur, article 210 A du CGI : la plus-value d'apport de l'absorbée n'est pas imposée.",
+    "titre": "Fusion : régime de faveur",
+    "rangs": [
+     {
+      "lib": "Plus-value chez l'absorbée",
+      "val": "non imposée",
+      "style": "ok"
+     }
+    ],
+    "dit": "Régime de faveur, article deux cent dix A du Code général des impôts : la plus-value d'apport de l'absorbée n'est pas imposée."
+   },
+   {
+    "voix": "En échange, l'absorbante la réintègre : 15 ans pour les constructions, 5 ans pour les autres biens amortissables.",
+    "rangs": [
+     {
+      "op": "+",
+      "lib": "Constructions",
+      "val": "15 ans"
+     },
+     {
+      "op": "+",
+      "lib": "Autres biens amortissables",
+      "val": "5 ans"
+     }
+    ],
+    "dit": "En échange, l'absorbante la réintègre : quinze ans pour les constructions, cinq ans pour les autres biens amortissables."
+   },
+   {
+    "voix": "Et les déficits de l'absorbée ? Seulement avec un agrément, article 209 II.",
+    "rangs": [
+     {
+      "lib": "Déficits transmis",
+      "val": "agrément",
+      "style": "fort"
+     }
+    ],
+    "dit": "Et les déficits de l'absorbée ? Seulement avec un agrément, article deux cent neuf deux."
+   },
+   {
+    "voix": "C'est un report d'impôt, pas une exonération.",
+    "dit": "C'est un report d'impôt, pas une exonération."
+   }
+  ]
+ },
+ {
+  "id": "c-ias36",
+  "modele": "finance",
+  "tag": "Dessine-moi la conso",
+  "accroche": "Ta machine vaut 800 000 € dans les comptes… et IAS 36 peut t'obliger à baisser ce chiffre.",
+  "segments": [
+   {
+    "voix": "Ta machine vaut 800 000 € dans les comptes… et IAS 36 peut t'obliger à baisser ce chiffre.",
+    "dit": "Ta machine vaut huit cent mille euros dans les comptes… et la norme I.A.S trente-six peut t'obliger à baisser ce chiffre."
+   },
+   {
+    "voix": "Valeur recouvrable : la plus élevée entre la juste valeur nette, 600 000 €, et la valeur d'utilité, 650 000 €.",
+    "titre": "Test de dépréciation",
+    "rangs": [
+     {
+      "lib": "Juste valeur nette",
+      "val": "600 000"
+     },
+     {
+      "lib": "Valeur d'utilité",
+      "val": "650 000"
+     },
+     {
+      "op": "=",
+      "lib": "Valeur recouvrable",
+      "val": "650 000",
+      "style": "fort"
+     }
+    ],
+    "dit": "Valeur recouvrable : la plus élevée entre la juste valeur nette, six cent mille euros, et la valeur d'utilité, six cent cinquante mille euros."
+   },
+   {
+    "voix": "Valeur nette comptable : 800 000 €. C'est trop.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Valeur nette comptable",
+      "val": "800 000"
+     },
+     {
+      "op": "−",
+      "lib": "Valeur recouvrable",
+      "val": "650 000"
+     }
+    ],
+    "dit": "Valeur nette comptable : huit cent mille euros. C'est trop."
+   },
+   {
+    "voix": "Dépréciation : 800 000 − 650 000 = 150 000 €.",
+    "rangs": [
+     {
+      "op": "=",
+      "lib": "Dépréciation",
+      "val": "150 000",
+      "style": "ok"
+     }
+    ],
+    "dit": "Dépréciation : huit cent mille euros moins six cent cinquante mille euros, égale cent cinquante mille euros."
+   },
+   {
+    "voix": "Elle peut être reprise si la valeur remonte. Sauf pour le goodwill : c'est définitif.",
+    "dit": "Elle peut être reprise si la valeur remonte. Sauf pour le goodwill : c'est définitif."
+   }
+  ]
  }
 ]
