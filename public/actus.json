@@ -1,5 +1,5 @@
 {
- "majLe": "2026-11-05T06:07:42.161Z",
+ "majLe": "2026-11-05T12:02:54.370Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -22,7 +22,7 @@
    "nom": "Village de la Justice",
    "url": "https://www.village-justice.com/articles/spip.php?page=backend",
    "ok": true,
-   "articles": 0
+   "articles": 2
   },
   {
    "nom": "Le Monde du Droit",
@@ -44,7 +44,7 @@
    "nom": "Le Monde Économie",
    "url": "https://www.lemonde.fr/economie/rss_full.xml",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "Le Figaro Économie",
@@ -62,7 +62,7 @@
    "nom": "Capital",
    "url": "https://feed.prismamediadigital.com/v1/cap/rss?sources=capital",
    "ok": true,
-   "articles": 0
+   "articles": 1
   }
  ],
  "images": {
@@ -76,6 +76,36 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "village-de-la-justice-https-www-village-justice-com-articles-exit-tax-transfert-domicile-fiscal-hors-france-cas-depart-v",
+   "titre": "L'Exit tax et le transfert du domicile fiscal hors de France : le cas du départ vers Maurice. Par Sandy Christ Bhaganooa, Avocat.",
+   "url": "https://www.village-justice.com/articles/exit-tax-transfert-domicile-fiscal-hors-france-cas-depart-vers-maurice,59811.html?utm_source=backend&utm_medium=RSS&utm_campaign=RSS_Reseaux",
+   "source": "Village de la Justice",
+   "date": "2026-11-05T12:30:00.000Z",
+   "image": "https://www.village-justice.com/articles/local/cache-gd2/12/08575036b898795e3426dd39aa1fa1.jpg?1793878205",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "village-de-la-justice-https-www-village-justice-com-articles-taxe-sur-les-actifs-non-affectes-une-activite-operationnell",
+   "titre": "La taxe sur les actifs non affectés à une activité opérationnelle des sociétés holdings patrimoniales : quels enjeux ? Par Maxime Richatin, Étudiant en Droit.",
+   "url": "https://www.village-justice.com/articles/taxe-sur-les-actifs-non-affectes-une-activite-operationnelle-des-societes,59831.html?utm_source=backend&utm_medium=RSS&utm_campaign=RSS_Reseaux",
+   "source": "Village de la Justice",
+   "date": "2026-11-05T12:00:00.000Z",
+   "image": "https://www.village-justice.com/articles/local/cache-gd2/4f/897bd6d54e9f5751e3b742c19489e9.jpg?1793876406",
+   "categorie": "Fiscalité",
+   "score": 5
+  },
+  {
+   "id": "capital-https-www-capital-fr-immobilier-renovation-en-copropriete-40-daides-un-pret-a-0-et-une-menace-budgetaire-1531565",
+   "titre": "Rénovation en copropriété : 40% d’aides, un prêt à 0% et une menace budgétaire",
+   "url": "https://www.capital.fr/immobilier/renovation-en-copropriete-40-daides-un-pret-a-0-et-une-menace-budgetaire-1531565",
+   "source": "Capital",
+   "date": "2026-11-05T11:00:00.000Z",
+   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~11~04~0dcf095f-23c1-41d3-b301-ee55cb979516.jpg/1200x900/focus-point/1483%2C801/renovation-en-copropriete-40-d-aides-un-pret-a-0-et-une-menace-budgetaire.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
   {
    "id": "le-monde-conomie-https-www-lemonde-fr-argent-article-2026-11-05-mariage-sous-le-regime-de-la-communaute-les-loyers-du-bi",
    "titre": "Mariage sous le régime de la communauté : les loyers du bien propre d’un époux sont communs aux deux",
@@ -845,36 +875,6 @@
    "image": "https://www.franceinfo.fr/pictures/lhHg4-1c5Q3DzsKaHjh-MbThdO0/0x0:1024x576/432x243/filters:format(jpg)/2026/10/26/6adf788357b56874871890.jpg",
    "categorie": "Fiscalité",
    "score": 4
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-replay-jt-france-2-20-heures-vers-une-taxe-emeutes-sur-vos-assurances-8254831",
-   "titre": "Vers une \"taxe émeutes\" sur vos assurances ?",
-   "url": "https://www.franceinfo.fr/replay-jt/france-2/20-heures/vers-une-taxe-emeutes-sur-vos-assurances_8254831.html#xtor=RSS-3-%5Bgeneral%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-10-26T20:27:25.000Z",
-   "image": "https://www.franceinfo.fr/pictures/1sYdhDt7bZeDaY60KIeSx1sM89g/0x0:1920x1080/432x243/filters:format(jpg)/2026/10/26/6adfb650f18c5093113266.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-conso-colis-que-vont-changer-les-frais-de-traitement-imposes-par-l-ue-des-ce-1er",
-   "titre": "Colis importés : que vont changer les «frais de traitement» imposés par l’UE dès ce 1er novembre, en plus de la taxe «petits colis» ?",
-   "url": "https://www.lefigaro.fr/conso/colis-que-vont-changer-les-frais-de-traitement-imposes-par-l-ue-des-ce-1er-novembre-en-plus-de-la-taxe-petits-colis-20261026",
-   "source": "Le Figaro Économie",
-   "date": "2026-10-26T16:55:36.000Z",
-   "image": "https://i.f1g.fr/media/cms/orig/2026/10/26/ce7f47bb9ee917645612841cd21e42cc00a07ce492b9ca4d1c9a57ae9939bd22.JPG",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-a-partir-du-1er-novembre-les-petits-colis-importes-seront-davantage-",
-   "titre": "À partir du 1er novembre, les petits colis importés seront davantage taxés",
-   "url": "https://www.franceinfo.fr/economie/a-partir-du-1er-novembre-les-petits-colis-importes-seront-davantage-taxes_8254318.html#xtor=RSS-3-%5Bgeneral%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-10-26T14:04:48.000Z",
-   "image": "https://www.franceinfo.fr/pictures/VQYjbz38uMcnRvTCgm8Z-WCAlbI/23x0:1580x876/432x243/filters:format(jpg)/2026/10/26/6adf5d6d627b6705513155.png",
-   "categorie": "Fiscalité",
-   "score": 3
   }
  ],
  "ecartes": []
