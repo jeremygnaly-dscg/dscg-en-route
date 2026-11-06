@@ -1,5 +1,5 @@
 {
- "majLe": "2026-11-06T06:05:32.832Z",
+ "majLe": "2026-11-06T11:58:18.338Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -11,7 +11,7 @@
    "nom": "Entreprendre Service-Public",
    "url": "https://www.service-public.fr/abonnements/rss/actu-actu-pro.rss",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "Compta Online",
@@ -44,19 +44,19 @@
    "nom": "Le Monde Économie",
    "url": "https://www.lemonde.fr/economie/rss_full.xml",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 2
+   "articles": 0
   },
   {
    "nom": "Capital",
@@ -76,6 +76,16 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-economie-article-2026-11-06-en-italie-une-taxe-de-sortie-pour-les-grandes-fortunes",
+   "titre": "En Italie, une « taxe de sortie » pour les grandes fortunes",
+   "url": "https://www.lemonde.fr/economie/article/2026/11/06/en-italie-une-taxe-de-sortie-pour-les-grandes-fortunes_6807773_3234.html",
+   "source": "Le Monde Économie",
+   "date": "2026-11-06T10:45:05.000Z",
+   "image": "https://img.lemde.fr/2026/11/03/39/0/3000/1500/644/322/60/0/45638d5_ftp-1-b7erftelgzln-d4b97645b65846a58486720f7eb537fb-0-59ba917cfbca49359a333a8d46959265.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
   {
    "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-on-n-aurait-jamais-du-les-privatiser-ou-va-l-argent-des-autoroutes-8",
    "titre": "\"On n'aurait jamais dû les privatiser\" : où va l'argent des autoroutes ?",
@@ -866,16 +876,6 @@
    "image": "https://img.lemde.fr/2026/02/25/125/0/1500/750/644/322/60/0/5f6ad1d_upload-1-ryifecdlpm8k-frame-1069.jpg",
    "categorie": "Fiscalité",
    "score": 5
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-replay-radio-le-decryptage-eco-l-etat-va-mettre-en-place-une-taxe-emeutes-pou",
-   "titre": "L'État va mettre en place une taxe \"émeutes\" pour payer les dégâts liés aux violences lors des mobilisations sociales",
-   "url": "https://www.franceinfo.fr/replay-radio/le-decryptage-eco/l-etat-va-mettre-en-place-une-taxe-emeutes-pour-payer-les-degats-lies-aux-violences-lors-des-mobilisations-sociales_8236306.html#xtor=RSS-3-%5Bgeneral%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-10-28T07:15:30.000Z",
-   "image": "https://www.franceinfo.fr/pictures/PM1TDUMyZiiRTv_IMDPGzBTZ5g0/0x361:6952x4272/432x243/filters:format(jpg)/2026/10/28/6ae196c95ac07482308438.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
   }
  ],
  "ecartes": []
