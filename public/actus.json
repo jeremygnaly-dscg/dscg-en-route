@@ -1,5 +1,5 @@
 {
- "majLe": "2026-11-06T11:58:18.338Z",
+ "majLe": "2026-11-06T17:54:04.337Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -38,19 +38,19 @@
    "nom": "CNIL",
    "url": "https://www.cnil.fr/fr/rss.xml",
    "ok": true,
-   "articles": 4
+   "articles": 3
   },
   {
    "nom": "Le Monde Économie",
    "url": "https://www.lemonde.fr/economie/rss_full.xml",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "franceinfo Économie",
@@ -76,6 +76,26 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-conso-la-frequentation-de-shein-et-temu-en-chute-libre-au-troisieme-trimestre-pl",
+   "titre": "La fréquentation de Shein et Temu en chute libre au troisième trimestre, plombée par la taxe sur les petits colis",
+   "url": "https://www.lefigaro.fr/conso/la-frequentation-de-shein-et-temu-en-chute-libre-au-troisieme-trimestre-plombee-par-la-taxe-sur-les-petits-colis-20261106",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-06T16:19:14.000Z",
+   "image": "https://i.f1g.fr/media/cms/3000x2284_crop/2026/11/06/38619e013f03e32ee3e956a2eb43d697dedcc80ae69ad548f4530289e7d205bb.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "cnil-https-www-cnil-fr-fr-recherches-internes-sante-quelles-obligations",
+   "titre": "Recherches internes : quelles sont les obligations pour les professionnels de santé ?",
+   "url": "https://www.cnil.fr/fr/recherches-internes-sante-quelles-obligations",
+   "source": "CNIL",
+   "officiel": true,
+   "date": "2026-11-06T12:00:00.000Z",
+   "categorie": "Finance",
+   "score": 4
+  },
   {
    "id": "le-monde-conomie-https-www-lemonde-fr-economie-article-2026-11-06-en-italie-une-taxe-de-sortie-pour-les-grandes-fortunes",
    "titre": "En Italie, une « taxe de sortie » pour les grandes fortunes",
@@ -856,26 +876,6 @@
    "image": "https://www.franceinfo.fr/pictures/YBJB_oIDItMl5Y9JQThJEloNqqE/0x0:4022x2260/432x243/filters:format(jpg)/2022/10/15/phpiHO0a7.jpg",
    "categorie": "Fiscalité",
    "score": 3
-  },
-  {
-   "id": "le-monde-conomie-https-www-lemonde-fr-economie-article-2026-10-28-safran-investit-au-royaume-uni-ou-l-engagement-de-l-et",
-   "titre": "Safran investit au Royaume-Uni, où l’engagement de l’Etat en faveur de l’aéronautique est « plus clair et plus net » qu’en France",
-   "url": "https://www.lemonde.fr/economie/article/2026/10/28/safran-investit-au-royaume-uni-ou-l-engagement-de-l-etat-en-faveur-de-l-aeronautique-est-plus-clair-et-plus-net-qu-en-france_6801544_3234.html",
-   "source": "Le Monde Économie",
-   "date": "2026-10-28T08:52:19.000Z",
-   "image": "https://img.lemde.fr/2026/10/27/179/0/3126/1563/644/322/60/0/0088c68_upload-1-jslzbwdx4or4-2016-03-15t120000z-386130989-d1aessqvvjaa-rtrmadp-3-turkey-airport.JPG",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "le-monde-conomie-https-www-lemonde-fr-idees-article-2026-10-28-ia-et-travail-les-precedentes-revolutions-industrielles-o",
-   "titre": "IA et travail : « Les précédentes révolutions industrielles ont, sur le long terme, toujours créé plus d’emplois qu’elles n’en ont détruits »",
-   "url": "https://www.lemonde.fr/idees/article/2026/10/28/ia-et-travail-les-precedentes-revolutions-industrielles-ont-sur-le-long-terme-toujours-cree-plus-d-emplois-qu-elles-n-en-ont-detruits_6801542_3232.html",
-   "source": "Le Monde Économie",
-   "date": "2026-10-28T08:00:07.000Z",
-   "image": "https://img.lemde.fr/2026/02/25/125/0/1500/750/644/322/60/0/5f6ad1d_upload-1-ryifecdlpm8k-frame-1069.jpg",
-   "categorie": "Fiscalité",
-   "score": 5
   }
  ],
  "ecartes": []
