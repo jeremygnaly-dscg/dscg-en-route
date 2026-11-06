@@ -2420,5 +2420,296 @@
     "dit": "Elle peut être reprise si la valeur remonte. Sauf pour le goodwill : c'est définitif."
    }
   ]
+ },
+ {
+  "id": "m-swap-taux",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "accroche": "Ton taux variable grimpe ? Tu peux le bloquer sans toucher à ton prêt.",
+  "segments": [
+   {
+    "voix": "Ton taux variable grimpe ? Tu peux le bloquer sans toucher à ton prêt.",
+    "dit": "Ton taux variable grimpe ? Tu peux le bloquer sans toucher à ton prêt."
+   },
+   {
+    "voix": "Prêt de 10 M€ à Euribor + 1 %. Si l'Euribor vaut 3,5 %, tu paies 4,5 %.",
+    "titre": "Le swap de taux",
+    "rangs": [
+     {
+      "lib": "Prêt : Euribor + 1 %",
+      "val": "4,5 %"
+     }
+    ],
+    "dit": "Prêt de dix millions d'euros à Euribor plus un pour cent. Si l'Euribor vaut trois virgule cinq pour cent, tu paies quatre virgule cinq pour cent."
+   },
+   {
+    "voix": "À côté, un swap avec une banque : tu lui paies 3 % fixe, elle te verse l'Euribor.",
+    "rangs": [
+     {
+      "op": "+",
+      "lib": "Swap : tu paies",
+      "val": "3 %"
+     },
+     {
+      "op": "−",
+      "lib": "Swap : tu reçois l'Euribor",
+      "val": "3,5 %"
+     }
+    ],
+    "dit": "À côté, un swap avec une banque : tu lui paies trois pour cent fixe, elle te verse l'Euribor."
+   },
+   {
+    "voix": "Coût net : 4 %, quoi qu'il arrive aux taux.",
+    "rangs": [
+     {
+      "op": "=",
+      "lib": "Coût net",
+      "val": "4 %",
+      "style": "ok"
+     }
+    ],
+    "dit": "Coût net : quatre pour cent, quoi qu'il arrive aux taux."
+   },
+   {
+    "voix": "Le revers : si les taux baissent, tu n'en profites pas. Pour garder la baisse, il faut un cap, qui se paie.",
+    "dit": "Le revers : si les taux baissent, tu n'en profites pas. Pour garder la baisse, il faut un cap, qui se paie."
+   }
+  ]
+ },
+ {
+  "id": "m-budget-tresorerie",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "accroche": "Tes ventes explosent… et c'est justement là que tu risques le découvert.",
+  "segments": [
+   {
+    "voix": "Tes ventes explosent… et c'est justement là que tu risques le découvert.",
+    "dit": "Tes ventes explosent… et c'est justement là que tu risques le découvert."
+   },
+   {
+    "voix": "Moitié comptant, moitié à 30 jours : en mars, tu encaisses la moitié des ventes de mars et de février.",
+    "titre": "Budget de trésorerie",
+    "rangs": [
+     {
+      "lib": "50 % des ventes de mars",
+      "val": "42 000"
+     },
+     {
+      "op": "+",
+      "lib": "50 % des ventes de février",
+      "val": "36 000"
+     },
+     {
+      "op": "=",
+      "lib": "Encaissé en mars",
+      "val": "78 000",
+      "style": "fort"
+     }
+    ],
+    "dit": "Moitié comptant, moitié à trente jours : en mars, tu encaisses la moitié des ventes de mars et de février."
+   },
+   {
+    "voix": "Et la TVA de février se paie en mars : 12 000 € collectés, moins 6 000 € déductibles.",
+    "rangs": [
+     {
+      "op": "−",
+      "lib": "TVA de février, payée en mars",
+      "val": "6 000"
+     }
+    ],
+    "dit": "Et la T.V.A. de février se paie en mars : douze mille euros collectés, moins six mille euros déductibles."
+   },
+   {
+    "voix": "Trésorerie de fin de mois : début, plus encaissements, moins décaissements, toujours en TTC.",
+    "dit": "Trésorerie de fin de mois : début, plus encaissements, moins décaissements, toujours en toutes taxes comprises."
+   },
+   {
+    "voix": "Un mois dans le rouge ? Escompte, Dailly, affacturage ou crédit de campagne.",
+    "dit": "Un mois dans le rouge ? Escompte, Dailly, affacturage ou crédit de campagne."
+   }
+  ]
+ },
+ {
+  "id": "c-rachat-minoritaires",
+  "modele": "finance",
+  "tag": "Dessine-moi la conso",
+  "accroche": "Tu paies 150 000 € pour 10 % de ta filiale… et ça ne crée aucun goodwill.",
+  "segments": [
+   {
+    "voix": "Tu paies 150 000 € pour 10 % de ta filiale… et ça ne crée aucun goodwill.",
+    "dit": "Tu paies cent cinquante mille euros pour dix pour cent de ta filiale… et ça ne crée aucun goodwill."
+   },
+   {
+    "voix": "Rhin Holding contrôle déjà Vosges à 70 % et rachète 10 % aux minoritaires.",
+    "titre": "Rachat de minoritaires",
+    "rangs": [
+     {
+      "lib": "Prix payé",
+      "val": "150 000"
+     }
+    ],
+    "dit": "Rhin Holding contrôle déjà Vosges à soixante-dix pour cent et rachète dix pour cent aux minoritaires."
+   },
+   {
+    "voix": "Capitaux propres de Vosges : 1 M€. Les 10 % rachetés, c'est 100 000 € d'intérêts minoritaires.",
+    "rangs": [
+     {
+      "op": "−",
+      "lib": "10 % des capitaux propres",
+      "val": "100 000"
+     }
+    ],
+    "dit": "Capitaux propres de Vosges : un million d'euros. Les dix pour cent rachetés, c'est cent mille euros d'intérêts minoritaires."
+   },
+   {
+    "voix": "L'écart de 50 000 € n'est pas un écart d'acquisition : il diminue les réserves du groupe.",
+    "rangs": [
+     {
+      "op": "=",
+      "lib": "Imputé sur les réserves",
+      "val": "50 000",
+      "style": "ok"
+     }
+    ],
+    "dit": "L'écart de cinquante mille euros n'est pas un écart d'acquisition : il diminue les réserves du groupe."
+   },
+   {
+    "voix": "Le contrôle ne change pas : c'est une transaction entre actionnaires.",
+    "dit": "Le contrôle ne change pas : c'est une transaction entre actionnaires."
+   }
+  ]
+ },
+ {
+  "id": "d-dutreil",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "accroche": "Donner une société de 4 M€ à ses enfants… et n'être taxé que sur 1 M€.",
+  "segments": [
+   {
+    "voix": "Donner une société de 4 M€ à ses enfants… et n'être taxé que sur 1 M€.",
+    "dit": "Donner une société de quatre millions d'euros à ses enfants… et n'être taxé que sur un million d'euros."
+   },
+   {
+    "voix": "Pacte Dutreil : engagement collectif d'au moins 2 ans, puis engagement individuel de 4 ans, et un signataire qui dirige.",
+    "titre": "Pacte Dutreil",
+    "rangs": [
+     {
+      "lib": "Engagement collectif ≥ 2 ans",
+      "val": "✓"
+     },
+     {
+      "lib": "Engagement individuel 4 ans",
+      "val": "✓"
+     },
+     {
+      "lib": "Un signataire dirige",
+      "val": "✓"
+     }
+    ],
+    "dit": "Pacte Dutreil : engagement collectif d'au moins deux ans, puis engagement individuel de quatre ans, et un signataire qui dirige."
+   },
+   {
+    "voix": "En échange, 75 % de la valeur des titres est exonérée.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Valeur des titres",
+      "val": "4 M€"
+     },
+     {
+      "op": "−",
+      "lib": "Exonération de 75 %",
+      "val": "3 M€"
+     }
+    ],
+    "dit": "En échange, soixante-quinze pour cent de la valeur des titres est exonérée."
+   },
+   {
+    "voix": "Reste 1 M€ taxable : 500 000 € par enfant, avant abattements.",
+    "rangs": [
+     {
+      "op": "=",
+      "lib": "Base taxable",
+      "val": "1 M€",
+      "style": "ok"
+     }
+    ],
+    "dit": "Reste un million d'euros taxable : cinq cent mille euros par enfant, avant abattements."
+   },
+   {
+    "voix": "Et si tu donnes en pleine propriété avant 70 ans, les droits baissent encore de 50 %.",
+    "dit": "Et si tu donnes en pleine propriété avant soixante-dix ans, les droits baissent encore de cinquante pour cent."
+   }
+  ]
+ },
+ {
+  "id": "m-liquidation-rangs",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "accroche": "Ta boîte liquidée a encore 2 M€… et tes fournisseurs n'en verront presque rien.",
+  "segments": [
+   {
+    "voix": "Ta boîte liquidée a encore 2 M€… et tes fournisseurs n'en verront presque rien.",
+    "dit": "Ta boîte liquidée a encore deux millions d'euros… et tes fournisseurs n'en verront presque rien."
+   },
+   {
+    "voix": "On paie par rang. D'abord les salaires, 250 000 €, puis les frais de justice, 80 000 €.",
+    "titre": "Qui est payé en premier ?",
+    "rangs": [
+     {
+      "lib": "Fonds disponibles",
+      "val": "2 000 000"
+     },
+     {
+      "op": "−",
+      "lib": "Salaires",
+      "val": "250 000"
+     },
+     {
+      "op": "−",
+      "lib": "Frais de justice",
+      "val": "80 000"
+     }
+    ],
+    "dit": "On paie par rang. D'abord les salaires, deux cent cinquante mille euros, puis les frais de justice, quatre-vingt mille euros."
+   },
+   {
+    "voix": "Puis la banque hypothécaire, 900 000 €, et le Trésor et l'Urssaf, 300 000 €.",
+    "rangs": [
+     {
+      "op": "−",
+      "lib": "Banque hypothécaire",
+      "val": "900 000"
+     },
+     {
+      "op": "−",
+      "lib": "Trésor et Urssaf",
+      "val": "300 000"
+     }
+    ],
+    "dit": "Puis la banque hypothécaire, neuf cent mille euros, et le Trésor et l'Urssaf, trois cent mille euros."
+   },
+   {
+    "voix": "Reste 470 000 € pour 2,35 M€ de créances ordinaires : 20 % récupérés.",
+    "rangs": [
+     {
+      "op": "=",
+      "lib": "Reste disponible",
+      "val": "470 000",
+      "style": "fort"
+     },
+     {
+      "lib": "Taux de recouvrement",
+      "val": "20 %",
+      "style": "ok"
+     }
+    ],
+    "dit": "Reste quatre cent soixante-dix mille euros pour deux millions trois cent cinquante mille euros de créances ordinaires : vingt pour cent récupérés."
+   },
+   {
+    "voix": "Et les actionnaires passent en dernier : ici, ils ne touchent rien.",
+    "dit": "Et les actionnaires passent en dernier : ici, ils ne touchent rien."
+   }
+  ]
  }
 ]
