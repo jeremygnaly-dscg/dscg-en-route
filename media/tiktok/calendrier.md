@@ -31,3 +31,4 @@ Noter ici chaque jour les ids produits (`jNN-...`) et les éventuels problèmes.
   M&A prononcé « M-and-A » (choix de Jérémy). Les sujets du tableau ci-dessus déjà couverts par ce lot ne sont pas à refaire.
 - À partir du 5/11 : 5 vidéos par jour via la tâche planifiée.
 - 5/11 : m-couverture-change, m-cout-credit-bail, c-marge-interne, d-fusion-faveur, c-ias36 (27 à 34 s). M&A désormais dit « fusions-acquisitions ». Ordre conseillé : m-couverture-change, c-marge-interne, d-fusion-faveur, m-cout-credit-bail, c-ias36.
+- 6/11 : m-liquidation-rangs, c-rachat-minoritaires, m-swap-taux, d-dutreil, m-budget-tresorerie (30 à 32 s). Ordre conseillé : celui-ci. Attention : l'input `videos` du workflow attend des ids séparés par des virgules (un premier run lancé avec des espaces n'a rien généré, aucun crédit consommé).
