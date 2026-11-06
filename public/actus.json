@@ -1,11 +1,11 @@
 {
- "majLe": "2026-11-05T17:58:29.383Z",
+ "majLe": "2026-11-06T06:05:32.832Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
    "url": "https://www.economie.gouv.fr/rss/toutesactualites",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "Entreprendre Service-Public",
@@ -22,7 +22,7 @@
    "nom": "Village de la Justice",
    "url": "https://www.village-justice.com/articles/spip.php?page=backend",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "Le Monde du Droit",
@@ -38,7 +38,7 @@
    "nom": "CNIL",
    "url": "https://www.cnil.fr/fr/rss.xml",
    "ok": true,
-   "articles": 5
+   "articles": 4
   },
   {
    "nom": "Le Monde Économie",
@@ -50,13 +50,13 @@
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 3
+   "articles": 1
   },
   {
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 0
+   "articles": 2
   },
   {
    "nom": "Capital",
@@ -76,6 +76,36 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-on-n-aurait-jamais-du-les-privatiser-ou-va-l-argent-des-autoroutes-8",
+   "titre": "\"On n'aurait jamais dû les privatiser\" : où va l'argent des autoroutes ?",
+   "url": "https://www.franceinfo.fr/economie/on-n-aurait-jamais-du-les-privatiser-ou-va-l-argent-des-autoroutes_8269901.html#xtor=RSS-3-%5Bgeneral%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-11-05T22:09:32.000Z",
+   "image": "https://www.franceinfo.fr/pictures/7xFzekfd3b-XmJ1aNJtM3Z1SAeY/0x113:1730x1086/432x243/filters:format(jpg)/2026/11/05/6aecef669ba00686815851.png",
+   "categorie": "Fiscalité",
+   "score": 5
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-budget-jordan-bardella-demande-le-vote-en-urgence-d-une-regle-d-or-d",
+   "titre": "Jordan Bardella demande le vote \"en urgence\" d'une \"règle d'or\" dans la Constitution, après le rejet du budget 2027 à l'Assemblée nationale",
+   "url": "https://www.franceinfo.fr/economie/budget/jordan-bardella-demande-le-vote-en-urgence-d-une-regle-d-or-dans-la-constitution-apres-le-rejet-du-budget-2027-a-l-assemblee-nationale_8269751.html#xtor=RSS-3-%5Bgeneral%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-11-05T18:09:03.000Z",
+   "image": "https://www.franceinfo.fr/pictures/u83BUQtnplGkSna4lkl0O-t_z7I/0x53:1024x629/432x243/filters:format(jpg)/2026/11/05/6aecc370643bb126151571.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-on-ne-va-pas-faire-le-cirque-habituel-dans-les-coulisses-des-arbitra",
+   "titre": "« On ne va pas faire le cirque habituel » : dans les coulisses des arbitrages budgétaires de Sébastien Lecornu",
+   "url": "https://www.lefigaro.fr/conjoncture/on-ne-va-pas-faire-le-cirque-habituel-dans-les-coulisses-des-arbitrages-budgetaires-de-sebastien-lecornu-20261105",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-05T18:07:54.000Z",
+   "image": "https://i.f1g.fr/media/cms/1975x1110_crop/2026/11/05/6dd423b0ae34e08c88e8d18683dd22fd6bfe4ad7cae867daba4b91907c268ed2.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
   {
    "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-budget-2027-jordan-bardella-demande-le-vote-en-urgence-d-une-regle-d",
    "titre": "Budget 2027 : Jordan Bardella demande le vote «en urgence» d'une «règle d'or» dans la Constitution",
@@ -173,6 +203,17 @@
    "source": "Le Monde Économie",
    "date": "2026-11-05T05:01:00.000Z",
    "image": "https://img.lemde.fr/2025/08/06/125/0/1500/750/644/322/60/0/08c1982_upload-1-lwc9d7aof2ex-lmargent152.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "entreprendre-service-public-https-entreprendre-service-public-gouv-fr-actualites-a19130-xtor-rss-112",
+   "titre": "les avis de CFE et d'IFER 2026 sont disponibles en ligne",
+   "url": "https://entreprendre.service-public.gouv.fr/actualites/A19130?xtor=RSS-112",
+   "source": "Entreprendre Service-Public",
+   "officiel": true,
+   "date": "2026-11-04T23:00:00.000Z",
+   "image": "https://www.service-public.gouv.fr/webapp/images/actu/extralarge/telephone_ordinateur.jpeg",
    "categorie": "Fiscalité",
    "score": 3
   },
@@ -833,46 +874,6 @@
    "source": "franceinfo Économie",
    "date": "2026-10-28T07:15:30.000Z",
    "image": "https://www.franceinfo.fr/pictures/PM1TDUMyZiiRTv_IMDPGzBTZ5g0/0x361:6952x4272/432x243/filters:format(jpg)/2026/10/28/6ae196c95ac07482308438.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "le-monde-conomie-https-www-lemonde-fr-vie-au-travail-article-2026-10-28-quand-leurs-publications-sur-les-reseaux-sociaux",
-   "titre": "Quand leurs publications sur les réseaux sociaux se retournent contre les salariés",
-   "url": "https://www.lemonde.fr/vie-au-travail/article/2026/10/28/quand-leurs-publications-sur-les-reseaux-sociaux-se-retournent-contre-les-salaries_6801534_6768900.html",
-   "source": "Le Monde Économie",
-   "date": "2026-10-28T05:00:09.000Z",
-   "image": "https://img.lemde.fr/2025/09/19/125/0/1500/750/644/322/60/0/64fd3c0_upload-1-g6mrvogvy216-mei-dia-41.png",
-   "categorie": "Social",
-   "score": 4
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-budget-2027-les-deputes-suppriment-la-surtaxe-des-grandes-entreprise",
-   "titre": "Budget 2027: les députés suppriment la surtaxe des grandes entreprises, contre l’avis du gouvernement",
-   "url": "https://www.lefigaro.fr/conjoncture/budget-2027-les-deputes-suppriment-la-surtaxe-des-grandes-entreprises-contre-l-avis-du-gouvernement-20261027",
-   "source": "Le Figaro Économie",
-   "date": "2026-10-27T21:13:06.000Z",
-   "image": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/27/9e83a20531eb049e15b14bf3ea7cc0ad5f7378272a433923874e69e5d90b9432.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-medias-ce-consensus-historique-ne-rassemble-plus-l-ensemble-de-la-classe-politiq",
-   "titre": "«Ce consensus historique ne rassemble plus l’ensemble de la classe politique» : le financement du Centre national du cinéma sous pression",
-   "url": "https://www.lefigaro.fr/medias/ce-consensus-historique-ne-rassemble-plus-l-ensemble-de-la-classe-politique-le-financement-du-centre-national-du-cinema-sous-pression-20261027",
-   "source": "Le Figaro Économie",
-   "date": "2026-10-27T20:00:00.000Z",
-   "image": "https://i.f1g.fr/media/cms/3000x1687_crop/2026/10/27/ed711eeaac2e67ee453b4dd257db5d153b7ca68ef962ed738379aeb4971abe82.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-societes-depuis-trois-ans-nous-avons-perdu-45-000-emplois-l-appel-au-secours-des",
-   "titre": "«Depuis trois ans, nous avons perdu 45 000 emplois !» : l’appel au secours des artisans du bâtiment",
-   "url": "https://www.lefigaro.fr/societes/depuis-trois-ans-nous-avons-perdu-45-000-emplois-l-appel-au-secours-des-artisans-du-batiment-20261027",
-   "source": "Le Figaro Économie",
-   "date": "2026-10-27T17:55:00.000Z",
-   "image": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/27/86e5ce6a4fa760a7f7bd1309afec3c0880144d3564507a48be81283f56e5925c.jpg",
    "categorie": "Fiscalité",
    "score": 3
   }
