@@ -2711,5 +2711,282 @@
     "dit": "Et les actionnaires passent en dernier : ici, ils ne touchent rien."
    }
   ]
+ },
+ {
+  "id": "m-van-carbone",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "accroche": "Une VAN de 150 000 € peut fondre à 30 000 €. Sans perdre une seule vente.",
+  "segments": [
+   {
+    "voix": "Une VAN de 150 000 € peut fondre à 30 000 €. Sans perdre une seule vente.",
+    "dit": "Une valeur actuelle nette de cent cinquante mille euros peut fondre à trente mille euros. Sans perdre une seule vente."
+   },
+   {
+    "voix": "Drôme Bois veut un séchoir au gaz : VAN de 150 000 €, à 8 % sur 5 ans.",
+    "titre": "VAN et prix du carbone",
+    "rangs": [
+     {
+      "lib": "VAN classique",
+      "val": "150 000 €"
+     }
+    ],
+    "dit": "Drôme Bois veut un séchoir au gaz : valeur actuelle nette de cent cinquante mille euros, à huit pour cent sur cinq ans."
+   },
+   {
+    "voix": "Mais il émet 300 tonnes de CO2 par an : à 100 € la tonne, 30 000 € par an.",
+    "rangs": [
+     {
+      "lib": "Coût carbone annuel",
+      "val": "30 000 €"
+     }
+    ],
+    "dit": "Mais il émet trois cents tonnes de cé-o-deux par an : à cent euros la tonne, trente mille euros par an."
+   },
+   {
+    "voix": "Actualisé sur 5 ans, ce coût vaut 119 781 €. VAN ajustée : 30 219 €.",
+    "rangs": [
+     {
+      "op": "−",
+      "lib": "Coût carbone actualisé",
+      "val": "119 781 €"
+     },
+     {
+      "op": "=",
+      "lib": "VAN ajustée",
+      "val": "30 219 €",
+      "style": "ok"
+     }
+    ],
+    "dit": "Actualisé sur cinq ans, ce coût vaut cent dix-neuf mille sept cent quatre-vingt-un euros. Valeur actuelle nette ajustée : trente mille deux cent dix-neuf euros."
+   },
+   {
+    "voix": "Encore positive, mais un projet moins émetteur peut passer devant.",
+    "dit": "Encore positive, mais un projet moins émetteur peut passer devant."
+   }
+  ]
+ },
+ {
+  "id": "m-tri",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "accroche": "Entre deux projets, ne choisis pas celui qui a le meilleur taux.",
+  "segments": [
+   {
+    "voix": "Entre deux projets, ne choisis pas celui qui a le meilleur taux.",
+    "dit": "Entre deux projets, ne choisis pas celui qui a le meilleur taux."
+   },
+   {
+    "voix": "Volcania investit 100 000 € pour 30 000 € par an pendant 5 ans. Actualisés à 8 % : 119 781 €.",
+    "titre": "VAN ou TRI ?",
+    "rangs": [
+     {
+      "lib": "Flux actualisés à 8 %",
+      "val": "119 781 €"
+     },
+     {
+      "op": "−",
+      "lib": "Investissement",
+      "val": "100 000 €"
+     },
+     {
+      "op": "=",
+      "lib": "VAN",
+      "val": "19 781 €",
+      "style": "fort"
+     }
+    ],
+    "dit": "Volcania investit cent mille euros pour trente mille euros par an pendant cinq ans. Actualisés à huit pour cent : cent dix-neuf mille sept cent quatre-vingt-un euros."
+   },
+   {
+    "voix": "Le TRI, c'est le taux qui annule la VAN : environ 15,2 %, contre 8 % exigés.",
+    "rangs": [
+     {
+      "lib": "TRI",
+      "val": "15,2 %",
+      "style": "ok"
+     }
+    ],
+    "dit": "Le taux de rentabilité interne, c'est le taux qui annule la valeur actuelle nette : environ quinze virgule deux pour cent, contre huit pour cent exigés."
+   },
+   {
+    "voix": "Mais si deux projets exclusifs se contredisent, on retient la VAN.",
+    "dit": "Mais si deux projets exclusifs se contredisent, on retient la valeur actuelle nette."
+   },
+   {
+    "voix": "Elle mesure la valeur créée en euros, le TRI seulement un pourcentage.",
+    "dit": "Elle mesure la valeur créée en euros, le taux de rentabilité interne seulement un pourcentage."
+   }
+  ]
+ },
+ {
+  "id": "c-stock-options",
+  "modele": "finance",
+  "tag": "Dessine-moi la conso",
+  "accroche": "Payer ses cadres en stock-options sans sortir un euro… et pourtant, c'est une charge.",
+  "segments": [
+   {
+    "voix": "Payer ses cadres en stock-options sans sortir un euro… et pourtant, c'est une charge.",
+    "dit": "Payer ses cadres en stock-options sans sortir un euro… et pourtant, c'est une charge."
+   },
+   {
+    "voix": "En IFRS 2, Alpes Data attribue 10 000 options, d'une juste valeur de 12 € : 120 000 €.",
+    "titre": "IFRS 2 : stock-options",
+    "rangs": [
+     {
+      "lib": "Options attribuées",
+      "val": "10 000"
+     },
+     {
+      "op": "×",
+      "lib": "Juste valeur",
+      "val": "12 €"
+     },
+     {
+      "op": "=",
+      "lib": "Valeur totale",
+      "val": "120 000 €",
+      "style": "fort"
+     }
+    ],
+    "dit": "En I.F.R.S deux, Alpes Data attribue dix mille options, d'une juste valeur de douze euros : cent vingt mille euros."
+   },
+   {
+    "voix": "Les cadres doivent rester 3 ans : la charge est étalée, 40 000 € par an.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Valeur totale",
+      "val": "120 000 €"
+     },
+     {
+      "op": "÷",
+      "lib": "Période d'acquisition",
+      "val": "3 ans"
+     },
+     {
+      "op": "=",
+      "lib": "Charge de personnel par an",
+      "val": "40 000 €",
+      "style": "ok"
+     }
+    ],
+    "dit": "Les cadres doivent rester trois ans : la charge est étalée, quarante mille euros par an."
+   },
+   {
+    "voix": "La contrepartie va en capitaux propres, et la juste valeur n'est jamais réévaluée.",
+    "dit": "La contrepartie va en capitaux propres, et la juste valeur n'est jamais réévaluée."
+   },
+   {
+    "voix": "Réglé en trésorerie ? Là, c'est une dette, réévaluée à chaque clôture.",
+    "dit": "Réglé en trésorerie ? Là, c'est une dette, réévaluée à chaque clôture."
+   }
+  ]
+ },
+ {
+  "id": "d-tup",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "accroche": "Faire disparaître ta filiale sans fusion et sans liquidation ? C'est possible.",
+  "segments": [
+   {
+    "voix": "Faire disparaître ta filiale sans fusion et sans liquidation ? C'est possible.",
+    "dit": "Faire disparaître ta filiale sans fusion et sans liquidation ? C'est possible."
+   },
+   {
+    "voix": "Si une personne morale détient toutes les parts, elle peut dissoudre la filiale.",
+    "titre": "Transmission universelle",
+    "rangs": [
+     {
+      "lib": "Associé unique",
+      "val": "✓"
+     },
+     {
+      "lib": "Personne morale",
+      "val": "✓"
+     }
+    ],
+    "dit": "Si une personne morale détient toutes les parts, elle peut dissoudre la filiale."
+   },
+   {
+    "voix": "Elle reprend alors tout l'actif et tout le passif, sans liquidation : c'est la TUP.",
+    "rangs": [
+     {
+      "lib": "Actif et passif repris",
+      "val": "✓"
+     }
+    ],
+    "dit": "Elle reprend alors tout l'actif et tout le passif, sans liquidation : c'est la transmission universelle de patrimoine."
+   },
+   {
+    "voix": "Les créanciers ont 30 jours après la publication pour faire opposition.",
+    "rangs": [
+     {
+      "lib": "Opposition des créanciers",
+      "val": "30 jours",
+      "style": "ok"
+     }
+    ],
+    "dit": "Les créanciers ont trente jours après la publication pour faire opposition."
+   },
+   {
+    "voix": "Associé unique personne physique ? Pas de TUP : il faut une liquidation classique.",
+    "dit": "Associé unique personne physique ? Pas de transmission universelle : il faut une liquidation classique."
+   }
+  ]
+ },
+ {
+  "id": "c-conversion",
+  "modele": "finance",
+  "tag": "Dessine-moi la conso",
+  "accroche": "Ta filiale américaine gagne de l'argent… et tes capitaux propres baissent.",
+  "segments": [
+   {
+    "voix": "Ta filiale américaine gagne de l'argent… et tes capitaux propres baissent.",
+    "dit": "Ta filiale américaine gagne de l'argent… et tes capitaux propres baissent."
+   },
+   {
+    "voix": "Capitaux propres d'origine : 1 000 k€. Résultat : 200 k$, au cours moyen de 1,25 $ : 160 k€.",
+    "titre": "Conversion des comptes",
+    "rangs": [
+     {
+      "lib": "Capitaux propres d'origine",
+      "val": "1 000 k€"
+     },
+     {
+      "op": "+",
+      "lib": "Résultat au cours moyen",
+      "val": "160 k€"
+     }
+    ],
+    "dit": "Capitaux propres d'origine : un million d'euros. Résultat : deux cent mille dollars, au cours moyen d'un dollar vingt-cinq : cent soixante mille euros."
+   },
+   {
+    "voix": "Mais l'actif net, 1 200 k$, passe au cours de clôture de 1,50 $ : 800 k€.",
+    "rangs": [
+     {
+      "lib": "Actif net au cours de clôture",
+      "val": "800 k€"
+     }
+    ],
+    "dit": "Mais l'actif net, un million deux cent mille dollars, passe au cours de clôture d'un dollar cinquante : huit cent mille euros."
+   },
+   {
+    "voix": "Écart : 800 − 1 160 = − 360 k€, dont 288 k€ pour le groupe, le reste aux minoritaires.",
+    "rangs": [
+     {
+      "op": "=",
+      "lib": "Écart de conversion",
+      "val": "− 360 k€",
+      "style": "ok"
+     }
+    ],
+    "dit": "Écart : huit cent mille moins un million cent soixante mille, soit moins trois cent soixante mille euros, dont deux cent quatre-vingt-huit mille euros pour le groupe, le reste aux minoritaires."
+   },
+   {
+    "voix": "Filiale autonome : l'écart va en capitaux propres, pas en résultat.",
+    "dit": "Filiale autonome : l'écart va en capitaux propres, pas en résultat."
+   }
+  ]
  }
 ]
