@@ -1,5 +1,5 @@
 {
- "majLe": "2026-11-06T17:54:04.337Z",
+ "majLe": "2026-11-07T05:54:07.106Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -38,7 +38,7 @@
    "nom": "CNIL",
    "url": "https://www.cnil.fr/fr/rss.xml",
    "ok": true,
-   "articles": 3
+   "articles": 2
   },
   {
    "nom": "Le Monde Économie",
@@ -50,13 +50,13 @@
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Capital",
@@ -76,6 +76,16 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-politique-augmentation-du-smic-la-premiere-chose-qu-on-pourrait-faire-dans-un",
+   "titre": "Augmentation du Smic : \"La première chose qu'on pourrait faire, dans un budget aujourd'hui, c'est réhabiliter l'Impôt de solidarité sur la fortune\", propose Guillaume Lacroix, président du Parti radical de gauche",
+   "url": "https://www.franceinfo.fr/politique/augmentation-du-smic-la-premiere-chose-qu-on-pourrait-faire-dans-un-budget-aujourd-hui-c-est-rehabiliter-l-impot-de-solidarite-sur-la-fortune-propose-guillaume-lacroix-president-du-parti-radical-de-gauche_8271443.html#xtor=RSS-3-%5Bgeneral%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-11-06T19:18:17.000Z",
+   "image": "https://www.franceinfo.fr/pictures/SG6jh9d5vi-VnHctC_5ccAirK_4/28x0:1190x654/432x243/filters:format(jpg)/2026/11/06/6aee2735a2965706374471.jpg",
+   "categorie": "Fiscalité",
+   "score": 4
+  },
   {
    "id": "le-figaro-conomie-https-www-lefigaro-fr-conso-la-frequentation-de-shein-et-temu-en-chute-libre-au-troisieme-trimestre-pl",
    "titre": "La fréquentation de Shein et Temu en chute libre au troisième trimestre, plombée par la taxe sur les petits colis",
@@ -866,16 +876,6 @@
    "image": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/15/dbfcd4c4526ef817563ef01905ebb254130fddf1a3bfa46a09733329cd226a0c.jpg",
    "categorie": "Comptabilité & audit",
    "score": 8
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-immobilier-renovation-laissez-nous-travailler-lance-la-capeb-qui-dem",
-   "titre": "Rénovation : \"Laissez-nous travailler\", lance la Capeb qui demande au gouvernement une baisse de la TVA pour les particuliers souhaitant entreprendre des travaux",
-   "url": "https://www.franceinfo.fr/economie/immobilier/renovation-laissez-nous-travailler-lance-la-capeb-qui-demande-au-gouvernement-une-baisse-de-la-tva-pour-les-particuliers-souhaitant-entreprendre-des-travaux_8257144.html#xtor=RSS-3-%5Bgeneral%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-10-28T10:43:31.000Z",
-   "image": "https://www.franceinfo.fr/pictures/YBJB_oIDItMl5Y9JQThJEloNqqE/0x0:4022x2260/432x243/filters:format(jpg)/2022/10/15/phpiHO0a7.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
   }
  ],
  "ecartes": []
