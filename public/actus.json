@@ -1,5 +1,5 @@
 {
- "majLe": "2026-11-07T05:54:07.106Z",
+ "majLe": "2026-11-07T11:46:50.002Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -56,7 +56,7 @@
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "Capital",
