@@ -1,5 +1,5 @@
 {
- "majLe": "2026-11-08T05:55:30.203Z",
+ "majLe": "2026-11-08T11:46:41.954Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -62,7 +62,7 @@
    "nom": "Capital",
    "url": "https://feed.prismamediadigital.com/v1/cap/rss?sources=capital",
    "ok": true,
-   "articles": 0
+   "articles": 1
   }
  ],
  "images": {
@@ -76,6 +76,16 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "capital-https-www-capital-fr-votre-argent-dons-aux-associations-les-francais-sont-ils-devenus-radins-la-chronique-de-jea",
+   "titre": "Dons aux associations : les Français sont-ils devenus radins ? La chronique de Jean-Jacques Manceau",
+   "url": "https://www.capital.fr/votre-argent/dons-aux-associations-les-francais-sont-ils-devenus-radins-la-chronique-de-jean-jacques-manceau-1531640",
+   "source": "Capital",
+   "date": "2026-11-08T08:00:00.000Z",
+   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~11~05~4a5e69cf-02bc-446a-9ffb-e124f4d09b11.jpg/1200x900/focus-point/1674%2C556/dons-aux-associations-les-francais-sont-ils-devenus-radins-la-chronique-de-jean-jacques-manceau.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
   {
    "id": "franceinfo-conomie-https-www-franceinfo-fr-politique-augmentation-du-smic-la-premiere-chose-qu-on-pourrait-faire-dans-un",
    "titre": "Augmentation du Smic : \"La première chose qu'on pourrait faire, dans un budget aujourd'hui, c'est réhabiliter l'Impôt de solidarité sur la fortune\", propose Guillaume Lacroix, président du Parti radical de gauche",
@@ -866,16 +876,6 @@
    "image": "https://i.f1g.fr/media/cms/3000x1559_crop/2026/10/28/d26ebae193fa1bf2b7243c9e67e969f9adc9d42ed3ecd1c4790c05fab9183c6c.jpg",
    "categorie": "Fiscalité",
    "score": 3
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-entrepreneur-facturation-electronique-pourquoi-cette-reforme-a-fait-basculer-les",
-   "titre": "Facturation électronique : pourquoi cette réforme a fait basculer les comptabilités dans un nouveau monde",
-   "url": "https://www.lefigaro.fr/entrepreneur/facturation-electronique-pourquoi-cette-reforme-a-fait-basculer-les-comptabilites-dans-un-nouveau-monde-20261028",
-   "source": "Le Figaro Économie",
-   "date": "2026-10-28T11:00:00.000Z",
-   "image": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/10/15/dbfcd4c4526ef817563ef01905ebb254130fddf1a3bfa46a09733329cd226a0c.jpg",
-   "categorie": "Comptabilité & audit",
-   "score": 8
   }
  ],
  "ecartes": []
