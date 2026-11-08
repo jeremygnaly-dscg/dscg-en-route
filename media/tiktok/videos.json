@@ -2988,5 +2988,310 @@
     "dit": "Filiale autonome : l'écart va en capitaux propres, pas en résultat."
    }
   ]
+ },
+ {
+  "id": "m-caf",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "accroche": "Ta boîte a gagné 45 000 €… mais elle peut réinvestir 70 000 €.",
+  "segments": [
+   {
+    "voix": "Ta boîte a gagné 45 000 €… mais elle peut réinvestir 70 000 €.",
+    "dit": "Ta boîte a gagné quarante-cinq mille euros… mais elle peut réinvestir soixante-dix mille euros."
+   },
+   {
+    "voix": "Méthode additive de la CAF : on part du résultat net, 45 000 €.",
+    "titre": "Capacité d'autofinancement",
+    "rangs": [
+     {
+      "lib": "Résultat net",
+      "val": "45 000 €"
+     }
+    ],
+    "dit": "Méthode additive de la capacité d'autofinancement : on part du résultat net, quarante-cinq mille euros."
+   },
+   {
+    "voix": "On ajoute les dotations, 30 000 € : elles ne sortent pas de la trésorerie.",
+    "rangs": [
+     {
+      "op": "+",
+      "lib": "Dotations",
+      "val": "30 000 €"
+     }
+    ],
+    "dit": "On ajoute les dotations, trente mille euros : elles ne sortent pas de la trésorerie."
+   },
+   {
+    "voix": "On retire les reprises, 5 000 € : aucun euro encaissé. CAF : 70 000 €.",
+    "rangs": [
+     {
+      "op": "−",
+      "lib": "Reprises",
+      "val": "5 000 €"
+     },
+     {
+      "op": "=",
+      "lib": "CAF",
+      "val": "70 000 €",
+      "style": "fort"
+     }
+    ],
+    "dit": "On retire les reprises, cinq mille euros : aucun euro encaissé. Capacité d'autofinancement : soixante-dix mille euros."
+   },
+   {
+    "voix": "Piège : depuis 2025, les cessions passent en résultat courant, mais restent exclues de la CAF.",
+    "dit": "Piège : depuis deux mille vingt-cinq, les cessions passent en résultat courant, mais restent exclues de la capacité d'autofinancement."
+   }
+  ]
+ },
+ {
+  "id": "m-tableau-financement",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "accroche": "Ta boîte a plus de ressources que d'emplois… et sa trésorerie baisse quand même.",
+  "segments": [
+   {
+    "voix": "Ta boîte a plus de ressources que d'emplois… et sa trésorerie baisse quand même.",
+    "dit": "Ta boîte a plus de ressources que d'emplois… et sa trésorerie baisse quand même."
+   },
+   {
+    "voix": "Tableau I : 182 k€ de ressources stables, 175 k€ d'emplois stables. Le FRNG augmente de 7 k€.",
+    "titre": "Tableau de financement",
+    "rangs": [
+     {
+      "lib": "Ressources stables",
+      "val": "182 k€"
+     },
+     {
+      "op": "−",
+      "lib": "Emplois stables",
+      "val": "175 k€"
+     },
+     {
+      "op": "=",
+      "lib": "Variation du FRNG",
+      "val": "+7 k€",
+      "style": "fort"
+     }
+    ],
+    "dit": "Tableau un : cent quatre-vingt-deux mille euros de ressources stables, cent soixante-quinze mille euros d'emplois stables. Le fonds de roulement net global augmente de sept mille euros."
+   },
+   {
+    "voix": "Tableau II : le BFR d'exploitation absorbe 15 k€, le hors exploitation en libère 3 k€.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "BFR d'exploitation",
+      "val": "+15 k€"
+     },
+     {
+      "lib": "BFR hors exploitation",
+      "val": "−3 k€"
+     }
+    ],
+    "dit": "Tableau deux : le besoin en fonds de roulement d'exploitation absorbe quinze mille euros, le hors exploitation en libère trois mille euros."
+   },
+   {
+    "voix": "Il manque 5 k€ : c'est la trésorerie qui paie.",
+    "rangs": [
+     {
+      "lib": "Trésorerie",
+      "val": "−5 k€",
+      "style": "ok"
+     }
+    ],
+    "dit": "Il manque cinq mille euros : c'est la trésorerie qui paie."
+   },
+   {
+    "voix": "Les deux tableaux se rejoignent toujours : 15 − 3 − 5 = 7 k€.",
+    "dit": "Les deux tableaux se rejoignent toujours : quinze mille, moins trois mille, moins cinq mille, égale sept mille euros."
+   }
+  ]
+ },
+ {
+  "id": "c-valeur-apports",
+  "modele": "finance",
+  "tag": "Dessine-moi la conso",
+  "accroche": "Une marque absente du bilan peut entrer dans une fusion à sa vraie valeur.",
+  "segments": [
+   {
+    "voix": "Une marque absente du bilan peut entrer dans une fusion à sa vraie valeur.",
+    "dit": "Une marque absente du bilan peut entrer dans une fusion à sa vraie valeur."
+   },
+   {
+    "voix": "Le PCG suit le contrôle. Sociétés sous contrôle commun : valeur comptable.",
+    "titre": "Valeur des apports",
+    "rangs": [
+     {
+      "lib": "Contrôle commun",
+      "val": "Comptable"
+     }
+    ],
+    "dit": "Le plan comptable général suit le contrôle. Sociétés sous contrôle commun : valeur comptable."
+   },
+   {
+    "voix": "Contrôle distinct, à l'endroit : valeur réelle, marque comprise. À l'envers : valeur comptable.",
+    "rangs": [
+     {
+      "lib": "Distinct, à l'endroit",
+      "val": "Réelle",
+      "style": "ok"
+     },
+     {
+      "lib": "Distinct, à l'envers",
+      "val": "Comptable"
+     }
+    ],
+    "dit": "Contrôle distinct, à l'endroit : valeur réelle, marque comprise. À l'envers : valeur comptable."
+   },
+   {
+    "voix": "Apports de 4 M€, action à 250 € : on émet 16 000 actions, soit 1,6 M€ de capital.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Apports nets",
+      "val": "4 M€"
+     },
+     {
+      "op": "−",
+      "lib": "Capital (16 000 × 100 €)",
+      "val": "1,6 M€"
+     }
+    ],
+    "dit": "Apports de quatre millions d'euros, action à deux cent cinquante euros : on émet seize mille actions, soit un virgule six millions d'euros de capital."
+   },
+   {
+    "voix": "Le reste, 2,4 M€, est la prime de fusion.",
+    "rangs": [
+     {
+      "op": "=",
+      "lib": "Prime de fusion",
+      "val": "2,4 M€",
+      "style": "fort"
+     }
+    ],
+    "dit": "Le reste, deux virgule quatre millions d'euros, est la prime de fusion."
+   }
+  ]
+ },
+ {
+  "id": "d-prix-transfert",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "accroche": "Vendre 30 % moins cher à ta filiale suisse ? Le fisc peut récupérer la différence.",
+  "segments": [
+   {
+    "voix": "Vendre 30 % moins cher à ta filiale suisse ? Le fisc peut récupérer la différence.",
+    "dit": "Vendre trente pour cent moins cher à ta filiale suisse ? Le fisc peut récupérer la différence."
+   },
+   {
+    "voix": "Article 57 du CGI : le bénéfice transféré à une société liée à l'étranger est réintégré.",
+    "titre": "Prix de transfert",
+    "rangs": [
+     {
+      "lib": "Société liée à l'étranger",
+      "val": "✓"
+     },
+     {
+      "lib": "Prix majoré ou minoré",
+      "val": "✓"
+     }
+    ],
+    "dit": "Article cinquante-sept du Code général des impôts : le bénéfice transféré à une société liée à l'étranger est réintégré."
+   },
+   {
+    "voix": "Le critère : le prix entre deux entreprises indépendantes. C'est la pleine concurrence.",
+    "rangs": [
+     {
+      "lib": "Pleine concurrence",
+      "val": "✓",
+      "style": "ok"
+     }
+    ],
+    "dit": "Le critère : le prix entre deux entreprises indépendantes. C'est la pleine concurrence."
+   },
+   {
+    "voix": "Le fisc doit prouver le lien de dépendance, sauf avec un pays à fiscalité privilégiée.",
+    "rangs": [
+     {
+      "lib": "Preuve du lien",
+      "val": "Fisc"
+     }
+    ],
+    "dit": "Le fisc doit prouver le lien de dépendance, sauf avec un pays à fiscalité privilégiée."
+   },
+   {
+    "voix": "Dès 150 M€ de chiffre d'affaires ou d'actif brut : documentation obligatoire.",
+    "rangs": [
+     {
+      "lib": "Documentation obligatoire",
+      "val": "150 M€",
+      "style": "fort"
+     }
+    ],
+    "dit": "Dès cent cinquante millions d'euros de chiffre d'affaires ou d'actif brut : documentation obligatoire."
+   }
+  ]
+ },
+ {
+  "id": "c-cout-amorti",
+  "modele": "finance",
+  "tag": "Dessine-moi la conso",
+  "accroche": "Ton coupon est de 400 000 €… mais en IFRS, tu passes 463 540 € d'intérêts.",
+  "segments": [
+   {
+    "voix": "Ton coupon est de 400 000 €… mais en IFRS, tu passes 463 540 € d'intérêts.",
+    "dit": "Ton coupon est de quatre cent mille euros… mais en I.F.R.S, tu passes quatre cent soixante-trois mille cinq cent quarante euros d'intérêts."
+   },
+   {
+    "voix": "Emprunt obligataire de 10 M€ à 4 %, avec 200 000 € de frais : on reçoit 9,8 M€.",
+    "titre": "IFRS 9 : coût amorti",
+    "rangs": [
+     {
+      "lib": "Montant net reçu",
+      "val": "9,8 M€"
+     }
+    ],
+    "dit": "Emprunt obligataire de dix millions d'euros à quatre pour cent, avec deux cent mille euros de frais : on reçoit neuf virgule huit millions d'euros."
+   },
+   {
+    "voix": "Le taux effectif égalise ce montant net et les flux futurs : 4,73 %.",
+    "rangs": [
+     {
+      "op": "×",
+      "lib": "Taux effectif",
+      "val": "4,73 %"
+     },
+     {
+      "op": "=",
+      "lib": "Charge d'intérêt",
+      "val": "463 540 €",
+      "style": "fort"
+     }
+    ],
+    "dit": "Le taux effectif égalise ce montant net et les flux futurs : quatre virgule soixante-treize pour cent."
+   },
+   {
+    "voix": "Coupon payé : 400 000 €. L'écart, 63 540 €, augmente la dette.",
+    "rangs": [
+     {
+      "op": "−",
+      "lib": "Coupon payé",
+      "val": "400 000 €"
+     },
+     {
+      "op": "=",
+      "lib": "Hausse de la dette",
+      "val": "63 540 €",
+      "style": "ok"
+     }
+    ],
+    "dit": "Coupon payé : quatre cent mille euros. L'écart, soixante-trois mille cinq cent quarante euros, augmente la dette."
+   },
+   {
+    "voix": "Les frais ne sont jamais une charge isolée : ils sont étalés par le taux effectif.",
+    "dit": "Les frais ne sont jamais une charge isolée : ils sont étalés par le taux effectif."
+   }
+  ]
  }
 ]
