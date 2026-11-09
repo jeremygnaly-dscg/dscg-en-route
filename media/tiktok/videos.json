@@ -3293,5 +3293,326 @@
     "dit": "Les frais ne sont jamais une charge isolée : ils sont étalés par le taux effectif."
    }
   ]
+ },
+ {
+  "id": "m-lbo-montage",
+  "modele": "finance",
+  "tag": "Dessine-moi le M&A",
+  "accroche": "Acheter 18 M€ de titres avec seulement 6,3 M€ en poche : c'est le montage d'un LBO.",
+  "segments": [
+   {
+    "voix": "Acheter 18 M€ de titres avec seulement 6,3 M€ en poche : c'est le montage d'un LBO.",
+    "dit": "Acheter dix-huit millions d'euros de titres avec seulement six virgule trois millions d'euros en poche : c'est le montage d'un L.B.O."
+   },
+   {
+    "voix": "La holding rachète 30 % de Porcelaines Vialle, valorisée 60 M€ : il faut 18 M€.",
+    "titre": "Montage de la holding",
+    "rangs": [
+     {
+      "lib": "Valeur de la cible",
+      "val": "60 M€"
+     },
+     {
+      "op": "×",
+      "lib": "Part rachetée",
+      "val": "30 %"
+     },
+     {
+      "op": "=",
+      "lib": "Besoin de la holding",
+      "val": "18 M€",
+      "style": "fort"
+     }
+    ],
+    "dit": "La holding rachète trente pour cent de Porcelaines Vialle, valorisée soixante millions d'euros : il faut dix-huit millions d'euros."
+   },
+   {
+    "voix": "Fonds propres : 35 %, soit 6,3 M€. Le reste, 11,7 M€, est emprunté.",
+    "rangs": [
+     {
+      "op": "−",
+      "lib": "Fonds propres (35 %)",
+      "val": "6,3 M€"
+     },
+     {
+      "op": "=",
+      "lib": "Dettes",
+      "val": "11,7 M€",
+      "style": "ok"
+     }
+    ],
+    "dit": "Fonds propres : trente-cinq pour cent, soit six virgule trois millions d'euros. Le reste, onze virgule sept millions d'euros, est emprunté."
+   },
+   {
+    "voix": "Senior : 7 M€ à 5 % sur 5 ans. Junior : 4,7 M€ à 8 %, in fine.",
+    "rangs": [
+     {
+      "lib": "Dette senior",
+      "val": "7 M€"
+     },
+     {
+      "op": "+",
+      "lib": "Dette junior",
+      "val": "4,7 M€"
+     }
+    ],
+    "dit": "Senior : sept millions d'euros à cinq pour cent sur cinq ans. Junior : quatre virgule sept millions d'euros à huit pour cent, in fine."
+   },
+   {
+    "voix": "Piège : à 30 %, pas d'intégration fiscale, qui exige 95 %. Les intérêts de la holding ne s'imputent sur aucun bénéfice.",
+    "dit": "Piège : à trente pour cent, pas d'intégration fiscale, qui exige quatre-vingt-quinze pour cent. Les intérêts de la holding ne s'imputent sur aucun bénéfice."
+   }
+  ]
+ },
+ {
+  "id": "m-cyber-valeur",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "accroche": "Une cyberattaque te coûte 1,5 M€… et ta boîte peut perdre 12 M€ de valeur.",
+  "segments": [
+   {
+    "voix": "Une cyberattaque te coûte 1,5 M€… et ta boîte peut perdre 12 M€ de valeur.",
+    "dit": "Une cyberattaque te coûte un virgule cinq millions d'euros… et ta boîte peut perdre douze millions d'euros de valeur."
+   },
+   {
+    "voix": "Rhône Froid : 3,5 M€ de coûts. L'assurance paie, moins la franchise, dans la limite du plafond.",
+    "titre": "Cyberattaque et valeur",
+    "rangs": [
+     {
+      "lib": "Coût de l'attaque",
+      "val": "3,5 M€"
+     }
+    ],
+    "dit": "Rhône Froid : trois virgule cinq millions d'euros de coûts. L'assurance paie, moins la franchise, dans la limite du plafond."
+   },
+   {
+    "voix": "Moins 250 000 € de franchise : 3,25 M€. Mais le plafond est de 2 M€. Reste à charge : 1,5 M€.",
+    "rangs": [
+     {
+      "op": "−",
+      "lib": "Indemnité (plafond)",
+      "val": "2 M€"
+     },
+     {
+      "op": "=",
+      "lib": "Reste à charge",
+      "val": "1,5 M€",
+      "style": "ok"
+     }
+    ],
+    "dit": "Moins deux cent cinquante mille euros de franchise : trois virgule vingt-cinq millions d'euros. Mais le plafond est de deux millions d'euros. Reste à charge : un virgule cinq millions d'euros."
+   },
+   {
+    "voix": "L'EBITDA baisse de 1,5 M€. Avec un multiple de 8, la perte théorique atteint 12 M€.",
+    "rangs": [
+     {
+      "op": "×",
+      "lib": "Multiple d'EBITDA",
+      "val": "8"
+     },
+     {
+      "op": "=",
+      "lib": "Perte de valeur",
+      "val": "12 M€",
+      "style": "fort"
+     }
+    ],
+    "dit": "L'Ébitda baisse d'un virgule cinq millions d'euros. Avec un multiple de huit fois l'Ébitda, la perte théorique atteint douze millions d'euros."
+   },
+   {
+    "voix": "Mais seulement si la baisse est durable : un choc ponctuel ne coûte que le reste à charge.",
+    "dit": "Mais seulement si la baisse est durable : un choc ponctuel ne coûte que le reste à charge."
+   }
+  ]
+ },
+ {
+  "id": "c-fusion-renonciation",
+  "modele": "finance",
+  "tag": "Dessine-moi la conso",
+  "accroche": "Dans une fusion, l'absorbante ne peut pas recevoir ses propres actions.",
+  "segments": [
+   {
+    "voix": "Dans une fusion, l'absorbante ne peut pas recevoir ses propres actions.",
+    "dit": "Dans une fusion, l'absorbante ne peut pas recevoir ses propres actions."
+   },
+   {
+    "voix": "Lorraine absorbe Moselle : 10 000 actions, 2 M€ d'apports. Elle en détient déjà 2 000.",
+    "titre": "Fusion-renonciation",
+    "rangs": [
+     {
+      "lib": "Actions Moselle",
+      "val": "10 000"
+     },
+     {
+      "op": "−",
+      "lib": "Détenues par Lorraine",
+      "val": "2 000"
+     }
+    ],
+    "dit": "Lorraine absorbe Moselle : dix mille actions, deux millions d'euros d'apports. Elle en détient déjà deux mille."
+   },
+   {
+    "voix": "Elle renonce à sa part : 8 000 actions échangées à 1 pour 2, soit 4 000 actions créées.",
+    "rangs": [
+     {
+      "op": "=",
+      "lib": "Actions échangées",
+      "val": "8 000"
+     },
+     {
+      "op": "÷",
+      "lib": "Parité 1 pour 2",
+      "val": "2"
+     },
+     {
+      "op": "=",
+      "lib": "Actions créées",
+      "val": "4 000",
+      "style": "fort"
+     }
+    ],
+    "dit": "Elle renonce à sa part : huit mille actions échangées à un pour deux, soit quatre mille actions créées."
+   },
+   {
+    "voix": "Nominal 100 € : 400 000 € de capital. Sur 1,6 M€ d'apports rémunérés, prime : 1,2 M€.",
+    "rangs": [
+     {
+      "lib": "Capital",
+      "val": "400 000 €"
+     },
+     {
+      "lib": "Prime de fusion",
+      "val": "1,2 M€",
+      "style": "ok"
+     }
+    ],
+    "dit": "Nominal cent euros : quatre cent mille euros de capital. Sur un virgule six millions d'euros d'apports rémunérés, prime : un virgule deux millions d'euros.",
+    "efface": true
+   },
+   {
+    "voix": "Les 400 000 € restants remplacent des titres inscrits 300 000 € : boni de 100 000 €.",
+    "rangs": [
+     {
+      "op": "=",
+      "lib": "Boni de fusion",
+      "val": "100 000 €",
+      "style": "fort"
+     }
+    ],
+    "dit": "Les quatre cent mille euros restants remplacent des titres inscrits trois cent mille euros : boni de cent mille euros."
+   }
+  ]
+ },
+ {
+  "id": "d-territorialite-is",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "accroche": "Ta succursale à l'étranger perd de l'argent ? Ses pertes ne réduisent pas ton IS.",
+  "segments": [
+   {
+    "voix": "Ta succursale à l'étranger perd de l'argent ? Ses pertes ne réduisent pas ton IS.",
+    "dit": "Ta succursale à l'étranger perd de l'argent ? Ses pertes ne réduisent pas ton impôt sur les sociétés."
+   },
+   {
+    "voix": "Territorialité : l'IS ne frappe que les bénéfices des entreprises exploitées en France.",
+    "titre": "Territorialité de l'IS",
+    "rangs": [
+     {
+      "lib": "Exploitation en France",
+      "val": "IS",
+      "style": "ok"
+     }
+    ],
+    "dit": "Territorialité : l'impôt sur les sociétés ne frappe que les bénéfices des entreprises exploitées en France."
+   },
+   {
+    "voix": "Une succursale étrangère : ni ses bénéfices, ni ses pertes ne comptent.",
+    "rangs": [
+     {
+      "lib": "Succursale étrangère",
+      "val": "Hors IS"
+     }
+    ],
+    "dit": "Une succursale étrangère : ni ses bénéfices, ni ses pertes ne comptent."
+   },
+   {
+    "voix": "Une filiale étrangère est imposée chez elle. La mère, seulement sur ses dividendes, souvent exonérés.",
+    "rangs": [
+     {
+      "lib": "Filiale étrangère",
+      "val": "Dividendes"
+     }
+    ],
+    "dit": "Une filiale étrangère est imposée chez elle. La mère, seulement sur ses dividendes, souvent exonérés."
+   },
+   {
+    "voix": "Limite, l'article 209 B : entité contrôlée à plus de 50 %, régime privilégié, sans activité réelle ? Taxée en France.",
+    "rangs": [
+     {
+      "lib": "Article 209 B",
+      "val": "> 50 %",
+      "style": "fort"
+     }
+    ],
+    "dit": "Limite, l'article deux cent neuf bé : entité contrôlée à plus de cinquante pour cent, régime privilégié, sans activité réelle ? Taxée en France."
+   }
+  ]
+ },
+ {
+  "id": "c-interets-minoritaires",
+  "modele": "finance",
+  "tag": "Dessine-moi la conso",
+  "accroche": "Ta filiale gagne 100 000 €… mais ton groupe n'en garde que 70 000 €.",
+  "segments": [
+   {
+    "voix": "Ta filiale gagne 100 000 €… mais ton groupe n'en garde que 70 000 €.",
+    "dit": "Ta filiale gagne cent mille euros… mais ton groupe n'en garde que soixante-dix mille euros."
+   },
+   {
+    "voix": "Intégration globale de Normandie Solaire, détenue à 70 % : on reprend tous ses comptes.",
+    "titre": "Partage des capitaux propres",
+    "rangs": [
+     {
+      "lib": "Détention du groupe",
+      "val": "70 %"
+     }
+    ],
+    "dit": "Intégration globale de Normandie Solaire, détenue à soixante-dix pour cent : on reprend tous ses comptes."
+   },
+   {
+    "voix": "Capital 500 000 €, réserves 300 000 €, résultat 100 000 € : 900 000 € à partager.",
+    "rangs": [
+     {
+      "op": "=",
+      "lib": "Capitaux propres",
+      "val": "900 000 €"
+     }
+    ],
+    "dit": "Capital cinq cent mille euros, réserves trois cent mille euros, résultat cent mille euros : neuf cent mille euros à partager."
+   },
+   {
+    "voix": "Au groupe : 350 000 € de capital, 210 000 € de réserves, 70 000 € de résultat.",
+    "rangs": [
+     {
+      "lib": "Résultat du groupe",
+      "val": "70 000 €",
+      "style": "ok"
+     }
+    ],
+    "dit": "Au groupe : trois cent cinquante mille euros de capital, deux cent dix mille euros de réserves, soixante-dix mille euros de résultat."
+   },
+   {
+    "voix": "Aux minoritaires : 150 000 €, 90 000 € et 30 000 €, soit 270 000 €. Exactement 30 %.",
+    "rangs": [
+     {
+      "op": "=",
+      "lib": "Intérêts minoritaires",
+      "val": "270 000 €",
+      "style": "fort"
+     }
+    ],
+    "dit": "Aux minoritaires : cent cinquante mille euros, quatre-vingt-dix mille euros et trente mille euros, soit deux cent soixante-dix mille euros. Exactement trente pour cent."
+   }
+  ]
  }
 ]
