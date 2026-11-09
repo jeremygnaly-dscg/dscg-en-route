@@ -1,5 +1,5 @@
 {
- "majLe": "2026-11-08T17:43:32.225Z",
+ "majLe": "2026-11-09T06:15:53.915Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -50,13 +50,13 @@
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Capital",
@@ -76,6 +76,26 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-emploi-si-vous-augmentez-le-smic-c-est-oblige-de-maintenir-le-differ",
+   "titre": "\"Si vous augmentez le SMIC, c'est obligé de maintenir le différentiel des autres salaires\" explique le président des Entrepreneurs Paris Île-de-France",
+   "url": "https://www.franceinfo.fr/economie/emploi/si-vous-augmentez-le-smic-c-est-oblige-de-maintenir-le-differentiel-des-autres-salaires-explique-le-president-des-entrepreneurs-paris-ile-de-france_8273768.html#xtor=RSS-3-%5Bgeneral%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-11-08T21:04:27.000Z",
+   "image": "https://www.franceinfo.fr/pictures/2cZabqkoopU4H5YOwDeaJoyiu1o/0x0:1920x1080/432x243/filters:format(jpg)/2026/05/01/69f4d8f9315da683095711.jpg",
+   "categorie": "Fiscalité",
+   "score": 4
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-societes-le-risque-d-une-fiscalite-trop-forte-est-d-etre-contre-productive-20261",
+   "titre": "« Le risque d’une fiscalité trop forte est d’être contre-productive »",
+   "url": "https://www.lefigaro.fr/societes/le-risque-d-une-fiscalite-trop-forte-est-d-etre-contre-productive-20261108",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-08T13:47:47.000Z",
+   "image": "https://i.f1g.fr/media/cms/1823x1025_crop/2026/11/08/9cbf9750c23573b24671bd195aed3173bdc6fdd6ccb8f1ee63966e5f31d8a49c.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
   {
    "id": "capital-https-www-capital-fr-votre-argent-dons-aux-associations-les-francais-sont-ils-devenus-radins-la-chronique-de-jea",
    "titre": "Dons aux associations : les Français sont-ils devenus radins ? La chronique de Jean-Jacques Manceau",
@@ -854,26 +874,6 @@
    "source": "Capital",
    "date": "2026-10-28T17:00:00.000Z",
    "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~10~28~80479219-dc54-416b-8767-647747062c34.jpg/1200x900/focus-point/1843%2C1044/shein-temu-amendes-controles-taxes-le-bilan-du-gouvernement-un-an-apres-le-scandale.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-la-france-de-nouveau-championne-d-europe-des-impots-en-2025-20261028",
-   "titre": "La France de nouveau championne d’Europe des impôts en 2025",
-   "url": "https://www.lefigaro.fr/conjoncture/la-france-de-nouveau-championne-d-europe-des-impots-en-2025-20261028",
-   "source": "Le Figaro Économie",
-   "date": "2026-10-28T16:57:17.000Z",
-   "image": "https://i.f1g.fr/media/cms/2850x1603_crop/2026/10/28/cbedf4c5392e751b93af74bfdd7307b47ac28a2b1579a77ce3f21c2bc5de8ad0.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-budget-le-royaume-uni-annonce-l-augmentation-d-une-surtaxe-sur-les-b",
-   "titre": "Budget : le Royaume-Uni annonce l'augmentation d'une surtaxe sur les bénéfices des banques",
-   "url": "https://www.lefigaro.fr/conjoncture/budget-le-royaume-uni-annonce-l-augmentation-d-une-surtaxe-sur-les-benefices-des-banques-20261028",
-   "source": "Le Figaro Économie",
-   "date": "2026-10-28T16:05:04.000Z",
-   "image": "https://i.f1g.fr/media/cms/3000x1559_crop/2026/10/28/d26ebae193fa1bf2b7243c9e67e969f9adc9d42ed3ecd1c4790c05fab9183c6c.jpg",
    "categorie": "Fiscalité",
    "score": 3
   }
