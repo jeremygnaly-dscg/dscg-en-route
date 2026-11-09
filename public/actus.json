@@ -1,5 +1,5 @@
 {
- "majLe": "2026-11-09T06:15:53.915Z",
+ "majLe": "2026-11-09T12:02:29.895Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -22,7 +22,7 @@
    "nom": "Village de la Justice",
    "url": "https://www.village-justice.com/articles/spip.php?page=backend",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Le Monde du Droit",
@@ -44,7 +44,7 @@
    "nom": "Le Monde Économie",
    "url": "https://www.lemonde.fr/economie/rss_full.xml",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Le Figaro Économie",
@@ -56,13 +56,13 @@
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "Capital",
    "url": "https://feed.prismamediadigital.com/v1/cap/rss?sources=capital",
    "ok": true,
-   "articles": 0
+   "articles": 2
   }
  ],
  "images": {
@@ -76,6 +76,66 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "village-de-la-justice-https-www-village-justice-com-articles-redressement-urssaf-par-ratio-jusqu-annulation-59672-html-u",
+   "titre": "Redressement URSSAF par ratio : jusqu'où va l'annulation ? Par Sabrina Henocque Chiche, Avocate.",
+   "url": "https://www.village-justice.com/articles/redressement-urssaf-par-ratio-jusqu-annulation,59672.html?utm_source=backend&utm_medium=RSS&utm_campaign=RSS_Reseaux",
+   "source": "Village de la Justice",
+   "date": "2026-11-09T12:00:00.000Z",
+   "image": "https://www.village-justice.com/articles/local/cache-gd2/78/cb5a575ff42d184f2f7cf909d07d08.jpg?1791993210",
+   "categorie": "Social",
+   "score": 3
+  },
+  {
+   "id": "cnil-https-www-cnil-fr-fr-sanctions-cybersecurite-collectivites-territoriales",
+   "titre": "Cybersécurité des collectivités territoriales : la CNIL prononce dix sanctions",
+   "url": "https://www.cnil.fr/fr/sanctions-cybersecurite-collectivites-territoriales",
+   "source": "CNIL",
+   "officiel": true,
+   "date": "2026-11-09T12:00:00.000Z",
+   "categorie": "Numérique",
+   "score": 2
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-societes-100-millions-pour-la-recherche-medicale-raise-cette-societe-d-investiss",
+   "titre": "«100 millions pour la recherche médicale» : Raise, cette société d’investissement qui allie finance et philanthropie",
+   "url": "https://www.lefigaro.fr/societes/100-millions-pour-la-recherche-medicale-raise-cette-societe-d-investissement-qui-allie-finance-et-philanthropie-20261109",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-09T11:09:54.000Z",
+   "image": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/09/cac6f897b6a8ee41dc0d024ba9f54ff223b2fe88b84910f834a1912d70b6bfd2.jpg",
+   "categorie": "Fiscalité",
+   "score": 5
+  },
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-politique-article-2026-11-09-la-cour-des-comptes-repart-a-la-charge-contre-les-nic",
+   "titre": "La Cour des comptes repart à la charge contre les niches fiscales",
+   "url": "https://www.lemonde.fr/politique/article/2026/11/09/la-cour-des-comptes-repart-a-la-charge-contre-les-niches-fiscales_6808640_823448.html",
+   "source": "Le Monde Économie",
+   "date": "2026-11-09T10:48:06.000Z",
+   "image": "https://img.lemde.fr/2023/04/17/154/0/3000/1500/644/322/60/0/c430bdb_1681717636668-ghr.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "capital-https-www-capital-fr-economie-politique-cour-des-comptes-18-mesures-pour-economiser-jusqua-38-milliards-deuros-d",
+   "titre": "Cour des comptes : 18 mesures pour économiser jusqu’à 38 milliards d’euros dès 2027",
+   "url": "https://www.capital.fr/economie-politique/cour-des-comptes-18-mesures-pour-economiser-jusqua-38-milliards-deuros-des-2027-1531713",
+   "source": "Capital",
+   "date": "2026-11-09T10:39:51.000Z",
+   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~11~09~e0149967-c4a9-4300-9492-158ca3eb0b63.jpg/1200x900/focus-point/1328%2C806/cour-des-comptes-18-mesures-pour-economiser-jusqu-a-38-milliards-d-euros-des-2027.jpg",
+   "categorie": "Fiscalité",
+   "score": 4
+  },
+  {
+   "id": "capital-https-www-capital-fr-votre-retraite-per-combien-le-fisc-reprend-a-la-sortie-selon-le-mode-de-retrait-1531540",
+   "titre": "PER : combien le fisc reprend à la sortie, selon le mode de retrait",
+   "url": "https://www.capital.fr/votre-retraite/per-combien-le-fisc-reprend-a-la-sortie-selon-le-mode-de-retrait-1531540",
+   "source": "Capital",
+   "date": "2026-11-09T08:00:00.000Z",
+   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~11~03~74ff060e-5285-4d14-a62b-cf85a2f3eb4c.jpg/1200x900/focus-point/1922%2C769/per-combien-le-fisc-reprend-a-la-sortie-selon-le-mode-de-retrait.jpg",
+   "categorie": "Fiscalité",
+   "score": 4
+  },
   {
    "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-emploi-si-vous-augmentez-le-smic-c-est-oblige-de-maintenir-le-differ",
    "titre": "\"Si vous augmentez le SMIC, c'est obligé de maintenir le différentiel des autres salaires\" explique le président des Entrepreneurs Paris Île-de-France",
@@ -814,66 +874,6 @@
    "source": "Le Monde Économie",
    "date": "2026-10-29T09:39:51.000Z",
    "image": "https://img.lemde.fr/2026/05/07/0/0/3852/1926/644/322/60/0/03af0fb_upload-1-v5jrqydc1k1y-000-36ne2vv.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-entreprises-shein-petits-colis-le-patron-du-pret-a-porter-feminin-se",
-   "titre": "Petits colis : le patron du prêt-à-porter féminin se réjouit de la chute des envois mais estime que \"la guerre contre Shein n'est absolument pas gagnée\"",
-   "url": "https://www.franceinfo.fr/economie/entreprises/shein/petits-colis-le-patron-du-pret-a-porter-feminin-se-rejouit-de-la-chute-des-envois-mais-estime-que-la-guerre-contre-shein-n-est-absolument-pas-gagnee_8258429.html#xtor=RSS-3-%5Bgeneral%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-10-29T07:01:37.000Z",
-   "image": "https://www.franceinfo.fr/pictures/3tGfXSIS9Ks836gTx65KOb6NuF0/0x290:5568x3422/432x243/filters:format(jpg)/2025/11/06/maxnewsspecialtwo365465-690c3a838e096491158396.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "village-de-la-justice-https-www-village-justice-com-articles-nouvelle-parution-travail-ombre-ombre-travail-59528-html-ut",
-   "titre": "[Nouvelle parution] Le travail de l'ombre, et l'ombre du travail.",
-   "url": "https://www.village-justice.com/articles/nouvelle-parution-travail-ombre-ombre-travail,59528.html?utm_source=backend&utm_medium=RSS&utm_campaign=RSS_Reseaux",
-   "source": "Village de la Justice",
-   "date": "2026-10-28T19:00:00.000Z",
-   "image": "https://www.village-justice.com/articles/local/cache-gd2/d3/f1c3186b7fe16d9d45c7bceb6ab330.jpg?1793210403",
-   "categorie": "Social",
-   "score": 4
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-taxer-les-riches-et-les-grandes-entreprises-la-folie-fiscale-de-la-g",
-   "titre": "Taxer les « riches » et les grandes entreprises : la folie fiscale de la gauche tenue en échec à l’Assemblée nationale",
-   "url": "https://www.lefigaro.fr/conjoncture/taxer-les-riches-et-les-grandes-entreprises-la-folie-fiscale-de-la-gauche-tenue-en-echec-a-l-assemblee-nationale-20261028",
-   "source": "Le Figaro Économie",
-   "date": "2026-10-28T19:00:00.000Z",
-   "image": "https://i.f1g.fr/media/cms/3000x1687_crop/2026/10/28/29c2776f32b565796b7289aed326e4af4630fc28271d2823cc55900e1bf59210.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-commerce-shein-temu-aliexpress-en-france-le-nombre-de-petits-colis-i",
-   "titre": "Shein, Temu, AliExpress... En France, le nombre de petits colis issus de ces plateformes chute",
-   "url": "https://www.franceinfo.fr/economie/commerce/shein-temu-aliexpress-en-france-le-nombre-de-petits-colis-issus-de-ces-plateformes-chute_8257622.html#xtor=RSS-3-%5Bgeneral%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-10-28T17:28:18.000Z",
-   "image": "https://www.franceinfo.fr/pictures/y03pkBlIjfdIOi8J1FKIyqHeyiA/0x53:1024x629/432x243/filters:format(jpg)/2026/10/28/6ae2214a7d369915701703.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "village-de-la-justice-https-www-village-justice-com-articles-activites-sociales-culturelles-cse-accord-entreprise-prime-",
-   "titre": "Activités sociales et culturelles du CSE : l'accord d'entreprise prime sur la règle de maintien du budget. Par Xavier Berjot, Avocat.",
-   "url": "https://www.village-justice.com/articles/activites-sociales-culturelles-cse-accord-entreprise-prime-sur-regle-maintien,59703.html?utm_source=backend&utm_medium=RSS&utm_campaign=RSS_Reseaux",
-   "source": "Village de la Justice",
-   "date": "2026-10-28T17:00:00.000Z",
-   "image": "https://www.village-justice.com/articles/local/cache-gd2/7c/3f8c8a2e9297129ae7bbb25a0c4cc6.jpg?1792010095",
-   "categorie": "Social",
-   "score": 3
-  },
-  {
-   "id": "capital-https-www-capital-fr-economie-politique-shein-temu-un-milliard-deuros-damendes-en-un-an-le-gouvernement-dresse-s",
-   "titre": "Shein, Temu : amendes, contrôles, taxes, le bilan du gouvernement un an après le scandale",
-   "url": "https://www.capital.fr/economie-politique/shein-temu-un-milliard-deuros-damendes-en-un-an-le-gouvernement-dresse-son-bilan-1531331",
-   "source": "Capital",
-   "date": "2026-10-28T17:00:00.000Z",
-   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~10~28~80479219-dc54-416b-8767-647747062c34.jpg/1200x900/focus-point/1843%2C1044/shein-temu-amendes-controles-taxes-le-bilan-du-gouvernement-un-an-apres-le-scandale.jpg",
    "categorie": "Fiscalité",
    "score": 3
   }
