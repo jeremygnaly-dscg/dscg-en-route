@@ -1,5 +1,5 @@
 {
- "majLe": "2026-11-10T05:59:21.757Z",
+ "majLe": "2026-11-10T11:56:12.941Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -38,7 +38,7 @@
    "nom": "CNIL",
    "url": "https://www.cnil.fr/fr/rss.xml",
    "ok": true,
-   "articles": 1
+   "articles": 2
   },
   {
    "nom": "Le Monde Économie",
@@ -50,13 +50,13 @@
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 1
+   "articles": 2
   },
   {
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Capital",
@@ -76,6 +76,36 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-taxe-sur-les-superprofits-cheque-energie-que-contient-le-plan-de-rev",
+   "titre": "Taxe sur les superprofits, chèque énergie… Que contient le plan de «révolution écologique» à 200 milliards d’euros de Raphaël Glucksmann ?",
+   "url": "https://www.lefigaro.fr/conjoncture/taxe-sur-les-superprofits-cheque-energie-que-contient-le-plan-de-revolution-ecologique-a-200-milliards-d-euros-de-raphael-glucksmann-20261110",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-10T10:27:01.000Z",
+   "image": "https://i.f1g.fr/media/cms/orig/2026/11/10/4a527357289c4aec2a056439e215edf33db58dfd0067d9abc908da2e48328b78.JPG",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-replay-radio-le-decryptage-eco-comment-le-gouvernement-remet-au-gout-du-jour-",
+   "titre": "Comment le gouvernement remet au goût du jour les primes Macron",
+   "url": "https://www.franceinfo.fr/replay-radio/le-decryptage-eco/comment-le-gouvernement-remet-au-gout-du-jour-les-primes-macron_8255020.html#xtor=RSS-3-%5Bgeneral%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-11-10T07:45:11.000Z",
+   "image": "https://www.franceinfo.fr/pictures/vWNzmYkbYy33BxgPNXfUZYyqg4w/0x625:6000x4000/432x243/filters:format(jpg)/2026/11/10/6af2bfe3963a8642660854.jpg",
+   "categorie": "Fiscalité",
+   "score": 4
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-societes-en-plein-virage-vers-l-ia-la-compagnie-aerienne-qantas-va-licencier-850",
+   "titre": "En plein virage vers l’IA, la compagnie aérienne Qantas va licencier 850 employés",
+   "url": "https://www.lefigaro.fr/societes/en-plein-virage-vers-l-ia-la-compagnie-aerienne-qantas-va-licencier-850-employes-20261110",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-10T05:43:02.000Z",
+   "image": "https://i.f1g.fr/media/cms/orig/2026/11/10/455d527c618b187a885ce64810e0852bdf5dafe9bff7d52bd954d9b42b9cb206.JPG",
+   "categorie": "Social",
+   "score": 5
+  },
   {
    "id": "le-figaro-conomie-https-www-lefigaro-fr-economie-retraites-fonctionnaires-tva-les-mesures-chocs-de-la-cour-des-comptes-p",
    "titre": "Retraites, fonctionnaires, TVA... Les mesures chocs de la Cour des comptes pour réduire le déficit",
@@ -846,36 +876,6 @@
    "image": "https://i.f1g.fr/media/cms/3000x1688_crop/2026/10/29/e3f9ce04c71f29e03c276b51c5d305b9d8e7866958bd33a6d98bf099906ae2a7.jpg",
    "categorie": "Fiscalité",
    "score": 3
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-impots-la-france-retrouve-la-tete-du-classement-des-pays-d-europe-ou",
-   "titre": "La France retrouve la tête du classement des pays d'Europe où l'on a payé le plus de taxes en 2025, selon Eurostat",
-   "url": "https://www.franceinfo.fr/economie/impots/la-france-retrouve-la-tete-du-classement-des-pays-d-europe-ou-l-on-a-paye-le-plus-de-taxes-en-2025-selon-eurostat_8258984.html#xtor=RSS-3-%5Bgeneral%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-10-29T14:51:39.000Z",
-   "image": "https://www.franceinfo.fr/pictures/HQAm_MqNSYemPJIczYZbLEvaxOo/0x0:4299x2418/432x243/filters:format(jpg)/2023/06/10/64844973f1bb0_impo.jpg",
-   "categorie": "Fiscalité",
-   "score": 4
-  },
-  {
-   "id": "capital-https-www-capital-fr-economie-politique-heritage-generationlibre-veut-supprimer-la-reserve-hereditaire-et-taxer-",
-   "titre": "Héritage : GenerationLibre veut supprimer la réserve héréditaire et taxer à 20%",
-   "url": "https://www.capital.fr/economie-politique/heritage-generationlibre-veut-supprimer-la-reserve-hereditaire-et-taxer-a-20-1531395",
-   "source": "Capital",
-   "date": "2026-10-29T14:43:11.000Z",
-   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~10~29~e7e5f543-b9cf-44b8-99d0-4a45612ff72c.jpg/1200x900/focus-point/1012%2C1392/heritage-generationlibre-veut-supprimer-la-reserve-hereditaire-et-taxer-a-20.jpg",
-   "categorie": "Fiscalité",
-   "score": 5
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-transports-prix-des-carburants-quand-on-voit-les-dividendes-qu-ils-g",
-   "titre": "\"Quand on voit les dividendes qu'ils génèrent\" : pourquoi TotalEnergies maintient ses prix plafonnés malgré 500 millions d'euros de pertes annoncées",
-   "url": "https://www.franceinfo.fr/economie/transports/prix-des-carburants/quand-on-voit-les-dividendes-qu-ils-generent-pourquoi-totalenergies-maintient-ses-prix-plafonnes-malgre-500-millions-d-euros-de-pertes-annoncees_8258840.html#xtor=RSS-3-%5Bgeneral%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-10-29T13:06:17.000Z",
-   "image": "https://www.franceinfo.fr/pictures/8APU7sOGNKkTB0oT6lgVRy1slp8/0x0:1920x1080/432x243/filters:format(jpg)/2026/10/29/6ae344a5d8089750139995.jpg",
-   "categorie": "Fiscalité",
-   "score": 5
   }
  ],
  "ecartes": []
