@@ -1,5 +1,5 @@
 {
- "majLe": "2026-11-10T11:56:12.941Z",
+ "majLe": "2026-11-10T17:53:41.157Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -50,7 +50,7 @@
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 2
+   "articles": 0
   },
   {
    "nom": "franceinfo Économie",
@@ -76,6 +76,26 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-replay-jt-france-2-13-heures-on-est-recompense-pour-notre-travail-vers-plus-d",
+   "titre": "\"On est récompensé pour notre travail\" : vers plus d'heures supplémentaires défiscalisées ?",
+   "url": "https://www.franceinfo.fr/replay-jt/france-2/13-heures/on-est-recompense-pour-notre-travail-vers-plus-d-heures-supplementaires-defiscalisees_8276411.html#xtor=RSS-3-%5Beconomie%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-11-10T14:17:28.000Z",
+   "image": "https://www.franceinfo.fr/pictures/rsZGfkNqdmbUEHQzvGnqa--sd8w/0x0:1920x1080/432x243/filters:format(jpg)/2026/11/10/6af326610af12341172181.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "cnil-https-www-cnil-fr-fr-salon-maires-collectivites-2026",
+   "titre": "La CNIL sera présente au Salon des maires et des collectivités locales 2026",
+   "url": "https://www.cnil.fr/fr/salon-maires-collectivites-2026",
+   "source": "CNIL",
+   "officiel": true,
+   "date": "2026-11-10T12:00:00.000Z",
+   "categorie": "Numérique",
+   "score": 2
+  },
   {
    "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-taxe-sur-les-superprofits-cheque-energie-que-contient-le-plan-de-rev",
    "titre": "Taxe sur les superprofits, chèque énergie… Que contient le plan de «révolution écologique» à 200 milliards d’euros de Raphaël Glucksmann ?",
@@ -854,26 +874,6 @@
    "source": "Capital",
    "date": "2026-10-29T17:00:00.000Z",
    "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~10~29~3c6dd9f6-67b4-4fec-b3a7-cccee015bbb9.jpg/1200x900/focus-point/1000%2C1500/carburants-les-18-centimes-qui-peuvent-couter-cher-au-gouvernement.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-vie-professionnelle-sollicitee-279-fois-par-son-employeur-pendant-ses-arrets-mal",
-   "titre": "Sollicitée 279 fois par son employeur pendant ses arrêts maladie et ses congés, elle conteste son licenciement",
-   "url": "https://www.lefigaro.fr/vie-professionnelle/sollicitee-279-fois-par-son-employeur-pendant-ses-arrets-maladie-et-ses-conges-elle-conteste-son-licenciement-20261029",
-   "source": "Le Figaro Économie",
-   "date": "2026-10-29T16:19:19.000Z",
-   "image": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/10/29/88f6d75ffbab9774439a522e151af010cd782e288f8bb84bf963913bb66dbf47.jpg",
-   "categorie": "Social",
-   "score": 3
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-quelle-est-cette-taxe-emeutes-qui-pourrait-faire-augmenter-les-prix-",
-   "titre": "Quelle est cette «taxe émeutes» qui pourrait faire augmenter les prix des contrats d’assurance ?",
-   "url": "https://www.lefigaro.fr/conjoncture/quelle-est-cette-taxe-emeutes-qui-pourrait-faire-augmenter-les-prix-des-contrats-d-assurance-20261029",
-   "source": "Le Figaro Économie",
-   "date": "2026-10-29T16:07:07.000Z",
-   "image": "https://i.f1g.fr/media/cms/3000x1688_crop/2026/10/29/e3f9ce04c71f29e03c276b51c5d305b9d8e7866958bd33a6d98bf099906ae2a7.jpg",
    "categorie": "Fiscalité",
    "score": 3
   }
