@@ -1,5 +1,5 @@
 {
- "majLe": "2026-11-09T18:00:28.823Z",
+ "majLe": "2026-11-10T05:59:21.757Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -76,6 +76,16 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-economie-retraites-fonctionnaires-tva-les-mesures-chocs-de-la-cour-des-comptes-p",
+   "titre": "Retraites, fonctionnaires, TVA... Les mesures chocs de la Cour des comptes pour réduire le déficit",
+   "url": "https://www.lefigaro.fr/economie/retraites-fonctionnaires-tva-les-mesures-chocs-de-la-cour-des-comptes-pour-reduire-le-deficit-20261109",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-09T18:14:44.000Z",
+   "image": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/09/a7705184f2146e96df50d4a5e60c26d356f0b4bb0c16302cea5f039dc28f6cfd.jpg",
+   "categorie": "Fiscalité",
+   "score": 5
+  },
   {
    "id": "le-figaro-conomie-https-www-lefigaro-fr-societes-automobile-des-couts-de-detention-en-baisse-sur-fond-de-percee-des-voit",
    "titre": "Automobile : des coûts de détention en baisse sur fond de percée des voitures électriques",
@@ -866,16 +876,6 @@
    "image": "https://www.franceinfo.fr/pictures/8APU7sOGNKkTB0oT6lgVRy1slp8/0x0:1920x1080/432x243/filters:format(jpg)/2026/10/29/6ae344a5d8089750139995.jpg",
    "categorie": "Fiscalité",
    "score": 5
-  },
-  {
-   "id": "cnil-https-www-cnil-fr-fr-sanction-cookies-app-fnac",
-   "titre": "Cookies et application mobile : sanctions de 7 millions d’euros à l’encontre des sociétés FNAC DARTY PARTICIPATIONS ET SERVICES et FNAC DIRECT",
-   "url": "https://www.cnil.fr/fr/sanction-cookies-app-fnac",
-   "source": "CNIL",
-   "officiel": true,
-   "date": "2026-10-29T12:00:00.000Z",
-   "categorie": "Droit des affaires",
-   "score": 4
   }
  ],
  "ecartes": []
