@@ -3614,5 +3614,330 @@
     "dit": "Aux minoritaires : cent cinquante mille euros, quatre-vingt-dix mille euros et trente mille euros, soit deux cent soixante-dix mille euros. Exactement trente pour cent."
    }
   ]
+ },
+ {
+  "id": "m-diagnostic-groupe",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "segments": [
+   {
+    "voix": "Résultat en hausse… et la banque peut quand même refuser de te prêter.",
+    "dit": "Résultat en hausse… et la banque peut quand même refuser de te prêter."
+   },
+   {
+    "voix": "Elle regarde d'abord la dette nette sur l'EBITDA. Atlas Services : 120 M€ sur 40 M€, soit 3 fois.",
+    "titre": "Diagnostic d'un groupe",
+    "rangs": [
+     {
+      "lib": "Dette nette",
+      "val": "120 M€"
+     },
+     {
+      "op": "÷",
+      "lib": "EBITDA",
+      "val": "40 M€"
+     },
+     {
+      "op": "=",
+      "lib": "Levier",
+      "val": "3 fois",
+      "style": "ok"
+     }
+    ],
+    "dit": "Elle regarde d'abord la dette nette sur l'Ébitda. Atlas Services : cent vingt millions d'euros sur quarante millions d'euros, soit trois fois."
+   },
+   {
+    "voix": "C'est souvent le plafond du covenant. Avec 50 M€ de dette en plus, à EBITDA constant : 4,25 fois.",
+    "rangs": [
+     {
+      "lib": "Dette nette + 50 M€",
+      "val": "170 M€"
+     },
+     {
+      "op": "=",
+      "lib": "Nouveau levier",
+      "val": "4,25 fois",
+      "style": "fort"
+     }
+    ],
+    "dit": "C'est souvent le plafond du covenant. Avec cinquante millions d'euros de dette en plus, à Ébitda constant : quatre virgule vingt-cinq fois."
+   },
+   {
+    "voix": "Le gearing, lui, rapporte la dette nette aux capitaux propres, minoritaires compris.",
+    "rangs": [
+     {
+      "lib": "Gearing : CP totaux",
+      "val": "✓"
+     }
+    ],
+    "dit": "Le gearing, lui, rapporte la dette nette aux capitaux propres, minoritaires compris."
+   },
+   {
+    "voix": "Et un gros goodwill gonfle l'actif : il peut être déprécié brutalement.",
+    "dit": "Et un gros goodwill gonfle l'actif : il peut être déprécié brutalement."
+   }
+  ],
+  "accroche": "Résultat en hausse… et la banque peut quand même refuser de te prêter."
+ },
+ {
+  "id": "m-apport-partiel",
+  "modele": "finance",
+  "tag": "Dessine-moi le M&A",
+  "segments": [
+   {
+    "voix": "Vendre la moitié d'une société ? Impossible… sauf par un apport partiel d'actif.",
+    "dit": "Vendre la moitié d'une société ? Impossible… sauf par un apport partiel d'actif."
+   },
+   {
+    "voix": "L'acheteur ne veut que la branche sécurité de Flandres Services : on l'apporte à une filiale.",
+    "titre": "Apport partiel d'actif",
+    "rangs": [
+     {
+      "lib": "Actifs de la branche",
+      "val": "900 000 €"
+     }
+    ],
+    "dit": "L'acheteur ne veut que la branche sécurité de Flandres Services : on l'apporte à une filiale."
+   },
+   {
+    "voix": "Actifs : 900 000 €, dettes : 300 000 €. Flandres Services reçoit 600 000 € de titres, qu'elle pourra céder.",
+    "rangs": [
+     {
+      "op": "−",
+      "lib": "Dettes transférées",
+      "val": "300 000 €"
+     },
+     {
+      "op": "=",
+      "lib": "Titres reçus",
+      "val": "600 000 €",
+      "style": "fort"
+     }
+    ],
+    "dit": "Actifs : neuf cent mille euros, dettes : trois cent mille euros. Flandres Services reçoit six cent mille euros de titres, qu'elle pourra céder."
+   },
+   {
+    "voix": "Régime de faveur : branche complète, et titres gardés 3 ans.",
+    "rangs": [
+     {
+      "lib": "Branche complète",
+      "val": "✓"
+     },
+     {
+      "lib": "Titres gardés 3 ans",
+      "val": "✓",
+      "style": "ok"
+     }
+    ],
+    "dit": "Régime de faveur : branche complète, et titres gardés trois ans."
+   },
+   {
+    "voix": "Piège : céder les titres avant 3 ans fait perdre le régime de plein droit. D'où l'agrément.",
+    "rangs": [
+     {
+      "lib": "Cession avant 3 ans",
+      "val": "Agrément",
+      "style": "fort"
+     }
+    ],
+    "dit": "Piège : céder les titres avant trois ans fait perdre le régime de plein droit. D'où l'agrément."
+   }
+  ],
+  "accroche": "Vendre la moitié d'une société ? Impossible… sauf par un apport partiel d'actif."
+ },
+ {
+  "id": "c-boni-fusion",
+  "modele": "finance",
+  "tag": "Dessine-moi la conso",
+  "segments": [
+   {
+    "voix": "Ta fusion dégage un boni de 200 000 €… et le fisc peut ne rien taxer.",
+    "dit": "Ta fusion dégage un boni de deux cent mille euros… et le fisc peut ne rien taxer."
+   },
+   {
+    "voix": "Bourgogne Holding absorbe sa filiale à 100 %. Actif net reçu : 700 000 €. Titres annulés : 500 000 €.",
+    "titre": "Boni de fusion",
+    "rangs": [
+     {
+      "lib": "Actif net reçu",
+      "val": "700 000 €"
+     },
+     {
+      "op": "−",
+      "lib": "Titres annulés",
+      "val": "500 000 €"
+     },
+     {
+      "op": "=",
+      "lib": "Boni",
+      "val": "200 000 €",
+      "style": "fort"
+     }
+    ],
+    "dit": "Bourgogne Holding absorbe sa filiale à cent pour cent. Actif net reçu : sept cent mille euros. Titres annulés : cinq cent mille euros."
+   },
+   {
+    "voix": "Les résultats accumulés non distribués vont en produit financier : 120 000 €. Le reste, 80 000 €, en prime de fusion.",
+    "rangs": [
+     {
+      "lib": "Produit financier",
+      "val": "120 000 €"
+     },
+     {
+      "op": "+",
+      "lib": "Prime de fusion",
+      "val": "80 000 €",
+      "style": "ok"
+     }
+    ],
+    "dit": "Les résultats accumulés non distribués vont en produit financier : cent vingt mille euros. Le reste, quatre-vingt mille euros, en prime de fusion."
+   },
+   {
+    "voix": "Sous le régime de faveur, le boni n'est pas imposé : les 120 000 € sont déduits hors comptabilité.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Régime de faveur",
+      "val": "Non imposé",
+      "style": "ok"
+     }
+    ],
+    "dit": "Sous le régime de faveur, le boni n'est pas imposé : les cent vingt mille euros sont déduits hors comptabilité."
+   },
+   {
+    "voix": "En droit commun, tout le boni est imposable.",
+    "rangs": [
+     {
+      "lib": "Droit commun",
+      "val": "Imposable",
+      "style": "fort"
+     }
+    ],
+    "dit": "En droit commun, tout le boni est imposable."
+   }
+  ],
+  "accroche": "Ta fusion dégage un boni de 200 000 €… et le fisc peut ne rien taxer."
+ },
+ {
+  "id": "d-augmentation-capital",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "segments": [
+   {
+    "voix": "Ton conseil veut lever 2 M€ ? Il ne peut pas le décider seul.",
+    "dit": "Ton conseil veut lever deux millions d'euros ? Il ne peut pas le décider seul."
+   },
+   {
+    "voix": "Dans la SA, seule l'assemblée extraordinaire décide l'augmentation de capital. Délégation au conseil : 26 mois au plus.",
+    "titre": "Augmentation de capital",
+    "rangs": [
+     {
+      "lib": "Décision",
+      "val": "AGE",
+      "style": "ok"
+     },
+     {
+      "lib": "Délégation au conseil",
+      "val": "26 mois"
+     }
+    ],
+    "dit": "Dans la société anonyme, seule l'assemblée extraordinaire décide l'augmentation de capital. Délégation au conseil : vingt-six mois au plus."
+   },
+   {
+    "voix": "Chaque actionnaire a un droit préférentiel de souscription, négociable. Seule l'AGE peut le supprimer.",
+    "rangs": [
+     {
+      "lib": "DPS négociable",
+      "val": "✓"
+     },
+     {
+      "lib": "Suppression du DPS",
+      "val": "AGE"
+     }
+    ],
+    "dit": "Chaque actionnaire a un droit préférentiel de souscription, négociable. Seule l'assemblée extraordinaire peut le supprimer."
+   },
+   {
+    "voix": "On libère au moins un quart du nominal et toute la prime. Le solde, dans les 5 ans.",
+    "rangs": [
+     {
+      "lib": "À la souscription",
+      "val": "¼ + prime",
+      "style": "fort"
+     },
+     {
+      "lib": "Solde",
+      "val": "5 ans"
+     }
+    ],
+    "dit": "On libère au moins un quart du nominal et toute la prime. Le solde, dans les cinq ans."
+   },
+   {
+    "voix": "Le piège : donner la compétence au conseil sans délégation.",
+    "dit": "Le piège : donner la compétence au conseil sans délégation."
+   }
+  ],
+  "accroche": "Ton conseil veut lever 2 M€ ? Il ne peut pas le décider seul."
+ },
+ {
+  "id": "m-cap-tunnel",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "segments": [
+   {
+    "voix": "Se protéger de la hausse des taux sans renoncer à la baisse ? Possible, mais ça se paie.",
+    "dit": "Se protéger de la hausse des taux sans renoncer à la baisse ? Possible, mais ça se paie."
+   },
+   {
+    "voix": "Taux variable ? Le swap bloque ton taux, mais tu ne profites plus de la baisse.",
+    "titre": "Couvrir un taux variable",
+    "rangs": [
+     {
+      "lib": "Swap : taux fixe",
+      "val": "Bloqué"
+     }
+    ],
+    "dit": "Taux variable ? Le swap bloque ton taux, mais tu ne profites plus de la baisse."
+   },
+   {
+    "voix": "Le cap est une option : un taux plafond. Tu gardes la baisse, contre une prime.",
+    "rangs": [
+     {
+      "lib": "Cap : plafond",
+      "val": "Prime",
+      "style": "ok"
+     }
+    ],
+    "dit": "Le cap est une option : un taux plafond. Tu gardes la baisse, contre une prime."
+   },
+   {
+    "voix": "Le tunnel : tu achètes un cap et vends un floor. La prime encaissée réduit celle payée.",
+    "rangs": [
+     {
+      "lib": "Achat du cap",
+      "val": "− prime"
+     },
+     {
+      "op": "+",
+      "lib": "Vente du floor",
+      "val": "+ prime"
+     }
+    ],
+    "dit": "Le tunnel : tu achètes un cap et vends un floor. La prime encaissée réduit celle payée."
+   },
+   {
+    "voix": "Mais sous le plancher, plus de baisse. À l'examen : coût net par scénario, prime comprise.",
+    "rangs": [
+     {
+      "op": "=",
+      "lib": "Tunnel",
+      "val": "Moins cher",
+      "style": "fort"
+     }
+    ],
+    "dit": "Mais sous le plancher, plus de baisse. À l'examen : coût net par scénario, prime comprise."
+   }
+  ],
+  "accroche": "Se protéger de la hausse des taux sans renoncer à la baisse ? Possible, mais ça se paie."
  }
 ]
