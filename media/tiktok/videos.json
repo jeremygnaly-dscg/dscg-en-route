@@ -3939,5 +3939,327 @@
    }
   ],
   "accroche": "Se protéger de la hausse des taux sans renoncer à la baisse ? Possible, mais ça se paie."
+ },
+ {
+  "id": "m-beta-reendette",
+  "modele": "finance",
+  "tag": "Dessine-moi le M&A",
+  "segments": [
+   {
+    "voix": "Ta cible n'est pas cotée… et elle a quand même un bêta : celui de ses concurrents.",
+    "dit": "Ta cible n'est pas cotée… et elle a quand même un bêta : celui de ses concurrents."
+   },
+   {
+    "voix": "On part du bêta désendetté des comparables : 0,9. Il ne mesure que le risque métier.",
+    "titre": "Bêta réendetté",
+    "rangs": [
+     {
+      "lib": "Bêta désendetté",
+      "val": "0,9"
+     }
+    ],
+    "dit": "On part du bêta désendetté des comparables : zéro virgule neuf. Il ne mesure que le risque métier."
+   },
+   {
+    "voix": "Puis on ajoute la dette de la cible : dette sur capitaux propres de 0,5, impôt à 25 %.",
+    "rangs": [
+     {
+      "op": "×",
+      "lib": "1 + 0,75 × 0,5",
+      "val": "1,375"
+     }
+    ],
+    "dit": "Puis on ajoute la dette de la cible : dette sur capitaux propres de zéro virgule cinq, impôt à vingt-cinq pour cent."
+   },
+   {
+    "voix": "0,9 × 1,375 : le bêta réendetté vaut 1,24. Plus de dette, plus de risque pour l'actionnaire.",
+    "rangs": [
+     {
+      "op": "=",
+      "lib": "Bêta réendetté",
+      "val": "1,24",
+      "style": "fort"
+     }
+    ],
+    "dit": "Zéro virgule neuf fois un virgule trois cent soixante-quinze : le bêta réendetté vaut un virgule vingt-quatre. Plus de dette, plus de risque pour l'actionnaire."
+   },
+   {
+    "voix": "Le piège : reprendre le bêta des comparables sans le désendetter d'abord.",
+    "rangs": [
+     {
+      "lib": "Bêta brut des comparables",
+      "val": "Piège",
+      "style": "fort"
+     }
+    ],
+    "dit": "Le piège : reprendre le bêta des comparables sans le désendetter d'abord."
+   }
+  ],
+  "accroche": "Ta cible n'est pas cotée… et elle a quand même un bêta : celui de ses concurrents."
+ },
+ {
+  "id": "m-tresorerie-baisse",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "segments": [
+   {
+    "voix": "Ta boîte est rentable… et sa trésorerie baisse quand même. Où est passé l'argent ?",
+    "dit": "Ta boîte est rentable… et sa trésorerie baisse quand même. Où est passé l'argent ?"
+   },
+   {
+    "voix": "Drôme Bois dégage 500 000 € de CAF, mais la hausse du BFR en absorbe 80 000 €.",
+    "titre": "Tableau des flux",
+    "rangs": [
+     {
+      "lib": "CAF",
+      "val": "500 000 €"
+     },
+     {
+      "op": "−",
+      "lib": "Hausse du BFR",
+      "val": "80 000 €"
+     }
+    ],
+    "dit": "Drôme Bois dégage cinq cent mille euros de capacité d'autofinancement, mais la hausse du besoin en fonds de roulement en absorbe quatre-vingt mille euros."
+   },
+   {
+    "voix": "Flux d'activité : 420 000 €. Mais l'investissement coûte 600 000 €.",
+    "rangs": [
+     {
+      "op": "=",
+      "lib": "Flux d'activité",
+      "val": "420 000 €",
+      "style": "ok"
+     },
+     {
+      "op": "−",
+      "lib": "Investissement",
+      "val": "600 000 €"
+     }
+    ],
+    "dit": "Flux d'activité : quatre cent vingt mille euros. Mais l'investissement coûte six cent mille euros."
+   },
+   {
+    "voix": "Financement : 250 000 € d'emprunt, moins 100 000 € de dividendes. Trésorerie : − 30 000 €.",
+    "rangs": [
+     {
+      "op": "+",
+      "lib": "Financement net",
+      "val": "150 000 €"
+     },
+     {
+      "op": "=",
+      "lib": "Variation de trésorerie",
+      "val": "− 30 000 €",
+      "style": "fort"
+     }
+    ],
+    "dit": "Financement : deux cent cinquante mille euros d'emprunt, moins cent mille euros de dividendes. Trésorerie : moins trente mille euros."
+   },
+   {
+    "voix": "L'activité ne couvre que 70 % de l'investissement : le reste, c'est de la dette.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Couverture par l'activité",
+      "val": "70 %",
+      "style": "fort"
+     }
+    ],
+    "dit": "L'activité ne couvre que soixante-dix pour cent de l'investissement : le reste, c'est de la dette."
+   }
+  ],
+  "accroche": "Ta boîte est rentable… et sa trésorerie baisse quand même. Où est passé l'argent ?"
+ },
+ {
+  "id": "c-ias19",
+  "modele": "finance",
+  "tag": "Dessine-moi la conso",
+  "segments": [
+   {
+    "voix": "La retraite de tes salariés est loin… et IAS 19 t'oblige à la provisionner dès aujourd'hui.",
+    "dit": "La retraite de tes salariés est loin… et la norme I.A.S dix-neuf t'oblige à la provisionner dès aujourd'hui."
+   },
+   {
+    "voix": "Prestations définies : l'entreprise garantit l'indemnité. Rhône Santé : engagement de 100 000 €.",
+    "titre": "IAS 19 · Retraite",
+    "rangs": [
+     {
+      "lib": "Engagement à l'ouverture",
+      "val": "100 000 €"
+     }
+    ],
+    "dit": "Prestations définies : l'entreprise garantit l'indemnité. Rhône Santé : engagement de cent mille euros."
+   },
+   {
+    "voix": "Cette année : 12 000 € de coût des services et 3 000 € d'intérêts. En résultat.",
+    "rangs": [
+     {
+      "op": "+",
+      "lib": "Coût des services",
+      "val": "12 000 €"
+     },
+     {
+      "op": "+",
+      "lib": "Intérêts",
+      "val": "3 000 €"
+     }
+    ],
+    "dit": "Cette année : douze mille euros de coût des services et trois mille euros d'intérêts. En résultat."
+   },
+   {
+    "voix": "Plus 5 000 € d'écarts actuariels, dus à la baisse des taux : engagement de 120 000 €.",
+    "rangs": [
+     {
+      "op": "+",
+      "lib": "Écarts actuariels",
+      "val": "5 000 €"
+     },
+     {
+      "op": "=",
+      "lib": "Engagement à la clôture",
+      "val": "120 000 €",
+      "style": "fort"
+     }
+    ],
+    "dit": "Plus cinq mille euros d'écarts actuariels, dus à la baisse des taux : engagement de cent vingt mille euros."
+   },
+   {
+    "voix": "Piège : les écarts actuariels vont en autres éléments du résultat global, jamais recyclés.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Services + intérêts : en résultat",
+      "val": "✓"
+     },
+     {
+      "lib": "Écarts actuariels : hors résultat",
+      "val": "✓",
+      "style": "fort"
+     }
+    ],
+    "dit": "Piège : les écarts actuariels vont en autres éléments du résultat global, jamais recyclés."
+   }
+  ],
+  "accroche": "La retraite de tes salariés est loin… et IAS 19 t'oblige à la provisionner dès aujourd'hui."
+ },
+ {
+  "id": "d-reprise-barre",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "segments": [
+   {
+    "voix": "Racheter une boîte en redressement au prix le plus haut ? Ça ne suffit pas pour gagner.",
+    "dit": "Racheter une boîte en redressement au prix le plus haut ? Ça ne suffit pas pour gagner."
+   },
+   {
+    "voix": "Plan de cession : le tribunal transfère l'entreprise à un repreneur, en redressement ou en liquidation.",
+    "titre": "Plan de cession",
+    "rangs": [
+     {
+      "lib": "Redressement ou liquidation",
+      "val": "✓"
+     }
+    ],
+    "dit": "Plan de cession : le tribunal transfère l'entreprise à un repreneur, en redressement ou en liquidation."
+   },
+   {
+    "voix": "Il retient l'offre qui assure le mieux le maintien de l'emploi et le paiement des créanciers.",
+    "rangs": [
+     {
+      "lib": "Maintien de l'emploi",
+      "val": "✓",
+      "style": "ok"
+     },
+     {
+      "lib": "Paiement des créanciers",
+      "val": "✓",
+      "style": "ok"
+     }
+    ],
+    "dit": "Il retient l'offre qui assure le mieux le maintien de l'emploi et le paiement des créanciers."
+   },
+   {
+    "voix": "Et le dirigeant ne peut pas reprendre sa propre boîte, sauf dérogation du tribunal.",
+    "rangs": [
+     {
+      "lib": "Offre du dirigeant",
+      "val": "Interdite",
+      "style": "fort"
+     }
+    ],
+    "dit": "Et le dirigeant ne peut pas reprendre sa propre boîte, sauf dérogation du tribunal."
+   },
+   {
+    "voix": "Autre issue : le plan de continuation, sur 10 ans au plus.",
+    "rangs": [
+     {
+      "lib": "Plan de continuation : au plus",
+      "val": "10 ans"
+     }
+    ],
+    "dit": "Autre issue : le plan de continuation, sur dix ans au plus."
+   }
+  ],
+  "accroche": "Racheter une boîte en redressement au prix le plus haut ? Ça ne suffit pas pour gagner."
+ },
+ {
+  "id": "c-fusion-retroactivite",
+  "modele": "finance",
+  "tag": "Dessine-moi la conso",
+  "segments": [
+   {
+    "voix": "Une fusion votée en juin peut prendre effet… au 1er janvier. Et c'est légal.",
+    "dit": "Une fusion votée en juin peut prendre effet… au premier janvier. Et c'est légal."
+   },
+   {
+    "voix": "Breizh Alim absorbe Armor Frais : traité en avril, fusion approuvée en juin, effet au 1er janvier.",
+    "titre": "Fusion rétroactive",
+    "rangs": [
+     {
+      "lib": "Date juridique",
+      "val": "Juin"
+     },
+     {
+      "lib": "Date d'effet",
+      "val": "1er janvier",
+      "style": "ok"
+     }
+    ],
+    "dit": "Breizh Alim absorbe Armor Frais : traité en avril, fusion approuvée en juin, effet au premier janvier."
+   },
+   {
+    "voix": "Les ventes d'Armor entre janvier et juin sont réputées faites pour le compte de l'absorbante.",
+    "rangs": [
+     {
+      "lib": "Opérations intercalaires",
+      "val": "Absorbante",
+      "style": "fort"
+     }
+    ],
+    "dit": "Les ventes d'Armor entre janvier et juin sont réputées faites pour le compte de l'absorbante."
+   },
+   {
+    "voix": "Limite : pas d'effet avant la clôture du dernier exercice de l'absorbée.",
+    "rangs": [
+     {
+      "lib": "Pas d'effet avant",
+      "val": "Clôture"
+     }
+    ],
+    "dit": "Limite : pas d'effet avant la clôture du dernier exercice de l'absorbée."
+   },
+   {
+    "voix": "Les apports sont évalués à la date d'effet. Et fiscalement, mêmes limites.",
+    "rangs": [
+     {
+      "lib": "Apports évalués à la date d'effet",
+      "val": "✓"
+     }
+    ],
+    "dit": "Les apports sont évalués à la date d'effet. Et fiscalement, mêmes limites."
+   }
+  ],
+  "accroche": "Une fusion votée en juin peut prendre effet… au 1er janvier. Et c'est légal."
  }
 ]
