@@ -1,5 +1,5 @@
 {
- "majLe": "2026-11-10T17:53:41.157Z",
+ "majLe": "2026-11-11T06:06:58.101Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -38,13 +38,13 @@
    "nom": "CNIL",
    "url": "https://www.cnil.fr/fr/rss.xml",
    "ok": true,
-   "articles": 2
+   "articles": 1
   },
   {
    "nom": "Le Monde Économie",
    "url": "https://www.lemonde.fr/economie/rss_full.xml",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Le Figaro Économie",
@@ -56,7 +56,7 @@
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "Capital",
@@ -76,6 +76,16 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-argent-article-2026-11-11-la-facture-electronique-le-premier-pas-vers-une-comptabi",
+   "titre": "La facture électronique, le premier pas vers une comptabilité optimisée",
+   "url": "https://www.lemonde.fr/argent/article/2026/11/11/la-facture-electronique-le-premier-pas-vers-une-comptabilite-optimisee_6808940_1657007.html",
+   "source": "Le Monde Économie",
+   "date": "2026-11-11T06:00:09.000Z",
+   "image": "https://img.lemde.fr/2023/04/17/471/0/3000/1500/644/322/60/0/d334d5e_1681719510917-rtyguio.jpg",
+   "categorie": "Comptabilité & audit",
+   "score": 7
+  },
   {
    "id": "franceinfo-conomie-https-www-franceinfo-fr-replay-jt-france-2-13-heures-on-est-recompense-pour-notre-travail-vers-plus-d",
    "titre": "\"On est récompensé pour notre travail\" : vers plus d'heures supplémentaires défiscalisées ?",
@@ -866,16 +876,6 @@
    "image": "https://i.f1g.fr/media/cms/3000x1687_crop/2026/10/29/d1b1576e7fc304d548c2f8fee4cb1db251b07e889b25dbb51d6117ca74c389ac.jpg",
    "categorie": "Fiscalité",
    "score": 4
-  },
-  {
-   "id": "capital-https-www-capital-fr-economie-politique-carburants-les-18-centimes-qui-peuvent-couter-cher-au-gouvernement-15314",
-   "titre": "Carburants : les 18 centimes qui peuvent coûter cher au gouvernement",
-   "url": "https://www.capital.fr/economie-politique/carburants-les-18-centimes-qui-peuvent-couter-cher-au-gouvernement-1531406",
-   "source": "Capital",
-   "date": "2026-10-29T17:00:00.000Z",
-   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~10~29~3c6dd9f6-67b4-4fec-b3a7-cccee015bbb9.jpg/1200x900/focus-point/1000%2C1500/carburants-les-18-centimes-qui-peuvent-couter-cher-au-gouvernement.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
   }
  ],
  "ecartes": []
