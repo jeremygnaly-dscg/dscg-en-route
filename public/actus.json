@@ -1,5 +1,5 @@
 {
- "majLe": "2026-11-12T06:10:50.872Z",
+ "majLe": "2026-11-12T18:54:02.385Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -22,7 +22,7 @@
    "nom": "Village de la Justice",
    "url": "https://www.village-justice.com/articles/spip.php?page=backend",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Le Monde du Droit",
@@ -38,31 +38,31 @@
    "nom": "CNIL",
    "url": "https://www.cnil.fr/fr/rss.xml",
    "ok": true,
-   "articles": 1
+   "articles": 2
   },
   {
    "nom": "Le Monde Économie",
    "url": "https://www.lemonde.fr/economie/rss_full.xml",
    "ok": true,
-   "articles": 2
+   "articles": 3
   },
   {
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 0
+   "articles": 3
   },
   {
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 1
+   "articles": 4
   },
   {
    "nom": "Capital",
    "url": "https://feed.prismamediadigital.com/v1/cap/rss?sources=capital",
    "ok": true,
-   "articles": 0
+   "articles": 2
   }
  ],
  "images": {
@@ -76,6 +76,146 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-politique-article-2026-11-12-presidentielle-2027-du-bloc-central-a-l-extreme-droit",
+   "titre": "Présidentielle 2027 : la surenchère des suppressions de postes de fonctionnaires, du bloc central à l’extrême droite",
+   "url": "https://www.lemonde.fr/politique/article/2026/11/12/presidentielle-2027-du-bloc-central-a-l-extreme-droite-la-surenchere-des-suppressions-de-postes-de-fonctionnaires_6809150_823448.html",
+   "source": "Le Monde Économie",
+   "date": "2026-11-12T18:23:31.000Z",
+   "image": "https://img.lemde.fr/2026/11/12/485/0/3000/1500/644/322/60/0/dce029f_upload-1-udeh7zjtezmo-gj3a2386.jpg",
+   "categorie": "Comptabilité & audit",
+   "score": 3
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-economie-abattement-retraites-allegements-de-charges-donations-les-propositions-",
+   "titre": "Abattement « retraités », allégements de charges, donations… Les propositions surprenantes du Sénat sur la fiscalité",
+   "url": "https://www.lefigaro.fr/economie/abattement-retraites-allegements-de-charges-donations-les-propositions-surprenantes-du-senat-sur-la-fiscalite-20261112",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-12T18:09:43.000Z",
+   "image": "https://i.f1g.fr/media/cms/2996x1686_crop/2026/11/12/7e3e22af8e29b7f47f883bf144e17cbaee415b249f37eb903b64f5d05cb34684.jpg",
+   "categorie": "Fiscalité",
+   "score": 4
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-pourquoi-le-logement-neuf-s-enfonce-un-peu-plus-dans-la-crise-202611",
+   "titre": "Pourquoi le logement neuf s’enfonce un peu plus dans la crise",
+   "url": "https://www.lefigaro.fr/conjoncture/pourquoi-le-logement-neuf-s-enfonce-un-peu-plus-dans-la-crise-20261112",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-12T18:05:00.000Z",
+   "image": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/12/8ef5519cfade8f36a597b13797a5a630fa21fba2839df3298dbdaa52fb4f95c2.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "village-de-la-justice-https-www-village-justice-com-articles-taxe-sur-les-holdings-patrimoniales-cgi-art-235-ter-impot-d",
+   "titre": "Taxe sur les holdings patrimoniales (CGI, art. 235 ter C) : un impôt de dissuasion aux confins du confiscatoire. Par Abu-Bakr Chorfi, Juriste.",
+   "url": "https://www.village-justice.com/articles/taxe-sur-les-holdings-patrimoniales-cgi-art-235-ter-impot-dissuasion-aux,59983.html?utm_source=backend&utm_medium=RSS&utm_campaign=RSS_Reseaux",
+   "source": "Village de la Justice",
+   "date": "2026-11-12T18:00:00.000Z",
+   "image": "https://www.village-justice.com/articles/local/cache-gd2/52/199b294b20134a969637e44da28b58.jpg?1794502803",
+   "categorie": "Fiscalité",
+   "score": 5
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-impots-pourquoi-les-francais-les-plus-aises-ont-ils-paye-moins-d-imp",
+   "titre": "Pourquoi les Français les plus aisés ont-ils payé moins d'impôt sur le revenu en 2025 que l'année précédente ?",
+   "url": "https://www.franceinfo.fr/economie/impots/pourquoi-les-francais-les-plus-aises-ont-ils-paye-moins-d-impot-sur-le-revenu-en-2025-que-l-annee-precedente_8279105.html#xtor=RSS-3-%5Beconomie%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-11-12T17:44:01.000Z",
+   "image": "https://www.franceinfo.fr/pictures/ONm4wTJU__0vrmrQ28n07z51wqA/0x0:1024x576/432x243/filters:format(jpg)/2026/11/12/6af598be2616d452653322.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-idees-article-2026-11-12-bruno-theret-economiste-ce-n-est-pas-le-systeme-de-protec",
+   "titre": "Bruno Théret, économiste : « Ce n’est pas le système de protection sociale qu’il faut réformer, mais notre régime fiscal »",
+   "url": "https://www.lemonde.fr/idees/article/2026/11/12/bruno-theret-economiste-ce-n-est-pas-le-systeme-de-protection-sociale-qu-il-faut-reformer-mais-notre-regime-fiscal_6809133_3232.html",
+   "source": "Le Monde Économie",
+   "date": "2026-11-12T17:00:12.000Z",
+   "image": "https://img.lemde.fr/2026/10/28/355/0/1600/800/644/322/60/0/f2f850d_upload-1-iq65bgdqec6p-hl-jcmilhet-3032192-preview.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-impots-avec-l-intelligence-artificielle-le-fisc-traque-les-abris-de-",
+   "titre": "Avec l'intelligence artificielle, le fisc traque les abris de jardin non déclarés",
+   "url": "https://www.franceinfo.fr/economie/impots/avec-l-intelligence-artificielle-le-fisc-traque-les-abris-de-jardin-non-declares_8279357.html#xtor=RSS-3-%5Beconomie%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-11-12T16:20:23.000Z",
+   "image": "https://www.franceinfo.fr/pictures/LhwgDt28MiNtAS3hMMgIEq_xoaM/0x0:1523x856/432x243/filters:format(jpg)/2026/11/12/6af5bf9586326192910887.jpg",
+   "categorie": "Fiscalité",
+   "score": 5
+  },
+  {
+   "id": "capital-https-www-capital-fr-immobilier-budget-2027-lmnp-ptz-parentalite-ce-que-la-commission-des-finances-du-senat-prop",
+   "titre": "Budget 2027 : LMNP, PTZ parentalité, ce que la commission des finances du Sénat propose de changer",
+   "url": "https://www.capital.fr/immobilier/budget-2027-lmnp-ptz-parentalite-ce-que-la-commission-des-finances-du-senat-propose-de-changer-1531797",
+   "source": "Capital",
+   "date": "2026-11-12T16:20:08.000Z",
+   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~11~12~eb7123c3-a619-4a64-8de4-47f9d177794c.jpg/1200x900/quality/80/budget-2027-lmnp-ptz-parentalite-ce-que-la-commission-des-finances-du-senat-propose-de-changer.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-medias-audiences-radio-france-inter-recule-encore-en-cette-rentree-france-info-d",
+   "titre": "Audiences radio: France Inter recule encore en cette rentrée, France Info double RTL",
+   "url": "https://www.lefigaro.fr/medias/audiences-radio-france-inter-recule-encore-en-cette-rentree-france-info-double-rtl-20261112",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-12T15:28:27.000Z",
+   "image": "https://i.f1g.fr/media/cms/orig/2026/11/12/69ee1d5c08947ac68aaa09b0a2be24ffc7738636bd49bb21a26f0301d799a40e.JPG",
+   "categorie": "Comptabilité & audit",
+   "score": 3
+  },
+  {
+   "id": "capital-https-www-capital-fr-economie-politique-budget-2027-sebastien-lecornu-veut-faire-de-lagriculture-le-terrain-du-c",
+   "titre": "Budget 2027 : Sébastien Lecornu veut faire de l’agriculture le terrain du compromis",
+   "url": "https://www.capital.fr/economie-politique/budget-2027-sebastien-lecornu-veut-faire-de-lagriculture-le-terrain-du-compromis-1531793",
+   "source": "Capital",
+   "date": "2026-11-12T13:58:56.000Z",
+   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~11~12~56a86925-2da1-49dc-97d3-78e92ae4df8c.jpg/1200x900/focus-point/2011%2C874/budget-2027-sebastien-lecornu-veut-faire-de-l-agriculture-le-terrain-du-compromis.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-impots-les-francais-aiment-leurs-services-publics-selon-jean-daniel-",
+   "titre": "Les Français aiment leurs services publics, selon Jean-Daniel Levy",
+   "url": "https://www.franceinfo.fr/economie/impots/les-francais-aiment-leurs-services-publics-selon-jean-daniel-levy_8279267.html#xtor=RSS-3-%5Beconomie%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-11-12T12:30:01.000Z",
+   "image": "https://www.franceinfo.fr/pictures/55o_NzcFkmBOMEhJUcO-xwobQDc/0x0:900x1600/fit-in/432x243/filters:upscale():fill(blur):format(jpg)/2026/11/12/6af5abbfb7e69460512463.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-la-liquidation-judiciaire-de-fibre-excellence-l-ex-numero-1-de-la-pa",
+   "titre": "La liquidation judiciaire de Fibre Excellence, l'ex-numéro un de la pâte à papier en France, définitivement entérinée",
+   "url": "https://www.franceinfo.fr/economie/la-liquidation-judiciaire-de-fibre-excellence-l-ex-numero-1-de-la-pate-a-papier-en-france-definitivement-enterinee_8278943.html#xtor=RSS-3-%5Beconomie%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-11-12T12:11:34.000Z",
+   "image": "https://www.franceinfo.fr/pictures/6M1mXU8rOhtq5KK6egiLKS73DgU/0x0:1024x576/432x243/filters:format(jpg)/2026/11/12/6af57e673e8f9022706820.jpg",
+   "categorie": "Social",
+   "score": 6
+  },
+  {
+   "id": "cnil-https-www-cnil-fr-fr-actualite-du-cepd-adequation-de-la-coree-du-sud-versions-finales-des-bcr-st-et-action-coordonn",
+   "titre": "Actualité du CEPD : adéquation de la Corée du Sud, versions finales des BCR-ST, et action coordonnée sur le recrutement via IA",
+   "url": "https://www.cnil.fr/fr/actualite-du-cepd-adequation-de-la-coree-du-sud-versions-finales-des-bcr-st-et-action-coordonnee-sur",
+   "source": "CNIL",
+   "officiel": true,
+   "date": "2026-11-12T12:00:00.000Z",
+   "categorie": "Numérique",
+   "score": 2
+  },
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-economie-article-2026-11-12-a-toulouse-la-liquidation-judiciaire-de-l-usine-de-pat",
+   "titre": "A Toulouse, la liquidation judiciaire de l’usine de pâte à papier Fibre Excellence définitivement entérinée ; 300 salariés vont être licenciés",
+   "url": "https://www.lemonde.fr/economie/article/2026/11/12/a-toulouse-la-liquidation-judiciaire-de-l-usine-de-pate-a-papier-fibre-excellence-de-saint-gaudens-definitivement-enterinee-300-salaries-vont-etre-licencies_6809080_3234.html",
+   "source": "Le Monde Économie",
+   "date": "2026-11-12T09:24:37.000Z",
+   "image": "https://img.lemde.fr/2026/11/12/1138/0/8029/4014/644/322/60/0/46e4758_upload-1-rchloyx1pmve-000-d6r47cq-1.jpg",
+   "categorie": "Social",
+   "score": 6
+  },
   {
    "id": "franceinfo-conomie-https-www-franceinfo-fr-vrai-ou-fake-vrai-ou-faux-la-tva-a-0-sur-les-produits-de-premiere-necessite-a",
    "titre": "VRAI OU FAUX. La TVA à 0% sur les produits de première nécessité a-t-elle \"fait baisser l'ensemble des prix\" en Espagne et en Pologne, comme l'affirme Sébastien Chenu ?",
@@ -736,146 +876,6 @@
    "date": "2026-11-02T11:30:21.000Z",
    "categorie": "Fiscalité",
    "score": 4
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-actualite-france-le-proces-des-dubai-papers-immense-systeme-de-fraude-fiscale-in",
-   "titre": "Le procès des «Dubaï Papers», immense système de fraude fiscale internationale, s’ouvre ce lundi à Paris",
-   "url": "https://www.lefigaro.fr/actualite-france/le-proces-des-dubai-papers-immense-systeme-de-fraude-fiscale-internationale-s-ouvre-ce-lundi-a-paris-20261102",
-   "source": "Le Figaro Économie",
-   "date": "2026-11-02T09:28:19.000Z",
-   "image": "https://i.f1g.fr/media/cms/orig/2026/11/02/2ced0c38ad6d0fbe2e5836ef0e51653a8b4f5385c0966c60e79cf52a0d8eb8aa.JPG",
-   "categorie": "Fiscalité",
-   "score": 5
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-replay-radio-le-decryptage-eco-alors-que-les-previsions-macroeconomiques-ne-t",
-   "titre": "Alors que les prévisions macroéconomiques ne tiennent plus, à quoi servent les discussions dans l'hémicycle sur le budget ?",
-   "url": "https://www.franceinfo.fr/replay-radio/le-decryptage-eco/alors-que-les-previsions-macroeconomiques-ne-tiennent-plus-a-quoi-servent-les-discussions-dans-l-hemicycle-sur-le-budget_8243353.html#xtor=RSS-3-%5Bgeneral%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-11-02T08:30:57.000Z",
-   "image": "https://www.franceinfo.fr/pictures/bZSA-2SzQRoP_sGHgmcX6KrCOXU/0x224:4300x2642/432x243/filters:format(jpg)/2026/11/02/6ae839b592907884435000.jpg",
-   "categorie": "Fiscalité",
-   "score": 4
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-secteur-high-tech-on-se-demande-comment-les-gens-ne-finissent-pas-a-la-rue-en-ca",
-   "titre": "« On se demande comment les gens ne finissent pas à la rue » : en Californie, ces naufragés de la tech qui cherchent désespérément un emploi",
-   "url": "https://www.lefigaro.fr/secteur/high-tech/on-se-demande-comment-les-gens-ne-finissent-pas-a-la-rue-en-californie-ces-naufrages-de-la-tech-qui-cherchent-desesperement-un-emploi-20261102",
-   "source": "Le Figaro Économie",
-   "date": "2026-11-02T05:30:00.000Z",
-   "image": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/01/09bfbb827e14ecc1ea59c5adaee8d1d29c0ae4fc397bdf0ca2656ae56c017a78.jpg",
-   "categorie": "Social",
-   "score": 5
-  },
-  {
-   "id": "le-monde-conomie-https-www-lemonde-fr-les-decodeurs-article-2026-11-02-dubai-papers-l-heure-du-proces-pour-une-officine-",
-   "titre": "« Dubaï Papers » : l’heure du procès pour une « officine de fraude fiscale à grande échelle »",
-   "url": "https://www.lemonde.fr/les-decodeurs/article/2026/11/02/dubai-papers-l-heure-du-proces-pour-une-officine-de-fraude-fiscale-a-grande-echelle_6804884_4355770.html",
-   "source": "Le Monde Économie",
-   "date": "2026-11-02T05:00:44.000Z",
-   "image": "https://img.lemde.fr/2025/04/10/188/0/3000/1500/644/322/60/0/aabf3d8_sirius-fs-upload-1-rtewzxvvtv9y-1744297403460-frame-12.jpg",
-   "categorie": "Profession",
-   "score": 10
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-secteur-high-tech-plans-de-departs-et-licenciements-massifs-derriere-l-annus-hor",
-   "titre": "Plans de départs et licenciements massifs : derrière l’« annus horribilis » pour l’emploi dans la tech américaine, l’ombre de l’IA",
-   "url": "https://www.lefigaro.fr/secteur/high-tech/plans-de-departs-et-licenciements-massifs-derriere-l-annus-horribilis-pour-l-emploi-dans-la-tech-americaine-l-ombre-de-l-ia-20261101",
-   "source": "Le Figaro Économie",
-   "date": "2026-11-01T17:00:00.000Z",
-   "image": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/01/57f90f6e5a76e5375af014dfa9c3d27cd3f3333345a283ce40230ff290be9066.jpg",
-   "categorie": "Social",
-   "score": 5
-  },
-  {
-   "id": "capital-https-www-capital-fr-votre-carriere-chatgpt-en-cachette-au-travail-quels-risques-pour-le-salarie-1531412",
-   "titre": "ChatGPT en cachette au travail : quels risques pour le salarié ?",
-   "url": "https://www.capital.fr/votre-carriere/chatgpt-en-cachette-au-travail-quels-risques-pour-le-salarie-1531412",
-   "source": "Capital",
-   "date": "2026-11-01T17:00:00.000Z",
-   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~10~29~cb2ee99f-1600-48fd-b389-f30e15a85072.jpg/1200x900/focus-point/1063%2C1017/chatgpt-en-cachette-au-travail-quels-risques-pour-le-salarie.jpg",
-   "categorie": "Social",
-   "score": 6
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-replay-radio-8h30-fauvelle-dely-crise-sociale-mouvement-des-lyceens-budget-20",
-   "titre": "Crise sociale, mouvement des lycéens, budget 2027... Le \"8h30 franceinfo\" de Philippe Juvin",
-   "url": "https://www.franceinfo.fr/replay-radio/8h30-fauvelle-dely/crise-sociale-mouvement-des-lyceens-budget-2027-le-8h30-franceinfo-de-philippe-juvin_8221660.html#xtor=RSS-3-%5Bgeneral%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-11-01T09:47:07.000Z",
-   "image": "https://www.franceinfo.fr/pictures/n66SE4ibvYU-KuszBsG8xC0RjOE/0x0:1600x900/432x243/filters:format(jpg)/2026/11/01/6ae70786f249a863020870.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-budget-le-budget-sera-refuse-par-le-parlement-prevoit-philippe-juvin",
-   "titre": "\"Le budget sera refusé par le Parlement\", prévoit Philippe Juvin, rapporteur général du projet de loi de finances, qui plaide pour un recours au 49.3",
-   "url": "https://www.franceinfo.fr/economie/budget/le-budget-sera-refuse-par-le-parlement-prevoit-philippe-juvin-rapporteur-general-du-projet-de-loi-de-finances-qui-plaide-pour-un-recours-au-49-3_8262554.html#xtor=RSS-3-%5Bgeneral%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-11-01T09:34:04.000Z",
-   "image": "https://www.franceinfo.fr/pictures/n66SE4ibvYU-KuszBsG8xC0RjOE/0x0:1600x900/432x243/filters:format(jpg)/2026/11/01/6ae70786f249a863020870.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "le-monde-conomie-https-www-lemonde-fr-argent-article-2026-11-01-ce-qui-change-le-1-novembre-gaz-credit-a-la-consommation",
-   "titre": "Ce qui change le 1ᵉʳ novembre : gaz, crédit à la consommation, expulsions locatives, petits colis, retraites complémentaires",
-   "url": "https://www.lemonde.fr/argent/article/2026/11/01/ce-qui-change-le-1-novembre-gaz-credit-a-la-consommation-expulsions-locatives-petits-colis-retraites-complementaires_6803973_1657007.html",
-   "source": "Le Monde Économie",
-   "date": "2026-11-01T04:00:35.000Z",
-   "image": "https://img.lemde.fr/2025/09/19/125/0/1500/750/644/322/60/0/f5e5ad5_upload-1-6kuga3xwpni1-mei-dia-25.png",
-   "categorie": "Fiscalité",
-   "score": 4
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-votre-argent-livret-a-livret-a-une-hausse-du-plafond-a-30-000-euros-",
-   "titre": "Livret A : une hausse du plafond à 30 000 euros envisagée pour financer les travaux dans les lycées",
-   "url": "https://www.franceinfo.fr/economie/votre-argent/livret-a/livret-a-une-hausse-du-plafond-a-30-000-euros-envisagee-pour-financer-les-travaux-dans-les-lycees_8262188.html#xtor=RSS-3-%5Bgeneral%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-10-31T20:10:19.000Z",
-   "image": "https://www.franceinfo.fr/pictures/LZOLQz3XUw-aWN4T6MIj2q4q1PU/0x0:1920x1080/432x243/filters:format(jpg)/2026/10/31/6ae64b22820f7315588047.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "village-de-la-justice-https-www-village-justice-com-articles-harcelement-travail-prescritpion-cas-defaut-prevention-lice",
-   "titre": "Harcèlement moral au travail : prescriptions et délais pour agir. Par M.Kebir, Avocat.",
-   "url": "https://www.village-justice.com/articles/harcelement-travail-prescritpion-cas-defaut-prevention-licenciement-nul,59676.html?utm_source=backend&utm_medium=RSS&utm_campaign=RSS_Reseaux",
-   "source": "Village de la Justice",
-   "date": "2026-10-30T16:00:00.000Z",
-   "image": "https://www.village-justice.com/articles/local/cache-gd2/25/af1913e7168d713ca34bb9f20e86d3.jpg?1792674019",
-   "categorie": "Social",
-   "score": 4
-  },
-  {
-   "id": "le-monde-conomie-https-www-lemonde-fr-politique-article-2026-10-30-budget-2027-les-deputes-votent-de-nouvelles-taxes-sur",
-   "titre": "Budget 2027 : les députés votent de nouvelles taxes sur les grandes entreprises et adoptent le « pacte Papin »",
-   "url": "https://www.lemonde.fr/politique/article/2026/10/30/budget-2027-les-deputes-votent-de-nouvelles-taxes-sur-les-grandes-entreprises-et-adoptent-le-pacte-papin_6803105_823448.html",
-   "source": "Le Monde Économie",
-   "date": "2026-10-30T15:16:42.000Z",
-   "image": "https://img.lemde.fr/2026/10/30/973/0/5833/2916/644/322/60/0/70f8815_upload-1-q5e2jjczswwe-000-d4kx72w.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "capital-https-www-capital-fr-votre-argent-avoirs-oublies-letat-veut-en-prelever-17-ce-que-les-heritiers-doivent-savoir-1",
-   "titre": "Avoirs oubliés : l’État veut en prélever 17%, ce que les héritiers doivent savoir",
-   "url": "https://www.capital.fr/votre-argent/avoirs-oublies-letat-veut-en-prelever-17-ce-que-les-heritiers-doivent-savoir-1531315",
-   "source": "Capital",
-   "date": "2026-10-30T13:00:00.000Z",
-   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~10~27~962cead8-0dc1-4a73-b356-ee41e20b6841.jpg/1200x900/quality/80/avoirs-oublies-l-etat-veut-en-prelever-17-ce-que-les-heritiers-doivent-savoir.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "village-de-la-justice-https-www-village-justice-com-articles-sci-divorce-logement-familial-pris-piege-59732-html-utm-sou",
-   "titre": "SCI à l'impôt sur les sociétés et divorce : le logement familial pris au piège. Par Aurélia Compère, Avocat.",
-   "url": "https://www.village-justice.com/articles/sci-divorce-logement-familial-pris-piege,59732.html?utm_source=backend&utm_medium=RSS&utm_campaign=RSS_Reseaux",
-   "source": "Village de la Justice",
-   "date": "2026-10-30T12:00:00.000Z",
-   "image": "https://www.village-justice.com/articles/local/cache-gd2/fa/47384586cc5a95bb3e5fa3ac79e2dc.jpg?1793358002",
-   "categorie": "Fiscalité",
-   "score": 5
   }
  ],
  "ecartes": []
