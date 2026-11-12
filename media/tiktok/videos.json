@@ -4261,5 +4261,344 @@
    }
   ],
   "accroche": "Une fusion votée en juin peut prendre effet… au 1er janvier. Et c'est légal."
+ },
+ {
+  "id": "m-valeur-ajoutee",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "segments": [
+   {
+    "voix": "Maison Cassis crée 260 000 € de richesse… et n'a que 90 000 € d'EBE. Où passe le reste ?",
+    "dit": "Maison Cassis crée deux cent soixante mille euros de richesse… et n'a que quatre-vingt-dix mille euros d'excédent brut d'exploitation. Où passe le reste ?"
+   },
+   {
+    "voix": "Valeur ajoutée : 150 000 € de marge, plus 320 000 € de production, moins 210 000 € de consommations.",
+    "titre": "Des SIG à l'EBE",
+    "rangs": [
+     {
+      "lib": "Marge commerciale",
+      "val": "150 000 €"
+     },
+     {
+      "op": "+",
+      "lib": "Production",
+      "val": "320 000 €"
+     },
+     {
+      "op": "−",
+      "lib": "Consommations des tiers",
+      "val": "210 000 €"
+     },
+     {
+      "op": "=",
+      "lib": "Valeur ajoutée",
+      "val": "260 000 €",
+      "style": "ok"
+     }
+    ],
+    "dit": "Valeur ajoutée : cent cinquante mille euros de marge, plus trois cent vingt mille euros de production, moins deux cent dix mille euros de consommations."
+   },
+   {
+    "voix": "On ajoute 10 000 € de subventions, puis on retire 12 000 € d'impôts et taxes et 168 000 € de salaires.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Valeur ajoutée",
+      "val": "260 000 €"
+     },
+     {
+      "op": "+",
+      "lib": "Subventions d'exploitation",
+      "val": "10 000 €"
+     },
+     {
+      "op": "−",
+      "lib": "Impôts et taxes",
+      "val": "12 000 €"
+     },
+     {
+      "op": "−",
+      "lib": "Charges de personnel",
+      "val": "168 000 €"
+     }
+    ],
+    "dit": "On ajoute dix mille euros de subventions, puis on retire douze mille euros d'impôts et taxes et cent soixante-huit mille euros de salaires."
+   },
+   {
+    "voix": "EBE : 90 000 €. La performance avant amortissements et financement.",
+    "rangs": [
+     {
+      "op": "=",
+      "lib": "EBE",
+      "val": "90 000 €",
+      "style": "fort"
+     }
+    ],
+    "dit": "Excédent brut d'exploitation : quatre-vingt-dix mille euros. La performance avant amortissements et financement."
+   },
+   {
+    "voix": "Le reste est allé aux salariés et à l'État.",
+    "dit": "Le reste est allé aux salariés et à l'État."
+   }
+  ],
+  "accroche": "Maison Cassis crée 260 000 € de richesse… et n'a que 90 000 € d'EBE. Où passe le reste ?"
+ },
+ {
+  "id": "m-plafond-interets",
+  "modele": "finance",
+  "tag": "Dessine-moi le M&A",
+  "segments": [
+   {
+    "voix": "Dans un LBO, la dette fait baisser l'impôt… mais pas à l'infini.",
+    "dit": "Dans un L.B.O, la dette fait baisser l'impôt… mais pas à l'infini."
+   },
+   {
+    "voix": "Levier fiscal : avec l'intégration fiscale, à 95 %, les intérêts de la holding réduisent l'impôt du groupe.",
+    "titre": "Intérêts déductibles",
+    "rangs": [
+     {
+      "lib": "Intégration fiscale",
+      "val": "95 %"
+     },
+     {
+      "lib": "Intérêts de la holding déduits",
+      "val": "✓",
+      "style": "ok"
+     }
+    ],
+    "dit": "Levier fiscal : avec l'intégration fiscale, à quatre-vingt-quinze pour cent, les intérêts de la holding réduisent l'impôt du groupe."
+   },
+   {
+    "voix": "Mais les charges financières nettes sont plafonnées : 3 M€, ou 30 % de l'EBITDA fiscal.",
+    "rangs": [
+     {
+      "lib": "Montant fixe",
+      "val": "3 M€"
+     },
+     {
+      "lib": "Part de l'EBITDA fiscal",
+      "val": "30 %"
+     }
+    ],
+    "dit": "Mais les charges financières nettes sont plafonnées : trois millions d'euros, ou trente pour cent de l'Ébitda fiscal."
+   },
+   {
+    "voix": "On retient le plus élevé des deux. Sous 3 M€ de charges nettes, ce plafond ne joue donc pas.",
+    "rangs": [
+     {
+      "op": "=",
+      "lib": "Plafond : le plus élevé des deux",
+      "val": "✓",
+      "style": "fort"
+     }
+    ],
+    "dit": "On retient le plus élevé des deux. Sous trois millions d'euros de charges nettes, ce plafond ne joue donc pas."
+   },
+   {
+    "voix": "C'est l'article 212 bis du CGI : à tester dans tout gros LBO.",
+    "dit": "C'est l'article deux cent douze bis du code général des impôts : à tester dans tout gros L.B.O."
+   }
+  ],
+  "accroche": "Dans un LBO, la dette fait baisser l'impôt… mais pas à l'infini."
+ },
+ {
+  "id": "c-ias40",
+  "modele": "finance",
+  "tag": "Dessine-moi la conso",
+  "segments": [
+   {
+    "voix": "Ton immeuble prend 50 000 € de valeur… et ton résultat aussi. Merci IAS 40.",
+    "dit": "Ton immeuble prend cinquante mille euros de valeur… et ton résultat aussi. Merci la norme I.A.S quarante."
+   },
+   {
+    "voix": "Garonne Patrimoine loue des bureaux à des entreprises : c'est un immeuble de placement.",
+    "titre": "IAS 40 · Immeuble de placement",
+    "rangs": [
+     {
+      "lib": "Détenu pour les loyers",
+      "val": "✓"
+     }
+    ],
+    "dit": "Garonne Patrimoine loue des bureaux à des entreprises : c'est un immeuble de placement."
+   },
+   {
+    "voix": "Deux modèles au choix : le coût, avec amortissement, ou la juste valeur, sans amortissement.",
+    "rangs": [
+     {
+      "lib": "Coût : amortissement",
+      "val": "✓"
+     },
+     {
+      "lib": "Juste valeur : pas d'amortissement",
+      "val": "✓",
+      "style": "ok"
+     }
+    ],
+    "dit": "Deux modèles au choix : le coût, avec amortissement, ou la juste valeur, sans amortissement."
+   },
+   {
+    "voix": "Juste valeur : de 1 000 000 € à 1 050 000 €. Les 50 000 € de hausse passent en résultat.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Juste valeur à l'ouverture",
+      "val": "1 000 000 €"
+     },
+     {
+      "lib": "Juste valeur à la clôture",
+      "val": "1 050 000 €"
+     },
+     {
+      "op": "=",
+      "lib": "Produit en résultat",
+      "val": "50 000 €",
+      "style": "fort"
+     }
+    ],
+    "dit": "Juste valeur : d'un million d'euros à un million cinquante mille euros. Les cinquante mille euros de hausse passent en résultat."
+   },
+   {
+    "voix": "Piège : les bureaux que tu occupes toi-même relèvent d'IAS 16, pas d'IAS 40.",
+    "rangs": [
+     {
+      "lib": "Bureaux occupés par la société",
+      "val": "IAS 16"
+     }
+    ],
+    "dit": "Piège : les bureaux que tu occupes toi-même relèvent d'I.A.S seize, pas d'I.A.S quarante."
+   }
+  ],
+  "accroche": "Ton immeuble prend 50 000 € de valeur… et ton résultat aussi. Merci IAS 40."
+ },
+ {
+  "id": "d-dividendes-fictifs",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "segments": [
+   {
+    "voix": "Ta boîte est en perte et tu verses quand même un dividende ? C'est un délit.",
+    "dit": "Ta boîte est en perte et tu verses quand même un dividende ? C'est un délit."
+   },
+   {
+    "voix": "Dividende fictif : versé sans bénéfice distribuable réel, sans inventaire ou avec un inventaire frauduleux.",
+    "titre": "Dividendes fictifs",
+    "rangs": [
+     {
+      "lib": "Pas de bénéfice distribuable réel",
+      "val": "✓"
+     },
+     {
+      "lib": "Inventaire absent ou frauduleux",
+      "val": "✓"
+     }
+    ],
+    "dit": "Dividende fictif : versé sans bénéfice distribuable réel, sans inventaire ou avec un inventaire frauduleux."
+   },
+   {
+    "voix": "Gonfler les stocks pour cacher la perte ? Comptes infidèles : un second délit.",
+    "rangs": [
+     {
+      "op": "+",
+      "lib": "Comptes infidèles",
+      "val": "✓",
+      "style": "fort"
+     }
+    ],
+    "dit": "Gonfler les stocks pour cacher la perte ? Comptes infidèles : un second délit."
+   },
+   {
+    "voix": "Chaque délit : 5 ans de prison et 375 000 € d'amende pour le dirigeant.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Prison",
+      "val": "5 ans"
+     },
+     {
+      "lib": "Amende",
+      "val": "375 000 €",
+      "style": "fort"
+     }
+    ],
+    "dit": "Chaque délit : cinq ans de prison et trois cent soixante-quinze mille euros d'amende pour le dirigeant."
+   },
+   {
+    "voix": "Et la société peut réclamer les dividendes aux actionnaires qui savaient, pendant 3 ans.",
+    "rangs": [
+     {
+      "lib": "Action en restitution",
+      "val": "3 ans"
+     }
+    ],
+    "dit": "Et la société peut réclamer les dividendes aux actionnaires qui savaient, pendant trois ans."
+   }
+  ],
+  "accroche": "Ta boîte est en perte et tu verses quand même un dividende ? C'est un délit."
+ },
+ {
+  "id": "m-dividende-neutre",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "segments": [
+   {
+    "voix": "Verser un dividende ne crée aucune valeur. En théorie.",
+    "dit": "Verser un dividende ne crée aucune valeur. En théorie."
+   },
+   {
+    "voix": "Modigliani et Miller : sans impôts ni coûts, le dividende ne change pas la valeur de l'entreprise.",
+    "titre": "Politique de dividende",
+    "rangs": [
+     {
+      "lib": "Sans impôts ni coûts",
+      "val": "Neutre",
+      "style": "fort"
+     }
+    ],
+    "dit": "Modigliani et Miller : sans impôts ni coûts, le dividende ne change pas la valeur de l'entreprise."
+   },
+   {
+    "voix": "En pratique, si : signal de confiance, et moins de trésorerie que les dirigeants pourraient gaspiller.",
+    "rangs": [
+     {
+      "lib": "Signal de confiance",
+      "val": "✓",
+      "style": "ok"
+     },
+     {
+      "lib": "Moins de trésorerie oisive",
+      "val": "✓",
+      "style": "ok"
+     }
+    ],
+    "dit": "En pratique, si : signal de confiance, et moins de trésorerie que les dirigeants pourraient gaspiller."
+   },
+   {
+    "voix": "Médiane Industrie a 20 M€ de trésorerie en trop. Le rachat d'actions la rend aussi, plus souplement.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Trésorerie excédentaire",
+      "val": "20 M€"
+     },
+     {
+      "lib": "Dividende ou rachat ?",
+      "val": "✓"
+     }
+    ],
+    "dit": "Médiane Industrie a vingt millions d'euros de trésorerie en trop. Le rachat d'actions la rend aussi, plus souplement."
+   },
+   {
+    "voix": "Il peut s'arrêter sans passer pour une baisse de dividende. Plafond en Bourse : 10 % du capital.",
+    "rangs": [
+     {
+      "lib": "Rachat : plafond en Bourse",
+      "val": "10 %",
+      "style": "fort"
+     }
+    ],
+    "dit": "Il peut s'arrêter sans passer pour une baisse de dividende. Plafond en Bourse : dix pour cent du capital."
+   }
+  ],
+  "accroche": "Verser un dividende ne crée aucune valeur. En théorie."
  }
 ]
