@@ -1,5 +1,5 @@
 {
- "majLe": "2026-11-11T18:00:02.858Z",
+ "majLe": "2026-11-12T06:10:50.872Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -44,7 +44,7 @@
    "nom": "Le Monde Économie",
    "url": "https://www.lemonde.fr/economie/rss_full.xml",
    "ok": true,
-   "articles": 0
+   "articles": 2
   },
   {
    "nom": "Le Figaro Économie",
@@ -56,7 +56,7 @@
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Capital",
@@ -76,6 +76,36 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-vrai-ou-fake-vrai-ou-faux-la-tva-a-0-sur-les-produits-de-premiere-necessite-a",
+   "titre": "VRAI OU FAUX. La TVA à 0% sur les produits de première nécessité a-t-elle \"fait baisser l'ensemble des prix\" en Espagne et en Pologne, comme l'affirme Sébastien Chenu ?",
+   "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-la-tva-a-0-sur-les-produits-de-premiere-necessite-a-t-elle-fait-baisser-l-ensemble-des-prix-en-espagne-et-en-pologne-comme-l-affirme-sebastien-chenu_8276051.html#xtor=RSS-3-%5Beconomie%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-11-12T05:06:47.000Z",
+   "image": "https://www.franceinfo.fr/pictures/MZ8VPf5vBUuCdIe2WJWhsWaJv0s/0x0:1024x576/432x243/filters:format(jpg)/2026/11/10/6af2f8088630d551277293.jpg",
+   "categorie": "Fiscalité",
+   "score": 4
+  },
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-idees-article-2026-11-12-credit-d-impot-recherche-pacte-dutreil-quitte-a-mettre-un",
+   "titre": "Crédit d’impôt recherche, pacte Dutreil… : « Quitte à mettre un “pognon de dingue” dans les aides publiques aux entreprises, encore faudrait-il que la collectivité en ait pour son argent »",
+   "url": "https://www.lemonde.fr/idees/article/2026/11/12/credit-d-impot-recherche-pacte-dutreil-quitte-a-mettre-un-pognon-de-dingue-dans-les-aides-publiques-aux-entreprises-encore-faudrait-il-que-la-collectivite-en-ait-pour-son-argent_6809058_3232.html",
+   "source": "Le Monde Économie",
+   "date": "2026-11-12T05:00:42.000Z",
+   "image": "https://img.lemde.fr/2026/02/25/125/0/1500/750/644/322/60/0/c4672f4_upload-1-ujmazdjtr0fc-frame-841.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-argent-article-2026-11-12-donation-d-argent-investie-dans-une-societe-quel-rapport",
+   "titre": "Donation d’argent investie dans une société : quel rapport à la succession ?",
+   "url": "https://www.lemonde.fr/argent/article/2026/11/12/donation-d-argent-investie-dans-une-societe-quel-rapport-a-la-succession_6809054_1657007.html",
+   "source": "Le Monde Économie",
+   "date": "2026-11-12T05:00:28.000Z",
+   "image": "https://img.lemde.fr/2023/05/03/97/0/3000/1500/644/322/60/0/d01e012_1683120111391-lmargent9.jpg",
+   "categorie": "Fiscalité",
+   "score": 5
+  },
   {
    "id": "le-monde-conomie-https-www-lemonde-fr-argent-article-2026-11-11-la-facture-electronique-le-premier-pas-vers-une-comptabi",
    "titre": "La facture électronique, le premier pas vers une comptabilité optimisée",
@@ -846,36 +876,6 @@
    "image": "https://www.village-justice.com/articles/local/cache-gd2/fa/47384586cc5a95bb3e5fa3ac79e2dc.jpg?1793358002",
    "categorie": "Fiscalité",
    "score": 5
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-replay-radio-le-brief-eco-l-etat-veut-augmenter-le-plafond-du-livret-a-pour-f",
-   "titre": "L'État veut augmenter le plafond du Livret A pour financer la rénovation des lycées",
-   "url": "https://www.franceinfo.fr/replay-radio/le-brief-eco/l-etat-veut-augmenter-le-plafond-du-livret-a-pour-financer-la-renovation-des-lycees_8239492.html#xtor=RSS-3-%5Bgeneral%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-10-30T07:44:47.000Z",
-   "image": "https://www.franceinfo.fr/pictures/iDbG_gu4gM92jfsyHnPwBcIrmfo/0x47:5007x2864/432x243/filters:format(jpg)/2023/08/01/64c8ad5643c51_000-par8254513.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-politique-budget-2027-il-faut-savoir-prendre-des-risques-estime-michel-barnie",
-   "titre": "Budget 2027 : \"Il faut savoir prendre des risques\", estime Michel Barnier qui plaide pour un 49.3 du Premier ministre Sébastien Lecornu",
-   "url": "https://www.franceinfo.fr/politique/budget-2027-il-faut-savoir-prendre-des-risques-estime-michel-barnier-qui-plaide-pour-un-49-3-du-premier-ministre-sebastien-lecornu_8260058.html#xtor=RSS-3-%5Bgeneral%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-10-30T07:43:33.000Z",
-   "image": "https://www.franceinfo.fr/pictures/Lu8srvaDFMWuQni6x4umKX69e7k/0x0:1920x1080/432x243/filters:format(jpg)/2026/10/30/6ae44a9a5c6dd501842750.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-budget-2027-les-deputes-votent-28-milliards-d-euros-de-depenses-supp",
-   "titre": "Budget 2027 : les députés votent 28 milliards d’euros de dépenses supplémentaires",
-   "url": "https://www.lefigaro.fr/conjoncture/budget-2027-les-deputes-votent-28-milliards-d-euros-de-depenses-supplementaires-20261029",
-   "source": "Le Figaro Économie",
-   "date": "2026-10-29T18:15:00.000Z",
-   "image": "https://i.f1g.fr/media/cms/3000x1687_crop/2026/10/29/d1b1576e7fc304d548c2f8fee4cb1db251b07e889b25dbb51d6117ca74c389ac.jpg",
-   "categorie": "Fiscalité",
-   "score": 4
   }
  ],
  "ecartes": []
