@@ -4600,5 +4600,333 @@
    }
   ],
   "accroche": "Verser un dividende ne crée aucune valeur. En théorie."
+ },
+ {
+  "id": "m-flux-disponible",
+  "modele": "finance",
+  "tag": "Dessine-moi le M&A",
+  "segments": [
+   {
+    "voix": "500 k€ de bénéfice… et seulement 100 k€ de cash vraiment disponible.",
+    "dit": "Cinq cent mille euros de bénéfice… et seulement cent mille euros de cash vraiment disponible."
+   },
+   {
+    "voix": "Résultat net, 500 k€. On ajoute 300 k€ d'amortissements, on retire 100 k€ de hausse du BFR.",
+    "titre": "Flux de trésorerie disponible",
+    "rangs": [
+     {
+      "lib": "Résultat net",
+      "val": "500 k€"
+     },
+     {
+      "op": "+",
+      "lib": "Amortissements",
+      "val": "300 k€"
+     },
+     {
+      "op": "−",
+      "lib": "Hausse du BFR",
+      "val": "100 k€"
+     }
+    ],
+    "dit": "Résultat net, cinq cent mille euros. On ajoute trois cent mille euros d'amortissements, on retire cent mille euros de hausse du besoin en fonds de roulement."
+   },
+   {
+    "voix": "Flux d'activité : 700 k€. Moins 600 k€ d'investissements : flux disponible, 100 k€.",
+    "rangs": [
+     {
+      "op": "=",
+      "lib": "Flux d'activité",
+      "val": "700 k€"
+     },
+     {
+      "op": "−",
+      "lib": "Investissements",
+      "val": "600 k€"
+     },
+     {
+      "op": "=",
+      "lib": "Flux disponible",
+      "val": "100 k€",
+      "style": "fort"
+     }
+    ],
+    "dit": "Flux d'activité : sept cent mille euros. Moins six cent mille euros d'investissements : flux disponible, cent mille euros."
+   },
+   {
+    "voix": "En M&A, c'est ce flux qu'on actualise au CMPC dans un DCF.",
+    "dit": "En fusions-acquisitions, c'est ce flux qu'on actualise au coût moyen pondéré du capital dans un D.C.F."
+   },
+   {
+    "voix": "Le piège : ajouter la hausse du BFR au lieu de la retrancher.",
+    "dit": "Le piège : ajouter la hausse du besoin en fonds de roulement au lieu de la retrancher."
+   }
+  ],
+  "accroche": "500 k€ de bénéfice… et seulement 100 k€ de cash vraiment disponible."
+ },
+ {
+  "id": "m-caf-soustractive",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "segments": [
+   {
+    "voix": "Ta CAF se calcule sans même connaître ton résultat net.",
+    "dit": "Ta capacité d'autofinancement se calcule sans même connaître ton résultat net."
+   },
+   {
+    "voix": "Méthode soustractive : on part de l'EBE de Maison Cassis, 90 000 €, plus 2 000 € de produits encaissables, moins 1 000 € de charges décaissables.",
+    "titre": "CAF soustractive",
+    "rangs": [
+     {
+      "lib": "EBE",
+      "val": "90 000 €"
+     },
+     {
+      "op": "+",
+      "lib": "Autres produits encaissables",
+      "val": "2 000 €"
+     },
+     {
+      "op": "−",
+      "lib": "Autres charges décaissables",
+      "val": "1 000 €"
+     }
+    ],
+    "dit": "Méthode soustractive : on part de l'excédent brut d'exploitation de Maison Cassis, quatre-vingt-dix mille euros, plus deux mille euros de produits encaissables, moins mille euros de charges décaissables."
+   },
+   {
+    "voix": "Puis on retire 6 000 € de financier décaissable et 15 000 € d'impôt.",
+    "rangs": [
+     {
+      "op": "−",
+      "lib": "Financier décaissable",
+      "val": "6 000 €"
+     },
+     {
+      "op": "−",
+      "lib": "Impôt sur les sociétés",
+      "val": "15 000 €"
+     },
+     {
+      "op": "=",
+      "lib": "CAF",
+      "val": "70 000 €",
+      "style": "fort"
+     }
+    ],
+    "dit": "Puis on retire six mille euros de financier décaissable et quinze mille euros d'impôt."
+   },
+   {
+    "voix": "CAF : 70 000 €, comme avec la méthode additive, qui part du résultat net.",
+    "dit": "Capacité d'autofinancement : soixante-dix mille euros, comme avec la méthode additive, qui part du résultat net."
+   },
+   {
+    "voix": "À l'examen, si les deux méthodes divergent, tu as une erreur quelque part.",
+    "dit": "À l'examen, si les deux méthodes divergent, tu as une erreur quelque part."
+   }
+  ],
+  "accroche": "Ta CAF se calcule sans même connaître ton résultat net."
+ },
+ {
+  "id": "c-plus-value-interne",
+  "modele": "finance",
+  "tag": "Dessine-moi la conso",
+  "segments": [
+   {
+    "voix": "Vendre un terrain à ta filiale avec 60 000 € de plus-value ? Pour le groupe, elle n'existe pas.",
+    "dit": "Vendre un terrain à ta filiale avec soixante mille euros de plus-value ? Pour le groupe, elle n'existe pas."
+   },
+   {
+    "voix": "Bourgogne Bois cède à sa filiale un terrain de 100 000 € pour 160 000 €.",
+    "titre": "Cession interne",
+    "rangs": [
+     {
+      "lib": "Prix de cession",
+      "val": "160 000 €"
+     },
+     {
+      "op": "−",
+      "lib": "Valeur comptable",
+      "val": "100 000 €"
+     },
+     {
+      "op": "=",
+      "lib": "Plus-value interne",
+      "val": "60 000 €",
+      "style": "fort"
+     }
+    ],
+    "dit": "Bourgogne Bois cède à sa filiale un terrain de cent mille euros pour cent soixante mille euros."
+   },
+   {
+    "voix": "En consolidation, on l'élimine, et on constate 15 000 € d'impôt différé actif.",
+    "efface": true,
+    "rangs": [
+     {
+      "op": "−",
+      "lib": "Plus-value éliminée",
+      "val": "60 000 €"
+     },
+     {
+      "op": "+",
+      "lib": "Impôt différé actif",
+      "val": "15 000 €"
+     }
+    ],
+    "dit": "En consolidation, on l'élimine, et on constate quinze mille euros d'impôt différé actif."
+   },
+   {
+    "voix": "Effet net sur le résultat : − 45 000 €. Le terrain revient à 100 000 €.",
+    "rangs": [
+     {
+      "op": "=",
+      "lib": "Effet net sur le résultat",
+      "val": "− 45 000 €",
+      "style": "ok"
+     }
+    ],
+    "dit": "Effet net sur le résultat : moins quarante-cinq mille euros. Le terrain revient à cent mille euros."
+   },
+   {
+    "voix": "La plus-value réapparaîtra quand le terrain sera vendu hors du groupe.",
+    "dit": "La plus-value réapparaîtra quand le terrain sera vendu hors du groupe."
+   }
+  ],
+  "accroche": "Vendre un terrain à ta filiale avec 60 000 € de plus-value ? Pour le groupe, elle n'existe pas."
+ },
+ {
+  "id": "d-pacte-associes",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "segments": [
+   {
+    "voix": "Ton associé vend ses parts en violant le pacte ? La vente reste en principe valable.",
+    "dit": "Ton associé vend ses parts en violant le pacte ? La vente reste en principe valable."
+   },
+   {
+    "voix": "Le pacte est un contrat hors statuts, confidentiel, qui n'engage que ses signataires.",
+    "titre": "Pacte d'associés",
+    "rangs": [
+     {
+      "lib": "Hors statuts",
+      "val": "✓"
+     },
+     {
+      "lib": "Confidentiel",
+      "val": "✓"
+     },
+     {
+      "lib": "N'engage que les signataires",
+      "val": "✓"
+     }
+    ],
+    "dit": "Le pacte est un contrat hors statuts, confidentiel, qui n'engage que ses signataires."
+   },
+   {
+    "voix": "Clauses classiques : préemption, sortie conjointe, sortie forcée.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Préemption",
+      "val": "✓"
+     },
+     {
+      "lib": "Sortie conjointe",
+      "val": "✓"
+     },
+     {
+      "lib": "Sortie forcée",
+      "val": "✓"
+     }
+    ],
+    "dit": "Clauses classiques : préemption, sortie conjointe, sortie forcée."
+   },
+   {
+    "voix": "Violé, il ne donne en principe que des dommages et intérêts. Une clause des statuts de SAS violée : cession nulle.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Pacte violé : indemnité",
+      "val": "✓"
+     },
+     {
+      "lib": "Statuts de SAS violés : nullité",
+      "val": "✓",
+      "style": "fort"
+     }
+    ],
+    "dit": "Violé, il ne donne en principe que des dommages et intérêts. Une clause des statuts de S.A.S violée : cession nulle."
+   },
+   {
+    "voix": "Ce qui doit s'imposer à tous va donc dans les statuts.",
+    "dit": "Ce qui doit s'imposer à tous va donc dans les statuts."
+   }
+  ],
+  "accroche": "Ton associé vend ses parts en violant le pacte ? La vente reste en principe valable."
+ },
+ {
+  "id": "d-delit-initie",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "segments": [
+   {
+    "voix": "Vendre tes propres actions peut te coûter 100 M€ d'amende.",
+    "dit": "Vendre tes propres actions peut te coûter cent millions d'euros d'amende."
+   },
+   {
+    "voix": "Le dirigeant de Medicor vend ses actions la veille de l'annonce d'un essai clinique raté.",
+    "titre": "Délit d'initié",
+    "rangs": [
+     {
+      "lib": "Vente la veille de l'annonce",
+      "val": "✓"
+     }
+    ],
+    "dit": "Le dirigeant de Medicor vend ses actions la veille de l'annonce d'un essai clinique raté."
+   },
+   {
+    "voix": "Information privilégiée : précise, non publique, et susceptible d'influencer sensiblement le cours.",
+    "rangs": [
+     {
+      "lib": "Précise",
+      "val": "✓"
+     },
+     {
+      "lib": "Non publique",
+      "val": "✓"
+     },
+     {
+      "lib": "Influence sensible sur le cours",
+      "val": "✓"
+     }
+    ],
+    "dit": "Information privilégiée : précise, non publique, et susceptible d'influencer sensiblement le cours."
+   },
+   {
+    "voix": "Délit d'initié : 5 ans de prison et 100 M€ d'amende, portée jusqu'à 10 fois le profit.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Prison",
+      "val": "5 ans"
+     },
+     {
+      "lib": "Amende",
+      "val": "100 M€",
+      "style": "fort"
+     },
+     {
+      "lib": "Ou jusqu'à",
+      "val": "10 × profit"
+     }
+    ],
+    "dit": "Délit d'initié : cinq ans de prison et cent millions d'euros d'amende, portée jusqu'à dix fois le profit."
+   },
+   {
+    "voix": "L'AMF peut aussi sanctionner, mais jamais en plus du pénal pour la même personne.",
+    "dit": "L'A.M.F peut aussi sanctionner, mais jamais en plus du pénal pour la même personne."
+   }
+  ],
+  "accroche": "Vendre tes propres actions peut te coûter 100 M€ d'amende."
  }
 ]
