@@ -1,5 +1,5 @@
 {
- "majLe": "2026-11-12T18:54:02.385Z",
+ "majLe": "2026-11-13T13:04:58.598Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -22,7 +22,7 @@
    "nom": "Village de la Justice",
    "url": "https://www.village-justice.com/articles/spip.php?page=backend",
    "ok": true,
-   "articles": 1
+   "articles": 2
   },
   {
    "nom": "Le Monde du Droit",
@@ -38,31 +38,31 @@
    "nom": "CNIL",
    "url": "https://www.cnil.fr/fr/rss.xml",
    "ok": true,
-   "articles": 2
+   "articles": 1
   },
   {
    "nom": "Le Monde Économie",
    "url": "https://www.lemonde.fr/economie/rss_full.xml",
    "ok": true,
-   "articles": 3
+   "articles": 0
   },
   {
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 3
+   "articles": 0
   },
   {
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 4
+   "articles": 0
   },
   {
    "nom": "Capital",
    "url": "https://feed.prismamediadigital.com/v1/cap/rss?sources=capital",
    "ok": true,
-   "articles": 2
+   "articles": 0
   }
  ],
  "images": {
@@ -76,6 +76,26 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "village-de-la-justice-https-www-village-justice-com-articles-delimitation-des-champs-competence-respectifs-des-juges-pru",
+   "titre": "La délimitation des champs de compétence respectifs des juges prud'homaux et des magistrats de la Sécurité sociale. Par Anne-Sophie Demilly, Avocat.",
+   "url": "https://www.village-justice.com/articles/delimitation-des-champs-competence-respectifs-des-juges-prud-homaux-des,60008.html?utm_source=backend&utm_medium=RSS&utm_campaign=RSS_Reseaux",
+   "source": "Village de la Justice",
+   "date": "2026-11-13T14:00:00.000Z",
+   "image": "https://www.village-justice.com/articles/local/cache-gd2/48/7f3abe86d0ac40633502dfaba9064e.jpg?1794574802",
+   "categorie": "Social",
+   "score": 4
+  },
+  {
+   "id": "village-de-la-justice-https-www-village-justice-com-articles-lettre-recommandee-non-retiree-quels-effets-juridiques-5989",
+   "titre": "Lettre recommandée non retirée : quels effets juridiques ?",
+   "url": "https://www.village-justice.com/articles/lettre-recommandee-non-retiree-quels-effets-juridiques,59894.html?utm_source=backend&utm_medium=RSS&utm_campaign=RSS_Reseaux",
+   "source": "Village de la Justice",
+   "date": "2026-11-13T13:00:00.000Z",
+   "image": "https://www.village-justice.com/articles/local/cache-gd2/70/c9e43fb1b22f2909c90bf2df41ed83.png?1794571203",
+   "categorie": "Social",
+   "score": 3
+  },
   {
    "id": "le-monde-conomie-https-www-lemonde-fr-politique-article-2026-11-12-presidentielle-2027-du-bloc-central-a-l-extreme-droit",
    "titre": "Présidentielle 2027 : la surenchère des suppressions de postes de fonctionnaires, du bloc central à l’extrême droite",
@@ -856,26 +876,6 @@
    "image": "https://i.f1g.fr/media/cms/2850x1604_crop/2026/11/02/ab33b0d9429e1bc52ef41cb04d4a47af4e047e8c8b0aaa68f43e6e6e8b2e425e.jpg",
    "categorie": "Fiscalité",
    "score": 3
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-secteur-high-tech-anthropic-a-realise-un-chiffre-d-affaires-de-17-milliards-de-d",
-   "titre": "Anthropic a réalisé un chiffre d'affaires de 17 milliards de dollars au troisième trimestre, en hausse de 46%",
-   "url": "https://www.lefigaro.fr/secteur/high-tech/anthropic-a-realise-un-chiffre-d-affaires-de-17-milliards-de-dollars-au-troisieme-trimestre-en-hausse-de-46-20261102",
-   "source": "Le Figaro Économie",
-   "date": "2026-11-02T15:44:04.000Z",
-   "image": "https://i.f1g.fr/media/cms/orig/2026/11/02/dbf195e9dfedf168117c105be842a3cac88d0c07fc1e9a487bca273452c48d39.JPG",
-   "categorie": "Comptabilité & audit",
-   "score": 5
-  },
-  {
-   "id": "economie-gouv-fr-https-www-economie-gouv-fr-particuliers-mes-droits-conso-bien-consommer-taxes-sur-les-petits-colis-comm",
-   "titre": "Taxes sur les petits colis : comment ça marche ?",
-   "url": "https://www.economie.gouv.fr/particuliers/mes-droits-conso/bien-consommer/taxes-sur-les-petits-colis-comment-ca-marche",
-   "source": "economie.gouv.fr",
-   "officiel": true,
-   "date": "2026-11-02T11:30:21.000Z",
-   "categorie": "Fiscalité",
-   "score": 4
   }
  ],
  "ecartes": []
