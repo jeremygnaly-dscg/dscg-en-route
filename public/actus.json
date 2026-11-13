@@ -1,5 +1,5 @@
 {
- "majLe": "2026-11-13T13:04:58.598Z",
+ "majLe": "2026-11-13T22:35:58.513Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -50,7 +50,7 @@
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "franceinfo Économie",
@@ -62,7 +62,7 @@
    "nom": "Capital",
    "url": "https://feed.prismamediadigital.com/v1/cap/rss?sources=capital",
    "ok": true,
-   "articles": 0
+   "articles": 1
   }
  ],
  "images": {
@@ -76,6 +76,46 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-c-est-du-gachis-accable-par-la-taxe-sur-les-petits-colis-l-aeroport-",
+   "titre": "«C’est du gâchis» : accablé par la taxe sur les petits colis, l’aéroport Paris-Vatry pourrait cesser ses activités",
+   "url": "https://www.lefigaro.fr/conjoncture/c-est-du-gachis-accable-par-la-taxe-sur-les-petits-colis-l-aeroport-paris-vatry-pourrait-cesser-ses-activites-20261113",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-13T20:22:24.000Z",
+   "image": "https://i.f1g.fr/media/cms/3000x1836_crop/2026/11/13/bd6e5091cc6efe59263f67c2d74142af1dbaf65026f69d14fb00cdfdda306108.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "capital-https-www-capital-fr-economie-politique-made-in-france-ce-que-proposent-les-candidats-a-la-presidentielle-2027-1",
+   "titre": "Made in France : ce que proposent les candidats à la présidentielle 2027",
+   "url": "https://www.capital.fr/economie-politique/made-in-france-ce-que-proposent-les-candidats-a-la-presidentielle-2027-1531835",
+   "source": "Capital",
+   "date": "2026-11-13T17:21:34.000Z",
+   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~11~13~b149ac22-8953-40bb-8a67-948162c1238f.jpg/1200x900/focus-point/867%2C350/made-in-france-ce-que-proposent-les-candidats-a-la-presidentielle-2027.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "village-de-la-justice-https-www-village-justice-com-articles-sortie-gta-employeur-peut-refuser-conge-contester-arret-com",
+   "titre": "Sortie de GTA VI : l'employeur peut-il refuser le congé, contester l'arrêt de complaisance et sanctionner l'absence ? Par Arnaud Sirven, Avocat.",
+   "url": "https://www.village-justice.com/articles/sortie-gta-employeur-peut-refuser-conge-contester-arret-complaisance,60034.html?utm_source=backend&utm_medium=RSS&utm_campaign=RSS_Reseaux",
+   "source": "Village de la Justice",
+   "date": "2026-11-13T16:45:00.000Z",
+   "image": "https://www.village-justice.com/articles/local/cache-gd2/aa/da20b5b815b7501e5f240872d95171.png?1791978743",
+   "categorie": "Profession",
+   "score": 5
+  },
+  {
+   "id": "village-de-la-justice-https-www-village-justice-com-articles-enregistrement-des-reunions-transcription-epreuve-rgpd-act-",
+   "titre": "Enregistrement des réunions et IA de transcription à l'épreuve du RGPD et de l'AI Act. Par Jérémie Terral.",
+   "url": "https://www.village-justice.com/articles/enregistrement-des-reunions-transcription-epreuve-rgpd-act,59971.html?utm_source=backend&utm_medium=RSS&utm_campaign=RSS_Reseaux",
+   "source": "Village de la Justice",
+   "date": "2026-11-13T15:00:00.000Z",
+   "image": "https://www.village-justice.com/articles/local/cache-gd2/0d/0a2ccf2d5ee51e23edc125d20b3532.jpg?1794492713",
+   "categorie": "Social",
+   "score": 5
+  },
   {
    "id": "village-de-la-justice-https-www-village-justice-com-articles-delimitation-des-champs-competence-respectifs-des-juges-pru",
    "titre": "La délimitation des champs de compétence respectifs des juges prud'homaux et des magistrats de la Sécurité sociale. Par Anne-Sophie Demilly, Avocat.",
@@ -834,46 +874,6 @@
    "source": "franceinfo Économie",
    "date": "2026-11-02T17:31:35.000Z",
    "image": "https://www.franceinfo.fr/pictures/8BAB-6bwmukl096YClRxpK5sKEY/0x4:1024x580/432x243/filters:format(jpg)/2026/11/02/6ae8c68c403d8133393429.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "le-monde-conomie-https-www-lemonde-fr-economie-article-2026-11-02-amelie-nothomb-quitterait-albin-michel-pour-gallimard-",
-   "titre": "Amélie Nothomb quitterait Albin Michel pour Gallimard",
-   "url": "https://www.lemonde.fr/economie/article/2026/11/02/amelie-nothomb-quitterait-albin-michel-pour-gallimard_6805298_3234.html",
-   "source": "Le Monde Économie",
-   "date": "2026-11-02T17:13:07.000Z",
-   "image": "https://img.lemde.fr/2026/11/02/493/0/3143/1571/644/322/60/0/b3e1d89_upload-1-no6liciwnkm6-000-993q9pd.jpg",
-   "categorie": "Social",
-   "score": 3
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-conso-cognac-l-assemblee-vote-un-soulagement-specifique-de-tva-avec-l-appui-du-g",
-   "titre": "Cognac : l'Assemblée vote un soulagement spécifique de TVA, avec l’appui du gouvernement",
-   "url": "https://www.lefigaro.fr/conso/cognac-l-assemblee-vote-un-soulagement-specifique-de-tva-avec-l-appui-du-gouvernement-20261102",
-   "source": "Le Figaro Économie",
-   "date": "2026-11-02T17:11:39.000Z",
-   "image": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/02/1619036d022a32ac6d7126d343ad3eb80ea617fbd4f5119cb5410e37de768852.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "le-monde-conomie-https-www-lemonde-fr-economie-article-2026-11-02-baisse-des-prix-du-gazole-emmanuel-macron-se-felicite-",
-   "titre": "Baisse des prix du gazole : Emmanuel Macron se félicite de « solutions concrètes qui portent leurs fruits », « sans toucher aux taxes »",
-   "url": "https://www.lemonde.fr/economie/article/2026/11/02/baisse-des-prix-du-gazole-emmanuel-macron-se-felicite-de-solutions-concretes-qui-portent-leurs-fruits-sans-toucher-aux-taxes_6805242_3235.html",
-   "source": "Le Monde Économie",
-   "date": "2026-11-02T17:05:03.000Z",
-   "image": "https://img.lemde.fr/2026/11/02/502/0/6000/3000/644/322/60/0/eab8430_upload-1-8s2ppcs03hbn-000-c9698a6.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-medias-budget-2027-les-deputes-ecartent-la-hausse-de-tva-pour-canal-20261102",
-   "titre": "Budget 2027 : les députés écartent la hausse de TVA pour Canal+",
-   "url": "https://www.lefigaro.fr/medias/budget-2027-les-deputes-ecartent-la-hausse-de-tva-pour-canal-20261102",
-   "source": "Le Figaro Économie",
-   "date": "2026-11-02T16:54:44.000Z",
-   "image": "https://i.f1g.fr/media/cms/2850x1604_crop/2026/11/02/ab33b0d9429e1bc52ef41cb04d4a47af4e047e8c8b0aaa68f43e6e6e8b2e425e.jpg",
    "categorie": "Fiscalité",
    "score": 3
   }
