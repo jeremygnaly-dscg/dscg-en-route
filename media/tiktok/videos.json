@@ -4928,5 +4928,323 @@
    }
   ],
   "accroche": "Vendre tes propres actions peut te coûter 100 M€ d'amende."
+ },
+ {
+  "id": "m-roce-roe",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "segments": [
+   {
+    "voix": "Ton usine rapporte 9 %… tes actionnaires, 12,5 %. D'où vient l'écart ?",
+    "dit": "Ton usine rapporte neuf pour cent… tes actionnaires, douze virgule cinq pour cent. D'où vient l'écart ?"
+   },
+   {
+    "voix": "Lorraine Composites : 900 k€ de résultat d'exploitation après impôt, pour 10 M€ de capitaux employés.",
+    "titre": "ROCE et ROE",
+    "rangs": [
+     {
+      "lib": "Résultat d'exploitation après impôt",
+      "val": "900 k€"
+     },
+     {
+      "op": "÷",
+      "lib": "Capitaux employés",
+      "val": "10 M€"
+     },
+     {
+      "op": "=",
+      "lib": "ROCE",
+      "val": "9 %",
+      "style": "fort"
+     }
+    ],
+    "dit": "Lorraine Composites : neuf cent mille euros de résultat d'exploitation après impôt, pour dix millions d'euros de capitaux employés."
+   },
+   {
+    "voix": "La dette, 4 M€ à 5 %, coûte 200 k€. Résultat net : 750 k€, pour 6 M€ de capitaux propres.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Résultat net",
+      "val": "750 k€"
+     },
+     {
+      "op": "÷",
+      "lib": "Capitaux propres",
+      "val": "6 M€"
+     },
+     {
+      "op": "=",
+      "lib": "ROE",
+      "val": "12,5 %",
+      "style": "ok"
+     }
+    ],
+    "dit": "La dette, quatre millions d'euros à cinq pour cent, coûte deux cent mille euros. Résultat net : sept cent cinquante mille euros, pour six millions d'euros de capitaux propres."
+   },
+   {
+    "voix": "L'outil rapporte 9 %, la dette coûte 3,75 % après impôt : l'écart va aux actionnaires.",
+    "dit": "L'outil rapporte neuf pour cent, la dette coûte trois virgule soixante-quinze pour cent après impôt : l'écart va aux actionnaires."
+   },
+   {
+    "voix": "C'est l'effet de levier. Piège : comparer au coût de la dette avant impôt.",
+    "dit": "C'est l'effet de levier. Piège : comparer au coût de la dette avant impôt."
+   }
+  ],
+  "accroche": "Ton usine rapporte 9 %… tes actionnaires, 12,5 %. D'où vient l'écart ?"
+ },
+ {
+  "id": "m-delai-recuperation",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "segments": [
+   {
+    "voix": "Ton investissement est remboursé en 3 ans et 4 mois. Ça ne prouve pas qu'il est rentable.",
+    "dit": "Ton investissement est remboursé en trois ans et quatre mois. Ça ne prouve pas qu'il est rentable."
+   },
+   {
+    "voix": "Volcania investit 100 000 € pour 30 000 € par an pendant 5 ans : délai de 3,33 ans.",
+    "titre": "Délai de récupération",
+    "rangs": [
+     {
+      "lib": "Investissement",
+      "val": "100 000 €"
+     },
+     {
+      "op": "÷",
+      "lib": "Flux annuel",
+      "val": "30 000 €"
+     },
+     {
+      "op": "=",
+      "lib": "Délai, en années",
+      "val": "3,33",
+      "style": "fort"
+     }
+    ],
+    "dit": "Volcania investit cent mille euros pour trente mille euros par an pendant cinq ans : délai de trois virgule trente-trois ans."
+   },
+   {
+    "voix": "Mais sans actualisation : il dit quand tu récupères ta mise, pas ce que tu gagnes.",
+    "dit": "Mais sans actualisation : il dit quand tu récupères ta mise, pas ce que tu gagnes."
+   },
+   {
+    "voix": "Côté rentabilité, l'indice de profitabilité : 119 781 € actualisés à 8 %, sur 100 000 €, soit 1,20.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Flux actualisés à 8 %",
+      "val": "119 781 €"
+     },
+     {
+      "op": "÷",
+      "lib": "Investissement",
+      "val": "100 000 €"
+     },
+     {
+      "op": "=",
+      "lib": "Indice de profitabilité",
+      "val": "1,20",
+      "style": "ok"
+     }
+    ],
+    "dit": "Côté rentabilité, l'indice de profitabilité : cent dix-neuf mille sept cent quatre-vingt-un euros actualisés à huit pour cent, sur cent mille euros, soit un virgule vingt."
+   },
+   {
+    "voix": "Au-dessus de 1, le projet crée de la valeur. Utile quand le capital est rationné.",
+    "dit": "Au-dessus de un, le projet crée de la valeur. Utile quand le capital est rationné."
+   }
+  ],
+  "accroche": "Ton investissement est remboursé en 3 ans et 4 mois. Ça ne prouve pas qu'il est rentable."
+ },
+ {
+  "id": "c-credit-bail-conso",
+  "modele": "finance",
+  "tag": "Dessine-moi la conso",
+  "segments": [
+   {
+    "voix": "Ta filiale loue sa machine en crédit-bail… et pour le groupe, elle l'a achetée.",
+    "dit": "Ta filiale loue sa machine en crédit-bail… et pour le groupe, elle l'a achetée."
+   },
+   {
+    "voix": "Loire Industrie : en consolidation, sa machine de 100 000 € passe à l'actif, avec un emprunt en face.",
+    "titre": "Retraiter le crédit-bail",
+    "rangs": [
+     {
+      "lib": "Machine à l'actif",
+      "val": "100 000 €"
+     },
+     {
+      "lib": "Emprunt au passif",
+      "val": "100 000 €"
+     }
+    ],
+    "dit": "Loire Industrie : en consolidation, sa machine de cent mille euros passe à l'actif, avec un emprunt en face."
+   },
+   {
+    "voix": "La redevance de 25 046 € disparaît : 8 000 € d'intérêts et 17 046 € de remboursement.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Redevance annulée",
+      "val": "25 046 €"
+     },
+     {
+      "op": "=",
+      "lib": "Intérêts à 8 %",
+      "val": "8 000 €"
+     },
+     {
+      "op": "+",
+      "lib": "Remboursement",
+      "val": "17 046 €"
+     }
+    ],
+    "dit": "La redevance de vingt-cinq mille quarante-six euros disparaît : huit mille euros d'intérêts et dix-sept mille quarante-six euros de remboursement."
+   },
+   {
+    "voix": "Plus 20 000 € d'amortissement : les charges passent à 28 000 €, avec un impôt différé.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Intérêts",
+      "val": "8 000 €"
+     },
+     {
+      "op": "+",
+      "lib": "Amortissement",
+      "val": "20 000 €"
+     },
+     {
+      "op": "=",
+      "lib": "Charges consolidées",
+      "val": "28 000 €",
+      "style": "fort"
+     }
+    ],
+    "dit": "Plus vingt mille euros d'amortissement : les charges passent à vingt-huit mille euros, avec un impôt différé."
+   },
+   {
+    "voix": "Retraitement obligatoire en consolidation : la réalité économique prime.",
+    "dit": "Retraitement obligatoire en consolidation : la réalité économique prime."
+   }
+  ],
+  "accroche": "Ta filiale loue sa machine en crédit-bail… et pour le groupe, elle l'a achetée."
+ },
+ {
+  "id": "d-apport-onereux",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "segments": [
+   {
+    "voix": "Apporter ton immeuble à ta société peut être taxé… comme une vente.",
+    "dit": "Apporter ton immeuble à ta société peut être taxé… comme une vente."
+   },
+   {
+    "voix": "L'apport pur est payé en parts sociales. À la constitution : aucun droit d'enregistrement.",
+    "titre": "Fiscalité des apports",
+    "rangs": [
+     {
+      "lib": "Apport pur, constitution",
+      "val": "0 €",
+      "style": "ok"
+     }
+    ],
+    "dit": "L'apport pur est payé en parts sociales. À la constitution : aucun droit d'enregistrement."
+   },
+   {
+    "voix": "En augmentation de capital : droit fixe de 375 €, ou 500 € si le capital atteint 225 000 €.",
+    "rangs": [
+     {
+      "lib": "Augmentation de capital",
+      "val": "375 €"
+     },
+     {
+      "lib": "Capital ≥ 225 000 €",
+      "val": "500 €"
+     }
+    ],
+    "dit": "En augmentation de capital : droit fixe de trois cent soixante-quinze euros, ou cinq cents euros si le capital atteint deux cent vingt-cinq mille euros."
+   },
+   {
+    "voix": "Mais si la société reprend l'emprunt de ton immeuble, cette part est un apport à titre onéreux.",
+    "rangs": [
+     {
+      "lib": "Reprise de l'emprunt : onéreux",
+      "val": "Taxé",
+      "style": "fort"
+     }
+    ],
+    "dit": "Mais si la société reprend l'emprunt de ton immeuble, cette part est un apport à titre onéreux."
+   },
+   {
+    "voix": "Elle est taxée aux droits de mutation des immeubles, comme une vente.",
+    "dit": "Elle est taxée aux droits de mutation des immeubles, comme une vente."
+   }
+  ],
+  "accroche": "Apporter ton immeuble à ta société peut être taxé… comme une vente."
+ },
+ {
+  "id": "d-delais-paiement",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "segments": [
+   {
+    "voix": "Payer tes fournisseurs à 90 jours, même s'ils sont d'accord ? Jusqu'à 2 M€ d'amende.",
+    "dit": "Payer tes fournisseurs à quatre-vingt-dix jours, même s'ils sont d'accord ? Jusqu'à deux millions d'euros d'amende."
+   },
+   {
+    "voix": "Entre professionnels : 60 jours après la facture, ou 45 jours fin de mois. Par défaut : 30 jours.",
+    "titre": "Délais de paiement",
+    "rangs": [
+     {
+      "lib": "Date de facture",
+      "val": "60 j"
+     },
+     {
+      "lib": "Fin de mois",
+      "val": "45 j"
+     },
+     {
+      "lib": "Par défaut",
+      "val": "30 j"
+     }
+    ],
+    "dit": "Entre professionnels : soixante jours après la facture, ou quarante-cinq jours fin de mois. Par défaut : trente jours."
+   },
+   {
+    "voix": "En cas de retard : pénalités d'au moins 3 fois le taux légal, plus 40 € d'indemnité.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Pénalités, au moins",
+      "val": "3 × légal"
+     },
+     {
+      "op": "+",
+      "lib": "Indemnité forfaitaire",
+      "val": "40 €"
+     }
+    ],
+    "dit": "En cas de retard : pénalités d'au moins trois fois le taux légal, plus quarante euros d'indemnité."
+   },
+   {
+    "voix": "Et la répression des fraudes peut infliger jusqu'à 2 M€ d'amende à la société.",
+    "rangs": [
+     {
+      "op": "=",
+      "lib": "Amende DGCCRF",
+      "val": "2 M€",
+      "style": "fort"
+     }
+    ],
+    "dit": "Et la répression des fraudes peut infliger jusqu'à deux millions d'euros d'amende à la société."
+   },
+   {
+    "voix": "Ton commissaire aux comptes vérifie ces délais dans le rapport de gestion.",
+    "dit": "Ton commissaire aux comptes vérifie ces délais dans le rapport de gestion."
+   }
+  ],
+  "accroche": "Payer tes fournisseurs à 90 jours, même s'ils sont d'accord ? Jusqu'à 2 M€ d'amende."
  }
 ]
