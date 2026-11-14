@@ -1,5 +1,5 @@
 {
- "majLe": "2026-11-13T22:35:58.513Z",
+ "majLe": "2026-11-14T12:10:06.879Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -22,7 +22,7 @@
    "nom": "Village de la Justice",
    "url": "https://www.village-justice.com/articles/spip.php?page=backend",
    "ok": true,
-   "articles": 2
+   "articles": 0
   },
   {
    "nom": "Le Monde du Droit",
@@ -44,13 +44,13 @@
    "nom": "Le Monde Économie",
    "url": "https://www.lemonde.fr/economie/rss_full.xml",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "franceinfo Économie",
@@ -62,7 +62,7 @@
    "nom": "Capital",
    "url": "https://feed.prismamediadigital.com/v1/cap/rss?sources=capital",
    "ok": true,
-   "articles": 1
+   "articles": 0
   }
  ],
  "images": {
@@ -76,6 +76,16 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-argent-article-2026-11-14-la-plus-value-immobiliere-est-elle-exoneree-en-cas-de-de",
+   "titre": "La plus-value immobilière est-elle exonérée en cas de départ volontaire de l’entreprise ?",
+   "url": "https://www.lemonde.fr/argent/article/2026/11/14/la-plus-value-immobiliere-est-elle-exoneree-en-cas-de-depart-volontaire-de-l-entreprise_6809690_1657007.html",
+   "source": "Le Monde Économie",
+   "date": "2026-11-14T05:00:30.000Z",
+   "image": "https://img.lemde.fr/2025/08/06/125/0/1500/750/644/322/60/0/2d764c6_upload-1-ujwrk7f13wt7-lmargent207.jpg",
+   "categorie": "Fiscalité",
+   "score": 6
+  },
   {
    "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-c-est-du-gachis-accable-par-la-taxe-sur-les-petits-colis-l-aeroport-",
    "titre": "«C’est du gâchis» : accablé par la taxe sur les petits colis, l’aéroport Paris-Vatry pourrait cesser ses activités",
@@ -864,16 +874,6 @@
    "source": "franceinfo Économie",
    "date": "2026-11-02T19:05:25.000Z",
    "image": "https://www.franceinfo.fr/pictures/_ThuG8TON9RJ0NCwjNSwaeSRtL8/0x58:1065x657/432x243/filters:format(jpg)/2026/11/02/6ae8dee3ca5b0839518357.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-automobile-essence-emmanuel-macron-se-felicite-de-la-baisse-des-prix",
-   "titre": "Emmanuel Macron se félicite de la baisse des prix du gazole, \"sans toucher aux taxes\" et \"sans démagogie\"",
-   "url": "https://www.franceinfo.fr/economie/automobile/essence/emmanuel-macron-se-felicite-de-la-baisse-des-prix-du-gazole-sans-toucher-aux-taxes-et-sans-demagogie_8264579.html#xtor=RSS-3-%5Bgeneral%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-11-02T17:31:35.000Z",
-   "image": "https://www.franceinfo.fr/pictures/8BAB-6bwmukl096YClRxpK5sKEY/0x4:1024x580/432x243/filters:format(jpg)/2026/11/02/6ae8c68c403d8133393429.jpg",
    "categorie": "Fiscalité",
    "score": 3
   }
