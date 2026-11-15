@@ -5246,5 +5246,262 @@
    }
   ],
   "accroche": "Payer tes fournisseurs à 90 jours, même s'ils sont d'accord ? Jusqu'à 2 M€ d'amende."
+ },
+ {
+  "id": "m-scission-partielle",
+  "modele": "finance",
+  "tag": "Dessine-moi le M&A",
+  "accroche": "Couper ta société en deux, sans rien vendre ni liquider ? Il y a trois façons.",
+  "segments": [
+   {
+    "voix": "Couper ta société en deux, sans rien vendre ni liquider ? Il y a trois façons.",
+    "dit": "Couper ta société en deux, sans rien vendre ni liquider ? Il y a trois façons."
+   },
+   {
+    "voix": "Alpitec a deux métiers. Scission : elle transmet tout et disparaît, ses associés reçoivent les titres.",
+    "titre": "Qui reçoit les titres ?",
+    "rangs": [
+     {
+      "lib": "Scission",
+      "val": "Associés"
+     }
+    ],
+    "dit": "Alpitec a deux métiers. Scission : elle transmet tout et disparaît, ses associés reçoivent les titres."
+   },
+   {
+    "voix": "Apport partiel d'actif : elle apporte un métier à une filiale, survit, et garde les titres.",
+    "rangs": [
+     {
+      "lib": "Apport partiel d'actif",
+      "val": "Alpitec"
+     }
+    ],
+    "dit": "Apport partiel d'actif : elle apporte un métier à une filiale, survit, et garde les titres."
+   },
+   {
+    "voix": "Depuis 2023, la scission partielle : elle survit, mais les titres vont à ses associés.",
+    "rangs": [
+     {
+      "lib": "Scission partielle",
+      "val": "Associés",
+      "style": "ok"
+     }
+    ],
+    "dit": "Depuis deux mille vingt-trois, la scission partielle : elle survit, mais les titres vont à ses associés."
+   },
+   {
+    "voix": "Piège : donner aux associés les titres d'un apport partiel.",
+    "dit": "Piège : donner aux associés les titres d'un apport partiel."
+   }
+  ]
+ },
+ {
+  "id": "m-commissaire-fusion",
+  "modele": "finance",
+  "tag": "Dessine-moi le M&A",
+  "accroche": "Deux dirigeants fixent entre eux la parité de leur fusion ? Un tiers va la vérifier.",
+  "segments": [
+   {
+    "voix": "Deux dirigeants fixent entre eux la parité de leur fusion ? Un tiers va la vérifier.",
+    "dit": "Deux dirigeants fixent entre eux la parité de leur fusion ? Un tiers va la vérifier."
+   },
+   {
+    "voix": "Le commissaire à la fusion contrôle que la parité, ici 3 pour 2, est équitable, et les apports bien évalués.",
+    "titre": "Commissaire à la fusion",
+    "rangs": [
+     {
+      "lib": "Parité équitable",
+      "val": "✓"
+     },
+     {
+      "lib": "Apports bien évalués",
+      "val": "✓"
+     }
+    ],
+    "dit": "Le commissaire à la fusion contrôle que la parité, ici trois pour deux, est équitable, et les apports bien évalués."
+   },
+   {
+    "voix": "Désigné en justice, il ne peut pas être le commissaire aux comptes d'une des sociétés.",
+    "rangs": [
+     {
+      "lib": "Désigné par",
+      "val": "Juge",
+      "style": "fort"
+     }
+    ],
+    "dit": "Désigné en justice, il ne peut pas être le commissaire aux comptes d'une des sociétés."
+   },
+   {
+    "voix": "Dispense possible : unanimité des associés, ou absorbée déjà détenue à 100 %.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Unanimité",
+      "val": "Dispense"
+     },
+     {
+      "lib": "Fusion à 100 %",
+      "val": "Dispense",
+      "style": "ok"
+     }
+    ],
+    "dit": "Dispense possible : unanimité des associés, ou absorbée déjà détenue à cent pour cent."
+   },
+   {
+    "voix": "Hors fusion, un apport en nature passe par le commissaire aux apports.",
+    "dit": "Hors fusion, un apport en nature passe par le commissaire aux apports."
+   }
+  ]
+ },
+ {
+  "id": "c-ias38",
+  "modele": "finance",
+  "tag": "Dessine-moi la conso",
+  "accroche": "Tu dépenses 200 000 € pour développer un logiciel… et en IFRS, ce n'est pas une charge.",
+  "segments": [
+   {
+    "voix": "Tu dépenses 200 000 € pour développer un logiciel… et en IFRS, ce n'est pas une charge.",
+    "dit": "Tu dépenses deux cent mille euros pour développer un logiciel… et en I.F.R.S, ce n'est pas une charge."
+   },
+   {
+    "voix": "Azur Logiciel crée un logiciel à vendre. La recherche, elle, reste toujours en charges.",
+    "titre": "IAS 38 · Développement",
+    "rangs": [
+     {
+      "lib": "Recherche",
+      "val": "Charge"
+     }
+    ],
+    "dit": "Azur Logiciel crée un logiciel à vendre. La recherche, elle, reste toujours en charges."
+   },
+   {
+    "voix": "Mais si les six critères du développement sont remplis, l'immobilisation est obligatoire : 200 000 € à l'actif.",
+    "rangs": [
+     {
+      "lib": "Développement",
+      "val": "200 000",
+      "style": "ok"
+     }
+    ],
+    "dit": "Mais si les six critères du développement sont remplis, l'immobilisation est obligatoire : deux cent mille euros à l'actif."
+   },
+   {
+    "voix": "En règles françaises, ce n'est qu'une option.",
+    "rangs": [
+     {
+      "lib": "En PCG",
+      "val": "Option"
+     }
+    ],
+    "dit": "En règles françaises, ce n'est qu'une option."
+   },
+   {
+    "voix": "Piège : une marque créée en interne n'est jamais immobilisée.",
+    "dit": "Piège : une marque créée en interne n'est jamais immobilisée."
+   }
+  ]
+ },
+ {
+  "id": "d-emprunt-obligataire",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "accroche": "Prêter 20 M€ à une société ne te donne pas une seule voix en assemblée.",
+  "segments": [
+   {
+    "voix": "Prêter 20 M€ à une société ne te donne pas une seule voix en assemblée.",
+    "dit": "Prêter vingt millions d'euros à une société ne te donne pas une seule voix en assemblée."
+   },
+   {
+    "voix": "Aéro Composants lève 20 M€ en obligations : les souscripteurs sont des créanciers, pas des associés.",
+    "titre": "Emprunt obligataire",
+    "rangs": [
+     {
+      "lib": "Obligataires",
+      "val": "Créanciers"
+     }
+    ],
+    "dit": "Aéro Composants lève vingt millions d'euros en obligations : les souscripteurs sont des créanciers, pas des associés."
+   },
+   {
+    "voix": "Obligations simples : le conseil décide, sauf clause contraire.",
+    "rangs": [
+     {
+      "lib": "Obligations simples",
+      "val": "Conseil"
+     }
+    ],
+    "dit": "Obligations simples : le conseil décide, sauf clause contraire."
+   },
+   {
+    "voix": "Convertibles : il faut l'assemblée extraordinaire, car elles peuvent diluer les actionnaires.",
+    "rangs": [
+     {
+      "lib": "Obligations convertibles",
+      "val": "AGE",
+      "style": "fort"
+     }
+    ],
+    "dit": "Convertibles : il faut l'assemblée extraordinaire, car elles peuvent diluer les actionnaires."
+   },
+   {
+    "voix": "Les obligataires forment une masse, dotée de la personnalité civile.",
+    "dit": "Les obligataires forment une masse, dotée de la personnalité civile."
+   }
+  ]
+ },
+ {
+  "id": "d-cession-fonds",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "accroche": "Tu achètes une boulangerie 300 000 €… et tu paies 10 310 € de droits, pas 15 000 €.",
+  "segments": [
+   {
+    "voix": "Tu achètes une boulangerie 300 000 €… et tu paies 10 310 € de droits, pas 15 000 €.",
+    "dit": "Tu achètes une boulangerie trois cent mille euros… et tu paies dix mille trois cent dix euros de droits, pas quinze mille euros."
+   },
+   {
+    "voix": "Payés par l'acheteur, par tranches : 0 % jusqu'à 23 000 €.",
+    "titre": "Cession d'un fonds",
+    "rangs": [
+     {
+      "lib": "Jusqu'à 23 000 €",
+      "val": "0"
+     }
+    ],
+    "dit": "Payés par l'acheteur, par tranches : zéro pour cent jusqu'à vingt-trois mille euros."
+   },
+   {
+    "voix": "Puis 3 % jusqu'à 200 000 €, soit 5 310 €. Et 5 % au-delà : 5 000 €.",
+    "rangs": [
+     {
+      "op": "+",
+      "lib": "3 % jusqu'à 200 000 €",
+      "val": "5 310"
+     },
+     {
+      "op": "+",
+      "lib": "5 % au-delà",
+      "val": "5 000"
+     }
+    ],
+    "dit": "Puis trois pour cent jusqu'à deux cent mille euros, soit cinq mille trois cent dix euros. Et cinq pour cent au-delà : cinq mille euros."
+   },
+   {
+    "voix": "Total : 10 310 €. Le piège : appliquer 5 % sur tout le prix.",
+    "rangs": [
+     {
+      "op": "=",
+      "lib": "Droits à payer",
+      "val": "10 310",
+      "style": "fort"
+     }
+    ],
+    "dit": "Total : dix mille trois cent dix euros. Le piège : appliquer cinq pour cent sur tout le prix."
+   },
+   {
+    "voix": "Et ne paie pas le vendeur pendant 10 jours : ses créanciers peuvent faire opposition.",
+    "dit": "Et ne paie pas le vendeur pendant dix jours : ses créanciers peuvent faire opposition."
+   }
+  ]
  }
 ]
