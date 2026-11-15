@@ -1,5 +1,5 @@
 {
- "majLe": "2026-11-15T12:43:30.168Z",
+ "majLe": "2026-11-15T21:46:59.582Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -50,7 +50,7 @@
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "franceinfo Économie",
@@ -76,6 +76,16 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-trop-d-impots-et-trop-peu-de-reconnaissance-dans-c-est-nicolas-qui-p",
+   "titre": "« Trop d’impôts et trop peu de reconnaissance » : dans C’est Nicolas qui paie !, Jonas Haddad analyse les dessous de la révolte des actifs",
+   "url": "https://www.lefigaro.fr/conjoncture/trop-d-impots-et-trop-peu-de-reconnaissance-dans-c-est-nicolas-qui-paie-jonas-haddad-analyse-les-dessous-de-la-revolte-des-actifs-20261115",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-15T11:15:00.000Z",
+   "image": "https://i.f1g.fr/media/cms/3000x1687_crop/2026/11/15/521efaae91a1c9507bd1543b0857876132acab99b1c3af86800f15d75a0b99c0.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
   {
    "id": "le-monde-conomie-https-www-lemonde-fr-argent-article-2026-11-14-la-plus-value-immobiliere-est-elle-exoneree-en-cas-de-de",
    "titre": "La plus-value immobilière est-elle exonérée en cas de départ volontaire de l’entreprise ?",
@@ -864,16 +874,6 @@
    "source": "Le Figaro Économie",
    "date": "2026-11-03T09:46:06.000Z",
    "image": "https://i.f1g.fr/media/cms/1920x1080_crop/2026/11/03/391bec19e2d2f78b74b48acb1819d88f2df09663d27fa8b5f9af1cb30803dc51.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-transports-prix-des-carburants-benefices-de-total-l-etat-doit-etre-c",
-   "titre": "Bénéfices de Total : \"L'État doit être capable d'obtenir de Total qu'il y ait des gestes en faveur des gros rouleurs\", estime Guilhem Carayon, vice-président délégué de l'UDR",
-   "url": "https://www.franceinfo.fr/economie/transports/prix-des-carburants/benefices-de-total-l-etat-doit-etre-capable-d-obtenir-de-total-qu-il-y-ait-des-gestes-en-faveur-des-gros-rouleurs-estime-guilhem-carayon-vice-president-delegue-de-l-udr_8264684.html#xtor=RSS-3-%5Bgeneral%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-11-02T19:05:25.000Z",
-   "image": "https://www.franceinfo.fr/pictures/_ThuG8TON9RJ0NCwjNSwaeSRtL8/0x58:1065x657/432x243/filters:format(jpg)/2026/11/02/6ae8dee3ca5b0839518357.jpg",
    "categorie": "Fiscalité",
    "score": 3
   }
