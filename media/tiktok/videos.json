@@ -5503,5 +5503,330 @@
     "dit": "Et ne paie pas le vendeur pendant dix jours : ses créanciers peuvent faire opposition."
    }
   ]
+ },
+ {
+  "id": "m-obligation-taux",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "accroche": "Ton obligation verse 5 % par an, l'émetteur est solide… et son prix baisse quand même.",
+  "segments": [
+   {
+    "voix": "Ton obligation verse 5 % par an, l'émetteur est solide… et son prix baisse quand même.",
+    "dit": "Ton obligation verse cinq pour cent par an, l'émetteur est solide… et son prix baisse quand même."
+   },
+   {
+    "voix": "Son prix : la valeur actuelle de 50 €, 50 €, puis 1 050 €. Au taux de 5 %, 1 000 €.",
+    "titre": "Prix d'une obligation",
+    "rangs": [
+     {
+      "lib": "Coupon an 1",
+      "val": "50 €"
+     },
+     {
+      "op": "+",
+      "lib": "Coupon an 2",
+      "val": "50 €"
+     },
+     {
+      "op": "+",
+      "lib": "Coupon + nominal an 3",
+      "val": "1 050 €"
+     },
+     {
+      "op": "=",
+      "lib": "Prix au taux de 5 %",
+      "val": "1 000 €",
+      "style": "fort"
+     }
+    ],
+    "dit": "Son prix : la valeur actuelle de cinquante euros, cinquante euros, puis mille cinquante euros. Au taux de cinq pour cent, mille euros."
+   },
+   {
+    "voix": "Si les taux montent, un acheteur trouve mieux ailleurs : il paie moins cher.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Taux du marché",
+      "val": "↑"
+     },
+     {
+      "lib": "Prix de l'obligation",
+      "val": "↓",
+      "style": "fort"
+     }
+    ],
+    "dit": "Si les taux montent, un acheteur trouve mieux ailleurs : il paie moins cher."
+   },
+   {
+    "voix": "Et il y a quatre risques : taux, défaut, liquidité, réinvestissement des coupons.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Taux",
+      "val": "Prix ↓"
+     },
+     {
+      "lib": "Défaut",
+      "val": "Notation"
+     },
+     {
+      "lib": "Liquidité",
+      "val": "Revente"
+     },
+     {
+      "lib": "Réinvestissement",
+      "val": "Coupons"
+     }
+    ],
+    "dit": "Et il y a quatre risques : taux, défaut, liquidité, réinvestissement des coupons."
+   },
+   {
+    "voix": "Le défaut se lit dans la notation ; le risque de taux, dans la sensibilité.",
+    "dit": "Le défaut se lit dans la notation ; le risque de taux, dans la sensibilité."
+   }
+  ]
+ },
+ {
+  "id": "m-fusion-salaries",
+  "modele": "finance",
+  "tag": "Dessine-moi le M&A",
+  "accroche": "Tu absorbes une boîte : ses salariés arrivent avec leur 13e mois… même jamais écrit.",
+  "segments": [
+   {
+    "voix": "Tu absorbes une boîte : ses salariés arrivent avec leur 13e mois… même jamais écrit.",
+    "dit": "Tu absorbes une boîte : ses salariés arrivent avec leur treizième mois… même jamais écrit."
+   },
+   {
+    "voix": "Fusion : les contrats de travail passent de plein droit à l'absorbante, ancienneté comprise.",
+    "titre": "Fusion et salariés",
+    "rangs": [
+     {
+      "lib": "Contrats de travail",
+      "val": "Transférés"
+     },
+     {
+      "lib": "Ancienneté",
+      "val": "Conservée"
+     }
+    ],
+    "dit": "Fusion : les contrats de travail passent de plein droit à l'absorbante, ancienneté comprise."
+   },
+   {
+    "voix": "Et le salarié ne peut pas s'y opposer.",
+    "rangs": [
+     {
+      "lib": "Refus du salarié",
+      "val": "Impossible",
+      "style": "fort"
+     }
+    ],
+    "dit": "Et le salarié ne peut pas s'y opposer."
+   },
+   {
+    "voix": "Le 13e mois versé depuis 20 ans sans écrit ? C'est un usage : il suit aussi.",
+    "rangs": [
+     {
+      "lib": "Usage (13e mois)",
+      "val": "Transféré",
+      "style": "ok"
+     }
+    ],
+    "dit": "Le treizième mois versé depuis vingt ans sans écrit ? C'est un usage : il suit aussi."
+   },
+   {
+    "voix": "Pour le supprimer : informer les élus, puis chaque salarié, avec un délai de prévenance.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Élus informés",
+      "val": "✓"
+     },
+     {
+      "lib": "Chaque salarié informé",
+      "val": "✓"
+     },
+     {
+      "lib": "Délai de prévenance",
+      "val": "✓",
+      "style": "ok"
+     }
+    ],
+    "dit": "Pour le supprimer : informer les élus, puis chaque salarié, avec un délai de prévenance."
+   }
+  ]
+ },
+ {
+  "id": "c-ifrs15",
+  "modele": "finance",
+  "tag": "Dessine-moi la conso",
+  "accroche": "Tu encaisses 12 000 € en décembre… et en IFRS, seuls 8 000 € sont du chiffre d'affaires.",
+  "segments": [
+   {
+    "voix": "Tu encaisses 12 000 € en décembre… et en IFRS, seuls 8 000 € sont du chiffre d'affaires.",
+    "dit": "Tu encaisses douze mille euros en décembre… et en I.F.R.S, seuls huit mille euros sont du chiffre d'affaires."
+   },
+   {
+    "voix": "Alpes Logiciels vend une licence et deux ans de maintenance, pour 12 000 €.",
+    "titre": "IFRS 15",
+    "rangs": [
+     {
+      "lib": "Prix global",
+      "val": "12 000 €"
+     }
+    ],
+    "dit": "Alpes Logiciels vend une licence et deux ans de maintenance, pour douze mille euros."
+   },
+   {
+    "voix": "Vendues seules : 10 000 € et 5 000 €. Au prorata : 8 000 € et 4 000 €.",
+    "rangs": [
+     {
+      "lib": "Licence (10/15)",
+      "val": "8 000 €"
+     },
+     {
+      "lib": "Maintenance (5/15)",
+      "val": "4 000 €"
+     }
+    ],
+    "dit": "Vendues seules : dix mille euros et cinq mille euros. Au prorata : huit mille euros et quatre mille euros."
+   },
+   {
+    "voix": "La licence compte à la livraison ; la maintenance, 2 000 € par an, au fil du service.",
+    "rangs": [
+     {
+      "op": "=",
+      "lib": "CA de l'année",
+      "val": "8 000 €",
+      "style": "fort"
+     }
+    ],
+    "dit": "La licence compte à la livraison ; la maintenance, deux mille euros par an, au fil du service."
+   },
+   {
+    "voix": "Les 4 000 € déjà encaissés ? Un passif sur contrat, comme un produit constaté d'avance.",
+    "rangs": [
+     {
+      "lib": "Passif sur contrat",
+      "val": "4 000 €",
+      "style": "ok"
+     }
+    ],
+    "dit": "Les quatre mille euros déjà encaissés ? Un passif sur contrat, comme un produit constaté d'avance."
+   }
+  ]
+ },
+ {
+  "id": "d-cautionnement",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "accroche": "Ta banque te fait signer une caution de 300 000 € sur un formulaire prérempli ? Elle peut être nulle.",
+  "segments": [
+   {
+    "voix": "Ta banque te fait signer une caution de 300 000 € sur un formulaire prérempli ? Elle peut être nulle.",
+    "dit": "Ta banque te fait signer une caution de trois cent mille euros sur un formulaire prérempli ? Elle peut être nulle."
+   },
+   {
+    "voix": "La caution écrit elle-même la mention, montant en chiffres et en lettres. Sinon, nullité.",
+    "titre": "Cautionnement",
+    "rangs": [
+     {
+      "lib": "Mention manuscrite",
+      "val": "Exigée"
+     },
+     {
+      "lib": "Sans mention",
+      "val": "Nullité",
+      "style": "fort"
+     }
+    ],
+    "dit": "La caution écrit elle-même la mention, montant en chiffres et en lettres. Sinon, nullité."
+   },
+   {
+    "voix": "Chiffres et lettres différents ? On retient les lettres.",
+    "rangs": [
+     {
+      "lib": "Chiffres ≠ lettres",
+      "val": "Lettres"
+     }
+    ],
+    "dit": "Chiffres et lettres différents ? On retient les lettres."
+   },
+   {
+    "voix": "300 000 € de caution pour 36 000 € de revenus par an, sans patrimoine : disproportion manifeste.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Engagement",
+      "val": "300 000 €"
+     },
+     {
+      "lib": "Revenus annuels",
+      "val": "36 000 €"
+     }
+    ],
+    "dit": "Trois cent mille euros de caution pour trente-six mille euros de revenus par an, sans patrimoine : disproportion manifeste."
+   },
+   {
+    "voix": "Depuis 2022, la caution n'est plus déchargée : son engagement est réduit.",
+    "rangs": [
+     {
+      "lib": "Sanction",
+      "val": "Réduction",
+      "style": "ok"
+     }
+    ],
+    "dit": "Depuis deux mille vingt-deux, la caution n'est plus déchargée : son engagement est réduit."
+   }
+  ]
+ },
+ {
+  "id": "c-ias2",
+  "modele": "finance",
+  "tag": "Dessine-moi la conso",
+  "accroche": "Ton stock a coûté 100 000 €… et tu dois quand même l'inscrire à 85 000 €.",
+  "segments": [
+   {
+    "voix": "Ton stock a coûté 100 000 €… et tu dois quand même l'inscrire à 85 000 €.",
+    "dit": "Ton stock a coûté cent mille euros… et tu dois quand même l'inscrire à quatre-vingt-cinq mille euros."
+   },
+   {
+    "voix": "IAS 2 : un stock vaut le plus faible du coût et de la valeur nette de réalisation.",
+    "titre": "IAS 2 · Stocks",
+    "rangs": [
+     {
+      "lib": "Coût",
+      "val": "100 000 €"
+     }
+    ],
+    "dit": "I.A.S deux : un stock vaut le plus faible du coût et de la valeur nette de réalisation."
+   },
+   {
+    "voix": "Valeur nette de réalisation : prix de vente estimé, moins coûts d'achèvement et de vente. Ici, 85 000 €.",
+    "rangs": [
+     {
+      "op": "−",
+      "lib": "Valeur de réalisation",
+      "val": "85 000 €"
+     }
+    ],
+    "dit": "Valeur nette de réalisation : prix de vente estimé, moins coûts d'achèvement et de vente. Ici, quatre-vingt-cinq mille euros."
+   },
+   {
+    "voix": "Dépréciation : 100 000 − 85 000 = 15 000 €, en charge de l'exercice.",
+    "rangs": [
+     {
+      "op": "=",
+      "lib": "Dépréciation",
+      "val": "15 000 €",
+      "style": "fort"
+     }
+    ],
+    "dit": "Dépréciation : cent mille euros, moins quatre-vingt-cinq mille euros : quinze mille euros, en charge de l'exercice."
+   },
+   {
+    "voix": "Piège : la sous-activité n'entre pas dans le coût, et le dernier entré, premier sorti est interdit.",
+    "dit": "Piège : la sous-activité n'entre pas dans le coût, et le dernier entré, premier sorti est interdit."
+   }
+  ]
  }
 ]
