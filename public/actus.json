@@ -1,5 +1,5 @@
 {
- "majLe": "2026-11-15T21:46:59.582Z",
+ "majLe": "2026-11-16T13:37:43.080Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -44,19 +44,19 @@
    "nom": "Le Monde Économie",
    "url": "https://www.lemonde.fr/economie/rss_full.xml",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 0
+   "articles": 3
   },
   {
    "nom": "Capital",
@@ -76,6 +76,46 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-economie-article-2026-11-16-la-grece-multiplie-les-mesures-pour-attirer-les-grosse",
+   "titre": "La Grèce multiplie les mesures pour attirer les grosses fortunes et les hedge funds",
+   "url": "https://www.lemonde.fr/economie/article/2026/11/16/la-grece-multiplie-les-mesures-pour-attirer-les-grosses-fortunes-et-les-hedge-funds_6811670_3234.html",
+   "source": "Le Monde Économie",
+   "date": "2026-11-16T09:00:21.000Z",
+   "image": "https://img.lemde.fr/2026/11/16/875/0/6000/3000/644/322/60/0/31564e9_upload-1-nqxmopatnop3-2024-04-18t061550z-2013221288-rc2057ay757b-rtrmadp-3-greece-economy-rebound.JPG",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-budget-la-situation-autour-du-budget-2027-devient-intenable-previenn",
+   "titre": "La situation autour du budget 2027 \"devient intenable\", préviennent des présidents de départements avant leur rendez-vous avec le Premier ministre",
+   "url": "https://www.franceinfo.fr/economie/budget/la-situation-autour-du-budget-2027-devient-intenable-previennent-des-presidents-de-departements-avant-leur-rendez-vous-avec-le-premier-ministre_8284391.html#xtor=RSS-3-%5Beconomie%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-11-16T07:38:02.000Z",
+   "image": "https://www.franceinfo.fr/pictures/u1SkHuo9M_WrEa2PHATyZPVW0MQ/0x0:3543x1992/432x243/filters:format(jpg)/2026/11/16/6afab289b08a7267894511.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-replay-radio-le-decryptage-eco-lutte-contre-la-vie-chere-et-hausse-des-salair",
+   "titre": "Lutte contre la vie chère et hausse des salaires : le gouvernement rassure quant à ses promesses",
+   "url": "https://www.franceinfo.fr/replay-radio/le-decryptage-eco/lutte-contre-la-vie-chere-et-hausse-des-salaires-le-gouvernement-rassure-quant-a-ses-promesses_8263364.html#xtor=RSS-3-%5Beconomie%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-11-16T07:11:35.000Z",
+   "image": "https://www.franceinfo.fr/pictures/oeeGuvoRu1gkOWkMxzVHS1jnYpA/0x53:1024x629/432x243/filters:format(jpg)/2026/11/16/6afaac5496d7d986209862.jpg",
+   "categorie": "Fiscalité",
+   "score": 4
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-replay-radio-le-brief-eco-la-taxe-francaise-sur-les-petits-colis-importes-a-d",
+   "titre": "Un aéroport français mis en péril par la taxe française sur les petits colis importés",
+   "url": "https://www.franceinfo.fr/replay-radio/le-brief-eco/la-taxe-francaise-sur-les-petits-colis-importes-a-des-effets-indesirables-sur-l-activite-economique_8263361.html#xtor=RSS-3-%5Beconomie%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-11-16T06:55:29.000Z",
+   "image": "https://www.franceinfo.fr/pictures/oZVK_Mm70RrMNVLbD1RBje_cq9g/0x428:8192x5036/432x243/filters:format(jpg)/2026/11/16/6afaa70d605c4865214823.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
   {
    "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-trop-d-impots-et-trop-peu-de-reconnaissance-dans-c-est-nicolas-qui-p",
    "titre": "« Trop d’impôts et trop peu de reconnaissance » : dans C’est Nicolas qui paie !, Jonas Haddad analyse les dessous de la révolte des actifs",
@@ -835,46 +875,6 @@
    "date": "2026-11-03T17:30:00.000Z",
    "image": "https://www.village-justice.com/articles/local/cache-gd2/71/c00ad75af9a79080dc003d26b16380.jpg?1793723401",
    "categorie": "Social",
-   "score": 3
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-internet-netflix-amazon-meta-une-nouvelle-taxe-sur-les-gigaoctets-pourrait-el",
-   "titre": "Netflix, Amazon, Meta… Une nouvelle taxe sur les gigaoctets pourrait-elle faire grimper vos factures ?",
-   "url": "https://www.franceinfo.fr/internet/netflix-amazon-meta-une-nouvelle-taxe-sur-les-gigaoctets-pourrait-elle-faire-grimper-vos-factures_8265908.html#xtor=RSS-3-%5Bgeneral%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-11-03T15:29:59.000Z",
-   "image": "https://www.franceinfo.fr/pictures/RJSCQfluPZNGgENXy-yMl0ErOHE/0x269:4593x2853/432x243/filters:format(jpg)/2026/11/03/6ae9e7b722f2e474522080.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "le-monde-conomie-https-www-lemonde-fr-international-article-2026-11-03-le-referendum-en-californie-sur-la-taxation-des-m",
-   "titre": "Le référendum en Californie sur la taxation des milliardaires, un rendez-vous attendu, sur fond de montée des inégalités",
-   "url": "https://www.lemonde.fr/international/article/2026/11/03/le-referendum-en-californie-sur-la-taxation-des-milliardaires-un-rendez-vous-attendu-sur-fond-de-montee-des-inegalites_6805581_3210.html",
-   "source": "Le Monde Économie",
-   "date": "2026-11-03T13:00:08.000Z",
-   "image": "https://img.lemde.fr/2026/10/06/466/0/5500/2750/644/322/60/0/a5a2b4f_ftp-1-2emy9t6ilocv-2026-10-06t035512z-1382997658-rc2fxnain2jm-rtrmadp-3-usa-election-california.JPG",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "capital-https-www-capital-fr-immobilier-taxe-sur-les-logements-vacants-2027-qui-paie-qui-peut-y-echapper-1531505",
-   "titre": "Taxe sur les logements vacants 2027 : qui paie, qui peut y échapper",
-   "url": "https://www.capital.fr/immobilier/taxe-sur-les-logements-vacants-2027-qui-paie-qui-peut-y-echapper-1531505",
-   "source": "Capital",
-   "date": "2026-11-03T11:00:00.000Z",
-   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~11~02~30035d3f-9e37-4daa-a81d-18fee87fded9.jpg/1200x900/quality/80/taxe-sur-les-logements-vacants-2027-qui-paie-qui-peut-y-echapper.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-conso-jusqu-a-40-centimes-pour-une-heure-de-film-en-4k-combien-pourrait-vous-cou",
-   "titre": "Jusqu’à 40 centimes pour une heure de film en 4K : combien pourrait vous coûter la taxe au gigaoctet ?",
-   "url": "https://www.lefigaro.fr/conso/jusqu-a-40-centimes-pour-une-heure-de-film-en-4k-combien-pourrait-vous-couter-la-taxe-au-gigaoctet-20261103",
-   "source": "Le Figaro Économie",
-   "date": "2026-11-03T09:46:06.000Z",
-   "image": "https://i.f1g.fr/media/cms/1920x1080_crop/2026/11/03/391bec19e2d2f78b74b48acb1819d88f2df09663d27fa8b5f9af1cb30803dc51.jpg",
-   "categorie": "Fiscalité",
    "score": 3
   }
  ],
