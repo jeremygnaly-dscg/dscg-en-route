@@ -5828,5 +5828,344 @@
     "dit": "Piège : la sous-activité n'entre pas dans le coût, et le dernier entré, premier sorti est interdit."
    }
   ]
+ },
+ {
+  "id": "m-valeur-terminale",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "accroche": "Dans un DCF, plus de 80 % de la valeur vient d'après ton business plan.",
+  "segments": [
+   {
+    "voix": "Dans un DCF, plus de 80 % de la valeur vient d'après ton business plan.",
+    "dit": "Dans un D.C.F, plus de quatre-vingts pour cent de la valeur vient d'après ton business plan."
+   },
+   {
+    "voix": "Après 3 ans, on suppose 2 % de croissance à l'infini : le flux de l'année 4 vaut 1 224 k€.",
+    "titre": "Valeur terminale",
+    "rangs": [
+     {
+      "lib": "Flux année 3",
+      "val": "1 200 k€"
+     },
+     {
+      "op": "×",
+      "lib": "Croissance de 2 %",
+      "val": "1,02"
+     },
+     {
+      "op": "=",
+      "lib": "Flux année 4",
+      "val": "1 224 k€"
+     }
+    ],
+    "dit": "Après trois ans, on suppose deux pour cent de croissance à l'infini : le flux de l'année quatre vaut un million deux cent vingt-quatre mille euros."
+   },
+   {
+    "voix": "Gordon-Shapiro : on le divise par le CMPC moins la croissance, soit 6 %. Valeur terminale : 20 400 k€.",
+    "rangs": [
+     {
+      "op": "÷",
+      "lib": "CMPC − croissance",
+      "val": "6 %"
+     },
+     {
+      "op": "=",
+      "lib": "Valeur terminale",
+      "val": "20 400 k€",
+      "style": "fort"
+     }
+    ],
+    "dit": "Gordon-Shapiro : on le divise par le coût moyen pondéré du capital moins la croissance, soit six pour cent. Valeur terminale : vingt millions quatre cent mille euros."
+   },
+   {
+    "voix": "Actualisée, elle pèse 85 % de la valeur d'entreprise !",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Terminale actualisée",
+      "val": "16 194 k€"
+     },
+     {
+      "lib": "Valeur d'entreprise",
+      "val": "19 016 k€"
+     },
+     {
+      "op": "=",
+      "lib": "Poids de la terminale",
+      "val": "85 %",
+      "style": "fort"
+     }
+    ],
+    "dit": "Actualisée, elle pèse quatre-vingt-cinq pour cent de la valeur d'entreprise !"
+   },
+   {
+    "voix": "Piège : diviser le flux de l'année 3. Et teste toujours la sensibilité.",
+    "dit": "Piège : diviser le flux de l'année trois. Et teste toujours la sensibilité."
+   }
+  ]
+ },
+ {
+  "id": "m-comparables",
+  "modele": "finance",
+  "tag": "Dessine-moi le M&A",
+  "accroche": "Ton voisin a vendu sa boîte 8 fois son résultat. Ce n'est pas ton prix.",
+  "segments": [
+   {
+    "voix": "Ton voisin a vendu sa boîte 8 fois son résultat. Ce n'est pas ton prix.",
+    "dit": "Ton voisin a vendu sa boîte huit fois son résultat. Ce n'est pas ton prix."
+   },
+   {
+    "voix": "En M&A, les comparables doivent te ressembler : secteur, taille, croissance, rentabilité, risque.",
+    "titre": "Les comparables",
+    "rangs": [
+     {
+      "lib": "Même secteur",
+      "val": "✓"
+     },
+     {
+      "lib": "Taille proche",
+      "val": "✓"
+     },
+     {
+      "lib": "Croissance, rentabilité",
+      "val": "✓"
+     },
+     {
+      "lib": "Risque comparable",
+      "val": "✓"
+     }
+    ],
+    "dit": "En fusions-acquisitions, les comparables doivent te ressembler : secteur, taille, croissance, rentabilité, risque."
+   },
+   {
+    "voix": "Sinon, on corrige. Petite et non cotée : décote d'illiquidité et de taille.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Non cotée",
+      "val": "↓"
+     },
+     {
+      "lib": "Petite taille",
+      "val": "↓",
+      "style": "fort"
+     }
+    ],
+    "dit": "Sinon, on corrige. Petite et non cotée : décote d'illiquidité et de taille."
+   },
+   {
+    "voix": "Et un multiple d'EBITDA donne la valeur d'entreprise : retire encore la dette nette.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "EBITDA × multiple",
+      "val": "VE"
+     },
+     {
+      "op": "−",
+      "lib": "Dette nette",
+      "val": "Dette"
+     },
+     {
+      "op": "=",
+      "lib": "Valeur des titres",
+      "val": "Prix",
+      "style": "ok"
+     }
+    ],
+    "dit": "Et un multiple d'Ébitda donne la valeur d'entreprise : retire encore la dette nette."
+   },
+   {
+    "voix": "Puis croise avec une autre méthode, et justifie l'écart.",
+    "dit": "Puis croise avec une autre méthode, et justifie l'écart."
+   }
+  ]
+ },
+ {
+  "id": "c-ias20",
+  "modele": "finance",
+  "tag": "Dessine-moi la conso",
+  "accroche": "En France, ta subvention d'investissement va en capitaux propres. En IFRS, c'est interdit.",
+  "segments": [
+   {
+    "voix": "En France, ta subvention d'investissement va en capitaux propres. En IFRS, c'est interdit.",
+    "dit": "En France, ta subvention d'investissement va en capitaux propres. En I.F.R.S, c'est interdit."
+   },
+   {
+    "voix": "Machine de 300 000 €, amortie sur 5 ans. La région verse 60 000 € de subvention.",
+    "titre": "IAS 20 · Subventions",
+    "rangs": [
+     {
+      "lib": "Machine",
+      "val": "300 000 €"
+     },
+     {
+      "lib": "Subvention",
+      "val": "60 000 €"
+     }
+    ],
+    "dit": "Machine de trois cent mille euros, amortie sur cinq ans. La région verse soixante mille euros de subvention."
+   },
+   {
+    "voix": "IAS 20 : produit différé, ou déduction du coût de la machine. Jamais en capitaux propres.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Produit différé",
+      "val": "✓"
+     },
+     {
+      "lib": "Déduction du coût",
+      "val": "✓"
+     },
+     {
+      "lib": "Capitaux propres",
+      "val": "✗",
+      "style": "fort"
+     }
+    ],
+    "dit": "I.A.S vingt : produit différé, ou déduction du coût de la machine. Jamais en capitaux propres."
+   },
+   {
+    "voix": "Reprise au rythme de l'amortissement : 60 000 € ÷ 5 = 12 000 € par an.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Subvention",
+      "val": "60 000 €"
+     },
+     {
+      "op": "÷",
+      "lib": "Durée d'amortissement",
+      "val": "5 ans"
+     },
+     {
+      "op": "=",
+      "lib": "Produit par an",
+      "val": "12 000 €",
+      "style": "ok"
+     }
+    ],
+    "dit": "Reprise au rythme de l'amortissement : soixante mille euros, divisé par cinq, égale douze mille euros par an."
+   },
+   {
+    "voix": "Et IAS 23 : les intérêts finançant un actif long à préparer s'ajoutent à son coût.",
+    "dit": "Et I.A.S vingt-trois : les intérêts finançant un actif long à préparer s'ajoutent à son coût."
+   }
+  ]
+ },
+ {
+  "id": "d-responsabilite-banquier",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "accroche": "Ta banque a financé une boîte en faillite ? En principe, elle n'est pas responsable.",
+  "segments": [
+   {
+    "voix": "Ta banque a financé une boîte en faillite ? En principe, elle n'est pas responsable.",
+    "dit": "Ta banque a financé une boîte en faillite ? En principe, elle n'est pas responsable."
+   },
+   {
+    "voix": "Article L. 650-1 : en procédure collective, le banquier ne répond pas des crédits consentis. Sauf trois cas.",
+    "titre": "Responsabilité du banquier",
+    "rangs": [
+     {
+      "lib": "Responsabilité",
+      "val": "Non"
+     }
+    ],
+    "dit": "Article L six cent cinquante, tiret un : en procédure collective, le banquier ne répond pas des crédits consentis. Sauf trois cas."
+   },
+   {
+    "voix": "Fraude, immixtion caractérisée dans la gestion, ou garanties disproportionnées.",
+    "rangs": [
+     {
+      "lib": "Fraude",
+      "val": "✓"
+     },
+     {
+      "lib": "Immixtion dans la gestion",
+      "val": "✓"
+     },
+     {
+      "lib": "Garanties disproportionnées",
+      "val": "✓",
+      "style": "fort"
+     }
+    ],
+    "dit": "Fraude, immixtion caractérisée dans la gestion, ou garanties disproportionnées."
+   },
+   {
+    "voix": "Couper un concours à durée indéterminée ? Préavis obligatoire, sauf comportement gravement répréhensible.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Rupture d'un concours",
+      "val": "Préavis"
+     },
+     {
+      "lib": "Faute grave du client",
+      "val": "✗",
+      "style": "fort"
+     }
+    ],
+    "dit": "Couper un concours à durée indéterminée ? Préavis obligatoire, sauf comportement gravement répréhensible."
+   },
+   {
+    "voix": "Principe : irresponsabilité. Trois exceptions.",
+    "dit": "Principe : irresponsabilité. Trois exceptions."
+   }
+  ]
+ },
+ {
+  "id": "c-alerte-cac",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "accroche": "Ton commissaire aux comptes peut prévenir le tribunal. Sans ton accord.",
+  "segments": [
+   {
+    "voix": "Ton commissaire aux comptes peut prévenir le tribunal. Sans ton accord.",
+    "dit": "Ton commissaire aux comptes peut prévenir le tribunal. Sans ton accord."
+   },
+   {
+    "voix": "Alerte : la continuité d'exploitation est menacée. Il écrit au président, qui a 15 jours pour répondre.",
+    "titre": "Procédure d'alerte · SA",
+    "rangs": [
+     {
+      "lib": "1. Lettre au président",
+      "val": "15 jours"
+     }
+    ],
+    "dit": "Alerte : la continuité d'exploitation est menacée. Il écrit au président, qui a quinze jours pour répondre."
+   },
+   {
+    "voix": "Réponse insuffisante ? Le conseil délibère, puis rapport spécial à l'assemblée.",
+    "rangs": [
+     {
+      "lib": "2. Délibération du conseil",
+      "val": "✓"
+     },
+     {
+      "lib": "3. Rapport à l'assemblée",
+      "val": "✓"
+     }
+    ],
+    "dit": "Réponse insuffisante ? Le conseil délibère, puis rapport spécial à l'assemblée."
+   },
+   {
+    "voix": "Toujours menacée ? Il informe le président du tribunal de commerce, qui peut convoquer les dirigeants.",
+    "rangs": [
+     {
+      "lib": "4. Président du tribunal",
+      "val": "✓",
+      "style": "fort"
+     }
+    ],
+    "dit": "Toujours menacée ? Il informe le président du tribunal de commerce, qui peut convoquer les dirigeants."
+   },
+   {
+    "voix": "Quatre étapes, dans une SA. Réponds dès la première lettre.",
+    "dit": "Quatre étapes, dans une société anonyme. Réponds dès la première lettre."
+   }
+  ]
  }
 ]
