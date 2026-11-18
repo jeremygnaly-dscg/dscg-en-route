@@ -6167,5 +6167,305 @@
     "dit": "Quatre étapes, dans une société anonyme. Réponds dès la première lettre."
    }
   ]
+ },
+ {
+  "id": "m-option-change",
+  "tag": "Dessine-moi la finance",
+  "segments": [
+   {
+    "voix": "Te protéger de la baisse du dollar… et garder le gain s'il monte ? C'est possible.",
+    "dit": "Te protéger de la baisse du dollar… et garder le gain s'il monte ? C'est possible."
+   },
+   {
+    "voix": "Charente Spirits attend 1 M$ dans 3 mois. Le change à terme fige le cours : environ 904 590 €, quoi qu'il arrive.",
+    "titre": "Couvrir 1 M$ à 3 mois",
+    "rangs": [
+     {
+      "lib": "Change à terme",
+      "val": "904 590 €"
+     }
+    ],
+    "dit": "Charente Spirits attend un million de dollars dans trois mois. Le change à terme fige le cours : environ neuf cent quatre mille cinq cent quatre-vingt-dix euros, quoi qu'il arrive."
+   },
+   {
+    "voix": "Mais si le dollar monte, tu n'en profites pas. L'option donne le droit, pas l'obligation, de vendre à un cours fixé.",
+    "rangs": [
+     {
+      "lib": "Option de change",
+      "val": "Droit",
+      "style": "ok"
+     }
+    ],
+    "dit": "Mais si le dollar monte, tu n'en profites pas. L'option donne le droit, pas l'obligation, de vendre à un cours fixé."
+   },
+   {
+    "voix": "Son prix : une prime, payée d'avance. Si le dollar monte, tu gardes le gain.",
+    "rangs": [
+     {
+      "op": "−",
+      "lib": "Prime",
+      "val": "Payée"
+     },
+     {
+      "op": "+",
+      "lib": "Gain si le dollar monte",
+      "val": "✓",
+      "style": "fort"
+     }
+    ],
+    "dit": "Son prix : une prime, payée d'avance. Si le dollar monte, tu gardes le gain."
+   },
+   {
+    "voix": "Le terme bloque tout. L'option protège, et laisse la hausse ouverte.",
+    "dit": "Le terme bloque tout. L'option protège, et laisse la hausse ouverte."
+   }
+  ],
+  "modele": "finance",
+  "accroche": "Te protéger de la baisse du dollar… et garder le gain s'il monte ? C'est possible."
+ },
+ {
+  "id": "m-taxonomie",
+  "tag": "Dessine-moi la finance",
+  "segments": [
+   {
+    "voix": "Ton projet a une VAN positive… et ta banque peut quand même tiquer.",
+    "dit": "Ton projet a une valeur actuelle nette positive… et ta banque peut quand même tiquer."
+   },
+   {
+    "voix": "Elle vérifie l'alignement avec la taxonomie européenne : les activités jugées durables.",
+    "titre": "Taxonomie européenne",
+    "rangs": [
+     {
+      "lib": "VAN positive",
+      "val": "✓"
+     }
+    ],
+    "dit": "Elle vérifie l'alignement avec la taxonomie européenne : les activités jugées durables."
+   },
+   {
+    "voix": "Première condition : contribuer substantiellement à l'un des 6 objectifs environnementaux.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Sert 1 des 6 objectifs",
+      "val": "✓"
+     }
+    ],
+    "dit": "Première condition : contribuer substantiellement à l'un des six objectifs environnementaux."
+   },
+   {
+    "voix": "Puis aucun préjudice important aux autres objectifs, et des garanties sociales minimales.",
+    "rangs": [
+     {
+      "lib": "Aucun préjudice important",
+      "val": "✓"
+     },
+     {
+      "lib": "Garanties sociales",
+      "val": "✓"
+     },
+     {
+      "op": "=",
+      "lib": "Activité durable",
+      "val": "✓",
+      "style": "ok"
+     }
+    ],
+    "dit": "Puis aucun préjudice important aux autres objectifs, et des garanties sociales minimales."
+   },
+   {
+    "voix": "Rentable mais très émetteur ? Une alternative moins rentable, mais mieux financée, peut l'emporter.",
+    "dit": "Rentable mais très émetteur ? Une alternative moins rentable, mais mieux financée, peut l'emporter."
+   }
+  ],
+  "modele": "finance",
+  "accroche": "Ton projet a une VAN positive… et ta banque peut quand même tiquer."
+ },
+ {
+  "id": "c-elim-dividendes",
+  "tag": "Dessine-moi la conso",
+  "segments": [
+   {
+    "voix": "Ta filiale te verse 80 000 € de dividendes. Pour le groupe, ce n'est pas un produit.",
+    "dit": "Ta filiale te verse quatre-vingt mille euros de dividendes. Pour le groupe, ce n'est pas un produit."
+   },
+   {
+    "voix": "Filiale détenue à 80 %, dividende de 100 000 € : la mère reçoit 80 000 €, un produit dans ses comptes.",
+    "titre": "Dividendes intragroupe",
+    "rangs": [
+     {
+      "lib": "Dividende versé",
+      "val": "100 000 €"
+     },
+     {
+      "op": "×",
+      "lib": "Détention",
+      "val": "80 %"
+     },
+     {
+      "op": "=",
+      "lib": "Reçu par la mère",
+      "val": "80 000 €"
+     }
+    ],
+    "dit": "Filiale détenue à quatre-vingts pour cent, dividende de cent mille euros : la mère reçoit quatre-vingt mille euros, un produit dans ses comptes."
+   },
+   {
+    "voix": "Mais l'argent a juste changé de poche, dans le même groupe.",
+    "dit": "Mais l'argent a juste changé de poche, dans le même groupe."
+   },
+   {
+    "voix": "En consolidation, on retire 80 000 € du résultat de la mère, et on les ajoute aux réserves consolidées.",
+    "efface": true,
+    "rangs": [
+     {
+      "op": "−",
+      "lib": "Résultat de la mère",
+      "val": "80 000 €"
+     },
+     {
+      "op": "+",
+      "lib": "Réserves consolidées",
+      "val": "80 000 €",
+      "style": "ok"
+     }
+    ],
+    "dit": "En consolidation, on retire quatre-vingt mille euros du résultat de la mère, et on les ajoute aux réserves consolidées."
+   },
+   {
+    "voix": "Le dividende ne disparaît pas : il passe du résultat aux réserves.",
+    "dit": "Le dividende ne disparaît pas : il passe du résultat aux réserves."
+   }
+  ],
+  "modele": "finance",
+  "accroche": "Ta filiale te verse 80 000 € de dividendes. Pour le groupe, ce n'est pas un produit."
+ },
+ {
+  "id": "d-delai-reprise",
+  "tag": "Dessine-moi le droit",
+  "segments": [
+   {
+    "voix": "Le fisc contrôle ta boîte en 2026 ? Il ne peut pas remonter avant 2023.",
+    "dit": "Le fisc contrôle ta boîte en deux mille vingt-six ? Il ne peut pas remonter avant deux mille vingt-trois."
+   },
+   {
+    "voix": "Délai de reprise : 3 ans, jusqu'à la fin de la troisième année qui suit celle de l'imposition.",
+    "titre": "Délai de reprise · L. 169 LPF",
+    "rangs": [
+     {
+      "lib": "Délai de principe",
+      "val": "3 ans",
+      "style": "fort"
+     }
+    ],
+    "dit": "Délai de reprise : trois ans, jusqu'à la fin de la troisième année qui suit celle de l'imposition."
+   },
+   {
+    "voix": "Contrôle en 2026 : exercices 2023, 2024 et 2025. Et 2023 est prescrit au 31 décembre 2026.",
+    "rangs": [
+     {
+      "lib": "Exercice 2023",
+      "val": "✓"
+     },
+     {
+      "lib": "Exercice 2024",
+      "val": "✓"
+     },
+     {
+      "lib": "Exercice 2025",
+      "val": "✓"
+     }
+    ],
+    "dit": "Contrôle en deux mille vingt-six : exercices deux mille vingt-trois, deux mille vingt-quatre et deux mille vingt-cinq. Et deux mille vingt-trois est prescrit au trente et un décembre deux mille vingt-six."
+   },
+   {
+    "voix": "Activité occulte ? Le délai passe à 10 ans.",
+    "rangs": [
+     {
+      "lib": "Activité occulte",
+      "val": "10 ans",
+      "style": "fort"
+     }
+    ],
+    "dit": "Activité occulte ? Le délai passe à dix ans."
+   },
+   {
+    "voix": "Et pendant le contrôle, corriger une erreur de bonne foi réduit l'intérêt de retard de 30 %.",
+    "dit": "Et pendant le contrôle, corriger une erreur de bonne foi réduit l'intérêt de retard de trente pour cent."
+   }
+  ],
+  "modele": "finance",
+  "accroche": "Le fisc contrôle ta boîte en 2026 ? Il ne peut pas remonter avant 2023."
+ },
+ {
+  "id": "c-avancement",
+  "tag": "Dessine-moi la conso",
+  "segments": [
+   {
+    "voix": "Zéro chiffre d'affaires chez ta filiale… et 2,4 M€ dans les comptes du groupe.",
+    "dit": "Zéro chiffre d'affaires chez ta filiale… et deux virgule quatre millions d'euros dans les comptes du groupe."
+   },
+   {
+    "voix": "Un hangar de 6 M€ : 1,92 M€ de coûts engagés, sur 4,8 M€ estimés. Avancement : 40 %.",
+    "titre": "Contrat à long terme",
+    "rangs": [
+     {
+      "lib": "Coûts engagés",
+      "val": "1,92 M€"
+     },
+     {
+      "op": "÷",
+      "lib": "Coût total estimé",
+      "val": "4,8 M€"
+     },
+     {
+      "op": "=",
+      "lib": "Avancement",
+      "val": "40 %",
+      "style": "fort"
+     }
+    ],
+    "dit": "Un hangar de six millions d'euros : un virgule quatre-vingt-douze millions d'euros de coûts engagés, sur quatre virgule huit millions d'euros estimés. Avancement : quarante pour cent."
+   },
+   {
+    "voix": "Le groupe constate 2,4 M€ de chiffre d'affaires, et annule la production stockée.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Chiffre d'affaires",
+      "val": "2,4 M€"
+     },
+     {
+      "op": "−",
+      "lib": "Production stockée",
+      "val": "1,92 M€"
+     },
+     {
+      "op": "=",
+      "lib": "Résultat en plus",
+      "val": "480 k€",
+      "style": "ok"
+     }
+    ],
+    "dit": "Le groupe constate deux virgule quatre millions d'euros de chiffre d'affaires, et annule la production stockée."
+   },
+   {
+    "voix": "Le fisc suit les comptes individuels : 120 000 € d'impôt différé passif.",
+    "rangs": [
+     {
+      "op": "−",
+      "lib": "Impôt différé passif",
+      "val": "120 k€"
+     }
+    ],
+    "dit": "Le fisc suit les comptes individuels : cent vingt mille euros d'impôt différé passif."
+   },
+   {
+    "voix": "Contrat déficitaire ? La perte est provisionnée tout de suite, en totalité.",
+    "dit": "Contrat déficitaire ? La perte est provisionnée tout de suite, en totalité."
+   }
+  ],
+  "modele": "finance",
+  "accroche": "Zéro chiffre d'affaires chez ta filiale… et 2,4 M€ dans les comptes du groupe."
  }
 ]
