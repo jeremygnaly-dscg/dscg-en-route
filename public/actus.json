@@ -1,5 +1,5 @@
 {
- "majLe": "2026-11-17T23:51:08.551Z",
+ "majLe": "2026-11-18T13:55:51.334Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -38,7 +38,7 @@
    "nom": "CNIL",
    "url": "https://www.cnil.fr/fr/rss.xml",
    "ok": true,
-   "articles": 0
+   "articles": 2
   },
   {
    "nom": "Le Monde Économie",
@@ -50,13 +50,13 @@
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 0
+   "articles": 2
   },
   {
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 2
+   "articles": 0
   },
   {
    "nom": "Capital",
@@ -76,6 +76,66 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-la-prevision-de-croissance-de-1-pour-2027-est-a-risque-reconnait-rol",
+   "titre": "La prévision de croissance de 1% pour 2027 «est à risque», reconnaît Roland Lescure",
+   "url": "https://www.lefigaro.fr/conjoncture/la-prevision-de-croissance-de-1-pour-2027-est-a-risque-reconnait-roland-lescure-20261118",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-18T13:29:07.000Z",
+   "image": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/18/3f30241bbb52914ac4f1f81b021f786ecb070e22fe6b92d7fc10aeff36880db0.jpg",
+   "categorie": "Fiscalité",
+   "score": 4
+  },
+  {
+   "id": "capital-https-www-capital-fr-votre-carriere-rupture-conventionnelle-la-date-limite-pour-signer-avant-le-1er-janvier-2027",
+   "titre": "Rupture conventionnelle : la date limite pour signer avant le 1er janvier 2027",
+   "url": "https://www.capital.fr/votre-carriere/rupture-conventionnelle-la-date-limite-pour-signer-avant-le-1er-janvier-2027-1531951",
+   "source": "Capital",
+   "date": "2026-11-18T12:00:00.000Z",
+   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~11~18~d7781353-409f-44b8-904f-763d40445742.jpg/1200x900/focus-point/1091%2C619/rupture-conventionnelle-la-date-limite-pour-signer-avant-le-1er-janvier-2027.jpg",
+   "categorie": "Fiscalité",
+   "score": 6
+  },
+  {
+   "id": "cnil-https-www-cnil-fr-fr-conservation-des-mots-de-passe-sanction-5-millions-deuros",
+   "titre": "Conservation des mots de passe clients en clair : la CNIL prononce une sanction de 5 millions d’euros",
+   "url": "https://www.cnil.fr/fr/conservation-des-mots-de-passe-sanction-5-millions-deuros",
+   "source": "CNIL",
+   "officiel": true,
+   "date": "2026-11-18T12:00:00.000Z",
+   "categorie": "Droit des affaires",
+   "score": 4
+  },
+  {
+   "id": "cnil-https-www-cnil-fr-fr-ia-conversationnelle-la-voix-des-jeunesses",
+   "titre": "Le Groupe VYV et la CNIL publient « La Voix des jeunesses » : une enquête pour éclairer les usages de l’IA conversationnelle",
+   "url": "https://www.cnil.fr/fr/ia-conversationnelle-la-voix-des-jeunesses",
+   "source": "CNIL",
+   "officiel": true,
+   "date": "2026-11-18T12:00:00.000Z",
+   "categorie": "Numérique",
+   "score": 2
+  },
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-economie-article-2026-11-18-rebecca-amsellem-economiste-pour-les-femmes-les-ecarts",
+   "titre": "Rebecca Amsellem, économiste : « Pour les femmes, les écarts de revenus sont des écarts de liberté »",
+   "url": "https://www.lemonde.fr/economie/article/2026/11/18/rebecca-amsellem-economiste-pour-les-femmes-les-ecarts-de-revenus-sont-des-ecarts-de-liberte_6813089_3234.html",
+   "source": "Le Monde Économie",
+   "date": "2026-11-18T08:00:09.000Z",
+   "image": "https://img.lemde.fr/2026/11/17/899/0/2166/1083/644/322/60/0/dab1691_upload-1-slhfkvdmzonn-rea-293938-016.jpg",
+   "categorie": "Profession",
+   "score": 4
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-budget-de-la-secu-la-copie-du-senat-ramene-le-deficit-a-14-milliards",
+   "titre": "Budget de la Sécu : la copie du Sénat ramène le déficit à 14 milliards, proche de la cible gouvernementale",
+   "url": "https://www.lefigaro.fr/conjoncture/budget-de-la-secu-la-copie-du-senat-ramene-le-deficit-a-14-milliards-proche-de-la-cible-gouvernementale-20261118",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-18T06:22:03.000Z",
+   "image": "https://i.f1g.fr/media/cms/orig/2026/11/18/ba1714853224fc495c34727609a0c887e92df884db7f9ff9a0211aa18d3e54d8.JPG",
+   "categorie": "Fiscalité",
+   "score": 5
+  },
   {
    "id": "franceinfo-conomie-https-www-franceinfo-fr-replay-jt-france-2-20-heures-revenus-professions-sentiment-de-declassement-3-",
    "titre": "Revenus, professions, sentiment de déclassement : 3 infos pour comprendre la classe moyenne",
@@ -815,67 +875,6 @@
    "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~11~04~0dcf095f-23c1-41d3-b301-ee55cb979516.jpg/1200x900/focus-point/1483%2C801/renovation-en-copropriete-40-d-aides-un-pret-a-0-et-une-menace-budgetaire.jpg",
    "categorie": "Fiscalité",
    "score": 3
-  },
-  {
-   "id": "le-monde-conomie-https-www-lemonde-fr-argent-article-2026-11-05-mariage-sous-le-regime-de-la-communaute-les-loyers-du-bi",
-   "titre": "Mariage sous le régime de la communauté : les loyers du bien propre d’un époux sont communs aux deux",
-   "url": "https://www.lemonde.fr/argent/article/2026/11/05/mariage-sous-le-regime-de-la-communaute-les-loyers-du-bien-propre-d-un-epoux-sont-communs-aux-deux_6806818_1657007.html",
-   "source": "Le Monde Économie",
-   "date": "2026-11-05T05:01:00.000Z",
-   "image": "https://img.lemde.fr/2025/08/06/125/0/1500/750/644/322/60/0/08c1982_upload-1-lwc9d7aof2ex-lmargent152.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "entreprendre-service-public-https-entreprendre-service-public-gouv-fr-actualites-a19130-xtor-rss-112",
-   "titre": "les avis de CFE et d'IFER 2026 sont disponibles en ligne",
-   "url": "https://entreprendre.service-public.gouv.fr/actualites/A19130?xtor=RSS-112",
-   "source": "Entreprendre Service-Public",
-   "officiel": true,
-   "date": "2026-11-04T23:00:00.000Z",
-   "image": "https://www.service-public.gouv.fr/webapp/images/actu/extralarge/telephone_ordinateur.jpeg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-californie-la-taxe-de-5-sur-les-milliardaires-soutenue-par-zucman-en",
-   "titre": "Californie : la taxe de 5% sur les milliardaires, soutenue par Zucman, en passe d’être rejetée",
-   "url": "https://www.lefigaro.fr/conjoncture/californie-la-taxe-de-5-sur-les-milliardaires-soutenue-par-zucman-en-passe-d-etre-rejetee-20261104",
-   "source": "Le Figaro Économie",
-   "date": "2026-11-04T15:52:04.000Z",
-   "image": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/04/4fb1e902cadeeea7ce3ecdd62536138860e60875c6ba15bb76731bf12aa5300d.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "capital-https-www-capital-fr-economie-politique-budget-2027-avant-la-bataille-letat-annule-38-milliards-de-credits-pour-",
-   "titre": "Budget 2027 : avant la bataille, l’État annule 3,8 milliards de crédits pour 2026",
-   "url": "https://www.capital.fr/economie-politique/budget-2027-avant-la-bataille-letat-annule-38-milliards-de-credits-pour-2026-1531567",
-   "source": "Capital",
-   "date": "2026-11-04T15:51:10.000Z",
-   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~11~04~924e68eb-399d-43cc-b555-57152c7c704c.jpg/1200x900/focus-point/538%2C288/budget-2027-avant-la-bataille-l-etat-annule-3-8-milliards-de-credits-pour-2026.jpg",
-   "categorie": "Fiscalité",
-   "score": 4
-  },
-  {
-   "id": "economie-gouv-fr-https-www-economie-gouv-fr-entreprises-gerer-son-entreprise-au-quotidien-assurer-sa-cybersecurite-et-la",
-   "titre": "Cybersécurité : des dispositifs publics gratuits pour vous accompagner",
-   "url": "https://www.economie.gouv.fr/entreprises/gerer-son-entreprise-au-quotidien/assurer-sa-cybersecurite-et-la-protection-de-ses-donnees/cybersecurite-des-dispositifs-publics-gratuits",
-   "source": "economie.gouv.fr",
-   "officiel": true,
-   "date": "2026-11-04T14:57:57.000Z",
-   "categorie": "Numérique",
-   "score": 2
-  },
-  {
-   "id": "le-monde-conomie-https-www-lemonde-fr-economie-article-2026-11-04-une-croissance-de-0-5-en-2026-est-difficilement-atteig",
-   "titre": "Une croissance de 0,5 % en 2026 est « difficilement atteignable », selon le Haut Conseil des finances publiques",
-   "url": "https://www.lemonde.fr/economie/article/2026/11/04/une-croissance-de-0-5-en-2026-est-difficilement-atteignable-selon-le-haut-conseil-des-finances-publiques_6806233_3234.html",
-   "source": "Le Monde Économie",
-   "date": "2026-11-04T13:42:37.000Z",
-   "image": "https://img.lemde.fr/2026/11/04/408/0/4898/2449/644/322/60/0/65551a3_ftp-1-8dxrpegkbuvt-afp-d6dr8q7.jpg",
-   "categorie": "Fiscalité",
-   "score": 4
   }
  ],
  "ecartes": []
