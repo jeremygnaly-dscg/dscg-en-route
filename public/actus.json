@@ -1,17 +1,17 @@
 {
- "majLe": "2026-11-18T23:23:33.327Z",
+ "majLe": "2026-11-19T14:24:53.227Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
    "url": "https://www.economie.gouv.fr/rss/toutesactualites",
    "ok": true,
-   "articles": 2
+   "articles": 3
   },
   {
    "nom": "Entreprendre Service-Public",
    "url": "https://www.service-public.fr/abonnements/rss/actu-actu-pro.rss",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "Compta Online",
@@ -36,7 +36,8 @@
   },
   {
    "nom": "CNIL",
-   "ok": false,
+   "url": "https://www.cnil.fr/fr/rss.xml",
+   "ok": true,
    "articles": 0
   },
   {
@@ -49,19 +50,19 @@
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 2
+   "articles": 0
   },
   {
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 0
+   "articles": 3
   },
   {
    "nom": "Capital",
    "url": "https://feed.prismamediadigital.com/v1/cap/rss?sources=capital",
    "ok": true,
-   "articles": 2
+   "articles": 0
   }
  ],
  "images": {
@@ -75,6 +76,56 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "economie-gouv-fr-https-www-economie-gouv-fr-entreprises-gerer-son-entreprise-au-quotidien-gerer-un-commerce-ticket-de-ca",
+   "titre": "Ticket de caisse : professionnels, quelles sont vos obligations ?",
+   "url": "https://www.economie.gouv.fr/entreprises/gerer-son-entreprise-au-quotidien/gerer-un-commerce/ticket-de-caisse-professionnels-quelles-sont-vos-obligations",
+   "source": "economie.gouv.fr",
+   "officiel": true,
+   "date": "2026-11-19T11:17:30.000Z",
+   "categorie": "Finance",
+   "score": 2
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-l-economiste-gabriel-zucman-veut-alerter-sur-les-milliardaires-qui-m",
+   "titre": "L'économiste Gabriel Zucman veut alerter sur \"les milliardaires\" qui \"menacent nos démocraties\" dans un nouveau manifeste",
+   "url": "https://www.franceinfo.fr/economie/l-economiste-gabriel-zucman-veut-alerter-sur-les-milliardaires-qui-menacent-nos-democraties-dans-un-nouveau-manifeste_8289578.html#xtor=RSS-3-%5Beconomie%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-11-19T08:15:36.000Z",
+   "image": "https://www.franceinfo.fr/pictures/H-96Pam3n9rfI8RU-IVDSaaPUC0/0x0:1895x1065/432x243/filters:format(jpg)/2026/11/19/6afeab7187746948349997.png",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-replay-radio-le-brief-eco-baisse-de-la-taxe-sur-l-electricite-plafonnement-du",
+   "titre": "Baisse de la taxe sur l'électricité, plafonnement du prix des carburants... l’Allemagne prend des mesures concrètes pour lutter contre la vie chère",
+   "url": "https://www.franceinfo.fr/replay-radio/le-brief-eco/baisse-de-la-taxe-sur-l-electricite-plafonnement-du-prix-des-carburants-l-allemagne-prend-des-mesures-concretes-pour-lutter-contre-la-vie-chere_8268656.html#xtor=RSS-3-%5Beconomie%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-11-19T06:26:50.000Z",
+   "image": "https://www.franceinfo.fr/pictures/go15OaF59sLJtfXDZsUMx3Cffrs/0x47:1024x623/432x243/filters:format(jpg)/2026/11/19/6afe95d16b7ef135407551.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-vie-au-travail-article-2026-11-19-la-republique-des-travailleurs-un-manifeste-pour",
+   "titre": "« La République des travailleurs » : un manifeste pour « démocratiser » le capitalisme, dans l’entreprise et ailleurs",
+   "url": "https://www.lemonde.fr/vie-au-travail/article/2026/11/19/la-republique-des-travailleurs-un-manifeste-pour-democratiser-le-capitalisme-dans-l-entreprise-et-ailleurs_6813230_6768900.html",
+   "source": "Le Monde Économie",
+   "date": "2026-11-19T05:00:08.000Z",
+   "image": "https://img.lemde.fr/2026/11/16/160/0/1920/960/644/322/60/0/38908da_upload-1-wg5lknjqkhsn-64d3f0c7-fab5-4eaa-a5e1-3abc109994fd.png",
+   "categorie": "Comptabilité & audit",
+   "score": 3
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-moins-d-impot-sur-le-revenu-pour-les-plus-riches-en-2025-8288705-htm",
+   "titre": "Moins d'impôt sur le revenu pour les plus riches en 2025",
+   "url": "https://www.franceinfo.fr/economie/moins-d-impot-sur-le-revenu-pour-les-plus-riches-en-2025_8288705.html#xtor=RSS-3-%5Beconomie%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-11-19T05:00:02.000Z",
+   "image": "https://www.franceinfo.fr/pictures/HcLkzfY88urHMmvxLMiR7Ms4lw0/0x0:1080x1920/fit-in/432x243/filters:upscale():fill(blur):format(jpg)/2026/11/18/6afdd8d356dd6117910475.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
   {
    "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-il-y-a-tout-un-probleme-de-droit-de-succession-francois-hollande-veu",
    "titre": "«Il y a tout un problème de droit de succession» : François Hollande veut créer un statut de «beaux-parents» pour faciliter les transmissions",
@@ -825,56 +876,6 @@
    "image": "https://www.franceinfo.fr/pictures/7xFzekfd3b-XmJ1aNJtM3Z1SAeY/0x113:1730x1086/432x243/filters:format(jpg)/2026/11/05/6aecef669ba00686815851.png",
    "categorie": "Fiscalité",
    "score": 5
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-budget-jordan-bardella-demande-le-vote-en-urgence-d-une-regle-d-or-d",
-   "titre": "Jordan Bardella demande le vote \"en urgence\" d'une \"règle d'or\" dans la Constitution, après le rejet du budget 2027 à l'Assemblée nationale",
-   "url": "https://www.franceinfo.fr/economie/budget/jordan-bardella-demande-le-vote-en-urgence-d-une-regle-d-or-dans-la-constitution-apres-le-rejet-du-budget-2027-a-l-assemblee-nationale_8269751.html#xtor=RSS-3-%5Bgeneral%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-11-05T18:09:03.000Z",
-   "image": "https://www.franceinfo.fr/pictures/u83BUQtnplGkSna4lkl0O-t_z7I/0x53:1024x629/432x243/filters:format(jpg)/2026/11/05/6aecc370643bb126151571.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-on-ne-va-pas-faire-le-cirque-habituel-dans-les-coulisses-des-arbitra",
-   "titre": "« On ne va pas faire le cirque habituel » : dans les coulisses des arbitrages budgétaires de Sébastien Lecornu",
-   "url": "https://www.lefigaro.fr/conjoncture/on-ne-va-pas-faire-le-cirque-habituel-dans-les-coulisses-des-arbitrages-budgetaires-de-sebastien-lecornu-20261105",
-   "source": "Le Figaro Économie",
-   "date": "2026-11-05T18:07:54.000Z",
-   "image": "https://i.f1g.fr/media/cms/1975x1110_crop/2026/11/05/6dd423b0ae34e08c88e8d18683dd22fd6bfe4ad7cae867daba4b91907c268ed2.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-budget-2027-jordan-bardella-demande-le-vote-en-urgence-d-une-regle-d",
-   "titre": "Budget 2027 : Jordan Bardella demande le vote «en urgence» d'une «règle d'or» dans la Constitution",
-   "url": "https://www.lefigaro.fr/conjoncture/budget-2027-jordan-bardella-demande-le-vote-en-urgence-d-une-regle-d-or-dans-la-constitution-20261105",
-   "source": "Le Figaro Économie",
-   "date": "2026-11-05T17:54:41.000Z",
-   "image": "https://i.f1g.fr/media/cms/2927x1951_crop/2026/11/05/6096da6cd7ea3fd263ff001ebb39687c0d41058ee8922a967ea30e0d21024bc5.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "village-de-la-justice-https-www-village-justice-com-articles-licenciement-economique-seule-constatation-une-baisse-chiff",
-   "titre": "Licenciement économique : la seule constatation d'une baisse du chiffre d'affaires ne suffit pas à caractériser des difficultés économiques. Par Frédéric Chhum, Avocat et Léa Fakhreddine, Étudiante en Droit.",
-   "url": "https://www.village-justice.com/articles/licenciement-economique-seule-constatation-une-baisse-chiffre-affaires-suffit,59599.html?utm_source=backend&utm_medium=RSS&utm_campaign=RSS_Reseaux",
-   "source": "Village de la Justice",
-   "date": "2026-11-05T17:30:00.000Z",
-   "image": "https://www.village-justice.com/articles/local/cache-gd2/73/2e09fdf830ffba33dbff1f58254309.jpg?1791978744",
-   "categorie": "Social",
-   "score": 3
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-l-exit-tax-surprise-de-giorgia-meloni-fait-des-vagues-en-italie-et-j",
-   "titre": "L’«exit tax» surprise de Giorgia Meloni fait des vagues en Italie et jusqu’à Londres",
-   "url": "https://www.lefigaro.fr/conjoncture/l-exit-tax-surprise-de-giorgia-meloni-fait-des-vagues-en-italie-et-jusqu-a-londres-20261105",
-   "source": "Le Figaro Économie",
-   "date": "2026-11-05T17:12:38.000Z",
-   "image": "https://i.f1g.fr/media/cms/3000x1688_crop/2026/11/05/789ee66baec5f12e89120342697b7695a33c641c6c7a3c6d5b5f95b3984458cd.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
   }
  ],
  "ecartes": []
