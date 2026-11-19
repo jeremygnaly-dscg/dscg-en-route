@@ -6467,5 +6467,299 @@
   ],
   "modele": "finance",
   "accroche": "Zéro chiffre d'affaires chez ta filiale… et 2,4 M€ dans les comptes du groupe."
+ },
+ {
+  "id": "m-mali-fiscal",
+  "tag": "Dessine-moi le M&A",
+  "segments": [
+   {
+    "voix": "300 000 € de mali de fusion… et le fisc n'en déduit que 100 000 €.",
+    "dit": "Trois cent mille euros de mali de fusion… et le fisc n'en déduit que cent mille euros."
+   },
+   {
+    "voix": "Azur absorbe sa filiale à 100 %, sous le régime de faveur. Titres : 900 000 €. Actif net reçu : 600 000 €.",
+    "titre": "Mali de fusion · art. 210 A CGI",
+    "rangs": [
+     {
+      "lib": "Titres annulés",
+      "val": "900 000 €"
+     },
+     {
+      "op": "−",
+      "lib": "Actif net reçu",
+      "val": "600 000 €"
+     },
+     {
+      "op": "=",
+      "lib": "Mali",
+      "val": "300 000 €",
+      "style": "fort"
+     }
+    ],
+    "dit": "Azur absorbe sa filiale à cent pour cent, sous le régime de faveur. Titres : neuf cent mille euros. Actif net reçu : six cent mille euros."
+   },
+   {
+    "voix": "200 000 € viennent de la plus-value latente du terrain : c'est le mali technique. À l'actif, jamais déductible.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Mali technique",
+      "val": "200 000 €"
+     },
+     {
+      "lib": "Déductible",
+      "val": "Jamais",
+      "style": "fort"
+     }
+    ],
+    "dit": "Deux cent mille euros viennent de la plus-value latente du terrain : c'est le mali technique. À l'actif, jamais déductible."
+   },
+   {
+    "voix": "Le reste, 100 000 €, est un vrai mali : une charge financière, déductible.",
+    "rangs": [
+     {
+      "op": "+",
+      "lib": "Vrai mali",
+      "val": "100 000 €"
+     },
+     {
+      "lib": "Déductible",
+      "val": "✓",
+      "style": "ok"
+     }
+    ],
+    "dit": "Le reste, cent mille euros, est un vrai mali : une charge financière, déductible."
+   },
+   {
+    "voix": "Pourquoi ? Ces plus-values n'ont jamais été imposées chez l'absorbée.",
+    "dit": "Pourquoi ? Ces plus-values n'ont jamais été imposées chez l'absorbée."
+   }
+  ],
+  "modele": "finance",
+  "accroche": "300 000 € de mali de fusion… et le fisc n'en déduit que 100 000 €."
+ },
+ {
+  "id": "m-eene",
+  "tag": "Dessine-moi la finance",
+  "segments": [
+   {
+    "voix": "Effets escomptés à la banque ? Pour l'analyste, ton client te doit toujours cet argent.",
+    "dit": "Effets escomptés à la banque ? Pour l'analyste, ton client te doit toujours cet argent."
+   },
+   {
+    "voix": "Dans le bilan fonctionnel, les effets escomptés non échus reviennent dans les créances clients.",
+    "titre": "Bilan fonctionnel · retraitements",
+    "rangs": [
+     {
+      "op": "+",
+      "lib": "Créances clients",
+      "val": "EENE"
+     }
+    ],
+    "dit": "Dans le bilan fonctionnel, les effets escomptés non échus reviennent dans les créances clients."
+   },
+   {
+    "voix": "Et on les ajoute aussi à la trésorerie passive.",
+    "rangs": [
+     {
+      "op": "+",
+      "lib": "Trésorerie passive",
+      "val": "EENE"
+     }
+    ],
+    "dit": "Et on les ajoute aussi à la trésorerie passive."
+   },
+   {
+    "voix": "Le BFR monte, la trésorerie nette baisse d'autant. Le fonds de roulement, lui, ne bouge pas.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "BFR",
+      "val": "Hausse"
+     },
+     {
+      "lib": "Trésorerie nette",
+      "val": "Baisse",
+      "style": "fort"
+     },
+     {
+      "lib": "FRNG",
+      "val": "Inchangé"
+     }
+    ],
+    "dit": "Le besoin en fonds de roulement monte, la trésorerie nette baisse d'autant. Le fonds de roulement, lui, ne bouge pas."
+   },
+   {
+    "voix": "Autre retraitement : le capital souscrit non appelé sort des capitaux propres.",
+    "dit": "Autre retraitement : le capital souscrit non appelé sort des capitaux propres."
+   }
+  ],
+  "modele": "finance",
+  "accroche": "Effets escomptés à la banque ? Pour l'analyste, ton client te doit toujours cet argent."
+ },
+ {
+  "id": "c-seuil-signification",
+  "tag": "Dessine-moi le droit",
+  "segments": [
+   {
+    "voix": "Ton commissaire aux comptes trouve une erreur de 30 000 €… et certifie quand même sans réserve.",
+    "dit": "Ton commissaire aux comptes trouve une erreur de trente mille euros… et certifie quand même sans réserve."
+   },
+   {
+    "voix": "Créance douteuse non dépréciée : 30 000 €. Seuil de signification de l'auditeur : 60 000 €.",
+    "titre": "Seuil de signification · NEP 320",
+    "rangs": [
+     {
+      "lib": "Anomalie",
+      "val": "30 000 €"
+     },
+     {
+      "lib": "Seuil",
+      "val": "60 000 €",
+      "style": "fort"
+     }
+    ],
+    "dit": "Créance douteuse non dépréciée : trente mille euros. Seuil de signification de l'auditeur : soixante mille euros."
+   },
+   {
+    "voix": "Le seuil, c'est le montant au-delà duquel une anomalie influencerait le jugement des lecteurs.",
+    "dit": "Le seuil, c'est le montant au-delà duquel une anomalie influencerait le jugement des lecteurs."
+   },
+   {
+    "voix": "Isolée, sous le seuil, sans enjeu qualitatif : certification sans réserve.",
+    "rangs": [
+     {
+      "op": "=",
+      "lib": "Sans réserve",
+      "val": "✓",
+      "style": "ok"
+     }
+    ],
+    "dit": "Isolée, sous le seuil, sans enjeu qualitatif : certification sans réserve."
+   },
+   {
+    "voix": "Au-dessus du seuil : réserve, voire refus ou impossibilité de certifier.",
+    "rangs": [
+     {
+      "lib": "Au-dessus du seuil",
+      "val": "Réserve",
+      "style": "fort"
+     }
+    ],
+    "dit": "Au-dessus du seuil : réserve, voire refus ou impossibilité de certifier."
+   }
+  ],
+  "modele": "finance",
+  "accroche": "Ton commissaire aux comptes trouve une erreur de 30 000 €… et certifie quand même sans réserve."
+ },
+ {
+  "id": "d-reclamation",
+  "tag": "Dessine-moi le droit",
+  "segments": [
+   {
+    "voix": "Redressé par le fisc ? Tu ne peux pas aller directement devant le juge.",
+    "dit": "Redressé par le fisc ? Tu ne peux pas aller directement devant le juge."
+   },
+   {
+    "voix": "D'abord, une réclamation préalable à l'administration. Sans elle, ton recours est irrecevable.",
+    "titre": "Contentieux fiscal · L. 190 LPF",
+    "rangs": [
+     {
+      "lib": "Réclamation préalable",
+      "val": "✓",
+      "style": "fort"
+     }
+    ],
+    "dit": "D'abord, une réclamation préalable à l'administration. Sans elle, ton recours est irrecevable."
+   },
+   {
+    "voix": "Délai : en général, le 31 décembre de la deuxième année après la mise en recouvrement.",
+    "rangs": [
+     {
+      "lib": "Délai",
+      "val": "31/12 N+2"
+     }
+    ],
+    "dit": "Délai : en général, le trente et un décembre de la deuxième année après la mise en recouvrement."
+   },
+   {
+    "voix": "Le fisc a 6 mois pour répondre. Son silence vaut rejet : tu as alors 2 mois pour saisir le juge.",
+    "rangs": [
+     {
+      "lib": "Réponse du fisc",
+      "val": "6 mois"
+     },
+     {
+      "lib": "Saisir le juge",
+      "val": "2 mois"
+     }
+    ],
+    "dit": "Le fisc a six mois pour répondre. Son silence vaut rejet : tu as alors deux mois pour saisir le juge."
+   },
+   {
+    "voix": "TVA ou impôt sur les sociétés : tribunal administratif. Enregistrement : tribunal judiciaire.",
+    "dit": "T.V.A. ou impôt sur les sociétés : tribunal administratif. Enregistrement : tribunal judiciaire."
+   }
+  ],
+  "modele": "finance",
+  "accroche": "Redressé par le fisc ? Tu ne peux pas aller directement devant le juge."
+ },
+ {
+  "id": "m-offre-public",
+  "tag": "Dessine-moi la finance",
+  "segments": [
+   {
+    "voix": "Ta SAS veut vendre ses actions à des milliers d'épargnants ? En principe, c'est interdit.",
+    "dit": "Ta S.A.S veut vendre ses actions à des milliers d'épargnants ? En principe, c'est interdit."
+   },
+   {
+    "voix": "Une offre au public de titres exige un prospectus, approuvé par l'AMF.",
+    "titre": "Offre au public de titres",
+    "rangs": [
+     {
+      "lib": "Prospectus approuvé AMF",
+      "val": "✓"
+     }
+    ],
+    "dit": "Une offre au public de titres exige un prospectus, approuvé par l'A.M.F."
+   },
+   {
+    "voix": "Exemptés : les offres aux investisseurs qualifiés, et celles à moins de 150 personnes par État.",
+    "rangs": [
+     {
+      "lib": "Investisseurs qualifiés",
+      "val": "Exempté"
+     },
+     {
+      "lib": "Moins de 150 personnes",
+      "val": "Exempté"
+     }
+    ],
+    "dit": "Exemptés : les offres aux investisseurs qualifiés, et celles à moins de cent cinquante personnes par État."
+   },
+   {
+    "voix": "Et la SAS en est exclue, sauf offres aux investisseurs qualifiés ou financement participatif.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "SAS",
+      "val": "Exclue",
+      "style": "fort"
+     },
+     {
+      "lib": "Financement participatif",
+      "val": "✓",
+      "style": "ok"
+     }
+    ],
+    "dit": "Et la S.A.S en est exclue, sauf offres aux investisseurs qualifiés ou financement participatif."
+   },
+   {
+    "voix": "L'AMF, elle, autorise, surveille et sanctionne.",
+    "dit": "L'A.M.F, elle, autorise, surveille et sanctionne."
+   }
+  ],
+  "modele": "finance",
+  "accroche": "Ta SAS veut vendre ses actions à des milliers d'épargnants ? En principe, c'est interdit."
  }
 ]
