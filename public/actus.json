@@ -1,11 +1,11 @@
 {
- "majLe": "2026-11-20T13:59:43.378Z",
+ "majLe": "2026-11-20T23:05:25.922Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
    "url": "https://www.economie.gouv.fr/rss/toutesactualites",
    "ok": true,
-   "articles": 2
+   "articles": 1
   },
   {
    "nom": "Entreprendre Service-Public",
@@ -38,7 +38,7 @@
    "nom": "CNIL",
    "url": "https://www.cnil.fr/fr/rss.xml",
    "ok": true,
-   "articles": 1
+   "articles": 2
   },
   {
    "nom": "Le Monde Économie",
@@ -50,19 +50,19 @@
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 3
+   "articles": 1
   },
   {
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 2
+   "articles": 1
   },
   {
    "nom": "Capital",
    "url": "https://feed.prismamediadigital.com/v1/cap/rss?sources=capital",
    "ok": true,
-   "articles": 0
+   "articles": 1
   }
  ],
  "images": {
@@ -77,6 +77,36 @@
  },
  "items": [
   {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-finances-perso-avantage-fiscal-inquietudes-pour-l-avenir-comment-le-plan-d-eparg",
+   "titre": "Avantage fiscal, inquiétudes pour l’avenir… Comment le plan d’épargne-retraite a conquis près de 14 millions de Français",
+   "url": "https://www.lefigaro.fr/finances-perso/avantage-fiscal-inquietudes-pour-l-avenir-comment-le-plan-d-epargne-retraite-a-conquis-pres-de-14-millions-de-francais-20261120",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-20T18:00:00.000Z",
+   "image": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/20/51a57680954e2a893754d6da18cc2d62e36a50fddaa4ad22623bdf2415577fba.jpg",
+   "categorie": "Fiscalité",
+   "score": 5
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-retraite-jean-pierre-farandou-se-dit-favorable-a-la-suppression-de-l",
+   "titre": "Jean-Pierre Farandou se dit favorable à la suppression de l'abattement fiscal de 10% appliqué aux pensions de retraites",
+   "url": "https://www.franceinfo.fr/economie/retraite/jean-pierre-farandou-se-dit-favorable-a-la-suppression-de-l-abattement-fiscal-de-10-applique-aux-pensions-de-retraites_8292620.html#xtor=RSS-3-%5Beconomie%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-11-20T16:40:15.000Z",
+   "image": "https://www.franceinfo.fr/pictures/bunLWKA9eKJZRti9XTXe_dIQVzo/0x0:1024x576/432x243/filters:format(jpg)/2026/11/20/6b007389bfa84696715522.jpg",
+   "categorie": "Fiscalité",
+   "score": 4
+  },
+  {
+   "id": "capital-https-www-capital-fr-economie-politique-dominique-de-villepin-candidat-isf-dividendes-deficit-son-programme-econ",
+   "titre": "Dominique de Villepin candidat : ISF, dividendes, déficit, son programme économique",
+   "url": "https://www.capital.fr/economie-politique/dominique-de-villepin-candidat-isf-dividendes-deficit-son-programme-economique-1532026",
+   "source": "Capital",
+   "date": "2026-11-20T14:36:18.000Z",
+   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~11~20~e44b521e-d6f9-4e67-943f-a26ea803d626.jpg/1200x900/focus-point/1984%2C894/dominique-de-villepin-candidat-isf-dividendes-deficit-son-programme-economique.jpg",
+   "categorie": "Fiscalité",
+   "score": 7
+  },
+  {
    "id": "le-figaro-conomie-https-www-lefigaro-fr-secteur-high-tech-apres-atos-les-etranges-pratiques-comptables-passees-de-worldl",
    "titre": "Les étranges pratiques comptables passées de Worldline",
    "url": "https://www.lefigaro.fr/secteur/high-tech/apres-atos-les-etranges-pratiques-comptables-passees-de-worldline-20261120",
@@ -85,6 +115,26 @@
    "image": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/20/f917b0b3bb91797ee28444b678ad9b2cf03dabd2b1bcfd277ee5e3c762745c25.jpg",
    "categorie": "Comptabilité & audit",
    "score": 3
+  },
+  {
+   "id": "cnil-https-www-cnil-fr-fr-gpa-ia-education",
+   "titre": "IA et éducation : une résolution mondiale pour la protection des données",
+   "url": "https://www.cnil.fr/fr/gpa-ia-education",
+   "source": "CNIL",
+   "officiel": true,
+   "date": "2026-11-20T12:00:00.000Z",
+   "categorie": "Numérique",
+   "score": 2
+  },
+  {
+   "id": "cnil-https-www-cnil-fr-fr-48e-gpa",
+   "titre": "48e Assemblée mondiale pour la protection de la vie privée (GPA)",
+   "url": "https://www.cnil.fr/fr/48e-gpa",
+   "source": "CNIL",
+   "officiel": true,
+   "date": "2026-11-20T12:00:00.000Z",
+   "categorie": "Numérique",
+   "score": 2
   },
   {
    "id": "cnil-https-www-cnil-fr-fr-recommandation-pixels-retour-dexperience",
@@ -826,56 +876,6 @@
    "image": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/09/cac6f897b6a8ee41dc0d024ba9f54ff223b2fe88b84910f834a1912d70b6bfd2.jpg",
    "categorie": "Fiscalité",
    "score": 5
-  },
-  {
-   "id": "le-monde-conomie-https-www-lemonde-fr-politique-article-2026-11-09-la-cour-des-comptes-repart-a-la-charge-contre-les-nic",
-   "titre": "La Cour des comptes repart à la charge contre les niches fiscales",
-   "url": "https://www.lemonde.fr/politique/article/2026/11/09/la-cour-des-comptes-repart-a-la-charge-contre-les-niches-fiscales_6808640_823448.html",
-   "source": "Le Monde Économie",
-   "date": "2026-11-09T10:48:06.000Z",
-   "image": "https://img.lemde.fr/2023/04/17/154/0/3000/1500/644/322/60/0/c430bdb_1681717636668-ghr.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "capital-https-www-capital-fr-economie-politique-cour-des-comptes-18-mesures-pour-economiser-jusqua-38-milliards-deuros-d",
-   "titre": "Cour des comptes : 18 mesures pour économiser jusqu’à 38 milliards d’euros dès 2027",
-   "url": "https://www.capital.fr/economie-politique/cour-des-comptes-18-mesures-pour-economiser-jusqua-38-milliards-deuros-des-2027-1531713",
-   "source": "Capital",
-   "date": "2026-11-09T10:39:51.000Z",
-   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~11~09~e0149967-c4a9-4300-9492-158ca3eb0b63.jpg/1200x900/focus-point/1328%2C806/cour-des-comptes-18-mesures-pour-economiser-jusqu-a-38-milliards-d-euros-des-2027.jpg",
-   "categorie": "Fiscalité",
-   "score": 4
-  },
-  {
-   "id": "capital-https-www-capital-fr-votre-retraite-per-combien-le-fisc-reprend-a-la-sortie-selon-le-mode-de-retrait-1531540",
-   "titre": "PER : combien le fisc reprend à la sortie, selon le mode de retrait",
-   "url": "https://www.capital.fr/votre-retraite/per-combien-le-fisc-reprend-a-la-sortie-selon-le-mode-de-retrait-1531540",
-   "source": "Capital",
-   "date": "2026-11-09T08:00:00.000Z",
-   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~11~03~74ff060e-5285-4d14-a62b-cf85a2f3eb4c.jpg/1200x900/focus-point/1922%2C769/per-combien-le-fisc-reprend-a-la-sortie-selon-le-mode-de-retrait.jpg",
-   "categorie": "Fiscalité",
-   "score": 4
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-emploi-si-vous-augmentez-le-smic-c-est-oblige-de-maintenir-le-differ",
-   "titre": "\"Si vous augmentez le SMIC, c'est obligé de maintenir le différentiel des autres salaires\" explique le président des Entrepreneurs Paris Île-de-France",
-   "url": "https://www.franceinfo.fr/economie/emploi/si-vous-augmentez-le-smic-c-est-oblige-de-maintenir-le-differentiel-des-autres-salaires-explique-le-president-des-entrepreneurs-paris-ile-de-france_8273768.html#xtor=RSS-3-%5Bgeneral%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-11-08T21:04:27.000Z",
-   "image": "https://www.franceinfo.fr/pictures/2cZabqkoopU4H5YOwDeaJoyiu1o/0x0:1920x1080/432x243/filters:format(jpg)/2026/05/01/69f4d8f9315da683095711.jpg",
-   "categorie": "Fiscalité",
-   "score": 4
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-societes-le-risque-d-une-fiscalite-trop-forte-est-d-etre-contre-productive-20261",
-   "titre": "« Le risque d’une fiscalité trop forte est d’être contre-productive »",
-   "url": "https://www.lefigaro.fr/societes/le-risque-d-une-fiscalite-trop-forte-est-d-etre-contre-productive-20261108",
-   "source": "Le Figaro Économie",
-   "date": "2026-11-08T13:47:47.000Z",
-   "image": "https://i.f1g.fr/media/cms/1823x1025_crop/2026/11/08/9cbf9750c23573b24671bd195aed3173bdc6fdd6ccb8f1ee63966e5f31d8a49c.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
   }
  ],
  "ecartes": []
