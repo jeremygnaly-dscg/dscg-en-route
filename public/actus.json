@@ -1,5 +1,5 @@
 {
- "majLe": "2026-11-19T23:34:42.231Z",
+ "majLe": "2026-11-20T13:59:43.378Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -38,7 +38,7 @@
    "nom": "CNIL",
    "url": "https://www.cnil.fr/fr/rss.xml",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Le Monde Économie",
@@ -50,13 +50,13 @@
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 0
+   "articles": 3
   },
   {
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 0
+   "articles": 2
   },
   {
    "nom": "Capital",
@@ -76,6 +76,66 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-secteur-high-tech-apres-atos-les-etranges-pratiques-comptables-passees-de-worldl",
+   "titre": "Les étranges pratiques comptables passées de Worldline",
+   "url": "https://www.lefigaro.fr/secteur/high-tech/apres-atos-les-etranges-pratiques-comptables-passees-de-worldline-20261120",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-20T13:33:12.000Z",
+   "image": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/20/f917b0b3bb91797ee28444b678ad9b2cf03dabd2b1bcfd277ee5e3c762745c25.jpg",
+   "categorie": "Comptabilité & audit",
+   "score": 3
+  },
+  {
+   "id": "cnil-https-www-cnil-fr-fr-recommandation-pixels-retour-dexperience",
+   "titre": "Pixels de suivi dans les courriels : la CNIL sollicite un premier retour d’expérience sur sa recommandation",
+   "url": "https://www.cnil.fr/fr/recommandation-pixels-retour-dexperience",
+   "source": "CNIL",
+   "officiel": true,
+   "date": "2026-11-20T12:00:00.000Z",
+   "categorie": "Numérique",
+   "score": 2
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-budget-2027-6-milliards-d-euros-d-economies-supplementaires-ne-pourr",
+   "titre": "Budget 2027 : 6 milliards d’euros d’économies supplémentaires ne pourront «être qu’un point de départ», affirme David Amiel",
+   "url": "https://www.lefigaro.fr/conjoncture/budget-2027-6-milliards-d-euros-d-economies-supplementaires-ne-pourront-etre-qu-un-point-de-depart-affirme-david-amiel-20261120",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-20T09:58:08.000Z",
+   "image": "https://i.f1g.fr/media/cms/orig/2026/11/20/fec9c634fa2389715887ce7b56ad4316457d99a61b958e33cd62eaae79ec2bf4.JPG",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-vie-professionnelle-la-cour-de-cassation-a-tranche-il-n-est-pas-legal-d-utiliser",
+   "titre": "La Cour de cassation a tranché : il n’est pas légal d’utiliser ce stratagème pour payer les heures supplémentaires",
+   "url": "https://www.lefigaro.fr/vie-professionnelle/la-cour-de-cassation-a-tranche-il-n-est-pas-legal-d-utiliser-ce-stratageme-pour-payer-les-heures-supplementaires-20261120",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-20T09:39:16.000Z",
+   "image": "https://i.f1g.fr/media/cms/orig/2026/11/20/eb93993c2bc461b5c1a8050639a79a2fe4290e6f002b08a9ea819a651dd11f2d.JPG",
+   "categorie": "Social",
+   "score": 4
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-budget-au-moins-6-milliards-d-euros-d-economies-supplementaires-sont",
+   "titre": "Au moins 6 milliards d'euros d'économies supplémentaires sont nécessaires pour boucler le budget 2027, affirme le ministre des Comptes publics",
+   "url": "https://www.franceinfo.fr/economie/budget/au-moins-6-milliards-d-euros-d-economies-supplementaires-sont-necessaires-pour-boucler-le-budget-2027-reconnait-le-ministre-des-comptes-publics_8291879.html#xtor=RSS-3-%5Beconomie%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-11-20T09:02:18.000Z",
+   "image": "https://www.franceinfo.fr/pictures/oIfeq0CRS6u0IcyxaH7bd71_3h8/0x0:8061x4534/432x243/filters:format(jpg)/2026/11/20/6b0008cc8ef82660985598.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-entreprises-tout-est-arrete-le-cout-de-la-transmission-devient-total",
+   "titre": "\"Tout est arrêté, le coût de la transmission devient totalement prohibitif\" : des entrepreneurs dénoncent la réforme de l'apport-cession",
+   "url": "https://www.franceinfo.fr/economie/entreprises/tout-est-arrete-le-cout-de-la-transmission-devient-totalement-prohibitif-des-entrepreneurs-denoncent-la-reforme-de-l-apport-cession_8290397.html#xtor=RSS-3-%5Beconomie%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-11-20T05:04:14.000Z",
+   "image": "https://www.franceinfo.fr/pictures/j5u_tLwEX_HK1w4OfvrYlZBuev4/0x430:8256x5074/432x243/filters:format(jpg)/2026/11/19/6aff4cf2edc51403361995.jpg",
+   "categorie": "Fiscalité",
+   "score": 5
+  },
   {
    "id": "economie-gouv-fr-https-www-economie-gouv-fr-entreprises-gerer-son-entreprise-au-quotidien-gerer-un-commerce-ticket-de-ca",
    "titre": "Ticket de caisse : professionnels, quelles sont vos obligations ?",
@@ -816,66 +876,6 @@
    "image": "https://i.f1g.fr/media/cms/1823x1025_crop/2026/11/08/9cbf9750c23573b24671bd195aed3173bdc6fdd6ccb8f1ee63966e5f31d8a49c.jpg",
    "categorie": "Fiscalité",
    "score": 3
-  },
-  {
-   "id": "capital-https-www-capital-fr-votre-argent-dons-aux-associations-les-francais-sont-ils-devenus-radins-la-chronique-de-jea",
-   "titre": "Dons aux associations : les Français sont-ils devenus radins ? La chronique de Jean-Jacques Manceau",
-   "url": "https://www.capital.fr/votre-argent/dons-aux-associations-les-francais-sont-ils-devenus-radins-la-chronique-de-jean-jacques-manceau-1531640",
-   "source": "Capital",
-   "date": "2026-11-08T08:00:00.000Z",
-   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~11~05~4a5e69cf-02bc-446a-9ffb-e124f4d09b11.jpg/1200x900/focus-point/1674%2C556/dons-aux-associations-les-francais-sont-ils-devenus-radins-la-chronique-de-jean-jacques-manceau.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-politique-augmentation-du-smic-la-premiere-chose-qu-on-pourrait-faire-dans-un",
-   "titre": "Augmentation du Smic : \"La première chose qu'on pourrait faire, dans un budget aujourd'hui, c'est réhabiliter l'Impôt de solidarité sur la fortune\", propose Guillaume Lacroix, président du Parti radical de gauche",
-   "url": "https://www.franceinfo.fr/politique/augmentation-du-smic-la-premiere-chose-qu-on-pourrait-faire-dans-un-budget-aujourd-hui-c-est-rehabiliter-l-impot-de-solidarite-sur-la-fortune-propose-guillaume-lacroix-president-du-parti-radical-de-gauche_8271443.html#xtor=RSS-3-%5Bgeneral%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-11-06T19:18:17.000Z",
-   "image": "https://www.franceinfo.fr/pictures/SG6jh9d5vi-VnHctC_5ccAirK_4/28x0:1190x654/432x243/filters:format(jpg)/2026/11/06/6aee2735a2965706374471.jpg",
-   "categorie": "Fiscalité",
-   "score": 4
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-conso-la-frequentation-de-shein-et-temu-en-chute-libre-au-troisieme-trimestre-pl",
-   "titre": "La fréquentation de Shein et Temu en chute libre au troisième trimestre, plombée par la taxe sur les petits colis",
-   "url": "https://www.lefigaro.fr/conso/la-frequentation-de-shein-et-temu-en-chute-libre-au-troisieme-trimestre-plombee-par-la-taxe-sur-les-petits-colis-20261106",
-   "source": "Le Figaro Économie",
-   "date": "2026-11-06T16:19:14.000Z",
-   "image": "https://i.f1g.fr/media/cms/3000x2284_crop/2026/11/06/38619e013f03e32ee3e956a2eb43d697dedcc80ae69ad548f4530289e7d205bb.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "cnil-https-www-cnil-fr-fr-recherches-internes-sante-quelles-obligations",
-   "titre": "Recherches internes : quelles sont les obligations pour les professionnels de santé ?",
-   "url": "https://www.cnil.fr/fr/recherches-internes-sante-quelles-obligations",
-   "source": "CNIL",
-   "officiel": true,
-   "date": "2026-11-06T12:00:00.000Z",
-   "categorie": "Finance",
-   "score": 4
-  },
-  {
-   "id": "le-monde-conomie-https-www-lemonde-fr-economie-article-2026-11-06-en-italie-une-taxe-de-sortie-pour-les-grandes-fortunes",
-   "titre": "En Italie, une « taxe de sortie » pour les grandes fortunes",
-   "url": "https://www.lemonde.fr/economie/article/2026/11/06/en-italie-une-taxe-de-sortie-pour-les-grandes-fortunes_6807773_3234.html",
-   "source": "Le Monde Économie",
-   "date": "2026-11-06T10:45:05.000Z",
-   "image": "https://img.lemde.fr/2026/11/03/39/0/3000/1500/644/322/60/0/45638d5_ftp-1-b7erftelgzln-d4b97645b65846a58486720f7eb537fb-0-59ba917cfbca49359a333a8d46959265.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-on-n-aurait-jamais-du-les-privatiser-ou-va-l-argent-des-autoroutes-8",
-   "titre": "\"On n'aurait jamais dû les privatiser\" : où va l'argent des autoroutes ?",
-   "url": "https://www.franceinfo.fr/economie/on-n-aurait-jamais-du-les-privatiser-ou-va-l-argent-des-autoroutes_8269901.html#xtor=RSS-3-%5Bgeneral%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-11-05T22:09:32.000Z",
-   "image": "https://www.franceinfo.fr/pictures/7xFzekfd3b-XmJ1aNJtM3Z1SAeY/0x113:1730x1086/432x243/filters:format(jpg)/2026/11/05/6aecef669ba00686815851.png",
-   "categorie": "Fiscalité",
-   "score": 5
   }
  ],
  "ecartes": []
