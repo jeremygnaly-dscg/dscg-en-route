@@ -6761,5 +6761,337 @@
   ],
   "modele": "finance",
   "accroche": "Ta SAS veut vendre ses actions à des milliers d'épargnants ? En principe, c'est interdit."
+ },
+ {
+  "id": "m-diversification",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "accroche": "Tu diversifies ton portefeuille… et une partie du risque ne disparaît jamais.",
+  "segments": [
+   {
+    "voix": "Tu diversifies ton portefeuille… et une partie du risque ne disparaît jamais.",
+    "dit": "Tu diversifies ton portefeuille… et une partie du risque ne disparaît jamais."
+   },
+   {
+    "voix": "Le risque d'une action a deux parts : le risque spécifique, propre à l'entreprise, et le risque systématique, lié au marché.",
+    "titre": "Le risque d'une action",
+    "rangs": [
+     {
+      "lib": "Risque spécifique",
+      "val": "Entreprise"
+     },
+     {
+      "lib": "Risque systématique",
+      "val": "Marché"
+     }
+    ],
+    "dit": "Le risque d'une action a deux parts : le risque spécifique, propre à l'entreprise, et le risque systématique, lié au marché."
+   },
+   {
+    "voix": "La diversification élimine le premier. Pas le second.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Risque spécifique",
+      "val": "Éliminé",
+      "style": "ok"
+     },
+     {
+      "lib": "Risque systématique",
+      "val": "Reste",
+      "style": "fort"
+     }
+    ],
+    "dit": "La diversification élimine le premier. Pas le second."
+   },
+   {
+    "voix": "Ce risque de marché se mesure par le bêta : à 1,3, l'action amplifie les mouvements du marché de 30 %.",
+    "rangs": [
+     {
+      "lib": "Bêta",
+      "val": "1,3"
+     },
+     {
+      "op": "=",
+      "lib": "Mouvements du marché",
+      "val": "+ 30 %",
+      "style": "fort"
+     }
+    ],
+    "dit": "Ce risque de marché se mesure par le bêta : à un virgule trois, l'action amplifie les mouvements du marché de trente pour cent."
+   },
+   {
+    "voix": "C'est pour ça que le MEDAF ne rémunère que le risque systématique.",
+    "dit": "C'est pour ça que le Médaf ne rémunère que le risque systématique."
+   }
+  ]
+ },
+ {
+  "id": "m-cessation-paiements",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "accroche": "Des pertes, même énormes, ne suffisent pas à mettre ta boîte en cessation des paiements.",
+  "segments": [
+   {
+    "voix": "Des pertes, même énormes, ne suffisent pas à mettre ta boîte en cessation des paiements.",
+    "dit": "Des pertes, même énormes, ne suffisent pas à mettre ta boîte en cessation des paiements."
+   },
+   {
+    "voix": "Le critère : ne plus pouvoir payer le passif exigible avec l'actif disponible. Trésorerie, pas rentabilité.",
+    "titre": "Cessation des paiements",
+    "rangs": [
+     {
+      "lib": "Pertes comptables",
+      "val": "✗"
+     },
+     {
+      "lib": "Capitaux propres négatifs",
+      "val": "✗"
+     },
+     {
+      "lib": "Trésorerie insuffisante",
+      "val": "✓",
+      "style": "fort"
+     }
+    ],
+    "dit": "Le critère : ne plus pouvoir payer le passif exigible avec l'actif disponible. Trésorerie, pas rentabilité."
+   },
+   {
+    "voix": "Le dirigeant a alors 45 jours pour demander l'ouverture d'une procédure.",
+    "rangs": [
+     {
+      "lib": "Délai pour agir",
+      "val": "45 j",
+      "style": "fort"
+     }
+    ],
+    "dit": "Le dirigeant a alors quarante-cinq jours pour demander l'ouverture d'une procédure."
+   },
+   {
+    "voix": "Redressement si un rétablissement ou une cession paraît possible. Sinon, liquidation.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Sauvable : redressement",
+      "val": "✓",
+      "style": "ok"
+     },
+     {
+      "lib": "Sinon : liquidation",
+      "val": "✗",
+      "style": "fort"
+     }
+    ],
+    "dit": "Redressement si un rétablissement ou une cession paraît possible. Sinon, liquidation."
+   },
+   {
+    "voix": "Retiens : c'est la trésorerie qui décide, pas le résultat.",
+    "dit": "Retiens : c'est la trésorerie qui décide, pas le résultat."
+   }
+  ]
+ },
+ {
+  "id": "c-perimetre",
+  "modele": "finance",
+  "tag": "Dessine-moi la conso",
+  "accroche": "Filiale achetée le 1er juillet ? Son résultat de janvier à juin reste hors de tes comptes consolidés.",
+  "segments": [
+   {
+    "voix": "Filiale achetée le 1er juillet ? Son résultat de janvier à juin reste hors de tes comptes consolidés.",
+    "dit": "Filiale achetée le premier juillet ? Son résultat de janvier à juin reste hors de tes comptes consolidés."
+   },
+   {
+    "voix": "Entrent dans le périmètre : contrôle exclusif, contrôle conjoint ou influence notable.",
+    "titre": "Périmètre de consolidation",
+    "rangs": [
+     {
+      "lib": "Contrôle exclusif",
+      "val": "✓"
+     },
+     {
+      "lib": "Contrôle conjoint",
+      "val": "✓"
+     },
+     {
+      "lib": "Influence notable",
+      "val": "✓"
+     }
+    ],
+    "dit": "Entrent dans le périmètre : contrôle exclusif, contrôle conjoint ou influence notable."
+   },
+   {
+    "voix": "Une participation de 5 % sans influence ? Elle reste dehors.",
+    "rangs": [
+     {
+      "lib": "5 % sans influence",
+      "val": "✗",
+      "style": "fort"
+     }
+    ],
+    "dit": "Une participation de cinq pour cent sans influence ? Elle reste dehors."
+   },
+   {
+    "voix": "En IFRS 10, le contrôle réunit le pouvoir, des rendements variables, et le lien entre les deux.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Pouvoir",
+      "val": "✓"
+     },
+     {
+      "lib": "Rendements variables",
+      "val": "✓"
+     },
+     {
+      "lib": "Lien entre les deux",
+      "val": "✓",
+      "style": "ok"
+     }
+    ],
+    "dit": "En I.F.R.S dix, le contrôle réunit le pouvoir, des rendements variables, et le lien entre les deux."
+   },
+   {
+    "voix": "La filiale entre à la date de prise de contrôle : consolidée dès le 1er juillet.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Janvier à juin",
+      "val": "✗"
+     },
+     {
+      "lib": "Dès le 1er juillet",
+      "val": "✓",
+      "style": "ok"
+     }
+    ],
+    "dit": "La filiale entre à la date de prise de contrôle : consolidée dès le premier juillet."
+   }
+  ]
+ },
+ {
+  "id": "d-transformation",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "accroche": "Ta SARL devient une SAS… et c'est toujours la même société.",
+  "segments": [
+   {
+    "voix": "Ta SARL devient une SAS… et c'est toujours la même société.",
+    "dit": "Ta SARL devient une S.A.S… et c'est toujours la même société."
+   },
+   {
+    "voix": "La transformation ne crée pas de nouvelle personne morale : contrats, dettes et créances continuent.",
+    "titre": "SARL → SAS",
+    "rangs": [
+     {
+      "lib": "Nouvelle personne morale",
+      "val": "✗"
+     },
+     {
+      "lib": "Contrats et dettes",
+      "val": "✓",
+      "style": "ok"
+     }
+    ],
+    "dit": "La transformation ne crée pas de nouvelle personne morale : contrats, dettes et créances continuent."
+   },
+   {
+    "voix": "Mais passer en SAS exige l'unanimité : les droits des associés changent profondément.",
+    "rangs": [
+     {
+      "lib": "Majorité requise",
+      "val": "Unanimité",
+      "style": "fort"
+     }
+    ],
+    "dit": "Mais passer en S.A.S exige l'unanimité : les droits des associés changent profondément."
+   },
+   {
+    "voix": "Sans commissaire aux comptes, un commissaire à la transformation vérifie que l'actif net couvre le capital.",
+    "rangs": [
+     {
+      "lib": "Actif net ≥ capital",
+      "val": "✓"
+     }
+    ],
+    "dit": "Sans commissaire aux comptes, un commissaire à la transformation vérifie que l'actif net couvre le capital."
+   },
+   {
+    "voix": "Côté fisc : de l'IS à l'IS, aucun effet. De l'IR à l'IS, effets d'une cessation d'entreprise.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "IS → IS",
+      "val": "Neutre",
+      "style": "ok"
+     },
+     {
+      "lib": "IR → IS",
+      "val": "Cessation",
+      "style": "fort"
+     }
+    ],
+    "dit": "Côté fisc : de l'impôt sur les sociétés à l'impôt sur les sociétés, aucun effet. De l'impôt sur le revenu à l'impôt sur les sociétés, effets d'une cessation d'entreprise."
+   }
+  ]
+ },
+ {
+  "id": "c-juste-valeur",
+  "modele": "finance",
+  "tag": "Dessine-moi la conso",
+  "accroche": "En IFRS, la juste valeur de ton immeuble n'est pas son prix d'achat.",
+  "segments": [
+   {
+    "voix": "En IFRS, la juste valeur de ton immeuble n'est pas son prix d'achat.",
+    "dit": "En I.F.R.S, la juste valeur de ton immeuble n'est pas son prix d'achat."
+   },
+   {
+    "voix": "IFRS 13 : c'est le prix reçu pour le vendre, entre intervenants du marché, à la date d'évaluation.",
+    "titre": "Juste valeur · IFRS 13",
+    "rangs": [
+     {
+      "lib": "Prix payé",
+      "val": "✗"
+     },
+     {
+      "lib": "Prix de sortie",
+      "val": "✓",
+      "style": "fort"
+     }
+    ],
+    "dit": "I.F.R.S treize : c'est le prix reçu pour le vendre, entre intervenants du marché, à la date d'évaluation."
+   },
+   {
+    "voix": "Niveau 1 : un prix coté sur un marché actif, comme des actions.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Niveau 1",
+      "val": "Prix coté"
+     }
+    ],
+    "dit": "Niveau un : un prix coté sur un marché actif, comme des actions."
+   },
+   {
+    "voix": "Niveau 2 : des données observables, comme le prix au mètre carré d'immeubles comparables.",
+    "rangs": [
+     {
+      "lib": "Niveau 2",
+      "val": "Observable"
+     }
+    ],
+    "dit": "Niveau deux : des données observables, comme le prix au mètre carré d'immeubles comparables."
+   },
+   {
+    "voix": "Niveau 3 : des données non observables, comme un modèle interne. À l'examen, justifie le niveau.",
+    "rangs": [
+     {
+      "lib": "Niveau 3",
+      "val": "Modèle",
+      "style": "fort"
+     }
+    ],
+    "dit": "Niveau trois : des données non observables, comme un modèle interne. À l'examen, justifie le niveau."
+   }
+  ]
  }
 ]
