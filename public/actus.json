@@ -1,5 +1,5 @@
 {
- "majLe": "2026-11-20T23:05:25.922Z",
+ "majLe": "2026-11-21T13:27:25.386Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -38,13 +38,13 @@
    "nom": "CNIL",
    "url": "https://www.cnil.fr/fr/rss.xml",
    "ok": true,
-   "articles": 2
+   "articles": 0
   },
   {
    "nom": "Le Monde Économie",
    "url": "https://www.lemonde.fr/economie/rss_full.xml",
    "ok": true,
-   "articles": 0
+   "articles": 2
   },
   {
    "nom": "Le Figaro Économie",
@@ -62,7 +62,7 @@
    "nom": "Capital",
    "url": "https://feed.prismamediadigital.com/v1/cap/rss?sources=capital",
    "ok": true,
-   "articles": 1
+   "articles": 0
   }
  ],
  "images": {
@@ -76,6 +76,46 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-budget-le-conseil-europeen-prevoit-des-coupes-de-204-milliards-d-eur",
+   "titre": "Budget de l’UE : Paris rejette le nouveau projet, qui prévoit une baisse de 204 milliards d'euros et une taxe numérique",
+   "url": "https://www.lefigaro.fr/conjoncture/budget-le-conseil-europeen-prevoit-des-coupes-de-204-milliards-d-euros-et-une-taxe-numerique-20261121",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-21T13:08:16.000Z",
+   "image": "https://i.f1g.fr/media/cms/orig/2026/11/21/f900bcc1651ad41e9720fed1198b578fc050e69cbc8724dd948535db3ae40d85.JPG",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-societe-manifestations-reportage-ce-sont-les-patients-qui-en-patissent-au-por",
+   "titre": "REPORTAGE. \"Ce sont les patients qui en pâtissent\" : au Portugal, les syndicats dénoncent la dégradation des services publics",
+   "url": "https://www.franceinfo.fr/societe/manifestations/reportage-ce-sont-les-patients-qui-en-patissent-au-portugal-les-syndicats-denoncent-la-degradation-des-services-publics_8293640.html#xtor=RSS-3-%5Beconomie%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-11-21T12:22:07.000Z",
+   "image": "https://www.franceinfo.fr/pictures/skaF7kWXK5gwjLEs5UTbIUIBD-A/0x53:1024x629/432x243/filters:format(jpg)/2026/11/21/6b01991f1fc6b523805019.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-economie-article-2026-11-21-budget-de-l-ue-antonio-costa-le-president-du-conseil-e",
+   "titre": "Budget de l’UE : Antonio Costa, le président du Conseil européen, propose 204 milliards d’euros d’économies et une taxe numérique",
+   "url": "https://www.lemonde.fr/economie/article/2026/11/21/budget-de-l-ue-antonio-costa-le-president-du-conseil-europeen-propose-204-milliards-d-euros-d-economies-et-une-taxe-numerique_6813983_3234.html",
+   "source": "Le Monde Économie",
+   "date": "2026-11-21T11:01:50.000Z",
+   "image": "https://img.lemde.fr/2026/11/20/476/0/5712/2856/644/322/60/0/138f446_ftp-1-zcn4jvzlfhs4-2026-11-20t140649z-844608601-rc2oroa6b6of-rtrmadp-3-eu-britain-summit-burnham.JPG",
+   "categorie": "Fiscalité",
+   "score": 5
+  },
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-la-chronique-de-thomas-piketty-article-2026-11-21-thomas-piketty-le-projet-de-conv",
+   "titre": "Thomas Piketty : « Le projet de convention fiscale de l’ONU a le potentiel de changer la face du monde »",
+   "url": "https://www.lemonde.fr/la-chronique-de-thomas-piketty/article/2026/11/21/thomas-piketty-le-projet-de-convention-fiscale-de-l-onu-a-le-potentiel-de-changer-la-face-du-monde_6813978_6649149.html",
+   "source": "Le Monde Économie",
+   "date": "2026-11-21T10:00:13.000Z",
+   "image": "https://img.lemde.fr/2026/11/20/0/0/5568/2784/644/322/60/0/783fdde_upload-1-qh21g31rztuh-000-648j6xm.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
   {
    "id": "le-figaro-conomie-https-www-lefigaro-fr-finances-perso-avantage-fiscal-inquietudes-pour-l-avenir-comment-le-plan-d-eparg",
    "titre": "Avantage fiscal, inquiétudes pour l’avenir… Comment le plan d’épargne-retraite a conquis près de 14 millions de Français",
@@ -834,46 +874,6 @@
    "source": "Le Figaro Économie",
    "date": "2026-11-09T18:14:44.000Z",
    "image": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/09/a7705184f2146e96df50d4a5e60c26d356f0b4bb0c16302cea5f039dc28f6cfd.jpg",
-   "categorie": "Fiscalité",
-   "score": 5
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-societes-automobile-des-couts-de-detention-en-baisse-sur-fond-de-percee-des-voit",
-   "titre": "Automobile : des coûts de détention en baisse sur fond de percée des voitures électriques",
-   "url": "https://www.lefigaro.fr/societes/automobile-des-couts-de-detention-en-baisse-sur-fond-de-percee-des-voitures-electriques-20261109",
-   "source": "Le Figaro Économie",
-   "date": "2026-11-09T15:00:00.000Z",
-   "image": "https://i.f1g.fr/media/cms/2996x1685_crop/2026/11/09/35a69393c68ccec3da707473cd9ba022754fa7a82b0dc111641ae3de14cbae46.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "village-de-la-justice-https-www-village-justice-com-articles-redressement-urssaf-par-ratio-jusqu-annulation-59672-html-u",
-   "titre": "Redressement URSSAF par ratio : jusqu'où va l'annulation ? Par Sabrina Henocque Chiche, Avocate.",
-   "url": "https://www.village-justice.com/articles/redressement-urssaf-par-ratio-jusqu-annulation,59672.html?utm_source=backend&utm_medium=RSS&utm_campaign=RSS_Reseaux",
-   "source": "Village de la Justice",
-   "date": "2026-11-09T12:00:00.000Z",
-   "image": "https://www.village-justice.com/articles/local/cache-gd2/78/cb5a575ff42d184f2f7cf909d07d08.jpg?1791993210",
-   "categorie": "Social",
-   "score": 3
-  },
-  {
-   "id": "cnil-https-www-cnil-fr-fr-sanctions-cybersecurite-collectivites-territoriales",
-   "titre": "Cybersécurité des collectivités territoriales : la CNIL prononce dix sanctions",
-   "url": "https://www.cnil.fr/fr/sanctions-cybersecurite-collectivites-territoriales",
-   "source": "CNIL",
-   "officiel": true,
-   "date": "2026-11-09T12:00:00.000Z",
-   "categorie": "Numérique",
-   "score": 2
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-societes-100-millions-pour-la-recherche-medicale-raise-cette-societe-d-investiss",
-   "titre": "«100 millions pour la recherche médicale» : Raise, cette société d’investissement qui allie finance et philanthropie",
-   "url": "https://www.lefigaro.fr/societes/100-millions-pour-la-recherche-medicale-raise-cette-societe-d-investissement-qui-allie-finance-et-philanthropie-20261109",
-   "source": "Le Figaro Économie",
-   "date": "2026-11-09T11:09:54.000Z",
-   "image": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/09/cac6f897b6a8ee41dc0d024ba9f54ff223b2fe88b84910f834a1912d70b6bfd2.jpg",
    "categorie": "Fiscalité",
    "score": 5
   }
