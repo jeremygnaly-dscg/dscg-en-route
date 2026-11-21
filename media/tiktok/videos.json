@@ -7093,5 +7093,322 @@
     "dit": "Niveau trois : des données non observables, comme un modèle interne. À l'examen, justifie le niveau."
    }
   ]
+ },
+ {
+  "id": "m-cours-terme",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "accroche": "Le cours à terme du dollar n'est pas une prévision : c'est un calcul.",
+  "segments": [
+   {
+    "voix": "Le cours à terme du dollar n'est pas une prévision : c'est un calcul.",
+    "dit": "Le cours à terme du dollar n'est pas une prévision : c'est un calcul."
+   },
+   {
+    "voix": "Aujourd'hui, 1 € vaut 1,10 $. Sur 3 mois, le dollar à 4 % rapporte 1 %, l'euro à 2 % rapporte 0,5 %.",
+    "titre": "Cours à terme",
+    "rangs": [
+     {
+      "lib": "Cours au comptant",
+      "val": "1,10 $"
+     },
+     {
+      "op": "×",
+      "lib": "1 + 1 % (dollar)",
+      "val": "1,01"
+     },
+     {
+      "op": "÷",
+      "lib": "1 + 0,5 % (euro)",
+      "val": "1,005"
+     }
+    ],
+    "dit": "Aujourd'hui, un euro vaut un dollar dix. Sur trois mois, le dollar à quatre pour cent rapporte un pour cent, l'euro à deux pour cent rapporte zéro virgule cinq pour cent."
+   },
+   {
+    "voix": "Cours à terme : 1,10 × 1,01 ÷ 1,005 ≈ 1,1055 $.",
+    "rangs": [
+     {
+      "op": "=",
+      "lib": "Cours à terme ($)",
+      "val": "1,1055",
+      "style": "fort"
+     }
+    ],
+    "dit": "Cours à terme : un virgule dix, fois un virgule zéro un, divisé par un virgule zéro zéro cinq. Environ un virgule un zéro cinq cinq dollar."
+   },
+   {
+    "voix": "Ta créance d'1 M$ vendue à terme : environ 904 590 €, quoi qu'il arrive.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Créance ($)",
+      "val": "1 M"
+     },
+     {
+      "op": "÷",
+      "lib": "Cours à terme",
+      "val": "1,1055"
+     },
+     {
+      "op": "=",
+      "lib": "Encaissé (€)",
+      "val": "904 590",
+      "style": "ok"
+     }
+    ],
+    "dit": "Ta créance d'un million de dollars vendue à terme : environ neuf cent quatre mille cinq cent quatre-vingt-dix euros, quoi qu'il arrive."
+   },
+   {
+    "voix": "Retiens : c'est l'écart de taux qui fait le cours à terme.",
+    "dit": "Retiens : c'est l'écart de taux qui fait le cours à terme."
+   }
+  ]
+ },
+ {
+  "id": "m-agrement-deficits",
+  "modele": "finance",
+  "tag": "Dessine-moi le M&A",
+  "accroche": "Absorber une boîte pour récupérer ses déficits ? Sans l'accord du fisc, ils ne passent pas.",
+  "segments": [
+   {
+    "voix": "Absorber une boîte pour récupérer ses déficits ? Sans l'accord du fisc, ils ne passent pas.",
+    "dit": "Absorber une boîte pour récupérer ses déficits ? Sans l'accord du fisc, ils ne passent pas."
+   },
+   {
+    "voix": "En fusion, les déficits de l'absorbée ne se transmettent qu'avec un agrément, article 209 II du CGI.",
+    "titre": "Déficits de l'absorbée",
+    "rangs": [
+     {
+      "lib": "Transfert automatique",
+      "val": "✗"
+     },
+     {
+      "lib": "Avec agrément",
+      "val": "✓",
+      "style": "ok"
+     }
+    ],
+    "dit": "En fusion, les déficits de l'absorbée ne se transmettent qu'avec un agrément, article deux cent neuf deux du code général des impôts."
+   },
+   {
+    "voix": "Il est accordé notamment si l'activité qui a créé les déficits est poursuivie.",
+    "rangs": [
+     {
+      "lib": "Activité poursuivie",
+      "val": "✓",
+      "style": "fort"
+     }
+    ],
+    "dit": "Il est accordé notamment si l'activité qui a créé les déficits est poursuivie."
+   },
+   {
+    "voix": "L'agrément autorise à l'avance. Le rescrit, lui, engage le fisc sur sa réponse.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Agrément : autorise",
+      "val": "✓"
+     },
+     {
+      "lib": "Rescrit : engage le fisc",
+      "val": "✓",
+      "style": "ok"
+     }
+    ],
+    "dit": "L'agrément autorise à l'avance. Le rescrit, lui, engage le fisc sur sa réponse."
+   },
+   {
+    "voix": "Dans les deux cas : on demande avant l'opération.",
+    "dit": "Dans les deux cas : on demande avant l'opération."
+   }
+  ]
+ },
+ {
+  "id": "c-ifrs8",
+  "modele": "finance",
+  "tag": "Dessine-moi la conso",
+  "accroche": "En IFRS, tes secteurs ne se choisissent pas : ce sont ceux que ta direction suit.",
+  "segments": [
+   {
+    "voix": "En IFRS, tes secteurs ne se choisissent pas : ce sont ceux que ta direction suit.",
+    "dit": "En I.F.R.S, tes secteurs ne se choisissent pas : ce sont ceux que ta direction suit."
+   },
+   {
+    "voix": "IFRS 8, sociétés cotées : un secteur opérationnel a des résultats revus par le principal décideur.",
+    "titre": "IFRS 8 : les secteurs",
+    "rangs": [
+     {
+      "lib": "Société cotée",
+      "val": "✓"
+     },
+     {
+      "lib": "Revu par la direction",
+      "val": "✓"
+     }
+    ],
+    "dit": "I.F.R.S huit, sociétés cotées : un secteur opérationnel a des résultats revus par le principal décideur."
+   },
+   {
+    "voix": "Il est à présenter s'il dépasse 10 % du chiffre d'affaires, du résultat ou des actifs.",
+    "rangs": [
+     {
+      "lib": "Seuil (CA, résultat, actifs)",
+      "val": "10 %",
+      "style": "fort"
+     }
+    ],
+    "dit": "Il est à présenter s'il dépasse dix pour cent du chiffre d'affaires, du résultat ou des actifs."
+   },
+   {
+    "voix": "Et les secteurs présentés couvrent au moins 75 % du chiffre d'affaires externe.",
+    "rangs": [
+     {
+      "lib": "CA externe couvert, au moins",
+      "val": "75 %",
+      "style": "ok"
+     }
+    ],
+    "dit": "Et les secteurs présentés couvrent au moins soixante-quinze pour cent du chiffre d'affaires externe."
+   },
+   {
+    "voix": "Retiens : 10 % pour entrer, 75 % pour couvrir.",
+    "dit": "Retiens : dix pour cent pour entrer, soixante-quinze pour cent pour couvrir."
+   }
+  ]
+ },
+ {
+  "id": "d-boni-liquidation",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "accroche": "Fermer ta société et récupérer ce qui reste ? Le fisc y voit un dividende.",
+  "segments": [
+   {
+    "voix": "Fermer ta société et récupérer ce qui reste ? Le fisc y voit un dividende.",
+    "dit": "Fermer ta société et récupérer ce qui reste ? Le fisc y voit un dividende."
+   },
+   {
+    "voix": "Dissoute, la société survit pour sa liquidation, jusqu'à la publication de la clôture.",
+    "titre": "Dissolution",
+    "rangs": [
+     {
+      "lib": "Personnalité morale maintenue",
+      "val": "✓",
+      "style": "fort"
+     }
+    ],
+    "dit": "Dissoute, la société survit pour sa liquidation, jusqu'à la publication de la clôture."
+   },
+   {
+    "voix": "Le liquidateur vend l'actif, paie les créanciers, puis partage le solde entre les associés.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Vendre l'actif",
+      "val": "✓"
+     },
+     {
+      "lib": "Payer les créanciers",
+      "val": "✓"
+     },
+     {
+      "lib": "Partager le solde",
+      "val": "✓",
+      "style": "ok"
+     }
+    ],
+    "dit": "Le liquidateur vend l'actif, paie les créanciers, puis partage le solde entre les associés."
+   },
+   {
+    "voix": "Le boni, ce qui dépasse le remboursement des apports, est imposé comme un revenu distribué.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Boni : revenu distribué",
+      "val": "✓",
+      "style": "fort"
+     }
+    ],
+    "dit": "Le boni, ce qui dépasse le remboursement des apports, est imposé comme un revenu distribué."
+   },
+   {
+    "voix": "Et le partage de l'actif net supporte un droit de partage de 2,5 %.",
+    "rangs": [
+     {
+      "lib": "Droit de partage",
+      "val": "2,5 %",
+      "style": "ok"
+     }
+    ],
+    "dit": "Et le partage de l'actif net supporte un droit de partage de deux virgule cinq pour cent."
+   }
+  ]
+ },
+ {
+  "id": "d-cjip",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "accroche": "Ta boîte est poursuivie pour corruption… et peut payer sans être condamnée.",
+  "segments": [
+   {
+    "voix": "Ta boîte est poursuivie pour corruption… et peut payer sans être condamnée.",
+    "dit": "Ta boîte est poursuivie pour corruption… et peut payer sans être condamnée."
+   },
+   {
+    "voix": "Sapin 2 : programme anticorruption obligatoire dès 500 salariés et plus de 100 M€ de CA.",
+    "titre": "Sapin 2 et CJIP",
+    "rangs": [
+     {
+      "lib": "Salariés, au moins",
+      "val": "500"
+     },
+     {
+      "lib": "CA, plus de",
+      "val": "100 M€"
+     }
+    ],
+    "dit": "Sapin deux : programme anticorruption obligatoire dès cinq cents salariés et plus de cent millions d'euros de chiffre d'affaires."
+   },
+   {
+    "voix": "Au programme : code de conduite, alerte interne, cartographie des risques.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Code de conduite",
+      "val": "✓"
+     },
+     {
+      "lib": "Alerte interne",
+      "val": "✓"
+     },
+     {
+      "lib": "Cartographie des risques",
+      "val": "✓",
+      "style": "ok"
+     }
+    ],
+    "dit": "Au programme : code de conduite, alerte interne, cartographie des risques."
+   },
+   {
+    "voix": "La CJIP : une amende sans aveu de culpabilité, jusqu'à 30 % du chiffre d'affaires annuel moyen.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Culpabilité reconnue",
+      "val": "✗"
+     },
+     {
+      "lib": "Amende max. (% du CA)",
+      "val": "30 %",
+      "style": "fort"
+     }
+    ],
+    "dit": "La convention judiciaire d'intérêt public : une amende sans aveu de culpabilité, jusqu'à trente pour cent du chiffre d'affaires annuel moyen."
+   },
+   {
+    "voix": "Souvent avec une mise en conformité, contrôlée par l'Agence française anticorruption.",
+    "dit": "Souvent avec une mise en conformité, contrôlée par l'Agence française anticorruption."
+   }
+  ]
  }
 ]
