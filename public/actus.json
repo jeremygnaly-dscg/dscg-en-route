@@ -1,5 +1,5 @@
 {
- "majLe": "2026-11-22T13:19:42.678Z",
+ "majLe": "2026-11-22T22:28:21.639Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -76,6 +76,26 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-la-regle-d-or-peut-elle-vraiment-contraindre-la-france-a-sortir-de-l",
+   "titre": "La règle d’or peut-elle vraiment contraindre la France à sortir de la spirale infernale de la dette ?",
+   "url": "https://www.lefigaro.fr/conjoncture/la-regle-d-or-peut-elle-vraiment-contraindre-la-france-a-sortir-de-la-spirale-infernale-de-la-dette-20261122",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-22T18:40:24.000Z",
+   "image": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/22/f1b46bceca0840730311b4ab6bf358e7ff51e7988d3f1c6074390319ff74c962.jpg",
+   "categorie": "Fiscalité",
+   "score": 4
+  },
+  {
+   "id": "capital-https-www-capital-fr-votre-argent-per-la-date-limite-de-versement-pour-payer-moins-dimpot-en-2027-1532023",
+   "titre": "PER : la date limite de versement pour payer moins d’impôt en 2027",
+   "url": "https://www.capital.fr/votre-argent/per-la-date-limite-de-versement-pour-payer-moins-dimpot-en-2027-1532023",
+   "source": "Capital",
+   "date": "2026-11-22T15:00:00.000Z",
+   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~11~20~f7799059-3616-4035-ba90-d8b39608b1aa.jpg/1200x900/focus-point/1526%2C672/per-la-date-limite-de-versement-pour-payer-moins-d-impot-en-2027.jpg",
+   "categorie": "Fiscalité",
+   "score": 4
+  },
   {
    "id": "le-figaro-conomie-https-www-lefigaro-fr-societes-le-gendarme-boursier-americain-aurait-lance-une-enquete-sur-les-pratiqu",
    "titre": "Le gendarme boursier américain aurait lancé une enquête sur les pratiques comptables de Nvidia",
@@ -856,26 +876,6 @@
    "date": "2026-11-10T12:00:00.000Z",
    "categorie": "Numérique",
    "score": 2
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-taxe-sur-les-superprofits-cheque-energie-que-contient-le-plan-de-rev",
-   "titre": "Taxe sur les superprofits, chèque énergie… Que contient le plan de «révolution écologique» à 200 milliards d’euros de Raphaël Glucksmann ?",
-   "url": "https://www.lefigaro.fr/conjoncture/taxe-sur-les-superprofits-cheque-energie-que-contient-le-plan-de-revolution-ecologique-a-200-milliards-d-euros-de-raphael-glucksmann-20261110",
-   "source": "Le Figaro Économie",
-   "date": "2026-11-10T10:27:01.000Z",
-   "image": "https://i.f1g.fr/media/cms/orig/2026/11/10/4a527357289c4aec2a056439e215edf33db58dfd0067d9abc908da2e48328b78.JPG",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-replay-radio-le-decryptage-eco-comment-le-gouvernement-remet-au-gout-du-jour-",
-   "titre": "Comment le gouvernement remet au goût du jour les primes Macron",
-   "url": "https://www.franceinfo.fr/replay-radio/le-decryptage-eco/comment-le-gouvernement-remet-au-gout-du-jour-les-primes-macron_8255020.html#xtor=RSS-3-%5Bgeneral%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-11-10T07:45:11.000Z",
-   "image": "https://www.franceinfo.fr/pictures/vWNzmYkbYy33BxgPNXfUZYyqg4w/0x625:6000x4000/432x243/filters:format(jpg)/2026/11/10/6af2bfe3963a8642660854.jpg",
-   "categorie": "Fiscalité",
-   "score": 4
   }
  ],
  "ecartes": []
