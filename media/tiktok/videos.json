@@ -7410,5 +7410,315 @@
     "dit": "Souvent avec une mise en conformité, contrôlée par l'Agence française anticorruption."
    }
   ]
+ },
+ {
+  "id": "m-ancc",
+  "modele": "finance",
+  "tag": "Dessine-moi le M&A",
+  "accroche": "Ton bilan affiche 4 M€ de capitaux propres… et ta boîte en vaut 5.",
+  "segments": [
+   {
+    "voix": "Ton bilan affiche 4 M€ de capitaux propres… et ta boîte en vaut 5.",
+    "dit": "Ton bilan affiche quatre millions d'euros de capitaux propres… et ta boîte en vaut cinq millions."
+   },
+   {
+    "voix": "En M&A, l'actif net comptable corrigé part des capitaux propres du bilan : 4 M€.",
+    "titre": "Actif net comptable corrigé",
+    "rangs": [
+     {
+      "lib": "Capitaux propres",
+      "val": "4 M€"
+     }
+    ],
+    "dit": "En fusions-acquisitions, l'actif net comptable corrigé part des capitaux propres du bilan : quatre millions d'euros."
+   },
+   {
+    "voix": "Ton terrain est inscrit à son prix d'achat de 1990 : on ajoute sa plus-value, nette d'impôt, 1 M€.",
+    "rangs": [
+     {
+      "op": "+",
+      "lib": "Plus-value nette (terrain)",
+      "val": "1 M€"
+     }
+    ],
+    "dit": "Ton terrain est inscrit à son prix d'achat de mille neuf cent quatre-vingt-dix : on ajoute sa plus-value, nette d'impôt, un million d'euros."
+   },
+   {
+    "voix": "ANCC : 5 M€. Et on retire toujours les actifs sans valeur, comme les frais d'établissement.",
+    "rangs": [
+     {
+      "op": "=",
+      "lib": "ANCC",
+      "val": "5 M€",
+      "style": "fort"
+     }
+    ],
+    "dit": "Actif net comptable corrigé : cinq millions d'euros. Et on retire toujours les actifs sans valeur, comme les frais d'établissement."
+   },
+   {
+    "voix": "Le piège : oublier l'impôt différé sur les plus-values latentes.",
+    "dit": "Le piège : oublier l'impôt différé sur les plus-values latentes."
+   }
+  ]
+ },
+ {
+  "id": "m-affacturage",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "accroche": "Ta facture n'est pas encore payée… et tu peux déjà la transformer en trésorerie.",
+  "segments": [
+   {
+    "voix": "Ta facture n'est pas encore payée… et tu peux déjà la transformer en trésorerie.",
+    "dit": "Ta facture n'est pas encore payée… et tu peux déjà la transformer en trésorerie."
+   },
+   {
+    "voix": "Pour le court terme : découvert, escompte d'effets, cession Dailly et affacturage.",
+    "titre": "Financer le court terme",
+    "rangs": [
+     {
+      "lib": "Découvert",
+      "val": "✓"
+     },
+     {
+      "lib": "Escompte d'effets",
+      "val": "✓"
+     },
+     {
+      "lib": "Cession Dailly",
+      "val": "✓"
+     },
+     {
+      "lib": "Affacturage",
+      "val": "✓",
+      "style": "ok"
+     }
+    ],
+    "dit": "Pour le court terme : découvert, escompte d'effets, cession Dailly et affacturage."
+   },
+   {
+    "voix": "Le Dailly : tu cèdes tes créances professionnelles à ta banque, par bordereau.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Dailly : créances cédées à",
+      "val": "Banque"
+     }
+    ],
+    "dit": "Le Dailly : tu cèdes tes créances professionnelles à ta banque, par bordereau."
+   },
+   {
+    "voix": "L'affacturage : le factor achète tes créances et en assure le recouvrement.",
+    "rangs": [
+     {
+      "lib": "Affacturage : achetées par",
+      "val": "Factor",
+      "style": "ok"
+     }
+    ],
+    "dit": "L'affacturage : le factor achète tes créances et en assure le recouvrement."
+   },
+   {
+    "voix": "En face, la banque se protège : caution, gage, nantissement ou hypothèque.",
+    "dit": "En face, la banque se protège : caution, gage, nantissement ou hypothèque."
+   }
+  ]
+ },
+ {
+  "id": "c-perte-controle",
+  "modele": "finance",
+  "tag": "Dessine-moi la conso",
+  "accroche": "Tu vends 70 % de ta filiale… et en IFRS, les 30 % que tu gardes sont réévalués.",
+  "segments": [
+   {
+    "voix": "Tu vends 70 % de ta filiale… et en IFRS, les 30 % que tu gardes sont réévalués.",
+    "dit": "Tu vends soixante-dix pour cent de ta filiale… et en I.F.R.S, les trente pour cent que tu gardes sont réévalués."
+   },
+   {
+    "voix": "Tant que tu gardes le contrôle, acheter ou vendre des titres passe en capitaux propres : ni résultat, ni goodwill.",
+    "titre": "Vendre une filiale",
+    "rangs": [
+     {
+      "lib": "Résultat de cession",
+      "val": "✗"
+     },
+     {
+      "lib": "Nouveau goodwill",
+      "val": "✗"
+     }
+    ],
+    "dit": "Tant que tu gardes le contrôle, acheter ou vendre des titres passe en capitaux propres : ni résultat, ni goodwill."
+   },
+   {
+    "voix": "Tu perds le contrôle ? Là, tu constates un résultat de cession.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Résultat de cession",
+      "val": "✓",
+      "style": "fort"
+     }
+    ],
+    "dit": "Tu perds le contrôle ? Là, tu constates un résultat de cession."
+   },
+   {
+    "voix": "Et en IFRS, la participation conservée est réévaluée à sa juste valeur.",
+    "rangs": [
+     {
+      "lib": "30 % gardés, à la juste valeur",
+      "val": "✓"
+     }
+    ],
+    "dit": "Et en I.F.R.S, la participation conservée est réévaluée à sa juste valeur."
+   },
+   {
+    "voix": "Influence notable, présumée dès 20 % : ces 30 % passent en mise en équivalence.",
+    "rangs": [
+     {
+      "lib": "Mise en équivalence",
+      "val": "30 %",
+      "style": "ok"
+     }
+    ],
+    "dit": "Influence notable, présumée dès vingt pour cent : ces trente pour cent passent en mise en équivalence."
+   }
+  ]
+ },
+ {
+  "id": "d-is-pme",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "accroche": "Ta PME gagne 270 000 €… et ne paie pas 25 % sur tout.",
+  "segments": [
+   {
+    "voix": "Ta PME gagne 270 000 €… et ne paie pas 25 % sur tout.",
+    "dit": "Ta P.M.E gagne deux cent soixante-dix mille euros… et ne paie pas vingt-cinq pour cent sur tout."
+   },
+   {
+    "voix": "Taux normal de l'IS : 25 %. Mais jusqu'à 42 500 € de bénéfice, les PME paient 15 %.",
+    "titre": "IS des PME",
+    "rangs": [
+     {
+      "lib": "Taux normal",
+      "val": "25 %"
+     },
+     {
+      "lib": "Jusqu'à 42 500 €",
+      "val": "15 %",
+      "style": "ok"
+     }
+    ],
+    "dit": "Taux normal de l'impôt sur les sociétés : vingt-cinq pour cent. Mais jusqu'à quarante-deux mille cinq cents euros de bénéfice, les P.M.E paient quinze pour cent."
+   },
+   {
+    "voix": "Conditions : CA sous 10 M€, capital entièrement libéré, détenu à 75 % au moins par des personnes physiques.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "CA < 10 M€",
+      "val": "✓"
+     },
+     {
+      "lib": "Capital entièrement libéré",
+      "val": "✓"
+     },
+     {
+      "lib": "≥ 75 % personnes physiques",
+      "val": "✓"
+     }
+    ],
+    "dit": "Conditions : chiffre d'affaires sous dix millions d'euros, capital entièrement libéré, détenu à soixante-quinze pour cent au moins par des personnes physiques."
+   },
+   {
+    "voix": "Bourgogne Inox : 6 375 €, plus 56 875 €. Impôt : 63 250 €.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "42 500 × 15 %",
+      "val": "6 375"
+     },
+     {
+      "op": "+",
+      "lib": "227 500 × 25 %",
+      "val": "56 875"
+     },
+     {
+      "op": "=",
+      "lib": "IS (€)",
+      "val": "63 250",
+      "style": "fort"
+     }
+    ],
+    "dit": "Bourgogne Inox : six mille trois cent soixante-quinze euros, plus cinquante-six mille huit cent soixante-quinze euros. Impôt : soixante-trois mille deux cent cinquante euros."
+   },
+   {
+    "voix": "Tout à 25 %, tu aurais payé 4 250 € de trop.",
+    "dit": "Tout à vingt-cinq pour cent, tu aurais payé quatre mille deux cent cinquante euros de trop."
+   }
+  ]
+ },
+ {
+  "id": "d-ententes",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "accroche": "Dénoncer le cartel auquel ta boîte participe peut lui éviter toute amende.",
+  "segments": [
+   {
+    "voix": "Dénoncer le cartel auquel ta boîte participe peut lui éviter toute amende.",
+    "dit": "Dénoncer le cartel auquel ta boîte participe peut lui éviter toute amende."
+   },
+   {
+    "voix": "Interdit : fixer les prix entre concurrents, se répartir les marchés, limiter la production.",
+    "titre": "Ententes",
+    "rangs": [
+     {
+      "lib": "Prix concertés",
+      "val": "✗"
+     },
+     {
+      "lib": "Partage des marchés",
+      "val": "✗"
+     },
+     {
+      "lib": "Production limitée",
+      "val": "✗"
+     }
+    ],
+    "dit": "Interdit : fixer les prix entre concurrents, se répartir les marchés, limiter la production."
+   },
+   {
+    "voix": "Pas besoin de contrat : un simple échange d'informations stratégiques suffit.",
+    "rangs": [
+     {
+      "lib": "Échange d'infos stratégiques",
+      "val": "✗",
+      "style": "fort"
+     }
+    ],
+    "dit": "Pas besoin de contrat : un simple échange d'informations stratégiques suffit."
+   },
+   {
+    "voix": "L'Autorité de la concurrence peut infliger jusqu'à 10 % du CA mondial du groupe.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Max. (% du CA mondial)",
+      "val": "10 %",
+      "style": "fort"
+     }
+    ],
+    "dit": "L'Autorité de la concurrence peut infliger jusqu'à dix pour cent du chiffre d'affaires mondial du groupe."
+   },
+   {
+    "voix": "Sauf clémence : la première entreprise qui révèle l'entente obtient l'immunité totale.",
+    "rangs": [
+     {
+      "lib": "1re à révéler l'entente",
+      "val": "0 €",
+      "style": "ok"
+     }
+    ],
+    "dit": "Sauf clémence : la première entreprise qui révèle l'entente obtient l'immunité totale."
+   }
+  ]
  }
 ]
