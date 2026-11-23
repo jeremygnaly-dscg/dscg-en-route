@@ -7720,5 +7720,315 @@
     "dit": "Sauf clémence : la première entreprise qui révèle l'entente obtient l'immunité totale."
    }
   ]
+ },
+ {
+  "id": "m-concours-bancaires",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "accroche": "Ton découvert est une dette… mais pas une ressource stable.",
+  "segments": [
+   {
+    "voix": "Ton découvert est une dette… mais pas une ressource stable.",
+    "dit": "Ton découvert est une dette… mais pas une ressource stable."
+   },
+   {
+    "voix": "Ressources stables 900 k€, emplois stables 700 k€ : fonds de roulement de 200 k€.",
+    "titre": "Bilan fonctionnel",
+    "rangs": [
+     {
+      "lib": "Ressources stables",
+      "val": "900 k€"
+     },
+     {
+      "op": "−",
+      "lib": "Emplois stables",
+      "val": "700 k€"
+     },
+     {
+      "op": "=",
+      "lib": "Fonds de roulement",
+      "val": "200 k€",
+      "style": "fort"
+     }
+    ],
+    "dit": "Ressources stables neuf cent mille euros, emplois stables sept cent mille euros : fonds de roulement de deux cent mille euros."
+   },
+   {
+    "voix": "Le BFR en absorbe 140 k€. Trésorerie nette : 60 k€.",
+    "rangs": [
+     {
+      "op": "−",
+      "lib": "BFR",
+      "val": "140 k€"
+     },
+     {
+      "op": "=",
+      "lib": "Trésorerie nette",
+      "val": "60 k€",
+      "style": "ok"
+     }
+    ],
+    "dit": "Le besoin en fonds de roulement en absorbe cent quarante mille euros. Trésorerie nette : soixante mille euros."
+   },
+   {
+    "voix": "Contrôle : 75 k€ de trésorerie active, moins 15 k€ de trésorerie passive : 60 k€.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Trésorerie active",
+      "val": "75 k€"
+     },
+     {
+      "op": "−",
+      "lib": "Trésorerie passive",
+      "val": "15 k€"
+     },
+     {
+      "op": "=",
+      "lib": "Trésorerie nette",
+      "val": "60 k€",
+      "style": "ok"
+     }
+    ],
+    "dit": "Contrôle : soixante-quinze mille euros de trésorerie active, moins quinze mille euros de trésorerie passive : soixante mille euros."
+   },
+   {
+    "voix": "Le piège : laisser les concours bancaires courants dans les ressources stables. Ils vont en trésorerie passive.",
+    "dit": "Le piège : laisser les concours bancaires courants dans les ressources stables. Ils vont en trésorerie passive."
+   }
+  ]
+ },
+ {
+  "id": "m-couverture-naturelle",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "accroche": "Te couvrir contre la baisse du dollar sans banque ? Paie tes dépenses en dollars.",
+  "segments": [
+   {
+    "voix": "Te couvrir contre la baisse du dollar sans banque ? Paie tes dépenses en dollars.",
+    "dit": "Te couvrir contre la baisse du dollar sans banque ? Paie tes dépenses en dollars."
+   },
+   {
+    "voix": "Tu attends 1 M$ dans 3 mois. Si le dollar baisse, tu touches moins d'euros.",
+    "titre": "Risque de change",
+    "rangs": [
+     {
+      "lib": "Créance en dollars",
+      "val": "1 M$"
+     },
+     {
+      "lib": "Échéance",
+      "val": "3 mois"
+     }
+    ],
+    "dit": "Tu attends un million de dollars dans trois mois. Si le dollar baisse, tu touches moins d'euros."
+   },
+   {
+    "voix": "Change à terme : cours figé. Option : tu es protégé et tu gardes la hausse, contre une prime.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Change à terme",
+      "val": "Figé"
+     },
+     {
+      "lib": "Option de change",
+      "val": "Prime"
+     }
+    ],
+    "dit": "Change à terme : cours figé. Option : tu es protégé et tu gardes la hausse, contre une prime."
+   },
+   {
+    "voix": "Avance en devises : ta créance est convertie tout de suite.",
+    "rangs": [
+     {
+      "lib": "Avance en devises",
+      "val": "✓"
+     }
+    ],
+    "dit": "Avance en devises : ta créance est convertie tout de suite."
+   },
+   {
+    "voix": "Couverture naturelle : les dollars que tu reçois paient tes dépenses en dollars.",
+    "rangs": [
+     {
+      "lib": "Couverture naturelle",
+      "val": "✓",
+      "style": "ok"
+     }
+    ],
+    "dit": "Couverture naturelle : les dollars que tu reçois paient tes dépenses en dollars."
+   }
+  ]
+ },
+ {
+  "id": "c-opinion-audit",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "accroche": "Refus de certifier, impossibilité de certifier : ce n'est pas la même chose.",
+  "segments": [
+   {
+    "voix": "Refus de certifier, impossibilité de certifier : ce n'est pas la même chose.",
+    "dit": "Refus de certifier, impossibilité de certifier : ce n'est pas la même chose."
+   },
+   {
+    "voix": "Stock surévalué de 200 000 €, non corrigé. Significatif, mais limité au stock : réserve.",
+    "titre": "Opinion d'audit",
+    "rangs": [
+     {
+      "lib": "Désaccord, sur le stock",
+      "val": "Réserve"
+     }
+    ],
+    "dit": "Stock surévalué de deux cent mille euros, non corrigé. Significatif, mais limité au stock : réserve."
+   },
+   {
+    "voix": "Si l'anomalie fausse l'ensemble des comptes : refus.",
+    "rangs": [
+     {
+      "lib": "Désaccord, sur tout",
+      "val": "Refus",
+      "style": "fort"
+     }
+    ],
+    "dit": "Si l'anomalie fausse l'ensemble des comptes : refus."
+   },
+   {
+    "voix": "Autre cas : l'auditeur n'a pas pu compter le stock. Limitation ciblée : réserve.",
+    "rangs": [
+     {
+      "lib": "Limitation, sur le stock",
+      "val": "Réserve"
+     }
+    ],
+    "dit": "Autre cas : l'auditeur n'a pas pu compter le stock. Limitation ciblée : réserve."
+   },
+   {
+    "voix": "Limitation généralisée : impossibilité de certifier. C'est l'étendue qui décide.",
+    "rangs": [
+     {
+      "lib": "Limitation, sur tout",
+      "val": "Impossible",
+      "style": "fort"
+     }
+    ],
+    "dit": "Limitation généralisée : impossibilité de certifier. C'est l'étendue qui décide."
+   }
+  ]
+ },
+ {
+  "id": "d-classes-creanciers",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "accroche": "Tes créanciers votent contre ton plan… et le tribunal peut quand même le leur imposer.",
+  "segments": [
+   {
+    "voix": "Tes créanciers votent contre ton plan… et le tribunal peut quand même le leur imposer.",
+    "dit": "Tes créanciers votent contre ton plan… et le tribunal peut quand même le leur imposer."
+   },
+   {
+    "voix": "Plan de sauvegarde ou de redressement : 10 ans au plus.",
+    "titre": "Plan de continuation",
+    "rangs": [
+     {
+      "lib": "Durée maximale du plan",
+      "val": "10 ans"
+     }
+    ],
+    "dit": "Plan de sauvegarde ou de redressement : dix ans au plus."
+   },
+   {
+    "voix": "Grandes entreprises, ou sur demande : les créanciers votent en classes de parties affectées.",
+    "rangs": [
+     {
+      "lib": "Classes de parties affectées",
+      "val": "Vote"
+     }
+    ],
+    "dit": "Grandes entreprises, ou sur demande : les créanciers votent en classes de parties affectées."
+   },
+   {
+    "voix": "Une classe vote contre ? Le tribunal peut lui imposer le plan : c'est l'application forcée interclasses.",
+    "rangs": [
+     {
+      "lib": "Application forcée",
+      "val": "✓",
+      "style": "fort"
+     }
+    ],
+    "dit": "Une classe vote contre ? Le tribunal peut lui imposer le plan : c'est l'application forcée interclasses."
+   },
+   {
+    "voix": "Sans classes, il peut imposer des délais de paiement uniformes, sur 10 ans maximum.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Délais uniformes",
+      "val": "10 ans",
+      "style": "ok"
+     }
+    ],
+    "dit": "Sans classes, il peut imposer des délais de paiement uniformes, sur dix ans maximum."
+   }
+  ]
+ },
+ {
+  "id": "d-info-privilegiee",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "accroche": "Ta société cotée perd son plus gros client ? Attendre la fin du trimestre pour le dire peut coûter cher.",
+  "segments": [
+   {
+    "voix": "Ta société cotée perd son plus gros client ? Attendre la fin du trimestre pour le dire peut coûter cher.",
+    "dit": "Ta société cotée perd son plus gros client ? Attendre la fin du trimestre pour le dire peut coûter cher."
+   },
+   {
+    "voix": "Toute information privilégiée se publie dès que possible.",
+    "titre": "Information permanente",
+    "rangs": [
+     {
+      "lib": "Information privilégiée publiée",
+      "val": "✓"
+     }
+    ],
+    "dit": "Toute information privilégiée se publie dès que possible."
+   },
+   {
+    "voix": "Report possible, mais sous conditions strictes, et en gardant le secret.",
+    "rangs": [
+     {
+      "lib": "Report, si confidentiel",
+      "val": "✓"
+     }
+    ],
+    "dit": "Report possible, mais sous conditions strictes, et en gardant le secret."
+   },
+   {
+    "voix": "Information périodique : rapport annuel sous 4 mois, semestriel sous 3 mois.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Rapport annuel",
+      "val": "4 mois"
+     },
+     {
+      "lib": "Rapport semestriel",
+      "val": "3 mois"
+     }
+    ],
+    "dit": "Information périodique : rapport annuel sous quatre mois, semestriel sous trois mois."
+   },
+   {
+    "voix": "Sinon, l'AMF peut sanctionner jusqu'à 100 M€, ou 10 fois le profit réalisé.",
+    "rangs": [
+     {
+      "lib": "Sanction max. AMF",
+      "val": "100 M€",
+      "style": "fort"
+     }
+    ],
+    "dit": "Sinon, l'A.M.F peut sanctionner jusqu'à cent millions d'euros, ou dix fois le profit réalisé."
+   }
+  ]
  }
 ]
