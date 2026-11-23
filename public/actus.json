@@ -1,5 +1,5 @@
 {
- "majLe": "2026-11-22T22:28:21.639Z",
+ "majLe": "2026-11-23T15:57:11.260Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -38,31 +38,31 @@
    "nom": "CNIL",
    "url": "https://www.cnil.fr/fr/rss.xml",
    "ok": true,
-   "articles": 1
+   "articles": 2
   },
   {
    "nom": "Le Monde Économie",
    "url": "https://www.lemonde.fr/economie/rss_full.xml",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 1
+   "articles": 3
   },
   {
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Capital",
    "url": "https://feed.prismamediadigital.com/v1/cap/rss?sources=capital",
    "ok": true,
-   "articles": 1
+   "articles": 3
   }
  ],
  "images": {
@@ -76,6 +76,116 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "economie-gouv-fr-https-www-economie-gouv-fr-particuliers-impots-et-fiscalite-gerer-mon-impot-sur-le-revenu-comment-fonct",
+   "titre": "Comment fonctionne la solidarité fiscale dans le couple ?",
+   "url": "https://www.economie.gouv.fr/particuliers/impots-et-fiscalite/gerer-mon-impot-sur-le-revenu/comment-fonctionne-la-solidarite-fiscale-dans-le-couple",
+   "source": "economie.gouv.fr",
+   "officiel": true,
+   "date": "2026-11-23T16:30:34.000Z",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-societes-une-demande-de-paiement-de-2376-euros-attention-a-cette-nouvelle-arnaqu",
+   "titre": "Une demande de paiement de 2376 euros : attention à cette nouvelle arnaque au faux courrier de l’Urssaf",
+   "url": "https://www.lefigaro.fr/societes/une-demande-de-paiement-de-2376-euros-attention-a-cette-nouvelle-arnaque-au-faux-courrier-de-l-urssaf-20261123",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-23T15:46:52.000Z",
+   "image": "https://i.f1g.fr/media/cms/orig/2026/11/23/94e4d44c2f01326c44b824a880799f3dab983a0d9113dedade2dc8a1d2c28c82.JPG",
+   "categorie": "Social",
+   "score": 3
+  },
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-economie-article-2026-11-23-albin-michel-apres-le-depart-d-amelie-nothomb-165-sala",
+   "titre": "Albin Michel : après le départ d’Amélie Nothomb, 165 salariés apportent leur soutien à la direction",
+   "url": "https://www.lemonde.fr/economie/article/2026/11/23/albin-michel-apres-le-depart-d-amelie-nothomb-165-salaries-apportent-leur-soutien-a-la-direction_6814404_3234.html",
+   "source": "Le Monde Économie",
+   "date": "2026-11-23T15:31:57.000Z",
+   "image": "https://img.lemde.fr/2026/11/23/0/0/5257/2628/644/322/60/0/dafe240_upload-1-lummfwscfetp-000-mx9k2.jpg",
+   "categorie": "Social",
+   "score": 4
+  },
+  {
+   "id": "capital-https-www-capital-fr-immobilier-lmnp-2027-18-amendements-au-senat-pour-supprimer-le-plafonnement-de-l-amortissem",
+   "titre": "LMNP 2027 : 18 amendements au Sénat pour supprimer le plafonnement de l'amortissement",
+   "url": "https://www.capital.fr/immobilier/lmnp-2027-18-amendements-au-senat-pour-supprimer-le-plafonnement-de-l-amortissement-1532090",
+   "source": "Capital",
+   "date": "2026-11-23T15:00:00.000Z",
+   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~11~23~50f712e8-9f1f-4247-9c61-9ef3abb9cd4b.jpg/1200x900/focus-point/1500%2C1000/lmnp-2027-18-amendements-au-senat-pour-supprimer-le-plafonnement-de-l-amortissement.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-conso-prime-carburant-le-gouvernement-fait-adopter-au-senat-une-prolongation-en-",
+   "titre": "Prime carburant : le gouvernement fait adopter au Sénat une prolongation en 2027",
+   "url": "https://www.lefigaro.fr/conso/prime-carburant-le-gouvernement-fait-adopter-au-senat-une-prolongation-en-2027-20261123",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-23T13:18:27.000Z",
+   "image": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/23/66048360d48a0fc0833b2a9cd08948f15283d80651d4fdcbbd9b4159c0812386.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-en-espagne-pedro-sanchez-propose-de-taxer-les-patrimoines-superieurs",
+   "titre": "En Espagne, Pedro Sánchez propose de taxer les patrimoines supérieurs à 100 millions d'euros",
+   "url": "https://www.lefigaro.fr/conjoncture/en-espagne-pedro-sanchez-propose-de-taxer-les-patrimoines-superieurs-a-100-millions-d-euros-20261123",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-23T12:40:43.000Z",
+   "image": "https://i.f1g.fr/media/cms/orig/2026/11/23/0244a43dddd7d84ae739101610c9dd3008c5ed3387bab04fc7ed5f51a64a3738.JPG",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "cnil-https-www-cnil-fr-fr-trophees-des-classes-2027",
+   "titre": "Trophées des classes 2027 - Ensemble, tous protégés sur Internet !",
+   "url": "https://www.cnil.fr/fr/trophees-des-classes-2027",
+   "source": "CNIL",
+   "officiel": true,
+   "date": "2026-11-23T12:00:00.000Z",
+   "categorie": "Numérique",
+   "score": 2
+  },
+  {
+   "id": "cnil-https-www-cnil-fr-fr-trophees-des-classes-2026-laureats",
+   "titre": "Découvrez les lauréats du concours Trophées des classes 2026 « Comment je protège ma vie privée en ligne ? »",
+   "url": "https://www.cnil.fr/fr/trophees-des-classes-2026-laureats",
+   "source": "CNIL",
+   "officiel": true,
+   "date": "2026-11-23T12:00:00.000Z",
+   "categorie": "Numérique",
+   "score": 2
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-monde-espagne-le-premier-ministre-espagnol-pedro-sanchez-propose-de-taxer-les",
+   "titre": "Le Premier ministre espagnol, Pedro Sanchez, propose de taxer les patrimoines supérieurs à 100 millions d'euros",
+   "url": "https://www.franceinfo.fr/monde/espagne/le-premier-ministre-espagnol-pedro-sanchez-propose-de-taxer-les-patrimoines-superieurs-a-100-millions-d-euros_8295806.html#xtor=RSS-3-%5Beconomie%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-11-23T11:13:23.000Z",
+   "image": "https://www.franceinfo.fr/pictures/HlMmXw0hDMBc5rG_ONDGtaB3VwQ/0x285:3483x2245/432x243/filters:format(jpg)/2026/11/23/6b0418f44ebd3436061224.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "capital-https-www-capital-fr-votre-argent-holdings-familiales-taxe-de-2-apport-cession-ou-en-est-le-budget-2027-1532041",
+   "titre": "Holdings familiales : taxe de 2%, apport-cession, où en est le budget 2027",
+   "url": "https://www.capital.fr/votre-argent/holdings-familiales-taxe-de-2-apport-cession-ou-en-est-le-budget-2027-1532041",
+   "source": "Capital",
+   "date": "2026-11-23T11:00:00.000Z",
+   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~11~20~64f0f8cb-17a7-44bb-bdbc-3334e687f5d6.jpg/1200x900/focus-point/1474%2C661/holdings-familiales-taxe-de-2-apport-cession-ou-en-est-le-budget-2027.jpg",
+   "categorie": "Fiscalité",
+   "score": 5
+  },
+  {
+   "id": "capital-https-www-capital-fr-votre-carriere-rupture-conventionnelle-2027-simulations-pour-une-indemnite-de-15-000-et-60-",
+   "titre": "Rupture conventionnelle 2027 : simulations pour une indemnité de 15 000 et 60 000 euros",
+   "url": "https://www.capital.fr/votre-carriere/rupture-conventionnelle-2027-simulations-pour-une-indemnite-de-15-000-et-60-000-euros-1532042",
+   "source": "Capital",
+   "date": "2026-11-23T05:45:00.000Z",
+   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~11~20~99240bc2-cdb6-4229-a45d-4051474edcfd.jpg/1200x900/focus-point/2391%2C1662/rupture-conventionnelle-2027-simulations-pour-une-indemnite-de-15-000-et-60-000-euros.jpg",
+   "categorie": "Social",
+   "score": 7
+  },
   {
    "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-la-regle-d-or-peut-elle-vraiment-contraindre-la-france-a-sortir-de-l",
    "titre": "La règle d’or peut-elle vraiment contraindre la France à sortir de la spirale infernale de la dette ?",
@@ -766,116 +876,6 @@
    "image": "https://i.f1g.fr/media/cms/orig/2026/11/12/69ee1d5c08947ac68aaa09b0a2be24ffc7738636bd49bb21a26f0301d799a40e.JPG",
    "categorie": "Comptabilité & audit",
    "score": 3
-  },
-  {
-   "id": "capital-https-www-capital-fr-economie-politique-budget-2027-sebastien-lecornu-veut-faire-de-lagriculture-le-terrain-du-c",
-   "titre": "Budget 2027 : Sébastien Lecornu veut faire de l’agriculture le terrain du compromis",
-   "url": "https://www.capital.fr/economie-politique/budget-2027-sebastien-lecornu-veut-faire-de-lagriculture-le-terrain-du-compromis-1531793",
-   "source": "Capital",
-   "date": "2026-11-12T13:58:56.000Z",
-   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~11~12~56a86925-2da1-49dc-97d3-78e92ae4df8c.jpg/1200x900/focus-point/2011%2C874/budget-2027-sebastien-lecornu-veut-faire-de-l-agriculture-le-terrain-du-compromis.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-impots-les-francais-aiment-leurs-services-publics-selon-jean-daniel-",
-   "titre": "Les Français aiment leurs services publics, selon Jean-Daniel Levy",
-   "url": "https://www.franceinfo.fr/economie/impots/les-francais-aiment-leurs-services-publics-selon-jean-daniel-levy_8279267.html#xtor=RSS-3-%5Beconomie%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-11-12T12:30:01.000Z",
-   "image": "https://www.franceinfo.fr/pictures/55o_NzcFkmBOMEhJUcO-xwobQDc/0x0:900x1600/fit-in/432x243/filters:upscale():fill(blur):format(jpg)/2026/11/12/6af5abbfb7e69460512463.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-la-liquidation-judiciaire-de-fibre-excellence-l-ex-numero-1-de-la-pa",
-   "titre": "La liquidation judiciaire de Fibre Excellence, l'ex-numéro un de la pâte à papier en France, définitivement entérinée",
-   "url": "https://www.franceinfo.fr/economie/la-liquidation-judiciaire-de-fibre-excellence-l-ex-numero-1-de-la-pate-a-papier-en-france-definitivement-enterinee_8278943.html#xtor=RSS-3-%5Beconomie%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-11-12T12:11:34.000Z",
-   "image": "https://www.franceinfo.fr/pictures/6M1mXU8rOhtq5KK6egiLKS73DgU/0x0:1024x576/432x243/filters:format(jpg)/2026/11/12/6af57e673e8f9022706820.jpg",
-   "categorie": "Social",
-   "score": 6
-  },
-  {
-   "id": "cnil-https-www-cnil-fr-fr-actualite-du-cepd-adequation-de-la-coree-du-sud-versions-finales-des-bcr-st-et-action-coordonn",
-   "titre": "Actualité du CEPD : adéquation de la Corée du Sud, versions finales des BCR-ST, et action coordonnée sur le recrutement via IA",
-   "url": "https://www.cnil.fr/fr/actualite-du-cepd-adequation-de-la-coree-du-sud-versions-finales-des-bcr-st-et-action-coordonnee-sur",
-   "source": "CNIL",
-   "officiel": true,
-   "date": "2026-11-12T12:00:00.000Z",
-   "categorie": "Numérique",
-   "score": 2
-  },
-  {
-   "id": "le-monde-conomie-https-www-lemonde-fr-economie-article-2026-11-12-a-toulouse-la-liquidation-judiciaire-de-l-usine-de-pat",
-   "titre": "A Toulouse, la liquidation judiciaire de l’usine de pâte à papier Fibre Excellence définitivement entérinée ; 300 salariés vont être licenciés",
-   "url": "https://www.lemonde.fr/economie/article/2026/11/12/a-toulouse-la-liquidation-judiciaire-de-l-usine-de-pate-a-papier-fibre-excellence-de-saint-gaudens-definitivement-enterinee-300-salaries-vont-etre-licencies_6809080_3234.html",
-   "source": "Le Monde Économie",
-   "date": "2026-11-12T09:24:37.000Z",
-   "image": "https://img.lemde.fr/2026/11/12/1138/0/8029/4014/644/322/60/0/46e4758_upload-1-rchloyx1pmve-000-d6r47cq-1.jpg",
-   "categorie": "Social",
-   "score": 6
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-vrai-ou-fake-vrai-ou-faux-la-tva-a-0-sur-les-produits-de-premiere-necessite-a",
-   "titre": "VRAI OU FAUX. La TVA à 0% sur les produits de première nécessité a-t-elle \"fait baisser l'ensemble des prix\" en Espagne et en Pologne, comme l'affirme Sébastien Chenu ?",
-   "url": "https://www.franceinfo.fr/vrai-ou-fake/vrai-ou-faux-la-tva-a-0-sur-les-produits-de-premiere-necessite-a-t-elle-fait-baisser-l-ensemble-des-prix-en-espagne-et-en-pologne-comme-l-affirme-sebastien-chenu_8276051.html#xtor=RSS-3-%5Beconomie%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-11-12T05:06:47.000Z",
-   "image": "https://www.franceinfo.fr/pictures/MZ8VPf5vBUuCdIe2WJWhsWaJv0s/0x0:1024x576/432x243/filters:format(jpg)/2026/11/10/6af2f8088630d551277293.jpg",
-   "categorie": "Fiscalité",
-   "score": 4
-  },
-  {
-   "id": "le-monde-conomie-https-www-lemonde-fr-idees-article-2026-11-12-credit-d-impot-recherche-pacte-dutreil-quitte-a-mettre-un",
-   "titre": "Crédit d’impôt recherche, pacte Dutreil… : « Quitte à mettre un “pognon de dingue” dans les aides publiques aux entreprises, encore faudrait-il que la collectivité en ait pour son argent »",
-   "url": "https://www.lemonde.fr/idees/article/2026/11/12/credit-d-impot-recherche-pacte-dutreil-quitte-a-mettre-un-pognon-de-dingue-dans-les-aides-publiques-aux-entreprises-encore-faudrait-il-que-la-collectivite-en-ait-pour-son-argent_6809058_3232.html",
-   "source": "Le Monde Économie",
-   "date": "2026-11-12T05:00:42.000Z",
-   "image": "https://img.lemde.fr/2026/02/25/125/0/1500/750/644/322/60/0/c4672f4_upload-1-ujmazdjtr0fc-frame-841.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "le-monde-conomie-https-www-lemonde-fr-argent-article-2026-11-12-donation-d-argent-investie-dans-une-societe-quel-rapport",
-   "titre": "Donation d’argent investie dans une société : quel rapport à la succession ?",
-   "url": "https://www.lemonde.fr/argent/article/2026/11/12/donation-d-argent-investie-dans-une-societe-quel-rapport-a-la-succession_6809054_1657007.html",
-   "source": "Le Monde Économie",
-   "date": "2026-11-12T05:00:28.000Z",
-   "image": "https://img.lemde.fr/2023/05/03/97/0/3000/1500/644/322/60/0/d01e012_1683120111391-lmargent9.jpg",
-   "categorie": "Fiscalité",
-   "score": 5
-  },
-  {
-   "id": "le-monde-conomie-https-www-lemonde-fr-argent-article-2026-11-11-la-facture-electronique-le-premier-pas-vers-une-comptabi",
-   "titre": "La facture électronique, le premier pas vers une comptabilité optimisée",
-   "url": "https://www.lemonde.fr/argent/article/2026/11/11/la-facture-electronique-le-premier-pas-vers-une-comptabilite-optimisee_6808940_1657007.html",
-   "source": "Le Monde Économie",
-   "date": "2026-11-11T06:00:09.000Z",
-   "image": "https://img.lemde.fr/2023/04/17/471/0/3000/1500/644/322/60/0/d334d5e_1681719510917-rtyguio.jpg",
-   "categorie": "Comptabilité & audit",
-   "score": 7
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-replay-jt-france-2-13-heures-on-est-recompense-pour-notre-travail-vers-plus-d",
-   "titre": "\"On est récompensé pour notre travail\" : vers plus d'heures supplémentaires défiscalisées ?",
-   "url": "https://www.franceinfo.fr/replay-jt/france-2/13-heures/on-est-recompense-pour-notre-travail-vers-plus-d-heures-supplementaires-defiscalisees_8276411.html#xtor=RSS-3-%5Beconomie%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-11-10T14:17:28.000Z",
-   "image": "https://www.franceinfo.fr/pictures/rsZGfkNqdmbUEHQzvGnqa--sd8w/0x0:1920x1080/432x243/filters:format(jpg)/2026/11/10/6af326610af12341172181.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "cnil-https-www-cnil-fr-fr-salon-maires-collectivites-2026",
-   "titre": "La CNIL sera présente au Salon des maires et des collectivités locales 2026",
-   "url": "https://www.cnil.fr/fr/salon-maires-collectivites-2026",
-   "source": "CNIL",
-   "officiel": true,
-   "date": "2026-11-10T12:00:00.000Z",
-   "categorie": "Numérique",
-   "score": 2
   }
  ],
  "ecartes": []
