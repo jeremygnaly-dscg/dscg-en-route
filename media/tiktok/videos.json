@@ -8030,5 +8030,331 @@
     "dit": "Sinon, l'A.M.F peut sanctionner jusqu'à cent millions d'euros, ou dix fois le profit réalisé."
    }
   ]
+ },
+ {
+  "id": "m-risques-obligation",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "accroche": "Une obligation n'est pas un placement sans risque. Elle en a quatre.",
+  "segments": [
+   {
+    "voix": "Une obligation n'est pas un placement sans risque. Elle en a quatre.",
+    "dit": "Une obligation n'est pas un placement sans risque. Elle en a quatre."
+   },
+   {
+    "voix": "Risque de taux : si les taux du marché montent, son prix baisse.",
+    "titre": "Les 4 risques d'une obligation",
+    "rangs": [
+     {
+      "lib": "Risque de taux",
+      "val": "Prix ↓"
+     }
+    ],
+    "dit": "Risque de taux : si les taux du marché montent, son prix baisse."
+   },
+   {
+    "voix": "Risque de défaut : l'émetteur ne rembourse pas. La notation le mesure.",
+    "rangs": [
+     {
+      "lib": "Risque de défaut",
+      "val": "Notation"
+     }
+    ],
+    "dit": "Risque de défaut : l'émetteur ne rembourse pas. La notation le mesure."
+   },
+   {
+    "voix": "Liquidité : revendre vite n'est pas garanti. Réinvestissement : tes coupons se replacent peut-être à un taux plus bas.",
+    "rangs": [
+     {
+      "lib": "Risque de liquidité",
+      "val": "✓"
+     },
+     {
+      "lib": "Risque de réinvestissement",
+      "val": "✓"
+     }
+    ],
+    "dit": "Liquidité : revendre vite n'est pas garanti. Réinvestissement : tes coupons se replacent peut-être à un taux plus bas."
+   },
+   {
+    "voix": "Et plus la maturité est longue et le coupon faible, plus le risque de taux est fort.",
+    "rangs": [
+     {
+      "lib": "Maturité longue",
+      "val": "Risque ↑",
+      "style": "fort"
+     }
+    ],
+    "dit": "Et plus la maturité est longue et le coupon faible, plus le risque de taux est fort."
+   }
+  ]
+ },
+ {
+  "id": "m-fra",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "accroche": "Bloquer aujourd'hui le taux d'un emprunt futur, sans rien emprunter ? C'est le FRA.",
+  "segments": [
+   {
+    "voix": "Bloquer aujourd'hui le taux d'un emprunt futur, sans rien emprunter ? C'est le FRA.",
+    "dit": "Bloquer aujourd'hui le taux d'un emprunt futur, sans rien emprunter ? C'est le F.R.A."
+   },
+   {
+    "voix": "Emprunteur à taux variable, tu crains la hausse des taux. Placeur, tu crains la baisse.",
+    "titre": "Accord de taux futur",
+    "rangs": [
+     {
+      "lib": "Emprunteur",
+      "val": "Hausse"
+     },
+     {
+      "lib": "Placeur",
+      "val": "Baisse"
+     }
+    ],
+    "dit": "Emprunteur à taux variable, tu crains la hausse des taux. Placeur, tu crains la baisse."
+   },
+   {
+    "voix": "Le FRA, ou accord de taux futur, fixe dès aujourd'hui le taux d'une période future.",
+    "rangs": [
+     {
+      "lib": "FRA : taux futur",
+      "val": "Figé",
+      "style": "fort"
+     }
+    ],
+    "dit": "Le F.R.A, ou accord de taux futur, fixe dès aujourd'hui le taux d'une période future."
+   },
+   {
+    "voix": "Aucun prêt réel : il se dénoue par le versement d'un différentiel de taux.",
+    "rangs": [
+     {
+      "lib": "Prêt réel",
+      "val": "✗"
+     },
+     {
+      "lib": "Versement du différentiel",
+      "val": "✓",
+      "style": "ok"
+     }
+    ],
+    "dit": "Aucun prêt réel : il se dénoue par le versement d'un différentiel de taux."
+   },
+   {
+    "voix": "Le placeur, lui, peut acheter un floor : un taux minimum garanti, contre une prime.",
+    "rangs": [
+     {
+      "lib": "Floor : taux plancher",
+      "val": "Prime"
+     }
+    ],
+    "dit": "Le placeur, lui, peut acheter un floor : un taux minimum garanti, contre une prime."
+   }
+  ]
+ },
+ {
+  "id": "m-fusion-creanciers",
+  "modele": "finance",
+  "tag": "Dessine-moi le M&A",
+  "accroche": "Tes créanciers ne veulent pas de ta fusion ? Ils ne peuvent pas la bloquer.",
+  "segments": [
+   {
+    "voix": "Tes créanciers ne veulent pas de ta fusion ? Ils ne peuvent pas la bloquer.",
+    "dit": "Tes créanciers ne veulent pas de ta fusion ? Ils ne peuvent pas la bloquer."
+   },
+   {
+    "voix": "Le projet de fusion est publié au moins 30 jours avant les assemblées.",
+    "titre": "Fusion et créanciers",
+    "rangs": [
+     {
+      "lib": "Publication du projet",
+      "val": "30 j"
+     }
+    ],
+    "dit": "Le projet de fusion est publié au moins trente jours avant les assemblées."
+   },
+   {
+    "voix": "Après la publicité, les créanciers non obligataires ont 30 jours pour faire opposition.",
+    "rangs": [
+     {
+      "lib": "Opposition des créanciers",
+      "val": "30 j"
+     }
+    ],
+    "dit": "Après la publicité, les créanciers non obligataires ont trente jours pour faire opposition."
+   },
+   {
+    "voix": "Mais l'opposition n'interdit pas la fusion : le juge ordonne un remboursement ou des garanties.",
+    "rangs": [
+     {
+      "lib": "Fusion bloquée",
+      "val": "✗",
+      "style": "fort"
+     },
+     {
+      "lib": "Remboursement ou garanties",
+      "val": "✓",
+      "style": "ok"
+     }
+    ],
+    "dit": "Mais l'opposition n'interdit pas la fusion : le juge ordonne un remboursement ou des garanties."
+   },
+   {
+    "voix": "Côté salariés, le CSE de chaque société est consulté avant la décision.",
+    "dit": "Côté salariés, le comité social et économique de chaque société est consulté avant la décision."
+   }
+  ]
+ },
+ {
+  "id": "c-nomination-cac",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "accroche": "Loire Bio fait 11 M€ de chiffre d'affaires… et n'est pas obligée d'avoir un commissaire aux comptes.",
+  "segments": [
+   {
+    "voix": "Loire Bio fait 11 M€ de chiffre d'affaires… et n'est pas obligée d'avoir un commissaire aux comptes.",
+    "dit": "Loire Bio fait onze millions d'euros de chiffre d'affaires… et n'est pas obligée d'avoir un commissaire aux comptes."
+   },
+   {
+    "voix": "Seuils : 5 M€ de bilan, 10 M€ de chiffre d'affaires, 50 salariés. Il faut en dépasser deux.",
+    "titre": "Nommer un CAC",
+    "rangs": [
+     {
+      "lib": "Total de bilan",
+      "val": "5 M€"
+     },
+     {
+      "lib": "CA hors taxes",
+      "val": "10 M€"
+     },
+     {
+      "lib": "Salariés",
+      "val": "50"
+     }
+    ],
+    "dit": "Seuils : cinq millions d'euros de bilan, dix millions d'euros de chiffre d'affaires, cinquante salariés. Il faut en dépasser deux."
+   },
+   {
+    "voix": "Loire Bio : 4,5 M€ de bilan et 45 salariés. Un seul seuil dépassé : pas d'obligation.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Bilan : 4,5 M€",
+      "val": "✗"
+     },
+     {
+      "lib": "CA : 11 M€",
+      "val": "✓",
+      "style": "fort"
+     },
+     {
+      "lib": "Salariés : 45",
+      "val": "✗"
+     }
+    ],
+    "dit": "Loire Bio : quatre virgule cinq millions d'euros de bilan et quarante-cinq salariés. Un seul seuil dépassé : pas d'obligation."
+   },
+   {
+    "voix": "Filiale significative d'un groupe ? Seuils divisés par deux.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Total de bilan",
+      "val": "2,5 M€"
+     },
+     {
+      "lib": "CA hors taxes",
+      "val": "5 M€"
+     },
+     {
+      "lib": "Salariés",
+      "val": "25"
+     }
+    ],
+    "dit": "Filiale significative d'un groupe ? Seuils divisés par deux."
+   },
+   {
+    "voix": "Le mandat dure six exercices. Et un audit volontaire peut rassurer la banque.",
+    "dit": "Le mandat dure six exercices. Et un audit volontaire peut rassurer la banque."
+   }
+  ]
+ },
+ {
+  "id": "d-conventions-reglementees",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "accroche": "Ta SA signe un contrat avec son directeur général ? Le conseil doit d'abord dire oui.",
+  "segments": [
+   {
+    "voix": "Ta SA signe un contrat avec son directeur général ? Le conseil doit d'abord dire oui.",
+    "dit": "Ta société anonyme signe un contrat avec son directeur général ? Le conseil doit d'abord dire oui."
+   },
+   {
+    "voix": "Sont visés : administrateurs, directeur général, et actionnaires à plus de 10 % des votes.",
+    "titre": "Conventions réglementées",
+    "rangs": [
+     {
+      "lib": "Administrateur",
+      "val": "✓"
+     },
+     {
+      "lib": "Directeur général",
+      "val": "✓"
+     },
+     {
+      "lib": "Actionnaire > 10 % des votes",
+      "val": "✓"
+     }
+    ],
+    "dit": "Sont visés : administrateurs, directeur général, et actionnaires à plus de dix pour cent des votes."
+   },
+   {
+    "voix": "Procédure : accord préalable du conseil, sans vote de l'intéressé, rapport spécial du CAC, puis vote de l'assemblée.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "1. Accord du conseil",
+      "val": "✓"
+     },
+     {
+      "lib": "2. Rapport spécial du CAC",
+      "val": "✓"
+     },
+     {
+      "lib": "3. Vote de l'assemblée",
+      "val": "✓",
+      "style": "ok"
+     }
+    ],
+    "dit": "Procédure : accord préalable du conseil, sans vote de l'intéressé, rapport spécial du commissaire aux comptes, puis vote de l'assemblée."
+   },
+   {
+    "voix": "Opération courante, à conditions normales ? Convention libre.",
+    "rangs": [
+     {
+      "lib": "Opération courante",
+      "val": "Libre",
+      "style": "ok"
+     }
+    ],
+    "dit": "Opération courante, à conditions normales ? Convention libre."
+   },
+   {
+    "voix": "Sans accord, elle est annulable si elle a nui à la société. Et prêter à un administrateur personne physique est interdit.",
+    "rangs": [
+     {
+      "lib": "Sans accord + dommage",
+      "val": "Nulle",
+      "style": "fort"
+     },
+     {
+      "lib": "Prêt à un administrateur",
+      "val": "✗",
+      "style": "fort"
+     }
+    ],
+    "dit": "Sans accord, elle est annulable si elle a nui à la société. Et prêter à un administrateur personne physique est interdit."
+   }
+  ]
  }
 ]
