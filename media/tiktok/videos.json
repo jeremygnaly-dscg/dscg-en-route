@@ -8356,5 +8356,356 @@
     "dit": "Sans accord, elle est annulable si elle a nui à la société. Et prêter à un administrateur personne physique est interdit."
    }
   ]
+ },
+ {
+  "id": "m-levier-operationnel",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "accroche": "Tes ventes montent de 10 %… et ton résultat de 40 %.",
+  "segments": [
+   {
+    "voix": "Tes ventes montent de 10 %… et ton résultat de 40 %.",
+    "dit": "Tes ventes montent de dix pour cent… et ton résultat de quarante pour cent."
+   },
+   {
+    "voix": "Puy Mousse : 800 k€ de chiffre d'affaires, 480 k€ de charges variables, 240 k€ de charges fixes. Résultat : 80 k€.",
+    "titre": "Levier opérationnel",
+    "rangs": [
+     {
+      "lib": "Chiffre d'affaires",
+      "val": "800 k€"
+     },
+     {
+      "op": "−",
+      "lib": "Charges variables",
+      "val": "480 k€"
+     },
+     {
+      "op": "−",
+      "lib": "Charges fixes",
+      "val": "240 k€"
+     },
+     {
+      "op": "=",
+      "lib": "Résultat",
+      "val": "80 k€",
+      "style": "ok"
+     }
+    ],
+    "dit": "Puy Mousse : huit cent mille euros de chiffre d'affaires, quatre cent quatre-vingt mille euros de charges variables, deux cent quarante mille euros de charges fixes. Résultat : quatre-vingt mille euros."
+   },
+   {
+    "voix": "Levier opérationnel : marge sur coût variable ÷ résultat. 320 k€ ÷ 80 k€ = 4.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Marge sur coût variable",
+      "val": "320 k€"
+     },
+     {
+      "op": "÷",
+      "lib": "Résultat",
+      "val": "80 k€"
+     },
+     {
+      "op": "=",
+      "lib": "Levier",
+      "val": "4",
+      "style": "fort"
+     }
+    ],
+    "dit": "Levier opérationnel : marge sur coût variable, divisée par le résultat. Trois cent vingt mille euros divisés par quatre-vingt mille euros : quatre."
+   },
+   {
+    "voix": "Chiffre d'affaires + 10 % ? Résultat + 40 %.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Chiffre d'affaires",
+      "val": "+ 10 %"
+     },
+     {
+      "op": "→",
+      "lib": "Résultat",
+      "val": "+ 40 %",
+      "style": "fort"
+     }
+    ],
+    "dit": "Chiffre d'affaires en hausse de dix pour cent ? Résultat en hausse de quarante pour cent."
+   },
+   {
+    "voix": "Ce sont les charges fixes qui font levier. Et à la baisse, ça marche aussi.",
+    "dit": "Ce sont les charges fixes qui font levier. Et à la baisse, ça marche aussi."
+   }
+  ]
+ },
+ {
+  "id": "m-senior-junior",
+  "modele": "finance",
+  "tag": "Dessine-moi le M&A",
+  "accroche": "Dans un LBO, une partie de la dette ne se rembourse… qu'à la toute fin.",
+  "segments": [
+   {
+    "voix": "Dans un LBO, une partie de la dette ne se rembourse… qu'à la toute fin.",
+    "dit": "Dans un L.B.O, une partie de la dette ne se rembourse… qu'à la toute fin."
+   },
+   {
+    "voix": "Dette senior : 7 M€ à 5 % sur 5 ans, en annuités constantes de 1,62 M€.",
+    "titre": "Senior ou junior ?",
+    "rangs": [
+     {
+      "lib": "Dette senior (5 %)",
+      "val": "7 M€"
+     },
+     {
+      "lib": "Annuité constante",
+      "val": "1,62 M€"
+     }
+    ],
+    "dit": "Dette senior : sept millions d'euros à cinq pour cent sur cinq ans, en annuités constantes d'un virgule soixante-deux millions d'euros."
+   },
+   {
+    "voix": "Dès l'année 1 : 350 000 € d'intérêts, et 1,27 M€ de capital remboursé.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Intérêts année 1",
+      "val": "350 k€"
+     },
+     {
+      "op": "+",
+      "lib": "Capital remboursé",
+      "val": "1,27 M€",
+      "style": "ok"
+     }
+    ],
+    "dit": "Dès l'année un : trois cent cinquante mille euros d'intérêts, et un virgule vingt-sept millions d'euros de capital remboursé."
+   },
+   {
+    "voix": "Dette junior : 4,7 M€ à 8 %, in fine. 376 000 € d'intérêts par an… et zéro capital.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Dette junior (8 %)",
+      "val": "4,7 M€"
+     },
+     {
+      "lib": "Intérêts par an",
+      "val": "376 k€"
+     },
+     {
+      "lib": "Capital remboursé",
+      "val": "0 €",
+      "style": "fort"
+     }
+    ],
+    "dit": "Dette junior : quatre virgule sept millions d'euros à huit pour cent, in fine. Trois cent soixante-seize mille euros d'intérêts par an… et zéro capital."
+   },
+   {
+    "voix": "Service de la dette en année 1 : 1,99 M€. Les 4,7 M€ de junior, eux, tombent d'un coup à l'échéance.",
+    "rangs": [
+     {
+      "op": "=",
+      "lib": "Service de la dette an 1",
+      "val": "1,99 M€",
+      "style": "fort"
+     }
+    ],
+    "dit": "Service de la dette en année un : un virgule quatre-vingt-dix-neuf millions d'euros. Les quatre virgule sept millions d'euros de junior, eux, tombent d'un coup à l'échéance."
+   }
+  ]
+ },
+ {
+  "id": "d-conciliation",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "accroche": "Déjà en cessation des paiements ? Tu peux encore négocier en secret avec tes banques.",
+  "segments": [
+   {
+    "voix": "Déjà en cessation des paiements ? Tu peux encore négocier en secret avec tes banques.",
+    "dit": "Déjà en cessation des paiements ? Tu peux encore négocier en secret avec tes banques."
+   },
+   {
+    "voix": "Elle reste possible si la cessation des paiements date de 45 jours au plus.",
+    "titre": "La conciliation",
+    "rangs": [
+     {
+      "lib": "Cessation ≤ 45 jours",
+      "val": "✓",
+      "style": "ok"
+     },
+     {
+      "lib": "Au-delà de 45 jours",
+      "val": "✗"
+     }
+    ],
+    "dit": "Elle reste possible si la cessation des paiements date de quarante-cinq jours au plus."
+   },
+   {
+    "voix": "Durée : 4 mois au plus, prorogeable d'un mois, pour trouver un accord avec les principaux créanciers.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Durée maximale",
+      "val": "4 mois"
+     },
+     {
+      "op": "+",
+      "lib": "Prorogation",
+      "val": "1 mois"
+     }
+    ],
+    "dit": "Durée : quatre mois au plus, prorogeable d'un mois, pour trouver un accord avec les principaux créanciers."
+   },
+   {
+    "voix": "Accord constaté : il reste confidentiel. Homologué par le tribunal : il devient public.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Accord constaté",
+      "val": "Secret"
+     },
+     {
+      "lib": "Accord homologué",
+      "val": "Public"
+     }
+    ],
+    "dit": "Accord constaté : il reste confidentiel. Homologué par le tribunal : il devient public."
+   },
+   {
+    "voix": "Mais l'homologation protège l'argent frais : un privilège, si une procédure collective suit.",
+    "rangs": [
+     {
+      "lib": "Argent frais",
+      "val": "Privilège",
+      "style": "ok"
+     }
+    ],
+    "dit": "Mais l'homologation protège l'argent frais : un privilège, si une procédure collective suit."
+   }
+  ]
+ },
+ {
+  "id": "c-deontologie-cac",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "accroche": "Ton commissaire aux comptes n'a pas le droit de tenir ta comptabilité.",
+  "segments": [
+   {
+    "voix": "Ton commissaire aux comptes n'a pas le droit de tenir ta comptabilité.",
+    "dit": "Ton commissaire aux comptes n'a pas le droit de tenir ta comptabilité."
+   },
+   {
+    "voix": "C'est de l'auto-révision : il ne peut pas établir les comptes qu'il certifie.",
+    "titre": "Indépendance du CAC",
+    "rangs": [
+     {
+      "lib": "Tenir la comptabilité",
+      "val": "✗",
+      "style": "fort"
+     }
+    ],
+    "dit": "C'est de l'auto-révision : il ne peut pas établir les comptes qu'il certifie."
+   },
+   {
+    "voix": "Ses honoraires ne dépendent jamais du résultat : pas de rémunération au succès.",
+    "rangs": [
+     {
+      "lib": "Honoraires au succès",
+      "val": "✗",
+      "style": "fort"
+     }
+    ],
+    "dit": "Ses honoraires ne dépendent jamais du résultat : pas de rémunération au succès."
+   },
+   {
+    "voix": "Après sa mission, il attend 3 ans avant de devenir dirigeant ou salarié de la société.",
+    "rangs": [
+     {
+      "lib": "Rejoindre la société",
+      "val": "3 ans"
+     }
+    ],
+    "dit": "Après sa mission, il attend trois ans avant de devenir dirigeant ou salarié de la société."
+   },
+   {
+    "voix": "Et dans les entités d'intérêt public, l'associé signataire change au plus tard après 6 exercices.",
+    "rangs": [
+     {
+      "lib": "Rotation (exercices)",
+      "val": "6"
+     }
+    ],
+    "dit": "Et dans les entités d'intérêt public, l'associé signataire change au plus tard après six exercices."
+   }
+  ]
+ },
+ {
+  "id": "c-derogatoire-conso",
+  "modele": "finance",
+  "tag": "Dessine-moi la conso",
+  "accroche": "Des amortissements bien comptabilisés dans ta filiale… que la consolidation efface.",
+  "segments": [
+   {
+    "voix": "Des amortissements bien comptabilisés dans ta filiale… que la consolidation efface.",
+    "dit": "Des amortissements bien comptabilisés dans ta filiale… que la consolidation efface."
+   },
+   {
+    "voix": "Loire Métal a 60 000 € d'amortissements dérogatoires. Purement fiscaux : on les annule.",
+    "titre": "Dérogatoire en conso",
+    "rangs": [
+     {
+      "lib": "Dérogatoire annulé",
+      "val": "60 000 €"
+     }
+    ],
+    "dit": "Loire Métal a soixante mille euros d'amortissements dérogatoires. Purement fiscaux : on les annule."
+   },
+   {
+    "voix": "L'impôt reviendra à la reprise : impôt différé passif de 60 000 € × 25 %, soit 15 000 €.",
+    "rangs": [
+     {
+      "op": "−",
+      "lib": "Impôt différé passif",
+      "val": "15 000 €"
+     },
+     {
+      "op": "=",
+      "lib": "Capitaux propres",
+      "val": "45 000 €",
+      "style": "ok"
+     }
+    ],
+    "dit": "L'impôt reviendra à la reprise : impôt différé passif de soixante mille euros fois vingt-cinq pour cent, soit quinze mille euros."
+   },
+   {
+    "voix": "Les 50 000 € des années passées vont en réserves, nets d'impôt : 37 500 €.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Réserves",
+      "val": "37 500 €"
+     }
+    ],
+    "dit": "Les cinquante mille euros des années passées vont en réserves, nets d'impôt : trente-sept mille cinq cents euros."
+   },
+   {
+    "voix": "Les 10 000 € dotés cette année vont en résultat : 7 500 €.",
+    "rangs": [
+     {
+      "op": "+",
+      "lib": "Résultat",
+      "val": "7 500 €"
+     },
+     {
+      "op": "=",
+      "lib": "Total",
+      "val": "45 000 €",
+      "style": "ok"
+     }
+    ],
+    "dit": "Les dix mille euros dotés cette année vont en résultat : sept mille cinq cents euros."
+   }
+  ]
  }
 ]
