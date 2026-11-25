@@ -1,5 +1,5 @@
 {
- "majLe": "2026-11-25T01:25:49.304Z",
+ "majLe": "2026-11-25T15:35:02.987Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -11,7 +11,7 @@
    "nom": "Entreprendre Service-Public",
    "url": "https://www.service-public.fr/abonnements/rss/actu-actu-pro.rss",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Compta Online",
@@ -22,7 +22,7 @@
    "nom": "Village de la Justice",
    "url": "https://www.village-justice.com/articles/spip.php?page=backend",
    "ok": true,
-   "articles": 0
+   "articles": 2
   },
   {
    "nom": "Le Monde du Droit",
@@ -44,25 +44,25 @@
    "nom": "Le Monde Économie",
    "url": "https://www.lemonde.fr/economie/rss_full.xml",
    "ok": true,
-   "articles": 3
+   "articles": 2
   },
   {
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 1
+   "articles": 2
   },
   {
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 1
+   "articles": 2
   },
   {
    "nom": "Capital",
    "url": "https://feed.prismamediadigital.com/v1/cap/rss?sources=capital",
    "ok": true,
-   "articles": 2
+   "articles": 1
   }
  ],
  "images": {
@@ -76,6 +76,96 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "village-de-la-justice-https-www-village-justice-com-articles-pse-annule-exoneration-sociale-est-elle-perdue-59679-html-u",
+   "titre": "PSE annulé : l'exonération sociale est-elle perdue ? Par Sabrina Henocque Chiche, Avocate.",
+   "url": "https://www.village-justice.com/articles/pse-annule-exoneration-sociale-est-elle-perdue,59679.html?utm_source=backend&utm_medium=RSS&utm_campaign=RSS_Reseaux",
+   "source": "Village de la Justice",
+   "date": "2026-11-25T16:00:00.000Z",
+   "image": "https://www.village-justice.com/articles/local/cache-gd2/78/cb5a575ff42d184f2f7cf909d07d08.jpg?1791993210",
+   "categorie": "Social",
+   "score": 5
+  },
+  {
+   "id": "village-de-la-justice-https-www-village-justice-com-articles-cdhr-combien-paie-annee-vend-societe-60289-html-utm-source-",
+   "titre": "CDHR : combien paie-t-on l'année où l'on vend sa société ? Par Cassandre Nogues, Avocat.",
+   "url": "https://www.village-justice.com/articles/cdhr-combien-paie-annee-vend-societe,60289.html?utm_source=backend&utm_medium=RSS&utm_campaign=RSS_Reseaux",
+   "source": "Village de la Justice",
+   "date": "2026-11-25T15:30:00.000Z",
+   "image": "https://www.village-justice.com/articles/local/cache-gd2/1c/a9cecb8c4ae973743c0e3bb299c7c2.jpg?1794418205",
+   "categorie": "Fiscalité",
+   "score": 5
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-budget-sebastien-lecornu-n-a-pas-de-volonte-de-passage-en-force-et-a",
+   "titre": "Sébastien Lecornu n'a pas de \"volonté de passage en force\" et appelle au \"compromis\" pour faire adopter le budget 2027",
+   "url": "https://www.franceinfo.fr/economie/budget/sebastien-lecornu-n-a-pas-de-volonte-de-passage-en-force-et-appelle-au-compromis-pour-faire-adopter-le-budget-2027_8299881.html#xtor=RSS-3-%5Beconomie%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-11-25T15:23:32.000Z",
+   "image": "https://www.franceinfo.fr/pictures/BUt6P4eCmxbrgVGqTt77EQNpWhs/0x241:4121x2560/432x243/filters:format(jpg)/2026/11/25/6b06fcf2154c8315584596.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-union-europeenne-chine-mexique-washington-annonce-de-nouveaux-droits",
+   "titre": "UE, Chine, Mexique… L’administration Trump annonce de nouveaux droits de douane, Bruxelles «conteste fermement» leur bien-fondé",
+   "url": "https://www.lefigaro.fr/conjoncture/union-europeenne-chine-mexique-washington-annonce-de-nouveaux-droits-de-douane-contre-ses-principaux-partenaires-commerciaux-20261125",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-25T15:18:24.000Z",
+   "image": "https://i.f1g.fr/media/cms/orig/2026/11/25/1078d085acfe908b5537b150e5db0a2e165a6e2fd75f593062a2e5045e5af5ed.JPG",
+   "categorie": "Fiscalité",
+   "score": 4
+  },
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-economie-article-2026-11-25-donald-trump-persiste-avec-une-nouvelle-salve-de-droit",
+   "titre": "Donald Trump persiste avec une nouvelle salve de droits de douane, notamment contre l’UE et la Chine, malgré la claque électorale",
+   "url": "https://www.lemonde.fr/economie/article/2026/11/25/donald-trump-persiste-avec-une-nouvelle-salve-de-droits-de-douane-malgre-la-claque-electorale_6815108_3234.html",
+   "source": "Le Monde Économie",
+   "date": "2026-11-25T14:04:49.000Z",
+   "image": "https://img.lemde.fr/2026/11/24/685/0/8225/4112/644/322/60/0/3dac54a_ftp-1-5hapjx1d3y1y-f6c999cf0f7b4c7daded4d5d29e15f89-0-b1859d1fb08648d3bcf4638b6964951a.jpg",
+   "categorie": "Fiscalité",
+   "score": 4
+  },
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-international-article-2026-11-25-l-administration-trump-annonce-de-nouveaux-droits",
+   "titre": "L’administration Trump annonce de nouveaux droits de douane contre ses principaux partenaires commerciaux, dont l’Union européenne, la Chine et le Mexique",
+   "url": "https://www.lemonde.fr/international/article/2026/11/25/l-administration-trump-annonce-de-nouveaux-droits-de-douane-contre-ses-principaux-partenaires-commerciaux-dont-l-ue-la-chine-et-le-mexique_6815099_3210.html",
+   "source": "Le Monde Économie",
+   "date": "2026-11-25T13:30:49.000Z",
+   "image": "https://img.lemde.fr/2026/11/25/261/0/4000/2000/644/322/60/0/cf20530_ftp-1-jid2dapl52lr-ecf07c8f5d6049389f0fd1c2fa0e3b57-0-f81d89f7ed454229a623afa62c79432e.jpg",
+   "categorie": "Fiscalité",
+   "score": 4
+  },
+  {
+   "id": "capital-https-www-capital-fr-immobilier-lmnp-ne-pas-revenir-sur-la-reforme-aurait-ete-une-trahison-de-la-parole-de-letat",
+   "titre": "LMNP : Ne pas revenir sur la réforme aurait été «une trahison de la parole de l’Etat» pour le ministre du Logement",
+   "url": "https://www.capital.fr/immobilier/lmnp-ne-pas-revenir-sur-la-reforme-aurait-ete-une-trahison-de-la-parole-de-letat-pour-le-ministre-du-logement-1532151",
+   "source": "Capital",
+   "date": "2026-11-25T10:54:17.000Z",
+   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~11~24~a6f1297b-938b-4d3e-8aaa-23123f45e81d.jpg/1200x900/focus-point/1609%2C572/lmnp-ne-pas-revenir-sur-la-reforme-aurait-ete-une-trahison-de-la-parole-de-l-etat-pour-le-ministre-du-logement.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-international-droits-de-douane-pekin-met-en-garde-washington-contre-de-nouvelles",
+   "titre": "Droits de douane : Pékin met en garde Washington contre de nouvelles taxes",
+   "url": "https://www.lefigaro.fr/international/droits-de-douane-pekin-met-en-garde-washington-contre-de-nouvelles-taxes-20261125",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-25T10:46:20.000Z",
+   "image": "https://i.f1g.fr/media/cms/orig/2026/11/25/290a9f52892288f89b50ea5428da1c61ac599fd6a6dc44ce24760498f59b8737.JPG",
+   "categorie": "Fiscalité",
+   "score": 6
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-impots-reforme-fiscale-franceinfo-au-congres-des-maires-les-equation",
+   "titre": "franceinfo au Congrès des maires : les équations difficiles de la fiscalité locale",
+   "url": "https://www.franceinfo.fr/economie/impots/reforme-fiscale/franceinfo-au-congres-des-maires-les-equations-difficiles-de-la-fiscalite-locale_8299326.html#xtor=RSS-3-%5Beconomie%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-11-25T10:25:00.000Z",
+   "image": "https://www.franceinfo.fr/pictures/xMevhqnkmPUOjToAsXM2N4WKYHM/0x283:5432x3339/432x243/filters:format(jpg)/2026/11/25/6b06b71bd50d5887870109.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
   {
    "id": "capital-https-www-capital-fr-economie-politique-deficit-public-le-parlement-enterine-54-du-pib-cette-annee-au-lieu-des-5",
    "titre": "Déficit public : le Parlement entérine 5,4% du PIB cette année, au lieu des 5% prévus",
@@ -783,96 +873,6 @@
    "source": "Le Figaro Économie",
    "date": "2026-11-17T10:49:07.000Z",
    "image": "https://i.f1g.fr/media/cms/orig/2026/11/17/7fccc7563519c209445896c11240a2ab2ffc9b250f1f7be8fa4346017a257b37.JPG",
-   "categorie": "Fiscalité",
-   "score": 4
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-elections-presidentielles-presidentielle-2027-impots-logement-associations-ce-qu",
-   "titre": "Présidentielle 2027 : impôts, logement, associations… Ce qu’il faut retenir du grand débat entre cinq candidats sur la vie chère",
-   "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-impots-logement-associations-ce-qu-il-faut-retenir-du-grand-debat-entre-cinq-candidats-sur-la-vie-chere-20261116",
-   "source": "Le Figaro Économie",
-   "date": "2026-11-17T06:31:01.000Z",
-   "image": "https://i.f1g.fr/media/cms/2697x1517_crop/2026/11/17/8ec172d0af94a7cabc44c0b8027f791b98c90ffd0ab7d9dd44c5199aef72e4ba.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "le-monde-conomie-https-www-lemonde-fr-economie-article-2026-11-17-l-essor-de-l-ia-ralentit-les-recrutements-des-metiers-",
-   "titre": "L’utilisation de l’IA a fait disparaître 100 000 offres d’emploi en 2026, et cela ne concerne pas forcément que les débutants, selon une étude",
-   "url": "https://www.lemonde.fr/economie/article/2026/11/17/l-essor-de-l-ia-ralentit-les-recrutements-des-metiers-les-plus-automatisables-au-dela-des-postes-juniors_6812918_3234.html",
-   "source": "Le Monde Économie",
-   "date": "2026-11-17T06:30:09.000Z",
-   "image": "https://img.lemde.fr/2026/11/17/457/0/2752/1376/644/322/60/0/6e2f4ee_upload-1-0lbnmsjmycyl-image0.jpeg",
-   "categorie": "Social",
-   "score": 5
-  },
-  {
-   "id": "le-monde-conomie-https-www-lemonde-fr-election-presidentielle-2027-live-2026-11-16-en-direct-debat-de-la-presidentielle-",
-   "titre": "Débat de la présidentielle 2027 : revivez le débat entre Marine Le Pen, Raphaël Glucksmann, Jean-Luc Mélenchon, Gabriel Attal et Bruno Retailleau",
-   "url": "https://www.lemonde.fr/election-presidentielle-2027/live/2026/11/16/en-direct-debat-de-la-presidentielle-2027-les-cinq-candidats-s-affrontent-sur-les-retraites-marine-le-pen-cible-la-ligue-des-droits-de-l-homme-un-ramassis-de-gauchistes_6811633_6205049.html",
-   "source": "Le Monde Économie",
-   "date": "2026-11-16T22:21:54.000Z",
-   "image": "https://img.lemde.fr/2026/11/16/479/0/5748/2874/644/322/60/0/40b1c23_ftp-1-lvyqkyk0mtmd-2026-11-16t194753z-1720879303-rc27poaq40ka-rtrmadp-3-france-politics.JPG",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "village-de-la-justice-https-www-village-justice-com-articles-apport-cession-article-plf-2027-les-donations-realisees-dep",
-   "titre": "Apport-cession : l'article 5 du PLF 2027 et les donations réalisées depuis le 1er octobre 2026. Par Cassandre Nogues, Avocate.",
-   "url": "https://www.village-justice.com/articles/apport-cession-article-plf-2027-les-donations-realisees-depuis-1er-octobre-2026,60061.html?utm_source=backend&utm_medium=RSS&utm_campaign=RSS_Reseaux",
-   "source": "Village de la Justice",
-   "date": "2026-11-16T19:00:00.000Z",
-   "image": "https://www.village-justice.com/articles/local/cache-gd2/1c/a9cecb8c4ae973743c0e3bb299c7c2.jpg?1794418205",
-   "categorie": "Fiscalité",
-   "score": 5
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-la-tva-a-1-sur-l-alimentation-le-pari-tres-risque-de-la-premiere-min",
-   "titre": "La TVA à 1 % sur l’alimentation : le pari très risqué de la première ministre japonaise Sanae Takaichi",
-   "url": "https://www.lefigaro.fr/conjoncture/la-tva-a-1-sur-l-alimentation-le-pari-tres-risque-de-la-premiere-ministre-japonaise-sanae-takaichi-20261116",
-   "source": "Le Figaro Économie",
-   "date": "2026-11-16T17:15:00.000Z",
-   "image": "https://i.f1g.fr/media/cms/2930x1648_crop/2026/11/16/aa9e0455f973cce1578bb6ad12e02f239cbdf07f01e9d22c5a2a112b1cc04786.jpg",
-   "categorie": "Fiscalité",
-   "score": 5
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-budget-des-promesses-qui-ne-pourront-pas-etre-tenues-deplore-le-pres",
-   "titre": "\"Des promesses qui ne pourront pas être tenues\", déplore le président UDI du Loiret qui décline l'invitation à Matignon concernant le budget 2027",
-   "url": "https://www.franceinfo.fr/economie/budget/des-promesses-qui-ne-pourront-pas-etre-tenues-deplore-le-president-udi-du-loiret-qui-decline-l-invitation-a-matignon-concernant-le-budget-2027_8285018.html#xtor=RSS-3-%5Beconomie%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-11-16T16:13:32.000Z",
-   "image": "https://www.franceinfo.fr/pictures/m7xyrMmzKF7RhRx96iQW5HG3tDE/432x243/filters:format(jpg)/2026/11/14/6af7ed3217ea8891489730.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "le-monde-conomie-https-www-lemonde-fr-economie-article-2026-11-16-la-grece-multiplie-les-mesures-pour-attirer-les-grosse",
-   "titre": "La Grèce multiplie les mesures pour attirer les grosses fortunes et les hedge funds",
-   "url": "https://www.lemonde.fr/economie/article/2026/11/16/la-grece-multiplie-les-mesures-pour-attirer-les-grosses-fortunes-et-les-hedge-funds_6811670_3234.html",
-   "source": "Le Monde Économie",
-   "date": "2026-11-16T09:00:21.000Z",
-   "image": "https://img.lemde.fr/2026/11/16/875/0/6000/3000/644/322/60/0/31564e9_upload-1-nqxmopatnop3-2024-04-18t061550z-2013221288-rc2057ay757b-rtrmadp-3-greece-economy-rebound.JPG",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-budget-la-situation-autour-du-budget-2027-devient-intenable-previenn",
-   "titre": "La situation autour du budget 2027 \"devient intenable\", préviennent des présidents de départements avant leur rendez-vous avec le Premier ministre",
-   "url": "https://www.franceinfo.fr/economie/budget/la-situation-autour-du-budget-2027-devient-intenable-previennent-des-presidents-de-departements-avant-leur-rendez-vous-avec-le-premier-ministre_8284391.html#xtor=RSS-3-%5Beconomie%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-11-16T07:38:02.000Z",
-   "image": "https://www.franceinfo.fr/pictures/u1SkHuo9M_WrEa2PHATyZPVW0MQ/0x0:3543x1992/432x243/filters:format(jpg)/2026/11/16/6afab289b08a7267894511.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-replay-radio-le-decryptage-eco-lutte-contre-la-vie-chere-et-hausse-des-salair",
-   "titre": "Lutte contre la vie chère et hausse des salaires : le gouvernement rassure quant à ses promesses",
-   "url": "https://www.franceinfo.fr/replay-radio/le-decryptage-eco/lutte-contre-la-vie-chere-et-hausse-des-salaires-le-gouvernement-rassure-quant-a-ses-promesses_8263364.html#xtor=RSS-3-%5Beconomie%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-11-16T07:11:35.000Z",
-   "image": "https://www.franceinfo.fr/pictures/oeeGuvoRu1gkOWkMxzVHS1jnYpA/0x53:1024x629/432x243/filters:format(jpg)/2026/11/16/6afaac5496d7d986209862.jpg",
    "categorie": "Fiscalité",
    "score": 4
   }
