@@ -1,11 +1,11 @@
 {
- "majLe": "2026-11-24T15:52:08.862Z",
+ "majLe": "2026-11-25T01:25:49.304Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
    "url": "https://www.economie.gouv.fr/rss/toutesactualites",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "Entreprendre Service-Public",
@@ -22,7 +22,7 @@
    "nom": "Village de la Justice",
    "url": "https://www.village-justice.com/articles/spip.php?page=backend",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "Le Monde du Droit",
@@ -38,13 +38,13 @@
    "nom": "CNIL",
    "url": "https://www.cnil.fr/fr/rss.xml",
    "ok": true,
-   "articles": 2
+   "articles": 0
   },
   {
    "nom": "Le Monde Économie",
    "url": "https://www.lemonde.fr/economie/rss_full.xml",
    "ok": true,
-   "articles": 0
+   "articles": 3
   },
   {
    "nom": "Le Figaro Économie",
@@ -56,13 +56,13 @@
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 2
+   "articles": 1
   },
   {
    "nom": "Capital",
    "url": "https://feed.prismamediadigital.com/v1/cap/rss?sources=capital",
    "ok": true,
-   "articles": 0
+   "articles": 2
   }
  ],
  "images": {
@@ -76,6 +76,76 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "capital-https-www-capital-fr-economie-politique-deficit-public-le-parlement-enterine-54-du-pib-cette-annee-au-lieu-des-5",
+   "titre": "Déficit public : le Parlement entérine 5,4% du PIB cette année, au lieu des 5% prévus",
+   "url": "https://www.capital.fr/economie-politique/deficit-public-le-parlement-enterine-54-du-pib-cette-annee-au-lieu-des-5-prevus-1532150",
+   "source": "Capital",
+   "date": "2026-11-24T22:18:13.000Z",
+   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~11~24~ab3424db-3a2d-423c-a730-96abcd9c8ac4.jpg/1200x900/quality/80/deficit-public-le-parlement-enterine-5-4-du-pib-cette-annee-au-lieu-des-5-prevus.jpg",
+   "categorie": "Fiscalité",
+   "score": 4
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-social-mon-mari-a-fait-un-faux-contrat-de-travail-ces-francais-prets-a-tout-pour",
+   "titre": "« Mon mari a fait un faux contrat de travail » : ces Français prêts à tout pour décrocher un logement à louer",
+   "url": "https://www.lefigaro.fr/social/mon-mari-a-fait-un-faux-contrat-de-travail-ces-francais-prets-a-tout-pour-decrocher-un-logement-a-louer-20261124",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-24T19:24:23.000Z",
+   "image": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/24/d021b26749b72a94eedfebd11c22b1046586c49c49eb656edeb8f2004bb52f0c.jpg",
+   "categorie": "Social",
+   "score": 3
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-budget-sebastien-lecornu-recevra-les-presidents-des-groupes-parlemen",
+   "titre": "Sébastien Lecornu recevra les présidents des groupes parlementaires début décembre pour prolonger les discussions sur le budget 2027",
+   "url": "https://www.franceinfo.fr/economie/budget/sebastien-lecornu-recevra-les-presidents-des-groupes-parlementaires-la-semaine-prochaine-pour-prolonger-les-discussions-sur-le-budget-2027_8298285.html#xtor=RSS-3-%5Beconomie%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-11-24T19:15:27.000Z",
+   "image": "https://www.franceinfo.fr/pictures/dhfCQvs76Us4CcR2FdT6jrNS6bE/0x0:6412x3606/432x243/filters:format(jpg)/2026/11/24/6b05df50b8361275285648.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-economie-article-2026-11-24-la-commission-europeenne-se-montre-indulgente-sur-la-s",
+   "titre": "La Commission européenne se montre indulgente sur la situation budgétaire française",
+   "url": "https://www.lemonde.fr/economie/article/2026/11/24/la-commission-europeenne-se-montre-indulgente-sur-la-situation-budgetaire-francaise_6814840_3234.html",
+   "source": "Le Monde Économie",
+   "date": "2026-11-24T18:42:05.000Z",
+   "image": "https://img.lemde.fr/2026/11/24/57/0/4300/2150/644/322/60/0/a5183ac_upload-1-x6dhzkxht0kb-13402451.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-politique-article-2026-11-24-budget-2027-le-senat-abaisse-le-plafond-de-l-abatteme",
+   "titre": "Budget 2027 : le Sénat abaisse le plafond de l’abattement fiscal de 10 % des retraités, refusant sa suppression totale",
+   "url": "https://www.lemonde.fr/politique/article/2026/11/24/budget-2027-le-senat-abaisse-le-plafond-de-l-abattement-fiscal-de-10-des-retraites-refusant-sa-suppression-totale_6814837_823448.html",
+   "source": "Le Monde Économie",
+   "date": "2026-11-24T18:15:05.000Z",
+   "image": "https://img.lemde.fr/2026/11/03/664/0/8000/4000/644/322/60/0/fa2aa4c_upload-1-0ngovo7atcvt-jmug261103046.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-economie-article-2026-11-24-office-depot-ferme-definitivement-ses-27-magasins-et-s",
+   "titre": "Office Depot ferme définitivement ses 27 magasins et son site Internet en France, faute d’avoir trouvé un repreneur",
+   "url": "https://www.lemonde.fr/economie/article/2026/11/24/office-depot-ferme-definitivement-ses-27-magasins-et-son-site-internet-en-france-faute-d-avoir-trouve-un-repreneur_6814829_3234.html",
+   "source": "Le Monde Économie",
+   "date": "2026-11-24T17:29:19.000Z",
+   "image": "https://img.lemde.fr/2026/11/24/711/0/5476/2738/644/322/60/0/b9171e0_ftp-1-h5igittvbtb7-afp-d8gx3ke.jpg",
+   "categorie": "Social",
+   "score": 6
+  },
+  {
+   "id": "capital-https-www-capital-fr-immobilier-logements-vacants-a-paris-la-taxe-quasi-doublee-2-800-euros-pour-un-30-m-vide-15",
+   "titre": "Logements vacants à Paris : la taxe quasi doublée, 2 800 euros pour un 30 m² vide",
+   "url": "https://www.capital.fr/immobilier/logements-vacants-a-paris-la-taxe-quasi-doublee-2-800-euros-pour-un-30-m-vide-1532133",
+   "source": "Capital",
+   "date": "2026-11-24T17:00:00.000Z",
+   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~11~24~62d88108-d43d-40b1-8043-23cfab11377d.jpg/1200x900/focus-point/1293%2C1705/logements-vacants-a-paris-la-taxe-quasi-doublee-2-800-euros-pour-un-30-m-vide.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
   {
    "id": "village-de-la-justice-https-www-village-justice-com-articles-agents-quand-outil-transforme-poste-reussir-consultation-cs",
    "titre": "Agents IA : quand l'outil transforme le poste, réussir la consultation du CSE. Par Marc Marie-Eugénie Monteil.",
@@ -805,77 +875,6 @@
    "image": "https://www.franceinfo.fr/pictures/oeeGuvoRu1gkOWkMxzVHS1jnYpA/0x53:1024x629/432x243/filters:format(jpg)/2026/11/16/6afaac5496d7d986209862.jpg",
    "categorie": "Fiscalité",
    "score": 4
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-replay-radio-le-brief-eco-la-taxe-francaise-sur-les-petits-colis-importes-a-d",
-   "titre": "Un aéroport français mis en péril par la taxe française sur les petits colis importés",
-   "url": "https://www.franceinfo.fr/replay-radio/le-brief-eco/la-taxe-francaise-sur-les-petits-colis-importes-a-des-effets-indesirables-sur-l-activite-economique_8263361.html#xtor=RSS-3-%5Beconomie%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-11-16T06:55:29.000Z",
-   "image": "https://www.franceinfo.fr/pictures/oZVK_Mm70RrMNVLbD1RBje_cq9g/0x428:8192x5036/432x243/filters:format(jpg)/2026/11/16/6afaa70d605c4865214823.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "entreprendre-service-public-https-entreprendre-service-public-gouv-fr-actualites-a19130-xtor-rss-112",
-   "titre": "Les avis de CFE et d'IFER 2026 sont disponibles en ligne",
-   "url": "https://entreprendre.service-public.gouv.fr/actualites/A19130?xtor=RSS-112",
-   "source": "Entreprendre Service-Public",
-   "officiel": true,
-   "date": "2026-11-15T23:00:00.000Z",
-   "image": "https://www.service-public.gouv.fr/webapp/images/actu/extralarge/telephone_ordinateur.jpeg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-trop-d-impots-et-trop-peu-de-reconnaissance-dans-c-est-nicolas-qui-p",
-   "titre": "« Trop d’impôts et trop peu de reconnaissance » : dans C’est Nicolas qui paie !, Jonas Haddad analyse les dessous de la révolte des actifs",
-   "url": "https://www.lefigaro.fr/conjoncture/trop-d-impots-et-trop-peu-de-reconnaissance-dans-c-est-nicolas-qui-paie-jonas-haddad-analyse-les-dessous-de-la-revolte-des-actifs-20261115",
-   "source": "Le Figaro Économie",
-   "date": "2026-11-15T11:15:00.000Z",
-   "image": "https://i.f1g.fr/media/cms/3000x1687_crop/2026/11/15/521efaae91a1c9507bd1543b0857876132acab99b1c3af86800f15d75a0b99c0.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "le-monde-conomie-https-www-lemonde-fr-argent-article-2026-11-14-la-plus-value-immobiliere-est-elle-exoneree-en-cas-de-de",
-   "titre": "La plus-value immobilière est-elle exonérée en cas de départ volontaire de l’entreprise ?",
-   "url": "https://www.lemonde.fr/argent/article/2026/11/14/la-plus-value-immobiliere-est-elle-exoneree-en-cas-de-depart-volontaire-de-l-entreprise_6809690_1657007.html",
-   "source": "Le Monde Économie",
-   "date": "2026-11-14T05:00:30.000Z",
-   "image": "https://img.lemde.fr/2025/08/06/125/0/1500/750/644/322/60/0/2d764c6_upload-1-ujwrk7f13wt7-lmargent207.jpg",
-   "categorie": "Fiscalité",
-   "score": 6
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-c-est-du-gachis-accable-par-la-taxe-sur-les-petits-colis-l-aeroport-",
-   "titre": "«C’est du gâchis» : accablé par la taxe sur les petits colis, l’aéroport Paris-Vatry pourrait cesser ses activités",
-   "url": "https://www.lefigaro.fr/conjoncture/c-est-du-gachis-accable-par-la-taxe-sur-les-petits-colis-l-aeroport-paris-vatry-pourrait-cesser-ses-activites-20261113",
-   "source": "Le Figaro Économie",
-   "date": "2026-11-13T20:22:24.000Z",
-   "image": "https://i.f1g.fr/media/cms/3000x1836_crop/2026/11/13/bd6e5091cc6efe59263f67c2d74142af1dbaf65026f69d14fb00cdfdda306108.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "capital-https-www-capital-fr-economie-politique-made-in-france-ce-que-proposent-les-candidats-a-la-presidentielle-2027-1",
-   "titre": "Made in France : ce que proposent les candidats à la présidentielle 2027",
-   "url": "https://www.capital.fr/economie-politique/made-in-france-ce-que-proposent-les-candidats-a-la-presidentielle-2027-1531835",
-   "source": "Capital",
-   "date": "2026-11-13T17:21:34.000Z",
-   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~11~13~b149ac22-8953-40bb-8a67-948162c1238f.jpg/1200x900/focus-point/867%2C350/made-in-france-ce-que-proposent-les-candidats-a-la-presidentielle-2027.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "village-de-la-justice-https-www-village-justice-com-articles-sortie-gta-employeur-peut-refuser-conge-contester-arret-com",
-   "titre": "Sortie de GTA VI : l'employeur peut-il refuser le congé, contester l'arrêt de complaisance et sanctionner l'absence ? Par Arnaud Sirven, Avocat.",
-   "url": "https://www.village-justice.com/articles/sortie-gta-employeur-peut-refuser-conge-contester-arret-complaisance,60034.html?utm_source=backend&utm_medium=RSS&utm_campaign=RSS_Reseaux",
-   "source": "Village de la Justice",
-   "date": "2026-11-13T16:45:00.000Z",
-   "image": "https://www.village-justice.com/articles/local/cache-gd2/aa/da20b5b815b7501e5f240872d95171.png?1791978743",
-   "categorie": "Profession",
-   "score": 5
   }
  ],
  "ecartes": []
