@@ -1,5 +1,5 @@
 {
- "majLe": "2026-11-25T15:35:02.987Z",
+ "majLe": "2026-11-26T01:00:08.316Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -22,7 +22,7 @@
    "nom": "Village de la Justice",
    "url": "https://www.village-justice.com/articles/spip.php?page=backend",
    "ok": true,
-   "articles": 2
+   "articles": 0
   },
   {
    "nom": "Le Monde du Droit",
@@ -44,7 +44,7 @@
    "nom": "Le Monde Économie",
    "url": "https://www.lemonde.fr/economie/rss_full.xml",
    "ok": true,
-   "articles": 2
+   "articles": 1
   },
   {
    "nom": "Le Figaro Économie",
@@ -56,13 +56,13 @@
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 2
+   "articles": 0
   },
   {
    "nom": "Capital",
    "url": "https://feed.prismamediadigital.com/v1/cap/rss?sources=capital",
    "ok": true,
-   "articles": 1
+   "articles": 0
   }
  ],
  "images": {
@@ -76,6 +76,36 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-politique-article-2026-11-26-budget-2027-le-senat-approuve-l-effort-de-cinq-millia",
+   "titre": "Budget 2027 : le Sénat approuve l’effort de cinq milliards d’euros demandé aux grandes entreprises",
+   "url": "https://www.lemonde.fr/politique/article/2026/11/26/budget-2027-le-senat-approuve-l-effort-de-cinq-milliards-d-euros-demande-aux-grandes-entreprises_6815197_823448.html",
+   "source": "Le Monde Économie",
+   "date": "2026-11-25T23:50:44.000Z",
+   "image": "https://img.lemde.fr/2026/11/25/484/0/5805/2902/644/322/60/0/bed23f6_upload-1-m5j7yxgkjns5-000-d6fa443.jpg",
+   "categorie": "Fiscalité",
+   "score": 4
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-droits-de-douane-les-arguments-deroutants-de-donald-trump-pour-relan",
+   "titre": "Droits de douane : les arguments déroutants de Donald Trump pour relancer son offensive commerciale",
+   "url": "https://www.lefigaro.fr/conjoncture/droits-de-douane-les-arguments-deroutants-de-donald-trump-pour-relancer-son-offensive-commerciale-20261125",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-25T19:15:00.000Z",
+   "image": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/25/8d683430a770739ba60b14990668fb76c40023cecc522847a66bd7919ec82e1e.jpg",
+   "categorie": "Fiscalité",
+   "score": 4
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-presidentielle-2027-la-lutte-contre-la-fraude-sociale-et-fiscale-cet",
+   "titre": "Présidentielle 2027 : la lutte contre la fraude sociale et fiscale, cette promesse d’argent facile qui se heurte à la réalité",
+   "url": "https://www.lefigaro.fr/conjoncture/presidentielle-2027-la-lutte-contre-la-fraude-sociale-et-fiscale-cette-promesse-d-argent-facile-qui-se-heurte-a-la-realite-20261125",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-25T17:13:07.000Z",
+   "image": "https://i.f1g.fr/media/cms/1920x1080_crop/2026/11/25/20a1b3f056d749a77326913afa88618c08a977f481f68cff0b5d8261284ad5f3.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
   {
    "id": "village-de-la-justice-https-www-village-justice-com-articles-pse-annule-exoneration-sociale-est-elle-perdue-59679-html-u",
    "titre": "PSE annulé : l'exonération sociale est-elle perdue ? Par Sabrina Henocque Chiche, Avocate.",
@@ -845,36 +875,6 @@
    "image": "https://img.lemde.fr/2026/11/17/447/0/4592/2296/644/322/60/0/bf69020_upload-1-8613w510fhgd-000-32g23v2.jpg",
    "categorie": "Fiscalité",
    "score": 3
-  },
-  {
-   "id": "capital-https-www-capital-fr-economie-politique-impots-locaux-un-rapport-propose-de-recalculer-la-taxe-fonciere-sur-la-v",
-   "titre": "Impôts locaux : un rapport propose de recalculer la taxe foncière sur la valeur de marché",
-   "url": "https://www.capital.fr/economie-politique/impots-locaux-un-rapport-propose-de-recalculer-la-taxe-fonciere-sur-la-valeur-de-marche-1531924",
-   "source": "Capital",
-   "date": "2026-11-17T15:21:28.000Z",
-   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~11~17~168e74d4-2877-424c-b06b-493562b5326f.jpg/1200x900/focus-point/1305%2C1163/impots-locaux-un-rapport-propose-de-recalculer-la-taxe-fonciere-sur-la-valeur-de-marche.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "cnil-https-www-cnil-fr-fr-38-sanctions-simplifiees",
-   "titre": "La CNIL a prononcé 38 nouvelles sanctions en procédure simplifiée depuis juin 2026",
-   "url": "https://www.cnil.fr/fr/38-sanctions-simplifiees",
-   "source": "CNIL",
-   "officiel": true,
-   "date": "2026-11-17T12:00:00.000Z",
-   "categorie": "Numérique",
-   "score": 2
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-social-budget-de-la-secu-le-senat-retablit-la-reforme-des-retraites-et-rejette-l",
-   "titre": "Budget de la Sécu : le Sénat rétablit la réforme des retraites et rejette la désindexation des pensions",
-   "url": "https://www.lefigaro.fr/social/budget-de-la-secu-le-senat-retablit-la-reforme-des-retraites-et-rejette-la-desindexation-des-pensions-20261117",
-   "source": "Le Figaro Économie",
-   "date": "2026-11-17T10:49:07.000Z",
-   "image": "https://i.f1g.fr/media/cms/orig/2026/11/17/7fccc7563519c209445896c11240a2ab2ffc9b250f1f7be8fa4346017a257b37.JPG",
-   "categorie": "Fiscalité",
-   "score": 4
   }
  ],
  "ecartes": []
