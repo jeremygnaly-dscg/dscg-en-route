@@ -1,17 +1,17 @@
 {
- "majLe": "2026-11-26T01:00:08.316Z",
+ "majLe": "2026-11-26T15:10:49.624Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
    "url": "https://www.economie.gouv.fr/rss/toutesactualites",
    "ok": true,
-   "articles": 0
+   "articles": 2
   },
   {
    "nom": "Entreprendre Service-Public",
    "url": "https://www.service-public.fr/abonnements/rss/actu-actu-pro.rss",
    "ok": true,
-   "articles": 1
+   "articles": 2
   },
   {
    "nom": "Compta Online",
@@ -44,25 +44,25 @@
    "nom": "Le Monde Économie",
    "url": "https://www.lemonde.fr/economie/rss_full.xml",
    "ok": true,
-   "articles": 1
+   "articles": 3
   },
   {
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 2
+   "articles": 0
   },
   {
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Capital",
    "url": "https://feed.prismamediadigital.com/v1/cap/rss?sources=capital",
    "ok": true,
-   "articles": 0
+   "articles": 1
   }
  ],
  "images": {
@@ -77,6 +77,76 @@
  },
  "items": [
   {
+   "id": "capital-https-www-capital-fr-immobilier-loc-avantages-denormandie-ce-que-le-senat-a-vote-pour-les-bailleurs-1532193",
+   "titre": "Loc'Avantages, Denormandie : ce que le Sénat a voté pour les bailleurs",
+   "url": "https://www.capital.fr/immobilier/loc-avantages-denormandie-ce-que-le-senat-a-vote-pour-les-bailleurs-1532193",
+   "source": "Capital",
+   "date": "2026-11-26T13:31:46.000Z",
+   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~11~26~ec06a64c-4789-495e-84d6-47752001e97c.jpg/1200x900/focus-point/1194%2C1455/loc-avantages-denormandie-ce-que-le-senat-a-vote-pour-les-bailleurs.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "economie-gouv-fr-https-www-economie-gouv-fr-particuliers-mes-droits-conso-bien-consommer-affichage-des-prix-ce-que-vous-",
+   "titre": "Affichage des prix : ce que vous devez savoir",
+   "url": "https://www.economie.gouv.fr/particuliers/mes-droits-conso/bien-consommer/affichage-des-prix-ce-que-vous-devez-savoir",
+   "source": "economie.gouv.fr",
+   "officiel": true,
+   "date": "2026-11-26T10:56:44.000Z",
+   "categorie": "Finance",
+   "score": 2
+  },
+  {
+   "id": "economie-gouv-fr-https-www-economie-gouv-fr-particuliers-impots-et-fiscalite-gerer-mes-autres-impots-et-taxes-tout-savoi",
+   "titre": "Tout savoir sur le dispositif des aviseurs fiscaux",
+   "url": "https://www.economie.gouv.fr/particuliers/impots-et-fiscalite/gerer-mes-autres-impots-et-taxes/tout-savoir-sur-le-dispositif-des-aviseurs-fiscaux",
+   "source": "economie.gouv.fr",
+   "officiel": true,
+   "date": "2026-11-26T10:01:56.000Z",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-replay-radio-le-brief-eco-la-france-quatrieme-en-europe-en-matiere-de-depense",
+   "titre": "La France, quatrième en Europe en matière de dépenses de santé",
+   "url": "https://www.franceinfo.fr/replay-radio/le-brief-eco/la-france-quatrieme-en-europe-en-matiere-de-depenses-de-sante_8278487.html#xtor=RSS-3-%5Beconomie%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-11-26T06:24:11.000Z",
+   "image": "https://www.franceinfo.fr/pictures/NAED44_UHvf69DAbgbspVQc2EII/0x312:2944x1968/432x243/filters:format(jpg)/2026/11/26/6b07cfef32f3b683642049.jpg",
+   "categorie": "Fiscalité",
+   "score": 4
+  },
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-economie-article-2026-11-26-les-millionnaires-patriotes-ces-riches-qui-veulent-pay",
+   "titre": "Les Millionnaires patriotes, ces riches qui veulent payer des impôts, se lancent en France",
+   "url": "https://www.lemonde.fr/economie/article/2026/11/26/les-millionnaires-patriotes-ces-riches-qui-veulent-payer-des-impots-se-lancent-en-france_6815481_3234.html",
+   "source": "Le Monde Économie",
+   "date": "2026-11-26T05:55:01.000Z",
+   "image": "https://img.lemde.fr/2026/11/25/602/0/5259/2629/644/322/60/0/2296c21_upload-1-zglbvlesfmol-mgl6133.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-argent-article-2026-11-26-quand-le-garant-de-l-agence-de-voyages-en-faillite-refus",
+   "titre": "Quand le garant de l’agence de voyages en faillite refuse de rembourser le CSE de Renault et 228 salariés",
+   "url": "https://www.lemonde.fr/argent/article/2026/11/26/quand-le-garant-de-l-agence-de-voyages-en-faillite-refuse-de-rembourser-le-cse-de-renault-et-228-salaries_6815473_1657007.html",
+   "source": "Le Monde Économie",
+   "date": "2026-11-26T05:00:08.000Z",
+   "image": "https://img.lemde.fr/2025/04/10/188/0/3000/1500/644/322/60/0/aabf3d8_sirius-fs-upload-1-rtewzxvvtv9y-1744297403460-frame-12.jpg",
+   "categorie": "Social",
+   "score": 6
+  },
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-economie-article-2026-11-26-un-an-apres-la-liquidation-les-licencies-d-ascometal-e",
+   "titre": "Les licenciés d’Ascométal entre galère, colère et nostalgie, un an après la liquidation : « Je suis tombée très bas. C’est comme vivre un deuil »",
+   "url": "https://www.lemonde.fr/economie/article/2026/11/26/un-an-apres-la-liquidation-les-licencies-d-ascometal-entre-galere-colere-et-nostalgie-je-suis-tombee-tres-bas-c-est-comme-vivre-un-deuil_6815464_3234.html",
+   "source": "Le Monde Économie",
+   "date": "2026-11-26T04:00:09.000Z",
+   "image": "https://img.lemde.fr/2026/11/25/671/0/5472/2736/644/322/60/0/ebb3c89_upload-1-02rz2it8piwt-rea11404700.jpg",
+   "categorie": "Social",
+   "score": 6
+  },
+  {
    "id": "le-monde-conomie-https-www-lemonde-fr-politique-article-2026-11-26-budget-2027-le-senat-approuve-l-effort-de-cinq-millia",
    "titre": "Budget 2027 : le Sénat approuve l’effort de cinq milliards d’euros demandé aux grandes entreprises",
    "url": "https://www.lemonde.fr/politique/article/2026/11/26/budget-2027-le-senat-approuve-l-effort-de-cinq-milliards-d-euros-demande-aux-grandes-entreprises_6815197_823448.html",
@@ -85,6 +155,17 @@
    "image": "https://img.lemde.fr/2026/11/25/484/0/5805/2902/644/322/60/0/bed23f6_upload-1-m5j7yxgkjns5-000-d6fa443.jpg",
    "categorie": "Fiscalité",
    "score": 4
+  },
+  {
+   "id": "entreprendre-service-public-https-www-service-public-gouv-fr-particuliers-actualites-a17008-xtor-rss-112",
+   "titre": "Quelle revalorisation pour le Smic à compter du 1er décembre ?",
+   "url": "https://www.service-public.gouv.fr/particuliers/actualites/A17008?xtor=RSS-112",
+   "source": "Entreprendre Service-Public",
+   "officiel": true,
+   "date": "2026-11-25T23:00:00.000Z",
+   "image": "https://www.service-public.gouv.fr/webapp/images/actu/extralarge/E10511.jpg",
+   "categorie": "Social",
+   "score": 2
   },
   {
    "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-droits-de-douane-les-arguments-deroutants-de-donald-trump-pour-relan",
@@ -795,86 +876,6 @@
    "image": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/18/3f30241bbb52914ac4f1f81b021f786ecb070e22fe6b92d7fc10aeff36880db0.jpg",
    "categorie": "Fiscalité",
    "score": 4
-  },
-  {
-   "id": "capital-https-www-capital-fr-votre-carriere-rupture-conventionnelle-la-date-limite-pour-signer-avant-le-1er-janvier-2027",
-   "titre": "Rupture conventionnelle : la date limite pour signer avant le 1er janvier 2027",
-   "url": "https://www.capital.fr/votre-carriere/rupture-conventionnelle-la-date-limite-pour-signer-avant-le-1er-janvier-2027-1531951",
-   "source": "Capital",
-   "date": "2026-11-18T12:00:00.000Z",
-   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~11~18~d7781353-409f-44b8-904f-763d40445742.jpg/1200x900/focus-point/1091%2C619/rupture-conventionnelle-la-date-limite-pour-signer-avant-le-1er-janvier-2027.jpg",
-   "categorie": "Fiscalité",
-   "score": 6
-  },
-  {
-   "id": "cnil-https-www-cnil-fr-fr-conservation-des-mots-de-passe-sanction-5-millions-deuros",
-   "titre": "Conservation des mots de passe clients en clair : la CNIL prononce une sanction de 5 millions d’euros",
-   "url": "https://www.cnil.fr/fr/conservation-des-mots-de-passe-sanction-5-millions-deuros",
-   "source": "CNIL",
-   "officiel": true,
-   "date": "2026-11-18T12:00:00.000Z",
-   "categorie": "Droit des affaires",
-   "score": 4
-  },
-  {
-   "id": "cnil-https-www-cnil-fr-fr-ia-conversationnelle-la-voix-des-jeunesses",
-   "titre": "Le Groupe VYV et la CNIL publient « La Voix des jeunesses » : une enquête pour éclairer les usages de l’IA conversationnelle",
-   "url": "https://www.cnil.fr/fr/ia-conversationnelle-la-voix-des-jeunesses",
-   "source": "CNIL",
-   "officiel": true,
-   "date": "2026-11-18T12:00:00.000Z",
-   "categorie": "Numérique",
-   "score": 2
-  },
-  {
-   "id": "le-monde-conomie-https-www-lemonde-fr-economie-article-2026-11-18-rebecca-amsellem-economiste-pour-les-femmes-les-ecarts",
-   "titre": "Rebecca Amsellem, économiste : « Pour les femmes, les écarts de revenus sont des écarts de liberté »",
-   "url": "https://www.lemonde.fr/economie/article/2026/11/18/rebecca-amsellem-economiste-pour-les-femmes-les-ecarts-de-revenus-sont-des-ecarts-de-liberte_6813089_3234.html",
-   "source": "Le Monde Économie",
-   "date": "2026-11-18T08:00:09.000Z",
-   "image": "https://img.lemde.fr/2026/11/17/899/0/2166/1083/644/322/60/0/dab1691_upload-1-slhfkvdmzonn-rea-293938-016.jpg",
-   "categorie": "Profession",
-   "score": 4
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-budget-de-la-secu-la-copie-du-senat-ramene-le-deficit-a-14-milliards",
-   "titre": "Budget de la Sécu : la copie du Sénat ramène le déficit à 14 milliards, proche de la cible gouvernementale",
-   "url": "https://www.lefigaro.fr/conjoncture/budget-de-la-secu-la-copie-du-senat-ramene-le-deficit-a-14-milliards-proche-de-la-cible-gouvernementale-20261118",
-   "source": "Le Figaro Économie",
-   "date": "2026-11-18T06:22:03.000Z",
-   "image": "https://i.f1g.fr/media/cms/orig/2026/11/18/ba1714853224fc495c34727609a0c887e92df884db7f9ff9a0211aa18d3e54d8.JPG",
-   "categorie": "Fiscalité",
-   "score": 5
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-replay-jt-france-2-20-heures-revenus-professions-sentiment-de-declassement-3-",
-   "titre": "Revenus, professions, sentiment de déclassement : 3 infos pour comprendre la classe moyenne",
-   "url": "https://www.franceinfo.fr/replay-jt/france-2/20-heures/revenus-professions-sentiment-de-declassement-3-infos-pour-comprendre-la-classe-moyenne_8287232.html#xtor=RSS-3-%5Beconomie%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-11-17T22:15:42.000Z",
-   "image": "https://www.franceinfo.fr/pictures/hNdP87qchKYr9AuAOheZ3zBFTck/0x0:1920x1080/432x243/filters:format(jpg)/2026/11/17/6afcd1030f5e3419718411.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-replay-jt-france-2-20-heures-moins-de-taxes-plus-d-aides-quelles-sont-les-att",
-   "titre": "Moins de taxes, plus d’aides… Quelles sont les attentes de la classe moyenne ?",
-   "url": "https://www.franceinfo.fr/replay-jt/france-2/20-heures/moins-de-taxes-plus-d-aides-quelles-sont-les-attentes-de-la-classe-moyenne_8287202.html#xtor=RSS-3-%5Beconomie%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-11-17T22:06:14.000Z",
-   "image": "https://www.franceinfo.fr/pictures/rYnlAZFYQHhAzsqRBHn0fh9BV8E/0x0:1920x1080/432x243/filters:format(jpg)/2026/11/17/6afccb1c22b6b717472266.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "le-monde-conomie-https-www-lemonde-fr-societe-article-2026-11-17-patrick-et-isabelle-balkany-retrouvent-leur-moulin-de-g",
-   "titre": "Patrick et Isabelle Balkany retrouvent leur moulin de Giverny, dont ils avaient été expulsés fin octobre, après un accord avec l’Etat",
-   "url": "https://www.lemonde.fr/societe/article/2026/11/17/patrick-et-isabelle-balkany-retrouvent-leur-moulin-de-giverny-dont-ils-avaient-ete-expulses-fin-octobre-apres-un-accord-avec-l-etat_6813006_3224.html",
-   "source": "Le Monde Économie",
-   "date": "2026-11-17T16:13:29.000Z",
-   "image": "https://img.lemde.fr/2026/11/17/447/0/4592/2296/644/322/60/0/bf69020_upload-1-8613w510fhgd-000-32g23v2.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
   }
  ],
  "ecartes": []
