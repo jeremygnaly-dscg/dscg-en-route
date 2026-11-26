@@ -8707,5 +8707,310 @@
     "dit": "Les dix mille euros dotés cette année vont en résultat : sept mille cinq cents euros."
    }
   ]
+ },
+ {
+  "id": "m-ifrs16-flux",
+  "modele": "finance",
+  "tag": "Dessine-moi le M&A",
+  "accroche": "Même loyer, même cash… et IFRS 16 améliore ton flux d'activité.",
+  "segments": [
+   {
+    "voix": "Même loyer, même cash… et IFRS 16 améliore ton flux d'activité.",
+    "dit": "Même loyer, même cash… et I.F.R.S seize améliore ton flux d'activité."
+   },
+   {
+    "voix": "Pharmalia paie 10 000 € de loyer par an. Avant IFRS 16, tout sortait du flux d'activité.",
+    "titre": "IFRS 16 et tableau des flux",
+    "rangs": [
+     {
+      "lib": "Loyer annuel",
+      "val": "10 000 €"
+     }
+    ],
+    "dit": "Pharmalia paie dix mille euros de loyer par an. Avant I.F.R.S seize, tout sortait du flux d'activité."
+   },
+   {
+    "voix": "Désormais, il rembourse une dette : 2 165 € d'intérêts, 7 835 € de capital.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Intérêts (5 %)",
+      "val": "2 165 €"
+     },
+     {
+      "op": "+",
+      "lib": "Capital remboursé",
+      "val": "7 835 €"
+     }
+    ],
+    "dit": "Désormais, il rembourse une dette : deux mille cent soixante-cinq euros d'intérêts, sept mille huit cent trente-cinq euros de capital."
+   },
+   {
+    "voix": "Le capital part en flux de financement. Les intérêts : au choix selon IAS 7, mais toujours le même.",
+    "rangs": [
+     {
+      "lib": "Flux de financement",
+      "val": "7 835 €",
+      "style": "ok"
+     },
+     {
+      "lib": "Intérêts",
+      "val": "Au choix"
+     }
+    ],
+    "dit": "Le capital part en flux de financement. Les intérêts : au choix selon I.A.S sept, mais toujours le même."
+   },
+   {
+    "voix": "Le cash ne bouge pas, seul son classement change. En M&A, vérifie toujours ce retraitement.",
+    "dit": "Le cash ne bouge pas, seul son classement change. En fusions-acquisitions, vérifie toujours ce retraitement."
+   }
+  ]
+ },
+ {
+  "id": "m-actif-brut",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "accroche": "Dans le bilan fonctionnel, tes amortissements deviennent… une ressource.",
+  "segments": [
+   {
+    "voix": "Dans le bilan fonctionnel, tes amortissements deviennent… une ressource.",
+    "dit": "Dans le bilan fonctionnel, tes amortissements deviennent… une ressource."
+   },
+   {
+    "voix": "Ici, les actifs sont pris en valeur brute : 700 k€ d'emplois stables pour Menuiseries Loire.",
+    "titre": "Bilan fonctionnel",
+    "rangs": [
+     {
+      "lib": "Emplois stables (brut)",
+      "val": "700 k€"
+     }
+    ],
+    "dit": "Ici, les actifs sont pris en valeur brute : sept cent mille euros d'emplois stables pour Menuiseries Loire."
+   },
+   {
+    "voix": "Du coup, amortissements et dépréciations passent en ressources stables, avec les capitaux propres.",
+    "rangs": [
+     {
+      "lib": "Capitaux propres",
+      "val": "✓"
+     },
+     {
+      "lib": "Amortissements",
+      "val": "✓"
+     },
+     {
+      "lib": "Provisions",
+      "val": "✓"
+     },
+     {
+      "lib": "Dettes financières",
+      "val": "✓"
+     }
+    ],
+    "dit": "Du coup, amortissements et dépréciations passent en ressources stables, avec les capitaux propres."
+   },
+   {
+    "voix": "Ressources stables : 900 k€. Fonds de roulement : 900 − 700 = 200 k€.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Ressources stables",
+      "val": "900 k€"
+     },
+     {
+      "op": "−",
+      "lib": "Emplois stables",
+      "val": "700 k€"
+     },
+     {
+      "op": "=",
+      "lib": "FRNG",
+      "val": "200 k€",
+      "style": "ok"
+     }
+    ],
+    "dit": "Ressources stables : neuf cent mille euros. Fonds de roulement : neuf cent mille moins sept cent mille, égale deux cent mille euros."
+   },
+   {
+    "voix": "Piège : laisser l'actif en net, ou garder le découvert dans les ressources stables.",
+    "dit": "Piège : laisser l'actif en net, ou garder le découvert dans les ressources stables."
+   }
+  ]
+ },
+ {
+  "id": "c-responsabilite-cac",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "accroche": "Ton commissaire aux comptes se tait sur un délit ? Il risque 5 ans de prison.",
+  "segments": [
+   {
+    "voix": "Ton commissaire aux comptes se tait sur un délit ? Il risque 5 ans de prison.",
+    "dit": "Ton commissaire aux comptes se tait sur un délit ? Il risque cinq ans de prison."
+   },
+   {
+    "voix": "Civilement, il répond de ses fautes, s'il y a préjudice et lien de causalité. Action prescrite par 3 ans.",
+    "titre": "Responsabilités du CAC",
+    "rangs": [
+     {
+      "lib": "Civile : prescription",
+      "val": "3 ans"
+     }
+    ],
+    "dit": "Civilement, il répond de ses fautes, s'il y a préjudice et lien de causalité. Action prescrite par trois ans."
+   },
+   {
+    "voix": "Pénalement, ne pas révéler un délit au procureur : 5 ans de prison et 75 000 € d'amende.",
+    "rangs": [
+     {
+      "lib": "Non-révélation",
+      "val": "5 ans",
+      "style": "fort"
+     },
+     {
+      "lib": "Amende",
+      "val": "75 k€"
+     }
+    ],
+    "dit": "Pénalement, ne pas révéler un délit au procureur : cinq ans de prison et soixante-quinze mille euros d'amende."
+   },
+   {
+    "voix": "Et son secret professionnel ne le protège pas : il ne vaut pas face au procureur.",
+    "rangs": [
+     {
+      "lib": "Secret face au procureur",
+      "val": "✗"
+     }
+    ],
+    "dit": "Et son secret professionnel ne le protège pas : il ne vaut pas face au procureur."
+   },
+   {
+    "voix": "Côté discipline, la H2A peut aller jusqu'à la radiation.",
+    "rangs": [
+     {
+      "lib": "Disciplinaire (H2A)",
+      "val": "Radiation"
+     }
+    ],
+    "dit": "Côté discipline, la Haute autorité de l'audit peut aller jusqu'à la radiation."
+   }
+  ]
+ },
+ {
+  "id": "d-integration-conditions",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "accroche": "Détenir 95 % de ta filiale ne suffit pas pour l'intégration fiscale.",
+  "segments": [
+   {
+    "voix": "Détenir 95 % de ta filiale ne suffit pas pour l'intégration fiscale.",
+    "dit": "Détenir quatre-vingt-quinze pour cent de ta filiale ne suffit pas pour l'intégration fiscale."
+   },
+   {
+    "voix": "Il faut aussi que toutes les sociétés soient à l'IS, avec des exercices de même durée, clos le même jour.",
+    "titre": "Intégration fiscale",
+    "rangs": [
+     {
+      "lib": "95 % du capital",
+      "val": "✓"
+     },
+     {
+      "lib": "Toutes à l'IS",
+      "val": "✓"
+     },
+     {
+      "lib": "Même date de clôture",
+      "val": "✓"
+     }
+    ],
+    "dit": "Il faut aussi que toutes les sociétés soient à l'impôt sur les sociétés, avec des exercices de même durée, clos le même jour."
+   },
+   {
+    "voix": "Et la mère ne doit pas être elle-même détenue à 95 % par une société française à l'IS.",
+    "rangs": [
+     {
+      "lib": "Mère non détenue à 95 %",
+      "val": "✓"
+     }
+    ],
+    "dit": "Et la mère ne doit pas être elle-même détenue à quatre-vingt-quinze pour cent par une société française soumise à cet impôt."
+   },
+   {
+    "voix": "Piège : les déficits nés avant l'entrée d'une filiale ne s'imputent que sur ses propres bénéfices.",
+    "rangs": [
+     {
+      "lib": "Déficits antérieurs",
+      "val": "Bloqués",
+      "style": "fort"
+     }
+    ],
+    "dit": "Piège : les déficits nés avant l'entrée d'une filiale ne s'imputent que sur ses propres bénéfices."
+   },
+   {
+    "voix": "L'option vaut pour 5 exercices, renouvelable.",
+    "rangs": [
+     {
+      "lib": "Option (exercices)",
+      "val": "5",
+      "style": "ok"
+     }
+    ],
+    "dit": "L'option vaut pour cinq exercices, renouvelable."
+   }
+  ]
+ },
+ {
+  "id": "d-penalites-fiscales",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "accroche": "Un redressement fiscal peut être majoré de 80 %. Et ce n'est pas tout.",
+  "segments": [
+   {
+    "voix": "Un redressement fiscal peut être majoré de 80 %. Et ce n'est pas tout.",
+    "dit": "Un redressement fiscal peut être majoré de quatre-vingts pour cent. Et ce n'est pas tout."
+   },
+   {
+    "voix": "D'abord, l'intérêt de retard : 0,20 % par mois de retard. Article 1727 du CGI.",
+    "titre": "Pénalités fiscales",
+    "rangs": [
+     {
+      "lib": "Intérêt de retard / mois",
+      "val": "0,20 %"
+     }
+    ],
+    "dit": "D'abord, l'intérêt de retard : zéro virgule vingt pour cent par mois de retard. Article mille sept cent vingt-sept du code général des impôts."
+   },
+   {
+    "voix": "Ensuite, la majoration. Manquement délibéré : 40 %.",
+    "rangs": [
+     {
+      "lib": "Manquement délibéré",
+      "val": "40 %"
+     }
+    ],
+    "dit": "Ensuite, la majoration. Manquement délibéré : quarante pour cent."
+   },
+   {
+    "voix": "Manœuvres frauduleuses ou abus de droit : 80 %. Article 1729.",
+    "rangs": [
+     {
+      "lib": "Fraude ou abus de droit",
+      "val": "80 %",
+      "style": "fort"
+     }
+    ],
+    "dit": "Manœuvres frauduleuses ou abus de droit : quatre-vingts pour cent. Article mille sept cent vingt-neuf."
+   },
+   {
+    "voix": "Mais une erreur de bonne foi régularisée pendant la vérification réduit l'intérêt de retard de 30 %.",
+    "rangs": [
+     {
+      "lib": "Régularisation",
+      "val": "− 30 %",
+      "style": "ok"
+     }
+    ],
+    "dit": "Mais une erreur de bonne foi régularisée pendant la vérification réduit l'intérêt de retard de trente pour cent."
+   }
+  ]
  }
 ]
