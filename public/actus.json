@@ -1,5 +1,5 @@
 {
- "majLe": "2026-11-27T01:00:41.970Z",
+ "majLe": "2026-11-27T15:02:38.854Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -22,7 +22,7 @@
    "nom": "Village de la Justice",
    "url": "https://www.village-justice.com/articles/spip.php?page=backend",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "Le Monde du Droit",
@@ -50,13 +50,13 @@
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Capital",
@@ -76,6 +76,46 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "capital-https-www-capital-fr-immobilier-logement-neuf-le-senat-vote-une-tva-a-55-pour-les-investisseurs-1532222",
+   "titre": "Logement neuf : le Sénat vote une TVA à 5,5% pour les investisseurs",
+   "url": "https://www.capital.fr/immobilier/logement-neuf-le-senat-vote-une-tva-a-55-pour-les-investisseurs-1532222",
+   "source": "Capital",
+   "date": "2026-11-27T13:04:34.000Z",
+   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~11~27~66220ef3-4d1a-431a-ae2b-64457931f997.jpg/1200x900/focus-point/1459%2C1283/logement-neuf-le-senat-vote-une-tva-a-5-5-pour-les-investisseurs.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "cnil-https-www-cnil-fr-fr-ia-en-soins-guide-has-cnil",
+   "titre": "IA en contexte de soins : accompagner le bon usage avec le guide CNIL et HAS",
+   "url": "https://www.cnil.fr/fr/ia-en-soins-guide-has-cnil",
+   "source": "CNIL",
+   "officiel": true,
+   "date": "2026-11-27T12:00:00.000Z",
+   "categorie": "Numérique",
+   "score": 2
+  },
+  {
+   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-impots-millionnaires-patriotes-qui-souhaitent-payer-plus-d-impots-il",
+   "titre": "\"Millionnaires patriotes\" qui souhaitent payer plus d'impôts : \"Il faut vraiment les féliciter pour ça, mais il faut voir aussi que c'est très insuffisant par rapport à ce dont on aurait besoin\", pointe l'économiste Denis Durand",
+   "url": "https://www.franceinfo.fr/economie/impots/millionnaires-patriotes-qui-souhaitent-payer-plus-d-impots-il-faut-vraiment-les-feliciter-pour-ca-mais-il-faut-voir-aussi-que-c-est-tres-insuffisant-par-rapport-a-ce-dont-on-aurait-besoin-pointe-l-economiste-denis-durand_8302860.html#xtor=RSS-3-%5Beconomie%5D",
+   "source": "franceinfo Économie",
+   "date": "2026-11-27T10:52:14.000Z",
+   "image": "https://www.franceinfo.fr/pictures/k57dGWOPz0BEkoq6oDVyulbJFMc/0x7:1239x704/432x243/filters:format(jpg)/2026/11/27/6b09608ba0e8c741746114.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-politique-article-2026-11-27-jeu-video-en-crise-le-secteur-interpelle-les-candidat",
+   "titre": "Jeu vidéo : en crise, le secteur interpelle les candidats à l’élection présidentielle",
+   "url": "https://www.lemonde.fr/politique/article/2026/11/27/jeu-video-en-crise-le-secteur-interpelle-les-candidats-a-l-election-presidentielle_6815838_823448.html",
+   "source": "Le Monde Économie",
+   "date": "2026-11-27T10:15:38.000Z",
+   "image": "https://img.lemde.fr/2026/11/26/607/0/7294/3647/644/322/60/0/9fd3528_ftp-1-rdxtswqmz4or-afp-d8pk8kc.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
   {
    "id": "capital-https-www-capital-fr-economie-politique-congres-des-maires-taxe-d-habitation-regle-d-or-ce-que-sebastien-lecornu",
    "titre": "Congrès des maires : taxe d'habitation, règle d'or, ce que Sébastien Lecornu a répondu aux élus",
@@ -836,46 +876,6 @@
    "image": "https://www.franceinfo.fr/pictures/go15OaF59sLJtfXDZsUMx3Cffrs/0x47:1024x623/432x243/filters:format(jpg)/2026/11/19/6afe95d16b7ef135407551.jpg",
    "categorie": "Fiscalité",
    "score": 3
-  },
-  {
-   "id": "le-monde-conomie-https-www-lemonde-fr-vie-au-travail-article-2026-11-19-la-republique-des-travailleurs-un-manifeste-pour",
-   "titre": "« La République des travailleurs » : un manifeste pour « démocratiser » le capitalisme, dans l’entreprise et ailleurs",
-   "url": "https://www.lemonde.fr/vie-au-travail/article/2026/11/19/la-republique-des-travailleurs-un-manifeste-pour-democratiser-le-capitalisme-dans-l-entreprise-et-ailleurs_6813230_6768900.html",
-   "source": "Le Monde Économie",
-   "date": "2026-11-19T05:00:08.000Z",
-   "image": "https://img.lemde.fr/2026/11/16/160/0/1920/960/644/322/60/0/38908da_upload-1-wg5lknjqkhsn-64d3f0c7-fab5-4eaa-a5e1-3abc109994fd.png",
-   "categorie": "Comptabilité & audit",
-   "score": 3
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-economie-moins-d-impot-sur-le-revenu-pour-les-plus-riches-en-2025-8288705-htm",
-   "titre": "Moins d'impôt sur le revenu pour les plus riches en 2025",
-   "url": "https://www.franceinfo.fr/economie/moins-d-impot-sur-le-revenu-pour-les-plus-riches-en-2025_8288705.html#xtor=RSS-3-%5Beconomie%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-11-19T05:00:02.000Z",
-   "image": "https://www.franceinfo.fr/pictures/HcLkzfY88urHMmvxLMiR7Ms4lw0/0x0:1080x1920/fit-in/432x243/filters:upscale():fill(blur):format(jpg)/2026/11/18/6afdd8d356dd6117910475.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-il-y-a-tout-un-probleme-de-droit-de-succession-francois-hollande-veu",
-   "titre": "«Il y a tout un problème de droit de succession» : François Hollande veut créer un statut de «beaux-parents» pour faciliter les transmissions",
-   "url": "https://www.lefigaro.fr/conjoncture/il-y-a-tout-un-probleme-de-droit-de-succession-francois-hollande-veut-creer-un-statut-de-beaux-parents-pour-faciliter-les-transmissions-20261118",
-   "source": "Le Figaro Économie",
-   "date": "2026-11-18T20:43:56.000Z",
-   "image": "https://i.f1g.fr/media/cms/orig/2026/11/18/37dbea41398e6efc8765dc1ca8c2bcc8f44f6abb5e1dd8fb77422bdea0eb8fbb.JPG",
-   "categorie": "Fiscalité",
-   "score": 5
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-ces-dingueries-fiscales-du-budget-2027-que-denonce-le-collectif-de-d",
-   "titre": "Ces « dingueries » fiscales du budget 2027 que dénonce le collectif de dirigeants « Trop, c’est trop »",
-   "url": "https://www.lefigaro.fr/conjoncture/ces-dingueries-fiscales-du-budget-2027-que-denonce-le-collectif-de-dirigeants-trop-c-est-trop-20261118",
-   "source": "Le Figaro Économie",
-   "date": "2026-11-18T19:24:09.000Z",
-   "image": "https://i.f1g.fr/media/cms/2991x1682_crop/2026/11/18/bd0a06f59ec278f39426c2a00b129f961185e76f96ba10831b362934153426a5.jpg",
-   "categorie": "Fiscalité",
-   "score": 5
   }
  ],
  "ecartes": []
