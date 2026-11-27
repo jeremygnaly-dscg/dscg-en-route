@@ -9012,5 +9012,288 @@
     "dit": "Mais une erreur de bonne foi régularisée pendant la vérification réduit l'intérêt de retard de trente pour cent."
    }
   ]
+ },
+ {
+  "id": "m-lbo-minoritaire",
+  "modele": "finance",
+  "tag": "Dessine-moi le M&A",
+  "accroche": "Dans ce LBO, la holding paie 726 000 € d'intérêts… et n'a aucun bénéfice pour les déduire.",
+  "segments": [
+   {
+    "voix": "Dans ce LBO, la holding paie 726 000 € d'intérêts… et n'a aucun bénéfice pour les déduire.",
+    "dit": "Dans ce L.B.O, la holding paie sept cent vingt-six mille euros d'intérêts… et n'a aucun bénéfice pour les déduire."
+   },
+   {
+    "voix": "Elle ne détient que 30 % de Porcelaines Vialle. Or l'intégration fiscale exige au moins 95 %.",
+    "titre": "LBO minoritaire",
+    "rangs": [
+     {
+      "lib": "Détention de la holding",
+      "val": "30 %"
+     },
+     {
+      "lib": "Seuil d'intégration fiscale",
+      "val": "95 %"
+     }
+    ],
+    "dit": "Elle ne détient que trente pour cent de Porcelaines Vialle. Or l'intégration fiscale exige au moins quatre-vingt-quinze pour cent."
+   },
+   {
+    "voix": "Pas d'intégration : ses intérêts ne s'imputent sur aucun bénéfice.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Intérêts de l'année 1",
+      "val": "726 k€"
+     },
+     {
+      "lib": "Imputés sur la cible",
+      "val": "0 €",
+      "style": "fort"
+     }
+    ],
+    "dit": "Pas d'intégration : ses intérêts ne s'imputent sur aucun bénéfice."
+   },
+   {
+    "voix": "Ses dividendes reçus relèvent, eux, du régime mère-fille.",
+    "rangs": [
+     {
+      "lib": "Dividendes reçus",
+      "val": "Mère-fille",
+      "style": "ok"
+     }
+    ],
+    "dit": "Ses dividendes reçus relèvent, eux, du régime mère-fille."
+   },
+   {
+    "voix": "Sans les 95 %, le levier fiscal disparaît : il faut une cible rentable, stable, peu investie et peu endettée.",
+    "dit": "Sans les quatre-vingt-quinze pour cent, le levier fiscal disparaît : il faut une cible rentable, stable, peu investie et peu endettée."
+   }
+  ]
+ },
+ {
+  "id": "m-dilution-controle",
+  "modele": "finance",
+  "tag": "Dessine-moi la finance",
+  "accroche": "Une augmentation de capital ne coûte rien à l'actionnaire… sauf du pouvoir.",
+  "segments": [
+   {
+    "voix": "Une augmentation de capital ne coûte rien à l'actionnaire… sauf du pouvoir.",
+    "dit": "Une augmentation de capital ne coûte rien à l'actionnaire… sauf du pouvoir."
+   },
+   {
+    "voix": "Aéro Composants a 1 million d'actions. Elle en émet 1 nouvelle pour 4 anciennes, à 40 €.",
+    "titre": "Augmenter le capital",
+    "rangs": [
+     {
+      "lib": "Actions anciennes",
+      "val": "1 000 000"
+     },
+     {
+      "op": "+",
+      "lib": "Actions nouvelles",
+      "val": "250 000"
+     }
+    ],
+    "dit": "Aéro Composants a un million d'actions. Elle en émet une nouvelle pour quatre anciennes, à quarante euros."
+   },
+   {
+    "voix": "Elle lève 10 M€ : ses fonds propres augmentent, son levier baisse.",
+    "rangs": [
+     {
+      "lib": "Fonds propres",
+      "val": "+ 10 M€",
+      "style": "ok"
+     }
+    ],
+    "dit": "Elle lève dix millions d'euros : ses fonds propres augmentent, son levier baisse."
+   },
+   {
+    "voix": "Mais le bénéfice se partage entre 1,25 million d'actions : le BPA est dilué.",
+    "rangs": [
+     {
+      "op": "=",
+      "lib": "Actions après",
+      "val": "1 250 000"
+     }
+    ],
+    "dit": "Mais le bénéfice se partage entre un virgule vingt-cinq millions d'actions : le bénéfice par action est dilué."
+   },
+   {
+    "voix": "Et l'actionnaire qui ne souscrit pas perd du contrôle : ses 20 % du capital tombent à 16 %.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Contrôle",
+      "val": "20 → 16 %",
+      "style": "fort"
+     }
+    ],
+    "dit": "Et l'actionnaire qui ne souscrit pas perd du contrôle : ses vingt pour cent du capital tombent à seize pour cent."
+   }
+  ]
+ },
+ {
+  "id": "c-ias1-courant",
+  "modele": "finance",
+  "tag": "Dessine-moi la conso",
+  "accroche": "En IFRS, ton emprunt à 5 ans est en partie… une dette courante.",
+  "segments": [
+   {
+    "voix": "En IFRS, ton emprunt à 5 ans est en partie… une dette courante.",
+    "dit": "En I.F.R.S, ton emprunt à cinq ans est en partie… une dette courante."
+   },
+   {
+    "voix": "IAS 1 classe le bilan en courant et non courant. Courant : réalisé ou réglé dans le cycle d'exploitation ou dans les 12 mois.",
+    "titre": "IAS 1 : le bilan",
+    "rangs": [
+     {
+      "lib": "Courant",
+      "val": "≤ 12 mois"
+     }
+    ],
+    "dit": "I.A.S un classe le bilan en courant et non courant. Courant : réalisé ou réglé dans le cycle d'exploitation ou dans les douze mois."
+   },
+   {
+    "voix": "Une dette à plus de 12 mois est donc non courante.",
+    "rangs": [
+     {
+      "lib": "Non courant",
+      "val": "> 12 mois"
+     }
+    ],
+    "dit": "Une dette à plus de douze mois est donc non courante."
+   },
+   {
+    "voix": "Mais la part remboursable dans l'année passe en courant.",
+    "rangs": [
+     {
+      "lib": "Part de l'année",
+      "val": "Courant",
+      "style": "fort"
+     }
+    ],
+    "dit": "Mais la part remboursable dans l'année passe en courant."
+   },
+   {
+    "voix": "Au compte de résultat, tu présentes les charges par nature ou par fonction. Par fonction, l'annexe détaille aussi les natures.",
+    "dit": "Au compte de résultat, tu présentes les charges par nature ou par fonction. Par fonction, l'annexe détaille aussi les natures."
+   }
+  ]
+ },
+ {
+  "id": "d-penal-societe",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "accroche": "Ta société peut être condamnée au pénal… et toi avec elle.",
+  "segments": [
+   {
+    "voix": "Ta société peut être condamnée au pénal… et toi avec elle.",
+    "dit": "Ta société peut être condamnée au pénal… et toi avec elle."
+   },
+   {
+    "voix": "Une personne morale répond des infractions commises pour son compte par ses organes ou représentants.",
+    "titre": "Responsabilité pénale",
+    "rangs": [
+     {
+      "lib": "Pour son compte, par un organe",
+      "val": "✓"
+     }
+    ],
+    "dit": "Une personne morale répond des infractions commises pour son compte par ses organes ou représentants."
+   },
+   {
+    "voix": "Et ça n'exclut pas la responsabilité du dirigeant, auteur ou complice des mêmes faits.",
+    "rangs": [
+     {
+      "lib": "Dirigeant poursuivi",
+      "val": "Aussi"
+     }
+    ],
+    "dit": "Et ça n'exclut pas la responsabilité du dirigeant, auteur ou complice des mêmes faits."
+   },
+   {
+    "voix": "Sauf délégation de pouvoirs, à quelqu'un qui a la compétence, l'autorité et les moyens.",
+    "rangs": [
+     {
+      "lib": "Délégation valable",
+      "val": "Exonère",
+      "style": "ok"
+     }
+    ],
+    "dit": "Sauf délégation de pouvoirs, à quelqu'un qui a la compétence, l'autorité et les moyens."
+   },
+   {
+    "voix": "Pour la société, l'amende encourue est 5 fois celle d'une personne physique.",
+    "rangs": [
+     {
+      "lib": "Amende de la société",
+      "val": "× 5",
+      "style": "fort"
+     }
+    ],
+    "dit": "Pour la société, l'amende encourue est cinq fois celle d'une personne physique."
+   }
+  ]
+ },
+ {
+  "id": "d-directoire",
+  "modele": "finance",
+  "tag": "Dessine-moi le droit",
+  "accroche": "Dans certaines SA, le conseil ne gère rien. Il surveille.",
+  "segments": [
+   {
+    "voix": "Dans certaines SA, le conseil ne gère rien. Il surveille.",
+    "dit": "Dans certaines sociétés anonymes, le conseil ne gère rien. Il surveille."
+   },
+   {
+    "voix": "C'est la SA à directoire. Le directoire dirige : 5 membres au plus, 7 si la société est cotée.",
+    "titre": "SA à directoire",
+    "rangs": [
+     {
+      "lib": "Membres du directoire",
+      "val": "5"
+     },
+     {
+      "lib": "Si la société est cotée",
+      "val": "7"
+     }
+    ],
+    "dit": "C'est la société anonyme à directoire. Le directoire dirige : cinq membres au plus, sept si la société est cotée."
+   },
+   {
+    "voix": "Ses membres, des personnes physiques, sont nommés par le conseil de surveillance.",
+    "efface": true,
+    "rangs": [
+     {
+      "lib": "Nomination",
+      "val": "Conseil"
+     }
+    ],
+    "dit": "Ses membres, des personnes physiques, sont nommés par le conseil de surveillance."
+   },
+   {
+    "voix": "Le conseil contrôle la gestion. Mais cautions, avals et garanties exigent son autorisation préalable.",
+    "rangs": [
+     {
+      "lib": "Cautions, avals, garanties",
+      "val": "Accord",
+      "style": "ok"
+     }
+    ],
+    "dit": "Le conseil contrôle la gestion. Mais cautions, avals et garanties exigent son autorisation préalable."
+   },
+   {
+    "voix": "Et pas de cumul : un membre du conseil ne peut pas siéger au directoire.",
+    "rangs": [
+     {
+      "lib": "Cumul des deux organes",
+      "val": "✗",
+      "style": "fort"
+     }
+    ],
+    "dit": "Et pas de cumul : un membre du conseil ne peut pas siéger au directoire."
+   }
+  ]
  }
 ]
