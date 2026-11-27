@@ -1,17 +1,17 @@
 {
- "majLe": "2026-11-26T15:10:49.624Z",
+ "majLe": "2026-11-27T01:00:41.970Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
    "url": "https://www.economie.gouv.fr/rss/toutesactualites",
    "ok": true,
-   "articles": 2
+   "articles": 0
   },
   {
    "nom": "Entreprendre Service-Public",
    "url": "https://www.service-public.fr/abonnements/rss/actu-actu-pro.rss",
    "ok": true,
-   "articles": 2
+   "articles": 1
   },
   {
    "nom": "Compta Online",
@@ -22,7 +22,7 @@
    "nom": "Village de la Justice",
    "url": "https://www.village-justice.com/articles/spip.php?page=backend",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "Le Monde du Droit",
@@ -38,25 +38,25 @@
    "nom": "CNIL",
    "url": "https://www.cnil.fr/fr/rss.xml",
    "ok": true,
-   "articles": 0
+   "articles": 2
   },
   {
    "nom": "Le Monde Économie",
    "url": "https://www.lemonde.fr/economie/rss_full.xml",
    "ok": true,
-   "articles": 3
+   "articles": 1
   },
   {
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "Capital",
@@ -76,6 +76,46 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "capital-https-www-capital-fr-economie-politique-congres-des-maires-taxe-d-habitation-regle-d-or-ce-que-sebastien-lecornu",
+   "titre": "Congrès des maires : taxe d'habitation, règle d'or, ce que Sébastien Lecornu a répondu aux élus",
+   "url": "https://www.capital.fr/economie-politique/congres-des-maires-taxe-d-habitation-regle-d-or-ce-que-sebastien-lecornu-a-repondu-aux-elus-1532201",
+   "source": "Capital",
+   "date": "2026-11-26T20:00:00.000Z",
+   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~11~26~30bdaf9b-100d-4c76-971b-92ffeaf747e8.jpg/1200x900/focus-point/1262%2C1214/congres-des-maires-taxe-d-habitation-regle-d-or-ce-que-sebastien-lecornu-a-repondu-aux-elus.jpg",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "village-de-la-justice-https-www-village-justice-com-articles-resiliation-resolution-amiable-une-vente-immobiliere-fiscal",
+   "titre": "Résiliation ou résolution amiable d'une vente immobilière et fiscalité. Par Jonathan Durand, Avocat.",
+   "url": "https://www.village-justice.com/articles/resiliation-resolution-amiable-une-vente-immobiliere-fiscalite,60303.html?utm_source=backend&utm_medium=RSS&utm_campaign=RSS_Reseaux",
+   "source": "Village de la Justice",
+   "date": "2026-11-26T19:30:00.000Z",
+   "image": "https://www.village-justice.com/articles/local/cache-gd2/9a/e5e96668d9c31b06db72811daa8d96.jpg?1795717804",
+   "categorie": "Fiscalité",
+   "score": 3
+  },
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-elections-presidentielles-operation-conviction-a-reims-marine-le-pen-propose-de-",
+   "titre": "« Opération conviction » : à Reims, Marine Le Pen propose de baisser l’impôt sur les sociétés pour les petites entreprises",
+   "url": "https://www.lefigaro.fr/elections/presidentielles/operation-conviction-a-reims-marine-le-pen-propose-de-baisser-l-impot-sur-les-societes-pour-les-petites-entreprises-20261126",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-26T18:46:46.000Z",
+   "image": "https://i.f1g.fr/media/cms/1600x1066_crop/2026/11/26/6a83e03d9c8302fb459e98a36f2fd2dccc68fa794ae37ab68539d6ef1e2fe41a.jpg",
+   "categorie": "Fiscalité",
+   "score": 5
+  },
+  {
+   "id": "le-monde-conomie-https-www-lemonde-fr-politique-article-2026-11-26-presidentielle-2027-marine-le-pen-courtise-les-pme-av",
+   "titre": "Présidentielle 2027 : Marine Le Pen courtise les PME avec un nouveau projet de réforme fiscale",
+   "url": "https://www.lemonde.fr/politique/article/2026/11/26/presidentielle-2027-marine-le-pen-courtise-les-pme-avec-un-nouveau-projet-de-reforme-fiscale_6815572_823448.html",
+   "source": "Le Monde Économie",
+   "date": "2026-11-26T17:00:09.000Z",
+   "image": "https://img.lemde.fr/2026/11/18/975/0/6500/3250/644/322/60/0/d13a534_upload-1-nvuaxywt7igo-kzihnioglu-paris-bardella-lepen-17112026-48.jpg",
+   "categorie": "Fiscalité",
+   "score": 5
+  },
   {
    "id": "capital-https-www-capital-fr-immobilier-loc-avantages-denormandie-ce-que-le-senat-a-vote-pour-les-bailleurs-1532193",
    "titre": "Loc'Avantages, Denormandie : ce que le Sénat a voté pour les bailleurs",
@@ -836,46 +876,6 @@
    "image": "https://i.f1g.fr/media/cms/2991x1682_crop/2026/11/18/bd0a06f59ec278f39426c2a00b129f961185e76f96ba10831b362934153426a5.jpg",
    "categorie": "Fiscalité",
    "score": 5
-  },
-  {
-   "id": "le-monde-conomie-https-www-lemonde-fr-politique-article-2026-11-18-impots-la-declaration-papier-un-marqueur-social-pour-",
-   "titre": "Impôts : la déclaration papier, un marqueur social pour les ménages pauvres et les personnes âgées",
-   "url": "https://www.lemonde.fr/politique/article/2026/11/18/impots-la-declaration-papier-un-marqueur-social-pour-les-menages-pauvres-et-les-personnes-agees_6813176_823448.html",
-   "source": "Le Monde Économie",
-   "date": "2026-11-18T17:00:49.000Z",
-   "image": "https://img.lemde.fr/2023/05/03/41/0/3000/1500/644/322/60/0/33b2fee_1683120111389-lmargent12.jpg",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "capital-https-www-capital-fr-economie-politique-budget-de-la-secu-2027-pensions-mutuelles-cotisations-ce-que-le-senat-a-",
-   "titre": "Budget de la Sécu 2027 : pensions, mutuelles, cotisations, ce que le Sénat a modifié",
-   "url": "https://www.capital.fr/economie-politique/budget-de-la-secu-2027-pensions-mutuelles-cotisations-ce-que-le-senat-a-modifie-1531957",
-   "source": "Capital",
-   "date": "2026-11-18T15:51:13.000Z",
-   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~11~18~ffacaee9-89d2-420d-9417-208989a547a3.jpg/1200x900/quality/80/budget-de-la-secu-2027-pensions-mutuelles-cotisations-ce-que-le-senat-a-modifie.jpg",
-   "categorie": "Fiscalité",
-   "score": 4
-  },
-  {
-   "id": "capital-https-www-capital-fr-economie-politique-programme-dedouard-philippe-travail-retraites-impots-ce-que-propose-le-c",
-   "titre": "Programme d’Édouard Philippe : travail, retraites, impôts, ce que propose le candidat",
-   "url": "https://www.capital.fr/economie-politique/programme-dedouard-philippe-travail-retraites-impots-ce-que-propose-le-candidat-1531958",
-   "source": "Capital",
-   "date": "2026-11-18T15:03:36.000Z",
-   "image": "https://cap.img.pmdstatic.net/fit/~1~cap~2026~11~18~d636bb06-e50c-484e-b150-c54c2e775a5f.jpg/1200x900/focus-point/969%2C389/programme-d-edouard-philippe-travail-retraites-impots-ce-que-propose-le-candidat.jpg",
-   "categorie": "Fiscalité",
-   "score": 4
-  },
-  {
-   "id": "le-figaro-conomie-https-www-lefigaro-fr-conjoncture-la-prevision-de-croissance-de-1-pour-2027-est-a-risque-reconnait-rol",
-   "titre": "La prévision de croissance de 1% pour 2027 «est à risque», reconnaît Roland Lescure",
-   "url": "https://www.lefigaro.fr/conjoncture/la-prevision-de-croissance-de-1-pour-2027-est-a-risque-reconnait-roland-lescure-20261118",
-   "source": "Le Figaro Économie",
-   "date": "2026-11-18T13:29:07.000Z",
-   "image": "https://i.f1g.fr/media/cms/3000x2000_crop/2026/11/18/3f30241bbb52914ac4f1f81b021f786ecb070e22fe6b92d7fc10aeff36880db0.jpg",
-   "categorie": "Fiscalité",
-   "score": 4
   }
  ],
  "ecartes": []
