@@ -1,5 +1,5 @@
 {
- "majLe": "2026-11-27T15:02:38.854Z",
+ "majLe": "2026-11-28T00:33:03.865Z",
  "sources": [
   {
    "nom": "economie.gouv.fr",
@@ -38,31 +38,31 @@
    "nom": "CNIL",
    "url": "https://www.cnil.fr/fr/rss.xml",
    "ok": true,
-   "articles": 2
+   "articles": 1
   },
   {
    "nom": "Le Monde Économie",
    "url": "https://www.lemonde.fr/economie/rss_full.xml",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "Le Figaro Économie",
    "url": "https://www.lefigaro.fr/rss/figaro_economie.xml",
    "ok": true,
-   "articles": 0
+   "articles": 1
   },
   {
    "nom": "franceinfo Économie",
    "url": "https://www.francetvinfo.fr/economie.rss",
    "ok": true,
-   "articles": 1
+   "articles": 0
   },
   {
    "nom": "Capital",
    "url": "https://feed.prismamediadigital.com/v1/cap/rss?sources=capital",
    "ok": true,
-   "articles": 1
+   "articles": 0
   }
  ],
  "images": {
@@ -76,6 +76,16 @@
   "plfss-2027-ruptures": "https://www.voltaire-avocats.com/wp-content/uploads/2026/10/6abf63f4a841a_reforme-2027-des-indemnites-de-rupture.png"
  },
  "items": [
+  {
+   "id": "le-figaro-conomie-https-www-lefigaro-fr-economie-pour-alleger-l-impot-sur-les-societes-des-pme-marine-le-pen-veut-alourd",
+   "titre": "Pour alléger l’impôt sur les sociétés des PME, Marine Le Pen veut alourdir celui des grandes entreprises",
+   "url": "https://www.lefigaro.fr/economie/pour-alleger-l-impot-sur-les-societes-des-pme-marine-le-pen-veut-alourdir-celui-des-grandes-entreprises-20261127",
+   "source": "Le Figaro Économie",
+   "date": "2026-11-27T17:30:00.000Z",
+   "image": "https://i.f1g.fr/media/cms/3000x2001_crop/2026/11/27/e570d8c01c66b603d4da0df980a82fbc074fe84d03265ad67d551e5c7ebbf199.jpg",
+   "categorie": "Fiscalité",
+   "score": 5
+  },
   {
    "id": "capital-https-www-capital-fr-immobilier-logement-neuf-le-senat-vote-une-tva-a-55-pour-les-investisseurs-1532222",
    "titre": "Logement neuf : le Sénat vote une TVA à 5,5% pour les investisseurs",
@@ -864,16 +874,6 @@
    "source": "franceinfo Économie",
    "date": "2026-11-19T08:15:36.000Z",
    "image": "https://www.franceinfo.fr/pictures/H-96Pam3n9rfI8RU-IVDSaaPUC0/0x0:1895x1065/432x243/filters:format(jpg)/2026/11/19/6afeab7187746948349997.png",
-   "categorie": "Fiscalité",
-   "score": 3
-  },
-  {
-   "id": "franceinfo-conomie-https-www-franceinfo-fr-replay-radio-le-brief-eco-baisse-de-la-taxe-sur-l-electricite-plafonnement-du",
-   "titre": "Baisse de la taxe sur l'électricité, plafonnement du prix des carburants... l’Allemagne prend des mesures concrètes pour lutter contre la vie chère",
-   "url": "https://www.franceinfo.fr/replay-radio/le-brief-eco/baisse-de-la-taxe-sur-l-electricite-plafonnement-du-prix-des-carburants-l-allemagne-prend-des-mesures-concretes-pour-lutter-contre-la-vie-chere_8268656.html#xtor=RSS-3-%5Beconomie%5D",
-   "source": "franceinfo Économie",
-   "date": "2026-11-19T06:26:50.000Z",
-   "image": "https://www.franceinfo.fr/pictures/go15OaF59sLJtfXDZsUMx3Cffrs/0x47:1024x623/432x243/filters:format(jpg)/2026/11/19/6afe95d16b7ef135407551.jpg",
    "categorie": "Fiscalité",
    "score": 3
   }
